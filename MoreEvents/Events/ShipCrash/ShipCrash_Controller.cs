@@ -1,4 +1,5 @@
 ﻿using MoreEvents.Events.ShipCrash.Map;
+using MoreEvents.Events.ShipCrash.Map.MapGenerator;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -45,13 +46,16 @@ namespace MoreEvents.Events.ShipCrash
             Scribe_Values.Look(ref shipCount, "ShipCount", 0);
         }
 
-        public static ShipCrashWorker MakeShipPart(ShipSiteType type, int tileID, Faction faction)
+        public static ShipCrashWorker MakeShipPart(ShipMapGenerator gen, int tileID, Faction faction)
         {
             Site site = (Site)WorldObjectMaker.MakeWorldObject(ShipWorldObjectDefOf.ShipCrashSite);
             site.Tile = tileID;
             site.SetFaction(faction);
 
-            return site.GetComponent<ShipCrashWorker>();
+            var shipComp = site.GetComponent<ShipCrashWorker>();
+            shipComp.InitWorker(gen);
+
+            return shipComp;
         }
     }
 }

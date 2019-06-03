@@ -1,4 +1,5 @@
-﻿using RimWorld.Planet;
+﻿using MoreEvents.Events.ShipCrash.Map.MapGenerator;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,18 @@ namespace MoreEvents.Events.ShipCrash.Map
 {
     public class ShipCrashWorker : WorldObjectComp
     {
-        public ShipSiteType SiteType = ShipSiteType.Living;
+        public ShipSiteType SiteType => Generator.SiteType;
+
+        public ShipMapGenerator Generator { get; private set; }
+
+        public void InitWorker(ShipMapGenerator generator)
+        {
+            Generator = generator;
+        }
+
+        public override void PostMapGenerate()
+        {
+
+        }
     }
 }

@@ -66,6 +66,8 @@
     <Compile Include="Events\IncidentWorker_MechanoidPortalStart.cs" />
     <Compile Include="Events\IncidentWorker_SuperHeatWave.cs" />
     <Compile Include="Events\IncidentWorker_SuperNova.cs" />
+    <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipMapGenerator.cs" />
+    <Compile Include="Events\ShipCrash\Map\MapGenerator\Ship_Cargo.cs" />
     <Compile Include="Events\ShipCrash\Map\ShipCrashWorker.cs" />
     <Compile Include="Events\ShipCrash\Map\ShipWorldObjectCompProp_Main.cs" />
     <Compile Include="Events\ShipCrash\ShipCrash_Controller.cs" />
@@ -92,8 +94,6 @@
     <Compile Include="Weathers\WeatherDefOfLocal.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\ShipCrash\Map\MapGenerator\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
