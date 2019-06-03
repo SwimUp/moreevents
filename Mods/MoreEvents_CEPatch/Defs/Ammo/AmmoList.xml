@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>AmmoHarpoonArrowPack</defName>
+		<label>harpoon arrows pack</label>
+		<parent>AmmoNeolithic</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
+	</ThingCategoryDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_HarpoonArrow</defName>
+		<label>harpoon arrows pack</label>
+		<ammoTypes>
+			<Ammo_HarpoonArrow>Bullet_Energeticharpoon</Ammo_HarpoonArrow>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="HarpoonArrowsBase" ParentName="NeolithicAmmoBase" Abstract="True">
+		<description>Massive arrows for harpoon</description>
+		<statBases>
+		  <Mass>0.4</Mass>
+		  <Bulk>0.2</Bulk>
+		</statBases>
+		<tradeTags>
+		  <li>CE_AutoEnableTrade</li>
+		  <li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+		  <li>AmmoHarpoonArrowPack</li>
+		</thingCategories>
+		<stackLimit>15</stackLimit>
+    </ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HarpoonArrowsBase">
+		<defName>Ammo_HarpoonArrow</defName>
+		<label>harpoon arrow</label>
+		<graphicData>
+		  <texPath>Things/Ammo/Raygun</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>0.3</MarketValue>
+		</statBases>
+		<ammoClass>HarpoonArrows</ammoClass>
+	</ThingDef>
+  
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseArrowBullet" ParentName="BaseBullet" Abstract="true">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <speed>90</speed>
+		  <dropsCasings>false</dropsCasings>
+		  <flyOverhead>false</flyOverhead>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseArrowBullet">
+		<defName>Bullet_Energeticharpoon</defName>
+		<label>harpoon arrow</label>
+		<graphicData>
+			  <texPath>Things/Weapons/Avtomatons/harpoon</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+			  <shaderType>TransparentPostLight</shaderType>
+			  <drawSize>1.2</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <damageDef>Cut</damageDef>
+		  <damageAmountBase>40</damageAmountBase>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_HarpoonAmmo</defName>
+		<label>make harpoon ammo x10</label>
+		<description>Craft 10 harpoon arrows</description>
+		<jobString>Making harpoon arrows.</jobString>
+        <skillRequirements>
+          <Crafting>6</Crafting>
+        </skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Steel</li>
+			  </thingDefs>
+			</filter>
+			<count>50</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Steel</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Ammo_HarpoonArrow>10</Ammo_HarpoonArrow>
+		</products>
+  </RecipeDef>
+
+	<!-- TRASH GUN -->
+	<ThingCategoryDef>
+		<defName>AmmoTrashBombsPack</defName>
+		<label>trash bomb pack</label>
+		<parent>AmmoNeolithic</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
+	</ThingCategoryDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_TrashBomb</defName>
+		<label>trash bomb pack</label>
+		<ammoTypes>
+			<Ammo_TrashBomb>Bullet_TrashBomb</Ammo_TrashBomb>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="TrashBombBase" ParentName="NeolithicAmmoBase" Abstract="True">
+		<description>Trash bomb for trashgun</description>
+		<statBases>
+		  <Mass>0.4</Mass>
+		  <Bulk>0.2</Bulk>
+		</statBases>
+		<tradeTags>
+		  <li>CE_AutoEnableTrade</li>
+		  <li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+		  <li>AmmoTrashGunPack</li>
+		</thingCategories>
+		<stackLimit>5</stackLimit>
+    </ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="TrashBombBase">
+		<defName>Ammo_TrashBomb</defName>
+		<label>trash bomb</label>
+		<graphicData>
+		  <texPath>Things/Ammo/Raygun</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>0.9</MarketValue>
+		</statBases>
+		<ammoClass>TrashBombs</ammoClass>
+	</ThingDef>
+  
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseTrashBombBullet" ParentName="BaseBullet" Abstract="true">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <speed>45</speed>
+		  <dropsCasings>false</dropsCasings>
+		  <flyOverhead>false</flyOverhead>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTrashBombBullet">
+		<defName>Bullet_TrashBomb</defName>
+		<label>harpoon arrow</label>
+		<graphicData>
+		  <texPath>Things/Projectile/InfernoCannonShot</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(179,179,179)</color>
+		</graphicData>
+	    <thingClass>MoreEvents.Things.Projectiles.Bullet_TrashGun</thingClass>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <damageDef>Cut</damageDef>
+		  <damageAmountBase>20</damageAmountBase>
+		  <speed>45</speed>
+		  <explosionRadius>6.0</explosionRadius>
+		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_TrashGunAmmo</defName>
+		<label>make trash bombs x2</label>
+		<description>Craft 2 trash bombs</description>
+		<jobString>Making trash bombs</jobString>
+        <skillRequirements>
+          <Crafting>7</Crafting>
+        </skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Steel</li>
+			  </thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ChunkSlagSteel</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>ComponentIndustrial</li>
+			  </thingDefs>
+			</filter>
+			<count>2</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Steel</li>
+			<li>ChunkSlagSteel</li>
+			<li>ComponentIndustrial</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Ammo_TrashBomb>2</Ammo_TrashBomb>
+		</products>
+  </RecipeDef>
+
+</Defs>

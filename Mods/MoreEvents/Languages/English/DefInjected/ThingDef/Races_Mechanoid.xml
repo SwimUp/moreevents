@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <Mech_BigAvtomaton.label>big Avtomaton</Mech_BigAvtomaton.label>
+  <Mech_BigAvtomaton.description>A large, slow-moving automaton, and judging by the design, from the recent past. The visual element is the eye chamber, which looks like a porthole.
+  Movement is carried out by several mechanical tracks. The armor is made of several alloys, strong enough to withstand powerful explosions and impacts.</Mech_BigAvtomaton.description>
+  <Mech_BigAvtomaton.tools.head.label>Eye camera</Mech_BigAvtomaton.tools.head.label>
+
+  <Mech_SmallAvtomaton.label>small Avtomaton</Mech_SmallAvtomaton.label>
+  <Mech_SmallAvtomaton.description>Automaton medium size, above the average person. Body barrel-shaped, with small protrusions. Caterpillars are used for movement, but in spite of this they are fast enough and maneuverable.
+  They use armor alloys similar to a large automaton, but because of their size, the thickness of the armor itself is much less.</Mech_SmallAvtomaton.description>
+  <Mech_SmallAvtomaton.tools.left_blade.label>left kob</Mech_SmallAvtomaton.tools.left_blade.label>
+  <Mech_SmallAvtomaton.tools.right_blade.label>right kob</Mech_SmallAvtomaton.tools.right_blade.label>
+  <Mech_SmallAvtomaton.tools.head.label>head</Mech_SmallAvtomaton.tools.head.label>
+  
+</LanguageData>
