@@ -286,4 +286,22 @@
 	</IncidentDef>
 	<!-- s=======================s -->
 	
+	<!-- Событие: Крушение корабля -->
+	<IncidentDef>
+		<defName>ShipCrash</defName>
+		<label>Ship wrech</label>
+		<letterLabel>Ship wrech</letterLabel>
+		<letterText>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_DestroyRoad</workerClass>
+		<category>Misc</category>
+		<minRefireDays>140</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>40</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
 </Defs>

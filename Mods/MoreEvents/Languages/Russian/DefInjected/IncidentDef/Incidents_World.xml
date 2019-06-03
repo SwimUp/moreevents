@@ -61,4 +61,8 @@
   <DestroyRoad.letterLabel>Подрыв дороги</DestroyRoad.letterLabel>
   <DestroyRoad.letterText>Небольшой отряд разбойников взорвал одну из дорог.</DestroyRoad.letterText>
 
+  <ShipCrash.label>Крущение корабля</ShipCrash.label>
+  <ShipCrash.letterLabel>Крушение корабля</ShipCrash.letterLabel>
+  <ShipCrash.letterText>Неизвестный корабль потерпел крушение. Множество частей были разбросаны по планете. Вы можете их исследовать, чтобы добыть ресурсы или найти новые технологии</ShipCrash.letterText>
+
 </LanguageData>
