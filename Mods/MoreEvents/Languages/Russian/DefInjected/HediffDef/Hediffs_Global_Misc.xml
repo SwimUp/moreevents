@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <Irradiation.label>Облучение радиацией</Irradiation.label>
+  <Irradiation.stages.initial-0.label>незаметное</Irradiation.stages.initial-0.label>
+  <Irradiation.stages.initial-1.label>начальное</Irradiation.stages.initial-1.label>
+  <Irradiation.stages.minor.label>лёгкое</Irradiation.stages.minor.label>
+  <Irradiation.stages.moderate.label>среднее</Irradiation.stages.moderate.label>
+  <Irradiation.stages.serious.label>серьёзное</Irradiation.stages.serious.label>
+  <Irradiation.stages.extreme.label>экстремальное</Irradiation.stages.extreme.label>
+  
+  <OxygenStarvation.label>Кислородное голодание</OxygenStarvation.label>
+  <OxygenStarvation.stages.initial-0.label>незаметное</OxygenStarvation.stages.initial-0.label>
+  <OxygenStarvation.stages.initial-1.label>начальное</OxygenStarvation.stages.initial-1.label>
+  <OxygenStarvation.stages.minor.label>лёгкое</OxygenStarvation.stages.minor.label>
+  <OxygenStarvation.stages.moderate.label>среднее</OxygenStarvation.stages.moderate.label>
+  <OxygenStarvation.stages.serious.label>серьёзное</OxygenStarvation.stages.serious.label>
+  <OxygenStarvation.stages.extreme.label>экстремальное</OxygenStarvation.stages.extreme.label>
+  
+  <FrostLungs.label>Обморожение легких</FrostLungs.label>
+  <FrostLungs.stages.minor.label>лёгкое</FrostLungs.stages.minor.label>
+  <FrostLungs.stages.major.label>среднее</FrostLungs.stages.major.label>
+  <FrostLungs.stages.extreme.label>экстремальное</FrostLungs.stages.extreme.label>
+  
+  <Fibrodysplasia.label>Фибродисплазия</Fibrodysplasia.label>
+  <Fibrodysplasia.stages.minor.label>легкая пленка</Fibrodysplasia.stages.minor.label>
+  <Fibrodysplasia.stages.easy.label>разрушение кожного покрова</Fibrodysplasia.stages.easy.label>
+  <Fibrodysplasia.stages.medium.label>глубокое проникновение</Fibrodysplasia.stages.medium.label>
+  <Fibrodysplasia.stages.hard.label>омертвление внутренних тканей</Fibrodysplasia.stages.hard.label>
+  <Fibrodysplasia.stages.ultrahard.label>омертвление части тела</Fibrodysplasia.stages.ultrahard.label>
+  
+  <NeurofibromatousWorms.label>Нейрофиброматозные черви</NeurofibromatousWorms.label>
+  <NeurofibromatousWorms.stages.easy.label>внутреннее поражение</NeurofibromatousWorms.stages.easy.label>
+    
+  <CaveBettleBuff.label>Ночная охота</CaveBettleBuff.label>
+  <CaveBettleBuff.stages.easy.label></CaveBettleBuff.stages.easy.label>
+  
+</LanguageData>

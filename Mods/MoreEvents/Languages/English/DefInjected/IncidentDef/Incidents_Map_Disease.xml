@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Disease_Fibrodysplasia.label>Fibrodysplasia</Disease_Fibrodysplasia.label>
+  <Disease_Fibrodysplasia.letterLabel>Fibrodysplasia</Disease_Fibrodysplasia.letterLabel>
+  <Disease_Fibrodysplasia.letterText>{0} of your settlers {1}.\n\nSome parts of your colonists are covered with pus with an ice crust. If not treated, then part of the body dies completely, and the disease is transmitted to a new</Disease_Fibrodysplasia.letterText>
+
+  <Disease_NeurofibromatousWorms.label>Neurofibromatous Worms</Disease_NeurofibromatousWorms.label>
+  <Disease_NeurofibromatousWorms.letterLabel>Neurofibromatous Worms</Disease_NeurofibromatousWorms.letterLabel>
+  <Disease_NeurofibromatousWorms.letterText>У {0} of your settlers {1}.\n\nNeurofibromatous worms affect parts of the brain that are responsible for vision and hearing, and also affect nerve endings. If they are not cured in time, the colonist will deaf and blind forever!</Disease_NeurofibromatousWorms.letterText>
+  
+</LanguageData>

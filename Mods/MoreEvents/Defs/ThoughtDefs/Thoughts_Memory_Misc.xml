@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Состояние: Прекрасный вид -->
+	<ThoughtDef>
+		<defName>AwesomeSight</defName>
+		<durationDays>20</durationDays>
+		<stages>
+			<li>
+				<label>Awesome Sight</label>
+				<description>AwesomeSight</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- s=======================s -->
+	
+</Defs>

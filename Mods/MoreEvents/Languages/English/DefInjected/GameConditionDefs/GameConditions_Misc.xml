@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <SuperHeatWave.label>Incredibly hot weather</SuperHeatWave.label>
+  <SuperHeatWave.description>Incredibly strong heat wave overtook the planet. The temperature can rise to 100 degrees!</SuperHeatWave.description>
+  <SuperHeatWave.endMessage>Incredible heat passed</SuperHeatWave.endMessage>
+
+  <BoulderMassHit.label>Meteor Rain</BoulderMassHit.label>
+  <BoulderMassHit.description>Meteor Rain! For some time, meteorites will fall to the ground.</BoulderMassHit.description>
+  <BoulderMassHit.endMessage>It seems to be all...</BoulderMassHit.endMessage>
+
+  <Endlessday.label>Long Day</Endlessday.label>
+  <Endlessday.description>Because of the powerful flash of a star on the planet, it is now day. And nothing more</Endlessday.description>
+  <Endlessday.endMessage>That seems to be all...</Endlessday.endMessage>
+  
+  <LeanAtmosphere.label>Lean atmosphere</LeanAtmosphere.label>
+  <LeanAtmosphere.description>As a result of the powerful release of a large amount of energy from the explosion of a star, a part of the planet’s atmosphere burned out. It will change all the climatic conditions on the planet. Expect constant temperature drops</LeanAtmosphere.description>
+  <LeanAtmosphere.endMessage></LeanAtmosphere.endMessage>
+  
+  <RadiationFon.label>Increased Radiation</RadiationFon.label>
+  <RadiationFon.description>Due to the absence of a part of the atmosphere, cosmic radiation leaks onto the planet very easily. We do not recommend to be in an open area.</RadiationFon.description>
+  <RadiationFon.endMessage></RadiationFon.endMessage>
+  
+  <NoSun.label>No sun</NoSun.label>
+  <NoSun.description>There are no stars in your system that could warm the planets and give light. Eternal night and cold.</NoSun.description>
+  <NoSun.endMessage></NoSun.endMessage>
+  
+  <DenseAtmosphere.label>Dense Atmosphere</DenseAtmosphere.label>
+  <DenseAtmosphere.description>The planet has a very dense atmosphere, which leads to a greenhouse effect</DenseAtmosphere.description>
+  <DenseAtmosphere.endMessage></DenseAtmosphere.endMessage>
+  
+  <IceStorm.label>Ice Storm</IceStorm.label>
+  <IceStorm.description>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</IceStorm.description>
+  <IceStorm.endMessage>The ice storm has stopped</IceStorm.endMessage>
+  
+  <HeavyAir.label>Heavy Air</HeavyAir.label>
+  <HeavyAir.description>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir.description>
+  <HeavyAir.endMessage>It seems the bulk of the heavy elements have been blown away</HeavyAir.endMessage>
+   
+  <WetAir.label>Wet air</WetAir.label>
+  <WetAir.description>Air has come filled with particles of water. Being on the open area will immediately freeze the lungs, and buildings will start to deteriorate</WetAir.description>
+  <WetAir.endMessage>Water in the air turned into ice</WetAir.endMessage>
+  
+</LanguageData>

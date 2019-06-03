@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <CaveBeetleKing.label>Король пещерный жуков</CaveBeetleKing.label>
+  <CaveBeetleKing.labelPlural>Король пещерный жуков</CaveBeetleKing.labelPlural>
+  <CaveBeetleKing.description>Огромный, страшный король пещерных пауков. Броня с двойными наростами хитина придает невероятную живучесть. Огромные клещи в миг разрубают любую живую плоть.</CaveBeetleKing.description>
+
+  <CaveSpelopede.label>пещерный жук</CaveSpelopede.label>
+  <CaveSpelopede.labelPlural>пещерный жук</CaveSpelopede.labelPlural>
+  <CaveSpelopede.description>Один из немногих пещерных представителей планеты. Небольшой размер, тело покрыто довольно плотной хитиновой броней. Острые клешни делают его опасным противником в ближнем бою.</CaveSpelopede.description>
+  
+</LanguageData>
