@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Supernova.label>Supernova explosion</Supernova.label>
+  <Supernova.letterLabel>Supernova explosion</Supernova.letterLabel>
+  <Supernova.letterText>Supernova explosion</Supernova.letterText>
+  
+  <SuperHeatWave.label>Incredibly hot weather</SuperHeatWave.label>
+  <SuperHeatWave.letterLabel>Incredibly hot weather</SuperHeatWave.letterLabel>
+  <SuperHeatWave.letterText>Incredibly strong heat wave overtook the planet. The temperature can rise to 100 degrees!</SuperHeatWave.letterText>
+  
+  <BoulderMassHit.label>Meteor Rain</BoulderMassHit.label>
+  <BoulderMassHit.letterLabel>Meteor Rain</BoulderMassHit.letterLabel>
+  <BoulderMassHit.letterText>Meteor Rain! For some time, meteorites will fall to the ground.</BoulderMassHit.letterText>
+  
+  <Endlessday.label>Long Day</Endlessday.label>
+  <Endlessday.letterLabel>Long Day</Endlessday.letterLabel>
+  <Endlessday.letterText>Because of the powerful flash of a star on the planet, it is now day. And nothing more</Endlessday.letterText>
+  
+  <LeanAtmosphere.label>Lean atmosphere</LeanAtmosphere.label>
+  <LeanAtmosphere.letterLabel>Lean atmosphere</LeanAtmosphere.letterLabel>
+  <LeanAtmosphere.letterText>As a result of the powerful release of a large amount of energy from the explosion of a star, a part of the planet’s atmosphere burned out. It will change all the climatic conditions on the planet. Expect constant temperature drops</LeanAtmosphere.letterText>
+
+  <RadiationFon.label>Increased Radiation</RadiationFon.label>
+  <RadiationFon.letterLabel>Increased Radiation</RadiationFon.letterLabel>
+  <RadiationFon.letterText>Due to the absence of a part of the atmosphere, cosmic radiation leaks onto the planet very easily. We do not recommend to be in an open area.</RadiationFon.letterText>
+
+  <NoSun.label>No Sun</NoSun.label>
+  <NoSun.letterLabel>No Sun</NoSun.letterLabel>
+  <NoSun.letterText>No Sun</NoSun.letterText>
+  
+  <DenseAtmosphere.label>Dense Atmosphere</DenseAtmosphere.label>
+  <DenseAtmosphere.letterLabel>Dense Atmosphere</DenseAtmosphere.letterLabel>
+  <DenseAtmosphere.letterText>Dense Atmosphere</DenseAtmosphere.letterText>
+  
+  <IceStorm.label>Ice Storm</IceStorm.label>
+  <IceStorm.letterLabel>Ice Storm</IceStorm.letterLabel>
+  <IceStorm.letterText>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</IceStorm.letterText>
+  
+  <HeavyAir.label>Heavy Air</HeavyAir.label>
+  <HeavyAir.letterLabel>Heavy Air</HeavyAir.letterLabel>
+  <HeavyAir.letterText>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir.letterText>
+  
+  <WetAir.label>Wet air</WetAir.label>
+  <WetAir.letterLabel>Wet air</WetAir.letterLabel>
+  <WetAir.letterText>Air has come filled with particles of water. Being on the open area will immediately freeze the lungs, and buildings will start to deteriorate</WetAir.letterText>
+
+  <MechanoidPortal.label>Teleport mechanoids!</MechanoidPortal.label>
+  <MechanoidPortal.letterLabel>Teleport mechanoids!</MechanoidPortal.letterLabel>
+  <MechanoidPortal.letterText>A mysterious fragment has fallen from the sky, which generates a teleport from which mechanoids appear. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</MechanoidPortal.letterText>
+
+  <BeetleRush.label>Hive!</BeetleRush.label>
+  <BeetleRush.letterLabel>Hive!</BeetleRush.letterLabel>
+  <BeetleRush.letterText>Cave beetles dug a tunnel out of their hive. They will go out until you close the passage.</BeetleRush.letterText>
+
+  <DestroyRoad.label>Undermining the road</DestroyRoad.label>
+  <DestroyRoad.letterLabel>Undermining the road</DestroyRoad.letterLabel>
+  <DestroyRoad.letterText>A small detachment of robbers blew one of the roads.</DestroyRoad.letterText>
+
+</LanguageData>

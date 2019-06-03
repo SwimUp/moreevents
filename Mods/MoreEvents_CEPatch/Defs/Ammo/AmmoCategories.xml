@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>HarpoonArrows</defName>
+    <label>Harpoon arrow</label>
+    <labelShort>CW</labelShort>
+    <description>Massive arrows for harpoon</description>
+  </CombatExtended.AmmoCategoryDef>
+  
+  <CombatExtended.AmmoCategoryDef>
+    <defName>TrashBombs</defName>
+    <label>Trash bomb</label>
+    <labelShort>CW</labelShort>
+    <description>A large ball with a powerful magnet inside and surrounded by all sorts of rubbish. If you deactivate the magnet, then the fragments fly apart in all directions, making holes all around.</description>
+  </CombatExtended.AmmoCategoryDef>
+  
+</Defs>

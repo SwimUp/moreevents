@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <Mech_BigAvtomaton.label>большой автоматон</Mech_BigAvtomaton.label>
+  <Mech_BigAvtomaton.description>Большой, малоподвижный автоматон, и судя по конструкции, из недалекого прошлого. Зрительным элементов выступает глазная камера, которая выглядит как иллюминатор.
+  Движение осуществляется несколькими механическими гусеницами. Броня выполнена из нескольких сплавов, достаточна прочна, чтобы выдерживать мощные взрывы и удары.</Mech_BigAvtomaton.description>
+  <Mech_BigAvtomaton.tools.head.label>Глазная камера</Mech_BigAvtomaton.tools.head.label>
+
+  <Mech_SmallAvtomaton.label>малый автоматон</Mech_SmallAvtomaton.label>
+  <Mech_SmallAvtomaton.description>Автоматон среднего размера, выше обычного человека. Тело бочкообразное, с небольшими выступами. Используют гусеницы для движения, но не смотря на это достаточно быстры и манёвренны.
+  Используют аналогичный большому автоматону сплавы для брони, но в силу размера толщина самой брони гораздо меньше.</Mech_SmallAvtomaton.description>
+  <Mech_SmallAvtomaton.tools.left_blade.label>левый коб</Mech_SmallAvtomaton.tools.left_blade.label>
+  <Mech_SmallAvtomaton.tools.right_blade.label>правый коб</Mech_SmallAvtomaton.tools.right_blade.label>
+  <Mech_SmallAvtomaton.tools.head.label>голова</Mech_SmallAvtomaton.tools.head.label>
+  
+</LanguageData>

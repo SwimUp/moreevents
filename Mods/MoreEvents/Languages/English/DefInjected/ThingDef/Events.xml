@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+ 
+  <MechanoidTeleport_Generator.label>Генератор портала</MechanoidTeleport_Generator.label>
+  <MechanoidTeleport_Generator.description>Похоже, что внутри находится нечто, что генерирует достаточно энергии для поддержания телепорта.</MechanoidTeleport_Generator.description>
+  
+  <MechanoidTeleport.label>Телепорт механойдов</MechanoidTeleport.label>
+  <MechanoidTeleport.description>Дыра в пространстве, генерируемая генератором. Позволяет механойдам на той стороне без препятствий переходить сюда</MechanoidTeleport.description>
+  
+  <HiveCrack.label>Трешина улья</HiveCrack.label>
+  <HiveCrack.description>Тонель ведущий к подземному улью пещерных жуков, через который они попадают наружу</HiveCrack.description>
+  
+</LanguageData>

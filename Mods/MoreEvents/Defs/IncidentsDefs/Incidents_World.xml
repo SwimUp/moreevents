@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Событие: Взрыв сверхновой -->
+	<IncidentDef>
+		<defName>Supernova</defName>
+		<label>Supernova explosion</label>
+		<letterLabel>Super nova</letterLabel>
+		<letterText>Super nova explosion</letterText>
+	    <letterDef>PositiveEvent</letterDef>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_SuperNova</workerClass>
+		<category>Misc</category>
+		<minRefireDays>45</minRefireDays>
+		<baseChance>1.5</baseChance>
+		<earliestDay>15</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+    <!-- Событие: Тепловая волна 2.0 -->
+	<IncidentDef>
+		<defName>SuperHeatWave</defName>
+		<label>Super heat wave</label>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<category>Misc</category>
+		<workerClass>MoreEvents.Events.IncidentWorker_SuperHeatWave</workerClass>
+		<gameCondition>SuperHeatWave</gameCondition>
+		<letterLabel>Super hot</letterLabel>
+		<letterText>Very strong thermal covered the planet. It will be very hot.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<minRefireDays>30</minRefireDays>
+		<durationDays>
+			<min>15.0</min>
+			<max>35.0</max>
+		</durationDays>
+	</IncidentDef>
+	
+	<!-- Событие: Метеоритный дождь -->
+	<IncidentDef>
+		<defName>BoulderMassHit</defName>
+		<label>Meteor rain</label>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<gameCondition>BoulderMassHit</gameCondition>
+		<workerClass>MoreEvents.Events.IncidentWorker_BoulderMassHit</workerClass>
+		<letterLabel>Meteor Rain</letterLabel>
+		<letterText>Meteor shower, all in the shelter!</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>0</baseChance>
+		<category>Misc</category>
+		<minRefireDays>32</minRefireDays>
+		<earliestDay>60</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+    <!-- Событие: Длительный день -->
+	<IncidentDef>
+		<defName>Endlessday</defName>
+		<label>Endless day</label>
+			<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>Endlessday</gameCondition>
+		<letterLabel>Endlessday</letterLabel>
+		<letterText>Because of the powerful flash of a star on the planet now is the day. And nothing else.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>1.5</baseChance>
+		<minRefireDays>15</minRefireDays>
+		<durationDays>
+			<min>2.0</min>
+			<max>5.0</max>
+		</durationDays>
+    </IncidentDef>
+	<!-- s=======================s -->
+  
+	<!-- Событие: Обедненная атмосфера -->
+	<IncidentDef>
+		<defName>LeanAtmosphere</defName>
+		<label>Lean atmosphere</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>LeanAtmosphere</gameCondition>
+		<letterLabel>Lean atmosphere</letterLabel>
+		<letterText>As a result of the powerful release of a large amount of energy, the atmosphere of the planet is not far from the atmosphere. This will lower the temperature at night and raise during the day. In addition, there will now be an increased background radiation.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>7.5</min>
+			<max>40</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Повышенный радиационный фон -->
+	<IncidentDef>
+		<defName>RadiationFon</defName>
+		<label>Increased radiation background</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>RadiationFon</gameCondition>
+		<letterLabel>Radiation</letterLabel>
+		<letterText>There is no part of the atmosphere on the planet, which is why the radiation from the stars is stronger.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>7.5</min>
+			<max>40</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Нет солнца -->
+	<IncidentDef>
+		<defName>NoSun</defName>
+		<label>No sun</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>NoSun</gameCondition>
+		<letterLabel>No Sun</letterLabel>
+		<letterText>There is no star in your star system. Endless night and cold.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>7.5</min>
+			<max>40</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Плотная атмосфера -->
+	<IncidentDef>
+		<defName>DenseAtmosphere</defName>
+		<label>Dense atmosphere</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>DenseAtmosphere</gameCondition>
+		<letterLabel>Dense atmosphere</letterLabel>
+		<letterText>The planet is very dense atmosphere, which leads to the greenhouse effect.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>7.5</min>
+			<max>40</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Ледяной шторм -->
+	<IncidentDef>
+		<defName>IceStorm</defName>
+		<label>Ice Storm</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>IceStorm</gameCondition>
+		<letterLabel>Ice Storm</letterLabel>
+		<letterText>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>3.5</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>100</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>3</min>
+			<max>14</max>
+		</durationDays>
+		<allowedBiomes>
+			<li>ColdBog</li>
+			<li>IceSheet</li>
+			<li>SeaIce</li>
+		</allowedBiomes>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Тяжелый воздух -->
+	<IncidentDef>
+		<defName>HeavyAir</defName>
+		<label>Heavy air</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>HeavyAir</gameCondition>
+		<letterLabel>Heavy air</letterLabel>
+		<letterText>Air flows brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>2.5</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>60</minRefireDays>
+		<minDifficulty>1</minDifficulty>
+		<durationDays>
+			<min>5</min>
+			<max>10</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Портал механоидов -->
+	<IncidentDef>
+		<defName>MechanoidPortal</defName>
+		<label>Mechanoid portal</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_MechanoidPortalStart</workerClass>
+		<letterLabel>Mechanoid portal!</letterLabel>
+		<letterText>A mysterious fragment has fallen from the sky, which generates a teleport from this appearance of a mechano-weapon. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>1.5</baseChance>
+		<earliestDay>100</earliestDay>
+		<minRefireDays>150</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Улей -->
+	<IncidentDef>
+		<defName>BeetleRush</defName>
+		<label>Beehive beetles!</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_BeetleRush</workerClass>
+		<letterLabel>Beehive beetles!</letterLabel>
+		<letterText>The Cave beetles dug a tunnel out of their hive. They will go outside until you close the passage.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>1.3</baseChance>
+		<earliestDay>110</earliestDay>
+		<minRefireDays>200</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Подрыв дороги -->
+	<IncidentDef>
+		<defName>DestroyRoad</defName>
+		<label>Undermining the road</label>
+		<letterLabel>Undermining the road</letterLabel>
+		<letterText>A small detachment of robbers blew one of the roads.</letterText>
+	    <letterDef>NegativeEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_DestroyRoad</workerClass>
+		<category>Misc</category>
+		<minRefireDays>100</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>120</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+</Defs>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Supernova.label>Взрыв сверхновой</Supernova.label>
+  <Supernova.letterLabel>Взрыв сверхновой</Supernova.letterLabel>
+  <Supernova.letterText>Взрыв сверхновой</Supernova.letterText>
+  
+  <SuperHeatWave.label>Невероятно горячая погода</SuperHeatWave.label>
+  <SuperHeatWave.letterLabel>Невероятно горячая погода</SuperHeatWave.letterLabel>
+  <SuperHeatWave.letterText>Невероятно сильная тепловая волна настигла планету. Температура может подняться до 100 градусов!</SuperHeatWave.letterText>
+  
+  <BoulderMassHit.label>Метеоритный дождь</BoulderMassHit.label>
+  <BoulderMassHit.letterLabel>Метеоритный дождь</BoulderMassHit.letterLabel>
+  <BoulderMassHit.letterText>Метеоритный дождь! В течении некоторого времени метеориты будут падать на землю</BoulderMassHit.letterText>
+  
+  <Endlessday.label>Продолжительный день</Endlessday.label>
+  <Endlessday.letterLabel>Бесконечный день</Endlessday.letterLabel>
+  <Endlessday.letterText>Из-за мощной вспышки звезды на планете теперь день. И ничего больше.</Endlessday.letterText>
+  
+  <LeanAtmosphere.label>Обедненная атмосфера</LeanAtmosphere.label>
+  <LeanAtmosphere.letterLabel>Обедненная атмосфера</LeanAtmosphere.letterLabel>
+  <LeanAtmosphere.letterText>В следствии мощного выброса большого количества энергии от взрыва звезды часть атмосферы планеты выгорела. Это изменит все климатические условия на планете. Ожидайте постоянные перепады температуры.</LeanAtmosphere.letterText>
+
+  <RadiationFon.label>Повышенная радиация</RadiationFon.label>
+  <RadiationFon.letterLabel>Повышенная радиация</RadiationFon.letterLabel>
+  <RadiationFon.letterText>Из-за отсутствия части атмосферы космическая радиация очень легко просачивается на планету. Не советуем находиться на улице.</RadiationFon.letterText>
+
+  <NoSun.label>Нет звезды</NoSun.label>
+  <NoSun.letterLabel>Нет звезды</NoSun.letterLabel>
+  <NoSun.letterText>Нет звезды</NoSun.letterText>
+  
+  <DenseAtmosphere.label>Плотная атмосфера</DenseAtmosphere.label>
+  <DenseAtmosphere.letterLabel>Плотная атмосфера</DenseAtmosphere.letterLabel>
+  <DenseAtmosphere.letterText>Плотная атмосфера</DenseAtmosphere.letterText>
+  
+  <IceStorm.label>Ледяной шторм</IceStorm.label>
+  <IceStorm.letterLabel>Ледяной шторм</IceStorm.letterLabel>
+  <IceStorm.letterText>Ледяной шторм настиг вас. Этот шторм несет невероятные низкие температуры и ледяные осколоки. Не выходите из дома</IceStorm.letterText>
+  
+  <HeavyAir.label>Тяжелый воздух</HeavyAir.label>
+  <HeavyAir.letterLabel>Тяжелый воздух</HeavyAir.letterLabel>
+  <HeavyAir.letterText>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм, нужно переждать пару дней</HeavyAir.letterText>
+  
+  <WetAir.label>Влажный воздух</WetAir.label>
+  <WetAir.letterLabel>Влажный воздух</WetAir.letterLabel>
+  <WetAir.letterText>Пришел воздух наполненный частицами воды. Нахождение на улице даст незамедлительное обморожение легких, а постройки начнут портиться</WetAir.letterText>
+
+  <HeavyHail.label>Сильный град</HeavyHail.label>
+  <HeavyHail.letterLabel>Сильный град</HeavyHail.letterLabel>
+  <HeavyHail.letterText>В атмосфере сформировался град. В течении некоторого времени огромные осколки льда будут падать на вас.</HeavyHail.letterText>
+
+  <MechanoidPortal.label>Телепортер механойдов!</MechanoidPortal.label>
+  <MechanoidPortal.letterLabel>Телепортер механойдов</MechanoidPortal.letterLabel>
+  <MechanoidPortal.letterText>С неба обрушился загадочный обломок, который генерирует телепорт из которого появляются механойды. Сам портал не уничтожить, но если сломать генератор, то и портал пропадет.</MechanoidPortal.letterText>
+
+  <BeetleRush.label>Улей!</BeetleRush.label>
+  <BeetleRush.letterLabel>Улей!</BeetleRush.letterLabel>
+  <BeetleRush.letterText>Пещерные жуки прокопали тоннель из своего улья наружу. Они будут выходить наружу до тех пор, пока вы не закроете проход.</BeetleRush.letterText>
+
+  <DestroyRoad.label>Подрыв дороги</DestroyRoad.label>
+  <DestroyRoad.letterLabel>Подрыв дороги</DestroyRoad.letterLabel>
+  <DestroyRoad.letterText>Небольшой отряд разбойников взорвал одну из дорог.</DestroyRoad.letterText>
+
+</LanguageData>
