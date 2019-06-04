@@ -22,7 +22,7 @@ namespace MoreEvents.Events.ShipCrash.Map
 
         public override void PostMapGenerate()
         {
-            Generator.RunGenerator();
+            Generator.RunGenerator((parent as MapParent).Map);
         }
     }
 }

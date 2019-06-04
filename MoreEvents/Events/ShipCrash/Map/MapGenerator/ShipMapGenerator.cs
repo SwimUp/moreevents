@@ -38,6 +38,6 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
         public abstract string Description { get; }
 
-        public abstract void RunGenerator();
+        public abstract void RunGenerator(Verse.Map map);
     }
 }

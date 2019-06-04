@@ -9,5 +9,8 @@
   
   <HiveCrack.label>Трешина улья</HiveCrack.label>
   <HiveCrack.description>Тонель ведущий к подземному улью пещерных жуков, через который они попадают наружу</HiveCrack.description>
+
+  <OpenableContainer.label>Кусок корабля</OpenableContainer.label>
+  <OpenableContainer.description>Контейнер, содержащий ресурсы</OpenableContainer.description>
   
 </LanguageData>

@@ -17,6 +17,10 @@ namespace MoreEvents.Events.ShipCrash
 
         private ShipMapGenerator generator;
 
+        public override string Label => "EnterMap".Translate(mapParent.Label);
+
+        public override string ReportString => "CaravanEntering".Translate(mapParent.Label);
+
         public CaravanArrivalAction_EnterToShipCrash(MapParent mapParent, ShipMapGenerator generator)
         {
             this.mapParent = mapParent;
@@ -80,11 +84,11 @@ namespace MoreEvents.Events.ShipCrash
                 PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter_Send(orGenerateMap.mapPawns.AllPawns, "LetterRelatedPawnsSite".Translate(Faction.OfPlayer.def.pawnsPlural), LetterDefOf.NeutralEvent, informEvenIfSeenBefore: true);
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.Append("LetterCaravanEnteredMap".Translate(caravan.Label, generator.ExpandLabel).CapitalizeFirst());
-                Find.LetterStack.ReceiveLetter("LetterLabelCaravanEnteredMap".Translate(generator.ExpandLabel), stringBuilder.ToString(), LetterDefOf.NeutralEvent);
+                Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredShipCrash")} {generator.ExpandLabel}", stringBuilder.ToString(), LetterDefOf.NeutralEvent);
             }
             else
             {
-                Find.LetterStack.ReceiveLetter("LetterLabelCaravanEnteredMap".Translate(generator.ExpandLabel), "LetterCaravanEnteredMap".Translate(caravan.Label, generator.ExpandLabel).CapitalizeFirst(), LetterDefOf.NeutralEvent, t);
+                Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredShipCrash")} {generator.ExpandLabel}", "LetterCaravanEnteredMap".Translate(caravan.Label, generator.ExpandLabel).CapitalizeFirst(), LetterDefOf.NeutralEvent, t);
             }
             Verse.Map map = orGenerateMap;
             CaravanEnterMode enterMode = CaravanEnterMode.Edge;

@@ -47,7 +47,6 @@ namespace MoreEvents.Events
             Tile tile = roadsTiles.RandomElement();
             tile.potentialRoads = null;
 
-
             Find.LetterStack.ReceiveLetter(def.label.Translate(), def.letterText.Translate(), LetterDefOf.NegativeEvent);
 
             Find.World.renderer.SetDirty<WorldLayer_Roads>();

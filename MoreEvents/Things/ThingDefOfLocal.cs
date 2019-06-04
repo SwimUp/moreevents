@@ -11,5 +11,7 @@ namespace MoreEvents
         public static ThingDef MechanoidTeleport;
 
         public static ThingDef HiveCrack;
+
+        public static ThingDef OpenableContainer;
     }
 }

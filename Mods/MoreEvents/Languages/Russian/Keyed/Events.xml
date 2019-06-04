@@ -14,5 +14,6 @@
   <ShipCargo_Food_Description>Обломок грузового сектора</ShipCargo_Food_Description>
   <ShipSite_LeaveCommandLabel>Уйти</ShipSite_LeaveCommandLabel>
   <ShipSite_LeaveCommandDesc>Собрать караван и уйти</ShipSite_LeaveCommandDesc>
+  <CaravanEnteredShipCrash>Караван прибыл к</CaravanEnteredShipCrash>
 
 </LanguageData>

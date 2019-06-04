@@ -42,6 +42,8 @@ namespace MoreEvents.Events.ShipCrash
 
             ShipCrash_Controller.MakeShipPart(new ShipCargo_Food(), tileID, f);
 
+            Find.LetterStack.ReceiveLetter(def.label.Translate(), def.letterText.Translate(), LetterDefOf.NegativeEvent);
+
             return true;
         }
     }
