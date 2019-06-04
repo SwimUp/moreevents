@@ -3,11 +3,16 @@
 
   <Supernova_label>Взрыв сверхновой</Supernova_label>
   <SupernovaExp_low>На расстоянии нескольких сотен тысяч световых лет произошел взрыв сверхновой. Это не причинит вреда, но позволит наблюдать красивое зрелище.</SupernovaExp_low>
-  <SupernovaExp_medium>На расстоянии нескольких десятков тысяч световых лет произошел взрыв сверхновой. Ожидайте небольшой метеоритный дождь, повышение темературы</SupernovaExp_medium>
+  <SupernovaExp_medium>На расстоянии нескольких десятков тысяч световых лет произошел взрыв сверхновой. Ожидайте небольшой метеоритный дождь, повышение температуры</SupernovaExp_medium>
   <SupernovaExp_high>На расстоянии нескольких тычяч световых лет произошел взрыв сверхновой. Ожидайте мощные метеоритные дожди, очень сильное повышение температуры и продолжительный день</SupernovaExp_high>
   <SupernovaExp_ultra>На расстоянии нескольких сотен световых лет произошел взрыв сверхновой. Будет ад, крепитесь.</SupernovaExp_ultra>
 
   <HiveCreaturesCount>Особей: </HiveCreaturesCount>
   <HiveLevel>Уровень: </HiveLevel>
+  
+  <ShipCargo_Food_ExpandLabel>Обломок корабля</ShipCargo_Food_ExpandLabel>
+  <ShipCargo_Food_Description>Обломок грузового сектора</ShipCargo_Food_Description>
+  <ShipSite_LeaveCommandLabel>Уйти</ShipSite_LeaveCommandLabel>
+  <ShipSite_LeaveCommandDesc>Собрать караван и уйти</ShipSite_LeaveCommandDesc>
 
 </LanguageData>

@@ -40,7 +40,7 @@ namespace MoreEvents.Events.ShipCrash
             if (f == null)
                 return false;
 
-            ShipCrash_Controller.MakeShipPart(new Ship_Cargo(), tileID, f);
+            ShipCrash_Controller.MakeShipPart(new ShipCargo_Food(), tileID, f);
 
             return true;
         }

@@ -12,9 +12,4 @@ namespace MoreEvents.Events.ShipCrash
         public static WorldObjectDef ShipCrashSite;
     }
 
-    [DefOf]
-    public static class ShipWorldObjectCompPropDefOf
-    {
-        public static WorldObjectDef ShipWorldObjectCompProp_Main;
-    }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Verse;
 using static MoreEvents.Events.ShipCrash.ShipCrash_Controller;
 
 namespace MoreEvents.Events.ShipCrash.Map
@@ -21,7 +22,7 @@ namespace MoreEvents.Events.ShipCrash.Map
 
         public override void PostMapGenerate()
         {
-
+            Generator.RunGenerator();
         }
     }
 }

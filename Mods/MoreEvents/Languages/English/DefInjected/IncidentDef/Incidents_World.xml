@@ -41,10 +41,6 @@
   <HeavyAir.letterLabel>Heavy Air</HeavyAir.letterLabel>
   <HeavyAir.letterText>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir.letterText>
   
-  <WetAir.label>Wet air</WetAir.label>
-  <WetAir.letterLabel>Wet air</WetAir.letterLabel>
-  <WetAir.letterText>Air has come filled with particles of water. Being on the open area will immediately freeze the lungs, and buildings will start to deteriorate</WetAir.letterText>
-
   <MechanoidPortal.label>Teleport mechanoids!</MechanoidPortal.label>
   <MechanoidPortal.letterLabel>Teleport mechanoids!</MechanoidPortal.letterLabel>
   <MechanoidPortal.letterText>A mysterious fragment has fallen from the sky, which generates a teleport from which mechanoids appear. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</MechanoidPortal.letterText>

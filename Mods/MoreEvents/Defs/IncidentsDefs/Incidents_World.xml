@@ -296,7 +296,7 @@
 		<targetTags>
 			<li>World</li>
 		</targetTags>
-		<workerClass>MoreEvents.Events.IncidentWorker_DestroyRoad</workerClass>
+		<workerClass>MoreEvents.Events.ShipCrash.IncidentWorker_ShipCrash</workerClass>
 		<category>Misc</category>
 		<minRefireDays>140</minRefireDays>
 		<baseChance>1.0</baseChance>

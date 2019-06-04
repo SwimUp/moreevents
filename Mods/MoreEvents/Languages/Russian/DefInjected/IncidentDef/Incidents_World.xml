@@ -19,7 +19,7 @@
   
   <LeanAtmosphere.label>Обедненная атмосфера</LeanAtmosphere.label>
   <LeanAtmosphere.letterLabel>Обедненная атмосфера</LeanAtmosphere.letterLabel>
-  <LeanAtmosphere.letterText>В следствии мощного выброса большого количества энергии от взрыва звезды часть атмосферы планеты выгорела. Это изменит все климатические условия на планете. Ожидайте постоянные перепады температуры.</LeanAtmosphere.letterText>
+  <LeanAtmosphere.letterText>В следствии мощного выброса большого количества энергии от взрыва звезды часть атмосферы планеты выгорела. Это изменит все климатические условия на планете. Ожидайте постоянные перепады температуры</LeanAtmosphere.letterText>
 
   <RadiationFon.label>Повышенная радиация</RadiationFon.label>
   <RadiationFon.letterLabel>Повышенная радиация</RadiationFon.letterLabel>
@@ -41,14 +41,6 @@
   <HeavyAir.letterLabel>Тяжелый воздух</HeavyAir.letterLabel>
   <HeavyAir.letterText>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм, нужно переждать пару дней</HeavyAir.letterText>
   
-  <WetAir.label>Влажный воздух</WetAir.label>
-  <WetAir.letterLabel>Влажный воздух</WetAir.letterLabel>
-  <WetAir.letterText>Пришел воздух наполненный частицами воды. Нахождение на улице даст незамедлительное обморожение легких, а постройки начнут портиться</WetAir.letterText>
-
-  <HeavyHail.label>Сильный град</HeavyHail.label>
-  <HeavyHail.letterLabel>Сильный град</HeavyHail.letterLabel>
-  <HeavyHail.letterText>В атмосфере сформировался град. В течении некоторого времени огромные осколки льда будут падать на вас.</HeavyHail.letterText>
-
   <MechanoidPortal.label>Телепортер механойдов!</MechanoidPortal.label>
   <MechanoidPortal.letterLabel>Телепортер механойдов</MechanoidPortal.letterLabel>
   <MechanoidPortal.letterText>С неба обрушился загадочный обломок, который генерирует телепорт из которого появляются механойды. Сам портал не уничтожить, но если сломать генератор, то и портал пропадет.</MechanoidPortal.letterText>

@@ -3,11 +3,11 @@
 
   <WorldObjectDef>
     <defName>ShipCrashSite</defName>
-    <worldObjectClass>Site</worldObjectClass>
+    <worldObjectClass>MoreEvents.Events.ShipCrash.ShipSite</worldObjectClass>
     <expandingIcon>true</expandingIcon>
     <expandingIconPriority>70</expandingIconPriority>
     <comps>
-      <li Class="ShipWorldObjectCompProp_Main" />
+      <li Class="MoreEvents.Events.ShipCrash.Map.ShipWorldObjectCompProp_Main" />
     </comps>
     <IncidentTargetTags>
       <li>Map_Misc</li>

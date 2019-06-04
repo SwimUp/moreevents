@@ -34,7 +34,7 @@ namespace MoreEvents.Events.ShipCrash
 
         }
 
-        public ShipCrash_Controller(Verse.Map map)
+        public ShipCrash_Controller(Game game)
         {
 
         }
@@ -48,12 +48,16 @@ namespace MoreEvents.Events.ShipCrash
 
         public static ShipCrashWorker MakeShipPart(ShipMapGenerator gen, int tileID, Faction faction)
         {
-            Site site = (Site)WorldObjectMaker.MakeWorldObject(ShipWorldObjectDefOf.ShipCrashSite);
+            ShipSite site = (ShipSite)WorldObjectMaker.MakeWorldObject(ShipWorldObjectDefOf.ShipCrashSite);
+
+            site.SetGenerator(gen);
             site.Tile = tileID;
             site.SetFaction(faction);
 
             var shipComp = site.GetComponent<ShipCrashWorker>();
             shipComp.InitWorker(gen);
+
+            Find.WorldObjects.Add(site);
 
             return shipComp;
         }

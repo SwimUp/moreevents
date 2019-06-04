@@ -6,13 +6,17 @@ using static MoreEvents.Events.ShipCrash.ShipCrash_Controller;
 
 namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 {
-    public class Ship_Cargo : ShipMapGenerator
+    public abstract class Ship_Cargo : ShipMapGenerator
     {
+        public enum CargoType : byte
+        {
+            Complex = 0, //все вместе
+            Mining, //ресурсы, добываемые
+            Food //еда
+        }
+
         public override ShipSiteType SiteType => ShipSiteType.Cargo;
 
-        public override void RunGenerator()
-        {
-            
-        }
+        public abstract CargoType PartType { get; }
     }
 }
