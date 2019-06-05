@@ -12,9 +12,6 @@ namespace MoreEvents.Things
 {
     public class Building_HiveCrack : Building
     {
-        private Graphic TexMain;
-        private readonly string TexturesPath = "Things/Crack/";
-
         private Map currentMap;
 
         private bool giveBuff = false;
@@ -65,10 +62,6 @@ namespace MoreEvents.Things
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-
-            int textInt = Rand.Range(1, 6);
-            TexMain = GraphicDatabase.Get<Graphic_Single>((TexturesPath + textInt), this.def.graphicData.Graphic.Shader);
-            TexMain.drawSize = this.def.graphicData.drawSize;
 
             currentMap = map;
             spawnedMobs.Clear();
@@ -190,17 +183,6 @@ namespace MoreEvents.Things
                 Pawn p = spawnedMobs[i];
                 if (p.Dead)
                     spawnedMobs.RemoveAt(i);
-            }
-        }
-
-        public override void Draw()
-        {
-            if (this.TexMain != null)
-            {
-                Matrix4x4 matrix = default(Matrix4x4);
-                Vector3 s = drawSizes[hiveLevel];
-                matrix.SetTRS(this.DrawPos + Altitudes.AltIncVect, Rotation.AsQuat, s);
-                Graphics.DrawMesh(MeshPool.plane10, matrix, this.TexMain.MatAt(Rotation, null), 0);
             }
         }
 

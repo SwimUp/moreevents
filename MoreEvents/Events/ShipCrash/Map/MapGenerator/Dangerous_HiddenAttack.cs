@@ -32,6 +32,13 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
             this.maxPawns = maxPawns;
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+
+            ForceSpawn();
+        }
+
         public override void CompTick()
         {
             if (startTimer)
@@ -40,14 +47,17 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
                 if (ticks <= 0)
                 {
-                    startTimer = false;
                     SpawnEnemies();
                 }
             }
         }
 
+        public void ForceSpawn() => SpawnEnemies();
+
         private void SpawnEnemies()
         {
+            startTimer = false;
+
             PawnGroupMakerParms pawnGroupMakerParms = new PawnGroupMakerParms
             {
                 faction = faction,
@@ -79,11 +89,6 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
             }
 
             pawns.Clear();
-        }
-
-        public override void PostExposeData()
-        {
-            Scribe_Values.Look(ref ticks, "ticks", 0);
         }
     }
 }

@@ -70,6 +70,7 @@
     <Compile Include="Events\ShipCrash\CaravanArrivalAction_EnterToShipCrash.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_AlreadyStand.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_HiddenAttack.cs" />
+    <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipCargo_Complex.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipCargo_Mining.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipCargo_Food.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipMapGenerator.cs" />

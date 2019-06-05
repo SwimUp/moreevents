@@ -73,6 +73,10 @@ namespace MoreEvents.Events.ShipCrash
                 {
                     return new ShipCargo_Mining();
                 }
+                if(Rand.Chance(0.14f))
+                {
+                    return new ShipCargo_Complex();
+                }
             }
         }
     }

@@ -92,8 +92,8 @@
     <passability>Impassable</passability>
     <fillPercent>1.0</fillPercent>
     <graphicData>
-      <texPath>Things/Crack/1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Crack</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <size>(4,4)</size>
@@ -122,7 +122,7 @@
     <description>Container containing resources</description>
     <thingClass>MoreEvents.Events.ShipCrash.Building_Container</thingClass>
     <graphicData>
-      <texPath>Things/Building/Exotic/ShipChunk</texPath>
+      <texPath>Things/Buildings/Container</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <drawSize>(2,2)</drawSize>
       <damageData>

@@ -18,6 +18,8 @@ namespace MoreEvents.Events.ShipCrash
 
         public override Texture2D ExpandingIcon => Generator.ExpandTexture;
 
+        public override bool AppendFactionToInspectString => false;
+
         public override Material Material
         {
             get
@@ -59,6 +61,7 @@ namespace MoreEvents.Events.ShipCrash
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append(Generator.Description);
+            stringBuilder.Append(base.GetInspectString());
 
             return stringBuilder.ToString();
         }
@@ -95,8 +98,11 @@ namespace MoreEvents.Events.ShipCrash
             return command;
         }
 
-        private void ForceReform(MapParent mapParent)
+        public static void ForceReform(MapParent mapParent)
         {
+            if (GenHostility.AnyHostileActiveThreatToPlayer(mapParent.Map))
+                return;
+
             if (Dialog_FormCaravan.AllSendablePawns(mapParent.Map, reform: true).Any((Pawn x) => x.IsColonist))
             {
                 Messages.Message("MessageYouHaveToReformCaravanNow".Translate(), new GlobalTargetInfo(mapParent.Tile), MessageTypeDefOf.NeutralEvent);

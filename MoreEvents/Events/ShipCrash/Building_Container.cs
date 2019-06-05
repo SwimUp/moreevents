@@ -10,7 +10,14 @@ namespace MoreEvents.Events.ShipCrash
 {
     public class Building_Container : Building
     {
-        private Dictionary<Thing, int> items = new Dictionary<Thing, int>();
+        private Dictionary<ThingDef, int> items = new Dictionary<ThingDef, int>();
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Collections.Look(ref items, "containerItems", LookMode.Def, LookMode.Value);
+        }
 
         public override void SpawnSetup(Verse.Map map, bool respawningAfterLoad)
         {
@@ -19,15 +26,13 @@ namespace MoreEvents.Events.ShipCrash
 
         public void AddItem(ThingDef item, int count)
         {
-            Thing make = ThingMaker.MakeThing(item);
-
-            if (items.Keys.Contains(make))
+            if (items.Keys.Contains(item))
             {
-                items[make] += count;
+                items[item] += count;
             }
             else
             {
-                items.Add(make, count);
+                items.Add(item, count);
             }
         }
 
@@ -35,7 +40,8 @@ namespace MoreEvents.Events.ShipCrash
         {
             foreach(var pair in items)
             {
-                GenDrop.TryDropSpawn(pair.Key, this.Position, this.Map, ThingPlaceMode.Near, out Thing t);
+                Thing make = ThingMaker.MakeThing(pair.Key);
+                GenDrop.TryDropSpawn(make, this.Position, this.Map, ThingPlaceMode.Near, out Thing t);
 
                 t.stackCount = pair.Value;
             }

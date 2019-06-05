@@ -19,4 +19,9 @@
   <ShipCargo_Mining_ExpandLabel>Обломок корабля</ShipCargo_Mining_ExpandLabel>
   <ShipCargo_Mining_Description>Обломок грузового сектора</ShipCargo_Mining_Description>
 
+  <ShipPartTimeout>\nВероятно, обломки будут разграблены через (дней):</ShipPartTimeout>
+  
+  <ShipCargo_Complex_ExpandLabel>Обломок корабля</ShipCargo_Complex_ExpandLabel>
+  <ShipCargo_Complex_Description>Обломок грузового сектора</ShipCargo_Complex_Description>
+  
 </LanguageData>
