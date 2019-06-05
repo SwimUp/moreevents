@@ -18,9 +18,6 @@ namespace MoreEvents.Events.ShipCrash
 
         public override Texture2D ExpandingIcon => Generator.ExpandTexture;
 
-        public bool OnMap = false;
-
-
         public override Material Material
         {
             get

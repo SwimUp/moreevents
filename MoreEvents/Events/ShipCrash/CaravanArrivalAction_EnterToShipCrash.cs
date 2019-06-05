@@ -29,9 +29,6 @@ namespace MoreEvents.Events.ShipCrash
 
         public override void Arrived(Caravan caravan)
         {
-        //    ShipSite site = (ShipSite)mapParent;
-        //    site.OnMap = true;
-
             Enter(caravan);
         }
 

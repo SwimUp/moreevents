@@ -20,14 +20,7 @@ namespace MoreEvents.Events.ShipCrash
         }
 
         public const int MaxShips = 3;
-        public static int ShipCount
-        {
-            get
-            {
-                return shipCount;
-            }
-        }
-        private static int shipCount;
+        public static int ShipCount;
 
         public ShipCrash_Controller()
         {
@@ -43,7 +36,7 @@ namespace MoreEvents.Events.ShipCrash
         {
             base.ExposeData();
 
-            Scribe_Values.Look(ref shipCount, "ShipCount", 0);
+            Scribe_Values.Look(ref ShipCount, "ShipCount", 0);
         }
 
         public static ShipCrashWorker MakeShipPart(ShipMapGenerator gen, int tileID, Faction faction)

@@ -8,14 +8,14 @@ using RimWorld;
 
 namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 {
-    public class ShipCargo_Food : Ship_Cargo
+    public class ShipCargo_Mining : Ship_Cargo
     {
-        public override CargoType PartType => CargoType.Food;
-        public override string texturePath => @"Map/cargo_food";
+        public override CargoType PartType => CargoType.Mining;
+        public override string texturePath => @"Map/cargo_mining";
 
-        public override string ExpandLabel => Translator.Translate("ShipCargo_Food_ExpandLabel");
+        public override string ExpandLabel => Translator.Translate("ShipCargo_Mining_ExpandLabel");
 
-        public override string Description => Translator.Translate("ShipCargo_Food_Description");
+        public override string Description => Translator.Translate("ShipCargo_Mining_Description");
 
         private const int minSupply = 5;
         private const int maxSupply = 19;
@@ -31,19 +31,23 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
             GenerateItems(map);
 
-            if(dangerous)
+            if (dangerous)
             {
-                if(dangerousLevel > 1400f)
-                {
-                    dangerousLevel *= 0.6f;
-                    GenerateDangerous(owner, map);
-                }
+                GenerateDangerous(owner, map);
             }
         }
 
         private void GenerateDangerous(Faction owner, Verse.Map map)
         {
-            Dangerous_AlreadyStand dang = new Dangerous_AlreadyStand(dangerousLevel, owner, map, 4, 4);
+            if (Rand.Chance(0.3f))
+            {
+                Dangerous_HiddenAttack dang = new Dangerous_HiddenAttack(Rand.Range(8000, 25000), dangerousLevel, owner, map, 30);
+                main.parent.AllComps.Add(dang);
+            }
+            else
+            {
+                Dangerous_AlreadyStand dang = new Dangerous_AlreadyStand(dangerousLevel, owner, map, 4, 6);
+            }
         }
 
         private void GenerateItems(Verse.Map map)
@@ -56,7 +60,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
                 {
                     if(thing.thingCategories != null)
                     {
-                        if(thing.thingCategories.Contains(ThingCategoryDefOf.FoodMeals) || thing.thingCategories.Contains(ThingCategoryDefOf.Foods))
+                        if(thing.thingCategories.Contains(ThingCategoryDefOf.ResourcesRaw))
                         {
                             items.Add(thing);
                         }
@@ -75,16 +79,22 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
                 if (pos == null)
                     continue;
 
-                int count = Rand.Range(2, 6);
+                int count = Rand.Range(1, 4);
 
                 Building_Container thingContainer = (Building_Container)ThingMaker.MakeThing(ThingDefOfLocal.OpenableContainer);
                 for (int i2 = 0; i2 < count; i2++)
                 {
                     ThingDef item = items.RandomElement();
 
-                    int itemCount = Rand.Range(6, 60);
+                    int maxCount = 100;
+                    if (item.BaseMarketValue >= 5)
+                        maxCount = 60;
+                    if (item.BaseMarketValue > 8)
+                        maxCount = 30;
+
+                    int itemCount = Rand.Range(6, maxCount);
                     thingContainer.AddItem(item, itemCount);
-                    dangerousLevel += item.BaseMarketValue * itemCount;
+                    dangerousLevel += (item.BaseMarketValue * itemCount) * 0.5f;
                 }
 
                 GenSpawn.Spawn(thingContainer, pos, map);

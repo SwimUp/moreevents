@@ -11,6 +11,9 @@ namespace MoreEvents.Events.ShipCrash
 {
     public class IncidentWorker_ShipCrash : IncidentWorker
     {
+        private int minParts = 7;
+        private int maxParts = 15;
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             if (ShipCrash_Controller.ShipCount == ShipCrash_Controller.MaxShips)
@@ -34,17 +37,43 @@ namespace MoreEvents.Events.ShipCrash
             if (tiles.Count == 0)
                 return false;
 
-            int tileID = tiles.RandomElement();
+            int partsCount = Rand.Range(minParts, maxParts);
 
-            Faction f = Find.FactionManager.RandomEnemyFaction();
-            if (f == null)
-                return false;
+            for (int i = 0; i < partsCount; i++)
+            {
+                int tileID = tiles.RandomElement();
 
-            ShipCrash_Controller.MakeShipPart(new ShipCargo_Food(), tileID, f);
+                if (Find.WorldObjects.AnyMapParentAt(tileID))
+                    continue;
+
+                Faction f = Find.FactionManager.RandomEnemyFaction();
+                if (f == null)
+                    return false;
+
+                ShipMapGenerator generator = GetGenerator();
+                ShipCrash_Controller.MakeShipPart(generator, tileID, f);
+            }
 
             Find.LetterStack.ReceiveLetter(def.label.Translate(), def.letterText.Translate(), LetterDefOf.NegativeEvent);
 
+            ShipCrash_Controller.ShipCount++;
+
             return true;
+        }
+
+        private ShipMapGenerator GetGenerator()
+        {
+            while(true)
+            {
+                if(Rand.Chance(0.36f))
+                {
+                    return new ShipCargo_Food();
+                }
+                if (Rand.Chance(0.23f))
+                {
+                    return new ShipCargo_Mining();
+                }
+            }
         }
     }
 }
