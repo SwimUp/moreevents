@@ -24,4 +24,12 @@
   <ShipCargo_Complex_ExpandLabel>Обломок корабля</ShipCargo_Complex_ExpandLabel>
   <ShipCargo_Complex_Description>Обломок грузового сектора</ShipCargo_Complex_Description>
   
+  <EnemyOnTheMap>На карте еще остались враги. Вы не можете собрать караван сейчас.</EnemyOnTheMap>
+  
+  <Ship_Living_ExpandLabel>Обломок корабля</Ship_Living_ExpandLabel>
+  <Ship_Living_Description>Обломок жилого сектора</Ship_Living_Description>
+  
+  <Ship_Armory_ExpandLabel>Обломок корабля</Ship_Armory_ExpandLabel>
+  <Ship_Armory_Description>Обломок оружейного сектора</Ship_Armory_Description>
+  
 </LanguageData>

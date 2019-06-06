@@ -11,7 +11,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
     public class ShipCargo_Complex : Ship_Cargo
     {
         public override CargoType PartType => CargoType.Complex;
-        public override string texturePath => @"Map/cargo_complex";
+        public override string TexturePath => @"Map/cargo_complex";
 
         public override string ExpandLabel => Translator.Translate("ShipCargo_Complex_ExpandLabel");
 
@@ -89,16 +89,16 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
                 {
                     ThingDef item = items.RandomElement();
 
-                    int maxCount = 100;
+                    int maxCount = 30;
 
                     if (item.FirstThingCategory == ThingCategoryDefOf.Medicine)
-                        maxCount = 15;
+                        maxCount = 6;
                     else if (item.FirstThingCategory == ThingCategoryDefOf.ResourcesRaw)
                     {
                         if (item.BaseMarketValue >= 5)
-                            maxCount = 60;
+                            maxCount = 15;
                         if (item.BaseMarketValue > 8)
-                            maxCount = 30;
+                            maxCount = 10;
                     }
 
                     int itemCount = Rand.Range(3, maxCount);

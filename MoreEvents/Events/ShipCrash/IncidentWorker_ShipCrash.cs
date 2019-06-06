@@ -11,8 +11,8 @@ namespace MoreEvents.Events.ShipCrash
 {
     public class IncidentWorker_ShipCrash : IncidentWorker
     {
-        private int minParts = 7;
-        private int maxParts = 15;
+        private int minParts = 4;
+        private int maxParts = 10;
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
@@ -46,7 +46,7 @@ namespace MoreEvents.Events.ShipCrash
                 if (Find.WorldObjects.AnyMapParentAt(tileID))
                     continue;
 
-                Faction f = Find.FactionManager.RandomEnemyFaction();
+                Faction f = RandomEnemyFaction();
                 if (f == null)
                     return false;
 
@@ -61,13 +61,47 @@ namespace MoreEvents.Events.ShipCrash
             return true;
         }
 
+        private Faction RandomEnemyFaction(bool allowHidden = false, bool allowDefeated = false, bool allowNonHumanlike = true, TechLevel minTechLevel = TechLevel.Undefined)
+        {
+            var list = from x in Find.FactionManager.AllFactions
+                       where !x.IsPlayer && (allowHidden || !x.def.hidden) && (allowDefeated || !x.defeated) && (allowNonHumanlike || x.def.humanlikeFaction) && (minTechLevel == TechLevel.Undefined || (int)x.def.techLevel >= (int)minTechLevel) && x.HostileTo(Faction.OfPlayer)
+                       select x;
+
+            List<Faction> tmpList = new List<Faction>();
+
+            foreach(var l in list)
+            {
+                var kinds = l.def.pawnGroupMakers;
+                if (kinds == null)
+                    continue;
+
+                foreach(var kind in kinds)
+                {
+                    if(kind.kindDef == PawnGroupKindDefOf.Combat)
+                    {
+                        tmpList.Add(l);
+                        continue;
+                    }
+                }
+            }
+
+            if (tmpList.Count == 0)
+                return null;
+
+            return tmpList.RandomElement();
+        }
+
         private ShipMapGenerator GetGenerator()
         {
             while(true)
             {
-                if(Rand.Chance(0.36f))
+                if(Rand.Chance(0.21f))
                 {
                     return new ShipCargo_Food();
+                }
+                if(Rand.Chance(0.12f))
+                {
+                    return new Ship_Living();
                 }
                 if (Rand.Chance(0.23f))
                 {
@@ -76,6 +110,10 @@ namespace MoreEvents.Events.ShipCrash
                 if(Rand.Chance(0.14f))
                 {
                     return new ShipCargo_Complex();
+                }
+                if(Rand.Chance(0.11f))
+                {
+                    return new Ship_Armory();
                 }
             }
         }

@@ -7,12 +7,12 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_SuperNova : IncidentWorker
     {
-        private double[] _eventChance = new double[4]
+        private float[] _eventChance = new float[4]
         {
-            0.35,
-            0.25,
-            0.10,
-            0.06
+            0.35f,
+            0.25f,
+            0.10f,
+            0.06f
         };
         private Action<Map>[] _events = new Action<Map>[4]
         {
@@ -30,7 +30,7 @@ namespace MoreEvents.Events
             {
                 int num = Rand.Range(0, 4);
 
-                if(Utility.GenerateChance(_eventChance[num]))
+                if(Rand.Chance(_eventChance[num]))
                 {
                     _events[num].Invoke(map);
                     break;

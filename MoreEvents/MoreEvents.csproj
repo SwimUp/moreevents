@@ -69,12 +69,15 @@
     <Compile Include="Events\ShipCrash\Building_Container.cs" />
     <Compile Include="Events\ShipCrash\CaravanArrivalAction_EnterToShipCrash.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_AlreadyStand.cs" />
+    <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_HiddenFlyAttack.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_HiddenAttack.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipCargo_Complex.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipCargo_Mining.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipCargo_Food.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\ShipMapGenerator.cs" />
+    <Compile Include="Events\ShipCrash\Map\MapGenerator\Ship_Armory.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Ship_Cargo.cs" />
+    <Compile Include="Events\ShipCrash\Map\MapGenerator\Ship_Living.cs" />
     <Compile Include="Events\ShipCrash\Map\ShipCrashWorker.cs" />
     <Compile Include="Events\ShipCrash\Map\ShipWorldObjectCompProp_Main.cs" />
     <Compile Include="Events\ShipCrash\ShipCrash_Controller.cs" />
@@ -100,7 +103,6 @@
     <Compile Include="Thoughts\ThoughtDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtWorker_SupernovaSight.cs" />
     <Compile Include="Utility\Utility.cs" />
-    <Compile Include="Utils.cs" />
     <Compile Include="Weathers\WeatherDefOfLocal.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>

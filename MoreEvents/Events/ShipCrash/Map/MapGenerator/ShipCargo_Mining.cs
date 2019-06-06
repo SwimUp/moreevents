@@ -11,7 +11,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
     public class ShipCargo_Mining : Ship_Cargo
     {
         public override CargoType PartType => CargoType.Mining;
-        public override string texturePath => @"Map/cargo_mining";
+        public override string TexturePath => @"Map/cargo_mining";
 
         public override string ExpandLabel => Translator.Translate("ShipCargo_Mining_ExpandLabel");
 
@@ -41,7 +41,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
         {
             if (Rand.Chance(0.3f))
             {
-                Dangerous_HiddenAttack dang = new Dangerous_HiddenAttack(Rand.Range(8000, 25000), dangerousLevel, owner, map, 30);
+                Dangerous_HiddenAttack dang = new Dangerous_HiddenAttack(Rand.Range(8000, 15000), dangerousLevel, owner, map, 30);
                 main.parent.AllComps.Add(dang);
             }
             else
@@ -86,11 +86,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
                 {
                     ThingDef item = items.RandomElement();
 
-                    int maxCount = 100;
+                    int maxCount = 30;
                     if (item.BaseMarketValue >= 5)
-                        maxCount = 60;
+                        maxCount = 10;
                     if (item.BaseMarketValue > 8)
-                        maxCount = 30;
+                        maxCount = 15;
 
                     int itemCount = Rand.Range(6, maxCount);
                     thingContainer.AddItem(item, itemCount);

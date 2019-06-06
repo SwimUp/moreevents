@@ -19,9 +19,9 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
             {
                 if(expandTexture == null)
                 {
-                    if (!texturePath.NullOrEmpty())
+                    if (!TexturePath.NullOrEmpty())
                     {
-                        expandTexture = ContentFinder<Texture2D>.Get(texturePath);
+                        expandTexture = ContentFinder<Texture2D>.Get(TexturePath);
                     }
                     else
                     {
@@ -33,7 +33,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
             }
         }
         private Texture2D expandTexture;
-        public abstract string texturePath { get; }
+        public abstract string TexturePath { get; }
 
         public abstract string ExpandLabel { get; }
 

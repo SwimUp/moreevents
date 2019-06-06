@@ -101,7 +101,10 @@ namespace MoreEvents.Events.ShipCrash
         public static void ForceReform(MapParent mapParent)
         {
             if (GenHostility.AnyHostileActiveThreatToPlayer(mapParent.Map))
+            {
+                Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return;
+            }
 
             if (Dialog_FormCaravan.AllSendablePawns(mapParent.Map, reform: true).Any((Pawn x) => x.IsColonist))
             {

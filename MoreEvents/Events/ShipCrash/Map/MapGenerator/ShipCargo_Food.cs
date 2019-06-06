@@ -11,7 +11,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
     public class ShipCargo_Food : Ship_Cargo
     {
         public override CargoType PartType => CargoType.Food;
-        public override string texturePath => @"Map/cargo_food";
+        public override string TexturePath => @"Map/cargo_food";
 
         public override string ExpandLabel => Translator.Translate("ShipCargo_Food_ExpandLabel");
 
@@ -82,7 +82,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
                 {
                     ThingDef item = items.RandomElement();
 
-                    int itemCount = Rand.Range(6, 60);
+                    int itemCount = Rand.Range(6, 15);
                     thingContainer.AddItem(item, itemCount);
                     dangerousLevel += item.BaseMarketValue * itemCount;
                 }

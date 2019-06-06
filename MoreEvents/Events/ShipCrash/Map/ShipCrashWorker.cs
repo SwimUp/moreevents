@@ -29,7 +29,7 @@ namespace MoreEvents.Events.ShipCrash.Map
         public override void Initialize(WorldObjectCompProperties props)
         {
             base.Initialize(props);
-            lifeTime = Rand.Range(20, 50) * 60000;
+            lifeTime = Rand.Range(10, 40) * 60000;
             useLifeTime = true;
         }
 
