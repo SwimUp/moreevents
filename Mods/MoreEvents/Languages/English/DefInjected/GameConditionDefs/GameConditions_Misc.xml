@@ -37,8 +37,4 @@
   <HeavyAir.description>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir.description>
   <HeavyAir.endMessage>It seems the bulk of the heavy elements have been blown away</HeavyAir.endMessage>
    
-  <WetAir.label>Wet air</WetAir.label>
-  <WetAir.description>Air has come filled with particles of water. Being on the open area will immediately freeze the lungs, and buildings will start to deteriorate</WetAir.description>
-  <WetAir.endMessage>Water in the air turned into ice</WetAir.endMessage>
-  
 </LanguageData>

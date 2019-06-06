@@ -9,5 +9,28 @@
 
   <HiveCreaturesCount>Individuals: </HiveCreaturesCount>
   <HiveLevel>Level: </HiveLevel>
+  
+  <ShipCargo_Food_ExpandLabel>Part of the ship</ShipCargo_Food_ExpandLabel>
+  <ShipCargo_Food_Description>Part of the cargo section</ShipCargo_Food_Description>
+  <ShipSite_LeaveCommandLabel>Leave</ShipSite_LeaveCommandLabel>
+  <ShipSite_LeaveCommandDesc>Form the caravan and leave</ShipSite_LeaveCommandDesc>
+  <CaravanEnteredShipCrash>Caravan arrived to</CaravanEnteredShipCrash>
+  
+  <ShipCargo_Mining_ExpandLabel>Part of the ship</ShipCargo_Mining_ExpandLabel>
+  <ShipCargo_Mining_Description>Part of the cargo section</ShipCargo_Mining_Description>
+
+  <ShipPartTimeout>\nProbably the wreckage will be looted in (days):</ShipPartTimeout>
+  
+  <ShipCargo_Complex_ExpandLabel>Part of the ship</ShipCargo_Complex_ExpandLabel>
+  <ShipCargo_Complex_Description>Part of the cargo sector</ShipCargo_Complex_Description>
+  
+  <EnemyOnTheMap>There are still enemies on the map. You can not form a caravan now.</EnemyOnTheMap>
+  
+  <Ship_Living_ExpandLabel>Part of the ship</Ship_Living_ExpandLabel>
+  <Ship_Living_Description>Part of the living section</Ship_Living_Description>
+  
+  <Ship_Armory_ExpandLabel>Part of the ship</Ship_Armory_ExpandLabel>
+  <Ship_Armory_Description>Part of the armory section</Ship_Armory_Description>
+  
 
 </LanguageData>
