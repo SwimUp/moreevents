@@ -17,8 +17,8 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
         public override string Description => Translator.Translate("ShipCargo_Mining_Description");
 
-        private const int minSupply = 5;
-        private const int maxSupply = 19;
+        private int minSupply => int.Parse(settings.Parameters["ShipCargo_Mining_MinSupply"].Value);
+        private int maxSupply => int.Parse(settings.Parameters["ShipCargo_Mining_MaxSupply"].Value);
 
         private bool dangerous = true;
         private float dangerousLevel;

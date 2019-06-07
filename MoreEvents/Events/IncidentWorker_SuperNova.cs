@@ -7,6 +7,8 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_SuperNova : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["Supernova"];
+
         private float[] _eventChance = new float[4]
         {
             0.35f,
@@ -24,6 +26,9 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
 
             while(true)

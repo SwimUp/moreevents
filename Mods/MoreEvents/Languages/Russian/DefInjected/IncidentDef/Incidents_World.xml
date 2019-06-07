@@ -57,4 +57,8 @@
   <ShipCrash.letterLabel>Крушение корабля</ShipCrash.letterLabel>
   <ShipCrash.letterText>Неизвестный корабль потерпел крушение. Множество частей были разбросаны по планете. Вы можете их исследовать, чтобы добыть ресурсы или найти новые технологии</ShipCrash.letterText>
 
+  <SandStorm.label>Песчаная буря</SandStorm.label>
+  <SandStorm.letterLabel>Песчаная буря</SandStorm.letterLabel>
+  <SandStorm.letterText>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm.letterText>
+
 </LanguageData>

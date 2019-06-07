@@ -52,5 +52,13 @@
   <DestroyRoad.label>Undermining the road</DestroyRoad.label>
   <DestroyRoad.letterLabel>Undermining the road</DestroyRoad.letterLabel>
   <DestroyRoad.letterText>A small detachment of robbers blew one of the roads.</DestroyRoad.letterText>
+  
+  <ShipCrash.label>Ship wreck</ShipCrash.label>
+  <ShipCrash.letterLabel>Ship wreck</ShipCrash.letterLabel>
+  <ShipCrash.letterText>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</ShipCrash.letterText>
+
+  <SandStorm.label>Sand Storm</SandStorm.label>
+  <SandStorm.letterLabel>Sand Storm</SandStorm.letterLabel>
+  <SandStorm.letterText>A sandstorm is coming. During this time, will be reduced visibility, speed</SandStorm.letterText>
 
 </LanguageData>

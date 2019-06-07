@@ -7,13 +7,36 @@ namespace MoreEvents.Events
 {
     public class GameCondition_HeavyAir : GameCondition
     {
+        private EventSettings settings => Settings.EventsSettings["HeavyAir"];
+
         public override void Init()
         {
+            if (!settings.Active)
+            {
+                End();
+                return;
+            }
+
             Map map = Find.CurrentMap;
             WeatherDef fog = WeatherDefOfLocal.HardFog;
             fog.durationRange = new IntRange(Duration, Duration + 1000);
             map.weatherManager.TransitionTo(fog);
         }
+
+        public override void End()
+        {
+            Map map = Find.CurrentMap;
+            List<Pawn> allPawnsSpawned = map.mapPawns.AllPawnsSpawned;
+            for (int i = 0; i < allPawnsSpawned.Count; i++)
+            {
+                Pawn pawn = allPawnsSpawned[i];
+
+                HealthUtility.AdjustSeverity(pawn, HediffDefOfLocal.OxygenStarvation, -100);
+            }
+
+            base.End();
+        }
+
         public override void GameConditionTick()
         {
             List<Map> affectedMaps = base.AffectedMaps;

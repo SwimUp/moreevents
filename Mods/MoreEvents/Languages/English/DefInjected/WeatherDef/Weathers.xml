@@ -7,4 +7,7 @@
   <HardFog.label>Heavy fog</HardFog.label>
   <HardFog.description>Fog mixed with heavy gases covered the region. Do not go out.</HardFog.description>
   
+  <Sandstorm.label>Sand storm</Sandstorm.label>
+  <Sandstorm.description>Too much sand. I can not see anything!</Sandstorm.description>
+  
 </LanguageData>

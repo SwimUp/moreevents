@@ -7,8 +7,13 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_BoulderMassHit : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["BoulderMassHit"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
             IntVec3 intVec;
 

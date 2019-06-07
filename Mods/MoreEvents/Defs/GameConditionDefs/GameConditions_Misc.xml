@@ -107,5 +107,14 @@
     <endMessage>It seems the bulk of the heavy elements has been blown away.</endMessage>
 	<canBePermanent>true</canBePermanent>
   </GameConditionDef>
+  
+  <GameConditionDef>
+    <defName>SandStorm</defName>
+    <conditionClass>MoreEvents.Events.GameCondition_SandStorm</conditionClass>
+    <label>Sand storm</label>
+    <description>A sandstorm is coming. During this time, will be reduced visibility, speed</description>
+    <endMessage>Sand storm is over</endMessage>
+	<canBePermanent>true</canBePermanent>
+  </GameConditionDef>
  
 </Defs>

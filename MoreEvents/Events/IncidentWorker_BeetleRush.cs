@@ -10,8 +10,13 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_BeetleRush : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["BeetleRush"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             if (!TryFindCell(out IntVec3 result, (Map)parms.target))
                 return false;
 

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <MEM_Settings_General>Настройка событий</MEM_Settings_General>
+  <EventActive>Активен?</EventActive>
+
+  <ShipCrash_Title>Крущение корабля</ShipCrash_Title>
+  <ShipCrash_Desc>Неизвестный корабль потерпел крушение. Множество частей были разбросаны по планете. Вы можете их исследовать, чтобы добыть ресурсы или найти новые технологии</ShipCrash_Desc>
+  <MinParts_title>Минимум частей</MinParts_title>
+  <MinParts>Минимум генерируемых частей разбросанных по карте</MinParts>
+  <MaxParts_title>Максимум частей</MaxParts_title>
+  <MaxParts>Максимум генерируемых частей разбросанных по карте</MaxParts>
+  <ShipCargo_Mining_MinSupply_title>Минимум ящиков с ресурсами</ShipCargo_Mining_MinSupply_title>
+  <ShipCargo_Mining_MinSupply>Минимум генерируемых ящиков с ресурсами</ShipCargo_Mining_MinSupply>
+  <ShipCargo_Mining_MaxSupply_title>Максимум ящиков с ресурсами</ShipCargo_Mining_MaxSupply_title>
+  <ShipCargo_Mining_MaxSupply>Максимум генерируемых ящиков с ресурсами</ShipCargo_Mining_MaxSupply>
+  <ShipCargo_Food_MinSupply_title>Минимум ящиков с едой</ShipCargo_Food_MinSupply_title>
+  <ShipCargo_Food_MinSupply>Минимум генерируемых частей разбросанных по карте</ShipCargo_Food_MinSupply>
+  <ShipCargo_Food_MaxSupply_title>Максимум ящиков с едой</ShipCargo_Food_MaxSupply_title>
+  <ShipCargo_Food_MaxSupply>Максимум генерируемых частей разбросанных по карте</ShipCargo_Food_MaxSupply>
+  <ShipCargo_Complex_MinSupply_title>Минимум ящиков с общими ресурсами</ShipCargo_Complex_MinSupply_title>
+  <ShipCargo_Complex_MinSupply>Минимум генерируемых частей разбросанных по карте</ShipCargo_Complex_MinSupply>
+  <ShipCargo_Complex_MaxSupply_title>Максимум ящиков с общими ресурсами</ShipCargo_Complex_MaxSupply_title>
+  <ShipCargo_Complex_MaxSupply>Максимум генерируемых частей разбросанных по карте</ShipCargo_Complex_MaxSupply>
+  <ShipCargo_Armory_MinSupply_title>Минимум ящиков с оружием и одеждой</ShipCargo_Armory_MinSupply_title>
+  <ShipCargo_Armory_MinSupply>Минимум генерируемых частей разбросанных по карте</ShipCargo_Armory_MinSupply>
+  <ShipCargo_Armory_MaxSupply_title>Максимум ящиков с оружием и одеждой</ShipCargo_Armory_MaxSupply_title>
+  <ShipCargo_Armory_MaxSupply>Максимум генерируемых частей разбросанных по карте</ShipCargo_Armory_MaxSupply>
+  <ShipCargo_Living_MinSupply_title>Минимум ящиков с людьми</ShipCargo_Living_MinSupply_title>
+  <ShipCargo_Living_MinSupply>Минимум генерируемых частей разбросанных по карте</ShipCargo_Living_MinSupply>
+  <ShipCargo_Living_MaxSupply_title>Максимум ящиков с людьми</ShipCargo_Living_MaxSupply_title>
+  <ShipCargo_Living_MaxSupply>Максимум генерируемых частей разбросанных по карте</ShipCargo_Living_MaxSupply>
+  
+  <Supernova_Title>Взрыв сверхновой</Supernova_Title>
+  <Supernova_Desc>Взрыв сверхновой</Supernova_Desc>
+  
+  <SuperHeatWave_Title>Невероятно горячая погода</SuperHeatWave_Title>
+  <SuperHeatWave_Desc>Невероятно сильная тепловая волна настигла планету. Температура может подняться до 100 градусов!</SuperHeatWave_Desc>
+  
+  <MechanoidPortal_Title>Телепортер механойдов!</MechanoidPortal_Title>
+  <MechanoidPortal_Desc>С неба обрушился загадочный обломок, который генерирует телепорт из которого появляются механойды. Сам портал не уничтожить, но если сломать генератор, то и портал пропадет.</MechanoidPortal_Desc>
+  
+  <Disease_NeurofibromatousWorm_Title>Нейрофиброматозные черви</Disease_NeurofibromatousWorm_Title>
+  <Disease_NeurofibromatousWorm_Desc>Нейрофиброматозные черви поражают части головного мозга отвечающие за зрение и слух, а так-же поражают нервные окончания. Если их во время не вылечить, то колонист оглохнет и ослепнет навсегда!</Disease_NeurofibromatousWorm_Desc>
+  
+  <Disease_Fibrodysplasia_Title>Фибродисплазия</Disease_Fibrodysplasia_Title>
+  <Disease_Fibrodysplasia_Desc>Некоторые части ваших колонистов покрываются гноем с ледяной коркой. Если не лечить, то часть тела полностью отмирает, а болезнь передается на новую.</Disease_Fibrodysplasia_Desc>
+  
+  <DestroyRoad_Title>Подрыв дороги</DestroyRoad_Title>
+  <DestroyRoad_Desc>Небольшой отряд разбойников взорвал одну из дорог.</DestroyRoad_Desc>
+  
+  <BoulderMassHit_Title>Метеоритный дождь!</BoulderMassHit_Title>
+  <BoulderMassHit_Desc>Метеоритный дождь! В течении некоторого времени метеориты будут падать на землю</BoulderMassHit_Desc>
+  
+  <BeetleRush_Title>Улей!</BeetleRush_Title>
+  <BeetleRush_Desc>Пещерные жуки прокопали тоннель из своего улья наружу. Они будут выходить наружу до тех пор, пока вы не закроете проход.</BeetleRush_Desc>
+  
+  <RadiationFon_Title>Повышенная радиация</RadiationFon_Title>
+  <RadiationFon_Desc>Из-за отсутствия части атмосферы космическая радиация очень легко просачивается на планету. Не советуем находиться на улице.</RadiationFon_Desc>
+  
+  <IceStorm_Title>Ледяной шторм</IceStorm_Title>
+  <IceStorm_Desc>Ледяной шторм настиг вас. Этот шторм несет невероятные низкие температуры и ледяные осколоки. Не выходите из дома</IceStorm_Desc>
+  
+  <HeavyAir_Title>Тяжелый воздух</HeavyAir_Title>
+  <HeavyAir_Desc>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм, нужно переждать пару дней</HeavyAir_Desc>
+  
+  <SandStorm_Title>Песчаная буря</SandStorm_Title>
+  <SandStorm_Desc>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm_Desc>
+  
+</LanguageData>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <MEM_Settings_General>Event configuration</MEM_Settings_General>
+  <EventActive>Active?</EventActive>
+
+  <ShipCrash_Title>Ship wreck</ShipCrash_Title>
+  <ShipCrash_Desc>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</ShipCrash_Desc>
+  <MinParts_title>Min parts</MinParts_title>
+  <MinParts>Minimum generated parts scattered around the map</MinParts>
+  <MaxParts_title>Max parts</MaxParts_title>
+  <MaxParts>Maximum generated parts scattered around the map</MaxParts>
+  <ShipCargo_Mining_MinSupply_title>Minimum mining crates</ShipCargo_Mining_MinSupply_title>
+  <ShipCargo_Mining_MinSupply>Minimum generated mining crates</ShipCargo_Mining_MinSupply>
+  <ShipCargo_Mining_MaxSupply_title>Maximum mining crates</ShipCargo_Mining_MaxSupply_title>
+  <ShipCargo_Mining_MaxSupply>Maximum generated mining crates</ShipCargo_Mining_MaxSupply>
+  <ShipCargo_Food_MinSupply_title>Minimum food crates</ShipCargo_Food_MinSupply_title>
+  <ShipCargo_Food_MinSupply>Minimum generated parts scattered around the map</ShipCargo_Food_MinSupply>
+  <ShipCargo_Food_MaxSupply_title>Maximum food crates</ShipCargo_Food_MaxSupply_title>
+  <ShipCargo_Food_MaxSupply>Maximum generated parts scattered around the map</ShipCargo_Food_MaxSupply>
+  <ShipCargo_Complex_MinSupply_title>Minimum complex crates</ShipCargo_Complex_MinSupply_title>
+  <ShipCargo_Complex_MinSupply>Minimum generated parts scattered around the map</ShipCargo_Complex_MinSupply>
+  <ShipCargo_Complex_MaxSupply_title>Maximum complex crates</ShipCargo_Complex_MaxSupply_title>
+  <ShipCargo_Complex_MaxSupply>Maximum generated parts scattered around the map</ShipCargo_Complex_MaxSupply>
+  <ShipCargo_Armory_MinSupply_title>Minimum weapons and apparels crates</ShipCargo_Armory_MinSupply_title>
+  <ShipCargo_Armory_MinSupply>Minimum generated parts scattered around the map</ShipCargo_Armory_MinSupply>
+  <ShipCargo_Armory_MaxSupply_title>Maximum weapons and apparels crates</ShipCargo_Armory_MaxSupply_title>
+  <ShipCargo_Armory_MaxSupply>Maximum generated parts scattered around the map</ShipCargo_Armory_MaxSupply>
+  <ShipCargo_Living_MinSupply_title>Minimum pawns crates</ShipCargo_Living_MinSupply_title>
+  <ShipCargo_Living_MinSupply>Minimum generated parts scattered around the map</ShipCargo_Living_MinSupply>
+  <ShipCargo_Living_MaxSupply_title>Maximum pawns crates</ShipCargo_Living_MaxSupply_title>
+  <ShipCargo_Living_MaxSupply>Maximum generated parts scattered around the map</ShipCargo_Living_MaxSupply>
+  
+  <Supernova_Title>Supernova explosion</Supernova_Title>
+  <Supernova_Desc>Supernova explosion</Supernova_Desc>
+  
+  <SuperHeatWave_Title>Incredibly hot weather</SuperHeatWave_Title>
+  <SuperHeatWave_Desc>Incredibly strong heat wave overtook the planet. The temperature can rise to 100 degrees!</SuperHeatWave_Desc>
+  
+  <MechanoidPortal_Title>Teleport mechanoids!</MechanoidPortal_Title>
+  <MechanoidPortal_Desc>A mysterious fragment has fallen from the sky, which generates a teleport from which mechanoids appear. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</MechanoidPortal_Desc>
+  
+  <Disease_NeurofibromatousWorm_Title>Neurofibromatous Worms</Disease_NeurofibromatousWorm_Title>
+  <Disease_NeurofibromatousWorm_Desc>Neurofibromatous worms affect parts of the brain that are responsible for vision and hearing, and also affect nerve endings. If they are not cured in time, the colonist will deaf and blind forever!</Disease_NeurofibromatousWorm_Desc>
+  
+  <Disease_Fibrodysplasia_Title>Fibrodysplasia</Disease_Fibrodysplasia_Title>
+  <Disease_Fibrodysplasia_Desc>Some parts of your colonists are covered with pus with an ice crust. If not treated, then part of the body dies completely, and the disease is transmitted to a new</Disease_Fibrodysplasia_Desc>
+  
+  <DestroyRoad_Title>Undermining the road</DestroyRoad_Title>
+  <DestroyRoad_Desc>A small detachment of robbers blew one of the roads.</DestroyRoad_Desc>
+  
+  <BoulderMassHit_Title>Meteor rain</BoulderMassHit_Title>
+  <BoulderMassHit_Desc>Meteor Rain! For some time, meteorites will fall to the ground.</BoulderMassHit_Desc>
+  
+  <BeetleRush_Title>Hive</BeetleRush_Title>
+  <BeetleRush_Desc>Cave beetles dug a tunnel out of their hive. They will go out until you close the passage.</BeetleRush_Desc>
+  
+  <RadiationFon_Title>Increased Radiation</RadiationFon_Title>
+  <RadiationFon_Desc>Due to the absence of a part of the atmosphere, cosmic radiation leaks onto the planet very easily. We do not recommend to be in an open area.</RadiationFon_Desc>
+  
+  <IceStorm_Title>Ice Storm</IceStorm_Title>
+  <IceStorm_Desc>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</IceStorm_Desc>
+  
+  <HeavyAir_Title>Heavy air</HeavyAir_Title>
+  <HeavyAir_Desc>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir_Desc>
+  
+  <SandStorm_Title>Sand storm</SandStorm_Title>
+  <SandStorm_Desc>A sandstorm is coming. During this time, will be reduced visibility, speed</SandStorm_Desc>
+  
+</LanguageData>

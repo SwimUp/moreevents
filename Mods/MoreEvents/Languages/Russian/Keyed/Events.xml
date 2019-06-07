@@ -32,4 +32,6 @@
   <Ship_Armory_ExpandLabel>Обломок корабля</Ship_Armory_ExpandLabel>
   <Ship_Armory_Description>Обломок оружейного сектора</Ship_Armory_Description>
   
+  <FireSpreadIs>Пожар распространится через (дней): </FireSpreadIs>
+  
 </LanguageData>

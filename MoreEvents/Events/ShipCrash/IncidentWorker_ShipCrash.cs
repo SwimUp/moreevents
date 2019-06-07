@@ -11,11 +11,16 @@ namespace MoreEvents.Events.ShipCrash
 {
     public class IncidentWorker_ShipCrash : IncidentWorker
     {
-        private int minParts = 4;
-        private int maxParts = 10;
+        private EventSettings settings => Settings.EventsSettings["ShipCrash"];
+
+        private int minParts => int.Parse(settings.Parameters["MinParts"].Value);
+        private int maxParts => int.Parse(settings.Parameters["MaxParts"].Value);
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             if (ShipCrash_Controller.ShipCount == ShipCrash_Controller.MaxShips)
                 return false;
 

@@ -7,4 +7,7 @@
   <HardFog.label>Тяжелый туман</HardFog.label>
   <HardFog.description>Туман с примесью тяжелых газов накрыл регион. Не выходите на улицу.</HardFog.description>
   
+  <Sandstorm.label>Песчаная буря</Sandstorm.label>
+  <Sandstorm.description>Слишком много песка. Я ничего не вижу!</Sandstorm.description>
+  
 </LanguageData>

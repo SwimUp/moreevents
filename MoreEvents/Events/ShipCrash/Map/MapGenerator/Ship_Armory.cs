@@ -11,6 +11,8 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 {
     public class Ship_Armory : ShipMapGenerator
     {
+        private EventSettings settings => Settings.EventsSettings["ShipCrash"];
+
         public override ShipSiteType SiteType => ShipSiteType.Armory;
 
         public override string TexturePath => @"Map/armory";
@@ -21,8 +23,8 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
         private ShipCrashWorker main;
 
-        private const int minSupply = 5;
-        private const int maxSupply = 12;
+        private int minSupply => int.Parse(settings.Parameters["ShipCargo_Armory_MinSupply"].Value);
+        private int maxSupply => int.Parse(settings.Parameters["ShipCargo_Armory_MaxSupply"].Value);
 
         private float dangerousLevel = 0;
 

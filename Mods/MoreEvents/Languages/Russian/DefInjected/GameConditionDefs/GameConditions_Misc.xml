@@ -41,4 +41,8 @@
   <WetAir.description>Пришел воздух наполненный частицами воды. Нахождение на улице даст незамедлительное обморожение легких, а постройки начнут портиться</WetAir.description>
   <WetAir.endMessage>Вода в воздухе превратилась в лёд</WetAir.endMessage>
   
+  <SandStorm.label>Песчаная буря</SandStorm.label>
+  <SandStorm.description>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm.description>
+  <SandStorm.endMessage>Песчаная буря закончилась</SandStorm.endMessage>
+  
 </LanguageData>

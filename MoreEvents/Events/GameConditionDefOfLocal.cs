@@ -16,5 +16,7 @@ namespace MoreEvents
 
         public static GameConditionDef IceStorm;
         public static GameConditionDef HeavyAir;
+
+        public static GameConditionDef SandStorm;
     }
 }

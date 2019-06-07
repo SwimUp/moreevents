@@ -5,8 +5,13 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_MechanoidPortalStart : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["MechanoidPortal"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             if (!TryFindCell(out IntVec3 result, (Map)parms.target))
                 return false;
 

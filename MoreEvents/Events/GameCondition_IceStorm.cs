@@ -9,8 +9,16 @@ namespace MoreEvents.Events
 {
     public class GameCondition_IceStorm : GameCondition
     {
+        private EventSettings settings => Settings.EventsSettings["IceStorm"];
+
         public override void Init()
         {
+            if (!settings.Active)
+            {
+                End();
+                return;
+            }
+
             Map map = Find.CurrentMap;
             WeatherDef storm = WeatherDefOfLocal.IncredibleSnowstorm;
             storm.durationRange = new IntRange(Duration, Duration + 1000);

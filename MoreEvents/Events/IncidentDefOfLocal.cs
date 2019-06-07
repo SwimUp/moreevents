@@ -20,5 +20,9 @@ namespace MoreEvents
         public static IncidentDef Disease_Fibrodysplasia;
 
         public static IncidentDef BeetleRush;
+        public static IncidentDef DestroyRoad;
+        public static IncidentDef ShipCrash;
+
+        public static IncidentDef SandStorm;
     }
 }

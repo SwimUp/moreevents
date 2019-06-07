@@ -48,10 +48,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Comps\MapParentLifeTimer.cs" />
     <Compile Include="Events\GameConditionDefOfLocal.cs" />
     <Compile Include="Events\GameCondition_DenseAtmosphere.cs" />
     <Compile Include="Events\GameCondition_Endlessday.cs" />
     <Compile Include="Events\GameCondition_HeavyAir.cs" />
+    <Compile Include="Events\GameCondition_SandStorm.cs" />
     <Compile Include="Events\GameCondition_IceStorm.cs" />
     <Compile Include="Events\GameCondition_LeanAtmosphere.cs" />
     <Compile Include="Events\GameCondition_NoSun.cs" />
@@ -89,9 +91,11 @@
     <Compile Include="Hediffs\HediffComp_FibroTick.cs" />
     <Compile Include="Hediffs\HediffDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
+    <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
@@ -104,6 +108,7 @@
     <Compile Include="Thoughts\ThoughtWorker_SupernovaSight.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="Weathers\WeatherDefOfLocal.cs" />
+    <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
   <ItemGroup />

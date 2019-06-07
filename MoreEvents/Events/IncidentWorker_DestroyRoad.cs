@@ -8,8 +8,13 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_DestroyRoad : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["DestroyRoad"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             if (!HasRoads())
                 return false;
 

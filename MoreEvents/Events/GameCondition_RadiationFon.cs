@@ -7,6 +7,8 @@ namespace MoreEvents.Events
 {
     public class GameCondition_RadiationFon : GameCondition
     {
+        private EventSettings settings => Settings.EventsSettings["RadiationFon"];
+
         private const int LerpTicks = 5000;
 
         private const float MaxSkyLerpFactor = 0.5f;
@@ -18,6 +20,17 @@ namespace MoreEvents.Events
         private const float PlantKillChance = 0.0065f;
 
         private const float CorpseRotProgressAdd = 3000f;
+
+        public override void Init()
+        {
+            if (!settings.Active)
+            {
+                End();
+                return;
+            }
+
+            base.Init();
+        }
 
         public override void GameConditionTick()
         {

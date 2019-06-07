@@ -8,6 +8,8 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 {
     public abstract class Ship_Cargo : ShipMapGenerator
     {
+        protected EventSettings settings => Settings.EventsSettings["ShipCrash"];
+
         public enum CargoType : byte
         {
             Complex = 0, //все вместе

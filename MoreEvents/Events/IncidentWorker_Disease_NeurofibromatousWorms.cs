@@ -7,8 +7,13 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_Disease_NeurofibromatousWorms : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["Disease_NeurofibromatousWorm"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = parms.target as Map;
             if(map != null)
             {
