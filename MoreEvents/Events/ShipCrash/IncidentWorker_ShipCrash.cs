@@ -59,7 +59,7 @@ namespace MoreEvents.Events.ShipCrash
                 ShipCrash_Controller.MakeShipPart(generator, tileID, f);
             }
 
-            Find.LetterStack.ReceiveLetter(def.label.Translate(), def.letterText.Translate(), LetterDefOf.NegativeEvent);
+            SendStandardLetter();
 
             ShipCrash_Controller.ShipCount++;
 

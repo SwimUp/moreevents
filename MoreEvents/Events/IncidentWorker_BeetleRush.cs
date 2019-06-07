@@ -29,7 +29,7 @@ namespace MoreEvents.Events
             if (TryFindCell(out IntVec3 result, map))
             {
                 Thing t = GenSpawn.Spawn(ThingDefOfLocal.HiveCrack, result, map);
-                Find.LetterStack.ReceiveLetter(def.label.Translate(), def.letterText.Translate(), LetterDefOf.NegativeEvent, t);
+                SendStandardLetter(t);
                 return true;
             }
 

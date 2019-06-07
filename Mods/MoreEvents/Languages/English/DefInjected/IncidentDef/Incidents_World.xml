@@ -36,7 +36,7 @@
   <IceStorm.label>Ice Storm</IceStorm.label>
   <IceStorm.letterLabel>Ice Storm</IceStorm.letterLabel>
   <IceStorm.letterText>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</IceStorm.letterText>
-  
+
   <HeavyAir.label>Heavy Air</HeavyAir.label>
   <HeavyAir.letterLabel>Heavy Air</HeavyAir.letterLabel>
   <HeavyAir.letterText>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir.letterText>
@@ -61,4 +61,9 @@
   <SandStorm.letterLabel>Sand Storm</SandStorm.letterLabel>
   <SandStorm.letterText>A sandstorm is coming. During this time, will be reduced visibility, speed</SandStorm.letterText>
 
+  <ShipCrash.label>Ship wreck</ShipCrash.label>
+  <ShipCrash.letterLabel>Ship wreck</ShipCrash.letterLabel>
+  <ShipCrash.letterText>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</ShipCrash.letterText>
+  
+  
 </LanguageData>

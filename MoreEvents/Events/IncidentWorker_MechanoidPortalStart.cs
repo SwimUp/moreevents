@@ -26,7 +26,7 @@ namespace MoreEvents.Events
             if(TryFindCell(out IntVec3 result, map))
             {
                 SkyfallerMaker.SpawnSkyfaller(ThingDefOf.ShipChunkIncoming, ThingDefOfLocal.MechanoidTeleport_Generator, result, map);
-                Find.LetterStack.ReceiveLetter(def.label.Translate(), def.letterText.Translate(), LetterDefOf.NegativeEvent);
+                SendStandardLetter();
                 return true;
             }
 
