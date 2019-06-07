@@ -32,6 +32,7 @@
   <Ship_Armory_ExpandLabel>Обломок корабля</Ship_Armory_ExpandLabel>
   <Ship_Armory_Description>Обломок оружейного сектора</Ship_Armory_Description>
   
-  <FireSpreadIs>Пожар распространится через (дней): </FireSpreadIs>
+  <FireSpreadIs>Пожар усилится через (дней): </FireSpreadIs>
+  <CaravanEnteredMassiveFire>Караван прибыл к</CaravanEnteredMassiveFire>
   
 </LanguageData>

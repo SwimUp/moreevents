@@ -13,5 +13,21 @@
       <li>Map_Misc</li>
     </IncidentTargetTags>
   </WorldObjectDef>
-
+  
+  <WorldObjectDef>
+    <defName>MassiveFireSite</defName>
+    <label>Hearth of fire</label>
+    <description>Hearth of fire</description>
+    <worldObjectClass>MoreEvents.Events.MassiveFire.MassiveFireMapSite</worldObjectClass>
+    <texture>Map/MassiveFireIcon3</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Map/MassiveFire</expandingIconTexture>
+    <expandingIconPriority>70</expandingIconPriority>
+    <comps>
+      <li Class="MoreEvents.Events.Comps.MassiveFireComp_Main" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
 </Defs>

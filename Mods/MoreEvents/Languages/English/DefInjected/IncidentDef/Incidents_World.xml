@@ -65,5 +65,8 @@
   <ShipCrash.letterLabel>Ship wreck</ShipCrash.letterLabel>
   <ShipCrash.letterText>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</ShipCrash.letterText>
   
+  <MassiveFires.label>Massive fire</MassiveFires.label>
+  <MassiveFires.letterLabel>Massive fire</MassiveFires.letterLabel>
+  <MassiveFires.letterText>A massive fire started in the neighboring land. If it is not put out, it will destroy all the neighboring forests!</MassiveFires.letterText>
   
 </LanguageData>

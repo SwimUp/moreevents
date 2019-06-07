@@ -32,6 +32,7 @@
   <Ship_Armory_ExpandLabel>Part of the ship</Ship_Armory_ExpandLabel>
   <Ship_Armory_Description>Part of the armory section</Ship_Armory_Description>
   
-  <FireSpreadIs>The fire spreads in (days): </FireSpreadIs>
+  <FireSpreadIs>The fire will intensify in (days): </FireSpreadIs>
+  <CaravanEnteredMassiveFire>Caravan arrived to</CaravanEnteredMassiveFire>
   
 </LanguageData>

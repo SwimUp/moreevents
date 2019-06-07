@@ -48,7 +48,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\Comps\MapParentLifeTimer.cs" />
+    <Compile Include="Biomes\BiomesDefOfLocal.cs" />
+    <Compile Include="Events\MassiveFire\CaravanArrivalAction_EnterToMassiveFire.cs" />
+    <Compile Include="Events\MassiveFire\IncidentWorker_MassiveFire.cs" />
+    <Compile Include="Events\MassiveFire\MassiveFireComp.cs" />
+    <Compile Include="Events\MassiveFire\MassiveFireComp_Main.cs" />
     <Compile Include="Events\GameConditionDefOfLocal.cs" />
     <Compile Include="Events\GameCondition_DenseAtmosphere.cs" />
     <Compile Include="Events\GameCondition_Endlessday.cs" />
@@ -68,6 +72,7 @@
     <Compile Include="Events\IncidentWorker_MechanoidPortalStart.cs" />
     <Compile Include="Events\IncidentWorker_SuperHeatWave.cs" />
     <Compile Include="Events\IncidentWorker_SuperNova.cs" />
+    <Compile Include="Events\MassiveFire\MassiveFireMapSite.cs" />
     <Compile Include="Events\ShipCrash\Building_Container.cs" />
     <Compile Include="Events\ShipCrash\CaravanArrivalAction_EnterToShipCrash.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_AlreadyStand.cs" />
@@ -85,6 +90,7 @@
     <Compile Include="Events\ShipCrash\ShipCrash_Controller.cs" />
     <Compile Include="Events\ShipCrash\ShipDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\ShipSite.cs" />
+    <Compile Include="Events\WorldObjectsDefOfLocal.cs" />
     <Compile Include="Hediffs\HediffCompProperties_NeuroWormsTick.cs" />
     <Compile Include="Hediffs\HediffCompProperties_FibroTick.cs" />
     <Compile Include="Hediffs\HediffComp_NeuroWormsTick.cs" />

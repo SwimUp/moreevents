@@ -24,5 +24,6 @@ namespace MoreEvents
         public static IncidentDef ShipCrash;
 
         public static IncidentDef SandStorm;
+        public static IncidentDef MassiveFire;
     }
 }
