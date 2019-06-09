@@ -10,4 +10,10 @@
   <HiveCrack.label>Hive crach</HiveCrack.label>
   <HiveCrack.description>Tunnel leading to the underground hive of cave spiders, through which they get out</HiveCrack.description>
   
+  <OpenableContainer.label>Container</OpenableContainer.label>
+  <OpenableContainer.description>Container containing resources</OpenableContainer.description>
+  
+  <ClimatBomb.label>Climate bomb</ClimatBomb.label>
+  <ClimatBomb.description>A massive device with an unknown artifact in the center. Generates a large amount of energy, throwing a part into the air. Because of this, the weather in this region is incredibly unstable.</ClimatBomb.description>
+  
 </LanguageData>

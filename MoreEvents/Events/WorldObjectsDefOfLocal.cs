@@ -10,5 +10,6 @@ namespace MoreEvents.Events
     public static class WorldObjectsDefOfLocal
     {
         public static WorldObjectDef MassiveFireSite;
+        public static WorldObjectDef ClimateBombSite;
     }
 }

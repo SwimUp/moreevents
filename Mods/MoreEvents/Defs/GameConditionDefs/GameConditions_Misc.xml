@@ -117,4 +117,13 @@
 	<canBePermanent>true</canBePermanent>
   </GameConditionDef>
  
+  <GameConditionDef>
+    <defName>ClimateChaos</defName>
+    <conditionClass>MoreEvents.Events.ClimateBomb.GameCondition_ClimateChaos</conditionClass>
+    <label>Climate chaos</label>
+    <description>Due to the powerful release of energy, a climatic shift has occurred. The constant change of weather and weather disasters.</description>
+    <endMessage>The weather returns to normal</endMessage>
+	<canBePermanent>true</canBePermanent>
+  </GameConditionDef>
+ 
 </Defs>

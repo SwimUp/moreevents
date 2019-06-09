@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+ 
+  <ColdFusionReactor.label>Cold fusion reactor</ColdFusionReactor.label>
+  <ColdFusionReactor.description>A reactor operating in uranium, but based on the principle of cold fusion. Almost does not emit heat, but it is a good source of energy.</ColdFusionReactor.description>
+  <ColdFusionReactorHeath.label>Cold fusion reactor heart</ColdFusionReactorHeath.label>
+  <ColdFusionReactorHeath.description>The main part of the cold fusion reactor. With the help of it, it will be possible to modernize a nuclear reactor in order to obtain a new, more perfect source of energy.</ColdFusionReactorHeath.description>
+
+</LanguageData>

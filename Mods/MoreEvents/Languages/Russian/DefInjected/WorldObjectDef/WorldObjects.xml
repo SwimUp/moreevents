@@ -4,4 +4,7 @@
   <MassiveFireSite.label>Очаг огня</MassiveFireSite.label>
   <MassiveFireSite.description>Очаг огня</MassiveFireSite.description>
  
+  <ClimateBombSite.label>Климатическая бомба</ClimateBombSite.label>
+  <ClimateBombSite.description>Местонахождение климатической бомбы</ClimateBombSite.description>
+ 
 </LanguageData>

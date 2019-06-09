@@ -40,5 +40,9 @@
   <SandStorm.label>Sand storm</SandStorm.label>
   <SandStorm.description>A sandstorm is coming. During this time, will be reduced visibility, speed</SandStorm.description>
   <SandStorm.endMessage>Sand storm is over</SandStorm.endMessage>
+  
+  <ClimateChaos.label>Climate chaos</ClimateChaos.label>
+  <ClimateChaos.description>Due to the powerful release of energy, a climatic shift has occurred. The constant change of weather and weather disasters.</ClimateChaos.description>
+  <ClimateChaos.endMessage>The weather returns to normal</ClimateChaos.endMessage>  
    
 </LanguageData>

@@ -5,6 +5,12 @@ namespace MoreEvents
     [DefOf]
     public static class IncidentDefOfLocal
     {
+        //Game events
+        public static IncidentDef Flashstorm;
+        public static IncidentDef HeatWave;
+        public static IncidentDef ColdSnap;
+        /*=======================*/
+
         public static IncidentDef Supernova;
         public static IncidentDef BoulderMassHit;
         public static IncidentDef SuperHeatWave;
@@ -25,5 +31,7 @@ namespace MoreEvents
 
         public static IncidentDef SandStorm;
         public static IncidentDef MassiveFire;
+        public static IncidentDef ClimateBomb;
+        public static IncidentDef ClimateChaos;
     }
 }

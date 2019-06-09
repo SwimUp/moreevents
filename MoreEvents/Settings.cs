@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 14;
+        private static int totalSettings = 17;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -173,6 +173,24 @@ namespace MoreEvents
                 {
                     Active = true
                 }
+            },
+            {
+            "Endlessday", new EventSettings("Endlessday")
+                {
+                    Active = true
+                }
+            },
+            {
+            "DenseAtmosphere", new EventSettings("DenseAtmosphere")
+                {
+                    Active = true
+                }
+            },
+            {
+            "ClimateBomb", new EventSettings("ClimateBomb")
+                {
+                    Active = true
+                }
             }
         };
 
@@ -181,7 +199,7 @@ namespace MoreEvents
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
             listing_Standard.GapLine();
-            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1300);
+            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1440);
             listing_Standard.BeginScrollView(inRect, ref scroll, ref mainScrollVertRect);
             listing_Standard.Label(Translator.Translate("MEM_Settings_General"));
             listing_Standard.GapLine();
@@ -319,6 +337,24 @@ namespace MoreEvents
             },
             {
             "MassiveFire", new EventSettings("MassiveFire")
+                {
+                    Active = true
+                }
+            },
+            {
+            "Endlessday", new EventSettings("Endlessday")
+                {
+                    Active = true
+                }
+            },
+            {
+            "DenseAtmosphere", new EventSettings("DenseAtmosphere")
+                {
+                    Active = true
+                }
+            },
+            {
+            "ClimateBomb", new EventSettings("ClimateBomb")
                 {
                     Active = true
                 }

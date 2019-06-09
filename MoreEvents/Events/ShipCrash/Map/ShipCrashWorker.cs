@@ -24,6 +24,7 @@ namespace MoreEvents.Events.ShipCrash.Map
             base.PostExposeData();
 
             Scribe_Values.Look(ref lifeTime, "lifePartTime");
+            Scribe_Values.Look(ref useLifeTime, "UseLifeTime");
         }
 
         public override void Initialize(WorldObjectCompProperties props)

@@ -13,5 +13,9 @@ namespace MoreEvents
         public static ThingDef HiveCrack;
 
         public static ThingDef OpenableContainer;
+        public static ThingDef ClimatBomb;
+
+        public static ThingDef ColdFusionReactor;
+        public static ThingDef ColdFusionReactorHeath;
     }
 }

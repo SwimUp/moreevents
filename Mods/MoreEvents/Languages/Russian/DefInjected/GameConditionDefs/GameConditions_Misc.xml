@@ -45,4 +45,8 @@
   <SandStorm.description>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm.description>
   <SandStorm.endMessage>Песчаная буря закончилась</SandStorm.endMessage>
   
+  <ClimateChaos.label>Климатический хаос</ClimateChaos.label>
+  <ClimateChaos.description>Из-за мощного выброса энергии произошел климатический сдвиг. Постоянная смена погоды и погодные катаклизмы.</ClimateChaos.description>
+  <ClimateChaos.endMessage>Погода приходит в норму</ClimateChaos.endMessage>  
+  
 </LanguageData>

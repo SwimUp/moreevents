@@ -35,4 +35,13 @@
   <FireSpreadIs>The fire will intensify in (days): </FireSpreadIs>
   <CaravanEnteredMassiveFire>Caravan arrived to</CaravanEnteredMassiveFire>
   
+  <DetonationIn>Automatic detonation after (days):</DetonationIn>
+  <DisarmingProgress>Mine clearance progress: </DisarmingProgress>
+  <DisarmAction>Start the demining process</DisarmAction>
+  <SuccessDisarming>Bomb cleared</SuccessDisarming>
+  <SuccessDisarmingDesc>The climate bomb was cleared successfully. In the demining process, an element was found that seemed to be the main source of energy.
+  Your people were able to steal it. With it, it will probably be possible to create a new source of energy.</SuccessDisarmingDesc>
+  <BombDisarmed>Bomb defused</BombDisarmed>
+  <DefusingInfo>Attempt to demine the bomb\n\nYour colonists report that trying to defuse a bomb can activate bomb defenses that are likely to attract many other people here.\n\nGet ready for the battle!</DefusingInfo>
+	
 </LanguageData>

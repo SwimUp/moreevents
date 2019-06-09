@@ -35,4 +35,16 @@
   <FireSpreadIs>Пожар усилится через (дней): </FireSpreadIs>
   <CaravanEnteredMassiveFire>Караван прибыл к</CaravanEnteredMassiveFire>
   
+  <DetonationIn>Автоматическая детонация через (дней): </DetonationIn>
+  <DisarmingProgress>Прогресс разминирования: </DisarmingProgress>
+  <DisarmAction>Начать процесс разминирования</DisarmAction>
+  <SuccessDisarming>Бомба разминирована</SuccessDisarming>
+  <SuccessDisarmingDesc>Климатическая бомба была успешна разминирована. В процессе разминирования был обнаружен элемент, который, похоже, являлся основных источником энергии.
+  Ваши люди смогли извечь его. С помощью него, вероятно, получится создать новый источник энергии.</SuccessDisarmingDesc>
+  <BombDisarmed>Бомба обезврежена</BombDisarmed>
+  <DefusingInfo>Попытка разминировать бомбу\n\nВаши колонисты сообщают, что попытка обезвредить бомбу может активировать защитные механизмы бомбы, которые, вероятно, привлекут множество других людей сюда.\n\nПриготовьтесь к битве!</DefusingInfo>
+  
+  <InstallCommand_Title>Установить</InstallCommand_Title>
+  <InstallCommand_Desc>Выбрать место для постройки</InstallCommand_Desc>
+  
 </LanguageData>

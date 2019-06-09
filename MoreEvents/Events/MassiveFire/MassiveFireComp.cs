@@ -26,6 +26,8 @@ namespace MoreEvents.Events.Comps
             base.PostExposeData();
 
             Scribe_Values.Look(ref LifeTime, "lifePartTime");
+            Scribe_Values.Look(ref FireLevel, "FireLevel");
+            Scribe_Values.Look(ref UseLifeTime, "UseTime");
         }
 
         public override void Initialize(WorldObjectCompProperties props)
@@ -104,6 +106,8 @@ namespace MoreEvents.Events.Comps
 
             if (this.site.Candidates.Count == 0)
             {
+                this.site.CreateHeathOfFire(this.site.RootMap);
+
                 Find.WorldObjects.Remove(this.site);
                 return;
             }
@@ -113,6 +117,8 @@ namespace MoreEvents.Events.Comps
             MassiveFireMapSite site = (MassiveFireMapSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.MassiveFireSite);
             site.Candidates = this.site.Candidates;
             site.Tile = nextTile;
+            site.RootTile = this.site.RootTile;
+            site.RootMap = this.site.RootMap;
             Find.WorldObjects.Add(site);
         }
 

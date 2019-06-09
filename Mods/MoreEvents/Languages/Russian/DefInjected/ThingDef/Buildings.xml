@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+ 
+  <ColdFusionReactor.label>Реактор холодного синтеза</ColdFusionReactor.label>
+  <ColdFusionReactor.description>Реактор, работающий на уране, но в основе которого лежит принцип холодного синтеза. Почти не выделяет тепла, но при этом является хорошим источником энергии.</ColdFusionReactor.description>
+  <ColdFusionReactorHeath.label>Сердце реактора холодного синтеза</ColdFusionReactorHeath.label>
+  <ColdFusionReactorHeath.description>Основная часть реактора холодного синтеза. С его помощью можно будет модернизировать ядерный реактор, чтобы получить новый, более совершенный источник энергии.</ColdFusionReactorHeath.description>
+
+</LanguageData>

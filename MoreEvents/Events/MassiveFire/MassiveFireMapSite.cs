@@ -39,6 +39,9 @@ namespace MoreEvents.Events.MassiveFire
 
         private MassiveFireComp comp;
 
+        public int RootTile = -1;
+        public Map RootMap;
+
         public override void SpawnSetup()
         {
             base.SpawnSetup();
@@ -93,6 +96,8 @@ namespace MoreEvents.Events.MassiveFire
 
             if(Candidates.Count == 0)
             {
+                CreateHeathOfFire(RootMap);
+
                 Find.WorldObjects.Remove(this);
                 return;
             }
@@ -102,6 +107,8 @@ namespace MoreEvents.Events.MassiveFire
             MassiveFireMapSite site = (MassiveFireMapSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.MassiveFireSite);
             site.Candidates = Candidates;
             site.Tile = nextTile;
+            site.RootTile = RootTile;
+            site.RootMap = RootMap;
             Find.WorldObjects.Add(site);
 
             Find.WorldObjects.Remove(this);
@@ -113,12 +120,11 @@ namespace MoreEvents.Events.MassiveFire
 
             comp.Stop();
 
-            SetBurn();
+            SetBurn(Current.Game.FindMap(Tile));
         }
 
-        private void SetBurn()
+        public void SetBurn(Map map)
         {
-            Map map = Current.Game.FindMap(Tile);
             List<IntVec3> positions = map.AllCells.Where(vec => !vec.Fogged(map) && vec.Walkable(map)).ToList();
             int count = 0;
 
@@ -140,6 +146,31 @@ namespace MoreEvents.Events.MassiveFire
             }
         }
 
+        public void CreateHeathOfFire(Map map)
+        {
+            List<IntVec3> positions = map.AllCells.Where(vec => !vec.Fogged(map) && vec.Walkable(map)).ToList();
+
+            if (positions.Count == 0)
+                return;
+
+            int heartsCount = Rand.Range(3, 6);
+
+            for (int i = 0; i < heartsCount; i++)
+            {
+                var rootPos = positions.RandomElement();
+
+                for(int i2 = 0; i2 < 10; i2++)
+                {
+                    var newPos = CellFinder.RandomClosewalkCellNear(rootPos, map, 10);
+
+                    if(newPos != null)
+                    {
+                        FireUtility.TryStartFireIn(newPos, map, Rand.Range(0.1f, 0.925f));
+                    }
+                }
+            }
+        }
+
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
         {
             foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(caravan))
@@ -147,9 +178,12 @@ namespace MoreEvents.Events.MassiveFire
                 yield return floatMenuOption;
             }
 
-            foreach (FloatMenuOption floatMenuOption2 in GetFloatMenuOptions(caravan, this))
+            if (!HasMap)
             {
-                yield return floatMenuOption2;
+                foreach (FloatMenuOption floatMenuOption2 in GetFloatMenuOptions(caravan, this))
+                {
+                    yield return floatMenuOption2;
+                }
             }
         }
 

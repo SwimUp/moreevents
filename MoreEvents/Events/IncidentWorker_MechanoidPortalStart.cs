@@ -25,8 +25,8 @@ namespace MoreEvents.Events
             Map map = parms.target as Map;
             if(TryFindCell(out IntVec3 result, map))
             {
-                SkyfallerMaker.SpawnSkyfaller(ThingDefOf.ShipChunkIncoming, ThingDefOfLocal.MechanoidTeleport_Generator, result, map);
-                SendStandardLetter();
+                var faller = SkyfallerMaker.SpawnSkyfaller(ThingDefOf.ShipChunkIncoming, ThingDefOfLocal.MechanoidTeleport_Generator, result, map);
+                SendStandardLetter(faller);
                 return true;
             }
 

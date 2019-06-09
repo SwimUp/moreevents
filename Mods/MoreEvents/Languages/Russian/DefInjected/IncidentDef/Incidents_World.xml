@@ -43,7 +43,7 @@
   
   <MechanoidPortal.label>Телепортер механойдов!</MechanoidPortal.label>
   <MechanoidPortal.letterLabel>Телепортер механойдов</MechanoidPortal.letterLabel>
-  <MechanoidPortal.letterText>С неба обрушился загадочный обломок, который генерирует телепорт из которого появляются механойды. Сам портал не уничтожить, но если сломать генератор, то и портал пропадет.</MechanoidPortal.letterText>
+  <MechanoidPortal.letterText>С неба обрушился загадочный обломок, который генерирует телепорт из которого появляются механойды. Сам портал не уничтожить, но если уничтожить генератор, то и портал пропадет. Вероятно, для этого потребуется взрывчатка.</MechanoidPortal.letterText>
 
   <BeetleRush.label>Улей!</BeetleRush.label>
   <BeetleRush.letterLabel>Улей!</BeetleRush.letterLabel>
@@ -61,8 +61,16 @@
   <SandStorm.letterLabel>Песчаная буря</SandStorm.letterLabel>
   <SandStorm.letterText>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm.letterText>
   
-  <MassiveFires.label>Массивный пожар</MassiveFires.label>
-  <MassiveFires.letterLabel>Массивный пожар</MassiveFires.letterLabel>
-  <MassiveFires.letterText>На соседней земле начался массивный пожар. Если его не потушить, то он уничтожит все соседние леса!</MassiveFires.letterText>
+  <MassiveFire.label>Массивный пожар</MassiveFire.label>
+  <MassiveFire.letterLabel>Массивный пожар</MassiveFire.letterLabel>
+  <MassiveFire.letterText>На соседней земле начался массивный пожар. Если его не потушить, то он уничтожит все соседние леса!</MassiveFire.letterText>
+  
+  <ClimateBomb.label>Обнаружена климатическая бомба</ClimateBomb.label>
+  <ClimateBomb.letterLabel>Обнаружена климатическая бомба</ClimateBomb.letterLabel>
+  <ClimateBomb.letterText>Обнаружено местоположение климатической бомбы. Кто её заложил - неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума</ClimateBomb.letterText>
+  
+  <ClimateChaos.label>Климатический хаос</ClimateChaos.label>
+  <ClimateChaos.letterLabel>Климатический хаос</ClimateChaos.letterLabel>
+  <ClimateChaos.letterText>Из-за мощного выброса энергии произошел климатический сдвиг. Постоянная смена погоды и погодные катаклизмы.</ClimateChaos.letterText>
   
 </LanguageData>

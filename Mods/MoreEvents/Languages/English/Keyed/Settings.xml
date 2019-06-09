@@ -67,4 +67,16 @@
   <SandStorm_Title>Sand storm</SandStorm_Title>
   <SandStorm_Desc>A sandstorm is coming. During this time, will be reduced visibility, speed</SandStorm_Desc>
   
+  <MassiveFire_Title>Massive fire</MassiveFire_Title>
+  <MassiveFire_Desc>A massive fire started in the neighboring land. If it is not put out, it will destroy all the neighboring forests!</MassiveFire_Desc>
+  
+  <Endlessday_Title>Endless day</Endlessday_Title>
+  <Endlessday_Desc>Endless day</Endlessday_Desc>
+  
+  <DenseAtmosphere_Title>Dense Atmosphere</DenseAtmosphere_Title>
+  <DenseAtmosphere_Desc>Dense Atmosphere</DenseAtmosphere_Desc>
+  
+  <ClimateBomb_Title>Climate bomb</ClimateBomb_Title>
+  <ClimateBomb_Desc>Location detected climate bomb. Who laid it - is unknown, but one thing is clear: if it is not defused, the climate will go crazy</ClimateBomb_Desc>
+  
 </LanguageData>

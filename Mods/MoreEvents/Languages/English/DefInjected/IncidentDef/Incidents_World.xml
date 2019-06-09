@@ -43,7 +43,7 @@
   
   <MechanoidPortal.label>Teleport mechanoids!</MechanoidPortal.label>
   <MechanoidPortal.letterLabel>Teleport mechanoids!</MechanoidPortal.letterLabel>
-  <MechanoidPortal.letterText>A mysterious fragment has fallen from the sky, which generates a teleport from which mechanoids appear. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</MechanoidPortal.letterText>
+  <MechanoidPortal.letterText>A mysterious fragment has fallen from the sky, which generates a teleport from which mechanoids appear. The portal itself cannot be destroyed, but if the generator is destroyed, the portal will also be lost. Probably, this would require explosives.</MechanoidPortal.letterText>
 
   <BeetleRush.label>Hive!</BeetleRush.label>
   <BeetleRush.letterLabel>Hive!</BeetleRush.letterLabel>
@@ -65,8 +65,16 @@
   <ShipCrash.letterLabel>Ship wreck</ShipCrash.letterLabel>
   <ShipCrash.letterText>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</ShipCrash.letterText>
   
-  <MassiveFires.label>Massive fire</MassiveFires.label>
-  <MassiveFires.letterLabel>Massive fire</MassiveFires.letterLabel>
-  <MassiveFires.letterText>A massive fire started in the neighboring land. If it is not put out, it will destroy all the neighboring forests!</MassiveFires.letterText>
+  <MassiveFire.label>Massive fire</MassiveFire.label>
+  <MassiveFire.letterLabel>Massive fire</MassiveFire.letterLabel>
+  <MassiveFire.letterText>A massive fire started in the neighboring land. If it is not put out, it will destroy all the neighboring forests!</MassiveFire.letterText>
+
+  <ClimateBomb.label>Climate bomb detected</ClimateBomb.label>
+  <ClimateBomb.letterLabel>Climate bomb detected</ClimateBomb.letterLabel>
+  <ClimateBomb.letterText>Location detected climate bomb. Who laid it - is unknown, but one thing is clear: if it is not defused, the climate will go crazy</ClimateBomb.letterText>
+  
+  <ClimateChaos.label>Climate chaos</ClimateChaos.label>
+  <ClimateChaos.letterLabel>Climate chaos</ClimateChaos.letterLabel>
+  <ClimateChaos.letterText>Due to the powerful release of energy, a climatic shift has occurred. The constant change of weather and weather disasters.</ClimateChaos.letterText>
   
 </LanguageData>

@@ -67,4 +67,16 @@
   <SandStorm_Title>Песчаная буря</SandStorm_Title>
   <SandStorm_Desc>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm_Desc>
   
+  <MassiveFire_Title>Массивный пожар</MassiveFire_Title>
+  <MassiveFire_Desc>На соседней земле начался массивный пожар. Если его не потушить, то он уничтожит все соседние леса!</MassiveFire_Desc>
+  
+  <Endlessday_Title>Бесконечный день</Endlessday_Title>
+  <Endlessday_Desc>Бесконечный день</Endlessday_Desc>
+  
+  <DenseAtmosphere_Title>Плотная атмосфера</DenseAtmosphere_Title>
+  <DenseAtmosphere_Desc>Плотная атмосфера</DenseAtmosphere_Desc>
+  
+  <ClimateBomb_Title>Климатическая бомба</ClimateBomb_Title>
+  <ClimateBomb_Desc>Обнаружено местоположение климатической бомбы. Кто её заложил - неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума</ClimateBomb_Desc>
+  
 </LanguageData>

@@ -21,7 +21,7 @@
     </graphicData>
     <size>(4,4)</size>
     <statBases>
-      <MaxHitPoints>3500</MaxHitPoints>
+      <MaxHitPoints>3000</MaxHitPoints>
       <Flammability>0</Flammability>
       <Beauty>-200</Beauty>
     </statBases>
@@ -164,4 +164,35 @@
   </ThingDef>
 
  
+  <ThingDef ParentName="BuildingBase">
+    <defName>ClimatBomb</defName>
+    <label>Climate bomb</label>
+    <description>A massive device with an unknown artifact in the center. Generates a large amount of energy, throwing a part into the air. Because of this, the weather in this region is incredibly unstable.</description>
+	<thingClass>MoreEvents.Things.Building_ClimateBomb</thingClass>
+	<altitudeLayer>Building</altitudeLayer>
+    <pathCost>150</pathCost>
+	<useHitPoints>false</useHitPoints>
+    <blockWind>true</blockWind>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <graphicData>
+      <texPath>Things/Buildings/ClimatBomb/ClimatBomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <size>(4,4)</size>
+    <tickerType>Normal</tickerType>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <repairEffect>ConstructMetal</repairEffect>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+    <building>
+			<claimable>false</claimable>
+    </building>
+  </ThingDef>
+  
 </Defs>

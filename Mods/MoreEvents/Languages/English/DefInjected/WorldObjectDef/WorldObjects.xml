@@ -3,5 +3,8 @@
  
   <MassiveFireSite.label>Hearth of fire</MassiveFireSite.label>
   <MassiveFireSite.description>Hearth of fire</MassiveFireSite.description>
+  
+  <ClimateBombSite.label>Climate bomb location</ClimateBombSite.label>
+  <ClimateBombSite.description>Climate bomb location</ClimateBombSite.description>
  
 </LanguageData>

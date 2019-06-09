@@ -69,6 +69,8 @@ namespace MoreEvents.Events.MassiveFire
             MassiveFireMapSite site = (MassiveFireMapSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.MassiveFireSite);
             site.Candidates = candidates;
             site.Tile = spawnTile;
+            site.RootTile = map.Tile;
+            site.RootMap = map;
             Find.WorldObjects.Add(site);
 
             SendStandardLetter();

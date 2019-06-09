@@ -13,4 +13,7 @@
   <OpenableContainer.label>Кусок корабля</OpenableContainer.label>
   <OpenableContainer.description>Контейнер, содержащий ресурсы</OpenableContainer.description>
   
+  <ClimatBomb.label>Климатическая бомба</ClimatBomb.label>
+  <ClimatBomb.description>Массивное устройство с неизвестным артефактом в центре. Генерирует большое количество энергии, выбрасывая часть в воздух. Из-за этого погода в этом регионе невероятно нестабильна.</ClimatBomb.description>
+  
 </LanguageData>

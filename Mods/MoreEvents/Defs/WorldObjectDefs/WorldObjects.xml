@@ -30,4 +30,22 @@
       <li>Map_Misc</li>
     </IncidentTargetTags>
   </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>ClimateBombSite</defName>
+    <label>Climate bomb location</label>
+    <description>Climate bomb location</description>
+    <worldObjectClass>MoreEvents.Events.ClimateBomb.ClimateBombSite</worldObjectClass>
+    <texture>Map/ClimateBombEx</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Map/ClimateBomb</expandingIconTexture>
+    <expandingIconPriority>100</expandingIconPriority>
+    <comps>
+      <li Class="MoreEvents.Events.ClimateBomb.ClimateBombComp_Main" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+  
 </Defs>

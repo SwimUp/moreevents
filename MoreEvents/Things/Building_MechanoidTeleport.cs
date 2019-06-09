@@ -10,7 +10,7 @@ namespace MoreEvents.Things
 {
     public class Building_MechanoidTeleport : Building
     {
-        private int spawnTime = 20000;
+        private int spawnTime = 30000;
         private int animTime = 30;
 
         private int maxCycles = 14;
@@ -140,7 +140,6 @@ namespace MoreEvents.Things
 
         public override void Draw()
         {
-           // base.Draw();
             if (this.TexMain != null)
             {
                 Matrix4x4 matrix = default(Matrix4x4);

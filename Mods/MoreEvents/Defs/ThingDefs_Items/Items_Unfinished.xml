@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ======================= Minified things ========================= -->
+
+  <ThingDef>
+    <defName>ColdFusionReactorHeath</defName>
+    <label>Cold fusion reactor heart</label>
+	<description>The main part of the cold fusion reactor. With the help of it, it will be possible to modernize a nuclear reactor in order to obtain a new, more perfect source of energy.</description>
+    <thingClass>MoreEvents.Things.Item_ColdFusionRectorHeart</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/ColdFusion/ColdFusionIcon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>3</Mass>
+    </statBases>
+    <!-- for CompForbiddable -->
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+</Defs>
