@@ -47,4 +47,7 @@
   <InstallCommand_Title>Установить</InstallCommand_Title>
   <InstallCommand_Desc>Выбрать место для постройки</InstallCommand_Desc>
   
+  <Earthshake>Землетрясение закончилось</Earthshake>
+  <EarthshakeDesc>Землетрясение закончилось. Магнитуда:</EarthshakeDesc>
+  
 </LanguageData>

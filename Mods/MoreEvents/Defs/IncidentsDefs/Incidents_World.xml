@@ -13,9 +13,9 @@
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_SuperNova</workerClass>
 		<category>Misc</category>
-		<minRefireDays>45</minRefireDays>
-		<baseChance>1.5</baseChance>
-		<earliestDay>15</earliestDay>
+		<minRefireDays>70</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>80</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	
@@ -87,7 +87,7 @@
 		<label>Lean atmosphere</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+		  <li>World</li>
 		</targetTags>
 		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>LeanAtmosphere</gameCondition>
@@ -304,7 +304,7 @@
 	</IncidentDef>
 	<!-- s=======================s -->
 	
-    <!-- Событие: Пусчанная буря -->
+    <!-- Событие: Песчанная буря -->
 	<IncidentDef>
 		<defName>SandStorm</defName>
 		<label>Sand storm</label>
@@ -393,6 +393,54 @@
 			<max>25.0</max>
 		</durationDays>
     </IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Ионизированная атмосфера -->
+	<IncidentDef>
+		<defName>IonizedAtmosphere</defName>
+		<label>Ionized atmosphere</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>IonizedAtmosphere</gameCondition>
+		<letterLabel>Ionized atmosphere</letterLabel>
+		<letterText>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>100</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>3.0</min>
+			<max>10</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Землетрясение -->
+	<IncidentDef>
+		<defName>Earthquake</defName>
+		<label>Earthquake</label>
+		<letterLabel>Earthquake!</letterLabel>
+		<letterText>An earthquake began, everyone in the shelter!</letterText>
+	    <letterDef>NegativeEvent</letterDef>
+		<gameCondition>Earthquake</gameCondition>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Earthquake</workerClass>
+		<category>Misc</category>
+		<minRefireDays>140</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>20</earliestDay>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>1</min>
+			<max>2</max>
+		</durationDays>
+	</IncidentDef>
 	<!-- s=======================s -->
 	
 </Defs>

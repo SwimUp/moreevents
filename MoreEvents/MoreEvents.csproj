@@ -58,6 +58,9 @@
     <Compile Include="Events\ClimateBomb\IncidentWorket_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\JobDriver_DisableClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
+    <Compile Include="Events\GameCondition_Earthquake.cs" />
+    <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
+    <Compile Include="Events\IncidentWorker_Earthquake.cs" />
     <Compile Include="Events\VisitableSite.cs" />
     <Compile Include="Events\MassiveFire\CaravanArrivalAction_EnterToMassiveFire.cs" />
     <Compile Include="Events\MassiveFire\IncidentWorker_MassiveFire.cs" />
@@ -108,6 +111,11 @@
     <Compile Include="Hediffs\HediffDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
     <Compile Include="JobDefOfLocal.cs" />
+    <Compile Include="MapGeneratorFactionBase\BlueprintDefOfLocal.cs" />
+    <Compile Include="MapGeneratorFactionBase\BlueprintHandler.cs" />
+    <Compile Include="MapGeneratorFactionBase\MapGeneratorBaseBlueprintDef.cs" />
+    <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
+    <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
@@ -130,6 +138,8 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Events\SiegeCamp\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

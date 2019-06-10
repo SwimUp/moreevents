@@ -79,4 +79,11 @@
   <ClimateBomb_Title>Климатическая бомба</ClimateBomb_Title>
   <ClimateBomb_Desc>Обнаружено местоположение климатической бомбы. Кто её заложил - неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума</ClimateBomb_Desc>
   
+  <IonizedAtmosphere_Title>Ионизированная атмосфера</IonizedAtmosphere_Title>
+  <IonizedAtmosphere_Desc>Ионосферный слой значительно больше, чем когда-либо. Это увеличивает вероятность грозы.</IonizedAtmosphere_Desc>
+  
+  <Earthquake_Title>Землетрясение</Earthquake_Title>
+  <Earthquake_Desc>Началось землетрясение, всем в укрытие!</Earthquake_Desc>
+  
+  
 </LanguageData>

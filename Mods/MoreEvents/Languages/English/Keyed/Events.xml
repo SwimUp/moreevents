@@ -44,4 +44,7 @@
   <BombDisarmed>Bomb defused</BombDisarmed>
   <DefusingInfo>Attempt to demine the bomb\n\nYour colonists report that trying to defuse a bomb can activate bomb defenses that are likely to attract many other people here.\n\nGet ready for the battle!</DefusingInfo>
 	
+  <Earthshake>Earthquake over</Earthshake>
+  <EarthshakeDesc>The earthquake is over. Magnitude:</EarthshakeDesc>
+	
 </LanguageData>

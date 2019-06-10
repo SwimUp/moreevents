@@ -79,4 +79,10 @@
   <ClimateBomb_Title>Climate bomb</ClimateBomb_Title>
   <ClimateBomb_Desc>Location detected climate bomb. Who laid it - is unknown, but one thing is clear: if it is not defused, the climate will go crazy</ClimateBomb_Desc>
   
+  <IonizedAtmosphere_Title>Ionized atmosphere</IonizedAtmosphere_Title>
+  <IonizedAtmosphere_Desc>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</IonizedAtmosphere_Desc>
+  
+  <Earthquake_Title>Earthquake</Earthquake_Title>
+  <Earthquake_Desc>An earthquake began, everyone in the shelter!</Earthquake_Desc>
+  
 </LanguageData>

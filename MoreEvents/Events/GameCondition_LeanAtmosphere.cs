@@ -17,9 +17,9 @@ namespace MoreEvents.Events
             this.Duration = -1;
             this.Permanent = true;
             GameCondition cond = GameConditionMaker.MakeConditionPermanent(GameConditionDefOfLocal.RadiationFon);
-            gameConditionManager.RegisterCondition(cond);
+            Find.World.gameConditionManager.RegisterCondition(cond);
 
-            map = gameConditionManager.ownerMap;
+            map = Find.CurrentMap;
         }
         public override float TemperatureOffset()
         {

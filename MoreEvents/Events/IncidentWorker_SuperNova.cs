@@ -76,18 +76,20 @@ namespace MoreEvents.Events
         }
         private static void SupernovaHigh(Map map)
         {
-            GameConditionDef[] conditions = new GameConditionDef[3]
+            GameConditionDef[] conditions = new GameConditionDef[4]
             {
                 GameConditionDefOfLocal.BoulderMassHit,
                 GameConditionDefOfLocal.SuperHeatWave,
-                GameConditionDefOfLocal.Endlessday
+                GameConditionDefOfLocal.Endlessday,
+                GameConditionDefOfLocal.IonizedAtmosphere
             };
 
-            int[] durations = new int[3]
+            int[] durations = new int[4]
             {
                 Rand.Range(500000, 900000),
                 Rand.Range(150000, 300000),
-                Rand.Range(250000, 800000)
+                Rand.Range(250000, 800000),
+                Rand.Range(200000, 500000)
             };
 
             for (int i = 0; i < conditions.Length; i++)
@@ -98,20 +100,22 @@ namespace MoreEvents.Events
         }
         private static void SupernovaUltra(Map map)
         {
-            GameConditionDef[] conditions = new GameConditionDef[4]
+            GameConditionDef[] conditions = new GameConditionDef[5]
             {
                 GameConditionDefOfLocal.BoulderMassHit,
                 GameConditionDefOfLocal.SuperHeatWave,
                 GameConditionDefOfLocal.Endlessday,
-                GameConditionDefOfLocal.LeanAtmosphere
+                GameConditionDefOfLocal.LeanAtmosphere,
+                GameConditionDefOfLocal.IonizedAtmosphere
             };
 
-            int[] durations = new int[4]
+            int[] durations = new int[5]
             {
                 Rand.Range(900000, 3000000),
                 Rand.Range(400000, 650000),
                 Rand.Range(900000, 3000000),
-                -1
+                -1,
+                Rand.Range(500000, 900000)
             };
 
             for (int i = 0; i < conditions.Length; i++)

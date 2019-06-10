@@ -77,4 +77,12 @@
   <ClimateChaos.letterLabel>Climate chaos</ClimateChaos.letterLabel>
   <ClimateChaos.letterText>Due to the powerful release of energy, a climatic shift has occurred. The constant change of weather and weather disasters.</ClimateChaos.letterText>
   
+  <IonizedAtmosphere.label>Ionized atmosphere</IonizedAtmosphere.label>
+  <IonizedAtmosphere.letterLabel>Ionized atmosphere</IonizedAtmosphere.letterLabel>
+  <IonizedAtmosphere.letterText>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</IonizedAtmosphere.letterText>  
+  
+  <Earthquake.label>Earthquake</Earthquake.label>
+  <Earthquake.letterLabel>Earthquake</Earthquake.letterLabel>
+  <Earthquake.letterText>An earthquake began, everyone in the shelter!</Earthquake.letterText>  
+  
 </LanguageData>

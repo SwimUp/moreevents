@@ -45,4 +45,12 @@
   <ClimateChaos.description>Due to the powerful release of energy, a climatic shift has occurred. The constant change of weather and weather disasters.</ClimateChaos.description>
   <ClimateChaos.endMessage>The weather returns to normal</ClimateChaos.endMessage>  
    
+  <IonizedAtmosphere.label>Ionized atmosphere</IonizedAtmosphere.label>
+  <IonizedAtmosphere.description>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</IonizedAtmosphere.description>
+  <IonizedAtmosphere.endMessage>The size of the ionosphere has decreased</IonizedAtmosphere.endMessage>  
+   
+  <Earthquake.label>Earthquake</Earthquake.label>
+  <Earthquake.description>An earthquake began, everyone in the shelter!</Earthquake.description>
+  <Earthquake.endMessage>Earthquake over</Earthquake.endMessage> 
+   
 </LanguageData>

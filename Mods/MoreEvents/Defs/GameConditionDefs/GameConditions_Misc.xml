@@ -125,5 +125,23 @@
     <endMessage>The weather returns to normal</endMessage>
 	<canBePermanent>true</canBePermanent>
   </GameConditionDef>
+  
+  <GameConditionDef>
+    <defName>IonizedAtmosphere</defName>
+	<conditionClass>MoreEvents.Events.GameCondition_IonizedAtmosphere</conditionClass>
+    <label>Ionized atmosphere</label>
+    <description>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</description>
+    <endMessage>The size of the ionosphere has decreased</endMessage>
+	<canBePermanent>true</canBePermanent>
+  </GameConditionDef>
+ 
+  <GameConditionDef>
+    <defName>Earthquake</defName>
+	<conditionClass>MoreEvents.Events.GameCondition_Earthquake</conditionClass>
+    <label>Earthquake</label>
+    <description>An earthquake began, everyone in the shelter!</description>
+    <endMessage>Earthquake over</endMessage>
+	<canBePermanent>false</canBePermanent>
+  </GameConditionDef>
  
 </Defs>

@@ -1,4 +1,6 @@
-﻿using MoreEvents.Things;
+﻿using MapGenerator;
+using MoreEvents.MapGeneratorFactionBase;
+using MoreEvents.Things;
 using RimWorld;
 using RimWorld.Planet;
 using System;

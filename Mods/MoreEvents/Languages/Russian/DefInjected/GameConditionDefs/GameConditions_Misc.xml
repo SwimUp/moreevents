@@ -49,4 +49,12 @@
   <ClimateChaos.description>Из-за мощного выброса энергии произошел климатический сдвиг. Постоянная смена погоды и погодные катаклизмы.</ClimateChaos.description>
   <ClimateChaos.endMessage>Погода приходит в норму</ClimateChaos.endMessage>  
   
+  <IonizedAtmosphere.label>Ионизированная атмосфера</IonizedAtmosphere.label>
+  <IonizedAtmosphere.description>Ионосферный слой значительно больше, чем когда-либо. Это увеличивает вероятность грозы.</IonizedAtmosphere.description>
+  <IonizedAtmosphere.endMessage>Ионосферный слов уменьшился</IonizedAtmosphere.endMessage>  
+  
+  <Earthquake.label>Землетрясение</Earthquake.label>
+  <Earthquake.description>Началось землетрясение, всем в укрытие!</Earthquake.description>
+  <Earthquake.endMessage>Землетрясение закончилось</Earthquake.endMessage>  
+  
 </LanguageData>

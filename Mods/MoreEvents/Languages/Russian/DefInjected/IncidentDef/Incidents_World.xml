@@ -5,8 +5,8 @@
   <Supernova.letterLabel>Взрыв сверхновой</Supernova.letterLabel>
   <Supernova.letterText>Взрыв сверхновой</Supernova.letterText>
   
-  <SuperHeatWave.label>Невероятно горячая погода</SuperHeatWave.label>
-  <SuperHeatWave.letterLabel>Невероятно горячая погода</SuperHeatWave.letterLabel>
+  <SuperHeatWave.label>Невероятно жаркая погода</SuperHeatWave.label>
+  <SuperHeatWave.letterLabel>Невероятно жаркая погода</SuperHeatWave.letterLabel>
   <SuperHeatWave.letterText>Невероятно сильная тепловая волна настигла планету. Температура может подняться до 100 градусов!</SuperHeatWave.letterText>
   
   <BoulderMassHit.label>Метеоритный дождь</BoulderMassHit.label>
@@ -72,5 +72,13 @@
   <ClimateChaos.label>Климатический хаос</ClimateChaos.label>
   <ClimateChaos.letterLabel>Климатический хаос</ClimateChaos.letterLabel>
   <ClimateChaos.letterText>Из-за мощного выброса энергии произошел климатический сдвиг. Постоянная смена погоды и погодные катаклизмы.</ClimateChaos.letterText>
+  
+  <IonizedAtmosphere.label>Ионизированная атмосфера</IonizedAtmosphere.label>
+  <IonizedAtmosphere.letterLabel>Ионизированная атмосфера</IonizedAtmosphere.letterLabel>
+  <IonizedAtmosphere.letterText>Ионосферный слой значительно больше, чем когда-либо. Это увеличивает вероятность грозы.</IonizedAtmosphere.letterText>  
+  
+  <Earthquake.label>Землетрясение</Earthquake.label>
+  <Earthquake.letterLabel>Землетрясение</Earthquake.letterLabel>
+  <Earthquake.letterText>Началось землетрясение, всем в укрытие!</Earthquake.letterText>  
   
 </LanguageData>

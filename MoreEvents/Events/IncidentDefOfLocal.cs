@@ -33,5 +33,8 @@ namespace MoreEvents
         public static IncidentDef MassiveFire;
         public static IncidentDef ClimateBomb;
         public static IncidentDef ClimateChaos;
+
+        public static IncidentDef IonizedAtmosphere;
+        public static IncidentDef Earthquake;
     }
 }
