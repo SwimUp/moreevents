@@ -17,5 +17,8 @@ namespace MoreEvents
 
         public static ThingDef ColdFusionReactor;
         public static ThingDef ColdFusionReactorHeath;
+        public static ThingDef ArcReactor;
+        public static ThingDef PalladiumCore;
+        public static ThingDef Enricher;
     }
 }

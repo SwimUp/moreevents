@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +7,13 @@ using Verse;
 
 namespace MoreEvents.Things
 {
-    public class Item_ColdFusionRectorHeart : ThingWithComps
+    public class PlacebleItem : ThingComp
     {
-        //GenConstruct
+        public CompProperties_PlacebleItem Props => (CompProperties_PlacebleItem)props;
 
-        public override IEnumerable<Gizmo> GetGizmos()
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            foreach (Gizmo gizmo in base.GetGizmos())
+            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
             {
                 yield return gizmo;
             }
@@ -30,7 +29,7 @@ namespace MoreEvents.Things
             command.icon = ContentFinder<Texture2D>.Get("Things/Install");
             command.action = delegate
             {
-                Designator_Build des = new Designator_Build(ThingDefOfLocal.ColdFusionReactor);
+                Designator_BuildWithoutDef des = new Designator_BuildWithoutDef(Props.PlaceDef);
                 Find.DesignatorManager.Select(des);
             };
 

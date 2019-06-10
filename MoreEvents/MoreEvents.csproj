@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
+    <Compile Include="Designator_BuildWithoutDef.cs" />
     <Compile Include="Events\CaravanArrivalAction_EnterToMap.cs" />
     <Compile Include="Events\ClimateBomb\CaravanVisitAction_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\ClimateBombComp.cs" />
@@ -121,13 +122,15 @@
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="ThingDefGenerator_BuildingsCustom.cs" />
     <Compile Include="Things\Building_ClimateBomb.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
-    <Compile Include="Things\Item_ColdFusionRectorHeart.cs" />
     <Compile Include="Things\PawnKindDefOfLocal.cs" />
     <Compile Include="Things\Pawns\Pawn_BigAvtomaton.cs" />
+    <Compile Include="Things\PlacebleItem.cs" />
+    <Compile Include="Things\PlacebleItem_Comp.cs" />
     <Compile Include="Things\Projectiles\Bullet_TrashGun.cs" />
     <Compile Include="Things\SoundsDefOfLocal.cs" />
     <Compile Include="Things\ThingDefOfLocal.cs" />

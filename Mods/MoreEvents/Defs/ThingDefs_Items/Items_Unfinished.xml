@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- ======================= Minified things ========================= -->
-
   <ThingDef>
     <defName>ColdFusionReactorHeath</defName>
     <label>Cold fusion reactor heart</label>
 	<description>The main part of the cold fusion reactor. With the help of it, it will be possible to modernize a nuclear reactor in order to obtain a new, more perfect source of energy.</description>
-    <thingClass>MoreEvents.Things.Item_ColdFusionRectorHeart</thingClass>
-    <graphicData>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
       <texPath>Things/Buildings/ColdFusion/ColdFusionIcon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1, 1)</drawSize>
@@ -21,7 +19,7 @@
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <tickerType>Normal</tickerType>
     <statBases>
-      <MarketValue>3500</MarketValue>
+      <MarketValue>2400</MarketValue>
       <MaxHitPoints>200</MaxHitPoints>
       <Flammability>0</Flammability>
       <Mass>3</Mass>
@@ -30,6 +28,9 @@
     <drawerType>RealtimeOnly</drawerType>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
+      <li Class="MoreEvents.Things.CompProperties_PlacebleItem">
+        <PlaceDef>ColdFusionReactor</PlaceDef>
+      </li>
     </comps>
     <inspectorTabs>
       <li>ITab_Art</li>
@@ -37,6 +38,87 @@
     <alwaysHaulable>true</alwaysHaulable>
     <rotatable>false</rotatable>
     <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>PalladiumCore</defName>
+    <label>palladium core</label>
+	<description>The main source of energy. Despite the radioactivity, the design of the reactor does not allow it to affect the environment.</description>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
+      <texPath>Things/Buildings/ColdFusionPro/PalladiumCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>3</Mass>
+    </statBases>
+    <!-- for CompForbiddable -->
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="MoreEvents.Things.CompProperties_PlacebleItem">
+        <PlaceDef>ArcReactor</PlaceDef>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+ <ThingDef>
+    <defName>Enricher</defName>
+    <label>enricher</label>
+	<description>Inflates to the core and core, enhancing the generation of energy.</description>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
+      <texPath>Things/Buildings/ColdFusionPro/Enricher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>1900</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>2</Mass>
+    </statBases>
+    <!-- for CompForbiddable -->
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="MoreEvents.Things.CompProperties_PlacebleItem">
+        <PlaceDef>ArcReactor</PlaceDef>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
   </ThingDef>
 
 </Defs>

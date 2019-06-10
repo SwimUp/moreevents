@@ -11,14 +11,6 @@ namespace MoreEvents.Things
     public class Building_MechanoidTeleport : Building
     {
         private int spawnTime = 30000;
-        private int animTime = 30;
-
-        private int maxCycles = 14;
-
-        private string FramePath = "Things/Buildings/MechanoidTeleport/";
-        private Graphic[] Frames;
-        private int cycle = 1;
-        private Graphic TexMain;
 
         private Lord lord;
 
@@ -31,8 +23,6 @@ namespace MoreEvents.Things
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-
-            LongEventHandler.ExecuteWhenFinished(new System.Action(CreateAnim));
 
             count = Rand.Range(20, 40);
         }
@@ -48,24 +38,9 @@ namespace MoreEvents.Things
             base.Destroy(mode);
         }
 
-        private void CreateAnim()
-        {
-            Frames = new Graphic_Single[maxCycles];
-            for (int i = 0; i < maxCycles; i++)
-            {
-                Frames[i] = GraphicDatabase.Get<Graphic_Single>(FramePath + (i + 1), this.def.graphicData.Graphic.Shader);
-                Frames[i].drawSize = this.def.graphicData.drawSize;
-            }
-        }
-
         public override void Tick()
         {
             base.Tick();
-
-            if (Find.TickManager.TicksGame % animTime == 0)
-            {
-                ChangeAnim();
-            }
 
             if (!destroyed)
             {
@@ -125,27 +100,6 @@ namespace MoreEvents.Things
             if(count == 0)
             {
                 Destroy(0);
-            }
-        }
-
-        private void ChangeAnim()
-        {
-            if (cycle >= maxCycles)
-                cycle = 0;
-
-            TexMain = Frames[cycle];
-            TexMain.color = base.Graphic.color;
-            cycle++;
-        }
-
-        public override void Draw()
-        {
-            if (this.TexMain != null)
-            {
-                Matrix4x4 matrix = default(Matrix4x4);
-                Vector3 s = new Vector3(3f, 2f, 3f);
-                matrix.SetTRS(this.DrawPos + Altitudes.AltIncVect, Rotation.AsQuat, s);
-                Graphics.DrawMesh(MeshPool.plane10, matrix, this.TexMain.MatAt(Rotation, null), 0);
             }
         }
     }

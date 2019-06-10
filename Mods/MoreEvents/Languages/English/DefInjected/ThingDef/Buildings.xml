@@ -6,4 +6,11 @@
   <ColdFusionReactorHeath.label>Cold fusion reactor heart</ColdFusionReactorHeath.label>
   <ColdFusionReactorHeath.description>The main part of the cold fusion reactor. With the help of it, it will be possible to modernize a nuclear reactor in order to obtain a new, more perfect source of energy.</ColdFusionReactorHeath.description>
 
+  <ArcReactor.label>Arc reactor</ArcReactor.label>
+  <ArcReactor.description>A reactor operating in uranium, but based on the principle of cold fusion. Almost does not emit heat, but it is a good source of energy.</ArcReactor.description>
+  <PalladiumCore.label>Palladium core</PalladiumCore.label>
+  <PalladiumCore.description>The main source of energy. Despite the radioactivity, the design of the reactor does not allow it to affect the environment.</PalladiumCore.description>
+  <Enricher.label>Enricher</Enricher.label>
+  <Enricher.description>Inflates to the core and core, enhancing the generation of energy.</Enricher.description>
+  
 </LanguageData>

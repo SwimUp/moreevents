@@ -6,4 +6,11 @@
   <ColdFusionReactorHeath.label>Сердце реактора холодного синтеза</ColdFusionReactorHeath.label>
   <ColdFusionReactorHeath.description>Основная часть реактора холодного синтеза. С его помощью можно будет модернизировать ядерный реактор, чтобы получить новый, более совершенный источник энергии.</ColdFusionReactorHeath.description>
 
+  <ArcReactor.label>Дуговой реактор</ArcReactor.label>
+  <ArcReactor.description>Улучшенная версия реактора холодного синтеза. Вырабатывает больше энергии, является безопасным источником энергии.</ArcReactor.description>
+  <PalladiumCore.label>Палладиевый сердечник</PalladiumCore.label>
+  <PalladiumCore.description>Основной источник энергии. Несмотря на радиактивность, конструкция реактора не позволяет ей воздействовать на окружающую среду.</PalladiumCore.description>
+  <Enricher.label>Обогатитель</Enricher.label>
+  <Enricher.description>Воздуйствует на ядро и сердечник, усиливая генерацию энергии</Enricher.description>
+
 </LanguageData>
