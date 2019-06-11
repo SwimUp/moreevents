@@ -20,5 +20,7 @@ namespace MoreEvents
         public static ThingDef ArcReactor;
         public static ThingDef PalladiumCore;
         public static ThingDef Enricher;
+        public static ThingDef VacuumTube;
+        public static ThingDef VacuumStabilizer;
     }
 }

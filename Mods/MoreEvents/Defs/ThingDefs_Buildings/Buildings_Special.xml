@@ -33,7 +33,7 @@
       <Mass>50</Mass>
     </statBases>
     <tickerType>Normal</tickerType>
-    <size>(4, 4)</size>
+    <size>(6, 6)</size>
     <costList>
       <Steel>500</Steel>
 	  <ComponentIndustrial>25</ComponentIndustrial>
@@ -63,11 +63,10 @@
     <tradeability>None</tradeability>
   </ThingDef>
 
-
   <ThingDef ParentName="BuildingBase">
     <defName>ArcReactor</defName>
     <label>arc reactor</label>
-    <description>Improved version of the cold fusion reactor. Produces more energy, is a safe source of energy</description>
+    <description>Improved version of the cold fusion reactor. Produces more energy, is a safe source of energy.</description>
     <graphicData>
       <texPath>Things/Buildings/ColdFusionPro/ColdFusionPro</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -96,7 +95,7 @@
       <Mass>50</Mass>
     </statBases>
     <tickerType>Normal</tickerType>
-    <size>(4, 4)</size>
+    <size>(6, 6)</size>
     <costList>
       <Steel>500</Steel>
       <Plasteel>50</Plasteel>
@@ -129,5 +128,134 @@
     <tradeability>None</tradeability>
   </ThingDef>
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>ZeroPointReactor</defName>
+    <label>Zero point reactor</label>
+    <description>A reactor built by someone who has reached an incredible level of science. These generators extract vacuum energy, providing an almost unlimited supply of energy.</description>
+	<thingClass>MoreEvents.Things.Building_ZeroPointGenerator</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/ZeroPointReactor/0</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4, 10)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <pathCost>70</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+      <MarketValue>6000</MarketValue>
+      <MaxHitPoints>900</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>45000</WorkToBuild>
+      <Mass>90</Mass>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(4, 10)</size>
+    <costList>
+      <Steel>700</Steel>
+      <Plasteel>150</Plasteel>
+      <Gold>70</Gold>
+	  <ComponentIndustrial>30</ComponentIndustrial>
+      <ComponentSpacer>25</ComponentSpacer>
+	  <VacuumTube>1</VacuumTube>
+	  <VacuumStabilizer>1</VacuumStabilizer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-5000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(162,81,194,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>7.0</fuelConsumptionRate>
+        <fuelCapacity>150.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>-60</heatPerSecond>
+        <heatPushMinTemperature>-80</heatPushMinTemperature>
+      </li>
+    </comps>
+    <tradeability>None</tradeability>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SingularReactor</defName>
+    <label>Singular reactor</label>
+    <description>The source of energy, where microscopic black holes (collapsars) are used as the working medium. The principle of operation of such a reactor is the use of energy released during the evaporation of a black hole.</description>
+	<thingClass>MoreEvents.Things.Building_SingularReactor</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/BlackholeReactor/0</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(10, 10)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <pathCost>70</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+      <MarketValue>9000</MarketValue>
+      <MaxHitPoints>2500</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>160000</WorkToBuild>
+      <Mass>2500</Mass>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(10, 10)</size>
+    <costList>
+      <Steel>3000</Steel>
+      <Plasteel>500</Plasteel>
+      <Gold>150</Gold>
+	  <ComponentIndustrial>40</ComponentIndustrial>
+      <ComponentSpacer>40</ComponentSpacer>
+	  <PalladiumCore>1</PalladiumCore>
+	  <Enricher>1</Enricher>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-7000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>16</glowRadius>
+        <glowColor>(73,94,230,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>7.0</fuelConsumptionRate>
+        <fuelCapacity>150.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+    </comps>
+    <tradeability>None</tradeability>
+  </ThingDef>
 
 </Defs>

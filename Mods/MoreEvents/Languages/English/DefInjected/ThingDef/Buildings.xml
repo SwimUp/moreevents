@@ -13,4 +13,11 @@
   <Enricher.label>Enricher</Enricher.label>
   <Enricher.description>Inflates to the core and core, enhancing the generation of energy.</Enricher.description>
   
+  <ZeroPointReactor.label>Zero point reactor</ZeroPointReactor.label>
+  <ZeroPointReactor.description>A reactor built by someone who has reached an incredible level of science. These generators extract vacuum energy, providing an almost unlimited supply of energy.</ZeroPointReactor.description>
+  <VacuumTube.label>Vacuum tube</VacuumTube.label>
+  <VacuumTube.description>The main part of the reactor, it generates energy.</VacuumTube.description>
+  <VacuumStabilizer.label>Vacuum stabilizer</VacuumStabilizer.label>
+  <VacuumStabilizer.description>Stabilizes pressure and creates zero electromagnetic radiation.</VacuumStabilizer.description>
+  
 </LanguageData>

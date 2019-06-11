@@ -114,6 +114,7 @@
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapGeneratorFactionBase\BlueprintDefOfLocal.cs" />
     <Compile Include="MapGeneratorFactionBase\BlueprintHandler.cs" />
+    <Compile Include="MapGeneratorFactionBase\BluprintsTestTool.cs" />
     <Compile Include="MapGeneratorFactionBase\MapGeneratorBaseBlueprintDef.cs" />
     <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
     <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
@@ -127,10 +128,12 @@
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
+    <Compile Include="Things\Building_SingularReactor.cs" />
+    <Compile Include="Things\Building_ZeroPointGenerator.cs" />
     <Compile Include="Things\PawnKindDefOfLocal.cs" />
     <Compile Include="Things\Pawns\Pawn_BigAvtomaton.cs" />
     <Compile Include="Things\PlacebleItem.cs" />
-    <Compile Include="Things\PlacebleItem_Comp.cs" />
+    <Compile Include="Things\CompProperties_PlacebleItem.cs" />
     <Compile Include="Things\Projectiles\Bullet_TrashGun.cs" />
     <Compile Include="Things\SoundsDefOfLocal.cs" />
     <Compile Include="Things\ThingDefOfLocal.cs" />

@@ -12,9 +12,9 @@ namespace MoreEvents.Events
         private float[] _eventChance = new float[4]
         {
             0.35f,
-            0.25f,
-            0.10f,
-            0.06f
+            0.20f,
+            0.08f,
+            0.03f
         };
         private Action<Map>[] _events = new Action<Map>[4]
         {

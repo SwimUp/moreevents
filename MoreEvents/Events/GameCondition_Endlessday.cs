@@ -12,6 +12,12 @@ namespace MoreEvents.Events
 
         public override void GameConditionTick()
         {
+            if(!settings.Active)
+            {
+                End();
+                return;
+            }
+
             base.GameConditionTick();
 
             Find.CurrentMap.skyManager.ForceSetCurSkyGlow(1f);

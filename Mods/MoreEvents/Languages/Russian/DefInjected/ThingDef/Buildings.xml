@@ -13,4 +13,11 @@
   <Enricher.label>Обогатитель</Enricher.label>
   <Enricher.description>Воздуйствует на ядро и сердечник, усиливая генерацию энергии</Enricher.description>
 
+  <ZeroPointReactor.label>Реактор нулевой точки</ZeroPointReactor.label>
+  <ZeroPointReactor.description>Реактор, построенный кем-то, кто достиг невероятного уровня в науке. Эти генераторы извлекают энергию вакуума, обеспечивая почти безграничную подачу энергии.</ZeroPointReactor.description>
+  <VacuumTube.label>Вакуумная труба</VacuumTube.label>
+  <VacuumTube.description>Главная часть реактора, в ней происходит генерация энергии.</VacuumTube.description>
+  <VacuumStabilizer.label>Вакуумный стабилизатор</VacuumStabilizer.label>
+  <VacuumStabilizer.description>Стабилизирует давление и создает нулевое электромагнитное излучение</VacuumStabilizer.description>
+
 </LanguageData>

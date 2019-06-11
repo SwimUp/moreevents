@@ -10,6 +10,5 @@ namespace MoreEvents.MapGeneratorFactionBase
     [DefOf]
     public static class BlueprintDefOfLocal
     {
-        public static MapGeneratorBaseBlueprintDef SmallOutpost_A;
     }
 }

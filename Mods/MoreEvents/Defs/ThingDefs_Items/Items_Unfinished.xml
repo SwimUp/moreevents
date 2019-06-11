@@ -64,7 +64,6 @@
       <Flammability>0</Flammability>
       <Mass>3</Mass>
     </statBases>
-    <!-- for CompForbiddable -->
     <drawerType>RealtimeOnly</drawerType>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
@@ -104,12 +103,89 @@
       <Flammability>0</Flammability>
       <Mass>2</Mass>
     </statBases>
-    <!-- for CompForbiddable -->
     <drawerType>RealtimeOnly</drawerType>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="MoreEvents.Things.CompProperties_PlacebleItem">
         <PlaceDef>ArcReactor</PlaceDef>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  
+  <ThingDef>
+    <defName>VacuumTube</defName>
+    <label>vacuum tube</label>
+	<description>the main part of the reactor, it generates energy.</description>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
+      <texPath>Things/Buildings/ZeroPointReactor/Vacuum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>1700</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>3</Mass>
+    </statBases>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="MoreEvents.Things.CompProperties_PlacebleItem">
+        <PlaceDef>ZeroPointReactor</PlaceDef>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+ <ThingDef>
+    <defName>VacuumStabilizer</defName>
+    <label>vacuum stabilizer</label>
+	<description>Stabilizes pressure and creates zero electromagnetic radiation.</description>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
+      <texPath>Things/Buildings/ZeroPointReactor/VacuumAccelerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>4200</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>6</Mass>
+    </statBases>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="MoreEvents.Things.CompProperties_PlacebleItem">
+        <PlaceDef>ZeroPointReactor</PlaceDef>
       </li>
     </comps>
     <inspectorTabs>
