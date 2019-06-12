@@ -118,6 +118,7 @@
     <Compile Include="MapGeneratorFactionBase\MapGeneratorBaseBlueprintDef.cs" />
     <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
     <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
+    <Compile Include="MapGeneratorFactionBase\ThingData.cs" />
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
@@ -129,7 +130,8 @@
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
-    <Compile Include="Things\Building_ZeroPointGenerator.cs" />
+    <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
+    <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />
     <Compile Include="Things\PawnKindDefOfLocal.cs" />
     <Compile Include="Things\Pawns\Pawn_BigAvtomaton.cs" />
     <Compile Include="Things\PlacebleItem.cs" />

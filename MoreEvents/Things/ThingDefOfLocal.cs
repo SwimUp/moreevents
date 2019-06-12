@@ -22,5 +22,10 @@ namespace MoreEvents
         public static ThingDef Enricher;
         public static ThingDef VacuumTube;
         public static ThingDef VacuumStabilizer;
+        public static ThingDef ZeroPointReactor;
+        public static ThingDef SingularReactor;
+        public static ThingDef SuperMagnetNewGeneration;
+        public static ThingDef QuantumConverter;
+        public static ThingDef VacuumPump;
     }
 }

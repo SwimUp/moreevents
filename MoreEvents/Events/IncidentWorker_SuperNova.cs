@@ -63,8 +63,8 @@ namespace MoreEvents.Events
             };
             int[] durations = new int[2]
             {
-                Rand.Range(40000, 150000),
-                Rand.Range(120000, 300000)
+                Rand.Range(10000, 50000),
+                Rand.Range(15000, 50000)
             };
 
             for(int i = 0; i < conditions.Length; i++)
@@ -86,10 +86,10 @@ namespace MoreEvents.Events
 
             int[] durations = new int[4]
             {
-                Rand.Range(500000, 900000),
-                Rand.Range(150000, 300000),
-                Rand.Range(250000, 800000),
-                Rand.Range(200000, 500000)
+                Rand.Range(70000, 90000),
+                Rand.Range(70000, 90000),
+                Rand.Range(140000, 170000),
+                Rand.Range(70000, 90000)
             };
 
             for (int i = 0; i < conditions.Length; i++)
@@ -111,11 +111,11 @@ namespace MoreEvents.Events
 
             int[] durations = new int[5]
             {
-                Rand.Range(900000, 3000000),
-                Rand.Range(400000, 650000),
-                Rand.Range(900000, 3000000),
+                Rand.Range(250000, 350000),
+                Rand.Range(250000, 350000),
+                Rand.Range(250000, 350000),
                 -1,
-                Rand.Range(500000, 900000)
+                Rand.Range(250000, 350000)
             };
 
             for (int i = 0; i < conditions.Length; i++)

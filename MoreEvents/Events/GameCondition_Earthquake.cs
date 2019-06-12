@@ -95,7 +95,7 @@ namespace MoreEvents.Events
 
             for (int i = 0; i < count; i++)
             {
-                var thing = SingleMap.spawnedThings.Where(t => t is Building).RandomElement();
+                var thing = SingleMap.spawnedThings.Where(t => t is Building && t.Position.GetRoof(SingleMap) == RoofDefOf.RoofConstructed && !t.Fogged()).RandomElement();
                 float damage = Rand.Range(10, 20) * damageMultiplier;
                 thing.TakeDamage(new DamageInfo(DamageDefOf.Bomb, damage));
             }

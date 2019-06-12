@@ -20,4 +20,10 @@
   <VacuumStabilizer.label>Вакуумный стабилизатор</VacuumStabilizer.label>
   <VacuumStabilizer.description>Стабилизирует давление и создает нулевое электромагнитное излучение</VacuumStabilizer.description>
 
+  <SingularReactor.label>Сингулярный реактор</SingularReactor.label>
+  <SingularReactor.description>Источник энергии, где в качестве рабочего тела используются микроскопические чёрные дыры (коллапсары). Принцип работы такого реактора состоит в использовании энергии, выделяющейся при испарении чёрной дыры.</SingularReactor.description>
+  <SuperMagnetNewGeneration.label>Сверхмагнит нового поколения</SuperMagnetNewGeneration.label>
+  <SuperMagnetNewGeneration.description>Супермагнит, из неизвестного нам материала, который удерживает черную дыру.</SuperMagnetNewGeneration.description>
+  <QuantumConverter.label>Квантовый преобразователь</QuantumConverter.label>
+  <QuantumConverter.description>Главный компонент, преобразовывающий (захватывающий) излучение от испарения черной дыры и преобразовывающий его в энергию.</QuantumConverter.description>
 </LanguageData>

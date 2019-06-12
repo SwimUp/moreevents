@@ -8,6 +8,7 @@
     <workerClass>BiomeWorker_TemperateForest</workerClass>
     <animalDensity>1.5</animalDensity>
     <plantDensity>0.0</plantDensity>
+	<implemented>false</implemented>
     <settlementSelectionWeight>1</settlementSelectionWeight>
     <movementDifficulty>1</movementDifficulty>
     <texture>World/Biomes/TemperateForest</texture>

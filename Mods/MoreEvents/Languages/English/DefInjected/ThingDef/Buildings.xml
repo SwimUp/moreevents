@@ -20,4 +20,11 @@
   <VacuumStabilizer.label>Vacuum stabilizer</VacuumStabilizer.label>
   <VacuumStabilizer.description>Stabilizes pressure and creates zero electromagnetic radiation.</VacuumStabilizer.description>
   
+  <SingularReactor.label>Singular reactor</SingularReactor.label>
+  <SingularReactor.description>The source of energy, where microscopic black holes (collapsars) are used as the working medium. The principle of operation of such a reactor is the use of energy released during the evaporation of a black hole.</SingularReactor.description>
+  <SuperMagnetNewGeneration.label>Super Magnet New Generation</SuperMagnetNewGeneration.label>
+  <SuperMagnetNewGeneration.description>Supermagnet, from an unknown material that holds a black hole.</SuperMagnetNewGeneration.description>
+  <QuantumConverter.label>Quantum converter</QuantumConverter.label>
+  <QuantumConverter.description>The main component that converts (captures) radiation from the evaporation of a black hole and converts it into energy.</QuantumConverter.description>
+  
 </LanguageData>

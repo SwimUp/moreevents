@@ -9,6 +9,7 @@ using RimWorld.BaseGen;
 using RimWorld.Planet;
 using Verse.AI;
 using Verse.AI.Group;
+using MoreEvents.MapGeneratorFactionBase;
 
 namespace MapGenerator
 {
@@ -74,8 +75,8 @@ namespace MapGenerator
                 //}
 
                 // If a building material is defined, use this
-                if (blueprint.buildingMaterial != null)
-                    wallStuff = blueprint.buildingMaterial;
+                if (blueprint.defaultBuildingMaterial != null)
+                    wallStuff = blueprint.defaultBuildingMaterial;
 
                 // Make all buildings from the same random stuff
                 if (wallStuff == null)
@@ -211,12 +212,12 @@ namespace MapGenerator
                         try
                         {
 
-                            ThingDef thingDef = TryGetThingDefFromBuildingData(blueprint, itemPos);
+                            ThingData thingData = TryGetThingDefFromBuildingData(blueprint, itemPos);
                             Rot4 thingRot = TryGetRotationFromBuildingData(blueprint, itemPos);
-                            ThingDef nonthingDef = TryGetThingDefFromNonBuildingData(blueprint, itemPos);
-                            TerrainDef terrainDef = TryGetTerrainDefFromFloorData(blueprint, itemPos);
-                            PawnKindDef pawnKindDef = TryGetPawnKindDefFromPawnData(blueprint, itemPos);
-                            ThingDef itemDef = TryGetItemDefFromItemData(blueprint, itemPos);
+                            ThingData nonthingData = TryGetThingDefFromNonBuildingData(blueprint, itemPos);
+                            ThingData terrainData = TryGetTerrainDefFromFloorData(blueprint, itemPos);
+                            ThingData pawnKindData = TryGetPawnKindDefFromPawnData(blueprint, itemPos);
+                            ThingData itemData = TryGetItemDefFromItemData(blueprint, itemPos);
 
                             //List<Thing> list = map.thingGrid.ThingsListAt(spawnCell);
                             //for (int i = 0; i < list.Count; i++)
@@ -230,26 +231,26 @@ namespace MapGenerator
                             // Do only in step 1:
                             if (step == 1)
                             {
-                                if (thingDef != null || terrainDef != null || pawnKindDef != null || itemDef != null)
+                                if (thingData?.Thing != null || terrainData?.Terrain != null || pawnKindData?.Kind != null || itemData?.Thing != null)
                                     ClearCell(spawnCell, map);
                             }
 
                             switch (step)
                             {
                                 case 1: // Terrain
-                                    TrySetCell_1_SetFloor(spawnCell, map, terrainDef, thingDef, stuffDef);
+                                    TrySetCell_1_SetFloor(spawnCell, map, terrainData, thingData?.Thing, stuffDef);
                                     break;
                                 case 2: // non-Building
-                                    TrySetCell_3_SetNonThing(spawnCell, map, nonthingDef);
+                                    TrySetCell_3_SetNonThing(spawnCell, map, nonthingData, stuffDef);
                                     break;
                                 case 3: // Building
-                                    TrySetCell_2_SetThing(spawnCell, map, faction, thingDef, thingRot, stuffDef);
+                                    TrySetCell_2_SetThing(spawnCell, map, faction, thingData, thingRot, stuffDef);
                                     break;
                                 case 4: // Item
-                                    TrySetCell_4_SetItem(spawnCell, map, itemDef, blueprint);
+                                    TrySetCell_4_SetItem(spawnCell, map, itemData);
                                     break;
                                 case 5: // Pawn
-                                    TrySetCell_5_SetPawn(spawnCell, map, faction, pawnKindDef, blueprint);
+                                    TrySetCell_5_SetPawn(spawnCell, map, faction, pawnKindData);
                                     break;
                                 default:
                                     return;
@@ -299,7 +300,7 @@ namespace MapGenerator
                 pointsUsed < (faction.def.techLevel == TechLevel.Neolithic ? NeolithicPawnsPoints.min : NonNeolithicPawnsPoints.min))
             {
                 //Log.Warning("Info: Creating base pawns..");
-                PrepareBaseGen_PawnGroup(map, mapRect, faction, rooms.ToList(), pawnLord, pointsUsed);
+                //PrepareBaseGen_PawnGroup(map, mapRect, faction, rooms.ToList(), pawnLord, pointsUsed);
             }
 
             PrepareBaseGen_CampFires(map, mapRect, faction);
@@ -318,7 +319,7 @@ namespace MapGenerator
 
 
         // 1st step: Get the TerrainDef of the position from the FloorData of the blueprint.
-        private static TerrainDef TryGetTerrainDefFromFloorData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetTerrainDefFromFloorData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.floorData == null || blueprint.floorData.Count() - 1 < itemPos ||
                     blueprint.floorLegend == null)
@@ -334,7 +335,7 @@ namespace MapGenerator
         }
 
         // 2nd step: Get the ThingDef of the position from the BuildingData of the blueprint.
-        private static ThingDef TryGetThingDefFromBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetThingDefFromBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.buildingData == null || blueprint.buildingData.Count() - 1 < itemPos ||
                     blueprint.buildingLegend == null)
@@ -366,7 +367,7 @@ namespace MapGenerator
         }
 
         // 3rd step: Get the ThingDef of the position from the Non-BuildingData of the blueprint.
-        private static ThingDef TryGetThingDefFromNonBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetThingDefFromNonBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.nonbuildingData == null || blueprint.nonbuildingData.Count() - 1 < itemPos ||
                     blueprint.nonbuildingLegend == null)
@@ -382,7 +383,7 @@ namespace MapGenerator
         }
 
         // 4th step: Get the ThingDef of the position from the ItemData of the blueprint.
-        private static ThingDef TryGetItemDefFromItemData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetItemDefFromItemData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.itemData == null || blueprint.itemData.Count() - 1 < itemPos ||
                     blueprint.itemLegend == null)
@@ -398,7 +399,7 @@ namespace MapGenerator
         }
 
         // 5th step: Get the PawnKindDef of the position from the PawnData of the blueprint.
-        private static PawnKindDef TryGetPawnKindDefFromPawnData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetPawnKindDefFromPawnData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.pawnData == null || blueprint.pawnData.Count() - 1 < itemPos ||
                     blueprint.pawnLegend == null)
@@ -469,31 +470,86 @@ namespace MapGenerator
         }
 
         // Fill the cell with Floor
-        private static void TrySetCell_1_SetFloor(IntVec3 c, Map map, TerrainDef terrainDef = null, ThingDef thingDef = null, ThingDef stuffDef = null)
+        private static void TrySetCell_1_SetFloor(IntVec3 c, Map map, ThingData terrainData = null, ThingDef thingDef = null, ThingDef stuffDef = null)
         {
+            if(terrainData == null)
+            {
+                return;
+            }
+
+            if (!Rand.Chance(terrainData.Chance))
+            {
+                return;
+            }
             //Note: Here is no functionality to clear the cell by design, because it is possible to place items that are larger than 1x1
 
             // 1st step - work with the Terrain
-            if (terrainDef != null)
-                map.terrainGrid.SetTerrain(c, terrainDef);
-            else if (terrainDef == null && thingDef != null && stuffDef != null) // Do ONLY when a thing will be placed here!
+            if (terrainData.Terrain != null)
+            {
+                map.terrainGrid.SetTerrain(c, terrainData.Terrain);
+            }
+            else if (terrainData.Terrain == null && thingDef != null && stuffDef != null)
+            {// Do ONLY when a thing will be placed here!
                 map.terrainGrid.SetTerrain(c, BaseGenUtility.CorrespondingTerrainDef(stuffDef, true));
+            }
         }
-        
+
         // Fill the cell with Thing (Building)
-        private static void TrySetCell_2_SetThing(IntVec3 c, Map map, Faction faction, ThingDef thingDef, Rot4 thingRot, ThingDef stuffDef = null)
+        private static void TrySetCell_2_SetThing(IntVec3 c, Map map, Faction faction, ThingData thingData, Rot4 thingRot, ThingDef stuffDef = null)
         {
+            if(thingData == null)
+            {
+                return;
+            }
+
+            if (!Rand.Chance(thingData.Chance))
+            {
+                return;
+            }
             //Note: Here is no functionality to clear the cell by design, because it is possible to place items that are larger than 1x1
 
             // 2nd step - work with the Thing (Buildings)
-            if (thingDef != null)
+            if (thingData.Thing != null)
             {
-                ThingDef stuffDef1 = stuffDef;
+                ThingDef thingDef = thingData.Thing;
+                ThingDef stuffDef1 = null;
+
+                if (thingData.Stuff.Count > 0)
+                {
+                    float value = Rand.Value;
+                    foreach (var pair in thingData.Stuff.OrderBy(pair => pair.Value))
+                    {
+                        if (value < pair.Value)
+                        {
+                            stuffDef1 = pair.Key;
+                            break;
+                        }
+                    }
+                }
+
+                if (stuffDef1 == null)
+                    stuffDef1 = stuffDef;
 
                 if (!thingDef.MadeFromStuff)
                     stuffDef1 = null;
 
                 Thing newThing = ThingMaker.MakeThing(thingDef, stuffDef1);
+                if (thingData.Quality.Count > 0)
+                {
+                    var comp = newThing.TryGetComp<CompQuality>();
+                    if (comp != null)
+                    {
+                        float value = Rand.Value;
+                        foreach (var pair in thingData.Quality.OrderBy(pair => pair.Value))
+                        {
+                            if (value < pair.Value)
+                            {
+                                comp.SetQuality(pair.Key, ArtGenerationContext.Outsider);
+                                break;
+                            }
+                        }
+                    }
+                }
                 if (thingRot == null || thingRot == Rot4.Invalid)
                     newThing = GenSpawn.Spawn(newThing, c, map);
                 else
@@ -511,14 +567,33 @@ namespace MapGenerator
         }
 
         // Fill the cell with non-Thing (non-Building)
-        private static void TrySetCell_3_SetNonThing(IntVec3 c, Map map, ThingDef thingDef) //, ThingDef stuffDef = null)
+        private static void TrySetCell_3_SetNonThing(IntVec3 c, Map map, ThingData nonthingData, ThingDef stuffDef) //, ThingDef stuffDef = null)
         {
+            if (nonthingData == null)
+                return;
+
+            if (!Rand.Chance(nonthingData.Chance))
+                return;
             //Note: Here is no functionality to clear the cell by design, because it is possible to place items that are larger than 1x1
 
             // 3rd step - work with the Non-Thing (Non-Buildings)
-            if (thingDef != null)
+            if (nonthingData.Thing != null)
             {
-                ThingDef stuffDef1 = null;//stuffDef;
+                ThingDef thingDef = nonthingData.Thing;
+                ThingDef stuffDef1 = stuffDef;
+
+                if (nonthingData.Stuff.Count > 0)
+                {
+                    float value = Rand.Value;
+                    foreach (var pair in nonthingData.Stuff.OrderBy(pair => pair.Value))
+                    {
+                        if (value < pair.Value)
+                        {
+                            stuffDef1 = pair.Key;
+                            break;
+                        }
+                    }
+                }
 
                 if (!thingDef.MadeFromStuff)
                     stuffDef1 = null;
@@ -532,40 +607,57 @@ namespace MapGenerator
         }
 
         // Fill the cell with Item
-        private static void TrySetCell_4_SetItem(IntVec3 c, Map map, ThingDef itemDef = null, MapGeneratorBaseBlueprintDef blueprint = null)
+        private static void TrySetCell_4_SetItem(IntVec3 c, Map map, ThingData itemData = null)
         {
             //Note: Here is no functionality to clear the cell by design, because it is possible to place items that are larger than 1x1
 
             // The following needs blueprint data to work
-            if (blueprint == null)
+            if (itemData == null)
                 return;
             
 
             // 4th step - work with the Item
             //if (itemDef != null) // && blueprint.itemSpawnChance / 100 > Rand.Value)
-            if (itemDef != null && blueprint.itemSpawnChance / 100 > Rand.Value)
+            if (itemData.Thing != null && itemData.Chance > Rand.Value)
             {
-                ThingDef stuffDef2;
-                if (itemDef.IsApparel)
+                ThingDef itemDef = itemData.Thing;
+                ThingDef stuffDef2 = null;
+
+                if (itemDef.MadeFromStuff)
                 {
-                    if (!DefDatabase<ThingDef>.AllDefs.Where<ThingDef>(t => t.IsStuff &&
-                                                                            t.stuffProps != null && t.stuffProps.categories != null && t.stuffProps.categories.Contains(StuffCategoryDefOf.Fabric))
-                                                                                .TryRandomElement(out stuffDef2))
+                    if (itemData.Stuff.Count > 0)
                     {
-                        stuffDef2 = DefDatabase<ThingDef>.GetNamedSilentFail("Synthread");
+                        float value = Rand.Value;
+                        foreach (var pair in itemData.Stuff.OrderBy(pair => pair.Value))
+                        {
+                            if (value < pair.Value)
+                            {
+                                stuffDef2 = pair.Key;
+                                break;
+                            }
+                        }
                     }
+                    else
+                    {
+                        if (itemDef.IsApparel)
+                        {
+                            if (!DefDatabase<ThingDef>.AllDefs.Where<ThingDef>(t => t.IsStuff &&
+                                                                                    t.stuffProps != null && t.stuffProps.categories != null && t.stuffProps.categories.Contains(StuffCategoryDefOf.Fabric))
+                                                                                        .TryRandomElement(out stuffDef2))
+                            {
+                                stuffDef2 = DefDatabase<ThingDef>.GetNamedSilentFail("Synthread");
+                            }
 
+                        }
+                        else
+                        {
+                            List<string> stuffPossibles = new List<string>() { "Steel", "Steel", "Steel", "Steel", "Silver", "Gold", "Jade", "Plasteel" };
+                            stuffDef2 = DefDatabase<ThingDef>.GetNamedSilentFail(stuffPossibles.RandomElement());
+                        }
+                    }
                 }
-                else
-                {
-                    List<string> stuffPossibles = new List<string>() { "Steel", "Steel", "Steel", "Steel", "Silver", "Gold", "Jade", "Plasteel" };
-                    stuffDef2 = DefDatabase<ThingDef>.GetNamedSilentFail(stuffPossibles.RandomElement());
-                }
 
-                if (!itemDef.MadeFromStuff)
-                    stuffDef2 = null;
-
-                Thing newItem = TryGetTreasure(itemDef, stuffDef2);
+                Thing newItem = TryGetTreasure(itemDef, stuffDef2, itemData);
 
                 newItem = GenSpawn.Spawn(newItem, c, map);
 
@@ -584,19 +676,19 @@ namespace MapGenerator
         }
 
         // Fill the cell with Pawn
-        private static void TrySetCell_5_SetPawn(IntVec3 c, Map map, Faction faction, PawnKindDef pawnKindDef = null, MapGeneratorBaseBlueprintDef blueprint = null)
+        private static void TrySetCell_5_SetPawn(IntVec3 c, Map map, Faction faction, ThingData pawnKindData = null)
         {
             //Note: Here is no functionality to clear the cell by design, because it is possible to place items that are larger than 1x1
 
             // The following needs blueprint data to work
-            if (blueprint == null)
+            if (pawnKindData == null)
                 return;
 
             // 5th step - work with the Pawn
-            if (pawnKindDef != null && blueprint.pawnSpawnChance / 100 > Rand.Value)
+            if (pawnKindData.Kind != null && pawnKindData.Chance > Rand.Value)
             {
-                if (blueprint.factionDef != null)
-                    faction = Find.FactionManager.FirstFactionOfDef(blueprint.factionDef);
+                if (pawnKindData.Faction != null)
+                    faction = Find.FactionManager.FirstFactionOfDef(pawnKindData.Faction);
 
                 // null - find a valid faction.
                 if (faction == null)
@@ -610,22 +702,40 @@ namespace MapGenerator
                     }
                 }
 
-                Pawn pawn = PawnGenerator.GeneratePawn(pawnKindDef, faction);
-                //pawn.mindState.Active = true;
-                pawn = GenSpawn.Spawn(pawn, c, map) as Pawn;
-
-                if (pawn != null)
+                int count = 1;
+                
+                if(pawnKindData.Count.max > 1)
                 {
-                    if (allSpawnedPawns == null)
-                        allSpawnedPawns = new List<Pawn>();
+                    if (pawnKindData.Count.min == pawnKindData.Count.max)
+                    {
+                        count = pawnKindData.Count.max;
+                    }
+                    else
+                    {
+                        count = Rand.RangeInclusive(pawnKindData.Count.min, pawnKindData.Count.max);
+                    }
+                }
 
-                    allSpawnedPawns.Add(pawn);
+                for (int i = 0; i < count; i++)
+                {
+                    Pawn pawn = PawnGenerator.GeneratePawn(pawnKindData.Kind, faction);
+                    //pawn.mindState.Active = true;
+                    pawn = GenSpawn.Spawn(pawn, c, map) as Pawn;
+
+                    if (pawn != null)
+                    {
+                        if (allSpawnedPawns == null)
+                            allSpawnedPawns = new List<Pawn>();
+
+                        allSpawnedPawns.Add(pawn);
+                    }
+
                 }
             }
 
         }
 
-        private static Thing TryGetTreasure(ThingDef treasureDef, ThingDef stuffDef)
+        private static Thing TryGetTreasure(ThingDef treasureDef, ThingDef stuffDef, ThingData itemData)
         {
             Thing treasure = null;
 
@@ -635,23 +745,74 @@ namespace MapGenerator
 
             treasure = ThingMaker.MakeThing(treasureDef, stuffDef);
 
-            // try adjust quality
+
+            if (itemData.Quality.Count > 0)
+            {
+                var comp = treasure.TryGetComp<CompQuality>();
+                if (comp != null)
+                {
+                    float value = Rand.Value;
+                    foreach (var pair in itemData.Quality.OrderBy(pair => pair.Value))
+                    {
+                        if (value < pair.Value)
+                        {
+                            comp.SetQuality(pair.Key, ArtGenerationContext.Outsider);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            /*// try adjust quality
             CompQuality treasureQuality = treasure.TryGetComp<CompQuality>();
             if (treasureQuality != null)
                 treasureQuality.SetQuality(QualityUtility.GenerateQualityRandomEqualChance(), ArtGenerationContext.Outsider);
+            */
+
+            
 
             // adjust Stack to a random stack size
             if (treasure.def.stackLimit > 1)
             {
+                if(itemData.Count != null)
+                {
+                    if (itemData.Count.min == itemData.Count.max)
+                        treasure.stackCount = itemData.Count.max;
+                    else
+                        treasure.stackCount = Rand.RangeInclusive(itemData.Count.min, itemData.Count.max);
+                }
+
+                if (treasure.stackCount > treasure.def.stackLimit)
+                    treasure.stackCount = treasure.def.stackLimit;
+                /*
                 if (treasure.def.stackLimit > 50)
                     treasure.stackCount = Rand.RangeInclusive(1, 45);
                 else
                     treasure.stackCount = Rand.RangeInclusive(1, treasure.def.stackLimit);
+                    */
             }
 
+            /*
             // adjust Hitpoints (40% to 100%)
             if (treasure.stackCount == 1)
                 treasure.HitPoints = Rand.RangeInclusive((int)(treasure.MaxHitPoints * 0.4), treasure.MaxHitPoints);
+                */
+            if (treasure.stackCount == 1)
+            {
+                if (itemData.HealthRange != null)
+                {
+                    treasure.HitPoints = Rand.RangeInclusive(itemData.HealthRange.min, itemData.HealthRange.max);
+                }
+                else
+                {
+                    treasure.HitPoints = Rand.RangeInclusive((int)(treasure.MaxHitPoints * 0.4), treasure.MaxHitPoints);
+                }
+
+                if(treasure.HitPoints > treasure.def.BaseMaxHitPoints)
+                {
+                    treasure.HitPoints = treasure.def.BaseMaxHitPoints;
+                }
+            }
 
             return treasure;
         }

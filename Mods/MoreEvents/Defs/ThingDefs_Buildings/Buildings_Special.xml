@@ -21,12 +21,11 @@
     <fillPercent>0.4</fillPercent>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <canOverlapZones>false</canOverlapZones>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <castEdgeShadows>false</castEdgeShadows>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	<scatterableOnMapGen>false</scatterableOnMapGen>
     <statBases>
-      <MarketValue>3500</MarketValue>
+      <MarketValue>4500</MarketValue>
       <MaxHitPoints>800</MaxHitPoints>
       <Flammability>0</Flammability>
       <WorkToBuild>14000</WorkToBuild>
@@ -43,7 +42,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
-        <basePowerConsumption>-3000</basePowerConsumption>
+        <basePowerConsumption>-7500</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
       <li Class="CompProperties_Glower">
@@ -51,7 +50,7 @@
         <glowColor>(73,94,230,0)</glowColor>
       </li>
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>9.0</fuelConsumptionRate>
+        <fuelConsumptionRate>7.0</fuelConsumptionRate>
         <fuelCapacity>100.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
@@ -84,11 +83,10 @@
     <fillPercent>0.4</fillPercent>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <canOverlapZones>false</canOverlapZones>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <castEdgeShadows>false</castEdgeShadows>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <statBases>
-      <MarketValue>4000</MarketValue>
+      <MarketValue>6000</MarketValue>
       <MaxHitPoints>1000</MaxHitPoints>
       <Flammability>0</Flammability>
       <WorkToBuild>20000</WorkToBuild>
@@ -108,7 +106,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
-        <basePowerConsumption>-3500</basePowerConsumption>
+        <basePowerConsumption>-9500</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
       <li Class="CompProperties_Glower">
@@ -116,7 +114,7 @@
         <glowColor>(73,94,230,0)</glowColor>
       </li>
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>7.0</fuelConsumptionRate>
+        <fuelConsumptionRate>5.0</fuelConsumptionRate>
         <fuelCapacity>150.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
@@ -132,7 +130,7 @@
     <defName>ZeroPointReactor</defName>
     <label>Zero point reactor</label>
     <description>A reactor built by someone who has reached an incredible level of science. These generators extract vacuum energy, providing an almost unlimited supply of energy.</description>
-	<thingClass>MoreEvents.Things.Building_ZeroPointGenerator</thingClass>
+	<thingClass>MoreEvents.Things.ZeroPointReactor.Building_ZeroPointGenerator</thingClass>
     <graphicData>
       <texPath>Things/Buildings/ZeroPointReactor/0</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -144,11 +142,10 @@
     <fillPercent>0.4</fillPercent>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <canOverlapZones>false</canOverlapZones>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <castEdgeShadows>false</castEdgeShadows>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <statBases>
-      <MarketValue>6000</MarketValue>
+      <MarketValue>9000</MarketValue>
       <MaxHitPoints>900</MaxHitPoints>
       <Flammability>0</Flammability>
       <WorkToBuild>45000</WorkToBuild>
@@ -168,21 +165,12 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
-        <basePowerConsumption>-5000</basePowerConsumption>
+        <basePowerConsumption>-15000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>8</glowRadius>
         <glowColor>(162,81,194,0)</glowColor>
-      </li>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>7.0</fuelConsumptionRate>
-        <fuelCapacity>150.0</fuelCapacity>
-        <fuelFilter>
-          <thingDefs>
-            <li>Uranium</li>
-          </thingDefs>
-        </fuelFilter>
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
@@ -190,6 +178,40 @@
         <heatPushMinTemperature>-80</heatPushMinTemperature>
       </li>
     </comps>
+    <tradeability>None</tradeability>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>VacuumPump</defName>
+    <label>Vacuum pump</label>
+    <description>A pump used to control the level of oxygen and its composition in the room. It is an important component for the operation of the zero point reactor.</description>
+	<thingClass>MoreEvents.Things.ZeroPointReactor.Building_VaccumPump</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/ZeroPointReactor/0</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <pathCost>70</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+      <MarketValue>900</MarketValue>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>20000</WorkToBuild>
+      <Mass>15</Mass>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(2, 2)</size>
+    <costList>
+      <Steel>200</Steel>
+	  <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
     <tradeability>None</tradeability>
   </ThingDef>
 
@@ -218,7 +240,7 @@
     <castEdgeShadows>false</castEdgeShadows>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <statBases>
-      <MarketValue>9000</MarketValue>
+      <MarketValue>25000</MarketValue>
       <MaxHitPoints>2500</MaxHitPoints>
       <Flammability>0</Flammability>
       <WorkToBuild>160000</WorkToBuild>
@@ -232,27 +254,14 @@
       <Gold>150</Gold>
 	  <ComponentIndustrial>40</ComponentIndustrial>
       <ComponentSpacer>40</ComponentSpacer>
-	  <PalladiumCore>1</PalladiumCore>
-	  <Enricher>1</Enricher>
+	  <QuantumConverter>1</QuantumConverter>
+	  <SuperMagnetNewGeneration>1</SuperMagnetNewGeneration>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
-        <basePowerConsumption>-7000</basePowerConsumption>
+        <basePowerConsumption>-30000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>16</glowRadius>
-        <glowColor>(73,94,230,0)</glowColor>
-      </li>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>7.0</fuelConsumptionRate>
-        <fuelCapacity>150.0</fuelCapacity>
-        <fuelFilter>
-          <thingDefs>
-            <li>Uranium</li>
-          </thingDefs>
-        </fuelFilter>
       </li>
     </comps>
     <tradeability>None</tradeability>

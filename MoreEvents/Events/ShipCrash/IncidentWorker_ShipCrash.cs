@@ -98,29 +98,29 @@ namespace MoreEvents.Events.ShipCrash
 
         private ShipMapGenerator GetGenerator()
         {
-            while(true)
+            float value = Rand.Value;
+            if (value < 0.15f)
             {
-                if(Rand.Chance(0.21f))
-                {
-                    return new ShipCargo_Food();
-                }
-                if(Rand.Chance(0.12f))
-                {
-                    return new Ship_Living();
-                }
-                if (Rand.Chance(0.23f))
-                {
-                    return new ShipCargo_Mining();
-                }
-                if(Rand.Chance(0.14f))
-                {
-                    return new ShipCargo_Complex();
-                }
-                if(Rand.Chance(0.11f))
-                {
-                    return new Ship_Armory();
-                }
+                return new Ship_Armory();
             }
+            if (value < 0.25f)
+            {
+                return new Ship_Living();
+            }
+            if (value < 0.30f)
+            {
+                return new ShipCargo_Complex();
+            }
+            if (value < 0.35f)
+            {
+                return new ShipCargo_Food();
+            }
+            if (value < 0.38f)
+            {
+                return new ShipCargo_Mining();
+            }
+
+            return new ShipCargo_Mining();
         }
     }
 }

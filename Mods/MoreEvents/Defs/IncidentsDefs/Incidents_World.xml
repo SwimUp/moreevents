@@ -72,7 +72,7 @@
 		<letterLabel>Endlessday</letterLabel>
 		<letterText>Because of the powerful flash of a star on the planet now is the day. And nothing else.</letterText>
 		<letterDef>NegativeEvent</letterDef>
-		<baseChance>1.5</baseChance>
+		<baseChance>0</baseChance>
 		<minRefireDays>15</minRefireDays>
 		<durationDays>
 			<min>2.0</min>

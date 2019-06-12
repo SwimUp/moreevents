@@ -61,7 +61,7 @@
     <passability>Impassable</passability>
     <fillPercent>1.0</fillPercent>
     <graphicData>
-      <texPath>Things/Buildings/MechanoidTeleport/portal</texPath>
+      <texPath>Things/Buildings/MechanoidTeleport/1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>

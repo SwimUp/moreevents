@@ -6,7 +6,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 
-namespace MoreEvents.Things
+namespace MoreEvents.Things.ZeroPointReactor
 {
     public class Building_ZeroPointGenerator : Building
     {
@@ -25,6 +25,26 @@ namespace MoreEvents.Things
         private bool doDestroy = false;
         private float destablishedNum = 0f;
 
+        private List<Building_VaccumPump> pumps = new List<Building_VaccumPump>();
+        private bool isEnable {
+            get
+            {
+                if (!TryGetRoom())
+                    return false;
+
+                if (cachedRoom.OpenRoofCount > 0)
+                    return false;
+
+                if(pumps.Count < 4)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+        private Room cachedRoom = null;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -35,6 +55,69 @@ namespace MoreEvents.Things
             compPowerTrader = GetComp<CompPowerTrader>();
 
             CreateAnim();
+
+            Notify_PumpsChange();
+        }
+
+        public override string GetInspectString()
+        {
+            StringBuilder builder = new StringBuilder();
+            if(!isEnable)
+            {
+                builder.Append(Translator.Translate("ZPRNoActiveLabel"));
+                if (cachedRoom?.Role == RoomRoleDefOf.None)
+                {
+                    builder.Append(Translator.Translate("ZPRNeedRoom"));
+                }
+                if (cachedRoom?.OpenRoofCount > 0)
+                {
+                    builder.Append(Translator.Translate("ZPRHasRoofs"));
+                }
+                if (pumps.Count < 4)
+                {
+                    builder.Append($"{Translator.Translate("ZPRNeedMorePumps")} {pumps.Count}/4");
+                }
+            }
+            else
+            {
+                builder.Append($"{Translator.Translate("ZPRWorking")}");
+            }
+
+            if(!string.IsNullOrEmpty(base.GetInspectString()))
+                builder.Append($"\n{base.GetInspectString()}");
+
+            return builder.ToString();
+        }
+
+        private bool TryGetRoom()
+        {
+            cachedRoom = this.GetRoom(RegionType.Set_All);
+
+            if (cachedRoom == null || cachedRoom.Role == RoomRoleDefOf.None)
+                return false;
+
+            Notify_PumpsChange();
+
+            return true;
+        }
+
+        public void Notify_PumpsChange()
+        {
+            pumps.Clear();
+
+            if (cachedRoom == null || cachedRoom.Role == RoomRoleDefOf.None)
+                return;
+
+            var things = cachedRoom.ContainedAndAdjacentThings.Where(t => t is Building_VaccumPump).Take(4);
+            foreach (var t in things)
+                pumps.Add((Building_VaccumPump)t);
+
+        }
+
+        public void Notify_RoomChange()
+        {
+            cachedRoom = this.GetRoom(RegionType.Set_All);
+
         }
 
         private void CreateAnim()
@@ -52,6 +135,13 @@ namespace MoreEvents.Things
         public override void Tick()
         {
             base.Tick();
+
+            if (!isEnable || compPowerTrader.PowerOutput == 0)
+            {
+                TexMain = DisableTex;
+                compPowerTrader.PowerOutput = 0;
+                return;
+            }
 
             if (doDestroy)
             {
@@ -78,12 +168,6 @@ namespace MoreEvents.Things
 
                     destablishedNum += 2.8f;
                 }
-            }
-
-            if (compPowerTrader.PowerOutput == 0)
-            {
-                TexMain = DisableTex;
-                return;
             }
 
             if (Find.TickManager.TicksGame % animTime == 0)

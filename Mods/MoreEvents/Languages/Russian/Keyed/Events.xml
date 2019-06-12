@@ -52,5 +52,10 @@
   
   <ZeroPointReactorDestablished>Реактор нулевой точки дестабилизирован</ZeroPointReactorDestablished>
   <ZeroPointReactorDestablishedDesc>Реактор нулевой точки дестабилизирован и вот-вот выйдет из строя. Вакуумное ядро притягивает ближайших пешек, осторожно!</ZeroPointReactorDestablishedDesc>	
+  <ZPRNeedMorePumps>\n- Требуется вакуумных насосов: </ZPRNeedMorePumps>
+  <ZPRWorking>Активен.</ZPRWorking>
+  <ZPRNoActiveLabel>Неактивен:</ZPRNoActiveLabel>
+  <ZPRHasRoofs>\n- Требуется крыша</ZPRHasRoofs>
+  <ZPRNeedRoom>\n- Требуется помещение</ZPRNeedRoom>
   
 </LanguageData>
