@@ -73,10 +73,10 @@ namespace MoreEvents.Events.AttackFriendlySettlement
         {
             base.CompTick();
 
-            TicksToAttack--;
-
             if (Enable)
             {
+                TicksToAttack--;
+
                 if (TicksToAttack <= 0)
                 {
                     AttackSetltmenetNow();
