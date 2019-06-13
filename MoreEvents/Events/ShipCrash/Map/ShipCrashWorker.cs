@@ -14,10 +14,12 @@ namespace MoreEvents.Events.ShipCrash.Map
     {
         public ShipSiteType SiteType => Generator.SiteType;
 
-        public ShipMapGenerator Generator { get; private set; }
+        public ShipMapGenerator Generator => site.Generator;
 
         private int lifeTime = 0;
         private bool useLifeTime = false;
+
+        private ShipSite site;
 
         public override void PostExposeData()
         {
@@ -32,6 +34,8 @@ namespace MoreEvents.Events.ShipCrash.Map
             base.Initialize(props);
             lifeTime = Rand.Range(10, 40) * 60000;
             useLifeTime = true;
+
+            site = (ShipSite)parent;
         }
 
         public override void CompTick()
@@ -66,11 +70,6 @@ namespace MoreEvents.Events.ShipCrash.Map
         public override string CompInspectStringExtra()
         {
             return $"{Translator.Translate("ShipPartTimeout")} {(int)GenDate.TicksToDays(lifeTime)}";
-        }
-
-        public void InitWorker(ShipMapGenerator generator)
-        {
-            Generator = generator;
         }
 
         public override void PostMapGenerate()

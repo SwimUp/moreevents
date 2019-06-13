@@ -461,4 +461,22 @@
 	</IncidentDef>
 	<!-- s=======================s -->
 	
+	<!-- Событие: Нападение на дружественное поселение -->
+	<IncidentDef>
+		<defName>AttackFriendlySettlement</defName>
+		<label>Attack on a friendly settlement</label>
+		<letterLabel>Attack on a friendly settlement</letterLabel>
+		<letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.AttackFriendlySettlement.IncidentWorker_AttackFriendlySettlement</workerClass>
+		<category>Misc</category>
+		<minRefireDays>70</minRefireDays>
+		<baseChance>1.6</baseChance>
+		<earliestDay>40</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
 </Defs>

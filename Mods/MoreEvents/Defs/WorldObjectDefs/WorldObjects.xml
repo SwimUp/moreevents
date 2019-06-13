@@ -65,4 +65,21 @@
     </IncidentTargetTags>
   </WorldObjectDef>
   
+  <WorldObjectDef>
+    <defName>FriendlySettlementHelp</defName>
+    <label>Siege Camp</label>
+    <description>Here is located the enemy camp. They will bombard our settlement and raid until we destroy it.</description>
+    <worldObjectClass>MoreEvents.Events.AttackFriendlySettlement.FriendlySettlement</worldObjectClass>
+    <texture>Map/siegecamp</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Map/siegecamp</expandingIconTexture>
+    <expandingIconPriority>100</expandingIconPriority>
+    <comps>
+      <li Class="MoreEvents.Events.AttackFriendlySettlement.FriendlySettlementComp_Main" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+  
 </Defs>

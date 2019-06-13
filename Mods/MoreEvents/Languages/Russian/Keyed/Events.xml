@@ -61,4 +61,12 @@
   <SiegeCampUpdateTimer>Дней до улучшения:</SiegeCampUpdateTimer>
   <SiegeCampLevel>\nСложность лагеря:</SiegeCampLevel>
   
+  <AttackIsNotRepelled>Вы не можете уйти сейчас. Атака еще не отражена.</AttackIsNotRepelled>
+  <TimerDaysToAttack>Дней до нападения: {0}</TimerDaysToAttack>
+  <ThreatLevel>Уровень угрозы: {0}</ThreatLevel>
+  <AttackFriendlySettlementLetter1>Разведчики дружественного поселения {0} докладывают, что одно из вражеских поселений готовит на них атаку. Они просят у вас помощи. К сожалению, уровень угрозы не известен. 
+  (Чтобы помочь поселению, отправьте к нему караван и отбейте атаку)</AttackFriendlySettlementLetter1>
+  <AttackFriendlySettlementLetter2>Разведчики дружественного поселения {0} докладывают, что одно из вражеских поселений готовит на них атаку. Они просят у вас помощи. Уровень угрозы: {1} 
+  (Чтобы помочь поселению, отправьте к нему караван и отбейте атаку)</AttackFriendlySettlementLetter2>
+  
 </LanguageData>

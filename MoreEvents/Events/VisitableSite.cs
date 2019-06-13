@@ -35,6 +35,13 @@ namespace MoreEvents.Events
             return null;
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref RemoveAfterLeave, "RemoveAfterLeave");
+        }
+
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (Gizmo gizmo in base.GetGizmos())

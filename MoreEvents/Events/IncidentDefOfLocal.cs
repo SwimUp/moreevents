@@ -37,5 +37,7 @@ namespace MoreEvents
         public static IncidentDef IonizedAtmosphere;
         public static IncidentDef Earthquake;
         public static IncidentDef SiegeCamp;
+
+        public static IncidentDef AttackFriendlySettlement;
     }
 }

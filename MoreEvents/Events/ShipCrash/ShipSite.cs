@@ -12,7 +12,21 @@ namespace MoreEvents.Events.ShipCrash
 {
     public class ShipSite : MapParent
     {
-        public ShipMapGenerator Generator { get; private set; }
+        public ShipMapGenerator Generator
+        {
+            get
+            {
+                if(generator == null)
+                {
+                    generator = (ShipMapGenerator)Activator.CreateInstance(Type.GetType(GeneratorType));
+                }
+
+                return generator;
+            }
+        }
+        private ShipMapGenerator generator;
+
+        public string GeneratorType;
 
         public override string Label => Generator.ExpandLabel;
 
@@ -36,7 +50,8 @@ namespace MoreEvents.Events.ShipCrash
 
         public void SetGenerator(ShipMapGenerator generator)
         {
-            Generator = generator;
+            this.generator = generator;
+            GeneratorType = $"MoreEvents.Events.ShipCrash.Map.MapGenerator.{generator.GetType().Name}";
         }
         
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
@@ -50,6 +65,13 @@ namespace MoreEvents.Events.ShipCrash
             {
                 yield return floatMenuOption2;
             }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref GeneratorType, "GeneratorType");
         }
 
         private IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)

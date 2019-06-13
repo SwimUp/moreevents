@@ -74,7 +74,7 @@ namespace MoreEvents.Events
         {
             Pawn t = caravan.PawnsListForReading[0];
             bool flag2 = !mapParent.HasMap;
-            Verse.Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(mapParent.Tile, MapSize, null);
+            Verse.Map orGenerateMap = GetOrGenerateMap(mapParent.Tile, MapSize, null);
             if (flag2)
             {
                 Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
@@ -90,6 +90,11 @@ namespace MoreEvents.Events
             Verse.Map map = orGenerateMap;
             CaravanEnterMode enterMode = CaravanEnterMode.Edge;
             CaravanEnterMapUtility.Enter(caravan, map, enterMode, CaravanDropInventoryMode.DoNotDrop);
+        }
+
+        public virtual Map GetOrGenerateMap(int tile, IntVec3 mapSize, WorldObjectDef suggestedMapParentDef)
+        {
+            return GetOrGenerateMapUtility.GetOrGenerateMap(mapParent.Tile, MapSize, null);
         }
     }
 }

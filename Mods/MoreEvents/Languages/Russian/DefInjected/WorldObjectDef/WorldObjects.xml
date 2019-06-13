@@ -7,4 +7,7 @@
   <ClimateBombSite.label>Климатическая бомба</ClimateBombSite.label>
   <ClimateBombSite.description>Местонахождение климатической бомбы</ClimateBombSite.description>
  
+  <SiegeCampSite.label>Осадный лагерь</SiegeCampSite.label>
+  <SiegeCampSite.description>Здесь находится вражеский лагерь. Они будут бомбардировать наше поселение и совершать набеги, пока мы не уничтожим его.</SiegeCampSite.description>
+ 
 </LanguageData>

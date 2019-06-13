@@ -1,5 +1,6 @@
 ﻿using MapGenerator;
 using MoreEvents.MapGeneratorFactionBase;
+using MoreEvents.Sounds;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -67,13 +68,12 @@ namespace MoreEvents.Events.SiegeCamp
         private bool enable = false;
 
         private float totalThreat = 0;
-        private List<Pawn> pawns = null;
 
         private int raidTimer = 0;
         private int ticksBetweenRaids = 3 * 60000;
 
         private int mortalShellingTimer = 0;
-        private int ticksBetweenMortalShelling = 1 * 10000;
+        private int ticksBetweenMortalShelling = 2 * 60000;
         private bool mortarsFiring = false;
         private int mortarsBulletCount = 0;
         private int mortarShellTimer = 0;
@@ -107,12 +107,29 @@ namespace MoreEvents.Events.SiegeCamp
             enable = true;
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+
+            Scribe_Values.Look(ref timer, "timer");
+            Scribe_Values.Look(ref enable, "enable");
+
+            Scribe_Values.Look(ref totalThreat, "totalThreat");
+
+            Scribe_Values.Look(ref raidTimer, "raidTimer");
+
+            Scribe_Values.Look(ref mortalShellingTimer, "mortalShellingTimer");
+            Scribe_Values.Look(ref mortarsFiring, "mortarsFiring");
+            Scribe_Values.Look(ref mortarsBulletCount, "mortarsBulletCount");
+            Scribe_Values.Look(ref mortarShellTimer, "mortarShellTimer");
+        }
+
         public override string CompInspectStringExtra()
         {
             StringBuilder builder = new StringBuilder();
+            builder.Append($"{Translator.Translate("SiegeCampLevel")} {siegeCampLevel + 1}");
             if (siegeCampLevel < maxLevel)
                 builder.Append($"{Translator.Translate("SiegeCampUpdateTimer")} {GenDate.TicksToDays(timer).ToString("f2")}");
-            builder.Append($"{Translator.Translate("SiegeCampLevel")} {siegeCampLevel + 1}");
 
             return builder.ToString();
         }
@@ -150,15 +167,12 @@ namespace MoreEvents.Events.SiegeCamp
 
                     mortarShellTimer--;
 
-                    Log.Message($"TICK --> {mortarShellTimer} AND MORTA: {mortarsFiring}");
-
                     if(mortarShellTimer <= 0)
                     {
                         IntVec3 cell = camp.PlayerSiegeMap.AllCells.Where(c => !c.Fogged(camp.PlayerSiegeMap) && c.GetRoof(camp.PlayerSiegeMap) != RoofDefOf.RoofRockThick).RandomElement();
-                        GenExplosion.DoExplosion(cell, camp.PlayerSiegeMap, 5, DamageDefOf.Bomb, null);
+                        GenExplosion.DoExplosion(cell, camp.PlayerSiegeMap, 5, DamageDefOf.Bomb, null, explosionSound: SoundDefOfLocal.MortarIncendiary_Explode);
                         mortarsBulletCount--;
                         mortarShellTimer = ticksBetweenShots;
-                        Log.Message($"SHOOT");
                     }
                 }
                 else
@@ -208,22 +222,16 @@ namespace MoreEvents.Events.SiegeCamp
         {
             mortalShellingTimer = ticksBetweenMortalShelling;
 
-            mortarsBulletCount = Rand.Range(7, 13) * siegeCampLevel;
+            mortarsBulletCount = Rand.Range(7, 13) * (siegeCampLevel + 1);
             mortarsFiring = true;
             mortarShellTimer = ticksBetweenShots;
-
-            Log.Message($"START");
         }
 
         public override void PostMapGenerate()
         {
             base.PostMapGenerate();
                        
-            pawns = new List<Pawn>();
             BlueprintHandler.CreateBlueprintAt(camp.Map.Center, camp.Map, baseBlueprint, camp.Faction, null, out Dictionary<Pawn, LordType> pawnsList, out totalThreat, true);
-
-            foreach (var pawn in pawnsList.Keys)
-                pawns.Add(pawn);
         }
 
         private void UpdateCamp()
@@ -235,8 +243,6 @@ namespace MoreEvents.Events.SiegeCamp
             {
                 Current.Game.DeinitAndRemoveMap(camp.Map);
             }
-
-
         }
     }
 }

@@ -10,8 +10,13 @@ namespace MoreEvents.Events.SiegeCamp
 {
     public class IncidentWorker_SiegeCamp : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["SiegeCamp"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             if (GetEnemyFaction() == null)
                 return false;
 
@@ -37,7 +42,7 @@ namespace MoreEvents.Events.SiegeCamp
                 SiegeCampSite site = (SiegeCampSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.SiegeCampSite);
                 site.Tile = spawnPoint;
                 site.SetFaction(GetEnemyFaction());
-                site.PlayerSiegeMap = map;
+                site.SetMap(map);
                 Find.WorldObjects.Add(site);
 
                 SendStandardLetter();

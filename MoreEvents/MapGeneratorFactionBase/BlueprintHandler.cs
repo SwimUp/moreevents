@@ -604,11 +604,16 @@ namespace MapGenerator
                 // Set it to the current faction
                 newThing.SetFactionDirect( faction );
 
-
                 // If CompGatherSpot -> disable it! 
                 CompGatherSpot compGathering = newThing.TryGetComp<CompGatherSpot>();
                 if (compGathering != null)
                     compGathering.Active = false;
+
+                CompRefuelable compRefuelable = newThing.TryGetComp<CompRefuelable>();
+                if (compRefuelable != null)
+                {
+                    compRefuelable.Refuel(compRefuelable.Props.fuelCapacity);
+                }
             }
         }
 

@@ -85,4 +85,7 @@
   <Earthquake_Title>Earthquake</Earthquake_Title>
   <Earthquake_Desc>An earthquake began, everyone in the shelter!</Earthquake_Desc>
   
+  <SiegeCamp_Title>Siege camp</SiegeCamp_Title>
+  <SiegeCamp_Desc>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</SiegeCamp_Desc>
+  
 </LanguageData>

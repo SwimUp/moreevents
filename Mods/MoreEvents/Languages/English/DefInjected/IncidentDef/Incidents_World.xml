@@ -85,4 +85,12 @@
   <Earthquake.letterLabel>Earthquake</Earthquake.letterLabel>
   <Earthquake.letterText>An earthquake began, everyone in the shelter!</Earthquake.letterText>  
   
+  <SiegeCamp.label>Siege camp</SiegeCamp.label>
+  <SiegeCamp.letterLabel>Siege camp</SiegeCamp.letterLabel>
+  <SiegeCamp.letterText>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</SiegeCamp.letterText>  
+
+  <AttackFriendlySettlement.label>Attack on a friendly settlement</AttackFriendlySettlement.label>
+  <AttackFriendlySettlement.letterLabel>Attack on a friendly settlement</AttackFriendlySettlement.letterLabel>
+  <AttackFriendlySettlement.letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</AttackFriendlySettlement.letterText>  
+  
 </LanguageData>

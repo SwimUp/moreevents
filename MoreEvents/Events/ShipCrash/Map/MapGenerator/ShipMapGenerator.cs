@@ -9,7 +9,7 @@ using static MoreEvents.Events.ShipCrash.ShipCrash_Controller;
 
 namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 {
-    public abstract class ShipMapGenerator : IExposable
+    public abstract class ShipMapGenerator
     {
         public abstract ShipSiteType SiteType { get; }
 

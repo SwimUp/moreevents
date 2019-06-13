@@ -14,7 +14,20 @@ namespace MoreEvents.Events.SiegeCamp
 
         private SiegeCampSiteComp comp;
 
-        public Map PlayerSiegeMap;
+        public Map PlayerSiegeMap
+        {
+            get
+            {
+                if(playerSiegeMap == null)
+                {
+                    playerSiegeMap = Current.Game.FindMap(MapSiegeTile);
+                }
+
+                return playerSiegeMap;
+            }
+        }
+        private Map playerSiegeMap = null;
+        public int MapSiegeTile = -1;
 
         public override void SpawnSetup()
         {
@@ -25,6 +38,19 @@ namespace MoreEvents.Events.SiegeCamp
             comp = this.GetComponent<SiegeCampSiteComp>();
 
             caravanAction = new CaravanVisitAction_SiegeCamp(this);
+        }
+
+        public void SetMap(Map map)
+        {
+            playerSiegeMap = map;
+            MapSiegeTile = playerSiegeMap.Tile;
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref MapSiegeTile, "MapSiegeTile");
         }
 
         public override void PostMapGenerate()

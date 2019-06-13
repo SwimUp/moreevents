@@ -50,6 +50,11 @@
   <ItemGroup>
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
+    <Compile Include="Events\AttackFriendlySettlement\CaravanArrivalAction_HelpFriendlySettlement.cs" />
+    <Compile Include="Events\AttackFriendlySettlement\FriendlySettlement.cs" />
+    <Compile Include="Events\AttackFriendlySettlement\FriendlySettlementComp.cs" />
+    <Compile Include="Events\AttackFriendlySettlement\FriendlySettlementComp_Main.cs" />
+    <Compile Include="Events\AttackFriendlySettlement\IncidentWorker_AttackFriendlySettlement.cs" />
     <Compile Include="Events\CaravanArrivalAction_EnterToMap.cs" />
     <Compile Include="Events\ClimateBomb\CaravanVisitAction_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\ClimateBombComp.cs" />
@@ -129,6 +134,7 @@
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Sounds\SoundDefOfLocal.cs" />
     <Compile Include="ThingDefGenerator_BuildingsCustom.cs" />
     <Compile Include="Things\Building_ClimateBomb.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />

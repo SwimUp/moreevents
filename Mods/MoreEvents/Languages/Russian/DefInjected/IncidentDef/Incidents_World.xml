@@ -81,4 +81,12 @@
   <Earthquake.letterLabel>Землетрясение</Earthquake.letterLabel>
   <Earthquake.letterText>Началось землетрясение, всем в укрытие!</Earthquake.letterText>  
   
+  <SiegeCamp.label>Осадный лагерь</SiegeCamp.label>
+  <SiegeCamp.letterLabel>Осадный лагерь</SiegeCamp.letterLabel>
+  <SiegeCamp.letterText>Недалеко от вас был разбит вражеский лагерь. Они будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы его не уничтожите.</SiegeCamp.letterText>  
+  
+  <AttackFriendlySettlement.label>Нападение на дружественное поселение</AttackFriendlySettlement.label>
+  <AttackFriendlySettlement.letterLabel>Нападение на дружественное поселение</AttackFriendlySettlement.letterLabel>
+  <AttackFriendlySettlement.letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</AttackFriendlySettlement.letterText>  
+  
 </LanguageData>

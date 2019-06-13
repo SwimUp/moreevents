@@ -55,4 +55,11 @@
   <ZPRHasRoofs>\n- Roof required</ZPRHasRoofs>
   <ZPRNeedRoom>\n- Room required</ZPRNeedRoom>
   
+  <SiegeCampUpdateTimer>Days to upgrade:</SiegeCampUpdateTimer>
+  <SiegeCampLevel>\nCamp difficulty:</SiegeCampLevel>
+  
+  <AttackIsNotRepelled>You can not leave now. The attack is not yet reflected.</AttackIsNotRepelled>
+  <TimerDaysToAttack>Days to attack {0}</TimerDaysToAttack>
+  <ThreatLevel>Threat level: {0}</ThreatLevel>
+  
 </LanguageData>

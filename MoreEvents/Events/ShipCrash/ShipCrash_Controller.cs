@@ -39,7 +39,7 @@ namespace MoreEvents.Events.ShipCrash
             Scribe_Values.Look(ref ShipCount, "ShipCount", 0);
         }
 
-        public static ShipCrashWorker MakeShipPart(ShipMapGenerator gen, int tileID, Faction faction)
+        public static ShipSite MakeShipPart(ShipMapGenerator gen, int tileID, Faction faction)
         {
             ShipSite site = (ShipSite)WorldObjectMaker.MakeWorldObject(ShipWorldObjectDefOf.ShipCrashSite);
 
@@ -47,12 +47,9 @@ namespace MoreEvents.Events.ShipCrash
             site.Tile = tileID;
             site.SetFaction(faction);
 
-            var shipComp = site.GetComponent<ShipCrashWorker>();
-            shipComp.InitWorker(gen);
-
             Find.WorldObjects.Add(site);
 
-            return shipComp;
+            return site;
         }
     }
 }

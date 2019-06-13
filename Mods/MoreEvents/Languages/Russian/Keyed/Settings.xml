@@ -85,5 +85,7 @@
   <Earthquake_Title>Землетрясение</Earthquake_Title>
   <Earthquake_Desc>Началось землетрясение, всем в укрытие!</Earthquake_Desc>
   
+  <SiegeCamp_Title>Осадный лагерь</SiegeCamp_Title>
+  <SiegeCamp_Desc>Недалеко от вас был разбит вражеский лагерь. Они будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы его не уничтожите.</SiegeCamp_Desc>
   
 </LanguageData>

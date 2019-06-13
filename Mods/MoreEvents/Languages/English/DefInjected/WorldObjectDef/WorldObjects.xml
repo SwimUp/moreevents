@@ -6,5 +6,8 @@
   
   <ClimateBombSite.label>Climate bomb location</ClimateBombSite.label>
   <ClimateBombSite.description>Climate bomb location</ClimateBombSite.description>
+  
+  <SiegeCampSite.label>Siege Camp</SiegeCampSite.label>
+  <SiegeCampSite.description>Here is located the enemy camp. They will bombard our settlement and raid until we destroy it.</SiegeCampSite.description>
  
 </LanguageData>
