@@ -187,7 +187,7 @@
     <description>A pump used to control the level of oxygen and its composition in the room. It is an important component for the operation of the zero point reactor.</description>
 	<thingClass>MoreEvents.Things.ZeroPointReactor.Building_VaccumPump</thingClass>
     <graphicData>
-      <texPath>Things/Buildings/ZeroPointReactor/0</texPath>
+      <texPath>Things/Buildings/ZeroPointReactor/vacuumpump</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2, 2)</drawSize>
     </graphicData>

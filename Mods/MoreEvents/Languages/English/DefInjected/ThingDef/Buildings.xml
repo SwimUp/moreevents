@@ -19,6 +19,8 @@
   <VacuumTube.description>The main part of the reactor, it generates energy.</VacuumTube.description>
   <VacuumStabilizer.label>Vacuum stabilizer</VacuumStabilizer.label>
   <VacuumStabilizer.description>Stabilizes pressure and creates zero electromagnetic radiation.</VacuumStabilizer.description>
+  <VacuumPump.label>Vacuum pump</VacuumPump.label>
+  <VacuumPump.description>A pump used to control the level of oxygen and its composition in the room. It is an important component for the operation of the zero point reactor.</VacuumPump.description>
   
   <SingularReactor.label>Singular reactor</SingularReactor.label>
   <SingularReactor.description>The source of energy, where microscopic black holes (collapsars) are used as the working medium. The principle of operation of such a reactor is the use of energy released during the evaporation of a black hole.</SingularReactor.description>

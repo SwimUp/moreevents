@@ -19,6 +19,8 @@
   <VacuumTube.description>Главная часть реактора, в ней происходит генерация энергии.</VacuumTube.description>
   <VacuumStabilizer.label>Вакуумный стабилизатор</VacuumStabilizer.label>
   <VacuumStabilizer.description>Стабилизирует давление и создает нулевое электромагнитное излучение</VacuumStabilizer.description>
+  <VacuumPump.label>Вакуумный насос</VacuumPump.label>
+  <VacuumPump.description>Насос используется для контроля уровня кислорода и его состава в помещении. Это важный компонент для работы реактора нулевой точки.</VacuumPump.description>
 
   <SingularReactor.label>Сингулярный реактор</SingularReactor.label>
   <SingularReactor.description>Источник энергии, где в качестве рабочего тела используются микроскопические чёрные дыры (коллапсары). Принцип работы такого реактора состоит в использовании энергии, выделяющейся при испарении чёрной дыры.</SingularReactor.description>

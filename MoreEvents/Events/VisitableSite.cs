@@ -63,7 +63,7 @@ namespace MoreEvents.Events
             {
                 if (CanLeave())
                 {
-                    ForceReform(this);
+                    PreForceReform(this);
                 }
             };
 
@@ -73,6 +73,11 @@ namespace MoreEvents.Events
             }
 
             return command;
+        }
+
+        public virtual void PreForceReform(MapParent mapParent)
+        {
+            ForceReform(mapParent);
         }
 
         public void ForceReform(MapParent mapParent)

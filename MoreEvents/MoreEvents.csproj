@@ -56,12 +56,17 @@
     <Compile Include="Events\ClimateBomb\ClimateBombComp_Main.cs" />
     <Compile Include="Events\ClimateBomb\ClimateBombSite.cs" />
     <Compile Include="Events\ClimateBomb\GameCondition_ClimateChaos.cs" />
-    <Compile Include="Events\ClimateBomb\IncidentWorket_ClimateBomb.cs" />
+    <Compile Include="Events\ClimateBomb\IncidentWorker_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\JobDriver_DisableClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
+    <Compile Include="Events\SiegeCamp\CaravanVisitAction_SiegeCamp.cs" />
+    <Compile Include="Events\SiegeCamp\IncidentWorker_SiegeCamp.cs" />
+    <Compile Include="Events\SiegeCamp\SiegeCampSite.cs" />
+    <Compile Include="Events\SiegeCamp\SiegeCampSiteComp.cs" />
+    <Compile Include="Events\SiegeCamp\SiegeCampSiteComp_Main.cs" />
     <Compile Include="Events\VisitableSite.cs" />
     <Compile Include="Events\MassiveFire\CaravanArrivalAction_EnterToMassiveFire.cs" />
     <Compile Include="Events\MassiveFire\IncidentWorker_MassiveFire.cs" />
@@ -146,8 +151,6 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\SiegeCamp\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,16 +5,16 @@ using Verse;
 
 namespace MapGenerator
 {
+    public enum LordType : byte
+    {
+        Defend,
+        Attack
+    }
+
     public class MapGeneratorBaseBlueprintDef : Def
     {
         public bool mapCenterBlueprint = true;
-
         public string createdBy;
-
-        //public TechLevel techLevelRequired = TechLevel.Undefined;
-        //public TechLevel techLevelMax = TechLevel.Undefined;
-        //public float chance = 1;
-
         public IntVec2 size;
         public ThingDef defaultBuildingMaterial = null;
         public string buildingData;
@@ -34,5 +34,8 @@ namespace MapGenerator
         public Dictionary<string, ThingData> pawnLegend;
         public Dictionary<string, ThingData> itemLegend;
         public FactionDef factionDef = null;
+        public float ThreatsPoints = 0f;
+        public bool UseAdditionalThreat = false;
+        public bool FogRooms = true;
     }
 }

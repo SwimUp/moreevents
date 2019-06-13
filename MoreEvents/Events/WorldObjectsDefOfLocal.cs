@@ -11,5 +11,6 @@ namespace MoreEvents.Events
     {
         public static WorldObjectDef MassiveFireSite;
         public static WorldObjectDef ClimateBombSite;
+        public static WorldObjectDef SiegeCampSite;
     }
 }

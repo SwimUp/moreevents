@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using MapGenerator;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,6 @@ namespace MoreEvents.MapGeneratorFactionBase
         public IntRange HealthRange;
         public PawnKindDef Kind;
         public FactionDef Faction = null;
+        public LordType LordType = LordType.Defend;
     }
 }

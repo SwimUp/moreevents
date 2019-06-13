@@ -47,12 +47,10 @@ namespace MoreEvents.Events.ClimateBomb
             if (Rand.Chance(0.3f))
             {
                 ChangeWeather();
-                Log.Message($"DO WEATHER");
             }
             else
             {
                 ChangeIncident();
-                Log.Message($"DO INCIDENT");
             }
         }
 

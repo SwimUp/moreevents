@@ -58,4 +58,7 @@
   <ZPRHasRoofs>\n- Требуется крыша</ZPRHasRoofs>
   <ZPRNeedRoom>\n- Требуется помещение</ZPRNeedRoom>
   
+  <SiegeCampUpdateTimer>Дней до улучшения:</SiegeCampUpdateTimer>
+  <SiegeCampLevel>\nСложность лагеря:</SiegeCampLevel>
+  
 </LanguageData>

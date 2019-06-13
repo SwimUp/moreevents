@@ -49,5 +49,10 @@
   
   <ZeroPointReactorDestablished>Zero Point Reactor Destabilized</ZeroPointReactorDestablished>
   <ZeroPointReactorDestablishedDesc>The zero point reactor is destabilized and is about to fail. The vacuum core attracts the nearest pawns carefully!</ZeroPointReactorDestablishedDesc>	
-	
+  <ZPRNeedMorePumps>\n- Vacuum pumps required: </ZPRNeedMorePumps>
+  <ZPRWorking>Active.</ZPRWorking>
+  <ZPRNoActiveLabel>Inactive:</ZPRNoActiveLabel>
+  <ZPRHasRoofs>\n- Roof required</ZPRHasRoofs>
+  <ZPRNeedRoom>\n- Room required</ZPRNeedRoom>
+  
 </LanguageData>

@@ -141,9 +141,6 @@ namespace MoreEvents.Events.ClimateBomb
             Map map = (parent as MapParent).Map;
             var spawnPos = map.AllCells.Where(cell => !cell.Fogged(map) && cell.Walkable(map) && cell.Standable(map) && cell.DistanceToEdge(map) > 60).RandomElement();
 
-            if (spawnPos == null)
-                return null;
-
             var building = (Building_ClimateBomb)GenSpawn.Spawn(ThingDefOfLocal.ClimatBomb, spawnPos, map);
 
             return building;

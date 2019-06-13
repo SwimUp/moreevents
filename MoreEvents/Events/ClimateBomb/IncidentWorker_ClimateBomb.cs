@@ -8,7 +8,7 @@ using Verse;
 
 namespace MoreEvents.Events.ClimateBomb
 {
-    public class IncidentWorket_ClimateBomb : IncidentWorker
+    public class IncidentWorker_ClimateBomb : IncidentWorker
     {
         private EventSettings settings => Settings.EventsSettings["MechanoidPortal"];
 

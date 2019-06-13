@@ -37,8 +37,6 @@ namespace MoreEvents.MapGeneratorFactionBase
 
             public BlueprintsTestWindow()
             {
-                Log.Message("OPEN");
-
                 resizeable = false;
 
                 defSize = DefDatabase<MapGeneratorBaseBlueprintDef>.AllDefsListForReading.Count;
@@ -62,7 +60,7 @@ namespace MoreEvents.MapGeneratorFactionBase
                         Thing t = Find.Selector.SingleSelectedThing;
                         if (t != null)
                         {
-                            BlueprintHandler.CreateBlueprintAt(t.Position, Find.CurrentMap, def, Find.FactionManager.RandomEnemyFaction(), null, null);
+                            BlueprintHandler.CreateBlueprintAt(t.Position, Find.CurrentMap, def, Find.FactionManager.RandomEnemyFaction(), null, out Dictionary<Pawn, LordType> pawns, out float totalThreat, true);
                         }
                         else
                         {

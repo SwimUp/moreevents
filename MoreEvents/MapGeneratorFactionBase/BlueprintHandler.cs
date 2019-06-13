@@ -21,12 +21,13 @@ namespace MapGenerator
 
         public static bool working;
 
-        public static List<Pawn> allSpawnedPawns;
-        public static Lord pawnLord;
+        public static Dictionary<Pawn, LordType> allSpawnedPawns;
         public static HashSet<Room> rooms;
 
-        public static void CreateBlueprintAt(IntVec3 c, Map map, MapGeneratorBaseBlueprintDef blueprint, Faction faction, ThingDef wallStuff, List<IntVec3> usedSpots)
+        public static void CreateBlueprintAt(IntVec3 c, Map map, MapGeneratorBaseBlueprintDef blueprint, Faction faction, ThingDef wallStuff, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false)
         {
+            pawns = null;
+            totalThreat = 0;
 
             if (working)
             {
@@ -41,8 +42,7 @@ namespace MapGenerator
             }
 
             working = true;
-            allSpawnedPawns = new List<Pawn>();
-            pawnLord = null;
+            allSpawnedPawns = new Dictionary<Pawn, LordType>();
             rooms = new HashSet<Room>();
 
 
@@ -82,7 +82,7 @@ namespace MapGenerator
                 if (wallStuff == null)
                     wallStuff = BaseGenUtility.RandomCheapWallStuff(faction, false);
 
-                MakeBlueprintObject(map, faction, mapRect, blueprint, wallStuff);
+                MakeBlueprintObject(map, faction, mapRect, blueprint, wallStuff, out pawns, out totalThreat, useOneFaction);
 
                 if (blueprint.createTrigger)
                 {
@@ -145,21 +145,23 @@ namespace MapGenerator
                 working = false;
 
                 // Clear all data holder
-                allSpawnedPawns = null;
-                pawnLord = null;
+                //allSpawnedPawns = null;
                 rooms = null;
             }
         }
 
 
 
-        private static void MakeBlueprintObject(Map map, Faction faction, CellRect mapRect, MapGeneratorBaseBlueprintDef blueprint, ThingDef stuffDef)
+        private static void MakeBlueprintObject(Map map, Faction faction, CellRect mapRect, MapGeneratorBaseBlueprintDef blueprint, ThingDef stuffDef, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false)
         {
             blueprint.buildingData = GetCleanedBlueprintData(blueprint.buildingData);
             blueprint.nonbuildingData = GetCleanedBlueprintData(blueprint.nonbuildingData);
             blueprint.floorData = GetCleanedBlueprintData(blueprint.floorData);
             blueprint.pawnData = GetCleanedBlueprintData(blueprint.pawnData);
             blueprint.itemData = GetCleanedBlueprintData(blueprint.itemData);
+
+            pawns = null;
+            totalThreat = 0;
 
             if (blueprint.buildingData == null && blueprint.nonbuildingData == null && blueprint.floorData == null)
             {
@@ -177,7 +179,7 @@ namespace MapGenerator
             //        return;
             //}
 
-            allSpawnedPawns = null;
+            //allSpawnedPawns = null;
 
             
             // Disable automatic room updating
@@ -250,7 +252,7 @@ namespace MapGenerator
                                     TrySetCell_4_SetItem(spawnCell, map, itemData);
                                     break;
                                 case 5: // Pawn
-                                    TrySetCell_5_SetPawn(spawnCell, map, faction, pawnKindData);
+                                    TrySetCell_5_SetPawn(spawnCell, map, faction, pawnKindData, useOneFaction);
                                     break;
                                 default:
                                     return;
@@ -278,42 +280,86 @@ namespace MapGenerator
                 // Find all created rooms
                 Room room = current.GetRoom(map);
                 if (room != null && !room.TouchesMapEdge)
+                {
                     rooms.Add(room);
+                }
+                else
+                {
+                    map.fogGrid.Unfog(current);
+                }
+                    
             }
-            // Add rooms to unfog area
-            AddRoomCentersToRootsToUnfog(rooms.ToList());
 
+            if (!blueprint.FogRooms)
+                AddRoomCentersToRootsToUnfog(rooms.ToList());
+            else
+                AddRoomsToFog(rooms.ToList(), map);
 
-            // make the appropriate Lord
-            pawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, mapRect.CenterCell), map, null);
+            Lord lordDefend = null;
+            Lord lordAttack = null;
+
+            foreach (var pair in allSpawnedPawns)
+            {
+                switch(pair.Value)
+                {
+                    case LordType.Defend:
+                        {
+                            if (lordDefend == null)
+                            {
+                                lordDefend = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, mapRect.CenterCell), map, null);
+                                lordDefend.numPawnsLostViolently = int.MaxValue;
+                            }
+
+                            lordDefend.AddPawn(pair.Key);
+
+                            break;
+                        }
+                    case LordType.Attack:
+                        {
+                            if (lordAttack == null)
+                            {
+                                lordAttack = LordMaker.MakeNewLord(faction, new LordJob_AssaultColony(faction, canTimeoutOrFlee: false), map, null);
+                                lordAttack.numPawnsLostViolently = int.MaxValue;
+                            }
+
+                            lordAttack.AddPawn(pair.Key);
+
+                            break;
+                        }
+                }
+
+                totalThreat += (int)pair.Key.kindDef.combatPower;
+            }
+
             
-            // Get points used by current pawns
-            float pointsUsed = 0f;
-            if (allSpawnedPawns != null && allSpawnedPawns.Count > 0)
-            {
-                foreach (Pawn pawnSpawned in allSpawnedPawns)
-                    pointsUsed += pawnSpawned.kindDef.combatPower;
-            }
-
             // Make additional pawns if these are not enough!
-            if (allSpawnedPawns == null || allSpawnedPawns.Count == 0 || 
-                pointsUsed < (faction.def.techLevel == TechLevel.Neolithic ? NeolithicPawnsPoints.min : NonNeolithicPawnsPoints.min))
+            if(blueprint.UseAdditionalThreat)
             {
+                if (lordDefend == null)
+                {
+                    lordDefend = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, mapRect.CenterCell), map, null);
+                    lordDefend.numPawnsLostViolently = int.MaxValue;
+                }
+
                 //Log.Warning("Info: Creating base pawns..");
-                //PrepareBaseGen_PawnGroup(map, mapRect, faction, rooms.ToList(), pawnLord, pointsUsed);
+                PrepareBaseGen_PawnGroup(map, mapRect, faction, rooms.ToList(), lordDefend, blueprint.ThreatsPoints);
             }
 
             PrepareBaseGen_CampFires(map, mapRect, faction);
 
             BaseGen.Generate();
 
+            /*
             if (allSpawnedPawns != null)
             {
                 foreach (Pawn pawn in allSpawnedPawns)
                     pawnLord.AddPawn(pawn);
             }
+            */
 
-            allSpawnedPawns = null;
+            pawns = allSpawnedPawns;
+
+            //allSpawnedPawns = null;
         }
 
 
@@ -676,7 +722,7 @@ namespace MapGenerator
         }
 
         // Fill the cell with Pawn
-        private static void TrySetCell_5_SetPawn(IntVec3 c, Map map, Faction faction, ThingData pawnKindData = null)
+        private static void TrySetCell_5_SetPawn(IntVec3 c, Map map, Faction faction, ThingData pawnKindData = null, bool useOneFaction = false)
         {
             //Note: Here is no functionality to clear the cell by design, because it is possible to place items that are larger than 1x1
 
@@ -687,18 +733,21 @@ namespace MapGenerator
             // 5th step - work with the Pawn
             if (pawnKindData.Kind != null && pawnKindData.Chance > Rand.Value)
             {
-                if (pawnKindData.Faction != null)
-                    faction = Find.FactionManager.FirstFactionOfDef(pawnKindData.Faction);
-
-                // null - find a valid faction.
-                if (faction == null)
+                if (!useOneFaction)
                 {
-                    if ((from fac in Find.FactionManager.AllFactions
-                                                     where fac.HostileTo(Faction.OfPlayer)
-                                                     select fac).TryRandomElementByWeight((Faction fac) => 101 - fac.def.RaidCommonalityFromPoints(map.IncidentPointsRandomFactorRange.RandomInRange), out faction)
-                                                     == false)
+                    if (pawnKindData.Faction != null)
+                        faction = Find.FactionManager.FirstFactionOfDef(pawnKindData.Faction);
+
+                    // null - find a valid faction.
+                    if (faction == null)
                     {
-                        faction = Faction.OfMechanoids;
+                        if ((from fac in Find.FactionManager.AllFactions
+                             where fac.HostileTo(Faction.OfPlayer)
+                             select fac).TryRandomElementByWeight((Faction fac) => 101 - fac.def.RaidCommonalityFromPoints(map.IncidentPointsRandomFactorRange.RandomInRange), out faction)
+                                                         == false)
+                        {
+                            faction = Faction.OfMechanoids;
+                        }
                     }
                 }
 
@@ -725,11 +774,10 @@ namespace MapGenerator
                     if (pawn != null)
                     {
                         if (allSpawnedPawns == null)
-                            allSpawnedPawns = new List<Pawn>();
+                            allSpawnedPawns = new Dictionary<Pawn, LordType>();
 
-                        allSpawnedPawns.Add(pawn);
+                        allSpawnedPawns.Add(pawn, pawnKindData.LordType);
                     }
-
                 }
             }
 
@@ -831,6 +879,24 @@ namespace MapGenerator
             }
         }
 
+        private static void AddRoomsToFog(List<Room> allRooms, Map map, bool fogDoors = false)
+        {
+            CellIndices cellIndices = map.cellIndices;
+            foreach (var room in allRooms)
+            {
+                foreach(var cell in room.Cells)
+                {
+                    if (cell.GetDoor(map) != null && !fogDoors)
+                    {
+                        continue;
+                    }
+
+                    map.fogGrid.fogGrid[cellIndices.CellToIndex(cell)] = true;
+                    map.mapDrawer.MapMeshDirty(cell, MapMeshFlag.FogOfWar);
+                }
+            }
+        }
+
 
         private static void PrepareBaseGen_CampFires(Map map, CellRect rect, Faction faction)
         {
@@ -861,18 +927,10 @@ namespace MapGenerator
             resolveParams.pawnGroupKindDef = PawnGroupKindDefOf.Settlement;
             resolveParams.singlePawnSpawnCellExtraPredicate = ((IntVec3 x) => CanReachARoom(map, x, rooms));
 
-            float points = (!faction.def.techLevel.IsNeolithicOrWorse()) ? NonNeolithicPawnsPoints.RandomInRange : NeolithicPawnsPoints.RandomInRange;
-
-            // reduce by points already used by the current pawns
-            if (points - pointsUsed > 100)
-                points -= pointsUsed;
-            else
-                points = 200f;
-
             resolveParams.pawnGroupMakerParams = new PawnGroupMakerParms();
             resolveParams.pawnGroupMakerParams.tile = map.Tile;
             resolveParams.pawnGroupMakerParams.faction = faction;
-            resolveParams.pawnGroupMakerParams.points = points;
+            resolveParams.pawnGroupMakerParams.points = pointsUsed;
 
             BaseGen.globalSettings.map = map;
             BaseGen.symbolStack.Push("pawnGroup", resolveParams);

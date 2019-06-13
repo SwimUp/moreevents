@@ -365,7 +365,7 @@
 		<targetTags>
 			<li>World</li>
 		</targetTags>
-		<workerClass>MoreEvents.Events.ClimateBomb.IncidentWorket_ClimateBomb</workerClass>
+		<workerClass>MoreEvents.Events.ClimateBomb.IncidentWorker_ClimateBomb</workerClass>
 		<category>Misc</category>
 		<minRefireDays>200</minRefireDays>
 		<baseChance>1.0</baseChance>
@@ -440,6 +440,24 @@
 			<min>1</min>
 			<max>2</max>
 		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Осадный лагерь -->
+	<IncidentDef>
+		<defName>SiegeCamp</defName>
+		<label>Siege camp</label>
+		<letterLabel>Siege camp</letterLabel>
+		<letterText>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</letterText>
+	    <letterDef>NegativeEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.SiegeCamp.IncidentWorker_SiegeCamp</workerClass>
+		<category>Misc</category>
+		<minRefireDays>140</minRefireDays>
+		<baseChance>1.2</baseChance>
+		<earliestDay>135</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	
