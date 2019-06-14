@@ -169,8 +169,10 @@ namespace MoreEvents.Events.SiegeCamp
 
                     if(mortarShellTimer <= 0)
                     {
-                        IntVec3 cell = camp.PlayerSiegeMap.AllCells.Where(c => !c.Fogged(camp.PlayerSiegeMap) && c.GetRoof(camp.PlayerSiegeMap) != RoofDefOf.RoofRockThick).RandomElement();
-                        GenExplosion.DoExplosion(cell, camp.PlayerSiegeMap, 5, DamageDefOf.Bomb, null, explosionSound: SoundDefOfLocal.MortarIncendiary_Explode);
+                        IntVec3 cell = camp.PlayerSiegeMap.AllCells.Where(c => !c.Fogged(camp.PlayerSiegeMap) && c.GetRoof(camp.PlayerSiegeMap) != RoofDefOf.RoofRockThick && !c.CloseToEdge(camp.PlayerSiegeMap, 13)).RandomElement();
+                        TryFindSpawnSpot(camp.PlayerSiegeMap, out IntVec3 spawnSpot);
+                        Projectile proj = (Projectile)GenSpawn.Spawn(ThingDefOfLocal.Bullet_Shell_HighExplosive, spawnSpot, camp.PlayerSiegeMap);
+                        proj.Launch(null, proj.DrawPos, cell, cell, hitFlags: ProjectileHitFlags.All);
                         mortarsBulletCount--;
                         mortarShellTimer = ticksBetweenShots;
                     }
@@ -185,6 +187,8 @@ namespace MoreEvents.Events.SiegeCamp
                 }
             }
         }
+
+
 
         public void SendRaid()
         {

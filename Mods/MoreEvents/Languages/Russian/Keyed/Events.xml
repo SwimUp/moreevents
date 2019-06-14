@@ -63,10 +63,16 @@
   
   <AttackIsNotRepelled>Вы не можете уйти сейчас. Атака еще не отражена.</AttackIsNotRepelled>
   <TimerDaysToAttack>Дней до нападения: {0}</TimerDaysToAttack>
-  <ThreatLevel>Уровень угрозы: {0}</ThreatLevel>
+  <ThreatLevel>\nУровень угрозы: {0}</ThreatLevel>
   <AttackFriendlySettlementLetter1>Разведчики дружественного поселения {0} докладывают, что одно из вражеских поселений готовит на них атаку. Они просят у вас помощи. К сожалению, уровень угрозы не известен. 
-  (Чтобы помочь поселению, отправьте к нему караван и отбейте атаку)</AttackFriendlySettlementLetter1>
+(Чтобы помочь поселению, отправьте к нему караван и отбейте атаку)</AttackFriendlySettlementLetter1>
   <AttackFriendlySettlementLetter2>Разведчики дружественного поселения {0} докладывают, что одно из вражеских поселений готовит на них атаку. Они просят у вас помощи. Уровень угрозы: {1} 
-  (Чтобы помочь поселению, отправьте к нему караван и отбейте атаку)</AttackFriendlySettlementLetter2>
+(Чтобы помочь поселению, отправьте к нему караван и отбейте атаку)</AttackFriendlySettlementLetter2>
+  <AttackedFriendlySettlementDefendHelp>Вы прибыли на место. Обустройте защиту, поселенцы дружественного поселения переданы в ваше распоряжение. Помните, что вам нужно сохранить как можно больше жизней!</AttackedFriendlySettlementDefendHelp>
+  <AttackedFriendlySettlementDefendVictory>Вы отбили атаку.\n {0} благодарно вам. Всего вы смогли сохранить жизнь {1} поселенцам, за что вы получаете награду:\n{2}\n\nОна ожидает вас на на дружественной базе. Вы сможете забрать её когда сформируете караван или в другой любой момент.</AttackedFriendlySettlementDefendVictory>
+  <AttackedFriendlySettlementDefendLoseWithHelp>Вы отбили атаку, но не смогли спасти ни одного дружественного поселенца. \nВам попросту некому выдать награду, а дружественное поселение разбито.</AttackedFriendlySettlementDefendLoseWithHelp>
+  <AttackedFriendlySettlementLoseWithoutHelp>Вы не пришли на помощь поселению {0}, репутация снижена.</AttackedFriendlySettlementLoseWithoutHelp>
+  <RaidStartDefendTitle>Атака началась!</RaidStartDefendTitle>
+  <RaidStartDefend>Враги нападают, приготовиться!</RaidStartDefend>
   
 </LanguageData>

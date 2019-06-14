@@ -7,6 +7,11 @@ namespace MoreEvents
     [DefOf]
     public static class ThingDefOfLocal
     {
+        /* Game things */
+        public static ThingDef Bullet_Shell_HighExplosive;
+        public static ThingDef Artillery_Mortar;
+        /* =========================== */
+
         public static ThingDef MechanoidTeleport_Generator;
         public static ThingDef MechanoidTeleport;
 

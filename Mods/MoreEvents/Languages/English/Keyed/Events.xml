@@ -60,6 +60,18 @@
   
   <AttackIsNotRepelled>You can not leave now. The attack is not yet reflected.</AttackIsNotRepelled>
   <TimerDaysToAttack>Days to attack {0}</TimerDaysToAttack>
-  <ThreatLevel>Threat level: {0}</ThreatLevel>
+  <ThreatLevel>\nThreat level: {0}</ThreatLevel>
+  <AttackFriendlySettlementLetter1>Scout friendly settlement {0} report that one of the enemy settlements is preparing an attack on them. They ask you for help. Unfortunately, the level of threat is not known.
+(To help the settlement, send a caravan to it and repel the attack)</AttackFriendlySettlementLetter1>
+  <AttackFriendlySettlementLetter2>Scout friendly settlement {0} report that one of the enemy settlements is preparing an attack on them. They ask you for help. Threat Level: {1}
+(To help the settlement, send a caravan to it and repel the attack)</AttackFriendlySettlementLetter2>
+  <AttackedFriendlySettlementDefendHelp>You have arrived. Set up a defense, the settlers of the friendly settlement are at your disposal. Remember that you need to save as many lives as possible!
+</AttackedFriendlySettlementDefendHelp>
+  <AttackedFriendlySettlementDefendVictory>You beat off the attack.\n{0} Thank you. In total, you were able to save the life of {1} settlers, for which you get a reward:\n {2} \n\nShe is waiting for you on a friendly base. You can pick it up when you form a caravan or at any other time.</AttackedFriendlySettlementDefendVictory>
+  <AttackedFriendlySettlementDefendLoseWithHelp>You fought off the attack, but you could not save a single friendly settler.\nYou simply have no one to give a reward, and a friendly settlement is broken.
+</AttackedFriendlySettlementDefendLoseWithHelp>
+  <AttackedFriendlySettlementLoseWithoutHelp>You didn’t help settlement {0}, reputation lowered.</AttackedFriendlySettlementLoseWithoutHelp>
+  <RaidStartDefendTitle>The attack has begun!</RaidStartDefendTitle>
+  <RaidStartDefend>Enemies are attacking, get ready!</RaidStartDefend>
   
 </LanguageData>

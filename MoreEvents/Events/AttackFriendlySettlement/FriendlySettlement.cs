@@ -51,5 +51,51 @@ namespace MoreEvents.Events.AttackFriendlySettlement
         {
             return CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction.CanVisit(caravan, mapParent), () => caravanAction, "EnterMap".Translate(mapParent.Label), caravan, mapParent.Tile, mapParent);
         }
+
+        public override void ForceReform(MapParent mapParent)
+        {
+            if (Dialog_FormCaravan.AllSendablePawns(mapParent.Map, reform: true).Any((Pawn x) => x.IsColonist))
+            {
+                Messages.Message("MessageYouHaveToReformCaravanNow".Translate(), new GlobalTargetInfo(mapParent.Tile), MessageTypeDefOf.NeutralEvent);
+                Current.Game.CurrentMap = mapParent.Map;
+                Dialog_FormCaravan window = new Dialog_FormCaravan(mapParent.Map, reform: true, delegate
+                {
+                    if (RemoveAfterLeave && mapParent.HasMap)
+                    {
+                        Find.WorldObjects.Remove(mapParent);
+                    }
+
+                }, mapAboutToBeRemoved: true);
+                Find.WindowStack.Add(window);
+                for (int i = window.transferables.Count - 1; i >= 0; i--)
+                {
+                    TransferableOneWay t = window.transferables[i];
+                    if (t != null)
+                    {
+                        if (t.AnyThing != null)
+                        {
+                            if (t.AnyThing.Faction != null && t.AnyThing.Faction == Faction)
+                            {
+                                window.transferables.Remove(t);
+                            }
+                        }
+                    }
+                }
+                return;
+            }
+            List<Pawn> tmpPawns = new List<Pawn>();
+            tmpPawns.Clear();
+            tmpPawns.AddRange(from x in mapParent.Map.mapPawns.AllPawns
+                              where x.Faction == Faction.OfPlayer || x.HostFaction == Faction.OfPlayer
+                              select x);
+            if (tmpPawns.Any((Pawn x) => CaravanUtility.IsOwner(x, Faction.OfPlayer)))
+            {
+                CaravanExitMapUtility.ExitMapAndCreateCaravan(tmpPawns, Faction.OfPlayer, mapParent.Tile, mapParent.Tile, -1);
+            }
+            tmpPawns.Clear();
+
+            if (RemoveAfterLeave)
+                Find.WorldObjects.Remove(mapParent);
+        }
     }
 }

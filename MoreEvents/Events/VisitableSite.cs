@@ -87,7 +87,7 @@ namespace MoreEvents.Events
             ForceReform(mapParent);
         }
 
-        public void ForceReform(MapParent mapParent)
+        public virtual void ForceReform(MapParent mapParent)
         {
             if (Dialog_FormCaravan.AllSendablePawns(mapParent.Map, reform: true).Any((Pawn x) => x.IsColonist))
             {

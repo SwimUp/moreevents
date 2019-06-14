@@ -90,14 +90,22 @@ namespace MoreEvents.Events
 
         private void DoShake()
         {
-            Find.CameraDriver.shaker.DoShake(magnitude / 2);
+            Find.CameraDriver.shaker.DoShake(magnitude);
             int count = Rand.Range(7, 17);
+
+            List<Thing> allThings = SingleMap.listerThings.AllThings;
+            if (allThings.Count == 0)
+                return;
 
             for (int i = 0; i < count; i++)
             {
-                var thing = SingleMap.spawnedThings.Where(t => t is Building && t.Position.GetRoof(SingleMap) == RoofDefOf.RoofConstructed && !t.Fogged()).RandomElement();
-                float damage = Rand.Range(10, 20) * damageMultiplier;
-                thing.TakeDamage(new DamageInfo(DamageDefOf.Bomb, damage));
+                var thing = SingleMap.listerThings.AllThings.Where(t => t is Building && t.Position.GetRoof(SingleMap) == RoofDefOf.RoofConstructed && !t.Fogged() && t.Spawned).RandomElement();
+
+                if (thing != null)
+                {
+                    float damage = Rand.Range(10, 20) * damageMultiplier;
+                    thing.TakeDamage(new DamageInfo(DamageDefOf.Bomb, damage));
+                }
             }
         }
 

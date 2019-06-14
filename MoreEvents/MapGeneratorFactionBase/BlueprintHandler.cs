@@ -24,7 +24,7 @@ namespace MapGenerator
         public static Dictionary<Pawn, LordType> allSpawnedPawns;
         public static HashSet<Room> rooms;
 
-        public static void CreateBlueprintAt(IntVec3 c, Map map, MapGeneratorBaseBlueprintDef blueprint, Faction faction, ThingDef wallStuff, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false)
+        public static void CreateBlueprintAt(IntVec3 c, Map map, MapGeneratorBaseBlueprintDef blueprint, Faction faction, ThingDef wallStuff, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false, bool useAdditionThreat = false, float additionalPoints = 0f)
         {
             pawns = null;
             totalThreat = 0;
@@ -82,7 +82,7 @@ namespace MapGenerator
                 if (wallStuff == null)
                     wallStuff = BaseGenUtility.RandomCheapWallStuff(faction, false);
 
-                MakeBlueprintObject(map, faction, mapRect, blueprint, wallStuff, out pawns, out totalThreat, useOneFaction);
+                MakeBlueprintObject(map, faction, mapRect, blueprint, wallStuff, out pawns, out totalThreat, useOneFaction, useAdditionThreat, additionalPoints);
 
                 if (blueprint.createTrigger)
                 {
@@ -152,7 +152,7 @@ namespace MapGenerator
 
 
 
-        private static void MakeBlueprintObject(Map map, Faction faction, CellRect mapRect, MapGeneratorBaseBlueprintDef blueprint, ThingDef stuffDef, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false)
+        private static void MakeBlueprintObject(Map map, Faction faction, CellRect mapRect, MapGeneratorBaseBlueprintDef blueprint, ThingDef stuffDef, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false, bool useAddtionalThreat = false, float additionalPoints = 0f)
         {
             blueprint.buildingData = GetCleanedBlueprintData(blueprint.buildingData);
             blueprint.nonbuildingData = GetCleanedBlueprintData(blueprint.nonbuildingData);
@@ -333,7 +333,7 @@ namespace MapGenerator
 
             
             // Make additional pawns if these are not enough!
-            if(blueprint.UseAdditionalThreat)
+            if(useAddtionalThreat || blueprint.UseAdditionalThreat)
             {
                 if (lordDefend == null)
                 {
@@ -341,8 +341,10 @@ namespace MapGenerator
                     lordDefend.numPawnsLostViolently = int.MaxValue;
                 }
 
+                float total = blueprint.ThreatsPoints + additionalPoints;
+
                 //Log.Warning("Info: Creating base pawns..");
-                PrepareBaseGen_PawnGroup(map, mapRect, faction, rooms.ToList(), lordDefend, blueprint.ThreatsPoints);
+                PrepareBaseGen_PawnGroup(map, mapRect, faction, rooms.ToList(), lordDefend, total);
             }
 
             PrepareBaseGen_CampFires(map, mapRect, faction);

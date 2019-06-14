@@ -9,5 +9,8 @@
  
   <SiegeCampSite.label>Осадный лагерь</SiegeCampSite.label>
   <SiegeCampSite.description>Здесь находится вражеский лагерь. Они будут бомбардировать наше поселение и совершать набеги, пока мы не уничтожим его.</SiegeCampSite.description>
+   
+  <FriendlySettlementHelp.label>Место рейда</FriendlySettlementHelp.label>
+  <FriendlySettlementHelp.description>Место, куда будет совершенно нападение.</FriendlySettlementHelp.description>
  
 </LanguageData>
