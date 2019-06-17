@@ -29,4 +29,11 @@
   <QuantumConverter.label>Quantum converter</QuantumConverter.label>
   <QuantumConverter.description>The main component that converts (captures) radiation from the evaporation of a black hole and converts it into energy.</QuantumConverter.description>
   
+  <Catapult.label>Medieval Catapult</Catapult.label>
+  <Catapult.description>A massive cannon that uses large stone balls as projectiles. When the projectile is broken on the ground, the fragments damage everything around.</Catapult.description>
+  <Artillery_Catapult.label>Medieval Catapult</Artillery_Catapult.label>
+  <Artillery_Catapult.description>A massive cannon that uses large stone balls as projectiles. When the projectile is broken on the ground, the fragments damage everything around.</Artillery_Catapult.description>
+  <BigBalls.label>Stone big ball</BigBalls.label>
+  <BigBalls.description>A massive stone ball designed for catapults.</BigBalls.description>  
+  
 </LanguageData>

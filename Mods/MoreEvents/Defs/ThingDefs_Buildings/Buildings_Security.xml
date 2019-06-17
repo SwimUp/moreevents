@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="BaseArtilleryBuildingMedeival" ParentName="BuildingBase" Abstract="True">
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/TurretMortar_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<damageData>
+				<rect>(0.38,0.2,0.56375,0.8)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+			</damageData>
+			<shadowData>
+				<offset>(-0.13,-0.87,-0.1)</offset>
+				<volume>(0.5,0.4,1.05)</volume>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<stealable>false</stealable>
+		<size>(2,2)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<inspectorTabs>
+			<li>ITab_Shells</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+		</comps>
+		<building>
+			<buildingTags>
+				<li>Artillery</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+			<li>PlaceWorker_TurretTop</li>
+		</placeWorkers>
+		<uiIconScale>1.1</uiIconScale>
+	</ThingDef>
+
+
+	<ThingDef Name="BaseMedeivalArtilleryWeapon" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<label>artillery error</label>
+		<useHitPoints>false</useHitPoints>
+		<equipmentType>Primary</equipmentType>
+		<tickerType>Never</tickerType>
+		<techLevel>Industrial</techLevel>
+		<destroyOnDrop>True</destroyOnDrop>
+		<menuHidden>True</menuHidden>
+		<tradeability>None</tradeability>
+		<weaponTags>
+			<li>Artillery</li>
+		</weaponTags>
+		<comps>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_ChangeableProjectile" />
+		</comps>
+	</ThingDef>
+
+
+	<ThingDef Name="BaseArtilleryBuildingCatapult" ParentName="BaseArtilleryBuildingMedeival" Abstract="True">
+		<costList>
+			<WoodLog>300</WoodLog>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.9</Flammability>
+			<WorkToBuild>1900</WorkToBuild>
+			<Mass>50</Mass>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<building>
+			<buildingTags>
+				<li>Artillery</li>
+			</buildingTags>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseArtilleryBuildingCatapult">
+		<defName>Catapult</defName>
+		<label>Catapult</label>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<graphicData>
+			<texPath>Things/Buildings/Security/Catapult/Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData> 
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData> 
+		</graphicData>
+		<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+		<designationHotKey>Misc4</designationHotKey>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<turretBurstWarmupTime>4.0</turretBurstWarmupTime>
+			<turretBurstCooldownTime>15.0</turretBurstCooldownTime>
+			<turretGunDef>Artillery_Catapult</turretGunDef>
+			<turretTopGraphicPath>Things/Buildings/Security/Catapult/Main</turretTopGraphicPath>
+		</building>
+		<uiIconPath>Things/Buildings/Security/Catapult/Main</uiIconPath>
+		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMedeivalArtilleryWeapon">
+		<defName>Artillery_Catapult</defName>
+		<label>Catapult</label>
+		<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+		<weaponTags>
+			<li>Artillery_Medeival</li>
+		</weaponTags>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<categories>
+						<li>MedievalShells</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>BigArrows</li>
+					</disallowedThingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<categories>
+						<li>MedievalShells</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>BigArrows</li>
+					</disallowedThingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>4.0</warmupTime>
+				<forcedMissRadius>7</forcedMissRadius>
+				<requireLineOfSight>false</requireLineOfSight>
+				<minRange>17</minRange>
+				<range>350</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Mortar_LaunchA</soundCast>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetItems>true</canTargetItems>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+	<ThingDef Name="BaseArtilleryBuildingBallista" ParentName="BaseArtilleryBuildingMedeival" Abstract="True">
+		<costList>
+			<WoodLog>250</WoodLog>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>35</Steel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>220</MaxHitPoints>
+			<Flammability>0.9</Flammability>
+			<WorkToBuild>1900</WorkToBuild>
+			<Mass>50</Mass>
+			<Beauty>-20</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseArtilleryBuildingBallista">
+		<defName>Ballista</defName>
+		<label>Ballista</label>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<graphicData>
+			<texPath>Things/Buildings/Security/Ballista/Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData> 
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData> 
+		</graphicData>
+		<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+		<designationHotKey>Misc4</designationHotKey>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<turretBurstWarmupTime>3.4</turretBurstWarmupTime>
+			<turretBurstCooldownTime>16.0</turretBurstCooldownTime>
+			<turretGunDef>Artillery_Ballista</turretGunDef>
+			<turretTopGraphicPath>Things/Buildings/Security/Ballista/Main</turretTopGraphicPath>
+			<turretTopDrawSize>4</turretTopDrawSize>
+		</building>
+		<uiIconPath>Things/Buildings/Security/Ballista/Main</uiIconPath>
+		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMedeivalArtilleryWeapon">
+		<defName>Artillery_Ballista</defName>
+		<label>Ballista</label>
+		<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+		<weaponTags>
+			<li>Artillery_Medeival</li>
+		</weaponTags>
+		<building>
+			<fixedStorageSettings>
+				<filter>
+					<categories>
+						<li>MedievalShells</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>BigBalls</li>
+					</disallowedThingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<categories>
+						<li>MedievalShells</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>BigBalls</li>
+					</disallowedThingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>5.0</warmupTime>
+				<forcedMissRadius>1</forcedMissRadius>
+				<requireLineOfSight>false</requireLineOfSight>
+				<minRange>5</minRange>
+				<range>350</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Mortar_LaunchA</soundCast>
+				<muzzleFlashScale>16</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetItems>true</canTargetItems>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+</Defs>

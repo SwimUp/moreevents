@@ -28,4 +28,12 @@
   <SuperMagnetNewGeneration.description>Супермагнит, из неизвестного нам материала, который удерживает черную дыру.</SuperMagnetNewGeneration.description>
   <QuantumConverter.label>Квантовый преобразователь</QuantumConverter.label>
   <QuantumConverter.description>Главный компонент, преобразовывающий (захватывающий) излучение от испарения черной дыры и преобразовывающий его в энергию.</QuantumConverter.description>
+  
+  <Catapult.label>Средневековая катапульта</Catapult.label>
+  <Catapult.description>Массивное орудие, которое использует большие каменные шары в качестве снарядов. Когда снаряд разбивается об землю, то осколки повреждают все вокруг.</Catapult.description>
+  <Artillery_Catapult.label>Средневековая катапульта</Artillery_Catapult.label>
+  <Artillery_Catapult.description>Массивное орудие, которое использует большие каменные шары в качестве снарядов. Когда снаряд разбивается об землю, то осколки повреждают все вокруг.</Artillery_Catapult.description>
+  <BigBalls.label>Каменный шар</BigBalls.label>
+  <BigBalls.description>Массивный каменный шар, предназначенный для катапульт.</BigBalls.description>  
+	
 </LanguageData>
