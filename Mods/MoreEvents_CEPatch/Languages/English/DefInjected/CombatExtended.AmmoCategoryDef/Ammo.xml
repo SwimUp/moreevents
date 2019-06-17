@@ -7,4 +7,7 @@
   <TrashBombs.label>Trash bomb</TrashBombs.label>
   <TrashBombs.description>A large ball with a powerful magnet inside and surrounded by all sorts of rubbish. If you deactivate the magnet, then the fragments fly apart in all directions, making holes all around.</TrashBombs.description>
   
+  <MedeivalProjectiles.label>Medieval shells</MedeivalProjectiles.label>
+  <MedeivalProjectiles.description>Medieval weapons ammunition category</MedeivalProjectiles.description>
+  
 </LanguageData>

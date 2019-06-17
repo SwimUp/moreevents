@@ -107,8 +107,6 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
                 container.AddItem(p);
 
                 dangerousLevel += p.MarketValue * Rand.Range(1f, 1.7f);
-
-                Log.Message($"P {p.Name} --> VALUE: {p.MarketValue}");
             }
         }
 

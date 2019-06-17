@@ -56,7 +56,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
                 letterText = "AttackFriendlySettlementLetter1".Translate(faction.Name);
             }
 
-            Find.LetterStack.ReceiveLetter(def.letterLabel, letterText, def.letterDef);
+            Find.LetterStack.ReceiveLetter(def.letterLabel, letterText, def.letterDef, site);
 
             return true;
         }

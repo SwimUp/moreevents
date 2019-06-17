@@ -53,7 +53,7 @@ namespace MoreEvents.Events.ShipCrash
             this.generator = generator;
             GeneratorType = $"MoreEvents.Events.ShipCrash.Map.MapGenerator.{generator.GetType().Name}";
         }
-        
+
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
         {
             foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(caravan))

@@ -119,6 +119,7 @@
 			<turretBurstCooldownTime>15.0</turretBurstCooldownTime>
 			<turretGunDef>Artillery_Catapult</turretGunDef>
 			<turretTopGraphicPath>Things/Buildings/Security/Catapult/Main</turretTopGraphicPath>
+			<turretTopDrawSize>4</turretTopDrawSize>
 		</building>
 		<uiIconPath>Things/Buildings/Security/Catapult/Main</uiIconPath>
 		<uiIconScale>0.9</uiIconScale>
@@ -162,7 +163,7 @@
 				<forcedMissRadius>7</forcedMissRadius>
 				<requireLineOfSight>false</requireLineOfSight>
 				<minRange>17</minRange>
-				<range>350</range>
+				<range>130</range>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>Mortar_LaunchA</soundCast>
 				<muzzleFlashScale>16</muzzleFlashScale>
@@ -205,7 +206,7 @@
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData> 
 		</graphicData>
-		<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+		<description>A massive weapon that uses huge arrows as projectiles. Slow, but for what kind of holes it leaves!</description>
 		<designationHotKey>Misc4</designationHotKey>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<building>
@@ -222,7 +223,7 @@
 	<ThingDef ParentName="BaseMedeivalArtilleryWeapon">
 		<defName>Artillery_Ballista</defName>
 		<label>Ballista</label>
-		<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+		<description>A massive weapon that uses huge arrows as projectiles. Slow, but for what kind of holes it leaves!</description>
 		<weaponTags>
 			<li>Artillery_Medeival</li>
 		</weaponTags>
@@ -248,18 +249,19 @@
 				</filter>
 			</defaultStorageSettings>
 		</building>
+		<soundInteract>Bow_Large</soundInteract>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
 				<hasStandardCommand>true</hasStandardCommand>
 				<warmupTime>5.0</warmupTime>
-				<forcedMissRadius>1</forcedMissRadius>
+				<forcedMissRadius>2</forcedMissRadius>
 				<requireLineOfSight>false</requireLineOfSight>
 				<minRange>5</minRange>
-				<range>350</range>
+				<range>100</range>
 				<burstShotCount>1</burstShotCount>
-				<soundCast>Mortar_LaunchA</soundCast>
+				<soundCast>Bow_Large</soundCast>
 				<muzzleFlashScale>16</muzzleFlashScale>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>

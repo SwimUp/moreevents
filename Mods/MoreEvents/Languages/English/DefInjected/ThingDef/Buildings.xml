@@ -36,4 +36,11 @@
   <BigBalls.label>Stone big ball</BigBalls.label>
   <BigBalls.description>A massive stone ball designed for catapults.</BigBalls.description>  
   
+  <Ballista.label>Medieval ballista</Ballista.label>
+  <Ballista.description>A massive weapon that uses huge arrows as projectiles. Slow, but for what kind of holes it leaves!</Ballista.description>
+  <Artillery_Ballista.label>Medieval ballista</Artillery_Ballista.label>
+  <Artillery_Ballista.description>A massive weapon that uses huge arrows as projectiles. Slow, but for what kind of holes it leaves!</Artillery_Ballista.description>
+  <BigArrows.label>Big arrow</BigArrows.label>
+  <BigArrows.description>The big arrow from a stone and steel intended for a ballist.</BigArrows.description>  
+  
 </LanguageData>

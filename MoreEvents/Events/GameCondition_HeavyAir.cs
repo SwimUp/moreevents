@@ -23,8 +23,6 @@ namespace MoreEvents.Events
             WeatherDef fog = WeatherDefOfLocal.HardFog;
             fog.durationRange = new IntRange(Duration, Duration + 1000);
             map.weatherManager.TransitionTo(fog);
-
-            Log.Message($"{Duration}");
         }
 
         public override void End()

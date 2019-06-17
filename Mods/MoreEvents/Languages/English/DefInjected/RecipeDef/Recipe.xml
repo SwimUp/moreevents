@@ -2,4 +2,6 @@
 <LanguageData>
 	<Make_CatapultProjectile.label>Make shells for catapult</Make_CatapultProjectile.label>
 	<Make_CatapultProjectile.description>Make massive stone balls for a catapult</Make_CatapultProjectile.description>
+	<Make_BallistaProjectile.label>Make arrows for ballista</Make_BallistaProjectile.label>
+	<Make_BallistaProjectile.description>Make big arrows for a catapult</Make_BallistaProjectile.description>
 </LanguageData>

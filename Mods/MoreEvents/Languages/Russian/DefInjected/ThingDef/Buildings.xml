@@ -36,4 +36,11 @@
   <BigBalls.label>Каменный шар</BigBalls.label>
   <BigBalls.description>Массивный каменный шар, предназначенный для катапульт.</BigBalls.description>  
 	
+  <Ballista.label>Средневековая баллиста</Ballista.label>
+  <Ballista.description>Массивное орудие, использующее в качестве снарядов огромные стрелы. Медленное, но за то какие дыры оставляет!</Ballista.description>
+  <Artillery_Ballista.label>Средневековая баллиста</Artillery_Ballista.label>
+  <Artillery_Ballista.description>Массивное орудие, использующее в качестве снарядов огромные стрелы. Медленное, но за то какие дыры оставляет!</Artillery_Ballista.description>
+  <BigArrows.label>Большая стрела</BigArrows.label>
+  <BigArrows.description>Большая стрела из камня и стали, предназначенная для баллист.</BigArrows.description>  
+	
 </LanguageData>

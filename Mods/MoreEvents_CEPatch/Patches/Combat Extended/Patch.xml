@@ -1,106 +1,468 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  
-  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-    <defName>Gun_Energeticharpoon</defName>
-    <statBases>
-      <MarketValue>2000</MarketValue>
-      <Mass>22</Mass>
-      <AccuracyTouch>0.18</AccuracyTouch>
-      <AccuracyShort>0.26</AccuracyShort>
-      <AccuracyMedium>0.26</AccuracyMedium>
-      <AccuracyLong>0.18</AccuracyLong>
-      <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
-    </statBases>
-    <Properties>
-    	<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_Energeticharpoon</defaultProjectile>
-        <warmupTime>1.25</warmupTime>
-        <range>25.9</range>
-        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>Shot_ChargeBlaster</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-    </Properties>
-    <AmmoUser>
-    	<magazineSize>1</magazineSize>
-    	<reloadTime>3</reloadTime>
-    	<ammoSet>AmmoSet_HarpoonArrow</ammoSet>
-    </AmmoUser>
-    <FireModes>
-    	<aiAimMode>AimedShot</aiAimMode>
-    </FireModes>
-    <weaponTags>
-		<li>AvtomatronGunMedium</li>
-    </weaponTags>
-  </Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>*/ThingDef[defName="Gun_Energeticharpoon"]/tools</xpath>
-    <value>
-      <tools>
-        <li Class="CombatExtended.ToolCE">
-			<label>barrel</label>
-			<capacities>
-			  <li>Blunt</li>
-			</capacities>
-			<power>11.7</power>
-			<cooldownTime>2.6</cooldownTime>
-        </li>
-      </tools>
-    </value>
-  </Operation>
-  
-  <!-- TRASH GUN -->
-  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-    <defName>Gun_TrashGun</defName>
-    <statBases>
-      <MarketValue>1100</MarketValue>
-      <Mass>30</Mass>
-      <RangedWeapon_Cooldown>9.4</RangedWeapon_Cooldown>
-    </statBases>
-    <Properties>
-    	<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_TrashBomb</defaultProjectile>
-        <forcedMissRadius>3.5</forcedMissRadius>
-        <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-        <warmupTime>1.25</warmupTime>
-        <range>26.9</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>InfernoCannon_Fire</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>14</muzzleFlashScale>
-    </Properties>
-    <AmmoUser>
-    	<magazineSize>1</magazineSize>
-    	<reloadTime>6</reloadTime>
-    	<ammoSet>AmmoSet_TrashBomb</ammoSet>
-    </AmmoUser>
-    <FireModes>
-    	<aiAimMode>AimedShot</aiAimMode>
-    </FireModes>
-    <weaponTags>
-		<li>AvtomatronGunHeavy</li>
-    </weaponTags>
-  </Operation>
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_Energeticharpoon</defName>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<Mass>22</Mass>
+			<AccuracyTouch>0.18</AccuracyTouch>
+			<AccuracyShort>0.26</AccuracyShort>
+			<AccuracyMedium>0.26</AccuracyMedium>
+			<AccuracyLong>0.18</AccuracyLong>
+			<RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Energeticharpoon</defaultProjectile>
+			<warmupTime>1.25</warmupTime>
+			<range>25.9</range>
+			<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>1</magazineSize>
+			<reloadTime>3</reloadTime>
+			<ammoSet>AmmoSet_HarpoonArrow</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>AvtomatronGunMedium</li>
+		</weaponTags>
+	</Operation>
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>*/ThingDef[defName="Gun_TrashGun"]/tools</xpath>
-    <value>
-      <tools>
-        <li Class="CombatExtended.ToolCE">
-			<label>barrel</label>
-			<capacities>
-			  <li>Blunt</li>
-			</capacities>
-			<power>11.7</power>
-			<cooldownTime>2.6</cooldownTime>
-        </li>
-      </tools>
-    </value>
-  </Operation>
-  
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Gun_Energeticharpoon"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>11.7</power>
+					<cooldownTime>2.6</cooldownTime>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+
+	<!-- TRASH GUN -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_TrashGun</defName>
+		<statBases>
+			<MarketValue>1100</MarketValue>
+			<Mass>30</Mass>
+			<RangedWeapon_Cooldown>9.4</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_TrashBomb</defaultProjectile>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			<warmupTime>1.25</warmupTime>
+			<range>26.9</range>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>1</magazineSize>
+			<reloadTime>6</reloadTime>
+			<ammoSet>AmmoSet_TrashBomb</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>AvtomatronGunHeavy</li>
+		</weaponTags>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Gun_TrashGun"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>11.7</power>
+					<cooldownTime>2.6</cooldownTime>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Catapult"]</xpath>
+		<value>
+			<ThingDef ParentName="TurretMannedBase">
+				<defName>Catapult</defName>
+				<label>Catapult</label>
+				<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+				<graphicData>
+					<texPath>Things/Buildings/Security/Catapult/Base</texPath>
+				</graphicData>
+				<statBases>
+					<MaxHitPoints>250</MaxHitPoints>
+					<WorkToMake>35000</WorkToMake>
+					<Mass>1000</Mass>
+					<Bulk>1000</Bulk>
+				</statBases>
+				<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+				<costList>
+					<WoodLog>250</WoodLog>
+					<ComponentIndustrial>3</ComponentIndustrial>
+					<Steel>35</Steel>
+				</costList>
+				<specialDisplayRadius>16</specialDisplayRadius>
+				<building>
+					<turretGunDef>Artillery_Catapult</turretGunDef>
+					<turretTopGraphicPath>Things/Buildings/Security/Catapult/Main</turretTopGraphicPath>
+					<turretTopDrawSize>4</turretTopDrawSize>
+				</building>
+				<size>(2,2)</size>
+				<minifiedDef>MinifiedThing</minifiedDef>
+				<designationCategory>Security</designationCategory>
+				<uiIconPath>Things/Buildings/Security/Catapult/Main</uiIconPath>
+				<uiIconScale>0.9</uiIconScale>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Artillery_Catapult"]</xpath>
+		<value>
+			<ThingDef ParentName="BaseTurretGun">
+				<defName>Artillery_Catapult</defName>
+				<weaponTags>
+					<li>Artillery_Medeival</li>
+				</weaponTags>
+				<label>Catapult</label>
+				<graphicData>
+					<texPath>Things/Buildings/Security/Catapult/Main</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<description>Massive weapon rechargeable stone or metal balls. At blow the ball scatters inflicting stab wounds.</description>
+				<soundInteract>Artillery_ShellLoaded</soundInteract>
+				<statBases>
+					<MarketValue>350</MarketValue>
+					<SightsEfficiency>2.3</SightsEfficiency>
+					<ShotSpread>0.4</ShotSpread>
+					<SwayFactor>1.14</SwayFactor>
+					<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+				</statBases>
+				<verbs>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>Bullet_BigBalls</defaultProjectile>
+						<warmupTime>4.35</warmupTime>
+						<minRange>16</minRange>
+						<range>120</range>
+						<burstShotCount />
+						<soundCast>Mortar_LaunchA</soundCast>
+						<muzzleFlashScale>20</muzzleFlashScale>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+						</targetParams>
+						<recoilPattern>Mounted</recoilPattern>
+					</li>
+				</verbs>
+				<comps>
+					<li Class="CombatExtended.CompProperties_AmmoUser">
+						<magazineSize>1</magazineSize>
+						<reloadTime>10</reloadTime>
+						<spawnUnloaded>false</spawnUnloaded>
+						<ammoSet>AmmoSet_Catapult</ammoSet>
+					</li>
+					<li Class="CombatExtended.CompProperties_FireModes">
+						<aiAimMode>AimedShot</aiAimMode>
+					</li>
+				</comps>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Bullet_BigBalls"]</xpath>
+		<value>
+			<ThingDef Class="CombatExtended.AmmoDef" ParentName="CatapultAmmoBullet">
+				<defName>Bullet_BigBalls</defName>
+				<label>Stone ball</label>
+				<graphicData>
+					<texPath>Things/Buildings/Security/Catapult/projectile/projectile</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<shaderType>TransparentPostLight</shaderType>
+				</graphicData>
+				<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					<damageDef>Blunt</damageDef>
+					<damageAmountBase>20</damageAmountBase>
+					<armorPenetrationBase>0.7</armorPenetrationBase>
+					<ai_IsIncendiary>true</ai_IsIncendiary>
+				</projectile>
+				<comps>
+					<li Class="CombatExtended.CompProperties_ExplosiveCE">
+						<explosionDamage>23</explosionDamage>
+						<explosionDamageDef>Bomb</explosionDamageDef>
+						<explosionRadius>2</explosionRadius>
+						<fragments>
+							<Fragment_Shell>8</Fragment_Shell>
+						</fragments>
+						<soundExplode>MortarBomb_Explode</soundExplode>
+						<fragRange>5.0</fragRange>
+					</li>
+				</comps>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/RecipeDef[defName="Make_CatapultProjectile"]</xpath>
+		<value>
+			<RecipeDef>
+				<defName>MakeAmmo_StoneBall</defName>
+				<label>make catapult projectile</label>
+				<description>Make a projectile for a catapult</description>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>StoneBlocks</li>
+							</categories>
+						</filter>
+						<count>35</count>
+					</li>
+				</ingredients>
+				<fixedIngredientFilter>
+					<categories>
+						<li>StoneBlocks</li>
+					</categories>
+				</fixedIngredientFilter>
+				<specialProducts>
+					<li>Butchery</li>
+				</specialProducts>
+				<jobString>makes projectile for catapult</jobString>
+				<workAmount>900</workAmount>
+				<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+				<effectWorking>CutStone</effectWorking>
+				<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+				<products>
+					<Ammo_StoneBall>2</Ammo_StoneBall>
+				</products>
+				<recipeUsers>
+					<li>TableStonecutter</li>
+				</recipeUsers>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Ballista"]</xpath>
+		<value>
+			<ThingDef ParentName="TurretMannedBase">
+				<defName>Ballista</defName>
+				<label>Ballista</label>
+				<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+				<graphicData>
+					<texPath>Things/Buildings/Security/Ballista/Base</texPath>
+				</graphicData>
+				<statBases>
+					<MaxHitPoints>250</MaxHitPoints>
+					<WorkToMake>35000</WorkToMake>
+					<Mass>1000</Mass>
+					<Bulk>1000</Bulk>
+				</statBases>
+				<description>A massive weapon that uses huge arrows as projectiles. Slow, but for what kind of holes it leaves!</description>
+				<costList>
+					<WoodLog>250</WoodLog>
+					<ComponentIndustrial>3</ComponentIndustrial>
+					<Steel>35</Steel>
+				</costList>
+				<specialDisplayRadius>16</specialDisplayRadius>
+				<building>
+					<turretGunDef>Artillery_Ballista</turretGunDef>
+					<turretTopGraphicPath>Things/Buildings/Security/Ballista/Main</turretTopGraphicPath>
+					<turretTopDrawSize>4</turretTopDrawSize>
+				</building>
+				<size>(2,2)</size>
+				<minifiedDef>MinifiedThing</minifiedDef>
+				<designationCategory>Security</designationCategory>
+				<uiIconPath>Things/Buildings/Security/Ballista/Main</uiIconPath>
+				<uiIconScale>0.9</uiIconScale>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Artillery_Ballista"]</xpath>
+		<value>
+			<ThingDef ParentName="BaseTurretGun">
+				<defName>Artillery_Ballista</defName>
+				<description>A massive weapon that uses huge arrows as projectiles. Slow, but for what kind of holes it leaves!</description>
+				<weaponTags>
+					<li>Artillery_Medeival</li>
+				</weaponTags>
+				<label>Ballista</label>
+				<graphicData>
+					<texPath>Things/Buildings/Security/Ballista/Main</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<soundInteract>Bow_Large</soundInteract>
+				<statBases>
+					<MarketValue>300</MarketValue>
+					<SightsEfficiency>2.0</SightsEfficiency>
+					<ShotSpread>0.33</ShotSpread>
+					<SwayFactor>1.14</SwayFactor>
+					<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+				</statBases>
+				<verbs>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>Bullet_BigBalls</defaultProjectile>
+						<warmupTime>5</warmupTime>
+						<minRange>6</minRange>
+						<range>100</range>
+						<burstShotCount />
+						<soundCast>Bow_Large</soundCast>
+						<muzzleFlashScale>20</muzzleFlashScale>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+						</targetParams>
+						<recoilPattern>Mounted</recoilPattern>
+					</li>
+				</verbs>
+				<comps>
+					<li Class="CombatExtended.CompProperties_AmmoUser">
+						<magazineSize>1</magazineSize>
+						<reloadTime>7</reloadTime>
+						<spawnUnloaded>false</spawnUnloaded>
+						<ammoSet>AmmoSet_Ballista</ammoSet>
+					</li>
+					<li Class="CombatExtended.CompProperties_FireModes">
+						<aiAimMode>AimedShot</aiAimMode>
+					</li>
+				</comps>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Bullet_BigArrow"]</xpath>
+		<value>
+			<ThingDef Class="CombatExtended.AmmoDef" ParentName="BallistaAmmoBullet">
+				<defName>Bullet_BigArrow</defName>
+				<label>big metal arrow</label>
+				<graphicData>
+					<texPath>Things/Weapons/Avtomatons/harpoon</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<shaderType>TransparentPostLight</shaderType>
+					<drawSize>2</drawSize>
+				</graphicData>
+				<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					<damageDef>Cut</damageDef>
+					<damageAmountBase>35</damageAmountBase>
+					<armorPenetrationBase>0.7</armorPenetrationBase>
+					<ai_IsIncendiary>true</ai_IsIncendiary>
+				</projectile>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/RecipeDef[defName="Make_BallistaProjectile"]</xpath>
+		<value>
+			<RecipeDef>
+				<defName>MakeAmmo_BigStoneArrow</defName>
+				<label>make ballista projectile</label>
+				<description>Make a projectile for a ballista</description>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>StoneBlocks</li>
+							</categories>
+						</filter>
+						<count>20</count>
+					</li>
+					<li>
+						<filter>
+							<thingDefs>
+								<li>Steel</li>
+							</thingDefs>
+						</filter>
+						<count>10</count>
+					</li>
+				</ingredients>
+				<fixedIngredientFilter>
+					<categories>
+						<li>StoneBlocks</li>
+					</categories>
+				</fixedIngredientFilter>
+				<specialProducts>
+					<li>Butchery</li>
+				</specialProducts>
+				<jobString>makes projectile for ballista</jobString>
+				<workAmount>800</workAmount>
+				<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+				<effectWorking>CutStone</effectWorking>
+				<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+				<products>
+					<BigArrows>2</BigArrows>
+				</products>
+				<recipeUsers>
+					<li>TableStonecutter</li>
+				</recipeUsers>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="BigBalls"]</xpath>
+		<value>
+			<ThingDef Class="CombatExtended.AmmoDef" ParentName="CatapultAmmoBase">
+				<defName>BigBalls</defName>
+				<label>Stone ball</label>
+				<graphicData>
+					<texPath>Things/Buildings/Security/Catapult/projectile/projectile</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<statBases>
+					<MarketValue>0.5</MarketValue>
+				</statBases>
+				<ammoClass>MedeivalProjectiles</ammoClass>
+			</ThingDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="BigArrows"]</xpath>
+		<value>
+			<ThingDef Class="CombatExtended.AmmoDef" ParentName="BallistaAmmoBase">
+				<defName>BigArrows</defName>
+				<label>Big stone arrow</label>
+				<graphicData>
+					<texPath>Things/Weapons/Avtomatons/harpoon</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<statBases>
+					<MarketValue>0.5</MarketValue>
+				</statBases>
+				<ammoClass>MedeivalProjectiles</ammoClass>
+			</ThingDef>
+		</value>
+	</Operation>
+
 </Patch>

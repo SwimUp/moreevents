@@ -75,6 +75,10 @@ namespace MoreEvents.Events.ShipCrash
             Pawn t = caravan.PawnsListForReading[0];
             bool flag2 = !mapParent.HasMap;
             Verse.Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(mapParent.Tile, MapSize, null);
+            foreach(var a in orGenerateMap.areaManager.AllAreas)
+            {
+                Log.Message($"AREA --> {a.Label} --> {a} --> {a.TrueCount}");
+            }
             if (flag2)
             {
                 Find.TickManager.Notify_GeneratedPotentiallyHostileMap();

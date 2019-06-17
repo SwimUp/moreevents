@@ -7,4 +7,10 @@
   <AmmoTrashBombsPack.label>Trash bomb</AmmoTrashBombsPack.label>
   <AmmoTrashBombsPack.description>A large ball with a powerful magnet inside and surrounded by all sorts of rubbish. If you deactivate the magnet, then the fragments fly apart in all directions, making holes all around.</AmmoTrashBombsPack.description>
  
+  <AmmoStoneArrows.label>Big arrows</AmmoStoneArrows.label>
+  <AmmoStoneArrows.description>A large arrow made of stone and steel intended for a ballist.</AmmoStoneArrows.description>
+ 
+  <AmmoStoneBalls.label>Stone ball</AmmoStoneBalls.label>
+  <AmmoStoneBalls.description>A massive stone ball designed for catapults.</AmmoStoneBalls.description>
+ 
 </LanguageData>

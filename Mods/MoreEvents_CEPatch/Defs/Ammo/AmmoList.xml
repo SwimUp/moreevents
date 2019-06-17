@@ -5,9 +5,9 @@
 		<defName>AmmoHarpoonArrowPack</defName>
 		<label>harpoon arrows pack</label>
 		<parent>AmmoNeolithic</parent>
-        <iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
+		<iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
 	</ThingCategoryDef>
-	
+
 	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_HarpoonArrow</defName>
 		<label>harpoon arrows pack</label>
@@ -15,41 +15,41 @@
 			<Ammo_HarpoonArrow>Bullet_Energeticharpoon</Ammo_HarpoonArrow>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
-	
+
 	<ThingDef Class="CombatExtended.AmmoDef" Name="HarpoonArrowsBase" ParentName="NeolithicAmmoBase" Abstract="True">
 		<description>Massive arrows for harpoon</description>
 		<statBases>
-		  <Mass>0.4</Mass>
-		  <Bulk>0.2</Bulk>
+			<Mass>0.4</Mass>
+			<Bulk>0.2</Bulk>
 		</statBases>
 		<tradeTags>
-		  <li>CE_AutoEnableTrade</li>
-		  <li>CE_AutoEnableCrafting</li>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
 		</tradeTags>
 		<thingCategories>
-		  <li>AmmoHarpoonArrowPack</li>
+			<li>AmmoHarpoonArrowPack</li>
 		</thingCategories>
 		<stackLimit>15</stackLimit>
-    </ThingDef>
-	
+	</ThingDef>
+
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HarpoonArrowsBase">
 		<defName>Ammo_HarpoonArrow</defName>
 		<label>harpoon arrow</label>
 		<graphicData>
-		  <texPath>Things/Ammo/arrowpack</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Ammo/arrowpack</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		  <MarketValue>0.3</MarketValue>
+			<MarketValue>0.3</MarketValue>
 		</statBases>
 		<ammoClass>HarpoonArrows</ammoClass>
 	</ThingDef>
-  
+
 	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseArrowBullet" ParentName="BaseBullet" Abstract="true">
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-		  <speed>90</speed>
-		  <dropsCasings>false</dropsCasings>
-		  <flyOverhead>false</flyOverhead>
+			<speed>90</speed>
+			<dropsCasings>false</dropsCasings>
+			<flyOverhead>false</flyOverhead>
 		</projectile>
 	</ThingDef>
 
@@ -57,14 +57,14 @@
 		<defName>Bullet_Energeticharpoon</defName>
 		<label>harpoon arrow</label>
 		<graphicData>
-			  <texPath>Things/Weapons/Avtomatons/harpoon</texPath>
-			  <graphicClass>Graphic_Single</graphicClass>
-			  <shaderType>TransparentPostLight</shaderType>
-			  <drawSize>1.2</drawSize>
+			<texPath>Things/Weapons/Avtomatons/harpoon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.2</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-		  <damageDef>Cut</damageDef>
-		  <damageAmountBase>40</damageAmountBase>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>40</damageAmountBase>
 		</projectile>
 	</ThingDef>
 
@@ -73,36 +73,36 @@
 		<label>make harpoon ammo x10</label>
 		<description>Craft 10 harpoon arrows</description>
 		<jobString>Making harpoon arrows.</jobString>
-        <skillRequirements>
-          <Crafting>6</Crafting>
-        </skillRequirements>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
 		<ingredients>
-		  <li>
-			<filter>
-			  <thingDefs>
-				<li>Steel</li>
-			  </thingDefs>
-			</filter>
-			<count>50</count>
-		  </li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
-		  <thingDefs>
-			<li>Steel</li>
-		  </thingDefs>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-		  <Ammo_HarpoonArrow>10</Ammo_HarpoonArrow>
+			<Ammo_HarpoonArrow>10</Ammo_HarpoonArrow>
 		</products>
-  </RecipeDef>
+	</RecipeDef>
 
 	<ThingCategoryDef>
 		<defName>AmmoTrashBombsPack</defName>
 		<label>trash bomb pack</label>
 		<parent>AmmoNeolithic</parent>
-        <iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
+		<iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
 	</ThingCategoryDef>
-	
+
 	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_TrashBomb</defName>
 		<label>trash bomb pack</label>
@@ -110,32 +110,32 @@
 			<Ammo_TrashBomb>Bullet_TrashBomb</Ammo_TrashBomb>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
-	
+
 	<ThingDef Class="CombatExtended.AmmoDef" Name="TrashBombBase" ParentName="NeolithicAmmoBase" Abstract="True">
 		<description>Trash bomb for trashgun</description>
 		<statBases>
-		  <Mass>0.4</Mass>
-		  <Bulk>0.2</Bulk>
+			<Mass>0.4</Mass>
+			<Bulk>0.2</Bulk>
 		</statBases>
 		<tradeTags>
-		  <li>CE_AutoEnableTrade</li>
-		  <li>CE_AutoEnableCrafting</li>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
 		</tradeTags>
 		<thingCategories>
-		  <li>AmmoTrashBombsPack</li>
+			<li>AmmoTrashBombsPack</li>
 		</thingCategories>
 		<stackLimit>5</stackLimit>
-    </ThingDef>
-	
+	</ThingDef>
+
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="TrashBombBase">
 		<defName>Ammo_TrashBomb</defName>
 		<label>trash bomb</label>
 		<graphicData>
-		  <texPath>Things/Ammo/trashbomb</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Ammo/trashbomb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		  <MarketValue>0.9</MarketValue>
+			<MarketValue>0.9</MarketValue>
 		</statBases>
 		<ammoClass>TrashBombs</ammoClass>
 		<comps>
@@ -152,12 +152,12 @@
 			</li>
 		</comps>
 	</ThingDef>
-  
+
 	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseTrashBombBullet" ParentName="BaseBullet" Abstract="true">
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-		  <speed>45</speed>
-		  <dropsCasings>false</dropsCasings>
-		  <flyOverhead>false</flyOverhead>
+			<speed>45</speed>
+			<dropsCasings>false</dropsCasings>
+			<flyOverhead>false</flyOverhead>
 		</projectile>
 	</ThingDef>
 
@@ -165,16 +165,16 @@
 		<defName>Bullet_TrashBomb</defName>
 		<label>trash bomb</label>
 		<graphicData>
-		  <texPath>Things/Projectile/InfernoCannonShot</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
-		  <shaderType>TransparentPostLight</shaderType>
-		  <color>(179,179,179)</color>
+			<texPath>Things/Projectile/InfernoCannonShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(179,179,179)</color>
 		</graphicData>
 		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-		  <damageDef>Bullet</damageDef>
-		  <damageAmountBase>20</damageAmountBase>
-		  <armorPenetrationBase>3.0</armorPenetrationBase>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationBase>3.0</armorPenetrationBase>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
@@ -195,45 +195,124 @@
 		<label>make trash bombs x2</label>
 		<description>Craft 2 trash bombs</description>
 		<jobString>Making trash bombs</jobString>
-        <skillRequirements>
-          <Crafting>7</Crafting>
-        </skillRequirements>
+		<skillRequirements>
+			<Crafting>7</Crafting>
+		</skillRequirements>
 		<ingredients>
-		  <li>
-			<filter>
-			  <thingDefs>
-				<li>Steel</li>
-			  </thingDefs>
-			</filter>
-			<count>15</count>
-		  </li>
-		  <li>
-			<filter>
-			  <thingDefs>
-				<li>ChunkSlagSteel</li>
-			  </thingDefs>
-			</filter>
-			<count>1</count>
-		  </li>
-		  <li>
-			<filter>
-			  <thingDefs>
-				<li>ComponentIndustrial</li>
-			  </thingDefs>
-			</filter>
-			<count>2</count>
-		  </li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkSlagSteel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
-		  <thingDefs>
-			<li>Steel</li>
-			<li>ChunkSlagSteel</li>
-			<li>ComponentIndustrial</li>
-		  </thingDefs>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ChunkSlagSteel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-		  <Ammo_TrashBomb>2</Ammo_TrashBomb>
+			<Ammo_TrashBomb>2</Ammo_TrashBomb>
 		</products>
-  </RecipeDef>
-  
+	</RecipeDef>
+
+	<ThingCategoryDef>
+		<defName>AmmoStoneBalls</defName>
+		<label>catapult balls</label>
+		<parent>AmmoNeolithic</parent>
+	</ThingCategoryDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Catapult</defName>
+		<label>catapult balls</label>
+		<ammoTypes>
+			<BigBalls>Bullet_BigBalls</BigBalls>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="CatapultAmmoBase" ParentName="NeolithicAmmoBase" Abstract="True">
+		<description>Fired from catapults, explode on impact.</description>
+		<statBases>
+			<Mass>20</Mass>
+			<Bulk>20</Bulk>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoStoneBalls</li>
+		</thingCategories>
+		<stackLimit>5</stackLimit>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="CatapultAmmoBullet" ParentName="BaseBullet" Abstract="true">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>40</speed>
+			<dropsCasings>false</dropsCasings>
+			<flyOverhead>false</flyOverhead>
+		</projectile>
+	</ThingDef>
+	
+	<ThingCategoryDef>
+		<defName>AmmoStoneArrows</defName>
+		<label>ballista arrows</label>
+		<parent>AmmoNeolithic</parent>
+	</ThingCategoryDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Ballista</defName>
+		<label>big stone arrows</label>
+		<ammoTypes>
+			<BigArrows>Bullet_BigArrow</BigArrows>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BallistaAmmoBase" ParentName="NeolithicAmmoBase" Abstract="True">
+		<description>Big stone arrows with a metal tip</description>
+		<statBases>
+			<Mass>16</Mass>
+			<Bulk>15</Bulk>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoStoneArrows</li>
+		</thingCategories>
+		<stackLimit>5</stackLimit>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BallistaAmmoBullet" ParentName="BaseBullet" Abstract="true">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>85</speed>
+			<dropsCasings>false</dropsCasings>
+			<flyOverhead>false</flyOverhead>
+		</projectile>
+	</ThingDef>
 </Defs>

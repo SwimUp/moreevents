@@ -15,4 +15,11 @@
     <description>A large ball with a powerful magnet inside and surrounded by all sorts of rubbish. If you deactivate the magnet, then the fragments fly apart in all directions, making holes all around.</description>
   </CombatExtended.AmmoCategoryDef>
   
+  <CombatExtended.AmmoCategoryDef>
+    <defName>MedeivalProjectiles</defName>
+    <label>medeival projectiles</label>
+    <labelShort>CW</labelShort>
+    <description>Medeival projectiles</description>
+  </CombatExtended.AmmoCategoryDef>
+  
 </Defs>

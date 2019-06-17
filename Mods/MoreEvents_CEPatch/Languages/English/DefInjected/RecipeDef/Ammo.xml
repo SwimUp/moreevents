@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <MakeAmmo_HarpoonArrow.label>Make harpoon arrows x10</MakeAmmo_HarpoonArrow.label>
-  <MakeAmmo_HarpoonArrow.description>Make 10 harpoon arrows</MakeAmmo_HarpoonArrow.description>
-  <MakeAmmo_HarpoonArrow.jobString>Making harpoon arrows</MakeAmmo_HarpoonArrow.jobString>
-  
-  <MakeAmmo_TrashBomb.label>Make trash bombs x2</MakeAmmo_TrashBomb.label>
-  <MakeAmmo_TrashBomb.description>make 2 trash bombs</MakeAmmo_TrashBomb.description>
-  <MakeAmmo_TrashBomb.jobString>Making trash bombs</MakeAmmo_TrashBomb.jobString>
-  
+	<MakeAmmo_HarpoonArrow.label>Make harpoon arrows x10</MakeAmmo_HarpoonArrow.label>
+	<MakeAmmo_HarpoonArrow.description>Make 10 harpoon arrows</MakeAmmo_HarpoonArrow.description>
+	<MakeAmmo_HarpoonArrow.jobString>Making harpoon arrows</MakeAmmo_HarpoonArrow.jobString>
+
+	<MakeAmmo_TrashBomb.label>Make trash bombs x2</MakeAmmo_TrashBomb.label>
+	<MakeAmmo_TrashBomb.description>make 2 trash bombs</MakeAmmo_TrashBomb.description>
+	<MakeAmmo_TrashBomb.jobString>Making trash bombs</MakeAmmo_TrashBomb.jobString>
+
+	<MakeStoneBall.label>Make shells for catapult x2</MakeStoneBall.label>
+	<MakeStoneBall.description>Make massive stone balls for a catapult</MakeStoneBall.description>
+	<MakeStoneBall.jobString>Making shells for catapult</MakeStoneBall.jobString>
+
+	<MakeBigStoneArrow.label>Make arrows for ballista х2</MakeBigStoneArrow.label>
+	<MakeBigStoneArrow.description>Make big arrows for a catapult</MakeBigStoneArrow.description>
+	<MakeBigStoneArrow.jobString>Making big arrows for a catapult</MakeBigStoneArrow.jobString>
+	
 </LanguageData>

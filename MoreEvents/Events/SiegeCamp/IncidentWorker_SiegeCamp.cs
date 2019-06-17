@@ -45,7 +45,7 @@ namespace MoreEvents.Events.SiegeCamp
                 site.SetMap(map);
                 Find.WorldObjects.Add(site);
 
-                SendStandardLetter();
+                SendStandardLetter(site);
 
                 return true;
             }
@@ -66,7 +66,7 @@ namespace MoreEvents.Events.SiegeCamp
         private int GetPlace(Map map)
         {
             int playerTile = map.Tile;
-            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 7, 13, out int result);
+            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 3, 6, out int result);
 
             return result;
         }

@@ -8,6 +8,7 @@
     <expandingIconPriority>70</expandingIconPriority>
     <comps>
       <li Class="MoreEvents.Events.ShipCrash.Map.ShipWorldObjectCompProp_Main" />
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
     </comps>
     <IncidentTargetTags>
       <li>Map_Misc</li>
@@ -42,6 +43,7 @@
     <expandingIconPriority>100</expandingIconPriority>
     <comps>
       <li Class="MoreEvents.Events.ClimateBomb.ClimateBombComp_Main" />
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
     </comps>
     <IncidentTargetTags>
       <li>Map_Misc</li>
@@ -59,6 +61,7 @@
     <expandingIconPriority>100</expandingIconPriority>
     <comps>
       <li Class="MoreEvents.Events.SiegeCamp.SiegeCampSiteComp_Main" />
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
     </comps>
     <IncidentTargetTags>
       <li>Map_Misc</li>
@@ -76,6 +79,7 @@
     <expandingIconPriority>100</expandingIconPriority>
     <comps>
       <li Class="MoreEvents.Events.AttackFriendlySettlement.FriendlySettlementComp_Main" />
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
     </comps>
     <IncidentTargetTags>
       <li>Map_Misc</li>

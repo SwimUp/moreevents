@@ -73,7 +73,7 @@ namespace MoreEvents.Events.MassiveFire
             site.RootMap = map;
             Find.WorldObjects.Add(site);
 
-            SendStandardLetter();
+            SendStandardLetter(site);
 
             return true;
         }

@@ -44,7 +44,7 @@ namespace MoreEvents.Events.ClimateBomb
             site.GetComponent<ClimateBombComp>().SetTimer();
             Find.WorldObjects.Add(site);
 
-            SendStandardLetter();
+            SendStandardLetter(site);
 
             return true;
         }
