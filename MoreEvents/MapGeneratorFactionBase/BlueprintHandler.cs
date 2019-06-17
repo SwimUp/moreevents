@@ -24,7 +24,7 @@ namespace MapGenerator
         public static Dictionary<Pawn, LordType> allSpawnedPawns;
         public static HashSet<Room> rooms;
 
-        public static void CreateBlueprintAt(IntVec3 c, Map map, MapGeneratorBaseBlueprintDef blueprint, Faction faction, ThingDef wallStuff, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false, bool useAdditionThreat = false, float additionalPoints = 0f)
+        public static void CreateBlueprintAt(IntVec3 c, Map map, BaseBlueprintDef blueprint, Faction faction, ThingDef wallStuff, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false, bool useAdditionThreat = false, float additionalPoints = 0f)
         {
             pawns = null;
             totalThreat = 0;
@@ -152,7 +152,7 @@ namespace MapGenerator
 
 
 
-        private static void MakeBlueprintObject(Map map, Faction faction, CellRect mapRect, MapGeneratorBaseBlueprintDef blueprint, ThingDef stuffDef, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false, bool useAddtionalThreat = false, float additionalPoints = 0f)
+        private static void MakeBlueprintObject(Map map, Faction faction, CellRect mapRect, BaseBlueprintDef blueprint, ThingDef stuffDef, out Dictionary<Pawn, LordType> pawns, out float totalThreat, bool useOneFaction = false, bool useAddtionalThreat = false, float additionalPoints = 0f)
         {
             blueprint.buildingData = GetCleanedBlueprintData(blueprint.buildingData);
             blueprint.nonbuildingData = GetCleanedBlueprintData(blueprint.nonbuildingData);
@@ -367,7 +367,7 @@ namespace MapGenerator
 
 
         // 1st step: Get the TerrainDef of the position from the FloorData of the blueprint.
-        private static ThingData TryGetTerrainDefFromFloorData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetTerrainDefFromFloorData(BaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.floorData == null || blueprint.floorData.Count() - 1 < itemPos ||
                     blueprint.floorLegend == null)
@@ -383,7 +383,7 @@ namespace MapGenerator
         }
 
         // 2nd step: Get the ThingDef of the position from the BuildingData of the blueprint.
-        private static ThingData TryGetThingDefFromBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetThingDefFromBuildingData(BaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.buildingData == null || blueprint.buildingData.Count() - 1 < itemPos ||
                     blueprint.buildingLegend == null)
@@ -398,7 +398,7 @@ namespace MapGenerator
             return blueprint.buildingLegend[key];
         }
         // 2nd step (b): Get the Rotation of the position from the BuildingData of the blueprint.
-        private static Rot4 TryGetRotationFromBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static Rot4 TryGetRotationFromBuildingData(BaseBlueprintDef blueprint, int itemPos)
         {
             // Using buildingData and rotationLegend here..
             if (blueprint.buildingData == null || blueprint.buildingData.Count() - 1 < itemPos ||
@@ -415,7 +415,7 @@ namespace MapGenerator
         }
 
         // 3rd step: Get the ThingDef of the position from the Non-BuildingData of the blueprint.
-        private static ThingData TryGetThingDefFromNonBuildingData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetThingDefFromNonBuildingData(BaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.nonbuildingData == null || blueprint.nonbuildingData.Count() - 1 < itemPos ||
                     blueprint.nonbuildingLegend == null)
@@ -431,7 +431,7 @@ namespace MapGenerator
         }
 
         // 4th step: Get the ThingDef of the position from the ItemData of the blueprint.
-        private static ThingData TryGetItemDefFromItemData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetItemDefFromItemData(BaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.itemData == null || blueprint.itemData.Count() - 1 < itemPos ||
                     blueprint.itemLegend == null)
@@ -447,7 +447,7 @@ namespace MapGenerator
         }
 
         // 5th step: Get the PawnKindDef of the position from the PawnData of the blueprint.
-        private static ThingData TryGetPawnKindDefFromPawnData(MapGeneratorBaseBlueprintDef blueprint, int itemPos)
+        private static ThingData TryGetPawnKindDefFromPawnData(BaseBlueprintDef blueprint, int itemPos)
         {
             if (blueprint.pawnData == null || blueprint.pawnData.Count() - 1 < itemPos ||
                     blueprint.pawnLegend == null)

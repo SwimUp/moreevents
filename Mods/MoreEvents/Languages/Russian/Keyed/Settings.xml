@@ -88,4 +88,7 @@
   <SiegeCamp_Title>Осадный лагерь</SiegeCamp_Title>
   <SiegeCamp_Desc>Недалеко от вас был разбит вражеский лагерь. Они будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы его не уничтожите.</SiegeCamp_Desc>
   
+  <AttackFriendlySettlement_Title>Нападение на дружественное поселение</AttackFriendlySettlement_Title>
+  <AttackFriendlySettlement_Desc></AttackFriendlySettlement_Desc>
+  
 </LanguageData>

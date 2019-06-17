@@ -16,13 +16,16 @@ namespace MoreEvents.Events.ClimateBomb
 
         public Building_ClimateBomb Bomb => Comp.Bomb;
 
+        public ClimateBombSite()
+        {
+            RemoveAfterLeave = false;
+        }
+
         public override void SpawnSetup()
         {
             base.SpawnSetup();
 
             Comp = GetComponent<ClimateBombComp>();
-
-            RemoveAfterLeave = false;
 
             caravanAction = new CaravanVisitAction_ClimateBomb(this);
         }

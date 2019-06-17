@@ -10,4 +10,8 @@
   <SiegeCampSite.label>Siege Camp</SiegeCampSite.label>
   <SiegeCampSite.description>Here is located the enemy camp. They will bombard our settlement and raid until we destroy it.</SiegeCampSite.description>
  
+  <FriendlySettlementHelp.label>Spot raid</FriendlySettlementHelp.label>
+  <FriendlySettlementHelp.description>The place where the attack will be made.</FriendlySettlementHelp.description>
+ 
+ 
 </LanguageData>

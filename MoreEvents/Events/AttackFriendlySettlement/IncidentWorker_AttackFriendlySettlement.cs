@@ -40,8 +40,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             site.Tile = factionBase.Tile;
             site.SetFaction(faction);
             var comp = site.GetComponent<FriendlySettlementComp>();
-            //comp.TicksToAttack = Rand.Range(8, 15) * 60000;
-            comp.TicksToAttack = 60000;
+            comp.TicksToAttack = Rand.Range(8, 15) * 60000;
             comp.OffensiveFaction = faction2;
             comp.InitPoints();
             Find.WorldObjects.Add(site);

@@ -36,7 +36,7 @@
 		<defName>Ammo_HarpoonArrow</defName>
 		<label>harpoon arrow</label>
 		<graphicData>
-		  <texPath>Things/Ammo/Raygun</texPath>
+		  <texPath>Things/Ammo/arrowpack</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -69,7 +69,7 @@
 	</ThingDef>
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_HarpoonAmmo</defName>
+		<defName>MakeAmmo_HarpoonArrow</defName>
 		<label>make harpoon ammo x10</label>
 		<description>Craft 10 harpoon arrows</description>
 		<jobString>Making harpoon arrows.</jobString>
@@ -96,7 +96,6 @@
 		</products>
   </RecipeDef>
 
-	<!-- TRASH GUN -->
 	<ThingCategoryDef>
 		<defName>AmmoTrashBombsPack</defName>
 		<label>trash bomb pack</label>
@@ -123,7 +122,7 @@
 		  <li>CE_AutoEnableCrafting</li>
 		</tradeTags>
 		<thingCategories>
-		  <li>AmmoTrashGunPack</li>
+		  <li>AmmoTrashBombsPack</li>
 		</thingCategories>
 		<stackLimit>5</stackLimit>
     </ThingDef>
@@ -132,13 +131,26 @@
 		<defName>Ammo_TrashBomb</defName>
 		<label>trash bomb</label>
 		<graphicData>
-		  <texPath>Things/Ammo/Raygun</texPath>
+		  <texPath>Things/Ammo/trashbomb</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
 		  <MarketValue>0.9</MarketValue>
 		</statBases>
 		<ammoClass>TrashBombs</ammoClass>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<explosionDamage>20</explosionDamage>
+				<explosionDamageDef>Bomb</explosionDamageDef>
+				<explosionRadius>4</explosionRadius>
+				<fragRange>6</fragRange>
+				<fragments>
+					<Fragment_RocketFrag>55</Fragment_RocketFrag>
+				</fragments>
+				<soundExplode>MortarBomb_Explode</soundExplode>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
 	</ThingDef>
   
 	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseTrashBombBullet" ParentName="BaseBullet" Abstract="true">
@@ -151,25 +163,35 @@
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTrashBombBullet">
 		<defName>Bullet_TrashBomb</defName>
-		<label>harpoon arrow</label>
+		<label>trash bomb</label>
 		<graphicData>
 		  <texPath>Things/Projectile/InfernoCannonShot</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>TransparentPostLight</shaderType>
 		  <color>(179,179,179)</color>
 		</graphicData>
-	    <thingClass>MoreEvents.Things.Projectiles.Bullet_TrashGun</thingClass>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-		  <damageDef>Cut</damageDef>
+		  <damageDef>Bullet</damageDef>
 		  <damageAmountBase>20</damageAmountBase>
-		  <speed>45</speed>
-		  <explosionRadius>6.0</explosionRadius>
-		  <ai_IsIncendiary>true</ai_IsIncendiary>
+		  <armorPenetrationBase>3.0</armorPenetrationBase>
 		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<explosionDamage>170</explosionDamage>
+				<explosionDamageDef>Bomb</explosionDamageDef>
+				<explosionRadius>4</explosionRadius>
+				<fragments>
+					<Fragment_RocketFrag>55</Fragment_RocketFrag>
+				</fragments>
+				<soundExplode>MortarBomb_Explode</soundExplode>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_TrashGunAmmo</defName>
+		<defName>MakeAmmo_TrashBomb</defName>
 		<label>make trash bombs x2</label>
 		<description>Craft 2 trash bombs</description>
 		<jobString>Making trash bombs</jobString>
@@ -213,5 +235,5 @@
 		  <Ammo_TrashBomb>2</Ammo_TrashBomb>
 		</products>
   </RecipeDef>
-
+  
 </Defs>

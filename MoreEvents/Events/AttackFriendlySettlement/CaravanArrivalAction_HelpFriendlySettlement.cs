@@ -30,7 +30,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             Map map = Current.Game.FindMap(tile);
             if (map == null)
             {
-                MapParent mapParent = MapParentAt(tile).Where(p => !(p is Settlement)).FirstOrDefault();
+                MapParent mapParent = MapParentAt(tile).Where(p => p is FriendlySettlement).FirstOrDefault();
                 if (mapParent == null)
                 {
                     if (suggestedMapParentDef == null)

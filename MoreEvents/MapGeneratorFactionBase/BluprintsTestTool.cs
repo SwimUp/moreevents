@@ -39,7 +39,7 @@ namespace MoreEvents.MapGeneratorFactionBase
             {
                 resizeable = false;
 
-                defSize = DefDatabase<MapGeneratorBaseBlueprintDef>.AllDefsListForReading.Count;
+                defSize = DefDatabase<BaseBlueprintDef>.AllDefsListForReading.Count;
             }
 
             public override void DoWindowContents(Rect inRect)
@@ -53,7 +53,7 @@ namespace MoreEvents.MapGeneratorFactionBase
                 Rect scrollVertRectFact = new Rect(0, 0, scrollRectFact.x, size);
                 Widgets.BeginScrollView(scrollRectFact, ref scrollPosition, scrollVertRectFact);
 
-                foreach (var def in DefDatabase<MapGeneratorBaseBlueprintDef>.AllDefs)
+                foreach (var def in DefDatabase<BaseBlueprintDef>.AllDefs)
                 {
                     if(Widgets.ButtonText(new Rect(0, y, 170, 20), def.defName))
                     {

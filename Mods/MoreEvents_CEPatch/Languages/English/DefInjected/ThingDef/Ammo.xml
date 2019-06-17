@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Ammo_HarpoonArrow.label>Harpoon arrow</Ammo_HarpoonArrow.label>
+  <Ammo_HarpoonArrow.description>Massive arrows for harpoon</Ammo_HarpoonArrow.description>
+  
+  <Ammo_TrashBomb.label>Trash bomb</Ammo_TrashBomb.label>
+  <Ammo_TrashBomb.description>A large ball with a powerful magnet inside and surrounded by all sorts of rubbish. If you deactivate the magnet, then the fragments fly apart in all directions, making holes all around.</Ammo_TrashBomb.description>
+
+</LanguageData>

@@ -33,6 +33,8 @@ namespace MoreEvents.Events.AttackFriendlySettlement
         private bool attackStarted => !Enable && !settlement.AttackRepelled && enemyPawns.Count > 0;
         public readonly FloatRange RewardMarketValueRange = new FloatRange(150, 600);
 
+        private string blueprintsPattern => $"FriendlyFBByLevel_{(int)settlement.Faction.def.techLevel}";
+
         public override void Initialize(WorldObjectCompProperties props)
         {
             base.Initialize(props);
@@ -74,7 +76,9 @@ namespace MoreEvents.Events.AttackFriendlySettlement
         {
             base.PostMapGenerate();
 
-            BlueprintHandler.CreateBlueprintAt(settlement.Map.Center, settlement.Map, BlueprintDefOfLocal.SiegeCampBase1_1, settlement.Faction, null, out Dictionary<Pawn, LordType> pawns, out float totalThreat, true);
+            BaseBlueprintDef basePrint = GetBaseBlueprint();
+
+            BlueprintHandler.CreateBlueprintAt(settlement.Map.Center, settlement.Map, basePrint, settlement.Faction, null, out Dictionary<Pawn, LordType> pawns, out float totalThreat, true);
             foreach (var p in pawns.Keys)
             {
                 friendlyPawns.Add(p);
@@ -90,6 +94,16 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             {
                 ShowHelp();
             }
+        }
+
+        private BaseBlueprintDef GetBaseBlueprint()
+        {
+            BaseBlueprintDef print = DefDatabase<BaseBlueprintDef>.AllDefs.Where(b => b.Categories != null && b.Categories.Contains(blueprintsPattern)).RandomElement();
+
+            if (print == null)
+                print = BlueprintDefOfLocal.SiegeCampBase2_1;
+
+            return print;
         }
 
         private void ShowHelp()

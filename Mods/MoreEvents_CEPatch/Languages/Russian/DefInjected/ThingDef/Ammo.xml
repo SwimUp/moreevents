@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Ammo_HarpoonArrow.label>Стрела для гарпуна</Ammo_HarpoonArrow.label>
+  <Ammo_HarpoonArrow.description>Массивные стрелы для гарпуна</Ammo_HarpoonArrow.description>
+  
+  <Ammo_TrashBomb.label>Мусорная бомба</Ammo_TrashBomb.label>
+  <Ammo_TrashBomb.description>Большой шар с мощным магнитом внутри и окруженный разного рода хламом. Если деактивировать магнит, то осколки разлетаются во все стороны продырявливая все вокруг</Ammo_TrashBomb.description>
+
+</LanguageData>

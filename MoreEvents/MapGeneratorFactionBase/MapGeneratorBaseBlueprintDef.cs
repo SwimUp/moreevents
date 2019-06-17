@@ -11,7 +11,7 @@ namespace MapGenerator
         Attack
     }
 
-    public class MapGeneratorBaseBlueprintDef : Def
+    public class BaseBlueprintDef : Def
     {
         public bool mapCenterBlueprint = true;
         public string createdBy;
@@ -37,5 +37,8 @@ namespace MapGenerator
         public float ThreatsPoints = 0f;
         public bool UseAdditionalThreat = false;
         public bool FogRooms = true;
+
+        [NoTranslate]
+        public List<string> Categories;
     }
 }

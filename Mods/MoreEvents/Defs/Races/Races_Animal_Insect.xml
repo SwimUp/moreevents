@@ -36,12 +36,12 @@
     </tools>
     <race>
       <body>BeetleLikeWithClaw</body>
-      <baseHungerRate>0.25</baseHungerRate>
+      <baseHungerRate>0.4</baseHungerRate>
       <baseBodySize>0.8</baseBodySize>
       <baseHealthScale>1.7</baseHealthScale>
       <gestationPeriodDays>12</gestationPeriodDays>
       <useMeatFrom>Megaspider</useMeatFrom>
-      <wildness>0.95</wildness>
+      <wildness>1</wildness>
       <lifeExpectancy>6</lifeExpectancy>
       <lifeStageAges>
         <li>
@@ -156,12 +156,12 @@
     </tools>
     <race>
       <body>BeetleLikeWithClaw</body>
-      <baseHungerRate>0.35</baseHungerRate>
+      <baseHungerRate>0.6</baseHungerRate>
       <baseBodySize>1.2</baseBodySize>
       <baseHealthScale>2.5</baseHealthScale>
       <gestationPeriodDays>12</gestationPeriodDays>
       <meatLabel>insect meat</meatLabel>
-      <wildness>0.95</wildness>
+      <wildness>1</wildness>
       <lifeExpectancy>6</lifeExpectancy>
       <lifeStageAges>
         <li>

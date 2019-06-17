@@ -1,27 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<MapGenerator.MapGeneratorBaseBlueprintDef Name="TODO_enter_a_name_here">
+	<MapGenerator.BaseBlueprintDef Name="TODO_enter_a_name_here">
 		<defName>FactionBaseNeolith_1</defName>
 		<createdBy>FunkyShit</createdBy>
 		<size>(32, 29)</size>
+		<Categories>
+			<li>FriendlyFBByLevel_2</li>
+		</Categories>
 		<canHaveHoles>False</canHaveHoles>
 		<createTrigger>False</createTrigger>
+		<FogRooms>false</FogRooms>
 		<buildingData>
 ..baaaaaaaaaaaaaaa..............
-..b..bbbbbbbbbbbbb..............
-..b..b.f.b.f.b.f.b..............
-..b..b...b...b...b..............
-..b..b...b...b...b..............
-..b..bd.dbd.dbd.db..............
-..b..bbebbbebbbebba..abbbbbbbbba
-.........b...b........bi..nnnnba
-......................b...m.m.ba
-......................b...llllba
-......................h.......ba
-......................b.......ba
-......................b.......ba
-......................bi..k.o.ba
-......................bbbbbbbbba
+..b..zzzzzzzzzzzzz..............
+..b..z.f.z.f.z.f.z..............
+..b..z...z...z...z..............
+..b..z...z...z...z..............
+..b..zd.dzd.dzd.dz..............
+..b..zzezzbezzzezza..azzzzzzzzza
+.........b...b........zi..nnnnza
+......................z...m.m.za
+......................z...llllza
+......................h.......za
+......................z.......za
+......................z.......za
+......................zi..k.o.za
+......................zzzzzzzzza
 ..............................a.
 ................................
 ................................
@@ -48,7 +52,24 @@
 				<key>b</key>
 				<value>
 					<Thing>Wall</Thing>
-					<Stuff>BlocksGranite</Stuff>
+					<Stuff>
+						<li>
+							<key>BlocksGranite</key>
+							<value>1</value>
+						</li>
+					</Stuff>
+				</value>
+			</li>
+			<li>
+				<key>z</key>
+				<value>
+					<Thing>Wall</Thing>
+					<Stuff>
+						<li>
+							<key>WoodLog</key>
+							<value>1</value>
+						</li>
+					</Stuff>
 				</value>
 			</li>
 			<li>
@@ -227,13 +248,13 @@ aaaaaaaaaaa.aa.aaa..a.......aaa.
 			<li>
 				<key>a</key>
 				<value>
-					<Thing>TileGranite</Thing>
+					<Terrain>TileGranite</Terrain>
 				</value>
 			</li>
 			<li>
 				<key>b</key>
 				<value>
-					<Thing>WoodPlankFloor</Thing>
+					<Terrain>WoodPlankFloor</Terrain>
 				</value>
 			</li>
 		</floorLegend>
@@ -262,22 +283,100 @@ aaaaaaaaaaa.aa.aaa..a.......aaa.
 ..a.......b..........b..........
 ..a.......bg.........b..........
 ..a.......b..........b....b...b.
-..a.......b..........b..........
-..a.......b..........b....j.....
-..a.......b..........b..........
+..a.......b11...22.33b..........
+..a.......b11....2.33b....j.....
+..a.......b11....2.33b..........
 ..aaaaaaaabbbbbbbbbbbb....b...b.
 .........aaaaaaaaaaaaa..........
 </itemData>
 		<itemLegend>
 			<li>
 				<key>1</key>
-				<value>BlocksGranite
-					
+				<value>
+					<Thing>BlocksGranite</Thing>
+					<Count>
+						<min>30</min>
+						<max>60</max>
+					</Count>
+					<Chance>0.65</Chance>
 				</value>
-				
+			</li>
+			<li>
+				<key>2</key>
+				<value>
+					<Thing>Pemmican</Thing>
+					<Count>
+						<min>15</min>
+						<max>30</max>
+					</Count>
+					<Chance>0.8</Chance>
+				</value>
+			</li>
+			<li>
+				<key>3</key>
+				<value>
+					<Thing>RawPotatoes</Thing>
+					<Count>
+						<min>30</min>
+						<max>75</max>
+					</Count>
+					<Chance>0.8</Chance>
+				</value>
 			</li>
 		</itemLegend>
 		<pawnData>
+..baaaaaaaaaaaaaaa..............
+..b..bbbbbbbbbbbbb..............
+..b..b.f.b.f.b.f.b..............
+..b..b...b...b...b..............
+..b..b...b...b...b.....2........
+..b..bd.dbd.dbd.db..............
+..b..bbebbbebbbebba..abbbbbbbbba
+.........b...b........bi..nnnnba
+......................b...m.m.ba
+........3.............b...llllba
+..................2...h...1...ba
+......................b.......ba
+......................b.1.....ba
+......................bi..k.o.ba
+......................bbbbbbbbba
+..............................a.
+................................
+................................
+......3.......................a.
+..a.......................b...b.
+..a...c...bbbbbebbbbbb..........
+..a.......b.......2..b..........
+..a.......bg.........b...2......
+..a.......b..........b....b...b.
+..a.......b..........b..........
+..a.......b..........b....j.....
+..a.......b..........b..........
+..aaaaaaaabbbbbbbbbbbb....b...b.
+.........aaaaaaaaaaaaa..........
+</pawnData>
+		<pawnLegend>
+			<li>
+				<key>1</key>
+				<value>
+					<Kind>Tribal_Penitent</Kind>
+				</value>
+			</li>
+			<li>
+				<key>2</key>
+				<value>
+					<Kind>Tribal_Archer</Kind>
+				</value>
+			</li>
+			<li>
+				<key>3</key>
+				<value>
+					<Kind>Tribal_Warrior</Kind>
+				</value>
+			</li>
+		</pawnLegend>
+		
+<nonbuildingData>
 ..baaaaaaaaaaaaaaa..............
 ..b..bbbbbbbbbbbbb..............
 ..b..b.f.b.f.b.f.b..............
@@ -298,21 +397,24 @@ aaaaaaaaaaa.aa.aaa..a.......aaa.
 ................................
 ..............................a.
 ..a.......................b...b.
-..a...c...bbbbbebbbbbb..........
-..a.......b..........b..........
-..a.......bg.........b..........
-..a.......b..........b....b...b.
-..a.......b..........b..........
-..a.......b..........b....j.....
-..a.......b..........b..........
+..a...c...bbbbbebbbbbb.....111..
+..a.......b..........b.....111..
+..a.......bg.........b.....111..
+..a.......b..........b....b111b.
+..a.......b..........b.....111..
+..a.......b..........b....j111..
+..a.......b..........b.....111..
 ..aaaaaaaabbbbbbbbbbbb....b...b.
 .........aaaaaaaaaaaaa..........
-</pawnData>
-		<pawnLegend>
-			<li>
-				<key>x</key>
-				<value>Mercenary_Elite</value>
+</nonbuildingData>
+		<nonbuildingLegend>
+		<li>
+				<key>1</key>
+				<value>
+					<Thing>Plant_Potato</Thing>
+				</value>
 			</li>
-		</pawnLegend>
-	</MapGenerator.MapGeneratorBaseBlueprintDef>
+		</nonbuildingLegend>
+		
+	</MapGenerator.BaseBlueprintDef>
 </Defs>

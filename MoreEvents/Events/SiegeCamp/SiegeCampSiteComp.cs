@@ -14,7 +14,7 @@ namespace MoreEvents.Events.SiegeCamp
 {
     public class SiegeCampSiteComp : WorldObjectComp
     {
-        private MapGeneratorBaseBlueprintDef[] level1Generators = new MapGeneratorBaseBlueprintDef[]
+        private BaseBlueprintDef[] level1Generators = new BaseBlueprintDef[]
         {
                     BlueprintDefOfLocal.SiegeCampBase1_1,
                     BlueprintDefOfLocal.SiegeCampBase1_2,
@@ -22,7 +22,7 @@ namespace MoreEvents.Events.SiegeCamp
                     BlueprintDefOfLocal.SiegeCampBase1_4,
                     BlueprintDefOfLocal.SiegeCampBase1_5
         };
-        private MapGeneratorBaseBlueprintDef[] level2Generators = new MapGeneratorBaseBlueprintDef[]
+        private BaseBlueprintDef[] level2Generators = new BaseBlueprintDef[]
         {
                     BlueprintDefOfLocal.SiegeCampBase2_1,
                     BlueprintDefOfLocal.SiegeCampBase2_2,
@@ -30,7 +30,7 @@ namespace MoreEvents.Events.SiegeCamp
                     BlueprintDefOfLocal.SiegeCampBase2_4,
                     BlueprintDefOfLocal.SiegeCampBase2_5
         };
-        private MapGeneratorBaseBlueprintDef[] level3Generators = new MapGeneratorBaseBlueprintDef[]
+        private BaseBlueprintDef[] level3Generators = new BaseBlueprintDef[]
         {
                     BlueprintDefOfLocal.SiegeCampBase3_1,
                     BlueprintDefOfLocal.SiegeCampBase3_2,
@@ -44,7 +44,7 @@ namespace MoreEvents.Events.SiegeCamp
         };
         private int siegeCampLevel = 0;
         private readonly int maxLevel = 2;
-        private MapGeneratorBaseBlueprintDef baseBlueprint
+        private BaseBlueprintDef baseBlueprint
         {
             get
             {

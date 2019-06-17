@@ -88,4 +88,7 @@
   <SiegeCamp_Title>Siege camp</SiegeCamp_Title>
   <SiegeCamp_Desc>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</SiegeCamp_Desc>
   
+  <AttackFriendlySettlement_Title>Attack on a friendly settlement</AttackFriendlySettlement_Title>
+  <AttackFriendlySettlement_Desc></AttackFriendlySettlement_Desc>
+  
 </LanguageData>

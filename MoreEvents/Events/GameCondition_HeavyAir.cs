@@ -11,6 +11,8 @@ namespace MoreEvents.Events
 
         public override void Init()
         {
+            base.Init();
+
             if (!settings.Active)
             {
                 End();
@@ -21,6 +23,8 @@ namespace MoreEvents.Events
             WeatherDef fog = WeatherDefOfLocal.HardFog;
             fog.durationRange = new IntRange(Duration, Duration + 1000);
             map.weatherManager.TransitionTo(fog);
+
+            Log.Message($"{Duration}");
         }
 
         public override void End()

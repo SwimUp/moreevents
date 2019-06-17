@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<MapGenerator.MapGeneratorBaseBlueprintDef Name="Base1_5">
+	<MapGenerator.BaseBlueprintDef Name="Base1_5">
 		<defName>SiegeCampBase1_5</defName>
 		<createdBy>DimonSever000</createdBy>
-		
+		<Categories>
+			<li>SiegeCampBaseTier1</li>
+		</Categories>
 		<size>(48, 37)</size>
 		<canHaveHoles>False</canHaveHoles>
 		<createTrigger>False</createTrigger>
@@ -490,5 +492,5 @@ aaa..........................................aaa
 				</value>
 			</li>
 </nonbuildingLegend>
-	</MapGenerator.MapGeneratorBaseBlueprintDef>
+	</MapGenerator.BaseBlueprintDef>
 </Defs>

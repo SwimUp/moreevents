@@ -224,8 +224,8 @@
 		<minRefireDays>60</minRefireDays>
 		<minDifficulty>1</minDifficulty>
 		<durationDays>
-			<min>5</min>
-			<max>10</max>
+			<min>3</min>
+			<max>7</max>
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
@@ -473,9 +473,9 @@
 		</targetTags>
 		<workerClass>MoreEvents.Events.AttackFriendlySettlement.IncidentWorker_AttackFriendlySettlement</workerClass>
 		<category>Misc</category>
-		<minRefireDays>70</minRefireDays>
-		<baseChance>1.6</baseChance>
-		<earliestDay>40</earliestDay>
+		<minRefireDays>75</minRefireDays>
+		<baseChance>1.2</baseChance>
+		<earliestDay>50</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	

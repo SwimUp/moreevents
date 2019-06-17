@@ -41,6 +41,7 @@ namespace MoreEvents.Events.ClimateBomb
 
             ClimateBombSite site = (ClimateBombSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.ClimateBombSite);
             site.Tile = spawnPoint;
+            site.GetComponent<ClimateBombComp>().SetTimer();
             Find.WorldObjects.Add(site);
 
             SendStandardLetter();

@@ -58,8 +58,8 @@
   <ZPRHasRoofs>\n- Требуется крыша</ZPRHasRoofs>
   <ZPRNeedRoom>\n- Требуется помещение</ZPRNeedRoom>
   
-  <SiegeCampUpdateTimer>Дней до улучшения:</SiegeCampUpdateTimer>
-  <SiegeCampLevel>\nСложность лагеря:</SiegeCampLevel>
+  <SiegeCampUpdateTimer>\nДней до улучшения:</SiegeCampUpdateTimer>
+  <SiegeCampLevel>Сложность лагеря:</SiegeCampLevel>
   
   <AttackIsNotRepelled>Вы не можете уйти сейчас. Атака еще не отражена.</AttackIsNotRepelled>
   <TimerDaysToAttack>Дней до нападения: {0}</TimerDaysToAttack>

@@ -42,9 +42,13 @@ namespace MoreEvents.Events.ClimateBomb
         private int currentWave = 0;
         private int maxWaves = 7;
 
-        public ClimateBombComp()
+        public void SetTimer() => detonationTimer = Rand.Range(15, 30) * 60000;
+
+        public override void PostExposeData()
         {
-            detonationTimer = Rand.Range(15, 30) * 60000;
+            base.PostExposeData();
+
+            Scribe_Values.Look(ref detonationTimer, "detonationTimer");
         }
 
         public override void PostMapGenerate()

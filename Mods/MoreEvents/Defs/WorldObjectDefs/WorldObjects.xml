@@ -70,9 +70,9 @@
     <label>Siege Camp</label>
     <description>Here is located the enemy camp. They will bombard our settlement and raid until we destroy it.</description>
     <worldObjectClass>MoreEvents.Events.AttackFriendlySettlement.FriendlySettlement</worldObjectClass>
-    <texture>Map/siegecamp</texture>
+    <texture>Map/SettlementAttack</texture>
     <expandingIcon>true</expandingIcon>
-    <expandingIconTexture>Map/siegecamp</expandingIconTexture>
+    <expandingIconTexture>Map/SettlementAttack</expandingIconTexture>
     <expandingIconPriority>100</expandingIconPriority>
     <comps>
       <li Class="MoreEvents.Events.AttackFriendlySettlement.FriendlySettlementComp_Main" />
