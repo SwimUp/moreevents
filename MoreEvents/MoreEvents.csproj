@@ -133,6 +133,7 @@
     <Compile Include="Hediffs\HediffComp_FibroTick.cs" />
     <Compile Include="Hediffs\HediffDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
+    <Compile Include="InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapGeneratorFactionBase\BlueprintDefOfLocal.cs" />
     <Compile Include="MapGeneratorFactionBase\BlueprintHandler.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
+    <Compile Include="Things\Gizmo_Fillable.cs" />
     <Compile Include="Things\Mk1\Apparel_Mk1.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />

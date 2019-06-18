@@ -231,7 +231,7 @@
 		<xpath>*/RecipeDef[defName="Make_CatapultProjectile"]</xpath>
 		<value>
 			<RecipeDef>
-				<defName>MakeAmmo_StoneBall</defName>
+				<defName>MakeBigBalls</defName>
 				<label>make catapult projectile</label>
 				<description>Make a projectile for a catapult</description>
 				<ingredients>
@@ -258,7 +258,7 @@
 				<effectWorking>CutStone</effectWorking>
 				<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
 				<products>
-					<Ammo_StoneBall>2</Ammo_StoneBall>
+					<BigBalls>2</BigBalls>
 				</products>
 				<recipeUsers>
 					<li>TableStonecutter</li>
@@ -385,7 +385,7 @@
 		<xpath>*/RecipeDef[defName="Make_BallistaProjectile"]</xpath>
 		<value>
 			<RecipeDef>
-				<defName>MakeAmmo_BigStoneArrow</defName>
+				<defName>MakeBigArrows</defName>
 				<label>make ballista projectile</label>
 				<description>Make a projectile for a ballista</description>
 				<ingredients>

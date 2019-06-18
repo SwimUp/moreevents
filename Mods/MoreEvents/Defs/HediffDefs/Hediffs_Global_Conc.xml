@@ -1,48 +1,354 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!--
 	<HediffDef>
-		Уникальное имя, его нужно будет писать в список эффектов
-		<defName>Enlighten_Bright</defName>
-		НЕ ТРОГАТЬ
+		<defName>Sagittarius_Effect</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		ЦВЕТ В СПИСКЕ ЭФФЕКТОВ RGB от 0 до 1
-		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
-		НАДПИСЬ В ЭФФЕКТАХ
-		<label>bright environment</label>
-		ТОЖЕ НАДПИСЬ В ЭФФЕКТАХ
-		<labelNoun>a bright environment</labelNoun>
-		СТАДИИ, НО ВАМ НУЖНА ТОЛЬКО ОДНА, ТАК ЧТО МЕНЯЙТЕ ТОЛЬКО ЭФФЕКТЫ 
-		ЭФФЕКТЫ
-			Consciousness - сознание
-			Sight - зрение
-			Hearing - слух
-			Moving - движение
-			Manipulation - манипуляции
-			Talking - речь
-			Eating - принимать еду
-			Breathing - дыхание
-			BloodFiltration - фильтрация крови
-			BloodPumping - накачка кроиви
-			Metabolism - метаболизм
-		
-		Если значение 1 - то это 100% (т.е ноль эффекта), если меньше 1 - то эффект будет отрицателен (т.е 0.5 движения это 50% движения в игре)
-		Аналогично если будет 1.5, то наприммер движение будет 150%, пешка будет быстрее
-		
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Стрельца</label>
 		<stages>
 			<li>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<postFactor>1.1</postFactor>
+						<offset>0.2</offset>
 					</li>
 					<li>
 						<capacity>Sight</capacity>
 						<offset>0.2</offset>
 					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
 				</capMods>
 			</li>
 		</stages>
+
 	</HediffDef>
--->
+
+
+	<HediffDef>
+		<defName>Hercules_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Геркулеса</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Build_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Наугольника</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Art_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Живописца</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Animals_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Большого Пса</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Plant_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Волопаса</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Social_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Дельфина</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Craft_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Кузницы Гефеста</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Mining_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Столовой Горы</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Cooking_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Чаши</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Medicine_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Змееносца</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Intellectual_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<label>Сияние Орла</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
 </Defs>

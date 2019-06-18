@@ -74,4 +74,8 @@
   <RaidStartDefendTitle>The attack has begun!</RaidStartDefendTitle>
   <RaidStartDefend>Enemies are attacking, get ready!</RaidStartDefend>
   
+  <EnergyChargeCapacity>Charge: {0}</EnergyChargeCapacity>
+  <InactiveNoHelmet>\nInactive. Missing helmet.</InactiveNoHelmet>
+  <EnergyChargeCapacity2>Capacity</EnergyChargeCapacity2>
+  
 </LanguageData>

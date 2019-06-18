@@ -76,5 +76,7 @@
   <RaidStartDefend>Враги нападают, приготовиться!</RaidStartDefend>
   
   <EnergyChargeCapacity>Уровень заряда: {0}</EnergyChargeCapacity>
+  <InactiveNoHelmet>\nНеактивен. Отсутствует шлем.</InactiveNoHelmet>
+  <EnergyChargeCapacity2>Уровень заряда</EnergyChargeCapacity2>
   
 </LanguageData>

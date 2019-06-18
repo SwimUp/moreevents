@@ -45,7 +45,8 @@ namespace MoreEvents.Constellations
                 {
                     foreach (var pawn in map.mapPawns.AllPawnsSpawned)
                     {
-                        pawn.mindState.inspirationHandler.TryStartInspiration(inspir);
+                        if((pawn.gender == Gender.Male && ConstellationsDef.AllowMale) || (pawn.gender == Gender.Female && ConstellationsDef.AllowFemale))
+                            pawn.mindState.inspirationHandler.TryStartInspiration(inspir);
                     }
                 }
             }
@@ -59,10 +60,13 @@ namespace MoreEvents.Constellations
                 {
                     foreach (var pawn in map.mapPawns.AllPawnsSpawned)
                     {
-                        Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(effect, false);
-                        if (firstHediffOfDef == null)
+                        if ((pawn.gender == Gender.Male && ConstellationsDef.AllowMale) || (pawn.gender == Gender.Female && ConstellationsDef.AllowFemale))
                         {
-                            HediffGiverUtility.TryApply(pawn, effect, parts);
+                            Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(effect, false);
+                            if (firstHediffOfDef == null)
+                            {
+                                HediffGiverUtility.TryApply(pawn, effect, parts);
+                            }
                         }
                     }
                 }

@@ -1,4 +1,5 @@
-﻿using MoreEvents.Constellations.Actions;
+﻿using MoreEvents.Constellations;
+using MoreEvents.Constellations.Actions;
 using MoreEvents.Constellations.Conditions;
 using RimWorld;
 using System;
@@ -18,6 +19,9 @@ namespace MoreEvents
         public List<HediffDef> Effects = new List<HediffDef>();
 
         public List<InspirationDef> Inspirations = new List<InspirationDef>();
+
+        public bool AllowMale = true;
+        public bool AllowFemale = true;
 
         public static ConstellationsDef Named(string defName)
         {

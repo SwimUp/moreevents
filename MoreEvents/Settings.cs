@@ -223,7 +223,7 @@ namespace MoreEvents
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
             listing_Standard.GapLine();
-            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1540);
+            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1600);
             listing_Standard.BeginScrollView(inRect, ref scroll, ref mainScrollVertRect);
             listing_Standard.Label(Translator.Translate("MEM_Settings_General"));
             listing_Standard.GapLine();

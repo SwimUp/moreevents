@@ -4,6 +4,7 @@ using Verse;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using MoreEvents.Things.Mk1;
 
 namespace MoreEvents.Events
 {
@@ -43,7 +44,7 @@ namespace MoreEvents.Events
             for (int i = 0; i < allPawnsSpawned.Count; i++)
             {
                 Pawn pawn = allPawnsSpawned[i];
-                if (!pawn.Position.Roofed(map) && pawn.def.race.IsFlesh)
+                if (!pawn.Position.Roofed(map) && pawn.def.race.IsFlesh && !Apparel_Mk1.HasMk1Enable(pawn))
                 {
                     float num = 0.028758334f;
                     num *= pawn.GetStatValue(StatDefOf.ToxicSensitivity, true);
