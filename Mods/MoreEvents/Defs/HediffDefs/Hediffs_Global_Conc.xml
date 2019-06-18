@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--
+	<HediffDef>
+		Уникальное имя, его нужно будет писать в список эффектов
+		<defName>Enlighten_Bright</defName>
+		НЕ ТРОГАТЬ
+		<hediffClass>HediffWithComps</hediffClass>
+		ЦВЕТ В СПИСКЕ ЭФФЕКТОВ RGB от 0 до 1
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		НАДПИСЬ В ЭФФЕКТАХ
+		<label>bright environment</label>
+		ТОЖЕ НАДПИСЬ В ЭФФЕКТАХ
+		<labelNoun>a bright environment</labelNoun>
+		СТАДИИ, НО ВАМ НУЖНА ТОЛЬКО ОДНА, ТАК ЧТО МЕНЯЙТЕ ТОЛЬКО ЭФФЕКТЫ 
+		ЭФФЕКТЫ
+			Consciousness - сознание
+			Sight - зрение
+			Hearing - слух
+			Moving - движение
+			Manipulation - манипуляции
+			Talking - речь
+			Eating - принимать еду
+			Breathing - дыхание
+			BloodFiltration - фильтрация крови
+			BloodPumping - накачка кроиви
+			Metabolism - метаболизм
+		
+		Если значение 1 - то это 100% (т.е ноль эффекта), если меньше 1 - то эффект будет отрицателен (т.е 0.5 движения это 50% движения в игре)
+		Аналогично если будет 1.5, то наприммер движение будет 150%, пешка будет быстрее
+		
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.1</postFactor>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+-->
+</Defs>

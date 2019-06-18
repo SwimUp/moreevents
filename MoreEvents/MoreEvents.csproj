@@ -52,6 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
+    <Compile Include="Constellations\Actions\ConstellationAction.cs" />
+    <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
+    <Compile Include="Constellations\Conditions\ConstellationCondition_PawnCount.cs" />
+    <Compile Include="Constellations\Conditions\ConstellationCondition_Time.cs" />
+    <Compile Include="Constellations\ConstellationsDef.cs" />
+    <Compile Include="Constellations\GameCondition_Contellations.cs" />
+    <Compile Include="Constellations\IncidentWorker_Constellations.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
     <Compile Include="Events\AttackFriendlySettlement\CaravanArrivalAction_HelpFriendlySettlement.cs" />
     <Compile Include="Events\AttackFriendlySettlement\FriendlySettlement.cs" />
@@ -147,6 +154,7 @@
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
+    <Compile Include="Things\Mk1\Apparel_Mk1.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />
     <Compile Include="Things\PawnKindDefOfLocal.cs" />

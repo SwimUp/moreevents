@@ -479,4 +479,22 @@
 	</IncidentDef>
 	<!-- s=======================s -->
 	
+	<!-- Событие: Вызов созвездия -->
+	<IncidentDef>
+		<defName>Constellations</defName>
+		<label>Constellations</label>
+		<letterLabel>Constellations</letterLabel>
+		<letterText>Constellations</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Constellations.IncidentWorker_Constellations</workerClass>
+		<category>Misc</category>
+		<minRefireDays>10</minRefireDays>
+		<baseChance>1.2</baseChance>
+		<earliestDay>15</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
 </Defs>

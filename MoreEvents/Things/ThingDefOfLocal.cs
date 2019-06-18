@@ -32,5 +32,8 @@ namespace MoreEvents
         public static ThingDef SuperMagnetNewGeneration;
         public static ThingDef QuantumConverter;
         public static ThingDef VacuumPump;
+
+        public static ThingDef Apparel_MK1Thunder;
+        public static ThingDef Apparel_MK1ThunderHead;
     }
 }

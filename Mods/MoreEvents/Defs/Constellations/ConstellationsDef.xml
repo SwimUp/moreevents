@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<MoreEvents.ConstellationsDef>
+		<defName>Constellation_Sagittarius</defName>
+		<label>Созвездие Стрельца</label>
+		<description>В небе воссияло созвездие Стрельца. Это событие вселяет храбрость в сердца ваших воинов. Точность Стрельбы увеличана на 20%</description>
+		<Conditions>
+			<li Class="MoreEvents.Constellations.Conditions.ConstellationCondition_Time">
+				<MinHours>18</MinHours>
+				<MaxHours>4</MaxHours>
+			</li>
+		</Conditions>
+
+		<Inspirations>
+			<li>Frenzy_Shoot</li>
+		</Inspirations>
+	</MoreEvents.ConstellationsDef>
+
+</Defs>

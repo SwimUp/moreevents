@@ -27,5 +27,7 @@ namespace MoreEvents
         public static GameConditionDef HeatWave;
         public static GameConditionDef ColdSnap;
         /*=======================*/
+
+        public static GameConditionDef Constellations;
     }
 }

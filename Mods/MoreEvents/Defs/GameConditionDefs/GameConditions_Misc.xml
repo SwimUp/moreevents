@@ -143,5 +143,14 @@
     <endMessage>Earthquake over</endMessage>
 	<canBePermanent>false</canBePermanent>
   </GameConditionDef>
+  
+  <GameConditionDef>
+    <defName>Constellations</defName>
+	<conditionClass>MoreEvents.Constellations.GameCondition_Contellations</conditionClass>
+    <label>Constellations</label>
+    <description>Constellations</description>
+    <endMessage>Constellation is gone</endMessage>
+	<canBePermanent>false</canBePermanent>
+  </GameConditionDef>
  
 </Defs>

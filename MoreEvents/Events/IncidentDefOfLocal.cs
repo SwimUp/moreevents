@@ -39,5 +39,6 @@ namespace MoreEvents
         public static IncidentDef SiegeCamp;
 
         public static IncidentDef AttackFriendlySettlement;
+        public static IncidentDef Constellations;
     }
 }

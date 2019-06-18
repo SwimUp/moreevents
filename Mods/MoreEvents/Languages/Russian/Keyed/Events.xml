@@ -75,4 +75,6 @@
   <RaidStartDefendTitle>Атака началась!</RaidStartDefendTitle>
   <RaidStartDefend>Враги нападают, приготовиться!</RaidStartDefend>
   
+  <EnergyChargeCapacity>Уровень заряда: {0}</EnergyChargeCapacity>
+  
 </LanguageData>

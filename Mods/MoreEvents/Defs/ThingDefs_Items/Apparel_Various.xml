@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="ApparelMKBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef Name="ArmorMKBase" ParentName="ApparelMKBase" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+
+	<!--
+  Доспех "Громовой" полностью обшит броней, а ноги также как и остальная часть доспеха подключены к системе энергообеспечения. Пластины брони установлены на подвижные сочленения с тем, чтобы увеличить подвижность. Нагрудные кабели укрыты под грудной пластиной и в результате гораздо лучше защищены, благодаря более эффективным системам охлаждения. 
+
+Шлем снабжён автоматическими сенсорными устройствами, позволяющими носителю слышать так же хорошо как и без шлема, и кроме того, благодаря тому что вся поступающая информация сначала проходит через компьютер, шлем усиливает зрение и слух, при этом делая тише оглушительные звуки и затемняя зрение при ослепительных вспышках. Носитель также получает возможность видеть в инфракрасном и ультрафиолетовом излучении, может приближать вид и выделять звуки из шума при необходимости.
+
+-->
+
+	<ThingDef ParentName="ArmorMKBase">
+		<defName>Apparel_MK1Thunder</defName>
+		<thingClass>MoreEvents.Things.Mk1.Apparel_Mk1</thingClass>
+		<label>Power Armor Mk.I "Thunder"</label>
+		<description>The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
+mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
+\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.</description>
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<tickerType>Rare</tickerType>
+		<graphicData>
+			<texPath>Things/Apparels/Mk1/Mk1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<WorkToMake>400000</WorkToMake>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Mass>18</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.08</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.54</ArmorRating_Heat>
+			<Insulation_Cold>34</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costList>
+			<ComponentSpacer>15</ComponentSpacer>
+			<Plasteel>500</Plasteel>
+			<PalladiumCore>1</PalladiumCore>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Mk1/Mk1</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>Mk1Armor</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Mk1Armor</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+
+	<ThingDef ParentName="ArmorMKBase">
+		<defName>Apparel_MK1ThunderHead</defName>
+		<label>Power Helmet Mk.I "Thunder"</label>
+		<description>The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
+mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
+\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Apparels/Mk1/Helmet/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<ComponentSpacer>15</ComponentSpacer>
+			<Plasteel>500</Plasteel>
+			<PalladiumCore>1</PalladiumCore>
+		</costList>
+		<costStuffCount>25</costStuffCount>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>1.4</Mass>
+			<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.10</PainShockThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Mk1/Helmet/helmet</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Mk1Armor</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+</Defs>
