@@ -11,5 +11,8 @@ namespace MoreEvents
     public static class JobDefOfLocal
     {
         public static JobDef DisableClimateBomb;
+
+        public static JobDef LoadArmorIntoStation;
+        public static JobDef UnLoadArmorIntoStation;
     }
 }

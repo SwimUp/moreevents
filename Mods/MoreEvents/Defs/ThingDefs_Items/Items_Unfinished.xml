@@ -79,6 +79,78 @@
     <pathCost>15</pathCost>
     <tradeability>Sellable</tradeability>
   </ThingDef>
+  
+  <ThingDef>
+    <defName>MiniColdFusionReactor</defName>
+    <label>minified cold fusion reactor</label>
+	<description>Reduced cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</description>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
+      <texPath>Things/Buildings/ColdFusion/Core</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.5, 0.5)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>4</Mass>
+    </statBases>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>MiniArcReactor</defName>
+    <label>minified arc reactor</label>
+	<description>Reduced arc reactor. More effective than a cold fusion reactor, is its direct modification.</description>
+    <thingClass>ThingWithComps</thingClass>
+	<graphicData>
+      <texPath>Things/Buildings/ColdFusionPro/Core</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.5, 0.5)</drawSize>
+    </graphicData>
+    <category>Item</category>
+    <size>(1, 1)</size>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>6000</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>4</Mass>
+    </statBases>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
 
  <ThingDef>
     <defName>Enricher</defName>

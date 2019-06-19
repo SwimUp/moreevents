@@ -2,5 +2,7 @@
 <LanguageData>
   
   <DisableClimateBomb.reportString>Обезвреживает бомбу</DisableClimateBomb.reportString>
+  <LoadArmorIntoStation.reportString>Подключает броню к стенду</LoadArmorIntoStation.reportString>
+  <UnLoadArmorIntoStation.reportString>Отключает броню от стенда</UnLoadArmorIntoStation.reportString>
   
 </LanguageData>

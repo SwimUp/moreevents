@@ -5,6 +5,13 @@
   <ColdFusionReactor.description>Реактор, работающий на уране, но в основе которого лежит принцип холодного синтеза. Почти не выделяет тепла, но при этом является хорошим источником энергии.</ColdFusionReactor.description>
   <ColdFusionReactorHeath.label>Сердце реактора холодного синтеза</ColdFusionReactorHeath.label>
   <ColdFusionReactorHeath.description>Основная часть реактора холодного синтеза. С его помощью можно будет модернизировать ядерный реактор, чтобы получить новый, более совершенный источник энергии.</ColdFusionReactorHeath.description>
+  <MiniColdFusionReactor.label>Уменьшенный реактор холодного синтеза</MiniColdFusionReactor.label>
+  <MiniColdFusionReactor.description>Уменьшенный в размерах реактор холодного синтеза. По прежнему эффективный, но занимает гораздо меньше место, поэтому может быть использован в более широком спектре объектов.</MiniColdFusionReactor.description>
+  <MiniArcReactor.label>Уменьшенный дуговой реактор</MiniArcReactor.label>
+  <MiniArcReactor.description>Уменьшенный в размерах дуговой реактор. Эффективнее реактора холодного синтеза, является его прямой модификацией.</MiniArcReactor.description>
+
+  <Mk1PowerStation.label>Станция Mk1</Mk1PowerStation.label>
+  <Mk1PowerStation.description>Станция зарядки и разработки костюмов типа Mk1</Mk1PowerStation.description>
 
   <ArcReactor.label>Дуговой реактор</ArcReactor.label>
   <ArcReactor.description>Улучшенная версия реактора холодного синтеза. Вырабатывает больше энергии, является безопасным источником энергии.</ArcReactor.description>

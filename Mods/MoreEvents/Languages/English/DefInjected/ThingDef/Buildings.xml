@@ -5,6 +5,13 @@
   <ColdFusionReactor.description>A reactor operating in uranium, but based on the principle of cold fusion. Almost does not emit heat, but it is a good source of energy.</ColdFusionReactor.description>
   <ColdFusionReactorHeath.label>Cold fusion reactor heart</ColdFusionReactorHeath.label>
   <ColdFusionReactorHeath.description>The main part of the cold fusion reactor. With the help of it, it will be possible to modernize a nuclear reactor in order to obtain a new, more perfect source of energy.</ColdFusionReactorHeath.description>
+  <MiniColdFusionReactor.label>Minified cold fusion reactor</MiniColdFusionReactor.label>
+  <MiniColdFusionReactor.description>Reduced cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</MiniColdFusionReactor.description>
+  <MiniArcReactor.label>Minified arc reactor</MiniArcReactor.label>
+  <MiniArcReactor.description>Reduced arc reactor. More effective than a cold fusion reactor, is its direct modification.</MiniArcReactor.description>
+
+  <Mk1PowerStation.label>MK1 pwoer station</Mk1PowerStation.label>
+  <Mk1PowerStation.description>Charging station and create armor type MK1</Mk1PowerStation.description>
 
   <ArcReactor.label>Arc reactor</ArcReactor.label>
   <ArcReactor.description>A reactor operating in uranium, but based on the principle of cold fusion. Almost does not emit heat, but it is a good source of energy.</ArcReactor.description>

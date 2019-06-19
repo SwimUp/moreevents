@@ -8,13 +8,14 @@ using Verse;
 
 namespace MoreEvents.Things.ZeroPointReactor
 {
+    [StaticConstructorOnStartup]
     public class Building_ZeroPointGenerator : Building
     {
         private int animTime = 7;
         private int maxCycles = 10;
         private string FramePath = "Things/Buildings/ZeroPointReactor/";
         private Graphic DisableTex = null;
-        private Graphic[] Frames = null;
+        private static Graphic[] Frames = null;
         private int cycle = 1;
         private Graphic TexMain = null;
 
@@ -54,9 +55,9 @@ namespace MoreEvents.Things.ZeroPointReactor
 
             compPowerTrader = GetComp<CompPowerTrader>();
 
-            CreateAnim();
-
             Notify_PumpsChange();
+
+            LongEventHandler.ExecuteWhenFinished((Action)CreateAnim);
         }
 
         public override string GetInspectString()

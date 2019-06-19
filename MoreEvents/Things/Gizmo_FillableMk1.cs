@@ -9,7 +9,7 @@ using Verse;
 namespace MoreEvents.Things
 {
     [StaticConstructorOnStartup]
-    public class Gizmo_Fillable : Gizmo
+    public class Gizmo_FillableMk1 : Gizmo
     {
         public Apparel_Mk1 Apparel;
 
@@ -17,7 +17,7 @@ namespace MoreEvents.Things
 
         private static readonly Texture2D EmptyShieldBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
 
-        public Gizmo_Fillable()
+        public Gizmo_FillableMk1()
         {
             order = -100f;
         }
@@ -50,7 +50,7 @@ namespace MoreEvents.Things
                 }
                 else
                 {
-                    Widgets.Label(rect2, "InactiveNoHelmet".Translate());
+                    Widgets.Label(rect2, "InactiveMk1".Translate());
                 }
 
             });

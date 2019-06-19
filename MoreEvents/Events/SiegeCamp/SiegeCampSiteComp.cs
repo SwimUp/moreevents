@@ -73,7 +73,7 @@ namespace MoreEvents.Events.SiegeCamp
         private int ticksBetweenRaids = 3 * 60000;
 
         private int mortalShellingTimer = 0;
-        private int ticksBetweenMortalShelling = 2 * 60000;
+        private int ticksBetweenMortalShelling = 3 * 60000;
         private bool mortarsFiring = false;
         private int mortarsBulletCount = 0;
         private int mortarShellTimer = 0;

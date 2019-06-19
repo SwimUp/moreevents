@@ -19,6 +19,9 @@ namespace MoreEvents.Things.Mk1
 
         public static bool HasMk1Enable(Pawn p)
         {
+            if (p.apparel == null)
+                return false;
+
             foreach(var apparel in p.apparel.WornApparel)
             {
                 if(apparel.def == ThingDefOfLocal.Apparel_MK1Thunder)
@@ -65,7 +68,6 @@ namespace MoreEvents.Things.Mk1
 
                 if(EnergyCharge < 0)
                 {
-                    dinfo.SetAmount(Math.Abs(EnergyCharge));
                     return false;
                 }
 
@@ -73,6 +75,17 @@ namespace MoreEvents.Things.Mk1
             }
 
             return false;
+        }
+
+        public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
+        {
+            float damage = dinfo.Amount * 0.8f;
+            if (dinfo.Def == DamageDefOf.Cut || dinfo.Def == DamageDefOf.Blunt)
+                damage *= 0.1f;
+
+            dinfo.SetAmount(damage);
+
+            absorbed = false;
         }
 
         public override void DrawWornExtras()
@@ -125,7 +138,7 @@ namespace MoreEvents.Things.Mk1
 
         public override IEnumerable<Gizmo> GetWornGizmos()
         {
-            yield return new Gizmo_Fillable
+            yield return new Gizmo_FillableMk1
             {
                 Apparel = this
             };

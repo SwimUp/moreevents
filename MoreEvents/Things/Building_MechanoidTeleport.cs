@@ -5,9 +5,11 @@ using System.Linq;
 using UnityEngine;
 using Verse.AI.Group;
 using System.IO;
+using System;
 
 namespace MoreEvents.Things
 {
+    [StaticConstructorOnStartup]
     public class Building_MechanoidTeleport : Building
     {
         private int spawnTime = 30000;
@@ -15,7 +17,7 @@ namespace MoreEvents.Things
         private int animTime = 30;
         private int maxCycles = 25;
         private string FramePath = "Things/Buildings/MechanoidTeleport/";
-        private Graphic[] Frames = null;
+        private static Graphic[] Frames = null;
         private int cycle = 1;
         private Graphic TexMain = null;
 
@@ -33,7 +35,7 @@ namespace MoreEvents.Things
 
             count = Rand.Range(20, 40);
 
-            CreateAnim();
+            LongEventHandler.ExecuteWhenFinished((Action)CreateAnim);
         }
 
         private void CreateAnim()

@@ -77,6 +77,12 @@
   
   <EnergyChargeCapacity>Уровень заряда: {0}</EnergyChargeCapacity>
   <InactiveNoHelmet>\nНеактивен. Отсутствует шлем.</InactiveNoHelmet>
+  <InactiveMk1>Неактивен</InactiveMk1>
   <EnergyChargeCapacity2>Уровень заряда</EnergyChargeCapacity2>
+  <Station>Станция</Station>
+  <UnloadArmor>Отключить броню от станции</UnloadArmor>
+  <LoadArmor>Подключить броню к станции</LoadArmor>
+  <NoAvaliableArmors>Нет доступной брони</NoAvaliableArmors>
+  <NotEnoughSpace>Нет места для брони. Освободите больше места вокруг станции.</NotEnoughSpace>
   
 </LanguageData>

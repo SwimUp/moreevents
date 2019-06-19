@@ -76,6 +76,12 @@
   
   <EnergyChargeCapacity>Charge: {0}</EnergyChargeCapacity>
   <InactiveNoHelmet>\nInactive. Missing helmet.</InactiveNoHelmet>
+  <InactiveMk1>Inactive</InactiveMk1>
   <EnergyChargeCapacity2>Capacity</EnergyChargeCapacity2>
+  <Station>Station</Station>
+  <UnloadArmor>Disable armor from the station</UnloadArmor>
+  <LoadArmor>Connect armor to the station</LoadArmor>
+  <NoAvaliableArmors>No available armor</NoAvaliableArmors>
+  <NotEnoughSpace>Not enough space for armor. Free up more space around the station.</NotEnoughSpace>
   
 </LanguageData>

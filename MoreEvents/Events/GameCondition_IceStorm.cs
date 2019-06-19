@@ -69,5 +69,10 @@ namespace MoreEvents.Events
                 }
             }
         }
+
+        public override float TemperatureOffset()
+        {
+            return GameConditionUtility.LerpInOutValue(this, 10000f, -60);
+        }
     }
 }

@@ -8,13 +8,14 @@ using Verse;
 
 namespace MoreEvents.Things
 {
+    [StaticConstructorOnStartup]
     public class Building_SingularReactor : Building
     {
         private int animTime = 6;
         private int maxCycles = 17;
         private string FramePath = "Things/Buildings/BlackholeReactor/";
         private Graphic DisableTex = null;
-        private Graphic[] Frames = null;
+        private static Graphic[] Frames = null;
         private int cycle = 1;
         private Graphic TexMain = null;
 
@@ -26,7 +27,7 @@ namespace MoreEvents.Things
 
             compPowerTrader = GetComp<CompPowerTrader>();
 
-            CreateAnim();
+            LongEventHandler.ExecuteWhenFinished((Action)CreateAnim);
         }
 
         private void CreateAnim()

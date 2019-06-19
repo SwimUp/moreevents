@@ -214,6 +214,43 @@
     </costList>
     <tradeability>None</tradeability>
   </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Mk1PowerStation</defName>
+    <label>Mk1 power station</label>
+    <description>Charging station and create armor type mk1</description>
+	<thingClass>MoreEvents.Things.Mk1.Mk1PowerStation</thingClass>
+	<inspectorTabs> 
+		<li>MoreEvents.ITab_ModifyMk1</li>
+	</inspectorTabs>
+    <graphicData>
+      <texPath>Things/Buildings/PowerBuildingMK1/mk1power</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4, 4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <pathCost>200</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+      <MarketValue>900</MarketValue>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>20000</WorkToBuild>
+      <Mass>15</Mass>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(4, 4)</size>
+    <costList>
+      <Steel>200</Steel>
+	  <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <tradeability>None</tradeability>
+  </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
     <defName>SingularReactor</defName>

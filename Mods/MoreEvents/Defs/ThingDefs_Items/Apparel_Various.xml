@@ -56,6 +56,41 @@
 			</defaultIngredientFilter>
 		</recipeMaker>
 	</ThingDef>
+	
+	<RecipeDef>
+		<defName>Make_Mk1Armor</defName>
+		<label>make catapult projectile</label>
+		<description>Make a projectile for a catapult</description>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>StoneBlocks</li>
+					</categories>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>StoneBlocks</li>
+			</categories>
+		</fixedIngredientFilter>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<jobString>makes projectile for catapult</jobString>
+		<workAmount>900</workAmount>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<products>
+			<Apparel_MK1Thunder>1</Apparel_MK1Thunder>
+		</products>
+		<recipeUsers>
+			<li>TableStonecutter</li>
+		</recipeUsers>
+	</RecipeDef>
 
 	<ThingDef ParentName="ArmorMKBase">
 		<defName>Apparel_MK1Thunder</defName>
@@ -86,10 +121,10 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<MaxHitPoints>400</MaxHitPoints>
 			<Mass>18</Mass>
 			<Flammability>0.4</Flammability>
-			<ArmorRating_Sharp>1.08</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.54</ArmorRating_Heat>
-			<Insulation_Cold>34</Insulation_Cold>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
 			<Insulation_Heat>10</Insulation_Heat>
 			<EquipDelay>15</EquipDelay>
 		</statBases>
@@ -101,8 +136,10 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		</thingCategories>
 		<costList>
 			<ComponentSpacer>15</ComponentSpacer>
-			<Plasteel>500</Plasteel>
-			<PalladiumCore>1</PalladiumCore>
+			<Plasteel>300</Plasteel>
+			<MiniColdFusionReactor>1</MiniColdFusionReactor>
+			<Hyperweave>100</Hyperweave>
+			<Uranium>50</Uranium>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -110,10 +147,12 @@ mobility. The chest cables are covered under the chest plate and as a result are
 				<li>Neck</li>
 				<li>Shoulders</li>
 				<li>Arms</li>
+				<li>Legs</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Apparels/Mk1/Mk1</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
+				<li>Shell</li>
 			</layers>
 			<tags>
 				<li>Mk1Armor</li>
@@ -149,19 +188,20 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<ComponentSpacer>15</ComponentSpacer>
-			<Plasteel>500</Plasteel>
-			<PalladiumCore>1</PalladiumCore>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Plasteel>100</Plasteel>
+			<Hyperweave>60</Hyperweave>
+			<Uranium>30</Uranium>
 		</costList>
-		<costStuffCount>25</costStuffCount>
 		<statBases>
 			<WorkToMake>3000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
-			<Mass>1.4</Mass>
-			<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-			<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
-			<StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
-			<EquipDelay>1.2</EquipDelay>
+			<Mass>5</Mass>
+			<Flammability>0.4</Flammability>
+			  <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+			  <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+			  <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<PainShockThreshold>0.10</PainShockThreshold>
