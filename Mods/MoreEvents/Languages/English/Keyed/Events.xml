@@ -83,5 +83,11 @@
   <LoadArmor>Connect armor to the station</LoadArmor>
   <NoAvaliableArmors>No available armor</NoAvaliableArmors>
   <NotEnoughSpace>Not enough space for armor. Free up more space around the station.</NotEnoughSpace>
+  <NoArmorInStation>Station is not active. Missing armor.</NoArmorInStation>
+  <CoreType>Core</CoreType>
+  <ChargeSpeed>Charging speed: {0}</ChargeSpeed>
+  <EnabledCharging>Actively. Charging</EnabledCharging>
+  <FullCharge>Reactor charge limit reached</FullCharge>
+  <NoPowerRightNow>▬► NO POWER ◄▬</NoPowerRightNow>
   
 </LanguageData>

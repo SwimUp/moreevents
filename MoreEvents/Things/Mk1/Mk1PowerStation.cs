@@ -14,16 +14,48 @@ namespace MoreEvents.Things.Mk1
     {
         public Thing ContainedArmor;
 
+        public float ChargeSpeed = 0.008f;
+
+        public bool HasPower
+        {
+            get
+            {
+                if (power != null && power.PowerOn)
+                {
+                    return !this.Map.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare);
+                }
+                return false;
+            }
+        }
+
         public bool HasArmor => ContainedArmor != null;
 
         private static Graphic DisableTex = null;
         private static Graphic EnableTex = null;
 
+        public CompPowerTrader power;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
 
+            power = GetComp<CompPowerTrader>();
+
             LongEventHandler.ExecuteWhenFinished((Action)CreateAnim);
+        }
+
+        public override void Tick()
+        {
+            Log.Message($"--> {HasPower}");
+
+            if (Find.TickManager.TicksGame % 200 == 0)
+            {
+                if (HasPower && HasArmor)
+                {
+                    var armor = (Apparel_Mk1)ContainedArmor;
+                    armor.AddCharge(ChargeSpeed);
+                }
+            }
         }
 
         private void CreateAnim()
@@ -39,7 +71,7 @@ namespace MoreEvents.Things.Mk1
         {
             base.ExposeData();
 
-            Scribe_References.Look(ref ContainedArmor, "ContainedArmor");
+            Scribe_Deep.Look(ref ContainedArmor, "ContainedArmor");
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -68,6 +100,7 @@ namespace MoreEvents.Things.Mk1
                         list.Add(new FloatMenuOption($"{armor.LabelCap}", delegate
                         {
                             Job job = new Job(JobDefOfLocal.LoadArmorIntoStation, this, armor);
+                            job.count = 1;
                             selPawn.jobs.TryTakeOrderedJob(job);
                         }));
 
@@ -78,16 +111,12 @@ namespace MoreEvents.Things.Mk1
 
         public override void Draw()
         {
-            Matrix4x4 matrix = default(Matrix4x4);
-            Vector3 s = new Vector3(4f, 1f, 4f);
-            matrix.SetTRS(this.DrawPos + Altitudes.AltIncVect, Rotation.AsQuat, s);
-
-            if (HasArmor && EnableTex != null)
+            if (HasPower && HasArmor && EnableTex != null)
             {
+                Matrix4x4 matrix = default(Matrix4x4);
+                Vector3 s = new Vector3(4f, 1f, 4f);
+                matrix.SetTRS(this.DrawPos + Altitudes.AltIncVect, Rotation.AsQuat, s);
                 Graphics.DrawMesh(MeshPool.plane10, matrix, EnableTex.MatAt(Rotation, null), 0);
-            }else if(DisableTex != null)
-            {
-                Graphics.DrawMesh(MeshPool.plane10, matrix, DisableTex.MatAt(Rotation, null), 0);
             }
         }
     }

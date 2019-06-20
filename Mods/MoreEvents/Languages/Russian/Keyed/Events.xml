@@ -84,5 +84,11 @@
   <LoadArmor>Подключить броню к станции</LoadArmor>
   <NoAvaliableArmors>Нет доступной брони</NoAvaliableArmors>
   <NotEnoughSpace>Нет места для брони. Освободите больше места вокруг станции.</NotEnoughSpace>
+  <NoArmorInStation>Станция не активна. Отсутствует броня.</NoArmorInStation>
+  <CoreType>Ядро</CoreType>
+  <ChargeSpeed>Скорость зарядки: {0}</ChargeSpeed>
+  <EnabledCharging>Активно. Идет зарядка</EnabledCharging>
+  <FullCharge>Достигнут предел зарядки реактора</FullCharge>
+  <NoPowerRightNow>▬► NO POWER ◄▬</NoPowerRightNow>
   
 </LanguageData>

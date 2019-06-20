@@ -243,8 +243,16 @@
       <WorkToBuild>20000</WorkToBuild>
       <Mass>15</Mass>
     </statBases>
-    <tickerType>Rare</tickerType>
+    <tickerType>Normal</tickerType>
     <size>(4, 4)</size>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>1500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
     <costList>
       <Steel>200</Steel>
 	  <ComponentIndustrial>5</ComponentIndustrial>

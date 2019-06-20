@@ -1,7 +1,9 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -17,6 +19,9 @@ namespace MoreEvents.Things.Mk1
             Pawn pawn = base.pawn;
             LocalTargetInfo target = base.job.targetA;
             Job job = base.job;
+
+            station = (Mk1PowerStation)TargetThingA;
+            armor = (Apparel_Mk1)TargetThingB;
 
             int result;
             if(pawn.Reserve(target, job, 1, -1, null, errorOnFailed))
@@ -43,7 +48,7 @@ namespace MoreEvents.Things.Mk1
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
             yield return Toils_Reserve.Reserve(TargetIndex.B);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
-            yield return Toils_Haul.StartCarryThing(TargetIndex.B, putRemainderInQueue: false, subtractNumTakenFromJobCount: true);
+            yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
             yield return Toils_General.Wait(600).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
 
@@ -54,16 +59,12 @@ namespace MoreEvents.Things.Mk1
                     if (armor != null)
                     {
                         station.ContainedArmor = armor;
-                        Log.Message("1");
+                        pawn.carryTracker.TryDropCarriedThing(pawn.Position, ThingPlaceMode.Near, out Thing t);
+                        armor.DeSpawn();
                     }
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
-            finish.AddFinishAction(delegate
-            {
-                armor.DeSpawn();
-            });
-
             yield return finish;
         }
     }

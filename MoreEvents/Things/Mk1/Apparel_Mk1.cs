@@ -9,8 +9,10 @@ namespace MoreEvents.Things.Mk1
 {
     public class Apparel_Mk1 : Apparel
     {
-        public float EnergyCharge = 100f;
+        public float EnergyCharge = 0f;
         public float dischargeRate = 0.35f;
+
+        public bool FullCharge => EnergyCharge >= 100f;
 
         public Apparel GetHelmet => Wearer.apparel.WornApparel.Where(a => a.def == ThingDefOfLocal.Apparel_MK1ThunderHead).FirstOrDefault();
         private bool HasHelmet = false;
@@ -33,6 +35,17 @@ namespace MoreEvents.Things.Mk1
             }
 
             return false;
+        }
+
+        public void AddCharge(float num)
+        {
+            if (FullCharge)
+                return;
+
+            EnergyCharge += num;
+
+            if (EnergyCharge > 100f)
+                EnergyCharge = 100f;
         }
 
         public override string DescriptionDetailed
