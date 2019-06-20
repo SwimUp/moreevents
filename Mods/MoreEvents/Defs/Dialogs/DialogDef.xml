@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DiaRim.DialogDef>
+		<defName>TestDialog</defName>
+		<label>Dialog label</label>
+		<FirstPageId>1</FirstPageId>
+		<Pages>
+			<li>
+				<UniqueId>1</UniqueId>
+				<Title>Привет, путник!</Title>
+				<Text>Хочешь еды?</Text>
+				<Options>
+					<li>
+						<Label>Да</Label>
+						<NextPage>2</NextPage>
+					</li>
+					<li>
+						<Label>Пошел ты</Label>
+						<NextPage>3</NextPage>
+					</li>
+					<li>
+						<Label>Пошел ты 23</Label>
+						<NextPage>3</NextPage>
+					</li>
+					<li>
+						<Label>Пошел ты 444</Label>
+						<NextPage>3</NextPage>
+					</li>
+				</Options>
+			</li>
+			<li>
+				<UniqueId>2</UniqueId>
+				<Title>Привет, путник!</Title>
+				<Text>Точно!?</Text>
+				<Options>
+					<li>
+						<Label>Пока</Label>
+						<DialogEnd>True</DialogEnd>
+					</li>
+				</Options>
+			</li>
+			<li>
+				<UniqueId>3</UniqueId>
+				<Title>А ты хорош!</Title>
+				<Text>Ура!?</Text>
+				<Options>
+					<li>
+						<Label>ГЫгы</Label>
+						<DialogEnd>True</DialogEnd>
+					</li>
+				</Options>
+			</li>
+		</Pages>
+	</DiaRim.DialogDef>
+
+
+</Defs>

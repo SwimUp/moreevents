@@ -349,6 +349,370 @@
 				</capMods>
 			</li>
 		</stages>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Shield_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Щита</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
 
 	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Lynx_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Рыси</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Triangle_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Треугольника</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Clock_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Часов</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Hydra_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Гидры</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Corvus_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Ворона</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+
+	<HediffDef>
+		<defName>Indian_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Индейца</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+
+
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Eridan_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Эридана</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Taurus_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Тельца</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+
+
+
+	<HediffDef>
+		<defName>Coma_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Девы</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>Snake_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Змеи</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Octans_Effect</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.0, 0.0)</defaultLabelColor>
+		<label>Сияние Октанта</label>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.1</offset>
+					</li>
+
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
 </Defs>

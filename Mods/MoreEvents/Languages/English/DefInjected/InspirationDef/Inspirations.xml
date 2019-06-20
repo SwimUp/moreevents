@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <Frenzy_Go.label>прилив сил</Frenzy_Go.label>
+  <Frenzy_Go.baseInspectLine>Воодушевление: прилив сил</Frenzy_Go.baseInspectLine>
+  <Frenzy_Go.beginLetter>[PAWN_nameIndef] чувствует прилив жизненных сил.\n\nВ ближайшие 8 дней [PAWN_pronoun] будет передвигаться значительно быстрее.</Frenzy_Go.beginLetter>
+  <Frenzy_Go.beginLetterLabel>Воодушевление: прилив сил</Frenzy_Go.beginLetterLabel>
+  <Frenzy_Go.endMessage>[PAWN_nameIndef] теряет воодушевление (прилив сил).</Frenzy_Go.endMessage>
+  
+  
+</LanguageData>
