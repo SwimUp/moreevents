@@ -232,9 +232,13 @@
 	<scatterableOnMapGen>false</scatterableOnMapGen>
     <pathCost>200</pathCost>
     <fillPercent>0.4</fillPercent>
+    <designationCategory>Production</designationCategory>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <canOverlapZones>false</canOverlapZones>
     <castEdgeShadows>false</castEdgeShadows>
+    <researchPrerequisites>
+      <li>EnergyArmorResearch</li>
+    </researchPrerequisites>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <statBases>
       <MarketValue>900</MarketValue>

@@ -43,16 +43,16 @@ namespace MoreEvents
             }
 
 
-            Widgets.Label(new Rect(110, size.y - 200, 50, 64), "CoreType".Translate());
+            Widgets.Label(new Rect(110, size.y - 190, 50, 64), "CoreType".Translate());
             Widgets.DrawBox(new Rect(70, size.y - 180, 68, 68));
             Widgets.DrawAtlas(new Rect(70, size.y - 180, 64, 64), ContentFinder<Texture2D>.Get("Things/Buildings/ColdFusion/Core"));
 
-            Widgets.Label(new Rect(size.x - 88, size.y - 110, 50, 64), "CoreType".Translate());
-            Widgets.DrawBox(new Rect(size.x - 88, size.y - 90, 68, 68));
+            Widgets.Label(new Rect(size.x - 100, size.y - 110, 50, 64), "CoreType".Translate());
+            Widgets.DrawBox(new Rect(size.x - 88, size.y - 90, 66, 66));
             Widgets.DrawAtlas(new Rect(size.x - 88, size.y - 90, 64, 64), ContentFinder<Texture2D>.Get("Things/Buildings/ColdFusion/Core"));
 
-            Widgets.Label(new Rect(20, size.y - 110, 50, 64), "CoreType".Translate());
-            Widgets.DrawBox(new Rect(20, size.y - 90, 68, 68));
+            Widgets.Label(new Rect(20, size.y - 120, 50, 64), "CoreType".Translate());
+            Widgets.DrawBox(new Rect(20, size.y - 90, 66, 66));
             Widgets.DrawAtlas(new Rect(20, size.y - 90, 64, 64), ContentFinder<Texture2D>.Get("Things/Buildings/ColdFusion/Core"));
         }
 

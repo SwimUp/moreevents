@@ -1,6 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThingDef Name="UnfinishedNonStuffBase" Abstract="True">
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <label>unfinished thing</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <selectable>true</selectable>
+    <tradeability>None</tradeability>
+    <drawerType>RealtimeOnly</drawerType>
+    <!-- For CompForbiddable -->
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+			<DeteriorationRate>2.0</DeteriorationRate>
+			<Beauty>-8</Beauty>
+      <Mass>1</Mass> <!-- ingredients are added to this value -->
+		</statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <thingCategories>
+      <li>Unfinished</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="UnfinishedNonStuffBase">
+    <defName>UnfinishedArmor</defName>
+    <label>unfinished armor</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
   <ThingDef>
     <defName>ColdFusionReactorHeath</defName>
     <label>Cold fusion reactor heart</label>

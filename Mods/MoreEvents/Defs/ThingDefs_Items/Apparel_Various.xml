@@ -56,41 +56,6 @@
 			</defaultIngredientFilter>
 		</recipeMaker>
 	</ThingDef>
-	
-	<RecipeDef>
-		<defName>Make_Mk1Armor</defName>
-		<label>make catapult projectile</label>
-		<description>Make a projectile for a catapult</description>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>StoneBlocks</li>
-					</categories>
-				</filter>
-				<count>35</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>StoneBlocks</li>
-			</categories>
-		</fixedIngredientFilter>
-		<specialProducts>
-			<li>Butchery</li>
-		</specialProducts>
-		<jobString>makes projectile for catapult</jobString>
-		<workAmount>900</workAmount>
-		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-		<effectWorking>CutStone</effectWorking>
-		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
-		<products>
-			<Apparel_MK1Thunder>1</Apparel_MK1Thunder>
-		</products>
-		<recipeUsers>
-			<li>TableStonecutter</li>
-		</recipeUsers>
-	</RecipeDef>
 
 	<ThingDef ParentName="ArmorMKBase">
 		<defName>Apparel_MK1Thunder</defName>
@@ -100,24 +65,21 @@
 mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
 \n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.</description>
 		<techLevel>Spacer</techLevel>
-		<recipeMaker>
-			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-			<researchPrerequisite>PoweredArmor</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>15</Crafting>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-		</recipeMaker>
 		<tickerType>Rare</tickerType>
 		<graphicData>
 			<texPath>Things/Apparels/Mk1/Mk1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<generateCommonality>0</generateCommonality>
+		<recipeMaker>
+		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		  <researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>15</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
 		<statBases>
-			<WorkToMake>400000</WorkToMake>
+			<WorkToMake>70000</WorkToMake>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Mass>18</Mass>
 			<Flammability>0.4</Flammability>
@@ -165,7 +127,6 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<tradeability>Sellable</tradeability>
 	</ThingDef>
 
-
 	<ThingDef ParentName="ArmorMKBase">
 		<defName>Apparel_MK1ThunderHead</defName>
 		<label>Power Helmet Mk.I "Thunder"</label>
@@ -177,30 +138,27 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<texPath>Things/Apparels/Mk1/Helmet/helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<recipeMaker>
-			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-			<researchPrerequisite>PoweredArmor</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>15</Crafting>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-		</recipeMaker>
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
 			<Plasteel>100</Plasteel>
 			<Hyperweave>60</Hyperweave>
 			<Uranium>30</Uranium>
 		</costList>
+		<recipeMaker>
+		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		  <researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>15</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
 		<statBases>
-			<WorkToMake>3000</WorkToMake>
+			<WorkToMake>35000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>
 			<Flammability>0.4</Flammability>
-			  <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
-			  <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
-			  <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+			<StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
 			<EquipDelay>5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
