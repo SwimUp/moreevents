@@ -35,5 +35,7 @@ namespace MoreEvents
 
         public static ThingDef Apparel_MK1Thunder;
         public static ThingDef Apparel_MK1ThunderHead;
+        public static ThingDef MiniColdFusionReactor;
+        public static ThingDef MiniArcReactor;
     }
 }

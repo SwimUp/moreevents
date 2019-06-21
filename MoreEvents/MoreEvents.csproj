@@ -158,7 +158,10 @@
     <Compile Include="Things\Building_SingularReactor.cs" />
     <Compile Include="Things\Gizmo_FillableMk1.cs" />
     <Compile Include="Things\Mk1\Apparel_Mk1.cs" />
+    <Compile Include="Things\Mk1\ArmorCore.cs" />
+    <Compile Include="Things\Mk1\CompProperties_ArmorCore.cs" />
     <Compile Include="Things\Mk1\ITab_ModifyMk1.cs" />
+    <Compile Include="Things\Mk1\JobDriver_CarryReactorToStation.cs" />
     <Compile Include="Things\Mk1\JobDriver_UnLoadArmorIntoStand.cs" />
     <Compile Include="Things\Mk1\JobDriver_LoadArmorIntoStand.cs" />
     <Compile Include="Things\Mk1\Mk1PowerStation.cs" />
@@ -178,6 +181,8 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Jobs\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,22 +22,7 @@ namespace MoreEvents.Events.ClimateBomb
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            List<int> tiles = new List<int>();
-            for(int i = 0; i < Find.WorldGrid.TilesCount; i++)
-            {
-                Tile tile = Find.WorldGrid[i];
-
-                if(tile.hilliness != Hilliness.Impassable && tile.biome != BiomeDefOf.Ocean &&
-                    tile.biome != BiomeDefOf.Lake && !Find.WorldObjects.AnyMapParentAt(i))
-                {
-                    tiles.Add(i);
-                }
-            }
-
-            if (tiles.Count == 0)
-                return false;
-
-            int spawnPoint = tiles.RandomElement();
+            int spawnPoint = GetPlace(Current.Game.AnyPlayerHomeMap);
 
             ClimateBombSite site = (ClimateBombSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.ClimateBombSite);
             site.Tile = spawnPoint;
@@ -47,6 +32,14 @@ namespace MoreEvents.Events.ClimateBomb
             SendStandardLetter(site);
 
             return true;
+        }
+
+        private int GetPlace(Map map)
+        {
+            int playerTile = map.Tile;
+            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 7, 14, out int result);
+
+            return result;
         }
     }
 }

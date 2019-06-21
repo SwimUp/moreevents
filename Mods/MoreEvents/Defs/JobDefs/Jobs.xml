@@ -12,5 +12,11 @@
 		<driverClass>MoreEvents.Things.Mk1.JobDriver_UnLoadArmorIntoStand</driverClass>
 		<reportString>Disconnects armor from the stand</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>CarryReactorToStation</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_CarryReactorToStation</driverClass>
+		<reportString>Carries reactor to station</reportString>
+	</JobDef>
 
 </Defs>

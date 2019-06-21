@@ -99,7 +99,6 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<costList>
 			<ComponentSpacer>15</ComponentSpacer>
 			<Plasteel>300</Plasteel>
-			<MiniColdFusionReactor>1</MiniColdFusionReactor>
 			<Hyperweave>100</Hyperweave>
 			<Uranium>50</Uranium>
 		</costList>

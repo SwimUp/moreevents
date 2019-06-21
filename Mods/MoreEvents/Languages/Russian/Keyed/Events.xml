@@ -75,7 +75,7 @@
   <RaidStartDefendTitle>Атака началась!</RaidStartDefendTitle>
   <RaidStartDefend>Враги нападают, приготовиться!</RaidStartDefend>
   
-  <EnergyChargeCapacity>Уровень заряда: {0}</EnergyChargeCapacity>
+  <EnergyChargeCapacity>Уровень заряда: {0} / {1}</EnergyChargeCapacity>
   <InactiveNoHelmet>\nНеактивен. Отсутствует шлем.</InactiveNoHelmet>
   <InactiveMk1>Неактивен</InactiveMk1>
   <EnergyChargeCapacity2>Уровень заряда</EnergyChargeCapacity2>
@@ -90,5 +90,9 @@
   <EnabledCharging>Активно. Идет зарядка</EnabledCharging>
   <FullCharge>Достигнут предел зарядки реактора</FullCharge>
   <NoPowerRightNow>▬► NO POWER ◄▬</NoPowerRightNow>
+  <NoCore>Отсутствует ядро</NoCore>
+  <NoAvaliableCores>Нет доступных ядер</NoAvaliableCores>
+  <ColdFusionCore>Холодный синтез</ColdFusionCore>
+  <ArcReactorCore>Дуговой</ArcReactorCore>
   
 </LanguageData>

@@ -9,10 +9,10 @@ using Verse.AI;
 
 namespace MoreEvents.Things.Mk1
 {
-    public class JobDriver_LoadArmorIntoStand : JobDriver
+    public class JobDriver_CarryReactorToStation : JobDriver
     {
         public Mk1PowerStation station;
-        public Apparel_Mk1 armor;
+        public Thing core;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -28,7 +28,7 @@ namespace MoreEvents.Things.Mk1
                 job = base.job;
 
                 station = (Mk1PowerStation)TargetThingA;
-                armor = (Apparel_Mk1)TargetThingB;
+                core = TargetThingB;
 
                 result = (pawn.Reserve(target, job, 1, -1, null) ? 1 : 0);
             }
@@ -47,17 +47,28 @@ namespace MoreEvents.Things.Mk1
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
-            yield return Toils_General.Wait(600).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
+            yield return Toils_General.Wait(1500).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
 
             Toil finish = new Toil
             {
                 initAction = delegate
                 {
-                    if (armor != null)
+                    if (core != null)
                     {
-                        station.ContainedArmor = armor;
-                        pawn.carryTracker.TryDropCarriedThing(pawn.Position, ThingPlaceMode.Near, out Thing t);
-                        armor.DeSpawn();
+                        Apparel_Mk1 mk1 = station.ContainedArmor as Apparel_Mk1;
+                        if (mk1 != null)
+                        {
+                            if (mk1.Core != null)
+                            {
+                                CellFinder.TryFindRandomCellNear(station.Position, station.Map, 2, null, out IntVec3 result);
+                                GenSpawn.Spawn(mk1.Core, result, station.Map);
+                                mk1.Core = null;
+                            }
+
+                            mk1.ChangeCore(core);
+                            pawn.carryTracker.TryDropCarriedThing(pawn.Position, ThingPlaceMode.Near, out Thing t);
+                            core.DeSpawn();
+                        }
                     }
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant

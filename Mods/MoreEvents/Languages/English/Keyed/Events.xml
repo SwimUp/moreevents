@@ -74,7 +74,7 @@
   <RaidStartDefendTitle>The attack has begun!</RaidStartDefendTitle>
   <RaidStartDefend>Enemies are attacking, get ready!</RaidStartDefend>
   
-  <EnergyChargeCapacity>Charge: {0}</EnergyChargeCapacity>
+  <EnergyChargeCapacity>Charge: {0} / {1}</EnergyChargeCapacity>
   <InactiveNoHelmet>\nInactive. Missing helmet.</InactiveNoHelmet>
   <InactiveMk1>Inactive</InactiveMk1>
   <EnergyChargeCapacity2>Capacity</EnergyChargeCapacity2>
@@ -89,5 +89,9 @@
   <EnabledCharging>Actively. Charging</EnabledCharging>
   <FullCharge>Reactor charge limit reached</FullCharge>
   <NoPowerRightNow>▬► NO POWER ◄▬</NoPowerRightNow>
+  <NoCore>Core missing</NoCore>
+  <NoAvaliableCores>No cores available</NoAvaliableCores>
+  <ColdFusionCore>Cold fusion</ColdFusionCore>
+  <ArcReactorCore>Arc</ArcReactorCore>
   
 </LanguageData>

@@ -15,6 +15,8 @@ namespace DiaRim
 
         public string Text;
 
+        public string PageText;
+
         public List<DialogOption> Options;
 
         public void Init(Dialog dialog)
@@ -25,7 +27,8 @@ namespace DiaRim
             {
                 option.Init(this);
             }
-        }
 
+            PageText = $"{Title}\n\n{Text}";
+        }
     }
 }

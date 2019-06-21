@@ -9,15 +9,35 @@ namespace MoreEvents.Things.Mk1
 {
     public class Apparel_Mk1 : Apparel
     {
-        public float EnergyCharge = 0f;
+        public float EnergyCharge
+        {
+            set
+            {
+                CoreComp.EnergyCharge = value;
+            }
+            get
+            {
+                return CoreComp.EnergyCharge;
+            }
+        }
         public float dischargeRate = 0.35f;
 
-        public bool FullCharge => EnergyCharge >= 100f;
+        public bool FullCharge => EnergyCharge >= CoreComp.PowerCapacity;
 
         public Apparel GetHelmet => Wearer.apparel.WornApparel.Where(a => a.def == ThingDefOfLocal.Apparel_MK1ThunderHead).FirstOrDefault();
         private bool HasHelmet = false;
 
-        public bool Active => HasHelmet && EnergyCharge > 0f;
+        public bool Active => Core != null && HasHelmet && EnergyCharge > 0f;
+
+        public Thing Core;
+        public ArmorCore CoreComp;
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+
+            CoreComp = Core.TryGetComp<ArmorCore>();
+        }
 
         public static bool HasMk1Enable(Pawn p)
         {
@@ -37,8 +57,17 @@ namespace MoreEvents.Things.Mk1
             return false;
         }
 
+        public void ChangeCore(Thing newCore)
+        {
+            Core = newCore;
+            CoreComp = Core.TryGetComp<ArmorCore>();
+        }
+
         public void AddCharge(float num)
         {
+            if (Core == null)
+                return;
+
             if (FullCharge)
                 return;
 
@@ -57,9 +86,16 @@ namespace MoreEvents.Things.Mk1
                 {
                     text += "\n";
                 }
-                text += "EnergyChargeCapacity".Translate(EnergyCharge.ToString("f2"));
-                if (!HasHelmet)
-                    text += "InactiveNoHelmet".Translate();
+                if (Core == null)
+                {
+                    text += "NoCore".Translate();
+                }
+                else
+                {
+                    text += "EnergyChargeCapacity".Translate(EnergyCharge.ToString("f2"), CoreComp.PowerCapacity);
+                    if (!HasHelmet)
+                        text += "InactiveNoHelmet".Translate();
+                }
 
                 return text;
             }
@@ -70,7 +106,7 @@ namespace MoreEvents.Things.Mk1
             base.ExposeData();
 
             Scribe_Values.Look(ref HasHelmet, "HasHelmet");
-            Scribe_Values.Look(ref EnergyCharge, "EnergyCharge");
+            Scribe_Deep.Look(ref Core, "Core");
         }
 
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
@@ -142,9 +178,16 @@ namespace MoreEvents.Things.Mk1
             {
                 text += "\n";
             }
-            text += "EnergyChargeCapacity".Translate(EnergyCharge.ToString("f2"));
-            if (!HasHelmet)
-                text += "InactiveNoHelmet".Translate();
+            if (Core == null)
+            {
+                text += "NoCore".Translate();
+            }
+            else
+            {
+                text += "EnergyChargeCapacity".Translate(EnergyCharge.ToString("f2"), CoreComp.PowerCapacity);
+                if (!HasHelmet)
+                    text += "InactiveNoHelmet".Translate();
+            }
 
             return text;
         }

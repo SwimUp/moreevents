@@ -2,81 +2,83 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace DiaRim
 {
-    public class Dialog
+    public class Dialog : Window
     {
         public DialogDef DialogDef;
 
-        public Dialog_NodeTree Tree;
+        public Dictionary<int, DialogPage> Pages = new Dictionary<int, DialogPage>();
 
-        public Dictionary<int, DiaNode> Pages = new Dictionary<int, DiaNode>();
+        public DialogPage CurrentPage;
 
-        public Action CloseAction;
+        protected float minOptionsAreaHeight;
+        private Vector2 scrollPosition;
+        private float optTotalHeight;
 
         public Dialog(DialogDef dialogDef)
         {
             DialogDef = dialogDef;
         }
 
+        public override void DoWindowContents(Rect inRect)
+        {
+            Rect rect = inRect.AtZero();
+            DrawNode(rect);
+        }
+
+        protected void DrawNode(Rect rect)
+        {
+            GUI.BeginGroup(rect);
+            Text.Font = GameFont.Small;
+            Rect outRect = new Rect(0f, 0f, rect.width, rect.height - Mathf.Max(optTotalHeight, minOptionsAreaHeight));
+            float width = rect.width - 16f;
+            Rect rect2 = new Rect(0f, 0f, width, Text.CalcHeight(CurrentPage.PageText, width));
+            Widgets.BeginScrollView(outRect, ref scrollPosition, rect2);
+            Widgets.Label(rect2, CurrentPage.PageText);
+            Widgets.EndScrollView();
+            float num = rect.height - optTotalHeight;
+            float num2 = 0f;
+            for (int i = 0; i < CurrentPage.Options.Count; i++)
+            {
+                Rect rect3 = new Rect(15f, num, rect.width - 30f, 999f);
+                float num3 = CurrentPage.Options[i].OptOnGUI(rect3);
+                num += num3 + 7f;
+                num2 += num3 + 7f;
+            }
+            if (Event.current.type == EventType.Layout)
+            {
+                optTotalHeight = num2;
+            }
+            GUI.EndGroup();
+        }
+
         public void Init()
         {
-            CreatePages();
+            InitPages();
 
-            CreateOptions();
-
-            Tree = new Dialog_NodeTree(Pages[DialogDef.FirstPageId]);
-
-            Tree.closeAction = CloseAction;
+            CurrentPage = Pages[DialogDef.FirstPageId];
         }
 
-        public void Show()
+        public void GotoPage(DialogPage page)
         {
-            Find.WindowStack.Add(Tree);
+            CurrentPage = page;
         }
 
-        private void CreatePages()
+        public void GotoPage(int pageId)
         {
-            foreach (var page in DialogDef.Pages)
-            {
-                StringBuilder builder = new StringBuilder();
-                builder.AppendLine(page.Title);
-                builder.Append("\n\n");
-                builder.AppendLine(page.Text);
-
-                DiaNode node = new DiaNode(builder.ToString());
-
-                Pages.Add(page.UniqueId, node);
-            }
+            CurrentPage = Pages[pageId];
         }
 
-        private void CreateOptions()
+        private void InitPages()
         {
             foreach (var page in DialogDef.Pages)
             {
-                if (page.Options == null)
-                    continue;
-
-                DiaNode node = Pages[page.UniqueId];
-
-                foreach (var option in page.Options)
-                {
-                    DiaOption opt = new DiaOption(option.Label)
-                    {
-                        resolveTree = option.DialogEnd
-                    };
-
-                    opt.action = option.Action;
-
-                    if (!opt.resolveTree)
-                    {
-                        opt.link = Pages[option.NextPage];
-                    }
-
-                    node.options.Add(opt);
-                }
+                page.Init(this);
+                Pages.Add(page.UniqueId, page);
             }
         }
     }

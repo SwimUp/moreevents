@@ -253,7 +253,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>1500</basePowerConsumption>
+        <basePowerConsumption>2000</basePowerConsumption>
       </li>
       <li Class="CompProperties_Flickable"/>
     </comps>

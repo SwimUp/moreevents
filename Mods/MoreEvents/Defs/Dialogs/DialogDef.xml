@@ -11,22 +11,6 @@
 				<Title>Привет, путник!</Title>
 				<Text>Хочешь еды?</Text>
 				<Options>
-					<li>
-						<Label>Да</Label>
-						<NextPage>2</NextPage>
-					</li>
-					<li>
-						<Label>Пошел ты</Label>
-						<NextPage>3</NextPage>
-					</li>
-					<li>
-						<Label>Пошел ты 23</Label>
-						<NextPage>3</NextPage>
-					</li>
-					<li>
-						<Label>Пошел ты 444</Label>
-						<NextPage>3</NextPage>
-					</li>
 				</Options>
 			</li>
 			<li>
@@ -34,10 +18,6 @@
 				<Title>Привет, путник!</Title>
 				<Text>Точно!?</Text>
 				<Options>
-					<li>
-						<Label>Пока</Label>
-						<DialogEnd>True</DialogEnd>
-					</li>
 				</Options>
 			</li>
 			<li>
@@ -45,10 +25,6 @@
 				<Title>А ты хорош!</Title>
 				<Text>Ура!?</Text>
 				<Options>
-					<li>
-						<Label>ГЫгы</Label>
-						<DialogEnd>True</DialogEnd>
-					</li>
 				</Options>
 			</li>
 		</Pages>
