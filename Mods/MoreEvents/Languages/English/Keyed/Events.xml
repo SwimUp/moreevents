@@ -57,6 +57,8 @@
   
   <SiegeCampUpdateTimer>\nDays to upgrade:</SiegeCampUpdateTimer>
   <SiegeCampLevel>Camp difficulty:</SiegeCampLevel>
+  <YourAttackWasRepelledTitle>Your attack failed</YourAttackWasRepelledTitle>
+  <YourAttackWasRepelledDesc>Your attack on the enemy camp failed. They will take into account their mistakes in defense and, probably, can rebuild their defense. The surviving colonists are probably dead or sold into slavery.</YourAttackWasRepelledDesc>
   
   <AttackIsNotRepelled>You can not leave now. The attack is not yet reflected.</AttackIsNotRepelled>
   <TimerDaysToAttack>Days to attack {0}</TimerDaysToAttack>

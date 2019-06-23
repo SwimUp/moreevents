@@ -1,4 +1,5 @@
 ﻿using DiaRim.Actions;
+using DiaRim.Conditions;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,13 @@ namespace DiaRim
 
         public SoundDef ClickSound = SoundDefOf.PageChange;
 
+        public Action ClickAction;
+
         public List<OptionAction> Actions;
+
+        public List<OptionCondition> Conditions;
+
+        public int NextPageId = -1;
 
         public Dialog Dialog => Page.Dialog;
 
@@ -32,10 +39,39 @@ namespace DiaRim
         {
             Page = parent;
 
-            foreach(var action in Actions)
+            if (Actions != null)
             {
-                action.Option = this;
+                foreach (var action in Actions)
+                {
+                    action.Option = this;
+                }
             }
+
+            Disabled = CheckConditions();
+        }
+
+        public bool CheckConditions()
+        {
+            if (Conditions == null || Dialog.Speaker == null)
+                return false;
+
+            bool disable = false;
+            StringBuilder builder = new StringBuilder();
+            foreach (var condition in Conditions)
+            {
+                if (!condition.CanUse(Dialog.Speaker))
+                {
+                    disable = true;
+                    builder.AppendLine($"- {condition.DisableReason}");
+                }
+            }
+
+            if (builder.Length > 0)
+            {
+                DisabledReason = builder.ToString();
+            }
+
+            return disable;
         }
 
         public float OptOnGUI(Rect rect, bool active = true)
@@ -45,12 +81,15 @@ namespace DiaRim
             if (Disabled)
             {
                 textColor = DisabledOptionColor;
+                /*
                 if (DisabledReason != null)
                 {
-                    text = text + " (" + DisabledReason + ")";
+                    text = text + DisabledReason;
                 }
+                */
             }
             rect.height = Text.CalcHeight(text, rect.width);
+            TooltipHandler.TipRegion(rect, DisabledReason);
             if (Widgets.ButtonText(rect, text, drawBackground: false, doMouseoverSound: false, textColor, active && !Disabled))
             {
                 Activate();
@@ -64,15 +103,24 @@ namespace DiaRim
             {
                 ClickSound.PlayOneShotOnCamera();
             }
+
+            if (Actions != null)
+            {
+                foreach (var action in Actions)
+                {
+                    action.DoAction();
+                }
+            }
+
+            ClickAction?.Invoke();
+
             if (ResolveTree)
             {
                 Dialog.Close();
+                return;
             }
 
-            foreach(var action in Actions)
-            {
-                action.DoAction();
-            }
+            Dialog.GotoPage(NextPageId);
         }
     }
 }

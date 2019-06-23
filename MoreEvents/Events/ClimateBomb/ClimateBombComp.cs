@@ -49,6 +49,9 @@ namespace MoreEvents.Events.ClimateBomb
             base.PostExposeData();
 
             Scribe_Values.Look(ref detonationTimer, "detonationTimer");
+            Scribe_Values.Look(ref BlownUp, "BlownUp");
+            Scribe_Values.Look(ref currentWave, "currentWave");
+            Scribe_References.Look(ref Bomb, "Bomb");
         }
 
         public override void PostMapGenerate()

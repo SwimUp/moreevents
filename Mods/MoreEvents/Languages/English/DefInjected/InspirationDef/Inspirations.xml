@@ -40,7 +40,7 @@
   <Constellations_Frenzy_Plant.baseInspectLine>Farmer's blessing</Constellations_Frenzy_Plant.baseInspectLine>
   <Constellations_Frenzy_Plant.beginLetter>[PAWN_nameIndef] Expands its possibilities in farming.</Constellations_Frenzy_Plant.beginLetter>
   <Constellations_Frenzy_Plant.beginLetterLabel>Сonstellation blessing</Constellations_Frenzy_Plant.beginLetterLabel>
-  <Constellations_Frenzy_Plant.endMessage>[PAWN_nameIndef] no longer blessed.</Constellations_Frenzy_Animals.endMessage>
+  <Constellations_Frenzy_Plant.endMessage>[PAWN_nameIndef] no longer blessed.</Constellations_Frenzy_Plant.endMessage>
   
   
    <Constellations_Frenzy_Social.label>Сonstellation blessing</Constellations_Frenzy_Social.label>
@@ -155,14 +155,14 @@
   <Constellations_Frenzy_Coma.endMessage>[PAWN_nameIndef] no longer damned.</Constellations_Frenzy_Coma.endMessage>
   
   
-     <Constellations_Frenzy_Snake.label>Constellation curse</Constellations_Frenzy_Snake.label>
+  <Constellations_Frenzy_Snake.label>Constellation curse</Constellations_Frenzy_Snake.label>
   <Constellations_Frenzy_Snake.baseInspectLine>Curse of snake</Constellations_Frenzy_Snake.baseInspectLine>
   <Constellations_Frenzy_Snake.beginLetter>[PAWN_nameIndef] losing skills in surgery.</Constellations_Frenzy_Snake.beginLetter>
   <Constellations_Frenzy_Snake.beginLetterLabel>Constellation curse</Constellations_Frenzy_Snake.beginLetterLabel>
   <Constellations_Frenzy_Snake.endMessage>[PAWN_nameIndef] no longer damned.</Constellations_Frenzy_Snake.endMessage>
   
   
-     <Constellations_Frenzy_Octans.label>Constellation curse</Constellations_Frenzy_Octans.label>
+  <Constellations_Frenzy_Octans.label>Constellation curse</Constellations_Frenzy_Octans.label>
   <Constellations_Frenzy_Octans.baseInspectLine>Curse of Octans</Constellations_Frenzy_Octans.baseInspectLine>
   <Constellations_Frenzy_Octans.beginLetter>[PAWN_nameIndef] losing their skills in researching.</Constellations_Frenzy_Octans.beginLetter>
   <Constellations_Frenzy_Octans.beginLetterLabel>Constellation curse</Constellations_Frenzy_Octans.beginLetterLabel>

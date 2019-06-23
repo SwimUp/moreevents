@@ -60,6 +60,8 @@
   
   <SiegeCampUpdateTimer>\nДней до улучшения:</SiegeCampUpdateTimer>
   <SiegeCampLevel>Сложность лагеря:</SiegeCampLevel>
+  <YourAttackWasRepelledTitle>Ваша атака провалилась</YourAttackWasRepelledTitle>
+  <YourAttackWasRepelledDesc>Ваша атака на вражеский лагерь провалилась. Они учтут свои ошибки в обороне и, вероятно, могут перестроить свою оборону. Оставшиеся в живых колонисты вероятно мертвы или проданы в рабство.</YourAttackWasRepelledDesc>
   
   <AttackIsNotRepelled>Вы не можете уйти сейчас. Атака еще не отражена.</AttackIsNotRepelled>
   <TimerDaysToAttack>Дней до нападения: {0}</TimerDaysToAttack>
@@ -84,7 +86,7 @@
   <LoadArmor>Подключить броню к станции</LoadArmor>
   <NoAvaliableArmors>Нет доступной брони</NoAvaliableArmors>
   <NotEnoughSpace>Нет места для брони. Освободите больше места вокруг станции.</NotEnoughSpace>
-  <NoArmorInStation>Станция не активна. Отсутствует броня.</NoArmorInStation>
+  <NoArmorInStation>Станция не активна. \nОтсутствует броня.</NoArmorInStation>
   <CoreType>Ядро</CoreType>
   <ChargeSpeed>Скорость зарядки: {0}</ChargeSpeed>
   <EnabledCharging>Активно. Идет зарядка</EnabledCharging>

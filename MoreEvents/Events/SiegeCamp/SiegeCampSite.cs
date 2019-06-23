@@ -29,6 +29,9 @@ namespace MoreEvents.Events.SiegeCamp
         private Map playerSiegeMap = null;
         public int MapSiegeTile = -1;
 
+        private int checkColonistTicker = 0;
+        private int checkColonistInterval = 5000;
+
         public override void SpawnSetup()
         {
             base.SpawnSetup();
@@ -38,6 +41,41 @@ namespace MoreEvents.Events.SiegeCamp
             comp = this.GetComponent<SiegeCampSiteComp>();
 
             caravanAction = new CaravanVisitAction_SiegeCamp(this);
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+
+            if (HasMap)
+            {
+                checkColonistTicker--;
+                if (checkColonistTicker <= 0)
+                {
+                    checkColonistTicker = checkColonistInterval;
+
+                    CheckColonistsNow();
+                }
+            }
+        }
+
+        public void CheckColonistsNow()
+        {
+            List<Pawn> pawns = Map.mapPawns.FreeColonists.ToList();
+
+            int downedPawns = 0;
+            pawns.ForEach(delegate (Pawn p)
+            {
+                if (p.Downed || p.Dead || !p.Spawned)
+                {
+                    downedPawns++;
+                }
+            });
+
+            if (downedPawns == pawns.Count)
+            {
+                comp.UpdateCamp();
+            }
         }
 
         public void SetMap(Map map)

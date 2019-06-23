@@ -37,7 +37,7 @@ namespace MoreEvents.Events.ClimateBomb
         private int GetPlace(Map map)
         {
             int playerTile = map.Tile;
-            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 7, 14, out int result);
+            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 9, 20, out int result);
 
             return result;
         }

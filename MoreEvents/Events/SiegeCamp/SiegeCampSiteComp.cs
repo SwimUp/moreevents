@@ -122,6 +122,8 @@ namespace MoreEvents.Events.SiegeCamp
             Scribe_Values.Look(ref mortarsFiring, "mortarsFiring");
             Scribe_Values.Look(ref mortarsBulletCount, "mortarsBulletCount");
             Scribe_Values.Look(ref mortarShellTimer, "mortarShellTimer");
+
+            Scribe_Values.Look(ref siegeCampLevel, "siegeCampLevel");
         }
 
         public override string CompInspectStringExtra()
@@ -149,7 +151,7 @@ namespace MoreEvents.Events.SiegeCamp
 
                     if (timer <= 0)
                     {
-                        UpdateCamp();
+                        LevelUpCamp();
                     }
                 }
 
@@ -158,7 +160,6 @@ namespace MoreEvents.Events.SiegeCamp
                 {
                     SendRaid();
                 }
-
 
                 if (mortarsFiring)
                 {
@@ -188,7 +189,23 @@ namespace MoreEvents.Events.SiegeCamp
             }
         }
 
+        public void UpdateCamp()
+        {
+            var letter = LetterMaker.MakeLetter("YourAttackWasRepelledTitle".Translate(), "YourAttackWasRepelledDesc".Translate(), LetterDefOf.NeutralEvent);
+            Find.LetterStack.ReceiveLetter(letter);
 
+            if (Rand.Chance(0.25f))
+                RerollMaps();
+
+            Current.Game.DeinitAndRemoveMap(camp.Map);
+        }
+
+        private void RerollMaps()
+        {
+            levels[0] = Rand.Range(0, 5);
+            levels[1] = Rand.Range(0, 5);
+            levels[2] = Rand.Range(0, 3);
+        }
 
         public void SendRaid()
         {
@@ -238,7 +255,7 @@ namespace MoreEvents.Events.SiegeCamp
             BlueprintHandler.CreateBlueprintAt(camp.Map.Center, camp.Map, baseBlueprint, camp.Faction, null, out Dictionary<Pawn, LordType> pawnsList, out totalThreat, true);
         }
 
-        private void UpdateCamp()
+        private void LevelUpCamp()
         {
             timer = ticksBetweenUpdate;
             siegeCampLevel++;

@@ -30,9 +30,12 @@ namespace DiaRim
         public class TestDialogsWindow : Window
         {
             private Vector2 scrollPosition = Vector2.zero;
-            public override Vector2 InitialSize => new Vector2(200, 400);
+            public override Vector2 InitialSize => new Vector2(200, 530);
 
             private int defSize = 0;
+
+            public string X = "500";
+            public string Y = "500";
 
             public TestDialogsWindow()
             {
@@ -56,14 +59,17 @@ namespace DiaRim
                 {
                     if (Widgets.ButtonText(new Rect(0, y, 170, 20), def.defName))
                     {
-                        Dialog dia = new Dialog(def);
+                        Dialog dia = new Dialog(def, Current.Game.CurrentMap.mapPawns.FreeColonists.RandomElement());
                         dia.Init();
-                        dia.Show();
+                        Find.WindowStack.Add(dia);
                     }
                     y += 22;
                 }
 
                 Widgets.EndScrollView();
+
+                X = Widgets.TextField(new Rect(0, 420, 170, 20), X);
+                Y = Widgets.TextField(new Rect(0, 450, 170, 20), Y);
             }
         }
     }

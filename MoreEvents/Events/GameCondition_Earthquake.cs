@@ -99,11 +99,14 @@ namespace MoreEvents.Events
 
             for (int i = 0; i < count; i++)
             {
-                var thing = SingleMap.listerThings.AllThings.Where(t => t is Building && t.Position.GetRoof(SingleMap) == RoofDefOf.RoofConstructed && !t.Fogged() && t.Spawned).RandomElement();
+                var thing = SingleMap.listerThings.AllThings.Where(t => t is Building && !t.Fogged() && t.Spawned).RandomElement();
 
                 if (thing != null)
                 {
                     float damage = Rand.Range(10, 20) * damageMultiplier;
+                    if (thing.Position.Roofed(SingleMap) && thing.Position.GetRoof(SingleMap) == RoofDefOf.RoofRockThick)
+                        damage *= 0.1f;
+
                     thing.TakeDamage(new DamageInfo(DamageDefOf.Bomb, damage));
                 }
             }

@@ -34,6 +34,17 @@ namespace MoreEvents.Things
 
         public bool HintShown = false;
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref HintShown, "HintShown");
+            Scribe_Values.Look(ref BlownUp, "BlownUp");
+            Scribe_Values.Look(ref Disarmed, "Disarmed");
+            Scribe_Values.Look(ref DisarmingProgress, "DisarmingProgress");
+            Scribe_References.Look(ref Site, "Site");
+        }
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -52,6 +63,11 @@ namespace MoreEvents.Things
         public void Disarm()
         {
             Disarmed = true;
+
+            if (CellFinder.TryFindRandomCellNear(Position, Map, 6, null, out IntVec3 result))
+            {
+                GenSpawn.Spawn(ThingDefOfLocal.ColdFusionReactorHeath, result, Map);
+            }
 
             if(Site != null)
                 Site.DisarmBomb();

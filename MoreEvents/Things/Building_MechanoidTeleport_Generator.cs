@@ -47,7 +47,7 @@ namespace MoreEvents.Things
 
         private bool FindHomeAreaCell(Map map, out IntVec3 result)
         {
-            List<IntVec3> cells = (from c in map.areaManager.Home.ActiveCells where c.GetRoof(map) != RoofDefOf.RoofRockThick && !c.Fogged(map) select c).ToList();
+            List<IntVec3> cells = (from c in map.areaManager.Home.ActiveCells where c.GetRoof(map) != RoofDefOf.RoofRockThick && !c.Fogged(map) && c.GetFirstBuilding(map) == null select c).ToList();
             if (cells.Count > 0)
             {
                 result = cells.RandomElement();

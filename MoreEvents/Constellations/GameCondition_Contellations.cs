@@ -60,6 +60,9 @@ namespace MoreEvents.Constellations
                 {
                     foreach (var pawn in map.mapPawns.AllPawnsSpawned)
                     {
+                        if (pawn.RaceProps.Animal)
+                            continue;
+
                         if ((pawn.gender == Gender.Male && ConstellationsDef.AllowMale) || (pawn.gender == Gender.Female && ConstellationsDef.AllowFemale))
                         {
                             Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(effect, false);

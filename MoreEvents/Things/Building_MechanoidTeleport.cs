@@ -121,7 +121,7 @@ namespace MoreEvents.Things
 
         private void DestroyAnim()
         {
-            if(CellFinder.TryFindRandomCellNear(Position, Map, offset, null, out IntVec3 pos))
+            if(CellFinder.TryFindRandomCellNear(Position, Map, offset, (IntVec3 x) => !x.Roofed(Map), out IntVec3 pos))
             {
                 Find.CurrentMap.weatherManager.eventHandler.AddEvent(new WeatherEvent_LightningStrike(Map, pos));
                 offset += Rand.Range(1, 3);

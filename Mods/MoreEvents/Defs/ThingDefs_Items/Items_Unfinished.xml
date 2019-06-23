@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+<!--
 	<ThingDef Name="UnfinishedNonStuffBase" Abstract="True">
 		<thingClass>UnfinishedThing</thingClass>
 		<category>Item</category>
@@ -16,13 +16,11 @@
 		<selectable>true</selectable>
 		<tradeability>None</tradeability>
 		<drawerType>RealtimeOnly</drawerType>
-		<!-- For CompForbiddable -->
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
 			<DeteriorationRate>2.0</DeteriorationRate>
 			<Beauty>-8</Beauty>
 			<Mass>1</Mass>
-			<!-- ingredients are added to this value -->
 		</statBases>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
@@ -43,6 +41,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 	</ThingDef>
+	-->
 
 	<ThingDef>
 		<defName>ColdFusionReactorHeath</defName>
@@ -54,6 +53,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<category>Item</category>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -101,6 +103,9 @@
 		<altitudeLayer>Item</altitudeLayer>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<statBases>
 			<MarketValue>2800</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
@@ -159,6 +164,9 @@
 			<ColdFusionReactorHeath>1</ColdFusionReactorHeath>
 		</costList>
 		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
 		<selectable>true</selectable>
@@ -200,6 +208,9 @@
 			<drawSize>(0.5, 0.5)</drawSize>
 		</graphicData>
 		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
 		<selectable>true</selectable>
@@ -269,6 +280,9 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
 		<selectable>true</selectable>
@@ -308,6 +322,9 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
 		<selectable>true</selectable>
@@ -347,6 +364,9 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
 		<selectable>true</selectable>
@@ -392,6 +412,9 @@
 		<altitudeLayer>Item</altitudeLayer>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<statBases>
 			<MarketValue>9000</MarketValue>
 			<MaxHitPoints>600</MaxHitPoints>
@@ -437,6 +460,9 @@
 			<Flammability>0</Flammability>
 			<Mass>5</Mass>
 		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>

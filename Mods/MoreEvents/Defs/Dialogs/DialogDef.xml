@@ -4,13 +4,45 @@
 	<DiaRim.DialogDef>
 		<defName>TestDialog</defName>
 		<label>Dialog label</label>
+		<WindowSize>(500, 500)</WindowSize>
 		<FirstPageId>1</FirstPageId>
 		<Pages>
 			<li>
 				<UniqueId>1</UniqueId>
 				<Title>Привет, путник!</Title>
-				<Text>Хочешь еды?</Text>
+				<Text>The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
+mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
+\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.
+The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
+mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
+\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.
+The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
+mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
+\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.</Text>
 				<Options>
+					<li>
+						<Label>Пункт 7</Label>
+						<NextPageId>2</NextPageId>
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Construction</Skill>
+								<SkillLevel>25</SkillLevel>
+								<DisableReason>Требуется строительство 25</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Gender">
+								<AllowGender>Female</AllowGender>
+								<DisableReason>Требуется пол: женщина</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Backstory">
+								<Childhood>Female</Childhood>
+								<DisableReason>Требуется детство: </DisableReason>
+							</li>
+						</Conditions>
+					</li>
+					<li>
+						<Label>Аташол!</Label>
+						<ResolveTree>True</ResolveTree>
+					</li>
 				</Options>
 			</li>
 			<li>
@@ -18,6 +50,10 @@
 				<Title>Привет, путник!</Title>
 				<Text>Точно!?</Text>
 				<Options>
+					<li>
+						<Label>Точна</Label>
+						<NextPageId>3</NextPageId>
+					</li>
 				</Options>
 			</li>
 			<li>
@@ -25,6 +61,10 @@
 				<Title>А ты хорош!</Title>
 				<Text>Ура!?</Text>
 				<Options>
+					<li>
+						<Label>Спасибо!</Label>
+						<ResolveTree>True</ResolveTree>
+					</li>
 				</Options>
 			</li>
 		</Pages>

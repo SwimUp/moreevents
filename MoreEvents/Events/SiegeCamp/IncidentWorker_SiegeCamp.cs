@@ -66,7 +66,7 @@ namespace MoreEvents.Events.SiegeCamp
         private int GetPlace(Map map)
         {
             int playerTile = map.Tile;
-            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 3, 6, out int result);
+            TileFinder.TryFindPassableTileWithTraversalDistance(playerTile, 3, 6, out int result, (int x) => !Find.WorldObjects.AnyWorldObjectAt(x));
 
             return result;
         }

@@ -11,6 +11,8 @@ namespace DiaRim
     {
         public DialogDef DialogDef;
 
+        public Pawn Speaker;
+
         public Dictionary<int, DialogPage> Pages = new Dictionary<int, DialogPage>();
 
         public DialogPage CurrentPage;
@@ -19,15 +21,38 @@ namespace DiaRim
         private Vector2 scrollPosition;
         private float optTotalHeight;
 
-        public Dialog(DialogDef dialogDef)
+        public Action CloseAction;
+
+        public Dictionary<string, int> CustomParams = new Dictionary<string, int>();
+
+        public Vector2 Size = new Vector2(500, 500);
+        public override Vector2 InitialSize => Size;
+
+        public Dialog(DialogDef dialogDef, Pawn speaker)
         {
             DialogDef = dialogDef;
+            Speaker = speaker;
+            Size = DialogDef.WindowSize;
+        }
+
+        public Dialog(DialogDef dialogDef, Pawn speaker, Vector2 size)
+        {
+            DialogDef = dialogDef;
+            Speaker = speaker;
+            Size = size;
         }
 
         public override void DoWindowContents(Rect inRect)
         {
             Rect rect = inRect.AtZero();
             DrawNode(rect);
+        }
+
+        public override void Close(bool doCloseSound = true)
+        {
+            CloseAction?.Invoke();
+
+            base.Close(doCloseSound);
         }
 
         protected void DrawNode(Rect rect)
@@ -61,6 +86,9 @@ namespace DiaRim
             InitPages();
 
             CurrentPage = Pages[DialogDef.FirstPageId];
+
+            if(DialogDef.CustomParams != null)
+                InitParams();
         }
 
         public void GotoPage(DialogPage page)
@@ -79,6 +107,14 @@ namespace DiaRim
             {
                 page.Init(this);
                 Pages.Add(page.UniqueId, page);
+            }
+        }
+
+        private void InitParams()
+        {
+            foreach(var param in DialogDef.CustomParams)
+            {
+                CustomParams.Add(param, 0);
             }
         }
     }

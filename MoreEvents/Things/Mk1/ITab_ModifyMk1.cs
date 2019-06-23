@@ -28,7 +28,7 @@ namespace MoreEvents
             Rect r = new Rect(10, 30, 210, 20);
 
             Widgets.Label(new Rect(r.x, r.y, 50, 20), "CoreType".Translate());
-            if (Widgets.ButtonText(new Rect(65, r.y, 120, 20), Mk1.Core == null ? "NoCore".Translate() : Mk1.CoreComp.StationLabel))
+            if (Widgets.ButtonText(new Rect(65, r.y, 140, 20), Mk1.Core == null ? "NoCore".Translate() : Mk1.CoreComp.StationLabel))
             {
                 List<Thing> cores = GetCores();
 
@@ -102,7 +102,7 @@ namespace MoreEvents
         {
             IntVec3 position = Station.Position;
             Region region = position.GetRegion(Station.Map);
-            TraverseParms traverseParams = TraverseParms.For(TraverseMode.ByPawn);
+            TraverseParms traverseParams = TraverseParms.For(TraverseMode.NoPassClosedDoors);
             RegionEntryPredicate entryCondition = (Region from, Region r) => r.Allows(traverseParams, isDestination: false);
             List<Thing> chosenThings = new List<Thing>();
 

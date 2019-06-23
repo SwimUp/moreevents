@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\1\MoreEvents\Assembly-CSharp.dll</HintPath>
+      <HintPath>Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,11 +42,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\1\MoreEvents\UnityEngine.dll</HintPath>
+      <HintPath>Libs\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\OptionAction.cs" />
+    <Compile Include="Conditions\Condition_Backstory.cs" />
+    <Compile Include="Conditions\Condition_Gender.cs" />
+    <Compile Include="Conditions\Condition_SkillReq.cs" />
+    <Compile Include="Conditions\OptionCondition.cs" />
     <Compile Include="Dialog.cs" />
     <Compile Include="DialogDef.cs" />
     <Compile Include="DialogOption.cs" />

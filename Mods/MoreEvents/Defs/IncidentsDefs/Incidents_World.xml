@@ -367,7 +367,7 @@
 		</targetTags>
 		<workerClass>MoreEvents.Events.ClimateBomb.IncidentWorker_ClimateBomb</workerClass>
 		<category>Misc</category>
-		<minRefireDays>200</minRefireDays>
+		<minRefireDays>370</minRefireDays>
 		<baseChance>1.0</baseChance>
 		<earliestDay>100</earliestDay>
 	</IncidentDef>
