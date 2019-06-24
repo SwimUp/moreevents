@@ -10,6 +10,6 @@ namespace MoreEvents.MentalBreaks
     [DefOf]
     public static class MentalBreakDefOfLocal
     {
-        public static MentalBreakDef JailbreakerRaid;
+
     }
 }
