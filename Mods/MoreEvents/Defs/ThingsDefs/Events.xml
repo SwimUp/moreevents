@@ -28,11 +28,11 @@
     <tickerType>Normal</tickerType>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <killedLeavings>
-      <Steel>2000</Steel>
-      <Plasteel>300</Plasteel>
+      <Steel>400</Steel>
+      <Plasteel>60</Plasteel>
       <ChunkSlagSteel>15</ChunkSlagSteel>
-      <ComponentIndustrial>70</ComponentIndustrial>
-      <ComponentSpacer>25</ComponentSpacer>
+      <ComponentIndustrial>15</ComponentIndustrial>
+      <ComponentSpacer>5</ComponentSpacer>
     </killedLeavings>
     <rotatable>true</rotatable>
     <selectable>true</selectable>

@@ -10,6 +10,16 @@ namespace MoreEvents.Constellations
 {
     public class IncidentWorker_Constellations : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["Constellations"];
+
+        protected override bool CanFireNowSub(IncidentParms parms)
+        {
+            if (!settings.Active)
+                return false;
+
+            return true;
+        }
+
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             List<ConstellationsDef> toInvoke = new List<ConstellationsDef>();

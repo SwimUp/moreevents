@@ -80,6 +80,7 @@ namespace MoreEvents.Things
             base.ExposeData();
 
             Scribe_Values.Look(ref Init, "Init", false);
+            Scribe_References.Look(ref Teleport, "Teleport");
         }
     }
 }

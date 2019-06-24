@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 21;
+        private static int totalSettings = 22;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -215,7 +215,13 @@ namespace MoreEvents
                 {
                     Active = true
                 }
-            }
+            },
+            {
+            "Constellations", new EventSettings("Constellations")
+                {
+                    Active = true
+                }
+            },
         };
 
         public static void DoSettingsWindowContents(Rect inRect)
@@ -223,7 +229,7 @@ namespace MoreEvents
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
             listing_Standard.GapLine();
-            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1600);
+            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1700);
             listing_Standard.BeginScrollView(inRect, ref scroll, ref mainScrollVertRect);
             listing_Standard.Label(Translator.Translate("MEM_Settings_General"));
             listing_Standard.GapLine();
@@ -406,7 +412,13 @@ namespace MoreEvents
                 {
                     Active = true
                 }
-            }
+            },
+            {
+            "Constellations", new EventSettings("Constellations")
+                {
+                    Active = true
+                }
+            },
             };
         }
     }

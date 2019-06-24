@@ -10,6 +10,10 @@ namespace MoreEvents
         /* Game things */
         public static ThingDef Bullet_Shell_HighExplosive;
         public static ThingDef Artillery_Mortar;
+
+        public static ThingDef Marble;
+        public static ThingDef Slate;
+        public static ThingDef Limestone;
         /* =========================== */
 
         public static ThingDef MechanoidTeleport_Generator;
@@ -37,5 +41,9 @@ namespace MoreEvents
         public static ThingDef Apparel_MK1ThunderHead;
         public static ThingDef MiniColdFusionReactor;
         public static ThingDef MiniArcReactor;
+
+        public static ThingDef MeteoriteIncomingPlus;
+        public static ThingDef DropPodIncomingPlus;
+        public static ThingDef ActiveDropPodPlus;
     }
 }

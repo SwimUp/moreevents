@@ -78,7 +78,9 @@
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\HasExitCellsComp.cs" />
     <Compile Include="Events\HasExitCells_Comp.cs" />
+    <Compile Include="Events\IncidentWorker_DropInsaneAnimals.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
+    <Compile Include="Events\IncidentWorker_MineralMeteorite.cs" />
     <Compile Include="Events\SiegeCamp\CaravanVisitAction_SiegeCamp.cs" />
     <Compile Include="Events\SiegeCamp\IncidentWorker_SiegeCamp.cs" />
     <Compile Include="Events\SiegeCamp\SiegeCampSite.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
     <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
     <Compile Include="MapGeneratorFactionBase\ThingData.cs" />
+    <Compile Include="MentalBreaks\MentalBreakDefOfLocal.cs" />
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Patch\ExitCells_Patch.cs" />
     <Compile Include="Patch\ToxicFallout_Patch.cs" />
@@ -151,11 +154,13 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Sounds\SoundDefOfLocal.cs" />
     <Compile Include="ThingDefGenerator_BuildingsCustom.cs" />
+    <Compile Include="Things\ActiveDropPodPlus.cs" />
     <Compile Include="Things\Building_ClimateBomb.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
+    <Compile Include="Things\DropPodIncomingPlus.cs" />
     <Compile Include="Things\Gizmo_FillableMk1.cs" />
     <Compile Include="Things\Mk1\Apparel_Mk1.cs" />
     <Compile Include="Things\Mk1\ArmorCore.cs" />
@@ -165,6 +170,7 @@
     <Compile Include="Things\Mk1\JobDriver_UnLoadArmorIntoStand.cs" />
     <Compile Include="Things\Mk1\JobDriver_LoadArmorIntoStand.cs" />
     <Compile Include="Things\Mk1\Mk1PowerStation.cs" />
+    <Compile Include="Things\SkyfallerPlus.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />
     <Compile Include="Things\PawnKindDefOfLocal.cs" />
@@ -176,6 +182,8 @@
     <Compile Include="Things\ThingDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtWorker_SupernovaSight.cs" />
+    <Compile Include="Utility\DropPodUtilityPlus.cs" />
+    <Compile Include="Utility\SkyfallerPlusMaker.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="Weathers\WeatherDefOfLocal.cs" />
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />

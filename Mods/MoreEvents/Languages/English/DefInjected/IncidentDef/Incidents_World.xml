@@ -93,4 +93,12 @@
   <AttackFriendlySettlement.letterLabel>Attack on a friendly settlement</AttackFriendlySettlement.letterLabel>
   <AttackFriendlySettlement.letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</AttackFriendlySettlement.letterText>  
   
+  <MineralMeteorite.label>Mineral meteorite</MineralMeteorite.label>
+  <MineralMeteorite.letterLabel>Mineral meteorite</MineralMeteorite.letterLabel>
+  <MineralMeteorite.letterText>A large meteorite filled with different rocks, including useful resources, entered the atmosphere.</MineralMeteorite.letterText>  
+  
+  <DropAnimalInsanity.label>Capsules with insane animals!</DropAnimalInsanity.label>
+  <DropAnimalInsanity.letterLabel>Capsules with insane animals!</DropAnimalInsanity.letterLabel>
+  <DropAnimalInsanity.letterText>An unknown faction sent us capsules with insane animals. Raise shields!</DropAnimalInsanity.letterText>  
+  
 </LanguageData>

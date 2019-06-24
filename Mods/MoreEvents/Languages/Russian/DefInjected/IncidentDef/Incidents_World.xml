@@ -89,4 +89,12 @@
   <AttackFriendlySettlement.letterLabel>Нападение на дружественное поселение</AttackFriendlySettlement.letterLabel>
   <AttackFriendlySettlement.letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</AttackFriendlySettlement.letterText>  
   
+  <MineralMeteorite.label>Падение метеорита</MineralMeteorite.label>
+  <MineralMeteorite.letterLabel>Падение метеорита</MineralMeteorite.letterLabel>
+  <MineralMeteorite.letterText>Большой метеорит наполненный разными породами, в том числе полезными ресурсами вошел в атмосферу.</MineralMeteorite.letterText>  
+  
+  <DropAnimalInsanity.label>Капсулы с бешеными животными!</DropAnimalInsanity.label>
+  <DropAnimalInsanity.letterLabel>Капсулы с бешеными животными!</DropAnimalInsanity.letterLabel>
+  <DropAnimalInsanity.letterText>Неизвестная фракция отправила на нас капсулы с бешеными животными. Поднять щиты!</DropAnimalInsanity.letterText>  
+  
 </LanguageData>

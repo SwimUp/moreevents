@@ -497,4 +497,40 @@
 	</IncidentDef>
 	<!-- s=======================s -->
 	
+	<!-- Событие: Ресурсный метеорит -->
+	<IncidentDef>
+		<defName>MineralMeteorite</defName>
+		<label>Mineral meteorite</label>
+		<letterLabel>Mineral meteorite</letterLabel>
+		<letterText>A large meteorite consisting of minerals entered the atmosphere.</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_MineralMeteorite</workerClass>
+		<category>Misc</category>
+		<minRefireDays>65</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>50</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Десант бешеных животных -->
+	<IncidentDef>
+		<defName>DropAnimalInsanity</defName>
+		<label>Mineral meteorite</label>
+		<letterLabel>Landing insanity animals</letterLabel>
+		<letterText>Enemy settlement sent capsules with crazy animals.</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_DropInsaneAnimals</workerClass>
+		<category>Misc</category>
+		<minRefireDays>90</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>70</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
 </Defs>
