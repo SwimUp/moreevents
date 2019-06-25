@@ -28,6 +28,9 @@ namespace MoreEvents.Events.SiegeCamp
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
 
             int spawnPoint = GetPlace(map);
