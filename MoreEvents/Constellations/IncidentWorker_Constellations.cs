@@ -24,6 +24,9 @@ namespace MoreEvents.Constellations
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             List<ConstellationsDef> toInvoke = new List<ConstellationsDef>();
 
             foreach (var con in DefDatabase<ConstellationsDef>.AllDefs.Where(c => (c.ConstellationType == ConstellationType.Positive && positiveEnable == 1) || (c.ConstellationType == ConstellationType.Negative && negativeEnable == 1)))
