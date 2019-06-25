@@ -10,9 +10,14 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_DropInsaneAnimals : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["DropAnimalInsanity"];
+
         private List<Thing> animals;
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
 
             if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out PawnKindDef animalKind))

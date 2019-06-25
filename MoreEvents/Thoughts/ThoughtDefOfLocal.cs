@@ -6,5 +6,6 @@ namespace MoreEvents
     public static class ThoughtDefOfLocal
     {
         public static ThoughtDef AwesomeSight;
+        public static ThoughtDef PositiveCharge;
     }
 }

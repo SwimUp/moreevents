@@ -7,18 +7,17 @@ namespace MoreEvents.Weather
     [StaticConstructorOnStartup]
     public class WeatherOverlay_Sandstorm : SkyOverlay
     {
-        private static readonly Material FogOverlayWorld = MatLoader.LoadMat("Weather/RainOverlayWorld", -1);
+        private static readonly Material FogOverlayWorld = MatLoader.LoadMat("Weather/FogOverlayWorld", -1);
 
         public WeatherOverlay_Sandstorm()
         {
-            worldOverlayMat = FogOverlayWorld;
-            screenOverlayMat = FogOverlayWorld;
-            FogOverlayWorld.color = new Color32(209, 177, 96, 255);
-            OverlayColor = new Color32(209, 177, 96, 255);
-            this.worldOverlayPanSpeed1 = 0.0002f;
-            this.worldOverlayPanSpeed2 = 0.0001f;
-            this.worldPanDir1 = new Vector2(1f, 1f);
-            this.worldPanDir2 = new Vector2(1f, -1f);
+            base.worldOverlayMat = FogOverlayWorld;
+            base.worldOverlayPanSpeed1 = 0.008f;
+            base.worldPanDir1 = new Vector2(-1f, -0.26f);
+            base.worldPanDir1.Normalize();
+            base.worldOverlayPanSpeed2 = 0.012f;
+            base.worldPanDir2 = new Vector2(-1f, -0.24f);
+            base.worldPanDir2.Normalize();
         }
     }
 }

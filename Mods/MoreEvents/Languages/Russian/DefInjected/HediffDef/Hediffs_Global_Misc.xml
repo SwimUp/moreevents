@@ -35,4 +35,7 @@
   <CaveBettleBuff.label>Ночная охота</CaveBettleBuff.label>
   <CaveBettleBuff.stages.easy.label></CaveBettleBuff.stages.easy.label>
   
+  <ThirstHumanMeat.label>Жажда человеческого мяса</ThirstHumanMeat.label>
+  <ThirstHumanMeat.stages.easy.label></ThirstHumanMeat.stages.easy.label>
+
 </LanguageData>

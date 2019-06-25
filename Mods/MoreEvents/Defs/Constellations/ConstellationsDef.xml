@@ -188,6 +188,7 @@
 		<description>Созвездие Щита появилось на небе. Это событие скрывает ваш взгляд от истины. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Shield_Effect</li>
 		</Effects>
@@ -202,6 +203,7 @@
 		<description>Созвездие Рыси появилось на небе. Мишени ускользают от вас. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Lynx_Effect</li>
 		</Effects>
@@ -216,6 +218,7 @@
 		<description>Созвездие Треугольника появилось на небе. Вы не можете разобрать собственные строительные чертежи. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Triangle_Effect</li>
 		</Effects>
@@ -230,6 +233,7 @@
 		<description>Вы замечаете нехватку времени для творчества. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Clock_Effect</li>
 		</Effects>
@@ -244,6 +248,7 @@
 		<description>Вы видите свою беспомощность перед животными. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Hydra_Effect</li>
 		</Effects>
@@ -258,6 +263,7 @@
 		<description>Вы замечаете, как ваш урожай уничтожают птицы. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Corvus_Effect</li>
 		</Effects>
@@ -272,6 +278,7 @@
 		<description>Вы ведёте себя отрешённо. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Indian_Effect</li>
 		</Effects>
@@ -286,6 +293,7 @@
 		<description>Мысли спутаны, а руки не слушаются вас. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Eridan_Effect</li>
 		</Effects>
@@ -300,6 +308,7 @@
 		<description>Горная порода не поддаётся вам. Вы теряетесь в горных тоннелях. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Taurus_Effect</li>
 		</Effects>
@@ -314,6 +323,7 @@
 		<description>Кажется, вы перестали помнить собственные кулинарные рецепты. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Coma_Effect</li>
 		</Effects>
@@ -328,6 +338,7 @@
 		<description>Ваши умения в хирургии покидают вас. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Snake_Effect</li>
 		</Effects>
@@ -342,6 +353,7 @@
 		<description>Октант освещает вас своим тусклым светом. Вы не можете найти сил для исследований. Каждое существо чувствует упадок сил.</description>
 		<Conditions>
 		</Conditions>
+		<ConstellationType>Negative</ConstellationType>
 		<Effects>
 			<li>Octans_Effect</li>
 		</Effects>

@@ -8,8 +8,8 @@ using Verse;
 namespace MoreEvents.MentalBreaks
 {
     [DefOf]
-    public static class MentalBreakDefOfLocal
+    public static class MentalStateDefOfLocal
     {
-        public static MentalBreakDef PositiveCharge;
+        public static MentalStateDef PositiveCharge;
     }
 }

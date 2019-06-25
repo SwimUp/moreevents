@@ -9,6 +9,8 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_MineralMeteorite : IncidentWorker
     {
+        private EventSettings settings => Settings.EventsSettings["MineralMeteorite"];
+
         private ThingDef[] things = new ThingDef[]
         {
             ThingDefOf.Granite,
@@ -20,6 +22,9 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
             if (map.AllCells.Where(cell => (!cell.Roofed(map) || (cell.Roofed(map) && cell.GetRoof(map) == RoofDefOf.RoofConstructed)) && cell.DistanceToEdge(map) > 7).TryRandomElement(out IntVec3 pos))
             {

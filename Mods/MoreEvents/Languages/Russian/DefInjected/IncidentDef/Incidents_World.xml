@@ -97,4 +97,9 @@
   <DropAnimalInsanity.letterLabel>Капсулы с бешеными животными!</DropAnimalInsanity.letterLabel>
   <DropAnimalInsanity.letterText>Неизвестная фракция отправила на нас капсулы с бешеными животными. Поднять щиты!</DropAnimalInsanity.letterText>  
   
+  <HungryCannibalRaid.label>Рейд голодных каннибалов</HungryCannibalRaid.label>
+  <HungryCannibalRaid.letterLabel>Рейд голодных каннибалов</HungryCannibalRaid.letterLabel>
+  <HungryCannibalRaid.letterText>Племя людоедов атакует поселение со всех сторон! Им не нужны пленники, им нужно человеческое мясо!</HungryCannibalRaid.letterText>  
+  
+  
 </LanguageData>

@@ -533,4 +533,22 @@
 	</IncidentDef>
 	<!-- s=======================s -->
 	
+	<!-- Событие: Нападение голодных каннибалов -->
+	<IncidentDef>
+		<defName>HungryCannibalRaid</defName>
+		<label>Hungry cannibal raid</label>
+		<letterLabel>Hungry cannibals!</letterLabel>
+		<letterText>A tribe of cannibals attacks the settlement from all sides! They don't need captives, they need human meat</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_HungryCannibalsRaid</workerClass>
+		<category>Misc</category>
+		<minRefireDays>55</minRefireDays>
+		<baseChance>1.1</baseChance>
+		<earliestDay>55</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
 </Defs>

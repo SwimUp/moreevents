@@ -14,5 +14,6 @@ namespace MoreEvents
         public static HediffDef NeurofibromatousWormsFinal;
 
         public static HediffDef CaveBettleBuff;
+        public static HediffDef ThirstHumanMeat;
     }
 }

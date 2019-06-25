@@ -80,6 +80,7 @@
     <Compile Include="Events\HasExitCells_Comp.cs" />
     <Compile Include="Events\IncidentWorker_DropInsaneAnimals.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
+    <Compile Include="Events\IncidentWorker_HungryCannibalsRaid.cs" />
     <Compile Include="Events\IncidentWorker_MineralMeteorite.cs" />
     <Compile Include="Events\SiegeCamp\CaravanVisitAction_SiegeCamp.cs" />
     <Compile Include="Events\SiegeCamp\IncidentWorker_SiegeCamp.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Events\ShipCrash\ShipDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\ShipSite.cs" />
     <Compile Include="Events\WorldObjectsDefOfLocal.cs" />
+    <Compile Include="FactionDefOfLocal.cs" />
     <Compile Include="Hediffs\HediffCompProperties_NeuroWormsTick.cs" />
     <Compile Include="Hediffs\HediffCompProperties_FibroTick.cs" />
     <Compile Include="Hediffs\HediffComp_NeuroWormsTick.cs" />
@@ -145,6 +147,9 @@
     <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
     <Compile Include="MapGeneratorFactionBase\ThingData.cs" />
     <Compile Include="MentalBreaks\MentalBreakDefOfLocal.cs" />
+    <Compile Include="MentalBreaks\MentalStateDefOfLocal.cs" />
+    <Compile Include="MentalBreaks\PositiveCharge\MentalStateWorker_PositiveCharge.cs" />
+    <Compile Include="MentalBreaks\PositiveCharge\MentalState_PositiveCharge.cs" />
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Patch\ExitCells_Patch.cs" />
     <Compile Include="Patch\ToxicFallout_Patch.cs" />

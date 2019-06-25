@@ -15,4 +15,19 @@
 	</ThoughtDef>
 	<!-- s=======================s -->
 	
+	<!-- Состояние: Заряд позитива -->
+	<ThoughtDef>
+		<defName>PositiveCharge</defName>
+		<durationDays>3</durationDays>
+		<stages>
+			<li>
+				<label>Positive Charge</label>
+				<description>Despondency is for the weak. I am ready for any problems and mood not to break me!</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- s=======================s -->
+	
+	
 </Defs>

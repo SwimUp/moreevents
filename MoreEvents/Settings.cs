@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 22;
+        private static int totalSettings = 25;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -219,6 +219,29 @@ namespace MoreEvents
             {
             "Constellations", new EventSettings("Constellations")
                 {
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
+                    {
+                        {"EnablePositive", new Parameter("EnablePositive", "1") },
+                        {"EnableNegative", new Parameter("EnableNegative", "1") }
+                    }
+                }
+            },
+            {
+            "MineralMeteorite", new EventSettings("MineralMeteorite")
+                {
+                    Active = true
+                }
+            },
+            {
+            "DropAnimalInsanity", new EventSettings("DropAnimalInsanity")
+                {
+                    Active = true
+                }
+            },
+            {
+            "HungryCannibalRaid", new EventSettings("HungryCannibalRaid")
+                {
                     Active = true
                 }
             },
@@ -229,7 +252,7 @@ namespace MoreEvents
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
             listing_Standard.GapLine();
-            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 1700);
+            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 2000);
             listing_Standard.BeginScrollView(inRect, ref scroll, ref mainScrollVertRect);
             listing_Standard.Label(Translator.Translate("MEM_Settings_General"));
             listing_Standard.GapLine();
@@ -415,6 +438,29 @@ namespace MoreEvents
             },
             {
             "Constellations", new EventSettings("Constellations")
+                {
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
+                    {
+                        {"EnablePositive", new Parameter("EnablePositive", "1") },
+                        {"EnableNegative", new Parameter("EnableNegative", "1") }
+                    }
+                }
+            },
+            {
+            "MineralMeteorite", new EventSettings("MineralMeteorite")
+                {
+                    Active = true
+                }
+            },
+            {
+            "DropAnimalInsanity", new EventSettings("DropAnimalInsanity")
+                {
+                    Active = true
+                }
+            },
+            {
+            "HungryCannibalRaid", new EventSettings("HungryCannibalRaid")
                 {
                     Active = true
                 }

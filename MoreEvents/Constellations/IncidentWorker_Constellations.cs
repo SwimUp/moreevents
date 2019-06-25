@@ -11,6 +11,8 @@ namespace MoreEvents.Constellations
     public class IncidentWorker_Constellations : IncidentWorker
     {
         private EventSettings settings => Settings.EventsSettings["Constellations"];
+        private int positiveEnable => int.Parse(settings.Parameters["EnablePositive"].Value);
+        private int negativeEnable => int.Parse(settings.Parameters["EnableNegative"].Value);
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
@@ -24,7 +26,7 @@ namespace MoreEvents.Constellations
         {
             List<ConstellationsDef> toInvoke = new List<ConstellationsDef>();
 
-            foreach (var con in DefDatabase<ConstellationsDef>.AllDefs)
+            foreach (var con in DefDatabase<ConstellationsDef>.AllDefs.Where(c => (c.ConstellationType == ConstellationType.Positive && positiveEnable == 1) || (c.ConstellationType == ConstellationType.Negative && negativeEnable == 1)))
             {
                 List<ConstellationCondition> conditions = con.Conditions;
 

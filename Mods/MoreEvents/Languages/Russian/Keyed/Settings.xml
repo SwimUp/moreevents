@@ -91,4 +91,20 @@
   <AttackFriendlySettlement_Title>Нападение на дружественное поселение</AttackFriendlySettlement_Title>
   <AttackFriendlySettlement_Desc></AttackFriendlySettlement_Desc>
   
+  <Constellations_Title>Созвездия</Constellations_Title>
+  <Constellations_Desc></Constellations_Desc>
+  <EnablePositive_title>Активировать позитивные созвездия (1 - да, 0 - нет)</EnablePositive_title>
+  <EnablePositive>Активировать позитивные созвездия (1 - да, 0 - нет)</EnablePositive>
+  <EnableNegative_title>Активировать негативные созвездия (1 - да, 0 - нет)</EnableNegative_title>
+  <EnableNegative>Активировать негативные созвездия (1 - да, 0 - нет)</EnableNegative>
+  
+  <MineralMeteorite_Title>Минеральный метеорит</MineralMeteorite_Title>
+  <MineralMeteorite_Desc>Большой метеорит наполненный разными породами, в том числе полезными ресурсами вошел в атмосферу.</MineralMeteorite_Desc>
+  
+  <DropAnimalInsanity_Title>Капсулы с бешеными животными</DropAnimalInsanity_Title>
+  <DropAnimalInsanity_Desc>Неизвестная фракция отправила на нас капсулы с бешеными животными. Поднять щиты!</DropAnimalInsanity_Desc>
+  
+  <HungryCannibalRaid_Title>Рейд голодных каннибалов</HungryCannibalRaid_Title>
+  <HungryCannibalRaid_Desc>Племя людоедов атакует поселение со всех сторон! Им не нужны пленники, им нужно человеческое мясо!</HungryCannibalRaid_Desc>
+  
 </LanguageData>

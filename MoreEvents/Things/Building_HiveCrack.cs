@@ -34,13 +34,6 @@ namespace MoreEvents.Things
             20,
             25
         };
-        private Vector3[] drawSizes = new Vector3[]
-        {
-            new Vector3(){x = 1.5f, y = 2, z = 1.5f},
-            new Vector3(){x = 2, y = 2, z = 2},
-            new Vector3(){x = 3, y = 2, z = 3},
-            new Vector3(){x = 4, y = 2, z = 4}
-        };
 
         private int[] levelHitPoints = new int[]
         {

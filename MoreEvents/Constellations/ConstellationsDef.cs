@@ -10,6 +10,12 @@ using Verse;
 
 namespace MoreEvents
 {
+    public enum ConstellationType : byte
+    {
+        Positive,
+        Negative
+    }
+
     public class ConstellationsDef : Def
     {
         public List<ConstellationCondition> Conditions = new List<ConstellationCondition>();
@@ -22,6 +28,8 @@ namespace MoreEvents
 
         public bool AllowMale = true;
         public bool AllowFemale = true;
+
+        public ConstellationType ConstellationType = ConstellationType.Positive;
 
         public static ConstellationsDef Named(string defName)
         {
