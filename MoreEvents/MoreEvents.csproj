@@ -40,6 +40,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="MapGeneratorBlueprints">
+      <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -139,13 +142,6 @@
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
     <Compile Include="InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
-    <Compile Include="MapGeneratorFactionBase\BlueprintDefOfLocal.cs" />
-    <Compile Include="MapGeneratorFactionBase\BlueprintHandler.cs" />
-    <Compile Include="MapGeneratorFactionBase\BluprintsTestTool.cs" />
-    <Compile Include="MapGeneratorFactionBase\MapGeneratorBaseBlueprintDef.cs" />
-    <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
-    <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
-    <Compile Include="MapGeneratorFactionBase\ThingData.cs" />
     <Compile Include="MentalBreaks\MentalBreakDefOfLocal.cs" />
     <Compile Include="MentalBreaks\MentalStateDefOfLocal.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalStateWorker_PositiveCharge.cs" />
