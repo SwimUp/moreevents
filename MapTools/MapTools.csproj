@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4ACEFCF4-8192-4A34-AC59-FA62206D5E63}</ProjectGuid>
+    <ProjectGuid>{7AFCDB36-4F95-44E5-A636-9DC37F56E3C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MapGeneratorBlueprints</RootNamespace>
-    <AssemblyName>MapGeneratorBlueprints</AssemblyName>
+    <RootNamespace>MapTools</RootNamespace>
+    <AssemblyName>MapTools</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>Libs\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\MapGeneratorBlueprints\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,23 +42,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>Libs\UnityEngine.dll</HintPath>
+      <HintPath>..\MapGeneratorBlueprints\Libs\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapGeneratorFactionBase\BlueprintDefOfLocal.cs" />
-    <Compile Include="MapGeneratorFactionBase\BlueprintHandler.cs" />
-    <Compile Include="MapGeneratorFactionBase\BluprintsTestTool.cs" />
-    <Compile Include="MapGeneratorFactionBase\MapGeneratorBaseBlueprintDef.cs" />
-    <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
-    <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
-    <Compile Include="MapGeneratorFactionBase\ThingData.cs" />
-    <Compile Include="MapGenerator\CreatorTool.cs" />
-    <Compile Include="MapGenerator\MapGeneratorData.cs" />
-    <Compile Include="MapGenerator\MapGeneratorDef.cs" />
-    <Compile Include="MapGenerator\MapGeneratorHandler.cs" />
-    <Compile Include="MapGenerator\RoofData.cs" />
-    <Compile Include="MapGenerator\ThingData.cs" />
+    <Compile Include="MapToolsComponent.cs" />
+    <Compile Include="MapToolWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
