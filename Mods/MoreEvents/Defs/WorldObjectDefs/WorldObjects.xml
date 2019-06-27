@@ -96,6 +96,7 @@
     <expandingIconTexture>Map/doomsday</expandingIconTexture>
     <expandingIconPriority>100</expandingIconPriority>
     <comps>
+      <li Class="MoreEvents.Events.DoomsdayUltimatum.DoomsdayUltimatumComp_Main" />
 	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
     </comps>
     <IncidentTargetTags>

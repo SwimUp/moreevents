@@ -79,6 +79,8 @@
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_Doomsday.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdaySite.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp_Main.cs" />
     <Compile Include="Events\DoomsdayUltimatum\IncidentWorker_DoomsdayUltimatum.cs" />
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />

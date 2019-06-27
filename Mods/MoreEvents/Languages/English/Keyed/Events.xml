@@ -96,6 +96,7 @@
   <ColdFusionCore>Cold fusion</ColdFusionCore>
   <ArcReactorCore>Arc</ArcReactorCore>
   
-    <WeaponDeactivated>Doomsday weapons are still active</WeaponDeactivated>
+  <WeaponDeactivated>Doomsday weapons are still active</WeaponDeactivated>
+  <PlanetWillBeDestroyed>Planet will be destroyed in (days): {0}</PlanetWillBeDestroyed>
   
 </LanguageData>

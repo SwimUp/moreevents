@@ -35,6 +35,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             DoomsdaySite site = (DoomsdaySite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.DoomsdayUltimatumCamp);
             site.Tile = spawnPoint;
             site.SetFaction(GetEnemyFaction());
+            var comp = site.GetComponent<DoomsdayUltimatumComp>();
+            comp.SetTimer(Rand.Range(10, 20));
             Find.WorldObjects.Add(site);
 
             SendStandardLetter(site);

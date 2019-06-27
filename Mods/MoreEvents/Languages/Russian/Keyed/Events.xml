@@ -98,5 +98,6 @@
   <ArcReactorCore>Дуговой</ArcReactorCore>
   
   <WeaponDeactivated>Оружие судного дня до сих пор активно</WeaponDeactivated>
+  <PlanetWillBeDestroyed>Планета будет уничтожена через (дней): {0}</PlanetWillBeDestroyed>
   
 </LanguageData>
