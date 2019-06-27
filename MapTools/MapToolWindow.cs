@@ -7,14 +7,14 @@ using Verse;
 
 namespace MapTools
 {
-    public class MapToolWindow : EditWindow
+    public class ThingMapToolWindow : EditWindow
     {
         public ThingDef FloodThing;
 
         public int BrushSize = 2;
         public string BrushBuff;
 
-        public MapToolWindow()
+        public ThingMapToolWindow()
         {
             resizeable = false;
             Thing.allowDestroyNonDestroyable = true;
@@ -67,6 +67,53 @@ namespace MapTools
             }
 
             Widgets.TextFieldNumeric(new Rect(0, 30, 170, 20), ref BrushSize, ref BrushBuff, 1, 1000);
+        }
+
+        public override void WindowOnGUI()
+        {
+            base.WindowOnGUI();
+
+            if(FloodThing != null && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                CellRect cellRect2 = CellRect.CenteredOn(UI.MouseCell(), BrushSize);
+                cellRect2.ClipInsideMap(Find.CurrentMap);
+                foreach (IntVec3 item7 in cellRect2)
+                {
+                    GenSpawn.Spawn(FloodThing, item7, Find.CurrentMap);
+                }
+            }
+        }
+    }
+
+    public class TerrainToolWindow : EditWindow
+    {
+        public TerrainDef FloodTerrain;
+
+        public int BrushSize = 2;
+        public string BrushBuff;
+
+        public TerrainToolWindow()
+        {
+            resizeable = false;
+        }
+
+        public override Vector2 InitialSize => new Vector2(210, 200);
+        public override void DoWindowContents(Rect inRect)
+        {
+            if (Widgets.ButtonText(new Rect(0, 0, 170, 20), FloodTerrain?.LabelCap))
+            {
+                List<FloatMenuOption> list = new List<FloatMenuOption>();
+                foreach (var thing in DefDatabase<TerrainDef>.AllDefsListForReading)
+                {
+                    list.Add(new FloatMenuOption(thing.LabelCap, delegate
+                    {
+                        FloodTerrain = thing;
+                    }));
+                }
+                Find.WindowStack.Add(new FloatMenu(list));
+            }
+
+            Widgets.TextFieldNumeric(new Rect(0, 30, 170, 20), ref BrushSize, ref BrushBuff, 1, 1000);
 
             if (Widgets.ButtonText(new Rect(0, 60, 170, 20), "Установить покрытие на всю карту"))
             {
@@ -94,13 +141,13 @@ namespace MapTools
         {
             base.WindowOnGUI();
 
-            if(FloodThing != null && Input.GetKeyDown(KeyCode.Mouse0))
+            if (FloodTerrain != null && Input.GetKeyDown(KeyCode.Mouse0))
             {
                 CellRect cellRect2 = CellRect.CenteredOn(UI.MouseCell(), BrushSize);
                 cellRect2.ClipInsideMap(Find.CurrentMap);
                 foreach (IntVec3 item7 in cellRect2)
                 {
-                    GenSpawn.Spawn(FloodThing, item7, Find.CurrentMap);
+                    Find.CurrentMap.terrainGrid.SetTerrain(item7, FloodTerrain);
                 }
             }
         }

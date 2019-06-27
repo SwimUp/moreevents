@@ -11,20 +11,35 @@ namespace MapGeneratorBlueprints.MapGenerator
     public static class MapGeneratorHandler
     {
         public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
-            , bool createRoof = false)
+            , bool createRoof = false, bool generatePlants = false)
         {
             map.regionAndRoomUpdater.Enabled = false;
 
             if (clearMap)
             {
+                foreach(var position in Find.CurrentMap.AllCells)
+                {
+                    if(position.Roofed(Find.CurrentMap))
+                        Find.CurrentMap.roofGrid.SetRoof(position, null);
+                }
+
                 foreach (Thing item5 in map.listerThings.AllThings.ToList())
                 {
                     item5.Destroy();
                 }
             }
 
+            if(generatePlants)
+            {
+                GenStep genStep = (GenStep)Activator.CreateInstance(typeof(GenStep_Plants));
+                genStep.Generate(Find.CurrentMap, default(GenStepParams));
+            }
+
             if (setTerrain)
+            {
+                ClearCells(mapGenerator.MapData, map);
                 SetTerrain(mapGenerator.MapData, map);
+            }
 
             PlaceBuildingsAndItems(mapGenerator.MapData, map);
 
@@ -54,6 +69,27 @@ namespace MapGeneratorBlueprints.MapGenerator
                     if (room != null && !room.TouchesMapEdge)
                     {
                         map.fogGrid.Unfog(current);
+                    }
+                }
+            }
+        }
+
+        private static void ClearCells(List<MapObject> mapObjects, Map map)
+        {
+            foreach(var obj in mapObjects)
+            {
+                foreach(var pos in obj.value)
+                {
+                    List<Thing> tl = map.thingGrid.ThingsListAt(pos);
+                    if (tl != null)
+                    {
+                        for(int i = 0; i < tl.Count; i++)
+                        {
+                            if(tl[i].def.destroyable)
+                            {
+                                tl[i].Destroy();
+                            }
+                        }
                     }
                 }
             }
@@ -176,7 +212,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                         }
                         if (newThing.def.stackLimit != 1)
                             newThing.stackCount = data.Count;
-                        GenSpawn.Spawn(newThing, pos, map);
+                        GenSpawn.Spawn(newThing, pos, map, data.Rotate);
                     }
                 }
             }

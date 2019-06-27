@@ -29,6 +29,7 @@ namespace MapGeneratorBlueprints.MapGenerator
         public int Count;
         public PawnKindDef Kind;
         public FactionDef Faction = null;
+        public Rot4 Rotate;
 
         public void ExposeData()
         {

@@ -23,9 +23,11 @@ namespace MapTools
         {
             base.GameComponentTick();
 
-
             if (Input.GetKeyDown(KeyCode.F10))
-                Find.WindowStack.Add(new MapToolWindow());
+                Find.WindowStack.Add(new ThingMapToolWindow());
+
+            if (Input.GetKeyDown(KeyCode.F11))
+                Find.WindowStack.Add(new ThingMapToolWindow());
         }
     }
 }
