@@ -11,28 +11,31 @@ namespace MapGeneratorBlueprints.MapGenerator
     public static class MapGeneratorHandler
     {
         public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
-            , bool createRoof = false, bool generatePlants = false)
+            , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null)
         {
             map.regionAndRoomUpdater.Enabled = false;
-
             if (clearMap)
             {
-                foreach(var position in Find.CurrentMap.AllCells)
+                Thing.allowDestroyNonDestroyable = true;
+
+                foreach(var position in map.AllCells)
                 {
-                    if(position.Roofed(Find.CurrentMap))
-                        Find.CurrentMap.roofGrid.SetRoof(position, null);
+                    if(position.Roofed(map))
+                        map.roofGrid.SetRoof(position, null);
                 }
 
                 foreach (Thing item5 in map.listerThings.AllThings.ToList())
                 {
                     item5.Destroy();
                 }
+
+                Thing.allowDestroyNonDestroyable = false;
             }
 
             if(generatePlants)
             {
                 GenStep genStep = (GenStep)Activator.CreateInstance(typeof(GenStep_Plants));
-                genStep.Generate(Find.CurrentMap, default(GenStepParams));
+                genStep.Generate(map, default(GenStepParams));
             }
 
             if (setTerrain)
@@ -44,7 +47,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             PlaceBuildingsAndItems(mapGenerator.MapData, map);
 
             if (spawnPawns)
-                SpawnPawns(mapGenerator.MapData, map);
+                SpawnPawns(mapGenerator.MapData, map, forceFaction);
 
             map.powerNetManager.UpdatePowerNetsAndConnections_First();
 
@@ -58,7 +61,7 @@ namespace MapGeneratorBlueprints.MapGenerator
 
             if (fog)
             {
-                RefogMap(Find.CurrentMap);
+                RefogMap(map);
             }
 
             if (unFogRoom)
@@ -128,7 +131,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             {
                 map.mapDrawer.MapMeshDirty(allCell, MapMeshFlag.FogOfWar);
             }
-            FloodFillerFog.FloodUnfog(map.Center, map);
+            FloodFillerFog.FloodUnfog(CellFinder.RandomEdgeCell(map), map);
         }
 
         private static void AddRoomsToFog(List<Room> allRooms, Map map, bool fogDoors = false)
@@ -159,7 +162,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             }
         }
 
-        public static void SpawnPawns(List<MapObject> mapObjects, Map map)
+        public static void SpawnPawns(List<MapObject> mapObjects, Map map, Faction forceFaction)
         {
             foreach (var thing in mapObjects)
             {
@@ -167,18 +170,26 @@ namespace MapGeneratorBlueprints.MapGenerator
 
                 if (data.Kind != null)
                 {
-                    Faction faction = Find.FactionManager.FirstFactionOfDef(data.Faction);
+                    Faction faction = forceFaction;
+                    if(faction == null)
+                        faction = Find.FactionManager.FirstFactionOfDef(data.Faction);
 
                     if (faction != null)
                     {
-                        Lord lordDefend = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, thing.value[0]), map, null);
-                        lordDefend.numPawnsLostViolently = int.MaxValue;
-
                         foreach (var pos in thing.value)
                         {
                             Pawn pawn = PawnGenerator.GeneratePawn(data.Kind, faction);
+
+                            if (pawn.RaceProps.Animal && data.Faction == null)
+                                pawn.SetFaction(null);
+
                             pawn = GenSpawn.Spawn(pawn, pos, map) as Pawn;
-                            lordDefend.AddPawn(pawn);
+
+                            LordJob_DefendPoint lordJob = new LordJob_DefendPoint(pawn.Position);
+                            Lord lord = LordMaker.MakeNewLord(faction, lordJob, map);
+                            lord.numPawnsLostViolently = int.MaxValue;
+
+                            lord.AddPawn(pawn);
                         }
                     }
                     else

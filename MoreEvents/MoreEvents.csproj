@@ -77,6 +77,9 @@
     <Compile Include="Events\ClimateBomb\IncidentWorker_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\JobDriver_DisableClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_Doomsday.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\DoomsdaySite.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\IncidentWorker_DoomsdayUltimatum.cs" />
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\HasExitCellsComp.cs" />
@@ -142,6 +145,8 @@
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
     <Compile Include="InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
+    <Compile Include="MapDefOfLocal.cs" />
+    <Compile Include="MapGeneratorDefOfLocal.cs" />
     <Compile Include="MentalBreaks\MentalBreakDefOfLocal.cs" />
     <Compile Include="MentalBreaks\MentalStateDefOfLocal.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalStateWorker_PositiveCharge.cs" />

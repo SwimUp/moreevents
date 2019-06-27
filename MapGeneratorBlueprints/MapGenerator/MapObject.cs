@@ -6,10 +6,10 @@ using Verse;
 
 namespace MapGeneratorBlueprints.MapGenerator
 {
-    public class RoofObject
+    public class MapObject
     {
-        public RoofDef RoofDef;
+        public ThingData key;
 
-        public List<IntVec3> Positions;
+        public List<IntVec3> value;
     }
 }

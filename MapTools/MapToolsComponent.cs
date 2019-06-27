@@ -27,7 +27,10 @@ namespace MapTools
                 Find.WindowStack.Add(new ThingMapToolWindow());
 
             if (Input.GetKeyDown(KeyCode.F11))
-                Find.WindowStack.Add(new ThingMapToolWindow());
+                Find.WindowStack.Add(new TerrainToolWindow());
+
+            if (Input.GetKeyDown(KeyCode.Mouse2))
+                Log.Message($"Cell --> {UI.MouseCell()}");
         }
     }
 }

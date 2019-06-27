@@ -35,6 +35,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\MapGeneratorBlueprints\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="MapGeneratorBlueprints">
+      <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,9 +49,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BluprintsTestTool.cs" />
+    <Compile Include="Maps\CreatorTool.cs" />
+    <Compile Include="Maps\MapGeneratorData.cs" />
     <Compile Include="MapToolsComponent.cs" />
     <Compile Include="MapToolWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Maps\RoofData.cs" />
+    <Compile Include="Maps\ThingData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

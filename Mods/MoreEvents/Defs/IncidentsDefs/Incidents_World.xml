@@ -510,7 +510,7 @@
 		<workerClass>MoreEvents.Events.IncidentWorker_MineralMeteorite</workerClass>
 		<category>Misc</category>
 		<minRefireDays>65</minRefireDays>
-		<baseChance>1.0</baseChance>
+		<baseChance>3</baseChance>
 		<earliestDay>50</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
@@ -546,8 +546,27 @@
 		<workerClass>MoreEvents.Events.IncidentWorker_HungryCannibalsRaid</workerClass>
 		<category>Misc</category>
 		<minRefireDays>55</minRefireDays>
-		<baseChance>1.1</baseChance>
+		<baseChance>4</baseChance>
 		<earliestDay>55</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Ультиматум судного дня -->
+	<IncidentDef>
+		<defName>DoomsdayUltimatum</defName>
+		<label>Doomsday Ultimatum</label>
+		<letterLabel>Doomsday Ultimatum</letterLabel>
+		<letterText>The enemy faction reports that it has a weapon capable of destroying the planet. She makes demands: 50,000 silver.
+You can start collecting silver together with other factions or organize an assault.</letterText>
+	    <letterDef>NegativeEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.DoomsdayUltimatum.IncidentWorker_DoomsdayUltimatum</workerClass>
+		<category>Misc</category>
+		<minRefireDays>400</minRefireDays>
+		<baseChance>0.8</baseChance>
+		<earliestDay>250</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	

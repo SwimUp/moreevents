@@ -11,6 +11,7 @@ namespace MoreEvents.Events
 {
     public class CaravanArrivalAction_EnterToMap: CaravanArrivalAction_Enter
     {
+        public MapParent MapParent => mapParent;
         private MapParent mapParent;
 
         public virtual IntVec3 MapSize { get; set; }
@@ -19,6 +20,7 @@ namespace MoreEvents.Events
 
         public override string ReportString => "CaravanEntering".Translate(mapParent.Label);
 
+        public VisitableSite Site => site;
         private VisitableSite site;
 
         public CaravanArrivalAction_EnterToMap(MapParent mapParent)
@@ -70,7 +72,7 @@ namespace MoreEvents.Events
             }
         }
 
-        public void DoEnter(Caravan caravan)
+        public virtual void DoEnter(Caravan caravan)
         {
             Pawn t = caravan.PawnsListForReading[0];
             bool flag2 = !mapParent.HasMap;

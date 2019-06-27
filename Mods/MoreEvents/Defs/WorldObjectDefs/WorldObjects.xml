@@ -86,4 +86,21 @@
     </IncidentTargetTags>
   </WorldObjectDef>
   
+  <WorldObjectDef>
+    <defName>DoomsdayUltimatumCamp</defName>
+    <label>Site of doomsday</label>
+    <description>Here is a faction with their unknown weapons.</description>
+    <worldObjectClass>MoreEvents.Events.DoomsdayUltimatum.DoomsdaySite</worldObjectClass>
+    <texture>Map/doomsday</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Map/doomsday</expandingIconTexture>
+    <expandingIconPriority>100</expandingIconPriority>
+    <comps>
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+  
 </Defs>

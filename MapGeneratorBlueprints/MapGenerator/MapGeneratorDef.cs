@@ -10,10 +10,10 @@ namespace MapGeneratorBlueprints.MapGenerator
 {
     public class MapGeneratorDef : Def
     {
+        public IntVec2 size;
+
         public List<MapObject> MapData;
 
         public List<RoofObject> RoofData;
-
-        public IntVec2 size;
     }
 }

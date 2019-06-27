@@ -48,15 +48,13 @@
   <ItemGroup>
     <Compile Include="MapGeneratorFactionBase\BlueprintDefOfLocal.cs" />
     <Compile Include="MapGeneratorFactionBase\BlueprintHandler.cs" />
-    <Compile Include="MapGeneratorFactionBase\BluprintsTestTool.cs" />
     <Compile Include="MapGeneratorFactionBase\MapGeneratorBaseBlueprintDef.cs" />
     <Compile Include="MapGeneratorFactionBase\RectTrigger_UnfogBaseArea.cs" />
     <Compile Include="MapGeneratorFactionBase\Reflection_CallMethod.cs" />
     <Compile Include="MapGeneratorFactionBase\ThingData.cs" />
-    <Compile Include="MapGenerator\CreatorTool.cs" />
-    <Compile Include="MapGenerator\MapGeneratorData.cs" />
     <Compile Include="MapGenerator\MapGeneratorDef.cs" />
     <Compile Include="MapGenerator\MapGeneratorHandler.cs" />
+    <Compile Include="MapGenerator\MapObject.cs" />
     <Compile Include="MapGenerator\RoofData.cs" />
     <Compile Include="MapGenerator\ThingData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

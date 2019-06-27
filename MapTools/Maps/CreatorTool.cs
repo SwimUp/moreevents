@@ -6,8 +6,9 @@ using UnityEngine;
 using Verse;
 using MapGenerator;
 using RimWorld;
+using MapGeneratorBlueprints.MapGenerator;
 
-namespace MapGeneratorBlueprints.MapGenerator
+namespace TestTools.MapGenerator
 {
     public class CreatorTool : GameComponent
     {
@@ -51,6 +52,8 @@ namespace MapGeneratorBlueprints.MapGenerator
 
                 public override void DoWindowContents(Rect inRect)
                 {
+                    Text.Font = GameFont.Small;
+
                     int y = 0;
                     Rect scrollRectFact = new Rect(0, 0, 230, 390);
                     Rect scrollVertRectFact = new Rect(0, 0, scrollRectFact.x, currentList.Count * 30);
@@ -107,7 +110,9 @@ namespace MapGeneratorBlueprints.MapGenerator
 
             public override void DoWindowContents(Rect inRect)
             {
-                if(Widgets.RadioButtonLabeled(new Rect(10,10, 370, 20), "Save plants?", SavePlants))
+                Text.Font = GameFont.Small;
+
+                if (Widgets.RadioButtonLabeled(new Rect(10,10, 370, 20), "Save plants?", SavePlants))
                 {
                     SavePlants = !SavePlants;
                 }
@@ -187,7 +192,7 @@ namespace MapGeneratorBlueprints.MapGenerator
 
                 if(thing.def.category == ThingCategory.Building || (savePlants && thing.def.category == ThingCategory.Plant))
                 {
-                    MapObject containedObject = newDef.MapData.Where(x => x.key.Thing == thing.def && x.key.Stuff == thing.Stuff).FirstOrDefault();
+                    MapObject containedObject = newDef.MapData.Where(x => x.key.Thing == thing.def && x.key.Stuff == thing.Stuff && x.key.Rotate == thing.Rotation).FirstOrDefault();
                     if(containedObject != null)
                     {
                         containedObject.value.Add(thing.Position);
@@ -198,7 +203,8 @@ namespace MapGeneratorBlueprints.MapGenerator
                         newData.key = new ThingData()
                         {
                             Thing = thing.def,
-                            Stuff = thing.Stuff
+                            Stuff = thing.Stuff,
+                            Rotate = thing.Rotation
                         };
                         newData.value = new List<IntVec3>
                         {
@@ -357,7 +363,7 @@ namespace MapGeneratorBlueprints.MapGenerator
 
                     if (thing.def.category == ThingCategory.Building || (savePlants && thing.def.category == ThingCategory.Plant))
                     {
-                        MapObject containedObject = newDef.MapData.Where(x => x.key.Thing == thing.def && x.key.Stuff == thing.Stuff).FirstOrDefault();
+                        MapObject containedObject = newDef.MapData.Where(x => x.key.Thing == thing.def && x.key.Stuff == thing.Stuff && x.key.Rotate == thing.Rotation).FirstOrDefault();
                         if (containedObject != null)
                         {
                             containedObject.value.Add(thing.Position);
@@ -502,7 +508,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             {
                 resizeable = false;
 
-                defSize = DefDatabase<MapGeneratorDef>.AllDefsListForReading.Count;
+                defSize = DefDatabase<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>.AllDefsListForReading.Count;
             }
 
             public override void DoWindowContents(Rect inRect)
@@ -534,11 +540,11 @@ namespace MapGeneratorBlueprints.MapGenerator
                 Rect scrollVertRectFact = new Rect(0, 0, scrollRectFact.x, size);
                 Widgets.BeginScrollView(scrollRectFact, ref scrollPosition, scrollVertRectFact);
 
-                foreach (var def in DefDatabase<MapGeneratorDef>.AllDefs)
+                foreach (var def in DefDatabase<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>.AllDefs)
                 {
                     if (Widgets.ButtonText(new Rect(0, y, 170, 20), def.defName))
                     {
-                        MapGeneratorHandler.GenerateMap(def, Find.CurrentMap, true, Terrain, Fog, RoomFog, Pawns, Roof, GeneratePlants);
+                        MapGeneratorHandler.GenerateMap(def, Find.CurrentMap, true, Terrain, Fog, RoomFog, Pawns, Roof, GeneratePlants, Find.FactionManager.RandomEnemyFaction());
                     }
                     y += 22;
                 }

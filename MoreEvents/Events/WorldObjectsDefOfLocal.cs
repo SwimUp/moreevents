@@ -13,5 +13,6 @@ namespace MoreEvents.Events
         public static WorldObjectDef ClimateBombSite;
         public static WorldObjectDef SiegeCampSite;
         public static WorldObjectDef FriendlySettlementHelp;
+        public static WorldObjectDef DoomsdayUltimatumCamp;
     }
 }
