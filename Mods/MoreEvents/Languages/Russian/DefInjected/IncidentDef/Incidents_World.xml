@@ -101,5 +101,14 @@
   <HungryCannibalRaid.letterLabel>Рейд голодных каннибалов</HungryCannibalRaid.letterLabel>
   <HungryCannibalRaid.letterText>Племя людоедов атакует поселение со всех сторон! Им не нужны пленники, им нужно человеческое мясо!</HungryCannibalRaid.letterText>  
   
+  <DoomsdayUltimatum.label>Ультиматум судного дня</DoomsdayUltimatum.label>
+  <DoomsdayUltimatum.letterLabel>Ультиматум судного дня</DoomsdayUltimatum.letterLabel>
+  <DoomsdayUltimatum.letterText>Фракция противника сообщает, что у нее есть оружие, способное уничтожить планету. 
+Она предъявляет требования: 50 000 серебра.
+Вы можете начать собирать серебро вместе с другими фракциями или организовать штурм.</DoomsdayUltimatum.letterText>  
+  
+  <Arsonists.label>Поджигатели</Arsonists.label>
+  <Arsonists.letterLabel>Поджигатели</Arsonists.letterLabel>
+  <Arsonists.letterText>Несколько бойцов вражеской фракции прибыли чтобы сжечь ваш лес.</Arsonists.letterText>  
   
 </LanguageData>

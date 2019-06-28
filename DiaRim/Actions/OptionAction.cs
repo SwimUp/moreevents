@@ -7,8 +7,6 @@ namespace DiaRim.Actions
 {
     public abstract class OptionAction
     {
-        public DialogOption Option;
-
-        public abstract void DoAction();
+        public abstract void DoAction(DialogOption option);
     }
 }

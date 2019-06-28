@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace MoreEvents.Events.DoomsdayUltimatum
@@ -37,6 +38,10 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             site.SetFaction(GetEnemyFaction());
             var comp = site.GetComponent<DoomsdayUltimatumComp>();
             comp.SetTimer(Rand.Range(10, 20));
+            site.comp = comp;
+            List<Faction> factions = Find.FactionManager.AllFactionsListForReading.Where(f => !f.IsPlayer && !f.def.hidden && f != site.Faction && f.RelationKindWith(site.Faction) == FactionRelationKind.Hostile).ToList();
+            comp.FactionSilver = Mathf.Clamp(factions.Count * Rand.Range(2000, 4000), 15000, 35000);
+
             Find.WorldObjects.Add(site);
 
             SendStandardLetter(site);

@@ -16,5 +16,7 @@ namespace MoreEvents
         public static JobDef UnLoadArmorIntoStation;
 
         public static JobDef CarryReactorToStation;
+
+        public static JobDef FireAround;
     }
 }

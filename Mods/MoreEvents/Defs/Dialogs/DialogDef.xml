@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<DiaRim.DialogDef>
 		<defName>TestDialog</defName>
 		<label>Dialog label</label>
@@ -22,7 +21,16 @@ mobility. The chest cables are covered under the chest plate and as a result are
 				<Options>
 					<li>
 						<Label>Пункт 7</Label>
-						<NextPageId>2</NextPageId>
+						<Transitions> 
+							<li>
+								<key>1</key>
+								<value>1</value>
+							</li>
+							<li>
+								<key>2</key>
+								<value>0.35</value>
+							</li>
+						</Transitions>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Construction</Skill>
@@ -37,11 +45,16 @@ mobility. The chest cables are covered under the chest plate and as a result are
 								<Childhood>Female</Childhood>
 								<DisableReason>Требуется детство: </DisableReason>
 							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Nudist</ReqTrait> <!-- Core\Defs\TraitDefs -->
+								<DisableReason>Персонаж должен быть нудистом</DisableReason>
+							</li>
 						</Conditions>
 					</li>
 					<li>
 						<Label>Аташол!</Label>
 						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>
@@ -52,7 +65,12 @@ mobility. The chest cables are covered under the chest plate and as a result are
 				<Options>
 					<li>
 						<Label>Точна</Label>
-						<NextPageId>3</NextPageId>
+						<Transitions> 
+							<li>
+								<key>3</key>
+								<value>1</value>
+							</li>
+						</Transitions>
 					</li>
 				</Options>
 			</li>
@@ -64,6 +82,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 					<li>
 						<Label>Спасибо!</Label>
 						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>удача</ResolveSignal>
 					</li>
 				</Options>
 			</li>

@@ -101,4 +101,10 @@
   <DropAnimalInsanity.letterLabel>Capsules with insane animals!</DropAnimalInsanity.letterLabel>
   <DropAnimalInsanity.letterText>An unknown faction sent us capsules with insane animals. Raise shields!</DropAnimalInsanity.letterText>  
   
+  <DoomsdayUltimatum.label>Doomsday ultimatum</DoomsdayUltimatum.label>
+  <DoomsdayUltimatum.letterLabel>Doomsday ultimatum</DoomsdayUltimatum.letterLabel>
+  <DoomsdayUltimatum.letterText>The enemy faction reports that it has a weapon capable of destroying the planet. 
+She makes demands: 50,000 silver.
+You can start collecting silver together with other factions or organize an assault.</DoomsdayUltimatum.letterText> 
+  
 </LanguageData>

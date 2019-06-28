@@ -18,5 +18,11 @@
 		<driverClass>MoreEvents.Things.Mk1.JobDriver_CarryReactorToStation</driverClass>
 		<reportString>Carries reactor to station</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>FireAround</defName>
+		<driverClass>MoreEvents.AI.JobDriver_FireAround</driverClass>
+		<reportString>Making a fire</reportString>
+	</JobDef>
 
 </Defs>

@@ -13,5 +13,7 @@
   <FriendlySettlementHelp.label>Spot raid</FriendlySettlementHelp.label>
   <FriendlySettlementHelp.description>The place where the attack will be made.</FriendlySettlementHelp.description>
  
+  <DoomsdayUltimatumCamp.label>Site of Doomsday</DoomsdayUltimatumCamp.label>
+  <DoomsdayUltimatumCamp.description>Here is a faction with its unknown weapon that threatens to destroy the planet.</DoomsdayUltimatumCamp.description>
  
 </LanguageData>

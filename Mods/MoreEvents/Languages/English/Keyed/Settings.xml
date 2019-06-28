@@ -107,4 +107,11 @@
   <HungryCannibalRaid_Title>Hungry cannibal raid</HungryCannibalRaid_Title>
   <HungryCannibalRaid_Desc>A tribe of cannibals attacks the settlement from all sides! They don't need captives, they need human meat</HungryCannibalRaid_Desc>
   
+  <DoomsdayUltimatum_Title>Doomsday ultimatum</DoomsdayUltimatum_Title>
+  <DoomsdayUltimatum_Desc>The enemy faction reports that it has a weapon capable of destroying the planet. She makes demands: 50,000 silver.
+You can start collecting silver together with other factions or organize an assault.</DoomsdayUltimatum_Desc>
+  
+  <Arsonists_Title>Arsonists</Arsonists_Title>
+  <Arsonists_Desc>Several fighters of the enemy faction have arrived to burn your forest.</Arsonists_Desc>
+  
 </LanguageData>

@@ -350,7 +350,6 @@
 			<li>TemperateSwamp</li>
 			<li>BorealForest</li>
 			<li>Tundra</li>
-			<li>Tundra</li>
 		</allowedBiomes>
 	</IncidentDef>
 	<!-- s=======================s -->
@@ -567,6 +566,30 @@ You can start collecting silver together with other factions or organize an assa
 		<minRefireDays>400</minRefireDays>
 		<baseChance>0.8</baseChance>
 		<earliestDay>250</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Поджигатели -->
+	<IncidentDef>
+		<defName>Arsonists</defName>
+		<label>Arsonists</label>
+		<letterLabel>Arsonists</letterLabel>
+		<letterText>Several fighters of the enemy faction have arrived to burn your forest.</letterText>
+	    <letterDef>NegativeEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Arsonists</workerClass>
+		<category>Misc</category>
+		<minRefireDays>50</minRefireDays>
+		<baseChance>2.3</baseChance>
+		<earliestDay>60</earliestDay>
+		<allowedBiomes>
+			<li>TemperateForest</li>
+			<li>TemperateSwamp</li>
+			<li>BorealForest</li>
+			<li>Tundra</li>
+		</allowedBiomes>
 	</IncidentDef>
 	<!-- s=======================s -->
 	

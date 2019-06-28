@@ -12,6 +12,9 @@ namespace DiaRim
         public DialogDef DialogDef;
 
         public Pawn Speaker;
+        public Pawn Defendant;
+
+        public Color screenFillColor = Color.clear;
 
         public Dictionary<int, DialogPage> Pages = new Dictionary<int, DialogPage>();
 
@@ -21,7 +24,7 @@ namespace DiaRim
         private Vector2 scrollPosition;
         private float optTotalHeight;
 
-        public Action CloseAction;
+        public Action<string> CloseAction;
 
         public Dictionary<string, int> CustomParams = new Dictionary<string, int>();
 
@@ -42,17 +45,25 @@ namespace DiaRim
             Size = size;
         }
 
+        public Dialog(DialogDef dialogDef, Pawn speaker, Pawn defendant, Vector2 size)
+        {
+            DialogDef = dialogDef;
+            Speaker = speaker;
+            Size = size;
+            Defendant = defendant;
+        }
+
         public override void DoWindowContents(Rect inRect)
         {
             Rect rect = inRect.AtZero();
             DrawNode(rect);
         }
 
-        public override void Close(bool doCloseSound = true)
+        public void Close(string signal, bool doCloseSound = true)
         {
-            CloseAction?.Invoke();
+            CloseAction?.Invoke(signal);
 
-            base.Close(doCloseSound);
+            Close(doCloseSound);
         }
 
         protected void DrawNode(Rect rect)
@@ -79,6 +90,17 @@ namespace DiaRim
                 optTotalHeight = num2;
             }
             GUI.EndGroup();
+        }
+
+        public override void WindowOnGUI()
+        {
+            if (screenFillColor != Color.clear)
+            {
+                GUI.color = screenFillColor;
+                GUI.DrawTexture(new Rect(0f, 0f, UI.screenWidth, UI.screenHeight), BaseContent.WhiteTex);
+                GUI.color = Color.white;
+            }
+            base.WindowOnGUI();
         }
 
         public void Init()

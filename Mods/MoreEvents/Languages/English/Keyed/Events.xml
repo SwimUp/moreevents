@@ -97,6 +97,16 @@
   <ArcReactorCore>Arc</ArcReactorCore>
   
   <WeaponDeactivated>Doomsday weapons are still active</WeaponDeactivated>
-  <PlanetWillBeDestroyed>Planet will be destroyed in (days): {0}</PlanetWillBeDestroyed>
-  
+  <PlanetWillBeDestroyed>The planet will be destroyed in (days): </PlanetWillBeDestroyed>
+  <PlayerSilverCount>Silver player: {0}</PlayerSilverCount>
+  <FactionGift>Silver from factions: {0}</FactionGift>
+  <GiveRansom>Pay a ransom</GiveRansom>
+  <NotEnoughSilverDoom>Pay a ransom [Not enough silver]</NotEnoughSilverDoom>
+  <PaidSuccessDoom>Ransom paid</PaidSuccessDoom>
+  <RansomCompleteTitle>Ransom paid</RansomCompleteTitle>
+  <RansomComplete>The enemy commander laughs loudly into the walkie-talkie. So be it, they will not blow up the planet. The laughter subsides and you see how they turn off their camp and rush off into the distance. Perhaps this is not the end.</RansomComplete>
+  <PlanetDestroyed>Suddenly, the earth begins to move under your feet, your colonists feel a strong fear. Buildings around and even mountains come into motion. After a few minutes, lava flows begin to pour out of the ground.
+
+Suddenly, a ray of unknown energy rushes into the sky and before your eyes the atmosphere of the planet begins to collapse and solar radiation burns everything around. Another minute and a blast: a bright flash, are you already in paradise?</PlanetDestroyed>
+	
 </LanguageData>

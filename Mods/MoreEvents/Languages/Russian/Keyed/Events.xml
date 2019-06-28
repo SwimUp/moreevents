@@ -98,6 +98,16 @@
   <ArcReactorCore>Дуговой</ArcReactorCore>
   
   <WeaponDeactivated>Оружие судного дня до сих пор активно</WeaponDeactivated>
-  <PlanetWillBeDestroyed>Планета будет уничтожена через (дней): {0}</PlanetWillBeDestroyed>
+  <PlanetWillBeDestroyed>Планета будет уничтожена через (дней): </PlanetWillBeDestroyed>
+  <PlayerSilverCount>Серебро игрока: {0}</PlayerSilverCount>
+  <FactionGift>Серебро от фракций: {0}</FactionGift>
+  <GiveRansom>Заплатить выкуп</GiveRansom>
+  <NotEnoughSilverDoom>Заплатить выкуп [Недостаточно серебра]</NotEnoughSilverDoom>
+  <PaidSuccessDoom>Выкуп уплачен</PaidSuccessDoom>
+  <RansomCompleteTitle>Выкуп уплачен</RansomCompleteTitle>
+  <RansomComplete>Вражеский командир громко смеется в рацию. Так уж и быть, они не будут взрывать планету. Смех утихает и вы видите, как они сворачивают свой лагерь и устремляются вдаль. Возможно, это еще не конец.</RansomComplete>
+  <PlanetDestroyed>Вдруг земля под ногами начинает движение, ваши колонисты чувствуют сильный страх. Постройки вокруг и даже горы приходят в движение. Через несколько минут из земли начинают выливаться потоки лавы. 
   
+  Неожиданно в небо устремляется луч неизвестной энергии и на ваших глазах атмосфера планеты начинает разрушаться и солнечная радиация сжигает все вокруг. Еще минута и взрыв: яркая вспышка, вы уже в раю?</PlanetDestroyed>
+
 </LanguageData>

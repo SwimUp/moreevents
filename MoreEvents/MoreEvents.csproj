@@ -54,6 +54,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\DutyDefOfLocal.cs" />
+    <Compile Include="AI\JobDriver_FireAround.cs" />
+    <Compile Include="AI\JobGiver_FireAround.cs" />
+    <Compile Include="AI\LordJob_Arson.cs" />
+    <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
@@ -78,6 +83,7 @@
     <Compile Include="Events\ClimateBomb\JobDriver_DisableClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_Doomsday.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_GiveRansom.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdaySite.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp_Main.cs" />
@@ -86,6 +92,7 @@
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\HasExitCellsComp.cs" />
     <Compile Include="Events\HasExitCells_Comp.cs" />
+    <Compile Include="Events\IncidentWorker_Arsonists.cs" />
     <Compile Include="Events\IncidentWorker_DropInsaneAnimals.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
     <Compile Include="Events\IncidentWorker_HungryCannibalsRaid.cs" />
@@ -156,6 +163,7 @@
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Patch\ExitCells_Patch.cs" />
     <Compile Include="Patch\ToxicFallout_Patch.cs" />
+    <Compile Include="PawnKindDefOfLocal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
@@ -197,8 +205,6 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Jobs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

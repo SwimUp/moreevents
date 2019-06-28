@@ -16,6 +16,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         public bool WeaponDeactivated = false;
 
         public CaravanArrivalAction_Doomsday caravanAction;
+        public CaravanArrivalAction_GiveRansom caravanAction2;
+
+        public DoomsdayUltimatumComp comp;
 
         public override void SpawnSetup()
         {
@@ -24,6 +27,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             RemoveAfterLeave = true;
 
             caravanAction = new CaravanArrivalAction_Doomsday(this);
+            caravanAction2 = new CaravanArrivalAction_GiveRansom(this);
+
+            comp = GetComponent<DoomsdayUltimatumComp>();
         }
 
         public override void PostMapGenerate()
@@ -65,7 +71,35 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
         {
-            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction.CanVisit(caravan, mapParent), () => caravanAction, "EnterMap".Translate(mapParent.Label), caravan, mapParent.Tile, mapParent);
+            foreach(var option in CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction.CanVisit(caravan, mapParent), () => caravanAction, "EnterMap".Translate(mapParent.Label), caravan, mapParent.Tile, mapParent))
+            {
+                yield return option;
+            }
+
+            int reqCount = 50000 - comp.FactionSilver;
+            bool hasSilver = CaravanInventoryUtility.HasThings(caravan, ThingDefOf.Silver, reqCount);
+            foreach (var option in CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction2.CanGiveRansom(caravan, mapParent), () => caravanAction2, hasSilver ? "GiveRansom".Translate() : "NotEnoughSilverDoom".Translate(), caravan, mapParent.Tile, mapParent))
+            {
+                yield return option;
+            }
+        }
+
+        public override void PreForceReform(MapParent mapParent)
+        {
+            if (comp.CachedRelations != null)
+            {
+                foreach (var cache in comp.CachedRelations)
+                {
+                    foreach(var relation in cache.Value)
+                    {
+                        cache.Key.TrySetRelationKind(relation.other, relation.kind);
+                    }
+                }
+
+                comp.CachedRelations.Clear();
+            }
+
+            base.PreForceReform(mapParent);
         }
     }
 }

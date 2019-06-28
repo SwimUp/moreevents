@@ -18,6 +18,7 @@ namespace DiaRim
         public string Label;
 
         public bool ResolveTree = false;
+        public string ResolveSignal;
 
         public bool Disabled = false;
         public string DisabledReason;
@@ -31,21 +32,13 @@ namespace DiaRim
 
         public List<OptionCondition> Conditions;
 
-        public int NextPageId = -1;
+        public Dictionary<int, float> Transitions;
 
         public Dialog Dialog => Page.Dialog;
 
         public void Init(DialogPage parent)
         {
             Page = parent;
-
-            if (Actions != null)
-            {
-                foreach (var action in Actions)
-                {
-                    action.Option = this;
-                }
-            }
 
             Disabled = CheckConditions();
         }
@@ -81,12 +74,6 @@ namespace DiaRim
             if (Disabled)
             {
                 textColor = DisabledOptionColor;
-                /*
-                if (DisabledReason != null)
-                {
-                    text = text + DisabledReason;
-                }
-                */
             }
             rect.height = Text.CalcHeight(text, rect.width);
             TooltipHandler.TipRegion(rect, DisabledReason);
@@ -108,7 +95,7 @@ namespace DiaRim
             {
                 foreach (var action in Actions)
                 {
-                    action.DoAction();
+                    action.DoAction(this);
                 }
             }
 
@@ -116,11 +103,19 @@ namespace DiaRim
 
             if (ResolveTree)
             {
-                Dialog.Close();
+                Dialog.Close(ResolveSignal);
                 return;
             }
 
-            Dialog.GotoPage(NextPageId);
+            float value = Rand.Value;
+            foreach (var pair in Transitions.OrderBy(pair => pair.Value))
+            {
+                if (value < pair.Value)
+                {
+                    Dialog.GotoPage(pair.Key);
+                    break;
+                }
+            }
         }
     }
 }

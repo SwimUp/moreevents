@@ -12,5 +12,8 @@
    
   <FriendlySettlementHelp.label>Место рейда</FriendlySettlementHelp.label>
   <FriendlySettlementHelp.description>Место, куда будет совершенно нападение.</FriendlySettlementHelp.description>
+    
+  <DoomsdayUltimatumCamp.label>Место судного дня</DoomsdayUltimatumCamp.label>
+  <DoomsdayUltimatumCamp.description>Здесь расположилась фракция со своим неизвестным оружием, угрожающая уничтожить планету</DoomsdayUltimatumCamp.description>
  
 </LanguageData>

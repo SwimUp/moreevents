@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using Verse.AI.Group;
 
 namespace MoreEvents.Events.DoomsdayUltimatum
 {
@@ -13,10 +14,15 @@ namespace MoreEvents.Events.DoomsdayUltimatum
     {
         public override IntVec3 MapSize => new IntVec3(250, 1, 250);
 
+        public CaravanArrivalAction_Doomsday()
+        {
+
+        }
+
         public CaravanArrivalAction_Doomsday(MapParent mapParent) : base(mapParent)
         {
         }
-
+        
         public override FloatMenuAcceptanceReport CanVisit(Caravan caravan, MapParent mapParent)
         {
             if (mapParent == null || !mapParent.Spawned)
@@ -56,6 +62,78 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             Verse.Map map = orGenerateMap;
             IntVec3 enterPos = new IntVec3(82, 0, 5);
             CaravanEnterMapUtility.Enter(caravan, map, (Pawn p) => enterPos);
+
+            DoomsdaySite site = (DoomsdaySite)MapParent;
+            var comp = site.GetComponent<DoomsdayUltimatumComp>();
+            if (comp.HelpingFactions != null)
+            {
+                CacheAndChangeRelations(comp);
+
+                GeneratePawns(comp, ref enterPos, map);
+            }
+        }
+
+        private void GeneratePawns(DoomsdayUltimatumComp comp, ref IntVec3 enterPos, Map map)
+        {
+            PawnGroupMakerParms pawnGroupMakerParms = new PawnGroupMakerParms
+            {
+                points = Rand.Range(600, 1500),
+                generateFightersOnly = true,
+                groupKind = PawnGroupKindDefOf.Combat
+            };
+
+            List<Pawn> pawns = new List<Pawn>();
+            foreach (var faction in comp.HelpingFactions)
+            {
+                pawnGroupMakerParms.faction = faction;
+                int pawnsCount = Rand.Range(2, 3);
+                int i = 0;
+                IEnumerable<Pawn> generatedPawns = PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms);
+                foreach(var p in generatedPawns)
+                {
+                    if (i == pawnsCount)
+                        break;
+
+                    i++;
+                    GenSpawn.Spawn(p, enterPos, map);
+                    pawns.Add(p);
+                }
+            }
+
+            LordJob lordJob = new LordJob_AssaultColony(Faction.OfPlayer, canKidnap: true, canTimeoutOrFlee: false);
+            Lord lord = LordMaker.MakeNewLord(Faction.OfPlayer, lordJob, map);
+            lord.numPawnsLostViolently = int.MaxValue;
+
+            foreach (var p in pawns)
+                lord.AddPawn(p);
+        }
+
+        private void CacheAndChangeRelations(DoomsdayUltimatumComp comp)
+        {
+            comp.CachedRelations = new Dictionary<Faction, List<FactionRelation>>();
+            foreach (var faction in comp.HelpingFactions)
+            {
+                List<FactionRelation> relations = new List<FactionRelation>();
+                foreach (var faction2 in comp.HelpingFactions)
+                {
+                    if (faction2 == faction)
+                        continue;
+
+                    FactionRelation mainRelation = faction.RelationWith(faction2);
+                    if (mainRelation != null)
+                    {
+                        FactionRelation relation = new FactionRelation();
+                        relation.other = mainRelation.other;
+                        relation.kind = mainRelation.kind;
+
+                        relations.Add(relation);
+                    }
+
+                    faction.TrySetRelationKind(faction2, FactionRelationKind.Ally);
+                }
+
+                comp.CachedRelations.Add(faction, relations);
+            }
         }
     }
 }

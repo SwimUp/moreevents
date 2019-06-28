@@ -23,6 +23,11 @@ namespace MoreEvents.Events
         public VisitableSite Site => site;
         private VisitableSite site;
 
+        public CaravanArrivalAction_EnterToMap()
+        {
+
+        }
+
         public CaravanArrivalAction_EnterToMap(MapParent mapParent)
         {
             this.mapParent = mapParent;
