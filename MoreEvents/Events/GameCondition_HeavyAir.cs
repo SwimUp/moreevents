@@ -28,13 +28,15 @@ namespace MoreEvents.Events
 
         public override void End()
         {
-            Map map = Find.CurrentMap;
-            List<Pawn> allPawnsSpawned = map.mapPawns.AllPawnsSpawned;
-            for (int i = 0; i < allPawnsSpawned.Count; i++)
+            foreach (var map in AffectedMaps)
             {
-                Pawn pawn = allPawnsSpawned[i];
+                List<Pawn> allPawnsSpawned = map.mapPawns.AllPawnsSpawned;
+                for (int i = 0; i < allPawnsSpawned.Count; i++)
+                {
+                    Pawn pawn = allPawnsSpawned[i];
 
-                HealthUtility.AdjustSeverity(pawn, HediffDefOfLocal.OxygenStarvation, -100);
+                    HealthUtility.AdjustSeverity(pawn, HediffDefOfLocal.OxygenStarvation, -100);
+                }
             }
 
             base.End();

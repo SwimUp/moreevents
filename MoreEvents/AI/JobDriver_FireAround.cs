@@ -19,13 +19,15 @@ namespace MoreEvents.AI
         {
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedNullOrForbidden(TargetIndex.A);
             yield return Toils_General.Wait(500).WithProgressBarToilDelay(TargetIndex.A);
-            Toil toil = new Toil();
-            toil.initAction = delegate
+            Toil toil = new Toil
             {
-                IntVec3 cell = TargetLocA;
-                FireUtility.TryStartFireIn(cell, Map, 0.1f);
+                initAction = delegate
+                {
+                    IntVec3 cell = TargetLocA;
+                    FireUtility.TryStartFireIn(cell, Map, 0.1f);
+                },
+                defaultCompleteMode = ToilCompleteMode.Instant
             };
-            toil.defaultCompleteMode = ToilCompleteMode.Instant;
 
             yield return toil;
         }

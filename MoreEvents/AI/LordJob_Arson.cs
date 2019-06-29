@@ -19,11 +19,10 @@ namespace MoreEvents.AI
         public override StateGraph CreateGraph()
         {
             StateGraph stateGraph = new StateGraph();
-            LordToil_Travel travel = new LordToil_Travel(FireSpot);
-            Log.Message($"{FireSpot}");
-            stateGraph.AddToil(travel);
+            //LordToil_Travel travel = new LordToil_Travel(FireSpot);
+            //stateGraph.StartingToil = travel;
             LordToil_Arson fireToil = new LordToil_Arson(FireSpot);
-            stateGraph.AddToil(fireToil);
+            stateGraph.StartingToil = fireToil;
 
             return stateGraph;
         }

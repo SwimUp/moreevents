@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -98,6 +99,22 @@ namespace MoreEvents.Constellations
                 foreach (var map in AffectedMaps)
                 {
                     foreach (var pawn in map.mapPawns.AllPawnsSpawned)
+                    {
+                        Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(effect, false);
+                        if (firstHediffOfDef != null)
+                        {
+                            pawn.health.RemoveHediff(firstHediffOfDef);
+                        }
+                    }
+                }
+            }
+
+            List<Caravan> caravans = Find.WorldObjects.Caravans;
+            foreach(var caravan in caravans)
+            {
+                foreach (var effect in ConstellationsDef.Effects)
+                {
+                    foreach (var pawn in caravan.pawns)
                     {
                         Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(effect, false);
                         if (firstHediffOfDef != null)
