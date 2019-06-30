@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,13 @@ namespace MoreEvents.AI
     {
         protected override Job TryGiveJob(Pawn pawn)
         {
-            IntVec3 cell = CellFinder.RandomClosewalkCellNear(pawn.Position, pawn.Map, 10);
+            IntVec3 cell = CellFinder.RandomClosewalkCellNear(pawn.Position, pawn.Map, 10, (IntVec3 vec) =>
+            {
+                if (FireUtility.ContainsStaticFire(vec, pawn.Map))
+                    return false;
+
+                return true;
+            });
 
             Job job = new Job(JobDefOfLocal.FireAround, cell);
 

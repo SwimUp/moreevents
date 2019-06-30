@@ -57,6 +57,7 @@
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_FireAround.cs" />
     <Compile Include="AI\JobGiver_FireAround.cs" />
+    <Compile Include="AI\JobGiver_WanderInArea.cs" />
     <Compile Include="AI\LordJob_Arson.cs" />
     <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />

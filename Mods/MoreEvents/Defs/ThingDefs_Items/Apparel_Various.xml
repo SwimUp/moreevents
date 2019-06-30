@@ -150,6 +150,9 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<Crafting>15</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
 		<statBases>
 			<WorkToMake>35000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>

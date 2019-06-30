@@ -12,6 +12,8 @@ namespace MoreEvents.AI
     {
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
+            errorOnFailed = false;
+
             return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
         }
 
@@ -24,7 +26,10 @@ namespace MoreEvents.AI
                 initAction = delegate
                 {
                     IntVec3 cell = TargetLocA;
-                    FireUtility.TryStartFireIn(cell, Map, 0.1f);
+                    if (cell != IntVec3.Invalid)
+                    {
+                        FireUtility.TryStartFireIn(cell, Map, 0.3f);
+                    }
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };

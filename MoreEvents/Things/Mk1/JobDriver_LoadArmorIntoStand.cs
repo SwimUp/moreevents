@@ -47,7 +47,7 @@ namespace MoreEvents.Things.Mk1
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
-            yield return Toils_General.Wait(600).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
+            yield return Toils_General.Wait(600).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedOrNull(TargetIndex.A);
 
             Toil finish = new Toil
             {

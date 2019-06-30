@@ -37,7 +37,7 @@ namespace MoreEvents.Events
                 groupKind = PawnGroupKindDefOf.Combat
             };
 
-            LordJob lordJob = new LordJob_Arson(startSpot);
+            LordJob lordJob = new LordJob_Arson(startSpot, enemyFaction);
             Lord lord = LordMaker.MakeNewLord(enemyFaction, lordJob, map);
 
             IEnumerable<Pawn> pawns = PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms);
@@ -47,7 +47,7 @@ namespace MoreEvents.Events
                 lord.AddPawn(p);
             }
 
-            SendStandardLetter();
+            SendStandardLetter(new LookTargets(new TargetInfo(spawnSpot, map)));
 
             return true;
         }

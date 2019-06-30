@@ -73,8 +73,8 @@ namespace MoreEvents.Things.Mk1
 
             EnergyCharge += num;
 
-            if (EnergyCharge > 100f)
-                EnergyCharge = 100f;
+            if (EnergyCharge > CoreComp.PowerCapacity)
+                EnergyCharge = CoreComp.PowerCapacity;
         }
 
         public override string DescriptionDetailed
