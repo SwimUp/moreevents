@@ -23,5 +23,10 @@ namespace DiaRim.Conditions
 
             return false;
         }
+
+        public void PostLoad()
+        {
+            untranslatedId = $"traitReq{ConditionId}";
+        }
     }
 }

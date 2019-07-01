@@ -1,58 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<!-- пометка 
+backstory: ключ Childhood или AdultHood и если не указан ConditionId, то 1
+Gender: ключ Male, Female и если не указан ConditionId, то 1 (например Male1)
+SkillReq: ключ skillReq и если не указан ConditionId, то 1  (например skillReq1)
+Trait: ключ traitReq  (например traitReq1)
+-->
 	<DiaRim.DialogDef>
-		<defName>TestDialog</defName>
-		<label>Dialog label</label>
+		<defName>DoomsdayHelp</defName>
+		<label>диалог просьба о помощи в рейде</label>
 		<WindowSize>(500, 500)</WindowSize>
 		<FirstPageId>1</FirstPageId>
 		<Pages>
 			<li>
 				<UniqueId>1</UniqueId>
-				<Title>Привет, путник!</Title>
-				<Text>The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
-mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
-\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.
-The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
-mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
-\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.
-The armor "Thunder" is fully sheathed with armor, and the legs as well as the rest of the armor are connected to the power supply system. Armor plates are mounted on moving joints in order to increase
-mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
-\n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.</Text>
+				<Title>Я вас приветствую.</Title>
+				<Text>Сегодня утром мы получили сообщение от некого безумца, требующего от нас денег. Мы незамедлительно ответили отказом, но нам любопытно, не слышали ли вы об этом? Разведчики нашей фракции заметили силуэты огромных сооружений и мы опасаемся...</Text>
 				<Options>
 					<li>
-						<Label>Пункт 7</Label>
-						<Transitions> 
-							<li>
-								<key>1</key>
-								<value>1</value>
-							</li>
-							<li>
-								<key>2</key>
-								<value>0.35</value>
-							</li>
-						</Transitions>
+						<Label>MustUnite</Label> <!-- ключ -->
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
-								<Skill>Construction</Skill>
-								<SkillLevel>25</SkillLevel>
-								<DisableReason>Требуется строительство 25</DisableReason>
-							</li>
-							<li Class="DiaRim.Conditions.Condition_Gender">
-								<AllowGender>Female</AllowGender>
-								<DisableReason>Требуется пол: женщина</DisableReason>
-							</li>
-							<li Class="DiaRim.Conditions.Condition_Backstory">
-								<Childhood>Female</Childhood>
-								<DisableReason>Требуется детство: </DisableReason>
-							</li>
-							<li Class="DiaRim.Conditions.Condition_Trait">
-								<ReqTrait>Nudist</ReqTrait> <!-- Core\Defs\TraitDefs -->
-								<DisableReason>Персонаж должен быть нудистом</DisableReason>
+								<Skill>Social</Skill>
+								<SkillLevel>6</SkillLevel>
+								<DisableReason>Требуется общение 5</DisableReason>
 							</li>
 						</Conditions>
+						<Transitions> 
+							<li>
+								<key>2</key>
+								<value>1</value>
+							</li>
+						</Transitions>
 					</li>
 					<li>
-						<Label>Аташол!</Label>
+						<Label>EndCooms</Label> <!-- ключ -->
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
@@ -60,30 +42,690 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			</li>
 			<li>
 				<UniqueId>2</UniqueId>
-				<Title>Привет, путник!</Title>
-				<Text>Точно!?</Text>
+				<Title>Объединиться?</Title>
+				<Text>Я бы хотел узнать подробности произошедшего, чтобы принять верное решение. Мы не хотим получить новых проблем...</Text>
 				<Options>
 					<li>
-						<Label>Точна</Label>
+						<Label>Просить о помощи</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>8</SkillLevel>
+								<DisableReason>Требуется общение 8</DisableReason>
+							</li>
+						</Conditions>
 						<Transitions> 
 							<li>
 								<key>3</key>
+								<value>0.5</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.45</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Потребовать поддержки</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>12</SkillLevel>
+								<DisableReason>Требуется общение 12</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>4</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>28</key>
+								<value>0.15</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Напомнить о долге</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>10</SkillLevel>
+								<DisableReason>Требуется общение 10</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>GreatMemory</ReqTrait>
+								<DisableReason>Требуется черта хорошая память</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>5</key>
+								<value>0.9</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.05</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Угрожать</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Psychopath</ReqTrait>
+								<DisableReason>Требуется черта психопат</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>17</key>
+								<value>0.8</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.15</value>
+							</li>
+						</Transitions>
+
+					</li>
+					<li>
+						<Label>Грубить</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>4</SkillLevel>
+								<DisableReason>Требуется общение 4</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Abrasive</ReqTrait>
+								<DisableReason>Требуется черта грубость</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>7</key>
 								<value>1</value>
 							</li>
 						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>
 			<li>
 				<UniqueId>3</UniqueId>
-				<Title>А ты хорош!</Title>
-				<Text>Ура!?</Text>
+				<Title>Помощь?</Title>
+				<Text>Неужели всё так серьезно? Я никогда бы не подумал, что мы столкнёмся с подобным. Однако я не думаю, что наша поддержка будет существенной.</Text>
 				<Options>
 					<li>
-						<Label>Спасибо!</Label>
+						<Label>Настаивать</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>10</SkillLevel>
+								<DisableReason>Требуется общение 10</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>9</key>
+								<value>0.6</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Манипулировать</Label>
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>12</SkillLevel>
+								<DisableReason>Требуется общение 12</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Beauty</ReqTrait>
+								<DisableReason>Требуется черта красота</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>11</key>
+								<value>0.7</value>
+							</li> 
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Просить</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>8</SkillLevel>
+								<DisableReason>Требуется общение 8</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.5</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.45</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-5</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+				</Options>
+			</li>
+			<li>
+				<UniqueId>9</UniqueId>
+				<Title>Невероятно...</Title>
+				<Text>Мы проведём военные учения и подготовимся к обороне. Тем не менее я не могу дать гарантии о нашем участии в операции.</Text>
+				<Options>
+					<li>
+						<Label>Доброжелательный разговор</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>10</SkillLevel>
+								<DisableReason>Требуется общение 10</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Kind</ReqTrait>
+								<DisableReason>Требуется черта доброта</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>12</key>
+								<value>0.8</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.15</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Говорить убедительно</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>16</SkillLevel>
+								<DisableReason>Требуется общение 16</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>13</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Замаскированная угроза</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>12</SkillLevel>
+								<DisableReason>Требуется общение 12</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>AnnoyingVoice</ReqTrait>
+								<DisableReason>Требуется черта противный голос</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>14</key>
+								<value>0.8</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.15</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-5</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>11</UniqueId>
+				<Title>Ваши слова не могут меня убедить...</Title>
+				<Text>Мы готовы к отражению возможных угроз на своей территории. Я не хочу отправлять своих людей вам на помощь.</Text>
+				<Options>
+					<li>
+						<Label>Маштабные переговоры</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>16</SkillLevel>
+								<DisableReason>Требуется общение 16</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>15</key>
+								<value>0.8</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.15</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Большие уступки</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>16</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Угроза применить силу</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>12</SkillLevel>
+								<DisableReason>Требуется общение 12</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Nerves</ReqTrait>
+								<Degree>2</Degree>
+								<DisableReason>Требуется черта железные нервы</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>17</key>
+								<value>0.85</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.10</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-15</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>4</UniqueId>
+				<Title>Ваши требования невообразимы...</Title>
+				<Text>Я не готов предоставить вам свою поддержку. Ваши запросы слишком высоки.</Text>
+				<Options>
+					<li>
+						<Label>Увеличить напор</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>16</SkillLevel>
+								<DisableReason>Требуется общение 16</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Nerves</ReqTrait>
+								<Degree>2</Degree>
+								<DisableReason>Требуется черта железные нервы</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.9</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.10</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Продолжать давление</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-20</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>17</UniqueId>
+				<Title>Я не собираюсь слушать вас!</Title>
+				<Text>Наша фракция имеет серьезную военную силу. Неужели вы думаете, что сможете мной управлять?</Text>
+				<Options>
+					<li>
+						<Label>Последний разговор</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>16</SkillLevel>
+								<DisableReason>Требуется общение 16</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Психологическое давление</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>Nerves</ReqTrait>
+								<Degree>2</Degree>
+								<DisableReason>Требуется черта железные нервы</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.9</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.05</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-30</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>5</UniqueId>
+				<Title>Какой ещё долг?</Title>
+				<Text>Я не могу вспомнить ничего подобного. Но если наша фракция действительно должна вам денег, я готов выслушать вас.</Text>
+				<Options>
+					<li>
+						<Label>Продолжать диалог</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Говорить уверенно</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>PsychicSensitivity</ReqTrait>
+								<Degree>-2</Degree>
+								<DisableReason>Требуется черта психологически глухой</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.9</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.05</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-15</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>6</UniqueId>
+				<Title>О чем вы говорите?</Title>
+				<Text>Я не могу вспомнить ничего подобного. Но если наша фракция действительно должна вам денег, я готов выслушать вас.</Text>
+				<Options>
+					<li>
+						<Label>Продолжать диалог</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.7</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.25</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Говорить уверенно</Label>
+
+						<Conditions>
+							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<Skill>Social</Skill>
+								<SkillLevel>14</SkillLevel>
+								<DisableReason>Требуется общение 14</DisableReason>
+							</li>
+							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ReqTrait>PsychicSensitivity</ReqTrait>
+								<Degree>-2</Degree>
+								<DisableReason>Требуется черта психологически глухой</DisableReason>
+							</li>
+						</Conditions>
+						<Transitions> 
+							<li>
+								<key>28</key>
+								<value>0.9</value>
+							</li>
+							<li>
+								<key>27</key>
+								<value>0.05</value>
+							</li>
+						</Transitions>
+					</li>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-15</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>27</UniqueId>
+				<Title>Это возмутительно!</Title>
+				<Text>Мы ознакомлены с новой угрозой, но никогда не станем помагать вам. Отныне наша фракция разрывает дипломатические связи с вами.</Text>
+				<Options>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>-50</Amount>
+							</li>
+						</Actions>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>неудача</ResolveSignal>
+					</li>
+
+
+				</Options>
+			</li>
+			<li>
+				<UniqueId>28</UniqueId>
+				<Title>Мы согласны...</Title>
+				<Text>После того, как вы ввели на в курс дела, наша фракция всерьёз обеспокоена текущим положением вещей. Мы вышлем дипломатов и своих лучших бойцов для помощи в спецоперации!</Text>
+				<Options>
+					<li>
+						<Label>Конец связи</Label>
+						<Actions> 
+							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
+								<Amount>15</Amount>
+							</li>
+						</Actions>
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>удача</ResolveSignal>
 					</li>
+
+
 				</Options>
 			</li>
 		</Pages>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Verse;
 
 namespace DiaRim
 {
@@ -11,10 +12,17 @@ namespace DiaRim
 
         public int UniqueId;
 
+        [Unsaved]
+        [TranslationHandle]
+        public string unstranslatedId;
+
+        [MustTranslate]
         public string Title;
 
+        [MustTranslate]
         public string Text;
 
+        [MustTranslate]
         public string PageText;
 
         public List<DialogOption> Options;
@@ -29,6 +37,11 @@ namespace DiaRim
             }
 
             PageText = $"{Title}\n\n{Text}";
+        }
+
+        public void PostLoad()
+        {
+            unstranslatedId = $"page{UniqueId}";
         }
     }
 }

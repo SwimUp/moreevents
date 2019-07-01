@@ -43,6 +43,9 @@
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>
+    <Reference Include="QuestRim">
+      <HintPath>..\QuestRim\bin\Release\QuestRim.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +64,7 @@
     <Compile Include="AI\LordJob_Arson.cs" />
     <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
+    <Compile Include="CommunicationDialogDefOfLocal.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition_PawnCount.cs" />
@@ -206,6 +210,8 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Quests\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

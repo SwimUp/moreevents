@@ -28,5 +28,13 @@ namespace DiaRim.Conditions
 
             return true;
         }
+
+        public void PostLoad()
+        {
+            if(!string.IsNullOrEmpty(Childhood))
+                untranslatedId = $"{Childhood}{ConditionId}";
+            else
+                untranslatedId = $"{Adulthood}{ConditionId}";
+        }
     }
 }

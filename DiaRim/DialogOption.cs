@@ -15,7 +15,12 @@ namespace DiaRim
     {
         public DialogPage Page;
 
+        [MustTranslate]
         public string Label;
+
+        [Unsaved]
+        [TranslationHandle]
+        public string unstranslatedId;
 
         public bool ResolveTree = false;
         public string ResolveSignal;
@@ -41,6 +46,11 @@ namespace DiaRim
             Page = parent;
 
             Disabled = CheckConditions();
+        }
+
+        public void PostLoad()
+        {
+            unstranslatedId = Label;
         }
 
         public bool CheckConditions()

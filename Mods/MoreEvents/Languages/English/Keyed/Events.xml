@@ -105,10 +105,16 @@
   <PaidSuccessDoom>Ransom paid</PaidSuccessDoom>
   <RansomCompleteTitle>Ransom paid</RansomCompleteTitle>
   <RansomComplete>The enemy commander laughs loudly into the walkie-talkie. So be it, they will not blow up the planet. The laughter subsides and you see how they turn off their camp and rush off into the distance. Perhaps this is not the end.</RansomComplete>
-  <PlanetDestroyed>Suddenly, the earth begins to move under your feet, your colonists feel a strong fear. Buildings around and even mountains come into motion. After a few minutes, lava flows begin to pour out of the ground.
-
-Suddenly, a ray of unknown energy rushes into the sky and before your eyes the atmosphere of the planet begins to collapse and solar radiation burns everything around. Another minute and a blast: a bright flash, are you already in paradise?</PlanetDestroyed>
+  <PlanetDestroyed>The ears of everyone present laid from unnaturally loud sound. The roar was like a bomb explosion, and a flash of light - the birth of a star. The earth began to move, plunging into the depths of the hapless viewers, filled with insane cries. On everyone's face, a grimace of horror froze, and in their eyes the blood of the planet was reflected — lava.
+The apocalyptic machine has emitted a column of bright light, marking the end not only of your colony, but also of this world: the destroyed atmosphere took with it the hope of salvation. Waves of solar radiation swept the entire surface of a planet popping at the seams. The fragments of the mortal world will remind descendants for a long time that there is no better destroyer of the human race than man himself.
+Even the best of the writers could not describe the place of your current stay, but if he embarked on this task, which is doomed to failure, then he definitely would not use derivatives from the word “Paradise”.
+</PlanetDestroyed>
   <ArsonOut>The arsonists leave</ArsonOut>
 	
-	
+  <OpenCommsGeo>Use console</OpenCommsGeo>
+  <OpenCommsGeoNoPower>Use Console [No Power]</OpenCommsGeoNoPower>
+  <EventsCommTab>Active events</EventsCommTab>
+  <QuestsCommTab>Quests</QuestsCommTab>
+  <InteractionCommTab>Communication</InteractionCommTab>
+  
 </LanguageData>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <DoomsdayHelp.Pages.page1.Title>Earthquake</DoomsdayHelp.Pages.page1.Title>
+  
+  <DoomsdayHelp.Pages.page1.Options.MustUnite.Label>Мы должны объединиться</DoomsdayHelp.Pages.page1.Options.MustUnite.Label>
+  <DoomsdayHelp.Pages.page1.Options.EndCooms.Label>Конец связи</DoomsdayHelp.Pages.page1.Options.EndCooms.Label>
+  
+  <DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>Требуется общение 5</DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>
+   
+</LanguageData>

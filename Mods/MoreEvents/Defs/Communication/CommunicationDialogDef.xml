@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<QuestRim.CommunicationDialogDef>
+		<defName>DoomsdayEvent</defName>
+		<label>Обсуждение конца света</label>
+		<description>Что-ж, в свете последних событий о конце света я думаю стоит обсудить это с другими фракциями. По крайней мере мы можем попробовать уговорить их помочь нам в спасении земли.</description>
+	</QuestRim.CommunicationDialogDef>
+</Defs>

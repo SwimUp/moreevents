@@ -24,5 +24,10 @@ namespace DiaRim.Conditions
 
             return true;
         }
+
+        public void PostLoad()
+        {
+            untranslatedId = $"skillReq{ConditionId}";
+        }
     }
 }

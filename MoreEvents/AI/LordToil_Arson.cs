@@ -25,5 +25,16 @@ namespace MoreEvents.AI
                 lord.ownedPawns[i].mindState.duty = new PawnDuty(DutyDefOfLocal.Arson, spot);
             }
         }
+
+        public override void LordToilTick()
+        {
+            base.LordToilTick();
+
+            if(lord.ticksInToil % 5000  == 0)
+            {
+                CellFinder.TryFindRandomCellNear(spot, Map, 35, (IntVec3 val) => val.Walkable(Map) && val.DistanceToEdge(Map) > 10, out spot);
+                UpdateAllDuties();
+            }
+        }
     }
 }

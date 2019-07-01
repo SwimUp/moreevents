@@ -4,6 +4,7 @@
   <DisableClimateBomb.reportString>Обезвреживает бомбу</DisableClimateBomb.reportString>
   <LoadArmorIntoStation.reportString>Подключает броню к стенду</LoadArmorIntoStation.reportString>
   <UnLoadArmorIntoStation.reportString>Отключает броню от стенда</UnLoadArmorIntoStation.reportString>
+  <CarryReactorToStation.reportString>Переносит реактор</CarryReactorToStation.reportString>
   <FireAround.reportString>Устраивает пожар</FireAround.reportString>
   
 </LanguageData>

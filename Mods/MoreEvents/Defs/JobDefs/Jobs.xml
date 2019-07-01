@@ -24,5 +24,10 @@
 		<driverClass>MoreEvents.AI.JobDriver_FireAround</driverClass>
 		<reportString>Making a fire</reportString>
 	</JobDef>
-
+	
+	<JobDef>
+		<defName>UseGeoscape</defName>
+		<driverClass>QuestRim.JobDriver_UseGeoscape</driverClass>
+		<reportString>Carries reactor to station</reportString>
+	</JobDef>
 </Defs>

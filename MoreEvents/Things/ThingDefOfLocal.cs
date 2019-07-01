@@ -45,5 +45,7 @@ namespace MoreEvents
         public static ThingDef MeteoriteIncomingPlus;
         public static ThingDef DropPodIncomingPlus;
         public static ThingDef ActiveDropPodPlus;
+
+        public static ThingDef Geoscape;
     }
 }
