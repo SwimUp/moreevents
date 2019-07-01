@@ -182,6 +182,8 @@ namespace MapGeneratorBlueprints.MapGenerator
 
                             if (pawn.RaceProps.Animal && data.Faction == null)
                                 pawn.SetFaction(null);
+                            if (pawn.RaceProps.FleshType == FleshTypeDefOf.Insectoid)
+                                pawn.SetFaction(Faction.OfInsects);
 
                             pawn = GenSpawn.Spawn(pawn, pos, map) as Pawn;
 
