@@ -33,11 +33,6 @@ namespace QuestRim
         private CommunicationDialog currentDialog;
 
         private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
-
-        private static Texture2D PassionMinorIcon = ContentFinder<Texture2D>.Get("UI/Icons/PassionMinor");
-
-        private static Texture2D PassionMajorIcon = ContentFinder<Texture2D>.Get("UI/Icons/PassionMajor");
-
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
