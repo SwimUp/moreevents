@@ -37,7 +37,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public List<Faction> HelpingFactions = new List<Faction>();
         public readonly int MaxFactions = 3;
-        public Dictionary<Faction, List<FactionRelation>> CachedRelations;
+        public List<FactionRelation> CachedRelations = new List<FactionRelation>();
+        public List<Faction> CachedFactions = new List<Faction>();
+
         public bool SupportFormed => HelpingFactions.Count == MaxFactions;
         private string helpFactionList;
 
@@ -106,6 +108,10 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             Scribe_Values.Look(ref Timer, "Timer");
             Scribe_Values.Look(ref helpFactionList, "helpFactionList");
             Scribe_Values.Look(ref FactionSilver, "FactionSilver");
+            Scribe_Collections.Look(ref HelpingFactions, "HelpingFactions", LookMode.Reference);
+
+            Scribe_Collections.Look(ref CachedFactions, "CachedFactions", LookMode.Reference);
+            Scribe_Collections.Look(ref CachedRelations, "CachedRelations", LookMode.Deep);
         }
 
         public override string CompInspectStringExtra()

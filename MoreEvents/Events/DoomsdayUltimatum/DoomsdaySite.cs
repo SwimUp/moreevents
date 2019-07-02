@@ -129,15 +129,15 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             if (comp.CachedRelations != null)
             {
-                foreach (var cache in comp.CachedRelations)
+                for(int i = 0; i < comp.CachedRelations.Count; i++)
                 {
-                    foreach(var relation in cache.Value)
-                    {
-                        cache.Key.TrySetRelationKind(relation.other, relation.kind);
-                    }
+                    FactionRelation rel = comp.CachedRelations[i];
+                    Faction fact = comp.CachedFactions[i];
+                    fact.TrySetRelationKind(rel.other, rel.kind);
                 }
 
                 comp.CachedRelations.Clear();
+                comp.CachedFactions.Clear();
             }
 
             base.PreForceReform(mapParent);

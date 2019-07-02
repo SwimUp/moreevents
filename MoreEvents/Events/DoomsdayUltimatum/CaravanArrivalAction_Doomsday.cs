@@ -75,6 +75,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         private void GeneratePawns(DoomsdayUltimatumComp comp, ref IntVec3 enterPos, Map map)
         {
+            Log.Clear();
+
             PawnGroupMakerParms pawnGroupMakerParms = new PawnGroupMakerParms
             {
                 points = Rand.Range(600, 1500),
@@ -97,6 +99,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                     i++;
                     GenSpawn.Spawn(p, enterPos, map);
                     pawns.Add(p);
+
+                    Log.Message($"Pawn --> {p.Name} with faction --> {p.Faction}");
                 }
             }
 
@@ -110,10 +114,10 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         private void CacheAndChangeRelations(DoomsdayUltimatumComp comp)
         {
-            comp.CachedRelations = new Dictionary<Faction, List<FactionRelation>>();
+            comp.CachedRelations = new List<FactionRelation>();
+            comp.CachedFactions = new List<Faction>();
             foreach (var faction in comp.HelpingFactions)
             {
-                List<FactionRelation> relations = new List<FactionRelation>();
                 foreach (var faction2 in comp.HelpingFactions)
                 {
                     if (faction2 == faction)
@@ -126,7 +130,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                         relation.other = mainRelation.other;
                         relation.kind = mainRelation.kind;
 
-                        relations.Add(relation);
+                        comp.CachedRelations.Add(relation);
+                        comp.CachedFactions.Add(faction);
 
                         faction.TrySetRelationKind(faction2, FactionRelationKind.Ally);
                     }
@@ -139,13 +144,11 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                     relation.other = withPlayer.other;
                     relation.kind = withPlayer.kind;
 
-                    relations.Add(relation);
+                    comp.CachedRelations.Add(relation);
+                    comp.CachedFactions.Add(faction);
 
                     faction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Ally);
                 }
-
-
-                comp.CachedRelations.Add(faction, relations);
             }
         }
     }

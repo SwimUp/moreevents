@@ -149,7 +149,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Conditions>
 						<Transitions> 
 							<li>
-								<key>7</key>
+								<key>27</key>
 								<value>1</value>
 							</li>
 						</Transitions>
