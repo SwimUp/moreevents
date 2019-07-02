@@ -20,6 +20,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public DoomsdayUltimatumComp comp;
 
+        private int checkColonistTicker = 0;
+        private int checkColonistInterval = 5000;
+
         public override void SpawnSetup()
         {
             base.SpawnSetup();
@@ -30,6 +33,44 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             caravanAction2 = new CaravanArrivalAction_GiveRansom(this);
 
             comp = GetComponent<DoomsdayUltimatumComp>();
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+
+            if (HasMap)
+            {
+                checkColonistTicker--;
+                if (checkColonistTicker <= 0)
+                {
+                    checkColonistTicker = checkColonistInterval;
+
+                    CheckColonistsNow();
+                }
+            }
+        }
+
+        public void CheckColonistsNow()
+        {
+            List<Pawn> pawns = Map.mapPawns.FreeColonists.ToList();
+
+            int downedPawns = 0;
+            pawns.ForEach(delegate (Pawn p)
+            {
+                if (p.Downed || p.Dead || !p.Spawned)
+                {
+                    downedPawns++;
+                }
+            });
+
+            if (downedPawns == pawns.Count)
+            {
+                var letter = LetterMaker.MakeLetter("YourAttackWasRepelledTitle".Translate(), "YourAttackWasRepelledDesc".Translate(), LetterDefOf.NeutralEvent);
+                Find.LetterStack.ReceiveLetter(letter);
+
+                Current.Game.DeinitAndRemoveMap(Map);
+            }
         }
 
         public override void PostMapGenerate()

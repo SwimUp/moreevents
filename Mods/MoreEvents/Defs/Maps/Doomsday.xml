@@ -2131,16 +2131,6 @@
 			</li>
 			<li>
 				<key>
-					<Thing>OrbitalTargeterPowerBeam</Thing>
-					<Count>1</Count>
-				</key>
-				<value>
-					<li>(220, 0, 41)</li>
-					<li>(225, 0, 219)</li>
-				</value>
-			</li>
-			<li>
-				<key>
 					<Thing>StandingLamp</Thing>
 				</key>
 				<value>
@@ -6926,15 +6916,6 @@
 				</key>
 				<value>
 					<li>(57, 0, 63)</li>
-				</value>
-			</li>
-			<li>
-				<key>
-					<Thing>OrbitalTargeterBombardment</Thing>
-					<Count>1</Count>
-				</key>
-				<value>
-					<li>(67, 0, 63)</li>
 				</value>
 			</li>
 			<li>

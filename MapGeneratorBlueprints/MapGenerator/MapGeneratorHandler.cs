@@ -44,7 +44,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                 SetTerrain(mapGenerator.MapData, map);
             }
 
-            PlaceBuildingsAndItems(mapGenerator.MapData, map);
+            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction);
 
             if (spawnPawns)
                 SpawnPawns(mapGenerator.MapData, map, forceFaction);
@@ -207,7 +207,7 @@ namespace MapGeneratorBlueprints.MapGenerator
         }
 
 
-        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map)
+        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction)
         {
             foreach (var thing in mapObjects)
             {
@@ -217,7 +217,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                 {
                     foreach (var pos in thing.value)
                     {
-                        Thing newThing = newThing = ThingMaker.MakeThing(data.Thing, data.Stuff);
+                        Thing newThing = ThingMaker.MakeThing(data.Thing, data.Stuff);
                         var comp = newThing.TryGetComp<CompQuality>();
                         if (comp != null)
                         {
@@ -225,7 +225,20 @@ namespace MapGeneratorBlueprints.MapGenerator
                         }
                         if (newThing.def.stackLimit != 1)
                             newThing.stackCount = data.Count;
-                        GenSpawn.Spawn(newThing, pos, map, data.Rotate);
+                        newThing = GenSpawn.Spawn(newThing, pos, map, data.Rotate);
+
+                        CompGatherSpot compGathering = newThing.TryGetComp<CompGatherSpot>();
+                        if (compGathering != null)
+                            compGathering.Active = false;
+
+                        if (newThing.def.CanHaveFaction && forceFaction != null)
+                            newThing.SetFaction(forceFaction);
+
+                        CompRefuelable compRefuelable = newThing.TryGetComp<CompRefuelable>();
+                        if (compRefuelable != null)
+                        {
+                            compRefuelable.Refuel(compRefuelable.Props.fuelCapacity);
+                        }
                     }
                 }
             }

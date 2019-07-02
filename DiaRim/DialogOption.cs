@@ -117,15 +117,22 @@ namespace DiaRim
                 return;
             }
 
+            NextPage();
+        }
+
+        private void NextPage()
+        {
             float value = Rand.Value;
             foreach (var pair in Transitions.OrderBy(pair => pair.Value))
             {
                 if (value < pair.Value)
                 {
                     Dialog.GotoPage(pair.Key);
-                    break;
+                    return;
                 }
             }
+
+            Dialog.GotoPage(Transitions.MaxBy(pair => pair.Key).Key);
         }
     }
 }

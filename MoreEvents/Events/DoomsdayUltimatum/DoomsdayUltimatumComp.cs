@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using RimWorld.Planet;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using Verse;
 
@@ -37,6 +38,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         public List<Faction> HelpingFactions = new List<Faction>();
         public readonly int MaxFactions = 3;
         public Dictionary<Faction, List<FactionRelation>> CachedRelations;
+        public bool SupportFormed => HelpingFactions.Count == MaxFactions;
+        private string helpFactionList;
 
         public DoomsdayUltimatumComp()
         {
@@ -44,6 +47,23 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         }
 
         public void SetTimer(int days) => Timer = days * 60000;
+
+        public void AddFaction(Faction f)
+        {
+            if (HelpingFactions.Count == MaxFactions)
+                return;
+
+            HelpingFactions.Add(f);
+
+            if(HelpingFactions.Count == 1)
+            {
+                helpFactionList += $"{f.Name}";
+            }
+            else
+            {
+                helpFactionList += $",{f.Name}";
+            }
+        }
 
         public override void CompTick()
         {
@@ -84,16 +104,22 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             base.PostExposeData();
 
             Scribe_Values.Look(ref Timer, "Timer");
+            Scribe_Values.Look(ref helpFactionList, "helpFactionList");
             Scribe_Values.Look(ref FactionSilver, "FactionSilver");
         }
 
         public override string CompInspectStringExtra()
         {
-            string result = $"{Translator.Translate("PlanetWillBeDestroyed")}{GenDate.TicksToDays(Timer).ToString("f2")}";
-            result += $"\n{"PlayerSilverCount".Translate(PlayerSilver)}";
-            result += $"\n{"FactionGift".Translate(FactionSilver)}";
+            StringBuilder builder = new StringBuilder();
+            builder.Append($"{Translator.Translate("PlanetWillBeDestroyed")}{GenDate.TicksToDays(Timer).ToString("f2")}");
+            builder.Append($"\n{"PlayerSilverCount".Translate(PlayerSilver)}");
+            builder.Append($"\n{"FactionGift".Translate(FactionSilver)}");
 
-            return result;
+            builder.Append($"HelpingFactionsList".Translate());
+            if(helpFactionList.Length > 0)
+                builder.Append(helpFactionList);
+
+            return builder.ToString();
         }
     }
 }

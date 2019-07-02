@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapTools", "MapTools\MapToo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestRim", "QuestRim\QuestRim.csproj", "{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raid", "Raid\Raid.csproj", "{12905232-46E3-4864-9290-CA15C071434E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12905232-46E3-4864-9290-CA15C071434E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12905232-46E3-4864-9290-CA15C071434E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12905232-46E3-4864-9290-CA15C071434E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12905232-46E3-4864-9290-CA15C071434E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

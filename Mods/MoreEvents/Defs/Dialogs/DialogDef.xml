@@ -15,7 +15,7 @@ Trait: ключ traitReq  (например traitReq1)
 			<li>
 				<UniqueId>1</UniqueId>
 				<Title>Я вас приветствую.</Title>
-				<Text>Сегодня утром мы получили сообщение от некого безумца, требующего от нас денег. Мы незамедлительно ответили отказом, но нам любопытно, не слышали ли вы об этом? Разведчики нашей фракции заметили силуэты огромных сооружений и мы опасаемся...</Text>
+				<Text>Как вы уже, наверное, знаете одна из фракций намеренна уничтожить планету. Требуются незамедлительные действия.</Text>
 				<Options>
 					<li>
 						<Label>MustUnite</Label> <!-- ключ -->
@@ -46,8 +46,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Я бы хотел узнать подробности произошедшего, чтобы принять верное решение. Мы не хотим получить новых проблем...</Text>
 				<Options>
 					<li>
-						<Label>Просить о помощи</Label>
-
+						<Label>AskHelp</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -67,8 +66,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Потребовать поддержки</Label>
-
+						<Label>ReqHelp</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -88,8 +86,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Напомнить о долге</Label>
-
+						<Label>NapDolg</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -113,8 +110,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Угрожать</Label>
-
+						<Label>Threaten</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -139,8 +135,7 @@ Trait: ключ traitReq  (например traitReq1)
 
 					</li>
 					<li>
-						<Label>Грубить</Label>
-
+						<Label>Rude</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -160,7 +155,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
@@ -172,8 +167,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Неужели всё так серьезно? Я никогда бы не подумал, что мы столкнёмся с подобным. Однако я не думаю, что наша поддержка будет существенной.</Text>
 				<Options>
 					<li>
-						<Label>Настаивать</Label>
-
+						<Label>Insist</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -193,7 +187,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Манипулировать</Label>
+						<Label>Manipulir</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -217,8 +211,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Просить</Label>
-
+						<Label>Ask</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -238,7 +231,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-5</Amount>
@@ -252,11 +245,10 @@ Trait: ключ traitReq  (например traitReq1)
 			<li>
 				<UniqueId>9</UniqueId>
 				<Title>Невероятно...</Title>
-				<Text>Мы проведём военные учения и подготовимся к обороне. Тем не менее я не могу дать гарантии о нашем участии в операции.</Text>
+				<Text>Мы проведём военные учения и подготовимся к обороне. Тем не менее, я не могу дать гарантии о нашем участии в операции.</Text>
 				<Options>
 					<li>
-						<Label>Доброжелательный разговор</Label>
-
+						<Label>FriendlyConver</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -280,8 +272,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Говорить убедительно</Label>
-
+						<Label>SpeakConv</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -301,8 +292,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Замаскированная угроза</Label>
-
+						<Label>HiddenThreat</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -326,7 +316,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-5</Amount>
@@ -335,8 +325,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
@@ -345,8 +333,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Мы готовы к отражению возможных угроз на своей территории. Я не хочу отправлять своих людей вам на помощь.</Text>
 				<Options>
 					<li>
-						<Label>Маштабные переговоры</Label>
-
+						<Label>TalkBig</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -366,8 +353,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Большие уступки</Label>
-
+						<Label>BigYstyp</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -387,8 +373,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Угроза применить силу</Label>
-
+						<Label>ThreatWarn</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -413,7 +398,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-15</Amount>
@@ -422,8 +407,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
@@ -432,8 +415,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Я не готов предоставить вам свою поддержку. Ваши запросы слишком высоки.</Text>
 				<Options>
 					<li>
-						<Label>Увеличить напор</Label>
-
+						<Label>NaporUp</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -458,8 +440,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Продолжать давление</Label>
-
+						<Label>NextDavl</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -479,7 +460,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-20</Amount>
@@ -488,8 +469,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
@@ -498,8 +477,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Наша фракция имеет серьезную военную силу. Неужели вы думаете, что сможете мной управлять?</Text>
 				<Options>
 					<li>
-						<Label>Последний разговор</Label>
-
+						<Label>LastWords</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -519,8 +497,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Психологическое давление</Label>
-
+						<Label>PsyhoPress</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -545,7 +522,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-30</Amount>
@@ -554,8 +531,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
@@ -564,8 +539,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Я не могу вспомнить ничего подобного. Но если наша фракция действительно должна вам денег, я готов выслушать вас.</Text>
 				<Options>
 					<li>
-						<Label>Продолжать диалог</Label>
-
+						<Label>NextDial</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -585,8 +559,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Говорить уверенно</Label>
-
+						<Label>TalkYver</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -611,7 +584,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-15</Amount>
@@ -620,8 +593,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
@@ -630,8 +601,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Я не могу вспомнить ничего подобного. Но если наша фракция действительно должна вам денег, я готов выслушать вас.</Text>
 				<Options>
 					<li>
-						<Label>Продолжать диалог</Label>
-
+						<Label>NextDial</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -651,8 +621,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Говорить уверенно</Label>
-
+						<Label>TalkYver</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -677,7 +646,7 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-15</Amount>
@@ -686,8 +655,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
@@ -696,7 +663,7 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>Мы ознакомлены с новой угрозой, но никогда не станем помагать вам. Отныне наша фракция разрывает дипломатические связи с вами.</Text>
 				<Options>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>-50</Amount>
@@ -705,17 +672,15 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>неудача</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 			<li>
 				<UniqueId>28</UniqueId>
 				<Title>Мы согласны...</Title>
-				<Text>После того, как вы ввели на в курс дела, наша фракция всерьёз обеспокоена текущим положением вещей. Мы вышлем дипломатов и своих лучших бойцов для помощи в спецоперации!</Text>
+				<Text>После того, как вы ввели нас в курс дела, наша фракция всерьёз обеспокоена текущим положением вещей. Мы вышлем дипломатов и своих лучших бойцов для помощи в спецоперации!</Text>
 				<Options>
 					<li>
-						<Label>Конец связи</Label>
+						<Label>EndCooms</Label>
 						<Actions> 
 							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
 								<Amount>15</Amount>
@@ -724,8 +689,6 @@ Trait: ключ traitReq  (например traitReq1)
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>удача</ResolveSignal>
 					</li>
-
-
 				</Options>
 			</li>
 		</Pages>

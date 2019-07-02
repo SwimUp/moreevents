@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <OpenCommsGeo>Use console</OpenCommsGeo>
+  <OpenCommsGeoNoPower>Use console [no power]</OpenCommsGeoNoPower>
+  
+  <EventsCommTab>Active events</EventsCommTab>
+  <QuestsCommTab>Quests</QuestsCommTab>
+  <InteractionCommTab>Communication</InteractionCommTab>
+  
+  <RelatedEventCom>Related event: {0}</RelatedEventCom>
+  <FactionComm>Faction: {0}</FactionComm>
+  <NoEventComm>Related event: no</NoEventComm>
+  <NoFactionComm>Faction: no</NoFactionComm>
+  
+  <HelpingFactionsList>\nHelp: </HelpingFactionsList>
+  <SupportFullDoomsday>Help is fully staffed. You can not take more frctions.</SupportFullDoomsday>
+  <NoHelpDoomsday>Will not help</NoHelpDoomsday>
+  <UnknownDoomsdayStatus>Not known</UnknownDoomsdayStatus>
+  <HelpDoomsday>Will help</HelpDoomsday>
+  <DiscussWithOtherFactions>Discuss the event with other factions.</DiscussWithOtherFactions>
+  <DoomsdayCardLabel>End of the world</DoomsdayCardLabel>
+  <DoomsdayDesc>The {0} faction gathered to arrange a kawabanga on this planet. We can try to collect the missing amount, or maybe other factions will be able to help in the raid on their base?</DoomsdayDesc>
+  
+</LanguageData>

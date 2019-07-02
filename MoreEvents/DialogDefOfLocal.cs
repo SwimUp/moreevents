@@ -1,4 +1,4 @@
-﻿using QuestRim;
+﻿using DiaRim;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -7,11 +7,9 @@ using System.Text;
 
 namespace MoreEvents
 {
-    /*
     [DefOf]
-    public static class CommunicationDialogDefOfLocal
+    public static class DialogDefOfLocal
     {
-        public static CommunicationDialogDef DoomsdayEvent;
+        public static DialogDef DoomsdayHelp;
     }
-    */
 }

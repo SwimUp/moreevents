@@ -40,13 +40,19 @@ namespace MoreEvents.Events
             Lord lord = LordMaker.MakeNewLord(tribalFaction, lordJob, map);
             lord.numPawnsLostViolently = int.MaxValue;
 
+            int iss = 0;
             foreach (var pawn in pawns)
             {
-                IntVec3 pos = CellFinder.RandomEdgeCell(map);
-                GenSpawn.Spawn(pawn, pos, map);
-                pawn.health.AddHediff(HediffDefOfLocal.ThirstHumanMeat);
-                lord.AddPawn(pawn);
+                if (CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => !c.Roofed(map) && c.Walkable(map) && c.Standable(map), map, 0f, out IntVec3 pos))
+                {
+                    GenSpawn.Spawn(pawn, pos, map);
+                    pawn.health.AddHediff(HediffDefOfLocal.ThirstHumanMeat);
+                    lord.AddPawn(pawn);
+                    iss++;
+                }
             }
+
+            Log.Message($"{iss}");
 
             SendStandardLetter();
 

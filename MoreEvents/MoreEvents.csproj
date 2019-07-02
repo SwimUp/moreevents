@@ -40,6 +40,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="DiaRim">
+      <HintPath>..\DiaRim\bin\Release\DiaRim.dll</HintPath>
+    </Reference>
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>
@@ -64,7 +67,7 @@
     <Compile Include="AI\LordJob_Arson.cs" />
     <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
-    <Compile Include="CommunicationDialogDefOfLocal.cs" />
+    <Compile Include="Communications\CommAction_DoomsdayDialog.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition_PawnCount.cs" />
@@ -73,6 +76,7 @@
     <Compile Include="Constellations\GameCondition_Contellations.cs" />
     <Compile Include="Constellations\IncidentWorker_Constellations.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
+    <Compile Include="DialogDefOfLocal.cs" />
     <Compile Include="Events\AttackFriendlySettlement\CaravanArrivalAction_HelpFriendlySettlement.cs" />
     <Compile Include="Events\AttackFriendlySettlement\FriendlySettlement.cs" />
     <Compile Include="Events\AttackFriendlySettlement\FriendlySettlementComp.cs" />

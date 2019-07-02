@@ -1,4 +1,6 @@
-﻿using RimWorld;
+﻿using MoreEvents.Communications;
+using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -41,6 +43,17 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             site.comp = comp;
             List<Faction> factions = Find.FactionManager.AllFactionsListForReading.Where(f => !f.IsPlayer && !f.def.hidden && f != site.Faction && f.RelationKindWith(site.Faction) == FactionRelationKind.Hostile).ToList();
             comp.FactionSilver = Mathf.Clamp(factions.Count * Rand.Range(2000, 4000), 15000, 35000);
+
+            QuestsManager.Communications.AddCommunication("DoomsdayCardLabel".Translate(), "DoomsdayDesc".Translate(site.Faction.Name), site.Faction, def, new List<CommOption> {
+                new CommOption()
+                {
+                    Label = "DiscussWithOtherFactions".Translate(),
+                    Actions = new List<CommAction>
+                    {
+                        new CommAction_DoomsdayDialog(site, site.Faction)
+                    }
+                }
+            });
 
             Find.WorldObjects.Add(site);
 

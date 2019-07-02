@@ -100,7 +100,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 }
             }
 
-            LordJob lordJob = new LordJob_AssaultColony(Faction.OfPlayer, canKidnap: true, canTimeoutOrFlee: false);
+            LordJob lordJob = new LordJob_AssaultColony(Faction.OfPlayer, canKidnap: false, canTimeoutOrFlee: false, canSteal: false);
             Lord lord = LordMaker.MakeNewLord(Faction.OfPlayer, lordJob, map);
             lord.numPawnsLostViolently = int.MaxValue;
 
@@ -127,10 +127,23 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                         relation.kind = mainRelation.kind;
 
                         relations.Add(relation);
-                    }
 
-                    faction.TrySetRelationKind(faction2, FactionRelationKind.Ally);
+                        faction.TrySetRelationKind(faction2, FactionRelationKind.Ally);
+                    }
                 }
+
+                FactionRelation withPlayer = faction.RelationWith(Faction.OfPlayer);
+                if(withPlayer != null)
+                {
+                    FactionRelation relation = new FactionRelation();
+                    relation.other = withPlayer.other;
+                    relation.kind = withPlayer.kind;
+
+                    relations.Add(relation);
+
+                    faction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Ally);
+                }
+
 
                 comp.CachedRelations.Add(faction, relations);
             }

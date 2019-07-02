@@ -53,6 +53,13 @@ namespace DiaRim
             Defendant = defendant;
         }
 
+        public Dialog(DialogDef dialogDef, Pawn speaker, Pawn defendant)
+        {
+            DialogDef = dialogDef;
+            Speaker = speaker;
+            Defendant = defendant;
+        }
+
         public override void DoWindowContents(Rect inRect)
         {
             Rect rect = inRect.AtZero();

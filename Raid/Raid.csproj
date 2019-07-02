@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}</ProjectGuid>
+    <ProjectGuid>{12905232-46E3-4864-9290-CA15C071434E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuestRim</RootNamespace>
-    <AssemblyName>QuestRim</AssemblyName>
+    <RootNamespace>Raid</RootNamespace>
+    <AssemblyName>Raid</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,11 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>Libs\Assembly-CSharp.dll</HintPath>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\WorldEdit\WorldEdit\Libs\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="DiaRim">
-      <HintPath>..\DiaRim\bin\Release\DiaRim.dll</HintPath>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\MoreEvents\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,24 +44,14 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>Libs\UnityEngine.dll</HintPath>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MapGeneratorBlueprints\Libs\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
-    <Compile Include="Building_Geoscape.cs" />
-    <Compile Include="CommAction.cs" />
-    <Compile Include="CommOption.cs" />
-    <Compile Include="CommunicationDialog.cs" />
-    <Compile Include="Communications.cs" />
-    <Compile Include="GeoscapeWindow.cs" />
-    <Compile Include="JobDefOfLocal.cs" />
-    <Compile Include="JobDriver_UseGeoscape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuestDef.cs" />
-    <Compile Include="QuestsManager.cs" />
+    <Compile Include="Raid.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

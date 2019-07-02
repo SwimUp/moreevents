@@ -24,15 +24,28 @@ namespace QuestRim
             Find.WindowStack.Add(new GeoscapeWindow(this, speaker));
         }
 
-        public void AddCommunication(CommunicationDialogDef def, Faction faction = null)
+        public void AddCommunication(string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
         {
             CommunicationDialog comDialog = new CommunicationDialog
             {
-                CommDef = def,
-                Faction = faction
+                CardLabel = cardLabel,
+                Description = description,
+                Faction = faction,
+                RelatedIncident = incident,
+                Options = options
             };
 
             CommunicationDialogs.Add(comDialog);
+        }
+
+        public void AddCommunication(string cardLabel, string description, Faction faction)
+        {
+            AddCommunication(cardLabel, description, faction, null);
+        }
+
+        public void AddCommunication(string cardLabel, string description)
+        {
+            AddCommunication(cardLabel, description, null, null, null);
         }
 
         public void ExposeData()

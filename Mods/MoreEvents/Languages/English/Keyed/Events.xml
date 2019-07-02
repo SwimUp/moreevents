@@ -111,10 +111,4 @@ Even the best of the writers could not describe the place of your current stay, 
 </PlanetDestroyed>
   <ArsonOut>The arsonists leave</ArsonOut>
 	
-  <OpenCommsGeo>Use console</OpenCommsGeo>
-  <OpenCommsGeoNoPower>Use Console [No Power]</OpenCommsGeoNoPower>
-  <EventsCommTab>Active events</EventsCommTab>
-  <QuestsCommTab>Quests</QuestsCommTab>
-  <InteractionCommTab>Communication</InteractionCommTab>
-  
 </LanguageData>

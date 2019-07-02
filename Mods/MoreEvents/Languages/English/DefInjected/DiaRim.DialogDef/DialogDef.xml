@@ -1,11 +1,105 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <DoomsdayHelp.Pages.page1.Title>Earthquake</DoomsdayHelp.Pages.page1.Title>
+  <DoomsdayHelp.Pages.page1.Title>I greet you.</DoomsdayHelp.Pages.page1.Title>
+  <DoomsdayHelp.Pages.page1.Text>As you probably already know, one of the factions intends to destroy the planet. Immediate action is required.</DoomsdayHelp.Pages.page1.Text>
+  <DoomsdayHelp.Pages.page1.Options.MustUnite.Label>Suggest to unite</DoomsdayHelp.Pages.page1.Options.MustUnite.Label>
+  <DoomsdayHelp.Pages.page1.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page1.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>Social required 5</DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>
   
-  <DoomsdayHelp.Pages.page1.Options.MustUnite.Label>Мы должны объединиться</DoomsdayHelp.Pages.page1.Options.MustUnite.Label>
-  <DoomsdayHelp.Pages.page1.Options.EndCooms.Label>Конец связи</DoomsdayHelp.Pages.page1.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page2.Title>To unite?</DoomsdayHelp.Pages.page2.Title>
+  <DoomsdayHelp.Pages.page2.Text>I would like to know the details of what happened to make the right decision. We do not want to get new problems ...</DoomsdayHelp.Pages.page2.Text>
+  <DoomsdayHelp.Pages.page2.Options.AskHelp.Label>Ask for help</DoomsdayHelp.Pages.page2.Options.AskHelp.Label>
+  <DoomsdayHelp.Pages.page2.Options.ReqHelp.Label>Require support</DoomsdayHelp.Pages.page2.Options.ReqHelp.Label>
+  <DoomsdayHelp.Pages.page2.Options.NapDolg.Label>Remind of duty</DoomsdayHelp.Pages.page2.Options.NapDolg.Label>
+  <DoomsdayHelp.Pages.page2.Options.Threaten.Label>Threaten</DoomsdayHelp.Pages.page2.Options.Threaten.Label>
+  <DoomsdayHelp.Pages.page2.Options.Rude.Label>Be rude</DoomsdayHelp.Pages.page2.Options.Rude.Label>
+  <DoomsdayHelp.Pages.page2.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page2.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page2.Options.AskHelp.Conditions.skillReq1.DisableReason>Social required 8</DoomsdayHelp.Pages.page2.Options.AskHelp.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page2.Options.ReqHelp.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page2.Options.ReqHelp.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.traitReq1.DisableReason>Required trait: good memory</DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.traitReq1.DisableReason>	  
+  <DoomsdayHelp.Pages.page2.Options.Threaten.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page2.Options.Threaten.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page2.Options.Threaten.Conditions.traitReq1.DisableReason>Required trait: psychopath</DoomsdayHelp.Pages.page2.Options.Threaten.Conditions.traitReq1.DisableReason>	  
+  <DoomsdayHelp.Pages.page2.Options.Rude.Conditions.skillReq1.DisableReason>Social required 4</DoomsdayHelp.Pages.page2.Options.Rude.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page2.Options.Rude.Conditions.traitReq1.DisableReason>Required trait: rudeness</DoomsdayHelp.Pages.page2.Options.Rude.Conditions.traitReq1.DisableReason>	  
   
-  <DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>Требуется общение 5</DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>
-   
+  <DoomsdayHelp.Pages.page3.Title>To unite?</DoomsdayHelp.Pages.page3.Title>
+  <DoomsdayHelp.Pages.page3.Text>I would like to know the details of what happened to make the right decision. We do not want to get new problems ...</DoomsdayHelp.Pages.page3.Text>
+  <DoomsdayHelp.Pages.page3.Options.Insist.Label>Insist</DoomsdayHelp.Pages.page3.Options.Insist.Label>
+  <DoomsdayHelp.Pages.page3.Options.Manipulir.Label>Manipulate</DoomsdayHelp.Pages.page3.Options.Manipulir.Label>
+  <DoomsdayHelp.Pages.page3.Options.Ask.Label>Beg</DoomsdayHelp.Pages.page3.Options.Ask.Label>
+  <DoomsdayHelp.Pages.page3.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page3.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page3.Options.Insist.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page3.Options.Insist.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.traitReq1.DisableReason>Requires beaty trait</DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.traitReq1.DisableReason>	  
+  <DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>Social required 8</DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>
+  
+  <DoomsdayHelp.Pages.page9.Title>Incredible...</DoomsdayHelp.Pages.page9.Title>
+  <DoomsdayHelp.Pages.page9.Text>We will conduct military exercises and prepare for defense. However, I can not give a guarantee about our participation in the operation.</DoomsdayHelp.Pages.page9.Text>
+  <DoomsdayHelp.Pages.page9.Options.FriendlyConver.Label>Friendly conversation</DoomsdayHelp.Pages.page9.Options.FriendlyConver.Label>
+  <DoomsdayHelp.Pages.page9.Options.SpeakConv.Label>Speak convincingly</DoomsdayHelp.Pages.page9.Options.SpeakConv.Label>
+  <DoomsdayHelp.Pages.page9.Options.HiddenThreat.Label>Disguised threat</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Label>
+  <DoomsdayHelp.Pages.page9.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page9.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.traitReq1.DisableReason>Required trait: kindness</DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.traitReq1.DisableReason>	  
+  <DoomsdayHelp.Pages.page9.Options.SpeakConv.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page9.Options.SpeakConv.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.traitReq1.DisableReason>Required trait: nasty voice</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.traitReq1.DisableReason>	 
+  
+  <DoomsdayHelp.Pages.page11.Title>Your words can't convince me ...</DoomsdayHelp.Pages.page11.Title>
+  <DoomsdayHelp.Pages.page11.Text>We are ready to repel possible threats on our territory. I do not want to send my people to help you.</DoomsdayHelp.Pages.page11.Text>
+  <DoomsdayHelp.Pages.page11.Options.TalkBig.Label>Large-scale negotiations</DoomsdayHelp.Pages.page11.Options.TalkBig.Label>
+  <DoomsdayHelp.Pages.page11.Options.BigYstyp.Label>Big concessions</DoomsdayHelp.Pages.page11.Options.BigYstyp.Label>
+  <DoomsdayHelp.Pages.page11.Options.ThreatWarn.Label>The threat to use force</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Label>
+  <DoomsdayHelp.Pages.page11.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page11.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page11.Options.TalkBig.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page11.Options.TalkBig.Conditions.skillReq1.DisableReason>  
+  <DoomsdayHelp.Pages.page11.Options.BigYstyp.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page11.Options.BigYstyp.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.traitReq1.DisableReason>	 
+  
+  <DoomsdayHelp.Pages.page4.Title>Your demands are unimaginable ...</DoomsdayHelp.Pages.page4.Title>
+  <DoomsdayHelp.Pages.page4.Text>I am not ready to give you my support. Your requests are too high.</DoomsdayHelp.Pages.page4.Text>
+  <DoomsdayHelp.Pages.page4.Options.NaporUp.Label>Increase pressure</DoomsdayHelp.Pages.page4.Options.NaporUp.Label>
+  <DoomsdayHelp.Pages.page4.Options.NextDavl.Label>Keep up the pressure</DoomsdayHelp.Pages.page4.Options.NextDavl.Label>
+  <DoomsdayHelp.Pages.page4.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page4.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.traitReq1.DisableReason>	  
+  <DoomsdayHelp.Pages.page4.Options.NextDavl.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page4.Options.NextDavl.Conditions.skillReq1.DisableReason> 
+  
+  <DoomsdayHelp.Pages.page17.Title>I'm not going to listen to you!</DoomsdayHelp.Pages.page17.Title>
+  <DoomsdayHelp.Pages.page17.Text>Our faction has serious military power. Do you really think you can control me?</DoomsdayHelp.Pages.page17.Text>
+  <DoomsdayHelp.Pages.page17.Options.LastWords.Label>Последний разговор</DoomsdayHelp.Pages.page17.Options.LastWords.Label>
+  <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>Психологическое давление</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>
+  <DoomsdayHelp.Pages.page17.Options.EndCooms.Label>Конец связи</DoomsdayHelp.Pages.page17.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.traitReq1.DisableReason>	  
+  <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.skillReq1.DisableReason> 
+  
+  <DoomsdayHelp.Pages.page5.Title>What other debt?</DoomsdayHelp.Pages.page5.Title>
+  <DoomsdayHelp.Pages.page5.Text>I can't remember anything like that. But if our faction really owes you money, I am ready to listen to you.</DoomsdayHelp.Pages.page5.Text>
+  <DoomsdayHelp.Pages.page5.Options.NextDial.Label>Continue the dialogue</DoomsdayHelp.Pages.page5.Options.NextDial.Label>
+  <DoomsdayHelp.Pages.page5.Options.TalkYver.Label>Speak confidently</DoomsdayHelp.Pages.page5.Options.TalkYver.Label>
+  <DoomsdayHelp.Pages.page5.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page5.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page5.Options.NextDial.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page5.Options.NextDial.Conditions.skillReq1.DisableReason>  
+  <DoomsdayHelp.Pages.page5.Options.TalkYver.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page5.Options.TalkYver.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page5.Options.TalkYver.Conditions.traitReq1.DisableReason>Required trait: psychologically deaf</DoomsdayHelp.Pages.page5.Options.TalkYver.Conditions.traitReq1.DisableReason>	 
+  
+  <DoomsdayHelp.Pages.page6.Title>What other debt?</DoomsdayHelp.Pages.page6.Title>
+  <DoomsdayHelp.Pages.page6.Text>I can't remember anything like that. But if our faction really owes you money, I am ready to listen to you.</DoomsdayHelp.Pages.page6.Text>
+  <DoomsdayHelp.Pages.page6.Options.NextDial.Label>Continue the dialogue</DoomsdayHelp.Pages.page6.Options.NextDial.Label>
+  <DoomsdayHelp.Pages.page6.Options.TalkYver.Label>Speak confidently</DoomsdayHelp.Pages.page6.Options.TalkYver.Label>
+  <DoomsdayHelp.Pages.page6.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page6.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page6.Options.NextDial.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page6.Options.NextDial.Conditions.skillReq1.DisableReason>  
+  <DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.skillReq1.DisableReason>
+  <DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.traitReq1.DisableReason>Required trait: psychologically deaf</DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.traitReq1.DisableReason>	 
+  
+  <DoomsdayHelp.Pages.page27.Title>It's outrageous!</DoomsdayHelp.Pages.page27.Title>
+  <DoomsdayHelp.Pages.page27.Text>We are familiar with the new threat, but we will never help you. From now on, our faction breaks diplomatic ties with you.</DoomsdayHelp.Pages.page27.Text>
+  <DoomsdayHelp.Pages.page27.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page27.Options.EndCooms.Label>
+  
+  <DoomsdayHelp.Pages.page28.Title>We agree</DoomsdayHelp.Pages.page28.Title>
+  <DoomsdayHelp.Pages.page28.Text>After you have brought us up to date, our faction is seriously concerned about the current state of affairs. We will send diplomats and our best fighters to assist in the special operation!</DoomsdayHelp.Pages.page28.Text>
+  <DoomsdayHelp.Pages.page28.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page28.Options.EndCooms.Label>
+  
 </LanguageData>

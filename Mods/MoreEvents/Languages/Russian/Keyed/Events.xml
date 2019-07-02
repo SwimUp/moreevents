@@ -98,7 +98,7 @@
   <ArcReactorCore>Дуговой</ArcReactorCore>
   
   <WeaponDeactivated>Оружие судного дня до сих пор активно</WeaponDeactivated>
-  <PlanetWillBeDestroyed>Планета будет уничтожена через (дней): </PlanetWillBeDestroyed>
+  <PlanetWillBeDestroyed>Планета будет уничтожена через (дней):</PlanetWillBeDestroyed>
   <PlayerSilverCount>Серебро игрока: {0}</PlayerSilverCount>
   <FactionGift>Серебро от фракций: {0}</FactionGift>
   <GiveRansom>Заплатить выкуп</GiveRansom>
@@ -110,12 +110,5 @@
 Апокалиптическая машина испустила столб яркого света, знаменующего конец не только вашей колонии, но и этого мира: уничтоженная атмосфера унесла с собой надежду на спасение. Волны солнечной радиации захлестнули всю поверхность трещащей по швам планеты. Осколки бренного мира еще долго будут напоминать потомкам, что нет лучшего уничтожителя рода человеческого, чем сам человек.
 Место вашего нынешнего пребывания не смог бы описать даже лучший из писателей, но если бы он принялся за эту обреченную на провал задачу, то он точно не использовал бы производные от слова «Рай».</PlanetDestroyed>
   <ArsonOut>Поджигатели уходят</ArsonOut>
-
-  <OpenCommsGeo>Использовать консоль</OpenCommsGeo>
-  <OpenCommsGeoNoPower>Использовать консоль [Нет питания]</OpenCommsGeoNoPower>
-  
-  <EventsCommTab>Действующие события</EventsCommTab>
-  <QuestsCommTab>Задания</QuestsCommTab>
-  <InteractionCommTab>Общение</InteractionCommTab>
   
 </LanguageData>

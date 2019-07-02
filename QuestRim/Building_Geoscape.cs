@@ -1,4 +1,6 @@
-﻿using RimWorld;
+﻿using DiaRim;
+using QuestRim.Actions;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +29,6 @@ namespace QuestRim
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-
-            QuestsManager.Communications.AddCommunication(CommunicationDialogDefOfLocal.DoomsdayEvent, null);
 
             power = GetComp<CompPowerTrader>();
         }

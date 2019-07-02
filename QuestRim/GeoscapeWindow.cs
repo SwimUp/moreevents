@@ -8,10 +8,12 @@ using Verse;
 
 namespace QuestRim
 {
+    [StaticConstructorOnStartup]
     public class GeoscapeWindow : Window
     {
         private Vector2 commSlider = Vector2.zero;
         private Vector2 commInfoSlider = Vector2.zero;
+        private Vector2 commButtonsSlider = Vector2.zero;
 
         private enum Tab
         {
@@ -29,18 +31,21 @@ namespace QuestRim
         private List<CommunicationDialog> communicationsDialogs => communications.CommunicationDialogs;
         private Communications communications;
         private Pawn speaker;
+        private Pawn defendant;
         private int commDialogSliderLength = 0;
         private CommunicationDialog currentDialog;
 
         private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
+        private static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
+        private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
             this.communications = communications;
             this.speaker = speaker;
 
-            commDialogSliderLength = communicationsDialogs.Count * 70;
+            commDialogSliderLength = communicationsDialogs.Count * 78;
 
             forcePause = true;
         }
@@ -88,36 +93,72 @@ namespace QuestRim
         {
             Rect rect1 = inRect;
             Rect rect2 = inRect;
-            rect1.xMax = 325;
+            rect1.xMax = 328;
             rect1.height = 500;
+
+            GUI.color = MenuSectionBGBorderColor;
             Widgets.DrawBox(rect1);
+            GUI.color = Color.white;
+
             Rect scrollVertRectFact = new Rect(0, 0, rect1.x, commDialogSliderLength);
-            int y = 0;
+            int y = 10;
             Widgets.BeginScrollView(rect1, ref commSlider, scrollVertRectFact, false);
-            GUI.BeginGroup(rect1);
             foreach(var comDialog in communicationsDialogs)
             {
                 DrawCommCard(rect1, ref y, comDialog);
             }
-            GUI.EndGroup();
             Widgets.EndScrollView();
 
             DrawPawnCard();
 
             Text.Font = GameFont.Small;
-            Rect rect3 = new Rect(335, rect2.yMin + 20, 610, rect2.yMax);
-            GUI.BeginGroup(rect3);
-            if(currentDialog != null)
+            Rect rect3 = new Rect(340, rect2.yMin + 20, 610, rect2.yMax);
+            DrawDialogCard(rect3);
+        }
+
+        private void DrawDialogCard(Rect inRect)
+        {
+            GUI.color = MenuSectionBGBorderColor;
+            Widgets.DrawBox(new Rect(327, 534, 640, 150));
+            GUI.color = Color.white;
+
+            if (currentDialog != null)
             {
-                Widgets.LabelScrollable(new Rect(0, 0, 610, rect3.yMax), currentDialog.CommDef.description, ref commInfoSlider, false, false);
+                if (currentDialog.Options != null)
+                {
+                    int sliderLength = currentDialog.Options.Count * 40;
+                    Rect buttonRect = new Rect(0, 0, 622, sliderLength);
+                    Rect scrollVertRectFact = new Rect(0, 0, inRect.x, sliderLength);
+                    Widgets.BeginScrollView(new Rect(335, 540, 622, 125), ref commButtonsSlider, scrollVertRectFact, false);
+                    DoButtons(buttonRect);
+                    Widgets.EndScrollView();
+                }
+
+                Widgets.LabelScrollable(new Rect(340, inRect.y, 610, 465), currentDialog.Description, ref commInfoSlider, false, false);
             }
-            GUI.EndGroup();
+        }
+
+        private void DoButtons(Rect rect)
+        {
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(rect);
+            foreach(var option in currentDialog.Options)
+            {
+                if(listing.ButtonText(option.Label))
+                {
+                    foreach(var action in option.Actions)
+                    {
+                        action.DoAction(currentDialog, speaker, defendant);
+                    }
+                }
+            }
+            listing.End();
         }
 
         private void DrawPawnCard()
         {
             GUI.DrawTexture(new Rect(0, 530, 100, 140), PortraitsCache.Get(speaker, new Vector2(100, 140)));
-            Widgets.Label(new Rect(100, 550, 100, 30), speaker.Name.ToStringFull);
+            Widgets.Label(new Rect(100, 550, 180, 30), speaker.Name.ToStringFull);
             Widgets.DrawLineHorizontal(100, 570, 210);
 
             Text.Font = GameFont.Tiny;
@@ -207,13 +248,23 @@ namespace QuestRim
         private void DrawCommCard(Rect rect, ref int y, CommunicationDialog dialog)
         {
             Rect r = new Rect(10, y, rect.width - 20, 60);
-            Widgets.Label(r, dialog.CommDef.label);
+            Widgets.Label(r, dialog.CardLabel);
+            Text.Font = GameFont.Tiny;
+            Rect rect2 = new Rect(10, y + 22, rect.width - 20, 20);
+            Widgets.Label(rect2, dialog.RelatedIncident != null ? "RelatedEventCom".Translate(dialog.RelatedIncident.LabelCap) : "NoEventComm".Translate());
+            rect2.y += 20;
+            Widgets.Label(rect2, dialog.Faction != null ? "FactionComm".Translate(dialog.Faction.Name) : "NoFactionComm".Translate());
+            Text.Font = GameFont.Small;
             Widgets.DrawHighlightIfMouseover(r);
+
+            GUI.color = CommCardBGColor;
+            Widgets.DrawHighlight(r);
+            GUI.color = Color.white;
             if(Widgets.ButtonInvisible(r))
             {
                 currentDialog = dialog;
             }
-            y += 75;
+            y += 77;
         }
 
         private void QuestsPage(Rect inRect)
