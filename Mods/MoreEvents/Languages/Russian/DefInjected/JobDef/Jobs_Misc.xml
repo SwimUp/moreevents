@@ -6,5 +6,7 @@
   <UnLoadArmorIntoStation.reportString>Отключает броню от стенда</UnLoadArmorIntoStation.reportString>
   <CarryReactorToStation.reportString>Переносит реактор</CarryReactorToStation.reportString>
   <FireAround.reportString>Устраивает пожар</FireAround.reportString>
+  <DeEnergizeDoomsdayBomb.reportString>Деактивирует энергетическое поле оружия</DeEnergizeDoomsdayBomb.reportString>
+  <DisableSecuritySystems.reportString>Отключает системы защиты</DisableSecuritySystems.reportString>
   
 </LanguageData>

@@ -368,4 +368,42 @@
     </comps>
   </ThingDef>
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>DoomsdayUltimateBomb</defName>
+    <label>Doomsday Weapon</label>
+    <description>The Doomsday Weapon is a weapon capable of destroying the planet to its foundation, destroying its atmosphere and splitting its firmament into small fragments. 
+	
+This machine was produced on the basis of mechanoid technologies and from extremely expensive and rare materials: plastal and silver were used for plating, and gold and advanced components for internal filling of weapons. The presence of an advanced computer communication system allows you to immediately make a destructive attack for all living things, while in space or on another planet.
+
+Having got into the wrong hands, the Doomsday weapon will bring many troubles related to oxygen starvation, solar radiation, numerous mutations and many other extremely remarkable events.</description>
+	<thingClass>MoreEvents.Things.Building_DoomsdayGun</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/DoomsdayBuilding/build</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(21, 21)</drawSize>
+    </graphicData>
+	<useHitPoints>true</useHitPoints>
+    <building>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+    </building>
+    <blockWind>true</blockWind>
+    <passability>Impassable</passability>
+    <altitudeLayer>Building</altitudeLayer>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <pathCost>200</pathCost>
+    <fillPercent>1</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>true</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <statBases>
+	  <MaxHitPoints>6000</MaxHitPoints>
+      <Mass>50000</Mass>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(18, 18)</size>
+    <tradeability>None</tradeability>
+  </ThingDef>
+
 </Defs>

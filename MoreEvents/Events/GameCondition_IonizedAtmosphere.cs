@@ -23,6 +23,12 @@ namespace MoreEvents.Events
 
         public override void Init()
         {
+            if (!settings.Active)
+            {
+                gameConditionManager.ActiveConditions.Remove(this);
+                return;
+            }
+
             base.Init();
             cycle = Rand.Range(50000, 140000);
             cycleChance = Rand.Range(0.3f, 0.45f);

@@ -96,7 +96,11 @@
     <Compile Include="Events\DoomsdayUltimatum\DoomsdaySite.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp_Main.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\Doomsday_SecurityTerminal.cs" />
     <Compile Include="Events\DoomsdayUltimatum\IncidentWorker_DoomsdayUltimatum.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\JobDriver_DisableSecurityDoomsday.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\JobDriver_DeEnergizeDoomsdayBomb.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Help.cs" />
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\HasExitCellsComp.cs" />
@@ -161,6 +165,7 @@
     <Compile Include="Hediffs\HediffComp_FibroTick.cs" />
     <Compile Include="Hediffs\HediffDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
+    <Compile Include="IncidentWorker_MakeGameCondition.cs" />
     <Compile Include="InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapDefOfLocal.cs" />
@@ -178,9 +183,11 @@
     <Compile Include="RaidStrategyDefOfLocal.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Sounds\SoundDefOfLocal.cs" />
+    <Compile Include="TerminalDefOfLocal.cs" />
     <Compile Include="ThingDefGenerator_BuildingsCustom.cs" />
     <Compile Include="Things\ActiveDropPodPlus.cs" />
     <Compile Include="Things\Building_ClimateBomb.cs" />
+    <Compile Include="Things\Doomsday\Building_DoomsdayGun.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />

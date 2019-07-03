@@ -30,4 +30,17 @@
 		<driverClass>QuestRim.JobDriver_UseGeoscape</driverClass>
 		<reportString>Carries reactor to station</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>DeEnergizeDoomsdayBomb</defName>
+		<driverClass>MoreEvents.Events.DoomsdayUltimatum.JobDriver_DeEnergizeDoomsdayBomb</driverClass>
+		<reportString>Deactivates the energy field of weapons</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>DisableSecuritySystems</defName>
+		<driverClass>MoreEvents.Events.DoomsdayUltimatum.JobDriver_DisableSecurityDoomsday</driverClass>
+		<reportString>Disables security systems</reportString>
+	</JobDef>
+
 </Defs>

@@ -22,6 +22,9 @@ namespace MoreEvents.Events.ClimateBomb
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             int spawnPoint = GetPlace(Current.Game.AnyPlayerHomeMap);
 
             ClimateBombSite site = (ClimateBombSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.ClimateBombSite);

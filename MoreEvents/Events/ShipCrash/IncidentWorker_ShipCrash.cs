@@ -29,6 +29,9 @@ namespace MoreEvents.Events.ShipCrash
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             List<int> tiles = new List<int>();
             for (int i = 0; i < Find.WorldGrid.TilesCount; i++)
             {

@@ -29,6 +29,9 @@ namespace MoreEvents.Events.AttackFriendlySettlement
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Faction faction = GetFriendlyFaction();
             Faction faction2 = GetEnemyFaction(faction);
             Settlement factionBase = Find.WorldObjects.Settlements.Where(x => x.Faction == faction).RandomElement();

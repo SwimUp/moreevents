@@ -18,5 +18,8 @@ namespace MoreEvents
         public static JobDef CarryReactorToStation;
 
         public static JobDef FireAround;
+
+        public static JobDef DeEnergizeDoomsdayBomb;
+        public static JobDef DisableSecuritySystems;
     }
 }

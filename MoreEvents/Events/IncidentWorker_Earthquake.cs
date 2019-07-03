@@ -30,5 +30,13 @@ namespace MoreEvents.Events
 
             return true;
         }
+
+        protected override bool TryExecuteWorker(IncidentParms parms)
+        {
+            if (!settings.Active)
+                return false;
+
+            return true;
+        }
     }
 }

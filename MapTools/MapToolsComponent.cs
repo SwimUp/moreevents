@@ -30,7 +30,15 @@ namespace MapTools
                 Find.WindowStack.Add(new TerrainToolWindow());
 
             if (Input.GetKeyDown(KeyCode.Mouse2))
-                Log.Message($"Cell --> {UI.MouseCell()}");
+            {
+                var cell = UI.MouseCell();
+                Log.Message($"Cell --> {cell}");
+                var list = cell.GetThingList(Find.CurrentMap);
+                if(list != null)
+                {
+                    list.ForEach(x => Log.Message($"Item {x} --> {x.Position}"));
+                }
+            }
         }
     }
 }

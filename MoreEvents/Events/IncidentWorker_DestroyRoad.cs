@@ -39,6 +39,9 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             List<Tile> roadsTiles = new List<Tile>();
             foreach(var t in Find.WorldGrid.tiles)
             {

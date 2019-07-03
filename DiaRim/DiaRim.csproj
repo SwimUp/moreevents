@@ -58,7 +58,6 @@
     <Compile Include="DialogOption.cs" />
     <Compile Include="DialogPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

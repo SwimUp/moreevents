@@ -34,8 +34,8 @@
       <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
     </statBases>
     <techLevel>Spacer</techLevel>
-    <menuHidden>True</menuHidden>
-    <destroyOnDrop>true</destroyOnDrop>
+    <menuHidden>false</menuHidden>
+    <destroyOnDrop>false</destroyOnDrop>
     <tradeability>None</tradeability>
     <weaponTags>
       <li>AvtomatronGunMedium</li>

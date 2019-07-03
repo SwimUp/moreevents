@@ -41,7 +41,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         public List<Faction> CachedFactions = new List<Faction>();
 
         public bool SupportFormed => HelpingFactions.Count == MaxFactions;
-        private string helpFactionList;
+        private string helpFactionList = string.Empty;
 
         public DoomsdayUltimatumComp()
         {

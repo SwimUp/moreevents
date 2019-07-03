@@ -12,7 +12,7 @@
   <NoEventComm>Связанное событие: нет</NoEventComm>
   <NoFactionComm>Фракция: нет</NoFactionComm>
   
-  <HelpingFactionsList>\nПомощь: </HelpingFactionsList>
+  <HelpingFactionsList>\nПомощь:</HelpingFactionsList>
   <SupportFullDoomsday>Помощь полностью укомплектована. Вы не можете взять больше фракций.</SupportFullDoomsday>
   <NoHelpDoomsday>Не помогут</NoHelpDoomsday>
   <UnknownDoomsdayStatus>Не известно</UnknownDoomsdayStatus>

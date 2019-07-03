@@ -100,7 +100,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                     GenSpawn.Spawn(p, enterPos, map);
                     pawns.Add(p);
 
-                    Log.Message($"Pawn --> {p.Name} with faction --> {p.Faction}");
+                    Log.Message($"Pawn --> {p.Name} --> Faction --> {p.Faction}");
                 }
             }
 

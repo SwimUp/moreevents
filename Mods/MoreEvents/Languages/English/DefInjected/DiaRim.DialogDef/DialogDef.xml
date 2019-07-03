@@ -2,13 +2,13 @@
 <LanguageData>
 
   <DoomsdayHelp.Pages.page1.Title>I greet you.</DoomsdayHelp.Pages.page1.Title>
-  <DoomsdayHelp.Pages.page1.Text>As you probably already know, one of the factions intends to destroy the planet. Immediate action is required.</DoomsdayHelp.Pages.page1.Text>
+  <DoomsdayHelp.Pages.page1.Text>- As you probably already know, one of the factions intends to destroy the planet. Immediate action is required.</DoomsdayHelp.Pages.page1.Text>
   <DoomsdayHelp.Pages.page1.Options.MustUnite.Label>Suggest to unite</DoomsdayHelp.Pages.page1.Options.MustUnite.Label>
   <DoomsdayHelp.Pages.page1.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page1.Options.EndCooms.Label>
   <DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>Social required 5</DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>
   
   <DoomsdayHelp.Pages.page2.Title>To unite?</DoomsdayHelp.Pages.page2.Title>
-  <DoomsdayHelp.Pages.page2.Text>I would like to know the details of what happened to make the right decision. We do not want to get new problems ...</DoomsdayHelp.Pages.page2.Text>
+  <DoomsdayHelp.Pages.page2.Text>*He thought, and then answered with interest:* \n- We do not want trouble, so tell me more.</DoomsdayHelp.Pages.page2.Text>
   <DoomsdayHelp.Pages.page2.Options.AskHelp.Label>Ask for help</DoomsdayHelp.Pages.page2.Options.AskHelp.Label>
   <DoomsdayHelp.Pages.page2.Options.ReqHelp.Label>Require support</DoomsdayHelp.Pages.page2.Options.ReqHelp.Label>
   <DoomsdayHelp.Pages.page2.Options.NapDolg.Label>Remind of duty</DoomsdayHelp.Pages.page2.Options.NapDolg.Label>
@@ -25,7 +25,7 @@
   <DoomsdayHelp.Pages.page2.Options.Rude.Conditions.traitReq1.DisableReason>Required trait: rudeness</DoomsdayHelp.Pages.page2.Options.Rude.Conditions.traitReq1.DisableReason>	  
   
   <DoomsdayHelp.Pages.page3.Title>To unite?</DoomsdayHelp.Pages.page3.Title>
-  <DoomsdayHelp.Pages.page3.Text>I would like to know the details of what happened to make the right decision. We do not want to get new problems ...</DoomsdayHelp.Pages.page3.Text>
+  <DoomsdayHelp.Pages.page3.Text>- Is everything so bad? \n*in his intonation mingled fear and despair. It seemed as if he would burst into tears and scream* \n- We cannot help. Our strength is not enough. Sorry...</DoomsdayHelp.Pages.page3.Text>
   <DoomsdayHelp.Pages.page3.Options.Insist.Label>Insist</DoomsdayHelp.Pages.page3.Options.Insist.Label>
   <DoomsdayHelp.Pages.page3.Options.Manipulir.Label>Manipulate</DoomsdayHelp.Pages.page3.Options.Manipulir.Label>
   <DoomsdayHelp.Pages.page3.Options.Ask.Label>Beg</DoomsdayHelp.Pages.page3.Options.Ask.Label>
@@ -36,7 +36,7 @@
   <DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>Social required 8</DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>
   
   <DoomsdayHelp.Pages.page9.Title>Incredible...</DoomsdayHelp.Pages.page9.Title>
-  <DoomsdayHelp.Pages.page9.Text>We will conduct military exercises and prepare for defense. However, I can not give a guarantee about our participation in the operation.</DoomsdayHelp.Pages.page9.Text>
+  <DoomsdayHelp.Pages.page9.Text>- It's really scary. \n*having silenced and sighed heavily, he first took a deep breath and then continued:* \n- I will tell my people to prepare, however, our faction is going through difficult times. I can not be sure that we can come to the rescue.</DoomsdayHelp.Pages.page9.Text>
   <DoomsdayHelp.Pages.page9.Options.FriendlyConver.Label>Friendly conversation</DoomsdayHelp.Pages.page9.Options.FriendlyConver.Label>
   <DoomsdayHelp.Pages.page9.Options.SpeakConv.Label>Speak convincingly</DoomsdayHelp.Pages.page9.Options.SpeakConv.Label>
   <DoomsdayHelp.Pages.page9.Options.HiddenThreat.Label>Disguised threat</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Label>
@@ -48,7 +48,7 @@
   <DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.traitReq1.DisableReason>Required trait: nasty voice</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.traitReq1.DisableReason>	 
   
   <DoomsdayHelp.Pages.page11.Title>Your words can't convince me ...</DoomsdayHelp.Pages.page11.Title>
-  <DoomsdayHelp.Pages.page11.Text>We are ready to repel possible threats on our territory. I do not want to send my people to help you.</DoomsdayHelp.Pages.page11.Text>
+  <DoomsdayHelp.Pages.page11.Text>- No, no, do not think, the threat is really dangerous, but I see no reason to send my people to help you. We are able to protect ourselves, and more is not necessary.</DoomsdayHelp.Pages.page11.Text>
   <DoomsdayHelp.Pages.page11.Options.TalkBig.Label>Large-scale negotiations</DoomsdayHelp.Pages.page11.Options.TalkBig.Label>
   <DoomsdayHelp.Pages.page11.Options.BigYstyp.Label>Big concessions</DoomsdayHelp.Pages.page11.Options.BigYstyp.Label>
   <DoomsdayHelp.Pages.page11.Options.ThreatWarn.Label>The threat to use force</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Label>
@@ -59,7 +59,7 @@
   <DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.traitReq1.DisableReason>	 
   
   <DoomsdayHelp.Pages.page4.Title>Your demands are unimaginable ...</DoomsdayHelp.Pages.page4.Title>
-  <DoomsdayHelp.Pages.page4.Text>I am not ready to give you my support. Your requests are too high.</DoomsdayHelp.Pages.page4.Text>
+  <DoomsdayHelp.Pages.page4.Text>What they are going to do is terrible, definitely, but ... \n*he was silent for a few seconds, and then with sad intonation he continued to say:*\n- the risk is too great. We can not help.</DoomsdayHelp.Pages.page4.Text>
   <DoomsdayHelp.Pages.page4.Options.NaporUp.Label>Increase pressure</DoomsdayHelp.Pages.page4.Options.NaporUp.Label>
   <DoomsdayHelp.Pages.page4.Options.NextDavl.Label>Keep up the pressure</DoomsdayHelp.Pages.page4.Options.NextDavl.Label>
   <DoomsdayHelp.Pages.page4.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page4.Options.EndCooms.Label>
@@ -68,16 +68,16 @@
   <DoomsdayHelp.Pages.page4.Options.NextDavl.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page4.Options.NextDavl.Conditions.skillReq1.DisableReason> 
   
   <DoomsdayHelp.Pages.page17.Title>I'm not going to listen to you!</DoomsdayHelp.Pages.page17.Title>
-  <DoomsdayHelp.Pages.page17.Text>Our faction has serious military power. Do you really think you can control me?</DoomsdayHelp.Pages.page17.Text>
-  <DoomsdayHelp.Pages.page17.Options.LastWords.Label>Последний разговор</DoomsdayHelp.Pages.page17.Options.LastWords.Label>
-  <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>Психологическое давление</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>
-  <DoomsdayHelp.Pages.page17.Options.EndCooms.Label>Конец связи</DoomsdayHelp.Pages.page17.Options.EndCooms.Label>
+  <DoomsdayHelp.Pages.page17.Text>*having listened to you, he laughed loudly, and then rudely asked:*\n- Do you hear yourself? Our military strength is much greater than yours. Forget about your stupid idea.</DoomsdayHelp.Pages.page17.Text>
+  <DoomsdayHelp.Pages.page17.Options.LastWords.Label>Last talk</DoomsdayHelp.Pages.page17.Options.LastWords.Label>
+  <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>Psychological pressure</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>
+  <DoomsdayHelp.Pages.page17.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page17.Options.EndCooms.Label>
   <DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>
   <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.traitReq1.DisableReason>	  
   <DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.skillReq1.DisableReason> 
   
   <DoomsdayHelp.Pages.page5.Title>What other debt?</DoomsdayHelp.Pages.page5.Title>
-  <DoomsdayHelp.Pages.page5.Text>I can't remember anything like that. But if our faction really owes you money, I am ready to listen to you.</DoomsdayHelp.Pages.page5.Text>
+  <DoomsdayHelp.Pages.page5.Text>I don't remember anything like that.” Although, if you say ... I will listen to you.</DoomsdayHelp.Pages.page5.Text>
   <DoomsdayHelp.Pages.page5.Options.NextDial.Label>Continue the dialogue</DoomsdayHelp.Pages.page5.Options.NextDial.Label>
   <DoomsdayHelp.Pages.page5.Options.TalkYver.Label>Speak confidently</DoomsdayHelp.Pages.page5.Options.TalkYver.Label>
   <DoomsdayHelp.Pages.page5.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page5.Options.EndCooms.Label>
@@ -86,7 +86,8 @@
   <DoomsdayHelp.Pages.page5.Options.TalkYver.Conditions.traitReq1.DisableReason>Required trait: psychologically deaf</DoomsdayHelp.Pages.page5.Options.TalkYver.Conditions.traitReq1.DisableReason>	 
   
   <DoomsdayHelp.Pages.page6.Title>What other debt?</DoomsdayHelp.Pages.page6.Title>
-  <DoomsdayHelp.Pages.page6.Text>I can't remember anything like that. But if our faction really owes you money, I am ready to listen to you.</DoomsdayHelp.Pages.page6.Text>
+  <DoomsdayHelp.Pages.page6.Text>- Should money?\n*he thinks for a minute, and then hesitantly answers:*\n- I don’t remember this, but if you say so, then I’m ready to listen.
+</DoomsdayHelp.Pages.page6.Text>
   <DoomsdayHelp.Pages.page6.Options.NextDial.Label>Continue the dialogue</DoomsdayHelp.Pages.page6.Options.NextDial.Label>
   <DoomsdayHelp.Pages.page6.Options.TalkYver.Label>Speak confidently</DoomsdayHelp.Pages.page6.Options.TalkYver.Label>
   <DoomsdayHelp.Pages.page6.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page6.Options.EndCooms.Label>
@@ -95,11 +96,11 @@
   <DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.traitReq1.DisableReason>Required trait: psychologically deaf</DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.traitReq1.DisableReason>	 
   
   <DoomsdayHelp.Pages.page27.Title>It's outrageous!</DoomsdayHelp.Pages.page27.Title>
-  <DoomsdayHelp.Pages.page27.Text>We are familiar with the new threat, but we will never help you. From now on, our faction breaks diplomatic ties with you.</DoomsdayHelp.Pages.page27.Text>
+  <DoomsdayHelp.Pages.page27.Text>*Reluctantly listening to you, he yawned several times, and when you finished, he laughed softly and answered:*\n- We are familiar with the threat, but helping you? Funny Blind penguins will be better allies than yours. Forget about this communication channel.</DoomsdayHelp.Pages.page27.Text>
   <DoomsdayHelp.Pages.page27.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page27.Options.EndCooms.Label>
   
   <DoomsdayHelp.Pages.page28.Title>We agree</DoomsdayHelp.Pages.page28.Title>
-  <DoomsdayHelp.Pages.page28.Text>After you have brought us up to date, our faction is seriously concerned about the current state of affairs. We will send diplomats and our best fighters to assist in the special operation!</DoomsdayHelp.Pages.page28.Text>
+  <DoomsdayHelp.Pages.page28.Text>*After hearing from you for a few seconds, he fell silent, and when he tried to speak it seemed as if he had completely forgotten how to do it. His breathing increased, and the words were terribly slow:*\n- Destroy ... the whole planet? We want to help. We will help. Please tell me what to do and our best fighters will do it.</DoomsdayHelp.Pages.page28.Text>
   <DoomsdayHelp.Pages.page28.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page28.Options.EndCooms.Label>
   
 </LanguageData>

@@ -28,6 +28,9 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = parms.target as Map;
             List<Pawn> pawns = map.mapPawns.FreeColonists.ToList();
             int num = Utility.GiveHediffToRandomColinists(map, pawns, HediffDefOfLocal.Fibrodysplasia, 1, 1);

@@ -22,6 +22,9 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
 
             IntVec3 intVec;

@@ -61,6 +61,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestDef.cs" />
     <Compile Include="QuestsManager.cs" />
+    <Compile Include="Terminal.cs" />
+    <Compile Include="TerminalCommand.cs" />
+    <Compile Include="TerminalCommand_Clear.cs" />
+    <Compile Include="TerminalDef.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

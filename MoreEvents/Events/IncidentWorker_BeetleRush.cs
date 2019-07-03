@@ -25,6 +25,9 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = parms.target as Map;
             if (TryFindCell(out IntVec3 result, map))
             {

@@ -114,4 +114,10 @@ You can start collecting silver together with other factions or organize an assa
   <Arsonists_Title>Arsonists</Arsonists_Title>
   <Arsonists_Desc>Several fighters of the enemy faction have arrived to burn your forest.</Arsonists_Desc>
   
+  <LeanAtmosphere_Title>Lean atmosphere</LeanAtmosphere_Title>
+  <LeanAtmosphere_Desc>Lean atmosphere</LeanAtmosphere_Desc>
+  
+  <NoSun_Title>No sun</NoSun_Title>
+  <NoSun_Desc>No sun</NoSun_Desc>
+  
 </LanguageData>

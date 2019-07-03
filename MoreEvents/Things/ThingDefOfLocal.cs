@@ -47,5 +47,6 @@ namespace MoreEvents
         public static ThingDef ActiveDropPodPlus;
 
         public static ThingDef Geoscape;
+        public static ThingDef DoomsdayUltimateBomb;
     }
 }

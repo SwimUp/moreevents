@@ -77,12 +77,30 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             base.PostMapGenerate();
 
-            foreach(var cell in Map.AllCells)
+            foreach (var cell in Map.AllCells)
             {
                 Map.terrainGrid.SetTerrain(cell, TerrainDefOf.Soil);
             }
 
             MapGeneratorHandler.GenerateMap(MapDefOfLocal.Doomsday, Map, true, true, true, false, true, true, true, Faction);
+
+            IntVec3 spawnPos = new IntVec3(126, 0, 163);
+            Thing thing = ThingMaker.MakeThing(ThingDefOfLocal.DoomsdayUltimateBomb);
+            thing.SetFaction(Faction);
+            GenSpawn.Spawn(thing, spawnPos, Map);
+
+            ShowHelp();
+        }
+
+        private void ShowHelp()
+        {
+            DiaNode node = new DiaNode("DoomsdayEnterSiteHelp".Translate());
+            DiaOption option = new DiaOption("OK");
+            node.options.Add(option);
+            option.resolveTree = true;
+
+            var dialog = new Dialog_NodeTree(node);
+            Find.WindowStack.Add(dialog);
         }
 
         public override void ExposeData()

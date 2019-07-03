@@ -67,7 +67,7 @@
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>Endlessday</gameCondition>
 		<letterLabel>Endlessday</letterLabel>
 		<letterText>Because of the powerful flash of a star on the planet now is the day. And nothing else.</letterText>
@@ -89,7 +89,7 @@
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>LeanAtmosphere</gameCondition>
 		<letterLabel>Lean atmosphere</letterLabel>
 		<letterText>As a result of the powerful release of a large amount of energy, the atmosphere of the planet is not far from the atmosphere. This will lower the temperature at night and raise during the day. In addition, there will now be an increased background radiation.</letterText>
@@ -113,7 +113,7 @@
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>RadiationFon</gameCondition>
 		<letterLabel>Radiation</letterLabel>
 		<letterText>There is no part of the atmosphere on the planet, which is why the radiation from the stars is stronger.</letterText>
@@ -137,7 +137,7 @@
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>NoSun</gameCondition>
 		<letterLabel>No Sun</letterLabel>
 		<letterText>There is no star in your star system. Endless night and cold.</letterText>
@@ -161,7 +161,7 @@
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>DenseAtmosphere</gameCondition>
 		<letterLabel>Dense atmosphere</letterLabel>
 		<letterText>The planet is very dense atmosphere, which leads to the greenhouse effect.</letterText>
@@ -185,7 +185,7 @@
 		<targetTags>
 		  <li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>IceStorm</gameCondition>
 		<letterLabel>Ice Storm</letterLabel>
 		<letterText>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</letterText>
@@ -214,7 +214,7 @@
 		<targetTags>
 		  <li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>HeavyAir</gameCondition>
 		<letterLabel>Heavy air</letterLabel>
 		<letterText>Air flows brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</letterText>
@@ -312,7 +312,7 @@
 		<targetTags>
 		  <li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>SandStorm</gameCondition>
 		<letterLabel>Sand storm</letterLabel>
 		<letterText>A sandstorm is coming. During this time, will be reduced visibility, speed.</letterText>
@@ -402,7 +402,7 @@
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
-		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>IonizedAtmosphere</gameCondition>
 		<letterLabel>Ionized atmosphere</letterLabel>
 		<letterText>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</letterText>

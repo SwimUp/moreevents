@@ -49,9 +49,10 @@ namespace MoreEvents.Events
 
         public override void Init()
         {
-            if(!settings.Active)
+            if (!settings.Active)
             {
-                End();
+                gameConditionManager.ActiveConditions.Remove(this);
+                return;
             }
 
             base.Init();

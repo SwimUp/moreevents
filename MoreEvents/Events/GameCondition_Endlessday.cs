@@ -12,9 +12,9 @@ namespace MoreEvents.Events
 
         public override void GameConditionTick()
         {
-            if(!settings.Active)
+            if (!settings.Active)
             {
-                End();
+                gameConditionManager.ActiveConditions.Remove(this);
                 return;
             }
 

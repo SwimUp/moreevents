@@ -115,4 +115,11 @@
   <Arsonists_Title>Поджигатели</Arsonists_Title>
   <Arsonists_Desc>Несколько бойцов вражеской фракции прибыли чтобы сжечь ваш лес. </Arsonists_Desc>
   
+  <LeanAtmosphere_Title>Обедненная атмосфера</LeanAtmosphere_Title>
+  <LeanAtmosphere_Desc>Обедненная атмосфера</LeanAtmosphere_Desc>
+  
+  <NoSun_Title>Нет солнца</NoSun_Title>
+  <NoSun_Desc>Нет солнца</NoSun_Desc>
+  
+  
 </LanguageData>

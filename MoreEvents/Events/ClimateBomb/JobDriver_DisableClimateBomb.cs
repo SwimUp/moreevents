@@ -25,6 +25,14 @@ namespace MoreEvents.Events.ClimateBomb
             return pawn.Reserve(targetA, job, 1, -1, null, errorOnFailed);
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_References.Look(ref bomb, "bomb");
+        }
+
+
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);

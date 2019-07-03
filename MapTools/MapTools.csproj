@@ -35,6 +35,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\MapGeneratorBlueprints\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="DiaRim">
+      <HintPath>..\DiaRim\bin\Release\DiaRim.dll</HintPath>
+    </Reference>
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>
@@ -57,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Maps\RoofData.cs" />
     <Compile Include="Maps\ThingData.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

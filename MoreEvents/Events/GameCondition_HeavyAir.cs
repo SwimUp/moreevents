@@ -16,7 +16,7 @@ namespace MoreEvents.Events
 
             if (!settings.Active)
             {
-                End();
+                gameConditionManager.ActiveConditions.Remove(this);
                 return;
             }
 

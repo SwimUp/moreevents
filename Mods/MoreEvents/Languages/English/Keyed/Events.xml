@@ -111,4 +111,13 @@ Even the best of the writers could not describe the place of your current stay, 
 </PlanetDestroyed>
   <ArsonOut>The arsonists leave</ArsonOut>
 	
+  <DoomsdayEnterSiteHelp>You have come to an enemy base. Somewhere hidden doomsday weapon. It must be found, de-energized and destroyed, but first you have to clear the base.</DoomsdayEnterSiteHelp>
+  <DeEnergizedStatus>Power level: {0}</DeEnergizedStatus>
+  <ShildsOffDommsdayTitle>Energy Shield Disabled</ShildsOffDommsdayTitle>
+  <DeactiveEnergyShieldDoom>Turn off energy shield</DeactiveEnergyShieldDoom>
+  <ShildsOffDommsday>You were able to turn off the energy barrier protecting device. Now, in order not to destroy the map, you need to disable the protection system.</ShildsOffDommsday>
+  <SecurityNonActiveDoomsday>\nSecurity Systems: disabled</SecurityNonActiveDoomsday>
+  <SecurityActiveDoomsday>\nSecurity Systems: enabled</SecurityActiveDoomsday>
+  <DisableSecuritySystems>Disable security systems</DisableSecuritySystems>
+	
 </LanguageData>

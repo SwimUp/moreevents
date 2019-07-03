@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Verse;
+
+namespace QuestRim
+{
+    public class TerminalCommand_Clear : TerminalCommand
+    {
+        public override string CommandKey => "/clear";
+
+        public override string Invoke(ref string terminalText)
+        {
+            terminalText = "";
+
+            return "";
+        }
+    }
+}

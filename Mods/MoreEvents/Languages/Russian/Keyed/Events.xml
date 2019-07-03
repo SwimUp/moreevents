@@ -111,4 +111,13 @@
 Место вашего нынешнего пребывания не смог бы описать даже лучший из писателей, но если бы он принялся за эту обреченную на провал задачу, то он точно не использовал бы производные от слова «Рай».</PlanetDestroyed>
   <ArsonOut>Поджигатели уходят</ArsonOut>
   
+  <DoomsdayEnterSiteHelp>Вы пришли к вражеской базе. Где-то скрыто оружие судного дня. Его нужно найти, обесточить и уничтожить, но сначала придется зачистить базу.</DoomsdayEnterSiteHelp>
+  <DeEnergizedStatus>Уровень энергии: {0}</DeEnergizedStatus>
+  <ShildsOffDommsdayTitle>Энергетический щит отключен</ShildsOffDommsdayTitle>
+  <DeactiveEnergyShieldDoom>Отключить энергетический щит</DeactiveEnergyShieldDoom>
+  <ShildsOffDommsday>Вы смогли отключить энергетический барьер защищающий устройство. Теперь, чтобы не уничтожить всю карту требуется отключить системы защиты.</ShildsOffDommsday>
+  <SecurityNonActiveDoomsday>\nСистемы защиты: отключены</SecurityNonActiveDoomsday>
+  <SecurityActiveDoomsday>\nСистемы защиты: активны</SecurityActiveDoomsday>
+  <DisableSecuritySystems>Отключить системы защиты</DisableSecuritySystems>
+  
 </LanguageData>

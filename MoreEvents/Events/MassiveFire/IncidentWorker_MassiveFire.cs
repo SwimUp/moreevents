@@ -48,6 +48,9 @@ namespace MoreEvents.Events.MassiveFire
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = (Map)parms.target;
             int tileID = map.Tile;
 
