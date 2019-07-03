@@ -79,7 +79,7 @@ namespace QuestRim
 
             if(Commands.ContainsKey(TerminalCommand))
             {
-                TerminalText += Commands[TerminalCommand].Invoke(ref TerminalText);
+                TerminalText += Commands[TerminalCommand].Invoke();
             }
 
             TerminalCommand = string.Empty;

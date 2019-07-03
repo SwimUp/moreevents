@@ -10,9 +10,8 @@ namespace QuestRim
     {
         public override string CommandKey => "/clear";
 
-        public override string Invoke(ref string terminalText)
+        public override string Invoke()
         {
-            terminalText = "";
 
             return "";
         }

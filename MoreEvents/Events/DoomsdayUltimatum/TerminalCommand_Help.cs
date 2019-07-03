@@ -10,12 +10,13 @@ namespace MoreEvents.Events.DoomsdayUltimatum
     {
         public override string CommandKey => "/help";
 
-        public override string Invoke(ref string terminalText)
+        public override string Invoke()
         {
-            StringBuilder builder = new StringBuilder();
-            builder.AppendLine("--> ");
+            //StringBuilder builder = new StringBuilder();
+            //builder.AppendLine("--> ");
 
-            return builder.ToString();
+            //return builder.ToString();
+            return "";
         }
     }
 }

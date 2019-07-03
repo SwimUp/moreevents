@@ -11,6 +11,6 @@ namespace QuestRim
 
         public Terminal Terminal;
 
-        public abstract string Invoke(ref string terminalText);
+        public abstract string Invoke();
     }
 }
