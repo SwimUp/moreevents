@@ -27,10 +27,10 @@
     <statBases>
       <MarketValue>2000</MarketValue>
       <Mass>22</Mass>
-      <AccuracyTouch>0.18</AccuracyTouch>
-      <AccuracyShort>0.26</AccuracyShort>
-      <AccuracyMedium>0.26</AccuracyMedium>
-      <AccuracyLong>0.18</AccuracyLong>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.68</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.80</AccuracyLong>
       <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
     </statBases>
     <techLevel>Spacer</techLevel>

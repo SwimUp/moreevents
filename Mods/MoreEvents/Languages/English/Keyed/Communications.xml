@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <OpenCommsGeo>Use console</OpenCommsGeo>
-  <OpenCommsGeoNoPower>Use console [no power]</OpenCommsGeoNoPower>
-  
-  <EventsCommTab>Active events</EventsCommTab>
-  <QuestsCommTab>Quests</QuestsCommTab>
-  <InteractionCommTab>Communication</InteractionCommTab>
-  
-  <RelatedEventCom>Related event: {0}</RelatedEventCom>
-  <FactionComm>Faction: {0}</FactionComm>
-  <NoEventComm>Related event: no</NoEventComm>
-  <NoFactionComm>Faction: no</NoFactionComm>
-  
   <HelpingFactionsList>\nHelp: </HelpingFactionsList>
   <SupportFullDoomsday>Help is fully staffed. You can not take more frctions.</SupportFullDoomsday>
   <NoHelpDoomsday>Will not help</NoHelpDoomsday>

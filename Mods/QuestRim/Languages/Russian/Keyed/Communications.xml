@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <OpenCommsGeo>Использовать консоль</OpenCommsGeo>
+  <OpenCommsGeoNoPower>Использовать консоль [Нет питания]</OpenCommsGeoNoPower>
+  
+  <EventsCommTab>Действующие события</EventsCommTab>
+  <QuestsCommTab>Задания</QuestsCommTab>
+  <InteractionCommTab>Общение</InteractionCommTab>
+  
+  <RelatedEventCom>Связанное событие: {0}</RelatedEventCom>
+  <FactionComm>Фракция: {0}</FactionComm>
+  <NoEventComm>Связанное событие: нет</NoEventComm>
+  <NoFactionComm>Фракция: нет</NoFactionComm>
+  
+</LanguageData>

@@ -22,12 +22,15 @@ namespace DiaRim.Actions
             Faction faction1 = Speaker.Faction;
             Faction faction2 = Defendant.Faction;
 
-            var relation = faction2.RelationWith(faction1, true);
+            faction2.TryAffectGoodwillWith(faction1, Amount);
 
-            if (relation == null)
-                return;
+            //var relation = faction2.RelationWith(faction1, true);
 
-            relation.goodwill += Amount;
+            //if (relation == null)
+            //    return;
+
+            //relation.goodwill += Amount;
+            //Messages.Message("RelationChangeDialog".Translate(faction2.Name, Amount), MessageTypeDefOf.NeutralEvent, true);
         }
     }
 }
