@@ -1,4 +1,5 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -71,6 +72,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
                 GeneratePawns(comp, ref enterPos, map);
             }
+
+            QuestsManager.Communications.RemoveCommunication("DoomsdayEvent");
         }
 
         private void GeneratePawns(DoomsdayUltimatumComp comp, ref IntVec3 enterPos, Map map)
@@ -99,8 +102,6 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                     i++;
                     GenSpawn.Spawn(p, enterPos, map);
                     pawns.Add(p);
-
-                    Log.Message($"Pawn --> {p.Name} --> Faction --> {p.Faction}");
                 }
             }
 

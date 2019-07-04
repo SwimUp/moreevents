@@ -520,7 +520,7 @@
 		<label>Mineral meteorite</label>
 		<letterLabel>Landing insanity animals</letterLabel>
 		<letterText>Enemy settlement sent capsules with crazy animals.</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+	    <letterDef>NegativeEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -538,7 +538,7 @@
 		<label>Hungry cannibal raid</label>
 		<letterLabel>Hungry cannibals!</letterLabel>
 		<letterText>A tribe of cannibals attacks the settlement from all sides! They don't need captives, they need human meat</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+	    <letterDef>NegativeEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -590,6 +590,24 @@ You can start collecting silver together with other factions or organize an assa
 			<li>BorealForest</li>
 			<li>Tundra</li>
 		</allowedBiomes>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Объединенный рейд -->
+	<IncidentDef>
+		<defName>UnifiedRaid</defName>
+		<label>Unified raid</label>
+		<letterLabel>Unified raid</letterLabel>
+		<letterText>Two hostile groups decided to join forces and attack the colony.</letterText>
+	    <letterDef>NegativeEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_UnifiedRaid</workerClass>
+		<category>Misc</category>
+		<minRefireDays>35</minRefireDays>
+		<baseChance>1.7</baseChance>
+		<earliestDay>80</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	

@@ -113,6 +113,7 @@
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
     <Compile Include="Events\IncidentWorker_HungryCannibalsRaid.cs" />
     <Compile Include="Events\IncidentWorker_MineralMeteorite.cs" />
+    <Compile Include="Events\IncidentWorker_UnifiedRaid.cs" />
     <Compile Include="Events\SiegeCamp\CaravanVisitAction_SiegeCamp.cs" />
     <Compile Include="Events\SiegeCamp\IncidentWorker_SiegeCamp.cs" />
     <Compile Include="Events\SiegeCamp\SiegeCampSite.cs" />

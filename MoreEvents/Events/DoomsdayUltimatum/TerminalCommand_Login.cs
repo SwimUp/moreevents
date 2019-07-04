@@ -18,7 +18,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             Doomsday_SecurityTerminal doomsdayTerminal = Terminal as Doomsday_SecurityTerminal;
             StringBuilder builder = new StringBuilder();
 
-            if (string.IsNullOrEmpty(doomsdayTerminal.CurrentUser) || doomsdayTerminal.CurrentUser == "Anonymous")
+            if (!string.IsNullOrEmpty(doomsdayTerminal.CurrentUser) && doomsdayTerminal.CurrentUser != "Anonymous")
             {
                 builder.AppendLine($"{"DoomsdayTerminal_AlreadyLogged".Translate()}");
             }
@@ -31,7 +31,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                     {
                         string user = commandParams[1];
                         string password = doomsdayTerminal.Users[user];
-                        if (commandParams[2] == password)
+                        if (commandParams[2].ToLower() == password.ToLower())
                         {
                             doomsdayTerminal.CurrentUser = user;
                             doomsdayTerminal.HasAccess = true;

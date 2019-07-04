@@ -19,7 +19,7 @@ namespace QuestRim
         private readonly Color terminalColor = new ColorInt(0, 0, 0).ToColor;
         private readonly Color borderColor = new ColorInt(189, 189, 189).ToColor;
 
-        private static GUIStyle textStyle;
+        private static readonly GUIStyle textStyle;
 
         public string TerminalCommand = string.Empty;
         public string TerminalText = string.Empty;

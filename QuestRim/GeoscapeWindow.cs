@@ -28,7 +28,7 @@ namespace QuestRim
 
         private static List<TabRecord> tabsList = new List<TabRecord>();
 
-        private List<CommunicationDialog> communicationsDialogs => communications.CommunicationDialogs;
+        private readonly List<CommunicationDialog> communicationsDialogs;
         private Communications communications;
         private Pawn speaker;
         private Pawn defendant;
@@ -42,6 +42,8 @@ namespace QuestRim
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
+            communicationsDialogs = communications.CommunicationDialogs.Values.ToList();
+
             this.communications = communications;
             this.speaker = speaker;
 

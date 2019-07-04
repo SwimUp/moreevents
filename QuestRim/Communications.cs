@@ -10,13 +10,13 @@ namespace QuestRim
 {
     public class Communications : IExposable
     {
-        public List<CommunicationDialog> CommunicationDialogs;
+        public Dictionary<string, CommunicationDialog> CommunicationDialogs;
 
         //public List<Quest> Quests;
 
         public Communications()
         {
-            CommunicationDialogs = new List<CommunicationDialog>();
+            CommunicationDialogs = new Dictionary<string, CommunicationDialog>();
         }
 
         public void OpenCommunications(Pawn speaker)
@@ -24,7 +24,15 @@ namespace QuestRim
             Find.WindowStack.Add(new GeoscapeWindow(this, speaker));
         }
 
-        public void AddCommunication(string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
+        public void RemoveCommunication(string id)
+        {
+            if(CommunicationDialogs.ContainsKey(id))
+            {
+                CommunicationDialogs.Remove(id);
+            }
+        }
+
+        public void AddCommunication(string uniqueId, string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
         {
             CommunicationDialog comDialog = new CommunicationDialog
             {
@@ -35,22 +43,22 @@ namespace QuestRim
                 Options = options
             };
 
-            CommunicationDialogs.Add(comDialog);
+            CommunicationDialogs.Add(uniqueId, comDialog);
         }
 
-        public void AddCommunication(string cardLabel, string description, Faction faction)
+        public void AddCommunication(string uniqueId, string cardLabel, string description, Faction faction)
         {
-            AddCommunication(cardLabel, description, faction, null);
+            AddCommunication(uniqueId, cardLabel, description, faction, null);
         }
 
-        public void AddCommunication(string cardLabel, string description)
+        public void AddCommunication(string uniqueId, string cardLabel, string description)
         {
-            AddCommunication(cardLabel, description, null, null, null);
+            AddCommunication(uniqueId, cardLabel, description, null, null, null);
         }
 
         public void ExposeData()
         {
-            Scribe_Collections.Look(ref CommunicationDialogs, "CommunicationDialogs", LookMode.Deep);
+            Scribe_Collections.Look(ref CommunicationDialogs, "CommunicationDialogs", LookMode.Value, LookMode.Deep);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
+using MoreEvents.Things;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -13,7 +14,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
     {
         public static DoomsdaySite ActiveSite;
 
-        public bool WeaponDeactivated = false;
+        public Building_DoomsdayGun Weapon;
 
         public CaravanArrivalAction_Doomsday caravanAction;
         public CaravanArrivalAction_GiveRansom caravanAction2;
@@ -53,6 +54,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public void CheckColonistsNow()
         {
+            if (Weapon.WeaponDeactivated)
+                return;
+
             List<Pawn> pawns = Map.mapPawns.FreeColonists.ToList();
 
             int downedPawns = 0;
@@ -87,7 +91,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             IntVec3 spawnPos = new IntVec3(126, 0, 163);
             Thing thing = ThingMaker.MakeThing(ThingDefOfLocal.DoomsdayUltimateBomb);
             thing.SetFaction(Faction);
-            GenSpawn.Spawn(thing, spawnPos, Map);
+            Weapon = (Building_DoomsdayGun)GenSpawn.Spawn(thing, spawnPos, Map);
 
             ShowHelp();
         }
@@ -107,7 +111,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             base.ExposeData();
 
-            Scribe_Values.Look(ref WeaponDeactivated, "WeaponDeactivated");
+            Scribe_References.Look(ref Weapon, "Weapon");
             Scribe_References.Look(ref ActiveSite, "ActiveSite");
         }
 
@@ -119,7 +123,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 return false;
             }
 
-            if (!WeaponDeactivated)
+            if (!Weapon.WeaponDeactivated)
             {
                 Messages.Message(Translator.Translate("WeaponDeactivated"), MessageTypeDefOf.NeutralEvent, false);
                 return false;

@@ -26,7 +26,7 @@ namespace MoreEvents.Things
             Command_Action command = new Command_Action();
             command.defaultLabel = Translator.Translate("InstallCommand_Title");
             command.defaultDesc = Translator.Translate("InstallCommand_Desc");
-            command.icon = ContentFinder<Texture2D>.Get("Things/Install");
+            command.icon = Props.PlaceDef.uiIcon;
             command.action = delegate
             {
                 Designator_BuildWithoutDef des = new Designator_BuildWithoutDef(Props.PlaceDef);

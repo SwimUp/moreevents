@@ -325,6 +325,15 @@
 		<thingCategories>
 		  <li>Items</li>
 		</thingCategories>
+		<recipeMaker>
+		  <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>13</Crafting>
+		  </skillRequirements>
+		  <recipeUsers Inherit="False">
+			<li>ElectricSmelter</li>
+		  </recipeUsers>
+		</recipeMaker>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
 		<selectable>true</selectable>
@@ -332,11 +341,16 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<MarketValue>1700</MarketValue>
+			<MarketValue>150</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
+			<WorkToBuild>10000</WorkToBuild>
 			<Mass>3</Mass>
 		</statBases>
+		<costList>
+		  <Steel>100</Steel>
+		  <ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>

@@ -44,7 +44,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             List<Faction> factions = Find.FactionManager.AllFactionsListForReading.Where(f => !f.IsPlayer && !f.def.hidden && f != site.Faction && f.RelationKindWith(site.Faction) == FactionRelationKind.Hostile).ToList();
             comp.FactionSilver = Mathf.Clamp(factions.Count * Rand.Range(2000, 4000), 15000, 35000);
 
-            QuestsManager.Communications.AddCommunication("DoomsdayCardLabel".Translate(), "DoomsdayDesc".Translate(site.Faction.Name), site.Faction, def, new List<CommOption> {
+            QuestsManager.Communications.AddCommunication("DoomsdayEvent", "DoomsdayCardLabel".Translate(), "DoomsdayDesc".Translate(site.Faction.Name), site.Faction, def, new List<CommOption> {
                 new CommOption()
                 {
                     Label = "DiscussWithOtherFactions".Translate(),

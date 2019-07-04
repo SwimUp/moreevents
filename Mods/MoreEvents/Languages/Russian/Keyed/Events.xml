@@ -122,7 +122,7 @@
   <DoomsdayContrAttackTitle>Контратака</DoomsdayContrAttackTitle>
   <DoomsdayContrAttack>Они контратакуют!</DoomsdayContrAttack>
   
-  <HelpCommand>информация по командам</HelpCommand>
+  <HelpCommand>информация о командах</HelpCommand>
   <ClearCommand>очистить консоль</ClearCommand>
   
   <DoomsdatTerminal_SecurityCommand>Доступ к системам безопасности</DoomsdatTerminal_SecurityCommand>
@@ -138,8 +138,8 @@
   <DoomsdayTerminal_ActiveUsers>Активные пользователи:</DoomsdayTerminal_ActiveUsers>
   <DoomsdayTerminal_LogoutCommand>Выйти из аккаунта</DoomsdayTerminal_LogoutCommand>
   <DoomsdayTerminal_LoginFirst>Вход не выполнен.</DoomsdayTerminal_LoginFirst>
-  <DoomsdayTerminal_LogoutOk>Вы успешли вышли из аккаунта.</DoomsdayTerminal_LogoutOk>
-  <DoomsdayTerminal_HackUsers>%^3Встраивание комманд... !#%1@5)(26w\nДля использования HackTools 1.0 используйте /users hack</DoomsdayTerminal_HackUsers>
+  <DoomsdayTerminal_LogoutOk>Вы успешно вышли из аккаунта.</DoomsdayTerminal_LogoutOk>
+  <DoomsdayTerminal_HackUsers>%^3Встраивание инструкций... !#%1@5)(26w\nДля использования HackTools 1.0 выполните /users hack</DoomsdayTerminal_HackUsers>
   <DoomsdayTerminal_UsersHack>Активация модуля HackTools 1.0\nАктивация успешна.\nПоиск уязвимостей... Найдено административное письмо.
 Дешифровка письма...
 
@@ -154,5 +154,62 @@
 </DoomsdayTerminal_UsersHack>
   <DoomsdayTerminal_UsersHackAnser>Спичку</DoomsdayTerminal_UsersHackAnser>
   <DoomsdayTerminal_AlreadyLogged>Вы уже вошли. Используйте /logout для выхода.</DoomsdayTerminal_AlreadyLogged>
+  <DoomsdayTerminal_SecurityFirst>Введите пароль безопасности. /security *password*
+*(5$#LKki*6 HackTools 1.0 --> Дамп памяти /security dump ^I21%$$*1%p0rfgw
+  </DoomsdayTerminal_SecurityFirst>
+  <DoomsdayTerminal_HackToolsSecurity>
+Inject HackTools 1.0
+--> Meta OK
+--> Memory OK
+--> Дамп памяти...</DoomsdayTerminal_HackToolsSecurity>
+	<DoomsdayTerminal_SecurityAccessGranted>Доступ к системам безопасности предоставлен.
+Команды:
+--> /security disable
+--> /security energy
+</DoomsdayTerminal_SecurityAccessGranted>
+  <DoomsdayTerminal_SecurityNoPower>Питание отключено, деактивация защитных систем невозможна.</DoomsdayTerminal_SecurityNoPower>
+  <DoomsdayTerminal_SecurityPowerOk>Питание включено.</DoomsdayTerminal_SecurityPowerOk>
+  <DoomsdayTerminal_SecurityPowerInfoPassive>Добро пожаловать в раздел управления энергией
+ 
+-->Энергетический щит: неактивен
+-->Подача энергии: выключена
+
+RETROS RBIOS-4.02.000 T2EE5/E7.E8
+Root (5A8)
+
+RUN IN PASSIVE MODE, TO DISABLE --> /security energy activemode</DoomsdayTerminal_SecurityPowerInfoPassive>
+	<DoomsdayTerminal_ActiveModeEnable>Активация активного режима...
+
+ExplasaSystems 5.3 (BG/SS5 FastUse 13.2)
+Energy RETROS RBIOS-4.02.000 T2EE5/E7.E8
+...
+...
+Инициализация пользовательского режима...
+Активация внутренних систем...
+Системы активны.
+
+
+RUN IN ACTIVE MODE
+</DoomsdayTerminal_ActiveModeEnable>
   
+  <DoomsdayTerminal_SecurityPowerInfoActive>Добро пожаловать в раздел управления энергией
+ 
+-->Энергетический щит: неактивен
+-->Подача энергии: выключена
+
+RETROS RBIOS-4.02.000 T2EE5/E7.E8
+Root (5A8)
+
+RUN IN ACTIVE MODE
+COMMANDS:
+--> /security energy shields
+--> /security energy on</DoomsdayTerminal_SecurityPowerInfoActive>
+	<DoomsdayTerminal_ActiveModeReq>Недоступно в пассивном режиме.</DoomsdayTerminal_ActiveModeReq>
+	<DoomsdayTerminal_ShieldsOff>Управление системой энергетического щита отключено.</DoomsdayTerminal_ShieldsOff>
+	<DoomsdayTerminal_PowerActivating>Переключение магнитных резисторов --> OK
+Перенаправление энергии на управляющий вал --> OK</DoomsdayTerminal_PowerActivating>
+	<DoomsdayTerminal_SecurityDisabled>Отключение систем безопасности --> OK</DoomsdayTerminal_SecurityDisabled>
+	<SecurityDoomsdayOffTitle>Системы отключены</SecurityDoomsdayOffTitle>
+	<SecurityDoomsdayOff>Вы смогли отключить системы безопасности у оружия судного дня. Теперь его можно спокойной уничтожить.</SecurityDoomsdayOff>
+	
 </LanguageData>

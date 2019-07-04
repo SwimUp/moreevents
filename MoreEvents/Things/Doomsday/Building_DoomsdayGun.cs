@@ -11,7 +11,20 @@ namespace MoreEvents.Things
 {
     public class Building_DoomsdayGun : Building
     {
+        public List<IntVec3> ExplosionPosition = new List<IntVec3>
+        {
+            new IntVec3(119, 0, 171),
+            new IntVec3(112, 0, 176),
+            new IntVec3(118, 0, 156),
+            new IntVec3(114, 0, 152),
+            new IntVec3(133, 0, 156),
+            new IntVec3(137, 0, 152),
+            new IntVec3(133, 0, 170),
+            new IntVec3(140, 0, 176),
+        };
+
         public bool SecuritySystemActive = true;
+        public bool WeaponDeactivated = false;
         public bool EnergoShieldActive => DeEnergizedStatus > 0f;
         public float DeEnergizedStatus = 100f;
         public readonly float DeEnergizedSpeed = 0.00013f;
@@ -39,13 +52,16 @@ namespace MoreEvents.Things
         {
             if (SecuritySystemActive)
             {
-                GenExplosion.DoExplosion(Position, Map, 50, DamageDefOf.Bomb, null, 80000, explosionSound: SoundDefOfLocal.Explosion_Bomb);
+                foreach(var expPos in ExplosionPosition)
+                {
+                    GenExplosion.DoExplosion(expPos, Map, 55f, DamageDefOf.Bomb, null, 7000, 100);
+                }
 
                 List<Pawn> pawns = new List<Pawn>(Map.mapPawns.AllPawnsSpawned.Where(p => !p.Dead && !p.Fogged()));
 
-                foreach(var p in pawns)
+                foreach (var p in pawns)
                 {
-                    if(!p.Dead)
+                    if (!p.Dead)
                         p.TakeDamage(new DamageInfo(DamageDefOf.Bomb, Rand.Range(80, 160), 60));
                 }
             }
@@ -140,6 +156,8 @@ namespace MoreEvents.Things
 
             Scribe_Values.Look(ref DeEnergizedStatus, "DeEnergizedStatus");
             Scribe_Values.Look(ref RaidSent, "RaidSent");
+            Scribe_Values.Look(ref SecuritySystemActive, "SecuritySystemActive");
+            Scribe_Values.Look(ref WeaponDeactivated, "WeaponDeactivated");
         }
     }
 }

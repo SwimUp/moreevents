@@ -122,8 +122,95 @@ Even the best of the writers could not describe the place of your current stay, 
   <DoomsdayContrAttackTitle>Counterattack</DoomsdayContrAttackTitle>
   <DoomsdayContrAttack>They counterattack!</DoomsdayContrAttack>
   
-  <DoomsdatTerminal_SecurityCommand>Access to system security</DoomsdatTerminal_SecurityCommand>
-  <DoomsdayTerminal_UsersCommand>System User Management</DoomsdayTerminal_UsersCommand>
+  <HelpCommand>command information</HelpCommand>
+  <ClearCommand>clear console</ClearCommand>
+  
+  <DoomsdatTerminal_SecurityCommand>Access to security systems</DoomsdatTerminal_SecurityCommand>
+  <DoomsdayTerminal_UsersCommand>User management system</DoomsdayTerminal_UsersCommand>
   <DoomsdayTerminal_AddNewUsers>--> Add new user: /users add *username* *password*</DoomsdayTerminal_AddNewUsers>
+  <DoomsdayTerminal_RemoveUsers>--> Delete user: /users delete *username* *password*</DoomsdayTerminal_RemoveUsers>
+  <DoomsdayTerminal_NoAccess>No access</DoomsdayTerminal_NoAccess>
+  <DoomsdayTerminal_WrongArguments>Invalid arguments</DoomsdayTerminal_WrongArguments>
+  <DoomsdayTerminal_WrongPassword>Wrong password</DoomsdayTerminal_WrongPassword>
+  <DoomsdayTerminal_LoginCommand>Sign in. Format: /login *username* *password*</DoomsdayTerminal_LoginCommand>
+  <DoomsdayTerminal_LogginSuccess>You are logged in as {0}</DoomsdayTerminal_LogginSuccess>
+  <DoomsdayTerminal_LogginFail>Failed login attempt. Check username and password.</DoomsdayTerminal_LogginFail>
+  <DoomsdayTerminal_ActiveUsers>Active users:</DoomsdayTerminal_ActiveUsers>
+  <DoomsdayTerminal_LogoutCommand>Sign out</DoomsdayTerminal_LogoutCommand>
+  <DoomsdayTerminal_LoginFirst>Please login first</DoomsdayTerminal_LoginFirst>
+  <DoomsdayTerminal_LogoutOk>You have successfully logged out of your account.</DoomsdayTerminal_LogoutOk>
+  <DoomsdayTerminal_HackUsers>%^3Embedding instructions... !#%1@5)(26w\nTo use HackTools 1.0, run /users hack</DoomsdayTerminal_HackUsers>
+  <DoomsdayTerminal_UsersHack>Activation module HackTools 1.0\nActivation successful.\nSearch for vulnerabilities ... Found an administrative email.
+Decryption email ...
+
+From: ExFeral
+To: AktunOba
+
+It seems the boss is still going to use the weapon for blackmail.
+Hell, he's gonna blow this world up.
+Of course, I am not against the heap of silver, but I also live here! I tried to persuade him to be softer, but it seems that thoughts of thousands of silver coins are driving him crazy.
+I want to play it safe if it suddenly gets too hot, but I can't just leave the password like this.
+I sketched a riddle, I told you it many times, I think you will have no problems to solve it. Use it to login Fernal.
+You enter the dark kitchen. It has a candle, a kerosene lamp and a gas stove. What will you light first?
+</DoomsdayTerminal_UsersHack>
+  <DoomsdayTerminal_UsersHackAnser>Match</DoomsdayTerminal_UsersHackAnser>
+  <DoomsdayTerminal_AlreadyLogged>You are already logged in. Use /logout.</DoomsdayTerminal_AlreadyLogged>
+  <DoomsdayTerminal_SecurityFirst>Enter the security password. /security *password*
+*(5$#LKki*6 HackTools 1.0 --> Memory dump /security dump ^I21%$$*1%p0rfgw
+  </DoomsdayTerminal_SecurityFirst>
+  <DoomsdayTerminal_HackToolsSecurity>
+Inject HackTools 1.0
+--> Meta OK
+--> Memory OK
+--> Memory dump...</DoomsdayTerminal_HackToolsSecurity>
+	<DoomsdayTerminal_SecurityAccessGranted>Access to security systems is provided.
+Commands:
+--> /security disable
+--> /security energy
+</DoomsdayTerminal_SecurityAccessGranted>
+  <DoomsdayTerminal_SecurityNoPower>Power is off, deactivation of protection systems is not possible.</DoomsdayTerminal_SecurityNoPower>
+  <DoomsdayTerminal_SecurityPowerOk>Power on.</DoomsdayTerminal_SecurityPowerOk>
+  <DoomsdayTerminal_SecurityPowerInfoPassive>Welcome to the energy management section.
+ 
+-->Energy shield: inactive
+-->Power up: off
+
+RETROS RBIOS-4.02.000 T2EE5/E7.E8
+Root (5A8)
+
+RUN IN PASSIVE MODE, TO DISABLE --> /security energy activemode</DoomsdayTerminal_SecurityPowerInfoPassive>
+	<DoomsdayTerminal_ActiveModeEnable>Activating active mode ...
+
+ExplasaSystems 5.3 (BG/SS5 FastUse 13.2)
+Energy RETROS RBIOS-4.02.000 T2EE5/E7.E8
+...
+...
+Initializing user mode ...
+Activating internal systems ...
+Systems are active.
+
+
+RUN IN ACTIVE MODE
+</DoomsdayTerminal_ActiveModeEnable>
+  
+  <DoomsdayTerminal_SecurityPowerInfoActive>Welcome to the energy management section.
+ 
+-->Energy shield: inactive
+-->Power up: off
+
+RETROS RBIOS-4.02.000 T2EE5/E7.E8
+Root (5A8)
+
+RUN IN ACTIVE MODE
+COMMANDS:
+--> /security energy shields
+--> /security energy on</DoomsdayTerminal_SecurityPowerInfoActive>
+	<DoomsdayTerminal_ActiveModeReq>Not available in passive mode.</DoomsdayTerminal_ActiveModeReq>
+	<DoomsdayTerminal_ShieldsOff>Energy shield system control disabled.</DoomsdayTerminal_ShieldsOff>
+	<DoomsdayTerminal_PowerActivating>Switching magnetic resistors --> OK
+Redirecting energy to the control shaft --> OK</DoomsdayTerminal_PowerActivating>
+	<DoomsdayTerminal_SecurityDisabled>Disable security systems --> OK</DoomsdayTerminal_SecurityDisabled>
+	<SecurityDoomsdayOffTitle>Systems disabled</SecurityDoomsdayOffTitle>
+	<SecurityDoomsdayOff>You were able to disable the security systems of doomsday weapons. Now you can safely destroy it.</SecurityDoomsdayOff>
 	
 </LanguageData>

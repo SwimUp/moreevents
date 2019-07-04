@@ -23,6 +23,12 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             {"Dimon228", "5615633" }
         };
 
+        public string SecurityPassword => "EDEM";
+        public bool SecutiyAccess = false;
+
+        public bool Power = false;
+        public bool ActiveMode = false;
+
         public string CurrentUser = "Anonymous";
 
         public Doomsday_SecurityTerminal(TerminalDef terminalDef, Building_DoomsdayGun weapon) : base(terminalDef)

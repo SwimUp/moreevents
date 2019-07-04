@@ -68,6 +68,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
                 if (weapon.DeEnergizedStatus <= 0f)
                 {
+                    weapon.WeaponDeactivated = true;
                     weapon.TurnOffEnergoShield();
                     actor.jobs.EndCurrentJob(JobCondition.Succeeded);
                     return;
