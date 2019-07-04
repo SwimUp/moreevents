@@ -119,5 +119,11 @@ Even the best of the writers could not describe the place of your current stay, 
   <SecurityNonActiveDoomsday>\nSecurity Systems: disabled</SecurityNonActiveDoomsday>
   <SecurityActiveDoomsday>\nSecurity Systems: enabled</SecurityActiveDoomsday>
   <DisableSecuritySystems>Disable security systems</DisableSecuritySystems>
+  <DoomsdayContrAttackTitle>Counterattack</DoomsdayContrAttackTitle>
+  <DoomsdayContrAttack>They counterattack!</DoomsdayContrAttack>
+  
+  <DoomsdatTerminal_SecurityCommand>Access to system security</DoomsdatTerminal_SecurityCommand>
+  <DoomsdayTerminal_UsersCommand>System User Management</DoomsdayTerminal_UsersCommand>
+  <DoomsdayTerminal_AddNewUsers>--> Add new user: /users add *username* *password*</DoomsdayTerminal_AddNewUsers>
 	
 </LanguageData>

@@ -119,5 +119,40 @@
   <SecurityNonActiveDoomsday>\nСистемы защиты: отключены</SecurityNonActiveDoomsday>
   <SecurityActiveDoomsday>\nСистемы защиты: активны</SecurityActiveDoomsday>
   <DisableSecuritySystems>Отключить системы защиты</DisableSecuritySystems>
+  <DoomsdayContrAttackTitle>Контратака</DoomsdayContrAttackTitle>
+  <DoomsdayContrAttack>Они контратакуют!</DoomsdayContrAttack>
+  
+  <HelpCommand>информация по командам</HelpCommand>
+  <ClearCommand>очистить консоль</ClearCommand>
+  
+  <DoomsdatTerminal_SecurityCommand>Доступ к системам безопасности</DoomsdatTerminal_SecurityCommand>
+  <DoomsdayTerminal_UsersCommand>Управления пользователями системы</DoomsdayTerminal_UsersCommand>
+  <DoomsdayTerminal_AddNewUsers>--> Добавить нового пользователя: /users add *username* *password*</DoomsdayTerminal_AddNewUsers>
+  <DoomsdayTerminal_RemoveUsers>--> Удалить пользователя: /users delete *username* *password*</DoomsdayTerminal_RemoveUsers>
+  <DoomsdayTerminal_NoAccess>Нет доступа</DoomsdayTerminal_NoAccess>
+  <DoomsdayTerminal_WrongArguments>Неверные аргументы</DoomsdayTerminal_WrongArguments>
+  <DoomsdayTerminal_WrongPassword>Неверный пароль</DoomsdayTerminal_WrongPassword>
+  <DoomsdayTerminal_LoginCommand>Войти в систему. Формат: /login *username* *password*</DoomsdayTerminal_LoginCommand>
+  <DoomsdayTerminal_LogginSuccess>Вы вошли в систему как {0}</DoomsdayTerminal_LogginSuccess>
+  <DoomsdayTerminal_LogginFail>Неудачная попытка входа. Проверьте логин и пароль.</DoomsdayTerminal_LogginFail>
+  <DoomsdayTerminal_ActiveUsers>Активные пользователи:</DoomsdayTerminal_ActiveUsers>
+  <DoomsdayTerminal_LogoutCommand>Выйти из аккаунта</DoomsdayTerminal_LogoutCommand>
+  <DoomsdayTerminal_LoginFirst>Вход не выполнен.</DoomsdayTerminal_LoginFirst>
+  <DoomsdayTerminal_LogoutOk>Вы успешли вышли из аккаунта.</DoomsdayTerminal_LogoutOk>
+  <DoomsdayTerminal_HackUsers>%^3Встраивание комманд... !#%1@5)(26w\nДля использования HackTools 1.0 используйте /users hack</DoomsdayTerminal_HackUsers>
+  <DoomsdayTerminal_UsersHack>Активация модуля HackTools 1.0\nАктивация успешна.\nПоиск уязвимостей... Найдено административное письмо.
+Дешифровка письма...
+
+От кого: ExFeral
+Кому: AktunOba
+
+Кажется, босс все-же собирается использовать оружие для шантажа. Черт, он собирается взорвать этот мир.
+Я, конечно, не против кучи серебра, но я же тоже здесь живу! Я пытался уговорить его быть помягче, но кажется мысли о тысячах серебряных монет сводят его с ума.
+Я хочу перестраховаться, если вдруг станет слишком жарко, но я не могу просто оставить пароль вот так.
+Я набросал загадку, я много раз тебе её рассказывал, думаю у тебя не будет проблем, чтобы её разгадать. Используй её для логина Fernal.
+Вы заходите в тёмную кухню. В ней есть свеча, керосиновая лампа и газовая плита. Что вы зажжёте в первую очередь?
+</DoomsdayTerminal_UsersHack>
+  <DoomsdayTerminal_UsersHackAnser>Спичку</DoomsdayTerminal_UsersHackAnser>
+  <DoomsdayTerminal_AlreadyLogged>Вы уже вошли. Используйте /logout для выхода.</DoomsdayTerminal_AlreadyLogged>
   
 </LanguageData>

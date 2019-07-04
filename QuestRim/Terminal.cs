@@ -23,6 +23,7 @@ namespace QuestRim
 
         public string TerminalCommand = string.Empty;
         public string TerminalText = string.Empty;
+        public StringBuilder TerminalTextBuilder = new StringBuilder();
 
         public Dictionary<string, TerminalCommand> Commands;
         protected override float Margin => 0f;
@@ -44,6 +45,7 @@ namespace QuestRim
             Def = terminalDef;
 
             TerminalText = InitialText;
+            TerminalTextBuilder.Append(TerminalText);
 
             foreach (var command in terminalDef.Commands)
             {
@@ -69,25 +71,90 @@ namespace QuestRim
 
         public override void OnAcceptKeyPressed()
         {
+            PreFlush();
+        }
+
+        protected virtual void PreFlush()
+        {
             Flush();
         }
 
-        private void Flush()
+        protected virtual void Flush(bool scroll = true)
         {
             string text = $"\n--> {TerminalCommand}";
-            TerminalText += text;
+            TerminalTextBuilder.Append(text);
 
-            if(Commands.ContainsKey(TerminalCommand))
+            string mainCommand = TerminalCommand.Split(' ')[0];
+            switch(mainCommand)
             {
-                TerminalText += Commands[TerminalCommand].Invoke();
+                case "/help":
+                    {
+                        HelpCommand();
+                        break;
+                    }
+                case "/clear":
+                    {
+                        Clear();
+                        break;
+                    }
+                case "/exit":
+                    {
+                        ExitCommand();
+                        break;
+                    }
+                default:
+                    {
+                        if (Commands.ContainsKey(mainCommand))
+                        {
+                            TerminalTextBuilder.Append("\n");
+                            TerminalTextBuilder.Append(Commands[mainCommand].Invoke());
+                        }
+                        else
+                        {
+                            TerminalTextBuilder.Append(": Unknown command");
+                        }
+                        break;
+                    }
             }
 
+            TerminalText = TerminalTextBuilder.ToString();
             TerminalCommand = string.Empty;
+
+            if(scroll)
+            {
+                Scroll(Text.CalcHeight(TerminalText, 589));
+            }
+        }
+
+        protected virtual void ExitCommand()
+        {
+
+        }
+
+        public void Scroll(float offset)
+        {
+            terminalTextScroll.y += offset;
+        }
+
+        public void HelpCommand()
+        {
+            TerminalTextBuilder.Append("\nCommands list\n");
+            TerminalTextBuilder.AppendLine($"--> /help - {"HelpCommand".Translate()}");
+            TerminalTextBuilder.AppendLine($"--> /clear - {"ClearCommand".Translate()}");
+            foreach (var command in Commands)
+            {
+                if(command.Value.ShowInHelp)
+                    TerminalTextBuilder.AppendLine($"--> {command.Key} - {command.Value.CommandDescription}");
+            }
+            TerminalTextBuilder.Append("===========================\n");
+
+            TerminalText = TerminalTextBuilder.ToString();
         }
 
         public void Clear()
         {
-            TerminalText = string.Empty;
+            TerminalTextBuilder.Length = 0;
+            TerminalText = "";
         }
     }
 }

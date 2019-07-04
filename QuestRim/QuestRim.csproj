@@ -63,7 +63,6 @@
     <Compile Include="QuestsManager.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="TerminalCommand.cs" />
-    <Compile Include="TerminalCommand_Clear.cs" />
     <Compile Include="TerminalDef.cs" />
   </ItemGroup>
   <ItemGroup />

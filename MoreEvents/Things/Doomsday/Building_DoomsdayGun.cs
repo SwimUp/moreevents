@@ -39,9 +39,9 @@ namespace MoreEvents.Things
         {
             if (SecuritySystemActive)
             {
-                GenExplosion.DoExplosion(Position, Map, 50, DamageDefOf.Bomb, null, 10000, explosionSound: SoundDefOfLocal.Explosion_Bomb);
+                GenExplosion.DoExplosion(Position, Map, 50, DamageDefOf.Bomb, null, 80000, explosionSound: SoundDefOfLocal.Explosion_Bomb);
 
-                List<Pawn> pawns = new List<Pawn>(Map.mapPawns.AllPawnsSpawned.Where(p => !p.Dead));
+                List<Pawn> pawns = new List<Pawn>(Map.mapPawns.AllPawnsSpawned.Where(p => !p.Dead && !p.Fogged()));
 
                 foreach(var p in pawns)
                 {

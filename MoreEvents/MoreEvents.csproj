@@ -100,7 +100,10 @@
     <Compile Include="Events\DoomsdayUltimatum\IncidentWorker_DoomsdayUltimatum.cs" />
     <Compile Include="Events\DoomsdayUltimatum\JobDriver_DisableSecurityDoomsday.cs" />
     <Compile Include="Events\DoomsdayUltimatum\JobDriver_DeEnergizeDoomsdayBomb.cs" />
-    <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Help.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Login.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Logout.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Security.cs" />
+    <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Users.cs" />
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\HasExitCellsComp.cs" />

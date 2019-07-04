@@ -23,8 +23,10 @@ AWQ0 V1 E1 S0=0 C1 D2 +FCLASS=0
 --> Generic di 3.0.0.0-14 #24 SMP
 Waiting for commands ......\n</InitialText>
 		<Commands> 
-			<li Class="QuestRim.TerminalCommand_Clear" />
-			<li Class="MoreEvents.Events.DoomsdayUltimatum.TerminalCommand_Help" />
+			<li Class="MoreEvents.Events.DoomsdayUltimatum.TerminalCommand_Security" />
+			<li Class="MoreEvents.Events.DoomsdayUltimatum.TerminalCommand_Login" />
+			<li Class="MoreEvents.Events.DoomsdayUltimatum.TerminalCommand_Logout" />
+			<li Class="MoreEvents.Events.DoomsdayUltimatum.TerminalCommand_Users" />
 		</Commands>
 	</QuestRim.TerminalDef>
 
