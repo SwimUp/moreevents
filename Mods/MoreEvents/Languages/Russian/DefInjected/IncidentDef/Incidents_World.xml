@@ -111,4 +111,8 @@
   <Arsonists.letterLabel>Поджигатели</Arsonists.letterLabel>
   <Arsonists.letterText>Несколько бойцов вражеской фракции прибыли чтобы сжечь ваш лес.</Arsonists.letterText>  
   
+  <UnifiedRaid.label>Объединенный рейд</UnifiedRaid.label>
+  <UnifiedRaid.letterLabel>Объединенный рейд</UnifiedRaid.letterLabel>
+  <UnifiedRaid.letterText>Две враждебные группировки решили объединить свои силы и атаковать колонию</UnifiedRaid.letterText>  
+  
 </LanguageData>

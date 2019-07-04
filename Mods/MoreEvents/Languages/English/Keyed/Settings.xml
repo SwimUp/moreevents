@@ -120,4 +120,7 @@ You can start collecting silver together with other factions or organize an assa
   <NoSun_Title>No sun</NoSun_Title>
   <NoSun_Desc>No sun</NoSun_Desc>
   
+  <UnifiedRaid_Title>Unified raid</UnifiedRaid_Title>
+  <UnifiedRaid_Desc>Two hostile groups decided to join forces and attack the colony.</UnifiedRaid_Desc>
+  
 </LanguageData>

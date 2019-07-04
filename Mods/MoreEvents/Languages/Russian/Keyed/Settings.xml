@@ -121,5 +121,7 @@
   <NoSun_Title>Нет солнца</NoSun_Title>
   <NoSun_Desc>Нет солнца</NoSun_Desc>
   
+  <UnifiedRaid_Title>Объединенный рейд</UnifiedRaid_Title>
+  <UnifiedRaid_Desc>Две враждебные группировки решили объединить свои силы и атаковать колонию</UnifiedRaid_Desc>
   
 </LanguageData>
