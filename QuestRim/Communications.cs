@@ -33,14 +33,55 @@ namespace QuestRim
             }
         }
 
-        public void AddQuest(Quest quest)
+        public void RemoveQuest(Quest quest, EndCondition condition = EndCondition.None, bool showMessage = true)
         {
-            Quests.Add(quest);
+            Quests.Remove(quest);
+
+            if(showMessage)
+                SendEndQuestMessage(condition, quest);
         }
 
-        public void AddQuest(QuestDef questDef)
+        public void RemoveQuest(string key, EndCondition condition = EndCondition.None, bool showMessage = true)
         {
-            Quest quest = new Quest(questDef);
+            for(int i = 0; i < Quests.Count; i++)
+            {
+                Quest quest = Quests[i];
+                if (quest.UniqueId == key)
+                {
+                    Quests.Remove(quest);
+
+                    if (showMessage)
+                        SendEndQuestMessage(condition, quest);
+
+                    return;
+                }
+            }
+        }
+
+        private void SendEndQuestMessage(EndCondition condition, Quest quest)
+        {
+            switch(condition)
+            {
+                case EndCondition.Fail:
+                    {
+                        Messages.Message("QuestFail".Translate(quest.CardLabel), MessageTypeDefOf.NegativeEvent, true);
+                        break;
+                    }
+                case EndCondition.Success:
+                    {
+                        Messages.Message("QuestSuccess".Translate(quest.CardLabel), MessageTypeDefOf.NegativeEvent, true);
+                        break;
+                    }
+                case EndCondition.Timeout:
+                    {
+                        Messages.Message("QuestTimeout".Translate(quest.CardLabel), MessageTypeDefOf.NegativeEvent, true);
+                        break;
+                    }
+            }
+        }
+
+        public void AddQuest(Quest quest)
+        {
             Quests.Add(quest);
         }
 

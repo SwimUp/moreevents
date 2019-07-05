@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+  <QuestFail>Задание {0} провалено</QuestFail>
+  <QuestSuccess>Задание {1} выполнено</QuestSuccess>
+  <QuestTimeout>Время для выполнения задания {0} истекло</QuestTimeout>
+  <UnlimitedTime>Осталось: неограниченно</UnlimitedTime>
+  <QuestTimer>Осталось: {0} дней</QuestTimer>
+  <JumpToLOcation>Перейти к месту</JumpToLOcation>
+
   <OpenCommsGeo>Использовать консоль</OpenCommsGeo>
   <OpenCommsGeoNoPower>Использовать консоль [Нет питания]</OpenCommsGeoNoPower>
   

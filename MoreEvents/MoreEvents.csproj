@@ -184,6 +184,7 @@
     <Compile Include="PawnKindDefOfLocal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
+    <Compile Include="Quests\Quest_HelpResources.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Sounds\SoundDefOfLocal.cs" />
@@ -225,8 +226,6 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Quests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

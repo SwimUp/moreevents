@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace QuestRim
     public class GeoscapeWindow : Window
     {
         private Vector2 commSlider = Vector2.zero;
+        private Vector2 commSliderQuests = Vector2.zero;
         private Vector2 commInfoSlider = Vector2.zero;
+        private Vector2 commInfoQuestSlider = Vector2.zero;
         private Vector2 commButtonsSlider = Vector2.zero;
 
         private enum Tab
@@ -29,11 +32,17 @@ namespace QuestRim
         private static List<TabRecord> tabsList = new List<TabRecord>();
 
         private readonly List<CommunicationDialog> communicationsDialogs;
+        private readonly List<Quest> quests;
+
         private Communications communications;
+
         private Pawn speaker;
         private Pawn defendant;
         private int commDialogSliderLength = 0;
+        private int commQuestsSliderLength = 0;
+
         private CommunicationDialog currentDialog;
+        private Quest currentQuest;
 
         private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
@@ -44,10 +53,17 @@ namespace QuestRim
         {
             communicationsDialogs = communications.CommunicationDialogs.Values.ToList();
 
+            if (communications.Quests == null)
+                communications.Quests = new List<Quest>();
+
+            quests = communications.Quests;
+
+
             this.communications = communications;
             this.speaker = speaker;
 
             commDialogSliderLength = communicationsDialogs.Count * 78;
+            commQuestsSliderLength = quests.Count * 108;
 
             forcePause = true;
         }
@@ -63,10 +79,12 @@ namespace QuestRim
             tabsList.Add(new TabRecord("EventsCommTab".Translate(), delegate
             {
                 tab = Tab.Events;
+                currentQuest = null;
             }, tab == Tab.Events));
             tabsList.Add(new TabRecord("QuestsCommTab".Translate(), delegate
             {
                 tab = Tab.Quests;
+                currentDialog = null;
             }, tab == Tab.Quests));
             tabsList.Add(new TabRecord("InteractionCommTab".Translate(), delegate
             {
@@ -271,7 +289,88 @@ namespace QuestRim
 
         private void QuestsPage(Rect inRect)
         {
+            Rect rect1 = inRect;
+            Rect rect2 = inRect;
+            rect1.xMax = 319;
+            rect1.height = 500;
 
+            GUI.color = MenuSectionBGBorderColor;
+            Widgets.DrawBox(rect1);
+            GUI.color = Color.white;
+
+            Rect scrollVertRectFact = new Rect(0, 0, rect1.x, commQuestsSliderLength);
+            int y = 10;
+            Widgets.BeginScrollView(rect1, ref commSliderQuests, scrollVertRectFact, false);
+            foreach (var quest in quests)
+            {
+                DrawQuestCard(rect1, ref y, quest);
+            }
+            Widgets.EndScrollView();
+
+            DrawPawnCard();
+
+            Text.Font = GameFont.Small;
+            Rect rect3 = new Rect(328, rect2.yMin + 20, 610, rect2.yMax);
+            DrawQuestCard(rect3);
+        }
+
+        private void DrawQuestCard(Rect rect, ref int y, Quest quest)
+        {
+            Rect r = new Rect(10, y, rect.width - 20, 90);
+            Widgets.Label(r, quest.CardLabel);
+            Text.Font = GameFont.Tiny;
+            Rect rect2 = new Rect(10, y + 22, rect.width - 20, 20);
+            Widgets.Label(rect2, quest.Faction != null ? "FactionComm".Translate(quest.Faction.Name) : "NoFactionComm".Translate());
+            rect2.y += 20;
+            Widgets.Label(rect2, quest.UnlimitedTime ? "UnlimitedTime".Translate() : "QuestTimer".Translate(GenDate.TicksToDays(quest.TicksToPass).ToString("f2")));
+            rect2.y += 25;
+            if (quest.Target != null)
+            {
+                Widgets.Label(rect2, "JumpToLOcation".Translate());
+                if(Widgets.ButtonInvisible(rect2))
+                {
+                    GlobalTargetInfo target = quest.Target.TryGetPrimaryTarget();
+                    CameraJumper.TryJumpAndSelect(target);
+                }
+            }
+            Text.Font = GameFont.Small;
+            Widgets.DrawHighlightIfMouseover(r);
+
+            GUI.color = CommCardBGColor;
+            Widgets.DrawHighlight(r);
+            GUI.color = Color.white;
+            if (Widgets.ButtonInvisible(r))
+            {
+                currentQuest = quest;
+            }
+            y += 107;
+        }
+
+        private void DrawQuestCard(Rect inRect)
+        {
+            GUI.color = MenuSectionBGBorderColor;
+            Widgets.DrawBox(new Rect(318, 534, 645, 150));
+            GUI.color = Color.white;
+
+            if (currentQuest != null)
+            {
+                if (currentQuest.Options != null)
+                {
+                    int sliderLength = currentQuest.Options.Count * 40;
+                    Rect buttonRect = new Rect(0, 0, 622, sliderLength);
+                    Rect scrollVertRectFact = new Rect(0, 0, inRect.x, sliderLength);
+                    Widgets.BeginScrollView(new Rect(335, 540, 622, 125), ref commButtonsSlider, scrollVertRectFact, false);
+                    //DoButtons(buttonRect);
+                    Widgets.EndScrollView();
+                }
+
+                Widgets.LabelScrollable(new Rect(330, inRect.y, 610, 295), currentQuest.Description, ref commInfoQuestSlider, false, false);
+
+                GUI.color = MenuSectionBGBorderColor;
+                Widgets.DrawLineHorizontal(318, 298, 645);
+                GUI.color = Color.white;
+
+            }
         }
 
         private void InteractionPage(Rect inRect)

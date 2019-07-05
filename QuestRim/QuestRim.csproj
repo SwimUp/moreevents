@@ -60,6 +60,7 @@
     <Compile Include="JobDriver_UseGeoscape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quest.cs" />
+    <Compile Include="QuestAction.cs" />
     <Compile Include="QuestsManager.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="TerminalCommand.cs" />
