@@ -59,7 +59,7 @@
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="JobDriver_UseGeoscape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuestDef.cs" />
+    <Compile Include="Quest.cs" />
     <Compile Include="QuestsManager.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="TerminalCommand.cs" />

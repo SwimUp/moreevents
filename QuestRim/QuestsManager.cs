@@ -15,7 +15,6 @@ namespace QuestRim
                 if(communications == null)
                 {
                     communications = new Communications();
-                    Log.Message("123");
                 }
 
                 return communications;

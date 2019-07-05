@@ -12,11 +12,12 @@ namespace QuestRim
     {
         public Dictionary<string, CommunicationDialog> CommunicationDialogs;
 
-        //public List<Quest> Quests;
+        public List<Quest> Quests;
 
         public Communications()
         {
             CommunicationDialogs = new Dictionary<string, CommunicationDialog>();
+            Quests = new List<Quest>();
         }
 
         public void OpenCommunications(Pawn speaker)
@@ -30,6 +31,17 @@ namespace QuestRim
             {
                 CommunicationDialogs.Remove(id);
             }
+        }
+
+        public void AddQuest(Quest quest)
+        {
+            Quests.Add(quest);
+        }
+
+        public void AddQuest(QuestDef questDef)
+        {
+            Quest quest = new Quest(questDef);
+            Quests.Add(quest);
         }
 
         public void AddCommunication(string uniqueId, string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
@@ -59,6 +71,7 @@ namespace QuestRim
         public void ExposeData()
         {
             Scribe_Collections.Look(ref CommunicationDialogs, "CommunicationDialogs", LookMode.Value, LookMode.Deep);
+            Scribe_Collections.Look(ref Quests, "Quests", LookMode.Deep);
         }
     }
 }
