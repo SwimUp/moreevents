@@ -23,14 +23,6 @@ namespace DiaRim.Actions
             Faction faction2 = Defendant.Faction;
 
             faction2.TryAffectGoodwillWith(faction1, Amount);
-
-            //var relation = faction2.RelationWith(faction1, true);
-
-            //if (relation == null)
-            //    return;
-
-            //relation.goodwill += Amount;
-            //Messages.Message("RelationChangeDialog".Translate(faction2.Name, Amount), MessageTypeDefOf.NeutralEvent, true);
         }
     }
 }

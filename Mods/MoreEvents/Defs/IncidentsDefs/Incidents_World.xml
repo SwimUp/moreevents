@@ -360,7 +360,7 @@
 		<label>Climate bomb detected</label>
 		<letterLabel>Climate bomb detected</letterLabel>
 		<letterText>Location detected climate bomb. Who laid it - is unknown, but one thing is clear: if it is not defused, the climate will go craz</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -448,7 +448,7 @@
 		<label>Siege camp</label>
 		<letterLabel>Siege camp</letterLabel>
 		<letterText>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -520,7 +520,7 @@
 		<label>Mineral meteorite</label>
 		<letterLabel>Landing insanity animals</letterLabel>
 		<letterText>Enemy settlement sent capsules with crazy animals.</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -538,7 +538,7 @@
 		<label>Hungry cannibal raid</label>
 		<letterLabel>Hungry cannibals!</letterLabel>
 		<letterText>A tribe of cannibals attacks the settlement from all sides! They don't need captives, they need human meat</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -557,7 +557,7 @@
 		<letterLabel>Doomsday Ultimatum</letterLabel>
 		<letterText>The enemy faction reports that it has a weapon capable of destroying the planet. She makes demands: 50,000 silver.
 You can start collecting silver together with other factions or organize an assault.</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -575,7 +575,7 @@ You can start collecting silver together with other factions or organize an assa
 		<label>Arsonists</label>
 		<letterLabel>Arsonists</letterLabel>
 		<letterText>Several fighters of the enemy faction have arrived to burn your forest.</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -599,7 +599,7 @@ You can start collecting silver together with other factions or organize an assa
 		<label>Unified raid</label>
 		<letterLabel>Unified raid</letterLabel>
 		<letterText>Two hostile groups decided to join forces and attack the colony.</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+	    <letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>

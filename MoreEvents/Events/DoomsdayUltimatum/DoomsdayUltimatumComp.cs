@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         public DoomsdaySite Parent;
 
         private bool end = false;
+
+        public CommunicationDialog Dialog;
 
         public int PlayerSilver
         {
@@ -112,6 +115,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
             Scribe_Collections.Look(ref CachedFactions, "CachedFactions", LookMode.Reference);
             Scribe_Collections.Look(ref CachedRelations, "CachedRelations", LookMode.Deep);
+
+            Scribe_References.Look(ref Dialog, "CachedDialog");
         }
 
         public override string CompInspectStringExtra()

@@ -51,7 +51,7 @@ namespace QuestRim
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
-            communicationsDialogs = communications.CommunicationDialogs.Values.ToList();
+            communicationsDialogs = communications.CommunicationDialogs;
 
             if (communications.Quests == null)
                 communications.Quests = new List<Quest>();
@@ -349,7 +349,7 @@ namespace QuestRim
         private void DrawQuestCard(Rect inRect)
         {
             GUI.color = MenuSectionBGBorderColor;
-            Widgets.DrawBox(new Rect(318, 534, 645, 150));
+            Widgets.DrawBox(new Rect(318, 534, 646, 150));
             GUI.color = Color.white;
 
             if (currentQuest != null)
@@ -367,7 +367,7 @@ namespace QuestRim
                 Widgets.LabelScrollable(new Rect(330, inRect.y, 610, 295), currentQuest.Description, ref commInfoQuestSlider, false, false);
 
                 GUI.color = MenuSectionBGBorderColor;
-                Widgets.DrawLineHorizontal(318, 298, 645);
+                Widgets.DrawLineHorizontal(318, 298, 646);
                 GUI.color = Color.white;
 
             }

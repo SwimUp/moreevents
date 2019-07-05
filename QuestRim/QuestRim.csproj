@@ -65,6 +65,7 @@
     <Compile Include="Terminal.cs" />
     <Compile Include="TerminalCommand.cs" />
     <Compile Include="TerminalDef.cs" />
+    <Compile Include="UniqueIdManager.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

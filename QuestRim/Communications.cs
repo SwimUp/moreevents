@@ -10,14 +10,17 @@ namespace QuestRim
 {
     public class Communications : IExposable
     {
-        public Dictionary<string, CommunicationDialog> CommunicationDialogs;
+        public List<CommunicationDialog> CommunicationDialogs;
 
         public List<Quest> Quests;
 
+        public UniqueIdManager UniqueIdManager;
+
         public Communications()
         {
-            CommunicationDialogs = new Dictionary<string, CommunicationDialog>();
+            CommunicationDialogs = new List<CommunicationDialog>();
             Quests = new List<Quest>();
+            UniqueIdManager = new UniqueIdManager();
         }
 
         public void OpenCommunications(Pawn speaker)
@@ -25,12 +28,22 @@ namespace QuestRim
             Find.WindowStack.Add(new GeoscapeWindow(this, speaker));
         }
 
-        public void RemoveCommunication(string id)
+        public void RemoveCommunication(int key)
         {
-            if(CommunicationDialogs.ContainsKey(id))
+            for (int i = 0; i < CommunicationDialogs.Count; i++)
             {
-                CommunicationDialogs.Remove(id);
+                CommunicationDialog dialog = CommunicationDialogs[i];
+                if (dialog.id == key)
+                {
+                    CommunicationDialogs.Remove(dialog);
+                    return;
+                }
             }
+        }
+
+        public void RemoveCommunication(CommunicationDialog dialog)
+        {
+            CommunicationDialogs.Remove(dialog);
         }
 
         public void RemoveQuest(Quest quest, EndCondition condition = EndCondition.None, bool showMessage = true)
@@ -85,10 +98,11 @@ namespace QuestRim
             Quests.Add(quest);
         }
 
-        public void AddCommunication(string uniqueId, string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
+        public CommunicationDialog AddCommunication(int id, string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
         {
             CommunicationDialog comDialog = new CommunicationDialog
             {
+                id = id,
                 CardLabel = cardLabel,
                 Description = description,
                 Faction = faction,
@@ -96,22 +110,30 @@ namespace QuestRim
                 Options = options
             };
 
-            CommunicationDialogs.Add(uniqueId, comDialog);
+            CommunicationDialogs.Add(comDialog);
+
+            return comDialog;
         }
 
-        public void AddCommunication(string uniqueId, string cardLabel, string description, Faction faction)
+        public CommunicationDialog AddCommunication(int id, string cardLabel, string description, Faction faction)
         {
-            AddCommunication(uniqueId, cardLabel, description, faction, null);
+            return AddCommunication(id, cardLabel, description, faction, null);
         }
 
-        public void AddCommunication(string uniqueId, string cardLabel, string description)
+        public CommunicationDialog AddCommunication(int id, string cardLabel, string description)
         {
-            AddCommunication(uniqueId, cardLabel, description, null, null, null);
+            return AddCommunication(id, cardLabel, description, null, null, null);
+        }
+
+        public void AddCommunication(CommunicationDialog dialog)
+        {
+            CommunicationDialogs.Add(dialog);
         }
 
         public void ExposeData()
         {
-            Scribe_Collections.Look(ref CommunicationDialogs, "CommunicationDialogs", LookMode.Value, LookMode.Deep);
+            Scribe_Deep.Look(ref UniqueIdManager, "UniqueIdManager");
+            Scribe_Collections.Look(ref CommunicationDialogs, "CommunicationDialogs", LookMode.Deep);
             Scribe_Collections.Look(ref Quests, "Quests", LookMode.Deep);
         }
     }
