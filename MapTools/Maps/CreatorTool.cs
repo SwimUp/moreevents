@@ -174,6 +174,13 @@ namespace TestTools.MapGenerator
                         }
                         else
                         {
+                            if (p.RaceProps.Animal)
+                                p.SetFaction(null);
+                            if (p.RaceProps.FleshType == FleshTypeDefOf.Insectoid)
+                                p.SetFaction(Faction.OfInsects);
+                            if (p.RaceProps.FleshType == FleshTypeDefOf.Mechanoid)
+                                p.SetFaction(Faction.OfMechanoids);
+
                             MapObject newData = new MapObject();
                             newData.key = new ThingData()
                             {

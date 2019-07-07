@@ -16,7 +16,9 @@ namespace QuestRim
         private Vector2 commSliderQuests = Vector2.zero;
         private Vector2 commInfoSlider = Vector2.zero;
         private Vector2 commInfoQuestSlider = Vector2.zero;
-        private Vector2 commButtonsSlider = Vector2.zero;
+        private Vector2 commButtonsCommSlider = Vector2.zero;
+        private Vector2 commButtonsQuestsSlider = Vector2.zero;
+        private Vector2 questRewardSlider = Vector2.zero;
 
         private enum Tab
         {
@@ -48,14 +50,11 @@ namespace QuestRim
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
         private static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
         private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
+        private static readonly Color JumpToLocationColor = new ColorInt(101, 172, 247).ToColor;
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
             communicationsDialogs = communications.CommunicationDialogs;
-
-            if (communications.Quests == null)
-                communications.Quests = new List<Quest>();
-
             quests = communications.Quests;
 
 
@@ -149,8 +148,8 @@ namespace QuestRim
                     int sliderLength = currentDialog.Options.Count * 40;
                     Rect buttonRect = new Rect(0, 0, 622, sliderLength);
                     Rect scrollVertRectFact = new Rect(0, 0, inRect.x, sliderLength);
-                    Widgets.BeginScrollView(new Rect(335, 540, 622, 125), ref commButtonsSlider, scrollVertRectFact, false);
-                    DoButtons(buttonRect);
+                    Widgets.BeginScrollView(new Rect(332, 540, 622, 115), ref commButtonsCommSlider, scrollVertRectFact, false);
+                    DoButtonsComms(buttonRect);
                     Widgets.EndScrollView();
                 }
 
@@ -158,7 +157,7 @@ namespace QuestRim
             }
         }
 
-        private void DoButtons(Rect rect)
+        private void DoButtonsComms(Rect rect)
         {
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(rect);
@@ -326,12 +325,18 @@ namespace QuestRim
             rect2.y += 25;
             if (quest.Target != null)
             {
-                Widgets.Label(rect2, "JumpToLOcation".Translate());
+                GUI.color = JumpToLocationColor;
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.DrawHighlightIfMouseover(rect2);
+                Widgets.Label(rect2, "JumpToLocation".Translate(quest.Target.TryGetPrimaryTarget().ToString()));
                 if(Widgets.ButtonInvisible(rect2))
                 {
                     GlobalTargetInfo target = quest.Target.TryGetPrimaryTarget();
                     CameraJumper.TryJumpAndSelect(target);
+                    Close();
                 }
+                GUI.color = Color.white;
+                Text.Anchor = TextAnchor.UpperLeft;
             }
             Text.Font = GameFont.Small;
             Widgets.DrawHighlightIfMouseover(r);
@@ -359,18 +364,66 @@ namespace QuestRim
                     int sliderLength = currentQuest.Options.Count * 40;
                     Rect buttonRect = new Rect(0, 0, 622, sliderLength);
                     Rect scrollVertRectFact = new Rect(0, 0, inRect.x, sliderLength);
-                    Widgets.BeginScrollView(new Rect(335, 540, 622, 125), ref commButtonsSlider, scrollVertRectFact, false);
-                    //DoButtons(buttonRect);
+                    Widgets.BeginScrollView(new Rect(332, 540, 622, 115), ref commButtonsQuestsSlider, scrollVertRectFact, false);
+                    DoButtonsQuest(buttonRect);
                     Widgets.EndScrollView();
                 }
 
-                Widgets.LabelScrollable(new Rect(330, inRect.y, 610, 295), currentQuest.Description, ref commInfoQuestSlider, false, false);
+                Widgets.LabelScrollable(new Rect(330, inRect.y, 620, 230), currentQuest.Description, ref commInfoQuestSlider, false, false);
 
                 GUI.color = MenuSectionBGBorderColor;
                 Widgets.DrawLineHorizontal(318, 298, 646);
+                Widgets.DrawLineVertical(641, 298, 236);
+                Widgets.DrawLineHorizontal(330, 330, 290);
+                Widgets.DrawLineHorizontal(660, 330, 290);
                 GUI.color = Color.white;
 
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.Label(new Rect(330, 310, 300, 20), "QuestRewards".Translate());
+                Text.Anchor = TextAnchor.UpperLeft;
+                int questSliderLength = currentQuest.Rewards.Count * 30;
+                Rect rewardsRect = new Rect(0, 0, 323, questSliderLength);
+                Rect scrollRewVertRectFact = new Rect(0, 0, inRect.x, questSliderLength);
+                Widgets.BeginScrollView(new Rect(330, 340, 300, 180), ref questRewardSlider, scrollRewVertRectFact, false);
+                DrawQuestRewards(rewardsRect, currentQuest);
+                Widgets.EndScrollView();
+
+                Rect rectAdd = new Rect(660, 340, 300, 180);
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.Label(new Rect(660, 310, 300, 20), "AdditionalQuestContent".Translate());
+                Text.Anchor = TextAnchor.UpperLeft;
+                currentQuest.DrawAdditionalOptions(rectAdd);
             }
+        }
+
+        public void DrawQuestRewards(Rect rect, Quest quest)
+        {
+            Log.Message($"COUNT --> {quest.Rewards.Count}");
+            Text.Font = GameFont.Small;
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(rect);
+            foreach (var reward in quest.Rewards)
+            {
+                listing.Label(reward.Label, 25, reward.DescriptionFlavor);
+            }
+            listing.End();
+        }
+
+        private void DoButtonsQuest(Rect rect)
+        {
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(rect);
+            foreach (var option in currentQuest.Options)
+            {
+                if (listing.ButtonText(option.Label))
+                {
+                    foreach (var action in option.Actions)
+                    {
+                        action.DoAction(currentQuest, speaker, defendant);
+                    }
+                }
+            }
+            listing.End();
         }
 
         private void InteractionPage(Rect inRect)

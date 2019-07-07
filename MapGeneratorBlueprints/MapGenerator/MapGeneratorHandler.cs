@@ -180,13 +180,6 @@ namespace MapGeneratorBlueprints.MapGenerator
                         {
                             Pawn pawn = PawnGenerator.GeneratePawn(data.Kind, faction);
 
-                            if (pawn.RaceProps.Animal && data.Faction == null)
-                                pawn.SetFaction(null);
-                            if (pawn.RaceProps.FleshType == FleshTypeDefOf.Insectoid)
-                                pawn.SetFaction(Faction.OfInsects);
-                            if (pawn.RaceProps.FleshType == FleshTypeDefOf.Mechanoid)
-                                pawn.SetFaction(Faction.OfMechanoids);
-
                             pawn = GenSpawn.Spawn(pawn, pos, map) as Pawn;
 
                             LordJob_DefendPoint lordJob = new LordJob_DefendPoint(pawn.Position);

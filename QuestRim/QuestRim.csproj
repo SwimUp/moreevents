@@ -52,6 +52,7 @@
     <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
     <Compile Include="Building_Geoscape.cs" />
     <Compile Include="CommAction.cs" />
+    <Compile Include="QuestOption.cs" />
     <Compile Include="CommOption.cs" />
     <Compile Include="CommunicationDialog.cs" />
     <Compile Include="Communications.cs" />

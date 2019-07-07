@@ -73,6 +73,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 GeneratePawns(comp, ref enterPos, map);
             }
 
+            comp.Dialog = null;
             QuestsManager.Communications.RemoveCommunication(comp.Dialog);
         }
 

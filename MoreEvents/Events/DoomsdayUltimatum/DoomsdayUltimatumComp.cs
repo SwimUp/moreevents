@@ -74,6 +74,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             base.CompTick();
 
+            if (Parent != null && Parent.Weapon.WeaponDeactivated)
+                return;
+
             Timer--;
 
             if (!end && Timer <= 0)

@@ -117,7 +117,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public override bool CanLeave()
         {
-            if (GenHostility.AnyHostileActiveThreatToPlayer(this.Map))
+            if (AnyHostileOnMap(this.Map, Faction))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
@@ -128,6 +128,16 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 Messages.Message(Translator.Translate("WeaponDeactivated"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
             }
+
+            return true;
+        }
+
+        private bool AnyHostileOnMap(Map map, Faction enemyFaction)
+        {
+            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && !p.Dead && p.RaceProps.Humanlike).ToList();
+
+            if (enemyPawns == null || enemyPawns.Count == 0)
+                return false;
 
             return true;
         }

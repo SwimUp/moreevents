@@ -6,7 +6,9 @@
   <QuestTimeout>Time to complete the quest {0} has expired</QuestTimeout>
   <UnlimitedTime>Time left: unlimited</UnlimitedTime>
   <QuestTimer>Time left: {0} days</QuestTimer>
-   <JumpToLOcation>Jump to location</JumpToLOcation>
+  <JumpToLocation>Jump to location ({0})</JumpToLocation>
+  <QuestRewards>Reward</QuestRewards>
+  <AdditionalQuestContent>Additionally</AdditionalQuestContent>
 
   <OpenCommsGeo>Use console</OpenCommsGeo>
   <OpenCommsGeoNoPower>Use console [no power]</OpenCommsGeoNoPower>

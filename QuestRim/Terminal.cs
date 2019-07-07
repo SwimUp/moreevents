@@ -42,6 +42,8 @@ namespace QuestRim
         {
             Commands = new Dictionary<string, TerminalCommand>();
 
+            forcePause = true;
+
             Def = terminalDef;
 
             TerminalText = InitialText;

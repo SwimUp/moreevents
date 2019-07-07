@@ -6,7 +6,9 @@
   <QuestTimeout>Время для выполнения задания {0} истекло</QuestTimeout>
   <UnlimitedTime>Осталось: неограниченно</UnlimitedTime>
   <QuestTimer>Осталось: {0} дней</QuestTimer>
-  <JumpToLOcation>Перейти к месту</JumpToLOcation>
+  <JumpToLocation>Перейти к месту ({0})</JumpToLocation>
+  <QuestRewards>Награда</QuestRewards>
+  <AdditionalQuestContent>Дополнительно</AdditionalQuestContent>
 
   <OpenCommsGeo>Использовать консоль</OpenCommsGeo>
   <OpenCommsGeoNoPower>Использовать консоль [Нет питания]</OpenCommsGeoNoPower>

@@ -11,8 +11,6 @@ namespace MoreEvents.Events
     {
         private EventSettings settings => Settings.EventsSettings["SandStorm"];
 
-        private Map map;
-
         public override void Init()
         {
             if (!settings.Active)
@@ -21,21 +19,24 @@ namespace MoreEvents.Events
                 return;
             }
 
-            map = Find.CurrentMap;
             WeatherDef storm = WeatherDefOfLocal.Sandstorm;
             storm.durationRange = new IntRange(Duration, Duration + 1000);
-            map.weatherManager.TransitionTo(storm);
+            foreach(var map in AffectedMaps)
+                map.weatherManager.TransitionTo(storm);
         }
 
         public override void GameConditionTick()
         {
             base.GameConditionTick();
 
-            if (map.weatherManager.curWeather != WeatherDefOfLocal.Sandstorm)
+            foreach (var map in AffectedMaps)
             {
-                WeatherDef storm = WeatherDefOfLocal.Sandstorm;
-                storm.durationRange = new IntRange(Duration, Duration + 1000);
-                map.weatherManager.TransitionTo(storm);
+                if (map.weatherManager.curWeather != WeatherDefOfLocal.Sandstorm)
+                {
+                    WeatherDef storm = WeatherDefOfLocal.Sandstorm;
+                    storm.durationRange = new IntRange(Duration, Duration + 1000);
+                    map.weatherManager.TransitionTo(storm);
+                }
             }
         }
 
@@ -43,7 +44,8 @@ namespace MoreEvents.Events
         {
             base.End();
 
-            map.weatherDecider.StartNextWeather();
+            foreach (var map in AffectedMaps)
+                map.weatherDecider.StartNextWeather();
         }
     }
 }

@@ -10,17 +10,53 @@ namespace QuestRim
 {
     public class Communications : IExposable
     {
-        public List<CommunicationDialog> CommunicationDialogs;
+        public List<CommunicationDialog> CommunicationDialogs
+        {
+            get
+            {
+                if (communicationDialogs == null)
+                {
+                    communicationDialogs = new List<CommunicationDialog>();
+                }
 
-        public List<Quest> Quests;
+                return communicationDialogs;
+            }
+        }
 
-        public UniqueIdManager UniqueIdManager;
+        public List<Quest> Quests
+        {
+            get
+            {
+                if(quests == null)
+                {
+                    quests = new List<Quest>();
+                }
+
+                return quests;
+            }
+        }
+        public UniqueIdManager UniqueIdManager
+        {
+            get
+            {
+                if(uniqueIdManager == null)
+                {
+                    uniqueIdManager = new UniqueIdManager();
+                }
+
+                return uniqueIdManager;
+            }
+        }
+
+        private List<CommunicationDialog> communicationDialogs;
+        private List<Quest> quests;
+        private UniqueIdManager uniqueIdManager;
 
         public Communications()
         {
-            CommunicationDialogs = new List<CommunicationDialog>();
-            Quests = new List<Quest>();
-            UniqueIdManager = new UniqueIdManager();
+            communicationDialogs = new List<CommunicationDialog>();
+            quests = new List<Quest>();
+            uniqueIdManager = new UniqueIdManager();
         }
 
         public void OpenCommunications(Pawn speaker)
@@ -132,9 +168,9 @@ namespace QuestRim
 
         public void ExposeData()
         {
-            Scribe_Deep.Look(ref UniqueIdManager, "UniqueIdManager");
-            Scribe_Collections.Look(ref CommunicationDialogs, "CommunicationDialogs", LookMode.Deep);
-            Scribe_Collections.Look(ref Quests, "Quests", LookMode.Deep);
+            Scribe_Deep.Look(ref uniqueIdManager, "UniqueIdManager");
+            Scribe_Collections.Look(ref communicationDialogs, "CommunicationDialogs", LookMode.Deep);
+            Scribe_Collections.Look(ref quests, "Quests", LookMode.Deep);
         }
     }
 }
