@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<Quest_RequiredItems>Запрашиваемые ресурсы</Quest_RequiredItems>
+	<Quest_HelpItems_Site>Место передачи ресурсов</Quest_HelpItems_Site>
+	<HowToCheckReqList>Чтобы посмотреть список требуемых предметов откройте подробную информацию.</HowToCheckReqList>
+	<HelpResourcesDescriptionTitle>Фракция {0} запросила ресурсы. Нам нужно отправить караван с необходимыми ресурсами, к этой точке, чтобы передать их.
+
+Список требуемых ресурсов:</HelpResourcesDescriptionTitle>
+	<GiveItemsSuccessTitle>Предметы переданы</GiveItemsSuccessTitle>
+	<GiveItemsSuccess>Вы успешно передали ресурсы. Награда была отправлена к вам на базу транспортными контейнерами.</GiveItemsSuccess>
+	<GiveItemsSuccessTitle2>Предметы переданы</GiveItemsSuccessTitle2>
+	<GiveItemsSuccess2>Вы успешно передали ресурсы. Награда была выдана вашему каравану.</GiveItemsSuccess2>
+	<NotEnoughItemsToQuest>Недостаточно предметов</NotEnoughItemsToQuest>
+	<GiveItemsOption>Передать ресурсы</GiveItemsOption>
+	
+	<Quest_HelpItems_Label>Запрос ресурсов</Quest_HelpItems_Label>
+	<Quest_HelpItems_Description>Фракция {0} запрашивает ресурсы для дальнейшего развития своего поселения, взамен они дадут то, что у них в достатке. \nМы можем собрать караван с необходимыми предметами и направить его к ним.</Quest_HelpItems_Description>
+	
+	<HowToGivePawns>Чтобы помочь поселению, отправьте к точке строительства караван с необходимым количеством пешек.</HowToGivePawns>
+	<Quest_BuildNewBase_Label>Строительство новой базы</Quest_BuildNewBase_Label>
+	<Quest_BuildNewBase_Description>Фракция {0} собирается переехать. Для этого она будет строить новую базу. Чтобы строительство не затянулось, она просит у вас несколько ваших пешек для помощи в строительстве.</Quest_BuildNewBase_Description>
+	<Quest_BuildNewBase_Place>Место строительства {0}</Quest_BuildNewBase_Place>
+</LanguageData>

@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <SuperHeatWave.label>Incredibly hot weather</SuperHeatWave.label>
-  <SuperHeatWave.description>Incredibly strong heat wave overtook the planet. The temperature can rise to 100 degrees!</SuperHeatWave.description>
-  <SuperHeatWave.endMessage>Incredible heat passed</SuperHeatWave.endMessage>
+  <SuperHeatWave.label>Extreme heat</SuperHeatWave.label>
+  <SuperHeatWave.description>Heavy duty heat wave overtook the planet. The temperature can rise to 100 degrees Celsius!</SuperHeatWave.description>
+  <SuperHeatWave.endMessage>Extreme heat has passed.</SuperHeatWave.endMessage>
 
   <BoulderMassHit.label>Meteor Rain</BoulderMassHit.label>
   <BoulderMassHit.description>Meteor Rain! For some time, meteorites will fall to the ground.</BoulderMassHit.description>
   <BoulderMassHit.endMessage>It seems to be all...</BoulderMassHit.endMessage>
 
   <Endlessday.label>Endless day</Endlessday.label>
-  <Endlessday.description>Because of the powerful flash of a star on the planet, it is now day. And nothing more</Endlessday.description>
-  <Endlessday.endMessage>That seems to be all...</Endlessday.endMessage>
+  <Endlessday.description>Because of the powerful flash of a distant star on the planet now is the day. At night too.</Endlessday.description>
+  <Endlessday.endMessage>The cycle of day and night returned to normal</Endlessday.endMessage>
   
   <LeanAtmosphere.label>Lean atmosphere</LeanAtmosphere.label>
-  <LeanAtmosphere.description>As a result of the powerful release of a large amount of energy from the explosion of a star, a part of the planet’s atmosphere burned out. It will change all the climatic conditions on the planet. Expect constant temperature drops</LeanAtmosphere.description>
+  <LeanAtmosphere.description>Due to the release of the colossal amount of energy of a star exploding in the distance, a part of the planet’s atmosphere has burnt out. This has significantly changed the local climatic conditions. The range of temperature fluctuations has increased.</LeanAtmosphere.description>
   <LeanAtmosphere.endMessage></LeanAtmosphere.endMessage>
   
   <RadiationFon.label>Increased Radiation</RadiationFon.label>
-  <RadiationFon.description>Due to the absence of a part of the atmosphere, cosmic radiation leaks onto the planet very easily. We do not recommend to be in an open area.</RadiationFon.description>
+  <RadiationFon.description>Due to the large number of ozone holes, cosmic radiation easily passes through the atmosphere. Frequent presence on the open area is fraught with radiation.</RadiationFon.description>
   <RadiationFon.endMessage></RadiationFon.endMessage>
   
   <NoSun.label>No sun</NoSun.label>
-  <NoSun.description>There are no stars in your system that could warm the planets and give light. Eternal night and cold.</NoSun.description>
+  <NoSun.description>In this system, there are no stars that can heat and illuminate the planets. Endless darkness and extremely low temperatures are ensured.</NoSun.description>
   <NoSun.endMessage></NoSun.endMessage>
   
   <DenseAtmosphere.label>Dense Atmosphere</DenseAtmosphere.label>

@@ -4,8 +4,6 @@
   <MEM_Settings_General>Event configuration</MEM_Settings_General>
   <EventActive>Active?</EventActive>
 
-  <ShipCrash_Title>Ship wreck</ShipCrash_Title>
-  <ShipCrash_Desc>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</ShipCrash_Desc>
   <MinParts_title>Min parts</MinParts_title>
   <MinParts>Minimum generated parts scattered around the map</MinParts>
   <MaxParts_title>Max parts</MaxParts_title>
@@ -31,96 +29,9 @@
   <ShipCargo_Living_MaxSupply_title>Maximum pawns crates</ShipCargo_Living_MaxSupply_title>
   <ShipCargo_Living_MaxSupply>Maximum generated parts scattered around the map</ShipCargo_Living_MaxSupply>
   
-  <Supernova_Title>Supernova explosion</Supernova_Title>
-  <Supernova_Desc>Supernova explosion</Supernova_Desc>
-  
-  <SuperHeatWave_Title>Incredibly hot weather</SuperHeatWave_Title>
-  <SuperHeatWave_Desc>Incredibly strong heat wave overtook the planet. The temperature can rise to 100 degrees!</SuperHeatWave_Desc>
-  
-  <MechanoidPortal_Title>Teleport mechanoids!</MechanoidPortal_Title>
-  <MechanoidPortal_Desc>A mysterious fragment has fallen from the sky, which generates a teleport from which mechanoids appear. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</MechanoidPortal_Desc>
-  
-  <Disease_NeurofibromatousWorm_Title>Neurofibromatous Worms</Disease_NeurofibromatousWorm_Title>
-  <Disease_NeurofibromatousWorm_Desc>Neurofibromatous worms affect parts of the brain that are responsible for vision and hearing, and also affect nerve endings. If they are not cured in time, the colonist will deaf and blind forever!</Disease_NeurofibromatousWorm_Desc>
-  
-  <Disease_Fibrodysplasia_Title>Fibrodysplasia</Disease_Fibrodysplasia_Title>
-  <Disease_Fibrodysplasia_Desc>Some parts of your colonists are covered with pus with an ice crust. If not treated, then part of the body dies completely, and the disease is transmitted to a new</Disease_Fibrodysplasia_Desc>
-  
-  <DestroyRoad_Title>Undermining the road</DestroyRoad_Title>
-  <DestroyRoad_Desc>A small detachment of robbers blew one of the roads.</DestroyRoad_Desc>
-  
-  <BoulderMassHit_Title>Meteor rain</BoulderMassHit_Title>
-  <BoulderMassHit_Desc>Meteor Rain! For some time, meteorites will fall to the ground.</BoulderMassHit_Desc>
-  
-  <BeetleRush_Title>Hive</BeetleRush_Title>
-  <BeetleRush_Desc>Cave beetles dug a tunnel out of their hive. They will go out until you close the passage.</BeetleRush_Desc>
-  
-  <RadiationFon_Title>Increased Radiation</RadiationFon_Title>
-  <RadiationFon_Desc>Due to the absence of a part of the atmosphere, cosmic radiation leaks onto the planet very easily. We do not recommend to be in an open area.</RadiationFon_Desc>
-  
-  <IceStorm_Title>Ice Storm</IceStorm_Title>
-  <IceStorm_Desc>An ice storm overtook you. This storm carries incredible low temperatures and ice fragments. Do not leave the house</IceStorm_Desc>
-  
-  <HeavyAir_Title>Heavy air</HeavyAir_Title>
-  <HeavyAir_Desc>The air flow brought a large amount of heavy gases, they make breathing difficult and poison the body, you need to wait a couple of days</HeavyAir_Desc>
-  
-  <SandStorm_Title>Sand storm</SandStorm_Title>
-  <SandStorm_Desc>A sandstorm is coming. During this time, will be reduced visibility, speed</SandStorm_Desc>
-  
-  <MassiveFire_Title>Massive fire</MassiveFire_Title>
-  <MassiveFire_Desc>A massive fire started in the neighboring land. If it is not put out, it will destroy all the neighboring forests!</MassiveFire_Desc>
-  
-  <Endlessday_Title>Endless day</Endlessday_Title>
-  <Endlessday_Desc>Endless day</Endlessday_Desc>
-  
-  <DenseAtmosphere_Title>Dense Atmosphere</DenseAtmosphere_Title>
-  <DenseAtmosphere_Desc>Dense Atmosphere</DenseAtmosphere_Desc>
-  
-  <ClimateBomb_Title>Climate bomb</ClimateBomb_Title>
-  <ClimateBomb_Desc>Location detected climate bomb. Who laid it - is unknown, but one thing is clear: if it is not defused, the climate will go crazy</ClimateBomb_Desc>
-  
-  <IonizedAtmosphere_Title>Ionized atmosphere</IonizedAtmosphere_Title>
-  <IonizedAtmosphere_Desc>The ionosphere layer is significantly larger than ever. This increases the chance of thunderstorms.</IonizedAtmosphere_Desc>
-  
-  <Earthquake_Title>Earthquake</Earthquake_Title>
-  <Earthquake_Desc>An earthquake began, everyone in the shelter!</Earthquake_Desc>
-  
-  <SiegeCamp_Title>Siege camp</SiegeCamp_Title>
-  <SiegeCamp_Desc>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</SiegeCamp_Desc>
-  
-  <AttackFriendlySettlement_Title>Attack on a friendly settlement</AttackFriendlySettlement_Title>
-  <AttackFriendlySettlement_Desc></AttackFriendlySettlement_Desc>
-  
-  <Constellations_Title>Constellations</Constellations_Title>
-  <Constellations_Desc></Constellations_Desc>
   <EnablePositive_title>Activate positive constellations (1 - yes, 0 - no)</EnablePositive_title>
   <EnablePositive>Activate positive constellations (1 - yes, 0 - no)</EnablePositive>
   <EnableNegative_title>Activate negative constellations (1 - yes, 0 - no)</EnableNegative_title>
   <EnableNegative>Activate negative constellations (1 - yes, 0 - no)</EnableNegative>
-  
-  <MineralMeteorite_Title>Mineral meteorite</MineralMeteorite_Title>
-  <MineralMeteorite_Desc>A large meteorite filled with different rocks, including useful resources, entered the atmosphere.</MineralMeteorite_Desc>
-  
-  <DropAnimalInsanity_Title>Capsules with insane animals</DropAnimalInsanity_Title>
-  <DropAnimalInsanity_Desc>An unknown faction sent us capsules with insane animals. Raise shields!</DropAnimalInsanity_Desc>
-
-  <HungryCannibalRaid_Title>Hungry cannibal raid</HungryCannibalRaid_Title>
-  <HungryCannibalRaid_Desc>A tribe of cannibals attacks the settlement from all sides! They don't need captives, they need human meat</HungryCannibalRaid_Desc>
-  
-  <DoomsdayUltimatum_Title>Doomsday ultimatum</DoomsdayUltimatum_Title>
-  <DoomsdayUltimatum_Desc>The enemy faction reports that it has a weapon capable of destroying the planet. She makes demands: 50,000 silver.
-You can start collecting silver together with other factions or organize an assault.</DoomsdayUltimatum_Desc>
-  
-  <Arsonists_Title>Arsonists</Arsonists_Title>
-  <Arsonists_Desc>Several fighters of the enemy faction have arrived to burn your forest.</Arsonists_Desc>
-  
-  <LeanAtmosphere_Title>Lean atmosphere</LeanAtmosphere_Title>
-  <LeanAtmosphere_Desc>Lean atmosphere</LeanAtmosphere_Desc>
-  
-  <NoSun_Title>No sun</NoSun_Title>
-  <NoSun_Desc>No sun</NoSun_Desc>
-  
-  <UnifiedRaid_Title>Unified raid</UnifiedRaid_Title>
-  <UnifiedRaid_Desc>Two hostile groups decided to join forces and attack the colony.</UnifiedRaid_Desc>
   
 </LanguageData>

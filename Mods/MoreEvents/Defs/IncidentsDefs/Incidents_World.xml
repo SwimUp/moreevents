@@ -224,8 +224,8 @@
 		<minRefireDays>60</minRefireDays>
 		<minDifficulty>1</minDifficulty>
 		<durationDays>
-			<min>3</min>
-			<max>7</max>
+			<min>2</min>
+			<max>5</max>
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
@@ -608,6 +608,48 @@ You can start collecting silver together with other factions or organize an assa
 		<minRefireDays>35</minRefireDays>
 		<baseChance>1.7</baseChance>
 		<earliestDay>80</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Задание: помощь ресурсами -->
+	<IncidentDef>
+		<defName>Quest_ResourceHelp</defName>
+		<label>Request for resources</label>
+		<letterLabel>Request for resources</letterLabel>
+		<letterText>One of the factions is requesting resources to build their settlement.
+
+You can contact them via geocape.
+</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Quest_ResourceHelp</workerClass>
+		<category>Misc</category>
+		<minRefireDays>80</minRefireDays>
+		<baseChance>1.1</baseChance>
+		<earliestDay>60</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Задание: постройка новой базы -->
+	<IncidentDef>
+		<defName>Quest_BuildNewBase</defName>
+		<label>Build a new base</label>
+		<letterLabel>Request for resources</letterLabel>
+		<letterText>The {0} faction is going to build a new base, and it needs help in the form of manpower. They ask you for several colonists for a couple of days.
+
+You can contact them via geocape.
+</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Quest_ResourceHelp</workerClass>
+		<category>Misc</category>
+		<minRefireDays>90</minRefireDays>
+		<baseChance>0.7</baseChance>
+		<earliestDay>77</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	

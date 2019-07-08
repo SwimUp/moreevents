@@ -177,7 +177,7 @@ namespace QuestRim
         private void DrawPawnCard()
         {
             GUI.DrawTexture(new Rect(0, 530, 100, 140), PortraitsCache.Get(speaker, new Vector2(100, 140)));
-            Widgets.Label(new Rect(100, 550, 180, 30), speaker.Name.ToStringFull);
+            Widgets.Label(new Rect(100, 550, 210, 30), speaker.Name.ToStringFull);
             Widgets.DrawLineHorizontal(100, 570, 210);
 
             Text.Font = GameFont.Tiny;
@@ -390,7 +390,7 @@ namespace QuestRim
 
                 Rect rectAdd = new Rect(660, 340, 300, 180);
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(660, 310, 300, 20), "AdditionalQuestContent".Translate());
+                Widgets.Label(new Rect(660, 310, 300, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate() : currentQuest.AdditionalQuestContentString);
                 Text.Anchor = TextAnchor.UpperLeft;
                 currentQuest.DrawAdditionalOptions(rectAdd);
             }
@@ -398,7 +398,6 @@ namespace QuestRim
 
         public void DrawQuestRewards(Rect rect, Quest quest)
         {
-            Log.Message($"COUNT --> {quest.Rewards.Count}");
             Text.Font = GameFont.Small;
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(rect);

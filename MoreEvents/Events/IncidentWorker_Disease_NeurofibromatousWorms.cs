@@ -7,7 +7,7 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_Disease_NeurofibromatousWorms : IncidentWorker
     {
-        private EventSettings settings => Settings.EventsSettings["Disease_NeurofibromatousWorm"];
+        private EventSettings settings => Settings.EventsSettings["Disease_NeurofibromatousWorms"];
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {

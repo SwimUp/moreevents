@@ -15,5 +15,8 @@
     
   <DoomsdayUltimatumCamp.label>Место судного дня</DoomsdayUltimatumCamp.label>
   <DoomsdayUltimatumCamp.description>Здесь расположилась фракция со своим неизвестным оружием, угрожающая уничтожить планету</DoomsdayUltimatumCamp.description>
+     
+  <QuestPlace.label>Место квеста</QuestPlace.label>
+  <QuestPlace.description>Место квеста.</QuestPlace.description>
  
 </LanguageData>

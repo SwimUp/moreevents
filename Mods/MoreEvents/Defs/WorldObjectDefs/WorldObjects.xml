@@ -104,4 +104,19 @@
     </IncidentTargetTags>
   </WorldObjectDef>
   
+  <WorldObjectDef>
+    <defName>QuestPlace</defName>
+    <label>Quest place</label>
+    <description>The quest place.</description>
+    <worldObjectClass>QuestRim.QuestSite</worldObjectClass>
+    <texture>Quests/Quest</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Quests/Quest</expandingIconTexture>
+    <expandingIconPriority>900</expandingIconPriority>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+  
+  
 </Defs>

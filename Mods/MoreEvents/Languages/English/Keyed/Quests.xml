@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<Quest_RequiredItems>Requested resources</Quest_RequiredItems>
+	<Quest_HelpItems_Site>Place of transfer of resources</Quest_HelpItems_Site>
+	<HowToCheckReqList>To view a list of required items, open detailed information.</HowToCheckReqList>
+	<HelpResourcesDescriptionTitle>Faction {0} requested resources. We need to send a caravan with the necessary resources to this point in order to transfer them.
+
+List of required resources:</HelpResourcesDescriptionTitle>
+	<GiveItemsSuccessTitle>Items transferred</GiveItemsSuccessTitle>
+	<GiveItemsSuccess>You have successfully transferred resources. The reward was sent to your base by transport containers.</GiveItemsSuccess>
+	<GiveItemsSuccess2>You have successfully transferred resources. The award was given to your caravan.</GiveItemsSuccess2>
+	<NotEnoughItemsToQuest>Not enough items</NotEnoughItemsToQuest>
+	<GiveItemsOption>Transfer resources</GiveItemsOption>
+	
+	<Quest_HelpItems_Label>Request for resources</Quest_HelpItems_Label>
+	<Quest_HelpItems_Description>The {0} faction asks for resources for the further development of its settlement, in return, they will give what they have in abundance. \nWe can form a caravan with necessary items and send it to them.</Quest_HelpItems_Description>
+</LanguageData>

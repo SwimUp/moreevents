@@ -1,60 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <SuperHeatWave.label>Невероятно горячая погода</SuperHeatWave.label>
-  <SuperHeatWave.description>Невероятно сильная тепловая волна настигла планету. Температура может подняться до 100 градусов!</SuperHeatWave.description>
-  <SuperHeatWave.endMessage>Невероятная жара прошла.</SuperHeatWave.endMessage>
+  <SuperHeatWave.label>Экстремальная жара</SuperHeatWave.label>
+  <SuperHeatWave.description>Сверхмощная тепловая волна настигла планету. Температура может подняться до 100 градусов цельсия!</SuperHeatWave.description>
+  <SuperHeatWave.endMessage>Экстремальная жара прошла.</SuperHeatWave.endMessage>
 
   <BoulderMassHit.label>Метеоритный дождь</BoulderMassHit.label>
-  <BoulderMassHit.description>Метеоритный дождь! В течении некоторого времени метеориты будут падать на землю</BoulderMassHit.description>
-  <BoulderMassHit.endMessage>Кажется, это все...</BoulderMassHit.endMessage>
+  <BoulderMassHit.description>Метеоритный дождь! Ожидайте падения крупных метеоритов.</BoulderMassHit.description>
+  <BoulderMassHit.endMessage>Пронесло, вроде как</BoulderMassHit.endMessage>
 
   <Endlessday.label>Продолжительный день</Endlessday.label>
-  <Endlessday.description>Из-за мощной вспышки звезды на планете теперь день. И ничего больше.</Endlessday.description>
-  <Endlessday.endMessage>Кажется, это все...</Endlessday.endMessage>
+  <Endlessday.description>Из-за мощной вспышки дальней звезды на планете теперь день. Ночью тоже.</Endlessday.description>
+  <Endlessday.endMessage>Цикл дня и ночи нормализовался</Endlessday.endMessage>
   
   <LeanAtmosphere.label>Обедненная атмосфера</LeanAtmosphere.label>
-  <LeanAtmosphere.description>В следствии мощного выброса большого количества энергии от взрыва звезды часть атмосферы планеты выгорела. Это изменит все климатические условия на планете. Ожидайте постоянные перепады температуры.</LeanAtmosphere.description>
+  <LeanAtmosphere.description>Вследствие выброса коллосального количества энергии взорвавшейся в дали звездой часть атмосферы планеты выгорела. Это значительно изменило местные климатические условия. Диапазон колебаний температур вырос.</LeanAtmosphere.description>
   <LeanAtmosphere.endMessage></LeanAtmosphere.endMessage>
   
-  <RadiationFon.label>Повышенная радиация</RadiationFon.label>
-  <RadiationFon.description>Из-за отсутствия части атмосферы космическая радиация очень легко просачивается на планету. Не советуем находиться на улице.</RadiationFon.description>
+  <RadiationFon.label>Повышенный уровень радиации</RadiationFon.label>
+  <RadiationFon.description>Вследствие большого количества озоновых дыр космическая радиация легко проходит через атмосферу. Частое нахождение на уличе чревато облучением.</RadiationFon.description>
   <RadiationFon.endMessage></RadiationFon.endMessage>
   
-  <NoSun.label>Нет небесного светила</NoSun.label>
-  <NoSun.description>В вашей системе нет звезд, которые могли бы обогревать планеты и давать свет. Вечная ночь и холод.</NoSun.description>
+  <NoSun.label>Нет звезды</NoSun.label>
+  <NoSun.description>В данной системе нет звезд, способных обогревать и освещать планеты. Нескончаемая тьма и экстремально низкие температуры обеспечены.</NoSun.description>
   <NoSun.endMessage></NoSun.endMessage>
   
   <DenseAtmosphere.label>Плотная атмосфера</DenseAtmosphere.label>
-  <DenseAtmosphere.description>На планете очень плотная атмосфера, что приводит к парниковому эффекту.</DenseAtmosphere.description>
+  <DenseAtmosphere.description>На планете очень плотная атмосфера, что привело к парниковому эффекту.</DenseAtmosphere.description>
   <DenseAtmosphere.endMessage></DenseAtmosphere.endMessage>
   
   <IceStorm.label>Ледяной шторм</IceStorm.label>
-  <IceStorm.description>Ледяной шторм настиг вас. Этот шторм несет невероятные низкие температуры и ледяные осколоки. Не выходите из дома</IceStorm.description>
+  <IceStorm.description>Начался ледяной шторм. Он несет невероятные низкие температуры и ледяные осколоки. Ближайшее время не следует выходить на улицу.</IceStorm.description>
   <IceStorm.endMessage>Ледяной шторм прекратился</IceStorm.endMessage>
   
   <HeavyAir.label>Тяжелый воздух</HeavyAir.label>
-  <HeavyAir.description>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм, нужно переждать пару дней</HeavyAir.description>
-  <HeavyAir.endMessage>Кажется основная часть тяжелых элементов была унесена</HeavyAir.endMessage>
+  <HeavyAir.description>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм. На улицу только с противогазом.</HeavyAir.description>
+  <HeavyAir.endMessage>Воздух стал чище</HeavyAir.endMessage>
    
-  <WetAir.label>Влажный воздух</WetAir.label>
-  <WetAir.description>Пришел воздух наполненный частицами воды. Нахождение на улице даст незамедлительное обморожение легких, а постройки начнут портиться</WetAir.description>
-  <WetAir.endMessage>Вода в воздухе превратилась в лёд</WetAir.endMessage>
-  
   <SandStorm.label>Песчаная буря</SandStorm.label>
-  <SandStorm.description>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm.description>
-  <SandStorm.endMessage>Песчаная буря закончилась</SandStorm.endMessage>
+  <SandStorm.description>Песчаная буря близко. Буря снизит видимость и скорость передвижения.</SandStorm.description>
+  <SandStorm.endMessage>Песчаная буря прекратилась</SandStorm.endMessage>
   
   <ClimateChaos.label>Климатический хаос</ClimateChaos.label>
-  <ClimateChaos.description>Из-за мощного выброса энергии произошел климатический сдвиг. Постоянная смена погоды и погодные катаклизмы.</ClimateChaos.description>
-  <ClimateChaos.endMessage>Погода приходит в норму</ClimateChaos.endMessage>  
+  <ClimateChaos.description>Произошел климатический сдвиг. Ожидаются катаклизмы и хаотичная смена погоды.</ClimateChaos.description>
+  <ClimateChaos.endMessage>Климат нормализируется</ClimateChaos.endMessage>  
   
   <IonizedAtmosphere.label>Ионизированная атмосфера</IonizedAtmosphere.label>
-  <IonizedAtmosphere.description>Ионосферный слой значительно больше, чем когда-либо. Это увеличивает вероятность грозы.</IonizedAtmosphere.description>
-  <IonizedAtmosphere.endMessage>Ионосферный слов уменьшился</IonizedAtmosphere.endMessage>  
+  <IonizedAtmosphere.description>Ионосферный слой уплотнился, ожидаются грозы.</IonizedAtmosphere.description>
+  <IonizedAtmosphere.endMessage>Ионосферный слой нормализировался</IonizedAtmosphere.endMessage>  
   
   <Earthquake.label>Землетрясение</Earthquake.label>
-  <Earthquake.description>Началось землетрясение, всем в укрытие!</Earthquake.description>
-  <Earthquake.endMessage>Землетрясение закончилось</Earthquake.endMessage>  
+  <Earthquake.description>Началось землетрясение, всем на улицу!</Earthquake.description>
+  <Earthquake.endMessage>Землетрясение прекратилось</Earthquake.endMessage>  
   
 </LanguageData>

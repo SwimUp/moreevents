@@ -11,6 +11,7 @@ using Verse;
 
 namespace MoreEvents.Events.MassiveFire
 {
+    [StaticConstructorOnStartup]
     public class MassiveFireMapSite : MapParent
     {
         public override Material Material

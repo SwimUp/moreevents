@@ -24,37 +24,6 @@ namespace MoreEvents.Events
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            Quest_HelpResources quest = new Quest_HelpResources();
-            quest.Target = Find.WorldObjects.AllWorldObjects.RandomElement();
-            ThingSetMakerParams parms2 = default(ThingSetMakerParams);
-            parms2.countRange = new IntRange(6, 40);
-            parms2.totalMarketValueRange = new FloatRange(3000, 15000);
-            quest.Rewards = ThingSetMakerDefOf.Reward_ItemStashQuestContents.root.Generate(parms2);
-            quest.Options = new List<QuestOption>();
-            quest.Options.Add(new QuestOption()
-            {
-                Label = "wqeqe"
-            });
-            quest.Options.Add(new QuestOption()
-            {
-                Label = "wqeqe"
-            });
-            quest.Options.Add(new QuestOption()
-            {
-                Label = "wqeqe"
-            });
-            quest.Options.Add(new QuestOption()
-            {
-                Label = "wqeqe"
-            });
-            quest.Options.Add(new QuestOption()
-            {
-                Label = "123"
-            });
-
-
-            QuestsManager.Communications.AddQuest(quest);
-
             if (!settings.Active)
                 return false;
 

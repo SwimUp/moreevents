@@ -2,7 +2,7 @@
 <LanguageData>
 
   <QuestFail>Quest {0} failed</QuestFail>
-  <QuestSuccess>Quest {1} completed</QuestSuccess>
+  <QuestSuccess>Quest {0} completed</QuestSuccess>
   <QuestTimeout>Time to complete the quest {0} has expired</QuestTimeout>
   <UnlimitedTime>Time left: unlimited</UnlimitedTime>
   <QuestTimer>Time left: {0} days</QuestTimer>

@@ -3,55 +3,55 @@
 
   <Supernova.label>Взрыв сверхновой</Supernova.label>
   <Supernova.letterLabel>Взрыв сверхновой</Supernova.letterLabel>
-  <Supernova.letterText>Взрыв сверхновой</Supernova.letterText>
+  <Supernova.letterText>Произошел взрыв сверхновой</Supernova.letterText>
   
-  <SuperHeatWave.label>Невероятно жаркая погода</SuperHeatWave.label>
-  <SuperHeatWave.letterLabel>Невероятно жаркая погода</SuperHeatWave.letterLabel>
-  <SuperHeatWave.letterText>Невероятно сильная тепловая волна настигла планету. Температура может подняться до 100 градусов!</SuperHeatWave.letterText>
+  <SuperHeatWave.label>Экстремальная жара</SuperHeatWave.label>
+  <SuperHeatWave.letterLabel>Экстремальная жара</SuperHeatWave.letterLabel>
+  <SuperHeatWave.letterText>Сверхмощная тепловая волна настигла планету. Температура может подняться до 100 градусов цельсия!</SuperHeatWave.letterText>
   
   <BoulderMassHit.label>Метеоритный дождь</BoulderMassHit.label>
   <BoulderMassHit.letterLabel>Метеоритный дождь</BoulderMassHit.letterLabel>
-  <BoulderMassHit.letterText>Метеоритный дождь! В течении некоторого времени метеориты будут падать на землю</BoulderMassHit.letterText>
+  <BoulderMassHit.letterText>Метеоритный дождь! Ожидайте падения крупных метеоритов.</BoulderMassHit.letterText>
   
   <Endlessday.label>Продолжительный день</Endlessday.label>
-  <Endlessday.letterLabel>Бесконечный день</Endlessday.letterLabel>
-  <Endlessday.letterText>Из-за мощной вспышки звезды на планете теперь день. И ничего больше.</Endlessday.letterText>
+  <Endlessday.letterLabel>Продолжительный день</Endlessday.letterLabel>
+  <Endlessday.letterText>Из-за мощной вспышки дальней звезды на планете теперь день. Ночью тоже.</Endlessday.letterText>
   
   <LeanAtmosphere.label>Обедненная атмосфера</LeanAtmosphere.label>
   <LeanAtmosphere.letterLabel>Обедненная атмосфера</LeanAtmosphere.letterLabel>
-  <LeanAtmosphere.letterText>В следствии мощного выброса большого количества энергии от взрыва звезды часть атмосферы планеты выгорела. Это изменит все климатические условия на планете. Ожидайте постоянные перепады температуры</LeanAtmosphere.letterText>
+  <LeanAtmosphere.letterText>Вследствие выброса коллосального количества энергии взорвавшейся в дали звездой часть атмосферы планеты выгорела. Это значительно изменило местные климатические условия. Диапазон колебаний температур вырос.</LeanAtmosphere.letterText>
 
-  <RadiationFon.label>Повышенная радиация</RadiationFon.label>
-  <RadiationFon.letterLabel>Повышенная радиация</RadiationFon.letterLabel>
-  <RadiationFon.letterText>Из-за отсутствия части атмосферы космическая радиация очень легко просачивается на планету. Не советуем находиться на улице.</RadiationFon.letterText>
+  <RadiationFon.label>Повышенный уровень радиации</RadiationFon.label>
+  <RadiationFon.letterLabel>Повышенный уровень радиации</RadiationFon.letterLabel>
+  <RadiationFon.letterText>Вследствие большого количества озоновых дыр космическая радиация легко проходит через атмосферу. Частое нахождение на уличе чревато облучением.</RadiationFon.letterText>
 
   <NoSun.label>Нет звезды</NoSun.label>
   <NoSun.letterLabel>Нет звезды</NoSun.letterLabel>
-  <NoSun.letterText>Нет звезды</NoSun.letterText>
+  <NoSun.letterText>В данной системе нет звезд, способных обогревать и освещать планеты. Нескончаемая тьма и экстремально низкие температуры обеспечены.</NoSun.letterText>
   
   <DenseAtmosphere.label>Плотная атмосфера</DenseAtmosphere.label>
   <DenseAtmosphere.letterLabel>Плотная атмосфера</DenseAtmosphere.letterLabel>
-  <DenseAtmosphere.letterText>Плотная атмосфера</DenseAtmosphere.letterText>
+  <DenseAtmosphere.letterText>На планете очень плотная атмосфера, что привело к парниковому эффекту.</DenseAtmosphere.letterText>
   
   <IceStorm.label>Ледяной шторм</IceStorm.label>
   <IceStorm.letterLabel>Ледяной шторм</IceStorm.letterLabel>
-  <IceStorm.letterText>Ледяной шторм настиг вас. Этот шторм несет невероятные низкие температуры и ледяные осколоки. Не выходите из дома</IceStorm.letterText>
+  <IceStorm.letterText>Начался ледяной шторм. Он несет невероятные низкие температуры и ледяные осколоки. Ближайшее время не следует выходить на улицу.</IceStorm.letterText>
   
   <HeavyAir.label>Тяжелый воздух</HeavyAir.label>
   <HeavyAir.letterLabel>Тяжелый воздух</HeavyAir.letterLabel>
-  <HeavyAir.letterText>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм, нужно переждать пару дней</HeavyAir.letterText>
+  <HeavyAir.letterText>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм. На улицу только с противогазом.</HeavyAir.letterText>
   
   <MechanoidPortal.label>Телепортер механойдов!</MechanoidPortal.label>
   <MechanoidPortal.letterLabel>Телепортер механойдов</MechanoidPortal.letterLabel>
-  <MechanoidPortal.letterText>С неба обрушился загадочный обломок, который генерирует телепорт из которого появляются механойды. Сам портал не уничтожить, но если уничтожить генератор, то и портал пропадет. Вероятно, для этого потребуется взрывчатка.</MechanoidPortal.letterText>
+  <MechanoidPortal.letterText>На вашу территорию упал загадочный обломок генерирующий телепорт, из которого без остановки появляются механойды. Телепорт не уничтожаем, однако его можно вывести из строя повредив генератор находящийся в упавшем обломке. Похоже, для этого потребуется взрывчатка.</MechanoidPortal.letterText>
 
   <BeetleRush.label>Улей!</BeetleRush.label>
   <BeetleRush.letterLabel>Улей!</BeetleRush.letterLabel>
-  <BeetleRush.letterText>Пещерные жуки прокопали тоннель из своего улья наружу. Они будут выходить наружу до тех пор, пока вы не закроете проход.</BeetleRush.letterText>
+  <BeetleRush.letterText>Пещерные жуки прокопали тоннель из своего улья наружу. Если не завалить тоннель, то вскоре все вокруг будет кишеть жуками.</BeetleRush.letterText>
 
   <DestroyRoad.label>Подрыв дороги</DestroyRoad.label>
   <DestroyRoad.letterLabel>Подрыв дороги</DestroyRoad.letterLabel>
-  <DestroyRoad.letterText>Небольшой отряд разбойников взорвал одну из дорог.</DestroyRoad.letterText>
+  <DestroyRoad.letterText>Неизвестный отряд совершил подрыв дороги.</DestroyRoad.letterText>
 
   <ShipCrash.label>Крущение корабля</ShipCrash.label>
   <ShipCrash.letterLabel>Крушение корабля</ShipCrash.letterLabel>
@@ -59,43 +59,43 @@
 
   <SandStorm.label>Песчаная буря</SandStorm.label>
   <SandStorm.letterLabel>Песчаная буря</SandStorm.letterLabel>
-  <SandStorm.letterText>Надвигается песчаная буря. В течении этого времени будет снижена видимость, скорость движения</SandStorm.letterText>
+  <SandStorm.letterText>Песчаная буря близко. Буря снизит видимость и скорость передвижения.</SandStorm.letterText>
   
-  <MassiveFire.label>Массивный пожар</MassiveFire.label>
-  <MassiveFire.letterLabel>Массивный пожар</MassiveFire.letterLabel>
-  <MassiveFire.letterText>На соседней земле начался массивный пожар. Если его не потушить, то он уничтожит все соседние леса!</MassiveFire.letterText>
+  <MassiveFire.label>Масштабный пожар</MassiveFire.label>
+  <MassiveFire.letterLabel>Масштабный пожар</MassiveFire.letterLabel>
+  <MassiveFire.letterText>На соседней земле начался масштабный пожар. Если его не потушить, то пламя охватит все соседние леса!</MassiveFire.letterText>
   
   <ClimateBomb.label>Обнаружена климатическая бомба</ClimateBomb.label>
   <ClimateBomb.letterLabel>Обнаружена климатическая бомба</ClimateBomb.letterLabel>
-  <ClimateBomb.letterText>Обнаружено местоположение климатической бомбы. Кто её заложил - неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума</ClimateBomb.letterText>
+  <ClimateBomb.letterText>Обнаружено местоположение климатической бомбы. Кто её заложил - неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума.</ClimateBomb.letterText>
   
   <ClimateChaos.label>Климатический хаос</ClimateChaos.label>
   <ClimateChaos.letterLabel>Климатический хаос</ClimateChaos.letterLabel>
-  <ClimateChaos.letterText>Из-за мощного выброса энергии произошел климатический сдвиг. Постоянная смена погоды и погодные катаклизмы.</ClimateChaos.letterText>
+  <ClimateChaos.letterText>Произошел климатический сдвиг. Ожидаются катаклизмы и хаотичная смена погоды.</ClimateChaos.letterText>
   
   <IonizedAtmosphere.label>Ионизированная атмосфера</IonizedAtmosphere.label>
   <IonizedAtmosphere.letterLabel>Ионизированная атмосфера</IonizedAtmosphere.letterLabel>
-  <IonizedAtmosphere.letterText>Ионосферный слой значительно больше, чем когда-либо. Это увеличивает вероятность грозы.</IonizedAtmosphere.letterText>  
+  <IonizedAtmosphere.letterText>Ионосферный слой уплотнился, ожидаются грозы.</IonizedAtmosphere.letterText>  
   
   <Earthquake.label>Землетрясение</Earthquake.label>
   <Earthquake.letterLabel>Землетрясение</Earthquake.letterLabel>
-  <Earthquake.letterText>Началось землетрясение, всем в укрытие!</Earthquake.letterText>  
+  <Earthquake.letterText>Началось землетрясение, всем на улицу!</Earthquake.letterText>  
   
   <SiegeCamp.label>Осадный лагерь</SiegeCamp.label>
   <SiegeCamp.letterLabel>Осадный лагерь</SiegeCamp.letterLabel>
-  <SiegeCamp.letterText>Недалеко от вас был разбит вражеский лагерь. Они будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы его не уничтожите.</SiegeCamp.letterText>  
+  <SiegeCamp.letterText>Недалеко от вас основали осадную позицию. Ее основатели будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы что-то не предпримите по отношению к ним.</SiegeCamp.letterText>  
   
-  <AttackFriendlySettlement.label>Нападение на дружественное поселение</AttackFriendlySettlement.label>
-  <AttackFriendlySettlement.letterLabel>Нападение на дружественное поселение</AttackFriendlySettlement.letterLabel>
-  <AttackFriendlySettlement.letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</AttackFriendlySettlement.letterText>  
+  <AttackFriendlySettlement.label>Нападение на союзное поселение</AttackFriendlySettlement.label>
+  <AttackFriendlySettlement.letterLabel>Нападение на союзное поселение</AttackFriendlySettlement.letterLabel>
+  <AttackFriendlySettlement.letterText>Союзное поселение докладывает, что их собираются атаковать. Они просят вас помочь в обороне.</AttackFriendlySettlement.letterText>  
   
   <MineralMeteorite.label>Падение метеорита</MineralMeteorite.label>
   <MineralMeteorite.letterLabel>Падение метеорита</MineralMeteorite.letterLabel>
-  <MineralMeteorite.letterText>Большой метеорит наполненный разными породами, в том числе полезными ресурсами вошел в атмосферу.</MineralMeteorite.letterText>  
+  <MineralMeteorite.letterText>Большой разнопородный метеорит вошел в атмосферу.</MineralMeteorite.letterText>  
   
   <DropAnimalInsanity.label>Капсулы с бешеными животными!</DropAnimalInsanity.label>
   <DropAnimalInsanity.letterLabel>Капсулы с бешеными животными!</DropAnimalInsanity.letterLabel>
-  <DropAnimalInsanity.letterText>Неизвестная фракция отправила на нас капсулы с бешеными животными. Поднять щиты!</DropAnimalInsanity.letterText>  
+  <DropAnimalInsanity.letterText>Неизвестная фракция запустила в вашу сторону капсулы с бешеными животными. Животные это не вооруженный десант, однако не стоит их недооценивать.</DropAnimalInsanity.letterText>  
   
   <HungryCannibalRaid.label>Рейд голодных каннибалов</HungryCannibalRaid.label>
   <HungryCannibalRaid.letterLabel>Рейд голодных каннибалов</HungryCannibalRaid.letterLabel>
@@ -103,7 +103,7 @@
   
   <DoomsdayUltimatum.label>Ультиматум судного дня</DoomsdayUltimatum.label>
   <DoomsdayUltimatum.letterLabel>Ультиматум судного дня</DoomsdayUltimatum.letterLabel>
-  <DoomsdayUltimatum.letterText>Фракция противника сообщает, что у нее есть оружие, способное уничтожить планету. 
+  <DoomsdayUltimatum.letterText>Фракция противника сообщает, что имеет оружие, способное уничтожить планету.
 Она предъявляет требования: 50 000 серебра.
 Вы можете начать собирать серебро вместе с другими фракциями или организовать штурм.</DoomsdayUltimatum.letterText>  
   
@@ -114,5 +114,11 @@
   <UnifiedRaid.label>Объединенный рейд</UnifiedRaid.label>
   <UnifiedRaid.letterLabel>Объединенный рейд</UnifiedRaid.letterLabel>
   <UnifiedRaid.letterText>Две враждебные группировки решили объединить свои силы и атаковать колонию</UnifiedRaid.letterText>  
+  
+  <Quest_ResourceHelp.label>Запрос ресурсов</Quest_ResourceHelp.label>
+  <Quest_ResourceHelp.letterLabel>Запрос ресурсов</Quest_ResourceHelp.letterLabel>
+  <Quest_ResourceHelp.letterText>Одна из фракций запрашивает ресурсы для строительства своего поселения.
+
+Вы можете связаться с ними через планетарную консоль связи</Quest_ResourceHelp.letterText>  
   
 </LanguageData>

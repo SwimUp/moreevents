@@ -9,6 +9,8 @@ namespace QuestRim
     public class UniqueIdManager : IExposable
     {
         private int nextDialogid;
+        private int nextQuestId;
+        private int nextComponentId;
 
         private static int GetNextID(ref int nextID)
         {
@@ -30,9 +32,21 @@ namespace QuestRim
             return GetNextID(ref nextDialogid);
         }
 
+        public int GetNextQuestID()
+        {
+            return GetNextID(ref nextQuestId);
+        }
+
+        public int GetNextComponentID()
+        {
+            return GetNextID(ref nextComponentId);
+        }
+
         public void ExposeData()
         {
             Scribe_Values.Look(ref nextDialogid, "nextDialogid", 0);
+            Scribe_Values.Look(ref nextQuestId, "nextQuestId", 0);
+            Scribe_Values.Look(ref nextComponentId, "nextComponentId", 0);
         }
     }
 }

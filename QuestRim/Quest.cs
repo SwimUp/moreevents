@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,37 @@ namespace QuestRim
         None
     };
 
-    public abstract class Quest : IExposable
+    public abstract class Quest : IExposable, ILoadReferenceable
     {
-        public string UniqueId;
+        public int id;
+
+        public abstract string AdditionalQuestContentString { get; }
 
         public abstract string CardLabel { get; }
         public abstract string Description { get; }
+
+        public virtual string ExpandingIconPath { get; }
+
+        public virtual Texture2D ExpandingIcon
+        {
+            get
+            {
+                if (expandingIcon == null)
+                {
+                    if (ExpandingIconPath.NullOrEmpty())
+                    {
+                        return null;
+                    }
+
+                    expandingIcon = ContentFinder<Texture2D>.Get(ExpandingIconPath);
+                }
+
+                return expandingIcon;
+            }
+        }
+        private Texture2D expandingIcon = null;
+
+        public virtual string PlaceLabel { get; }
 
         public Faction Faction;
         public LookTargets Target;
@@ -39,19 +65,24 @@ namespace QuestRim
                 TicksToPass--;
                 if (TicksToPass <= 0)
                 {
-                    EndQuest(EndCondition.Timeout);
+                    EndQuest(null, EndCondition.Timeout);
                 }
             }
         }
 
-        public virtual void EndQuest(EndCondition condition = EndCondition.None)
+        public virtual void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
         {
-            for (int i = 0; i < Rewards.Count; i++)
-            {
-                Rewards[i].Destroy();
-            }
+            if(condition == EndCondition.Success)
+                GiveRewards(caravan);
 
             QuestsManager.Communications.RemoveQuest(this, condition);
+        }
+
+        public virtual void GiveRewards(Caravan caravan)
+        {
+            Map map = Find.AnyPlayerHomeMap;
+            IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
+            DropPodUtility.DropThingsNear(intVec, map, Rewards, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
         }
 
         public virtual void DrawAdditionalOptions(Rect rect)
@@ -59,15 +90,40 @@ namespace QuestRim
 
         }
 
+        public virtual IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
+        {
+            yield break;
+        }
+
+        public virtual IEnumerable<FloatMenuOption> GetTransportPodsFloatMenuOptions(IEnumerable<IThingHolder> pods, CompLaunchable representative)
+        {
+            yield break;
+        }
+
+        public virtual string GetInspectString()
+        {
+            return null; ;
+        }
+
         public virtual void ExposeData()
         {
-            Scribe_Values.Look(ref UniqueId, "UniqueId");
+            Scribe_Values.Look(ref id, "id");
             Scribe_Values.Look(ref TicksToPass, "TicksToPass");
             Scribe_Values.Look(ref UnlimitedTime, "UnlimitedTime");
             Scribe_References.Look(ref Faction, "Faction");
             Scribe_Deep.Look(ref Target, "Target");
             Scribe_Collections.Look(ref Options, "Options", LookMode.Deep);
             Scribe_Collections.Look(ref Rewards, "Rewards", LookMode.Deep);
+        }
+
+        public virtual string GetDescription()
+        {
+            return null;
+        }
+
+        public string GetUniqueLoadID()
+        {
+            return "Quest_" + id;
         }
     }
 }

@@ -43,7 +43,7 @@ namespace QuestRim
                         }
                         catch (Exception ex)
                         {
-                            Log.Error($"Exception ticking {quests[i].UniqueId} --> {ex}");
+                            Log.Error($"Exception ticking {quests[i].id} --> {ex}");
                         }
                     }
                 }
