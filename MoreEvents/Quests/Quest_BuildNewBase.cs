@@ -1,16 +1,17 @@
 ﻿using QuestRim;
+using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace MoreEvents.Quests
 {
     public class Quest_BuildNewBase : Quest
     {
-        public override string AdditionalQuestContentString => "HowToGivePawns".Translate();
-
         public override string CardLabel => "Quest_BuildNewBase_Label".Translate();
 
         public override string Description => "Quest_BuildNewBase_Description".Translate(Faction);
@@ -21,6 +22,63 @@ namespace MoreEvents.Quests
 
         public int PawnsRequired;
         public int TicksToEnd;
+        public bool Entered = false;
+        public List<Pawn> EnteredPawns = new List<Pawn>();
+        public QuestSite Site;
+        public Settlement OldSettlement;
 
+        public override void SiteTick()
+        {
+            if(Entered)
+            {
+                TicksToEnd--;
+
+                if(TicksToEnd <= 0)
+                {
+                    Site.EndQuest(null, EndCondition.Success);
+                }
+            }
+        }
+
+        public override string GetInspectString()
+        {
+            return "HowToGivePawns".Translate(PawnsRequired, GenDate.TicksToDays(TicksToEnd).ToString("f2"));
+        }
+
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
+        {
+            CaravanArrivalAction_HelpWithBuildings caravanAction = new CaravanArrivalAction_HelpWithBuildings(mapParent, this);
+            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction.CanHelp(caravan, mapParent), () => caravanAction, "Quest_HelpWithBuilding_Option".Translate(), caravan, mapParent.Tile, mapParent);
+        }
+
+        public override void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
+        {
+            base.EndQuest(caravan, condition);
+
+            CaravanMaker.MakeCaravan(EnteredPawns, RimWorld.Faction.OfPlayer, Site.Tile, false);
+
+            Find.LetterStack.ReceiveLetter("BuildingSeccessEndTitle".Translate(), "BuildingSeccessEnd".Translate(Faction.Name), LetterDefOf.PositiveEvent);
+
+            Faction.TryAffectGoodwillWith(Faction.OfPlayer, 20);
+
+            OldSettlement.Tile = Site.Tile;
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_References.Look(ref Site, "Site");
+            Scribe_References.Look(ref OldSettlement, "OldSettlement");
+            Scribe_Collections.Look(ref EnteredPawns, "Pawns", LookMode.Reference);
+            Scribe_Values.Look(ref Entered, "Entered");
+            Scribe_Values.Look(ref TicksToEnd, "TicksToEnd");
+            Scribe_Values.Look(ref PawnsRequired, "PawnsRequired");
+        }
+
+        public override void DrawAdditionalOptions(Rect rect)
+        {
+            Widgets.Label(rect, "PawnsRequired".Translate(PawnsRequired));
+        }
     }
 }

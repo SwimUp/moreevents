@@ -30,5 +30,6 @@
   <DiscussWithOtherFactions>Discuss the event with other factions.</DiscussWithOtherFactions>
   <DoomsdayCardLabel>End of the world</DoomsdayCardLabel>
   <DoomsdayDesc>The {0} faction gathered to arrange a kawabanga on this planet. We can try to collect the missing amount, or maybe other factions will be able to help in the raid on their base?</DoomsdayDesc>
+  <AdditionalContent>Additional Information</AdditionalContent>
   
 </LanguageData>

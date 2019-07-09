@@ -62,10 +62,24 @@ namespace QuestRim
             }
         }
 
+        public FactionManager FactionManager
+        {
+            get
+            {
+                if (factionManager == null)
+                {
+                    factionManager = new FactionManager();
+                }
+
+                return factionManager;
+            }
+        }
+
         private List<CommunicationDialog> communicationDialogs;
         private List<Quest> quests;
         private UniqueIdManager uniqueIdManager;
         private List<CommunicationComponent> components;
+        private FactionManager factionManager;
 
         public Communications()
         {
@@ -221,6 +235,7 @@ namespace QuestRim
         public void ExposeData()
         {
             Scribe_Deep.Look(ref uniqueIdManager, "UniqueIdManager");
+            Scribe_Deep.Look(ref factionManager, "FactionManager");
             Scribe_Collections.Look(ref communicationDialogs, "CommunicationDialogs", LookMode.Deep);
             Scribe_Collections.Look(ref quests, "Quests", LookMode.Deep);
             Scribe_Collections.Look(ref components, "components", LookMode.Deep);

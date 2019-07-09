@@ -19,9 +19,9 @@ namespace MoreEvents.Quests
         public Quest_ThingsHelp Quest => quest;
         private Quest_ThingsHelp quest;
 
-        public override string Label => "GiveRansom".Translate();
+        public override string Label => "GiveItemsOption".Translate();
 
-        public override string ReportString => "PaidSuccessDoom".Translate();
+        public override string ReportString => "GiveItemsSuccessTitle".Translate();
 
         public CaravanArrivalAction_GiveItems()
         {

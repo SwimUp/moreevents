@@ -289,12 +289,26 @@ namespace MoreEvents
             }
         };
 
+        private static int length = 0;
+
+        static Settings()
+        {
+            foreach(var setting in EventsSettings)
+            {
+                length += 40;
+                foreach(var param in setting.Value.Parameters)
+                {
+                    length += 25;
+                }
+            }
+        }
+
         public static void DoSettingsWindowContents(Rect inRect)
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
             listing_Standard.GapLine();
-            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, 2300);
+            Rect mainScrollVertRect = new Rect(0, 0, inRect.x, length);
             listing_Standard.BeginScrollView(inRect, ref scroll, ref mainScrollVertRect);
             listing_Standard.Label(Translator.Translate("MEM_Settings_General"));
             listing_Standard.GapLine();

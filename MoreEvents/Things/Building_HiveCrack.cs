@@ -12,8 +12,6 @@ namespace MoreEvents.Things
 {
     public class Building_HiveCrack : Building
     {
-        private Map currentMap;
-
         private bool giveBuff = false;
 
         private Lord lord = null;
@@ -52,11 +50,21 @@ namespace MoreEvents.Things
             maxHiveLevel = maxMobs.Length - 1;
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref hiveLevel, "hiveLevel");
+            Scribe_Values.Look(ref KingIsSpawn, "KingIsSpawn");
+            Scribe_Values.Look(ref giveBuff, "giveBuff");
+            Scribe_References.Look(ref lord, "lord");
+            Scribe_Collections.Look(ref spawnedMobs, "spawnedMobs", LookMode.Reference);
+        }
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
 
-            currentMap = map;
             spawnedMobs.Clear();
         }
 
@@ -80,7 +88,7 @@ namespace MoreEvents.Things
         {
             base.Tick();
 
-            if(!IsDay(currentMap))
+            if(!IsDay(Map))
             {
                 if(!giveBuff)
                     GiveBuff();
@@ -122,7 +130,7 @@ namespace MoreEvents.Things
                 GenSpawn.Spawn(pawn, this.Position, Map);
                 lord.AddPawn(pawn);
 
-                if (!IsDay(currentMap))
+                if (!IsDay(Map))
                     GiveBuff(pawn);
             }
         }

@@ -31,4 +31,11 @@
   <DoomsdayCardLabel>Конец света</DoomsdayCardLabel>
   <DoomsdayDesc>Фракция {0} собралась устроить кавабанга на этой планете. Можем попытаься собрать недостающую сумму или, может, другие фракции смогут помочь в рейде на их базу?</DoomsdayDesc>
   
+  <InteractionInterTab>Связь</InteractionInterTab>
+  <MessagesInterTab>Почта</MessagesInterTab>
+  <AllianceInterTab>Альянс</AllianceInterTab>
+  <RelationsWithPlayer>Отношения с игроком: {0} ({1})</RelationsWithPlayer>
+  <FactionInteractionDef>Фракция: {0}</FactionInteractionDef>
+  <AdditionalContent>Дополнительная информация</AdditionalContent>
+  
 </LanguageData>

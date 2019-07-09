@@ -21,7 +21,7 @@ namespace QuestRim
     {
         public int id;
 
-        public abstract string AdditionalQuestContentString { get; }
+        public virtual string AdditionalQuestContentString => "AdditionalContent".Translate();
 
         public abstract string CardLabel { get; }
         public abstract string Description { get; }
@@ -57,6 +57,11 @@ namespace QuestRim
 
         public int TicksToPass = 60000;
         public bool UnlimitedTime = false;
+
+        public virtual void SiteTick()
+        {
+
+        }
 
         public virtual void Tick()
         {

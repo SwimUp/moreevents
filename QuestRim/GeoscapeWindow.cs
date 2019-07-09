@@ -19,6 +19,7 @@ namespace QuestRim
         private Vector2 commButtonsCommSlider = Vector2.zero;
         private Vector2 commButtonsQuestsSlider = Vector2.zero;
         private Vector2 questRewardSlider = Vector2.zero;
+        private Vector2 factionListSlider = Vector2.zero;
 
         private enum Tab
         {
@@ -27,14 +28,23 @@ namespace QuestRim
             Interaction
         }
 
+        private enum InterTab
+        {
+            Interaction,
+            Messages,
+            Alliance
+        }
+
         public override Vector2 InitialSize => new Vector2(1000, 700);
 
         private Tab tab;
+        private InterTab interTab;
 
         private static List<TabRecord> tabsList = new List<TabRecord>();
 
         private readonly List<CommunicationDialog> communicationsDialogs;
         private readonly List<Quest> quests;
+        private readonly List<FactionInteraction> factions;
 
         private Communications communications;
 
@@ -42,27 +52,31 @@ namespace QuestRim
         private Pawn defendant;
         private int commDialogSliderLength = 0;
         private int commQuestsSliderLength = 0;
+        private int commFactionSliderLength = 0;
 
         private CommunicationDialog currentDialog;
         private Quest currentQuest;
+        private FactionInteraction currentFaction;
 
         private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
         private static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
         private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
         private static readonly Color JumpToLocationColor = new ColorInt(101, 172, 247).ToColor;
+        private static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
             communicationsDialogs = communications.CommunicationDialogs;
             quests = communications.Quests;
-
+            factions = communications.FactionManager.Factions;
 
             this.communications = communications;
             this.speaker = speaker;
 
             commDialogSliderLength = communicationsDialogs.Count * 78;
             commQuestsSliderLength = quests.Count * 108;
+            commFactionSliderLength = factions.Count * 60;
 
             forcePause = true;
         }
@@ -427,7 +441,202 @@ namespace QuestRim
 
         private void InteractionPage(Rect inRect)
         {
+            Rect rect2 = inRect;
+            rect2.y = 590;
+            rect2.height = 60;
+            GUI.color = MenuSectionBGBorderColor;
+            Widgets.DrawLineHorizontal(0, rect2.y, rect2.width);
+            GUI.color = Color.white;
 
+            Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Rect rect3 = rect2;
+            rect3.y = 600;
+            rect3.height = 50;
+            rect3.width = 280;
+            rect3.x = 20;
+            DrawBottomInterButtons(ref rect3, "InteractionInterTab".Translate(), () => interTab = InterTab.Interaction);
+            rect3.x = 330;
+            rect3.width = 300;
+            DrawBottomInterButtons(ref rect3, "MessagesInterTab".Translate(), () => interTab = InterTab.Messages);
+            rect3.x = 660;
+            rect3.width = 280;
+            DrawBottomInterButtons(ref rect3, "AllianceInterTab".Translate(), () => interTab = InterTab.Alliance);
+
+            switch (interTab)
+            {
+                case InterTab.Interaction:
+                    DrawInteraction(inRect);
+                    break;
+                case InterTab.Messages:
+
+                    break;
+                case InterTab.Alliance:
+
+                    break;
+            }
+
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.UpperLeft;
+        }
+
+        private void DrawBottomInterButtons(ref Rect rect, string text, Action click)
+        {
+            Widgets.DrawHighlight(rect);
+            Widgets.Label(rect, text);
+
+            if(Mouse.IsOver(rect))
+            {
+                GUI.color = InterBottomColor;
+                Widgets.DrawBox(rect, 2);
+                GUI.color = Color.white;
+            }
+
+            if(Widgets.ButtonInvisible(rect))
+            {
+                click.Invoke();
+            }
+        }
+
+        private void DrawInteraction(Rect inRect)
+        {
+            Rect rect1 = inRect;
+            Rect rect2 = inRect;
+            rect1.xMax = 319;
+            rect1.height = 556;
+
+            GUI.color = MenuSectionBGBorderColor;
+            Widgets.DrawBox(rect1);
+            GUI.color = Color.white;
+
+            Rect scrollVertRectFact = new Rect(0, 0, rect1.x, commFactionSliderLength);
+            int y = 10;
+            Widgets.BeginScrollView(rect1, ref factionListSlider, scrollVertRectFact, false);
+            foreach (var faction in factions)
+            {
+                DrawFactionCard(rect1, ref y, faction);
+            }
+            Widgets.EndScrollView();
+
+            Rect rect3 = new Rect(328, rect2.yMin + 20, 610, rect2.yMax);
+            DrawFactionCard(rect3);
+        }
+
+        private void DrawFactionCard(Rect rect)
+        {
+            if (currentFaction != null)
+            {
+                Text.Font = GameFont.Medium;
+                Text.Anchor = TextAnchor.UpperCenter;
+                GUI.color = currentFaction.Faction.PlayerRelationKind.GetColor();
+                Widgets.Label(new Rect(rect.x, rect.y - 10, rect.width + 10, 40), currentFaction.Faction.Name);
+                GUI.color = Color.white;
+                Widgets.DrawLineHorizontal(rect.x + (rect.x / 2), rect.y + 20, 280);
+                Text.Anchor = TextAnchor.UpperLeft;
+                Text.Font = GameFont.Small;
+                rect.y += 30;
+
+                Widgets.LabelScrollable(new Rect(rect.x, rect.y, rect.width, 180), currentFaction.Faction.def.description, ref commInfoSlider, false, false);
+
+                //430
+                Rect rect2 = new Rect(rect.x, rect.y + 200, rect.width / 2, 20);
+                Widgets.Label(rect2, "FactionInteractionDef".Translate(currentFaction.Faction.def.LabelCap));
+                rect2.y += 22;
+                Widgets.Label(rect2, $"{currentFaction.Faction.def.leaderTitle.CapitalizeFirst()}: {currentFaction.Faction.leader.Name}");
+                rect2.y += 30;
+                StringBuilder builder = new StringBuilder();
+                foreach (Faction item in Find.FactionManager.AllFactionsInViewOrder)
+                {
+                    if (item != currentFaction.Faction && (!item.IsPlayer && !item.def.hidden) && currentFaction.Faction.HostileTo(item))
+                    {
+                        builder.Append("HostileTo".Translate(item.Name));
+                        builder.AppendLine();
+                    }
+                }
+                Widgets.LabelScrollable(new Rect(rect2.x, rect2.y, rect2.width, 285), builder.ToString(), ref commSlider);
+
+                Rect rect3 = new Rect((rect.x + rect.width / 2) + 10, rect.y + 200, rect.width / 2, 285);
+                GUI.color = CommCardBGColor;
+                Widgets.DrawLineVertical(rect.x + rect.width / 2, rect3.y, 285);
+                GUI.color = Color.white;
+                int sliderLength = currentFaction.Options.Count * 30;
+                Rect buttonRect = new Rect(0, 0, rect3.width, sliderLength);
+                Rect scrollVertRectFact = new Rect(0, 0, rect3.x, sliderLength);
+                Widgets.BeginScrollView(rect3, ref commButtonsQuestsSlider, scrollVertRectFact, false);
+                DrawInteractionButtons(buttonRect);
+                Widgets.EndScrollView();
+            }
+        }
+
+        private void DrawInteractionButtons(Rect rect)
+        {
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(rect);
+            foreach (var option in currentFaction.Options)
+            {
+                if (listing.ButtonText(option.Label))
+                {
+                    foreach (var action in option.Actions)
+                    {
+                        action.DoAction(currentFaction, speaker, defendant);
+                    }
+                }
+            }
+            listing.End();
+        }
+
+        private void DrawFactionCard(Rect rect, ref int y, FactionInteraction faction)
+        {
+            Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Small;
+
+            Rect r = new Rect(10, y, rect.width - 20, 50);
+            Rect titleRect = new Rect(15, y, rect.width - 20, 50);
+            Widgets.Label(titleRect, faction.Faction.Name);
+            Text.Font = GameFont.Tiny;
+            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 20);
+            FactionRelationKind kindWithPlayer = faction.Faction.PlayerRelationKind;
+            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign()));
+
+            Text.Font = GameFont.Small;
+            Widgets.DrawHighlightIfMouseover(r);
+
+            string str2 = "CurrentGoodwillTip".Translate();
+            if (faction.Faction.def.permanentEnemy)
+            {
+                str2 = str2 + "\n\n" + "CurrentGoodwillTip_PermanentEnemy".Translate();
+            }
+            else
+            {
+                str2 += "\n\n";
+                switch (faction.Faction.PlayerRelationKind)
+                {
+                    case FactionRelationKind.Ally:
+                        str2 += "CurrentGoodwillTip_Ally".Translate(0.ToString("F0"));
+                        break;
+                    case FactionRelationKind.Neutral:
+                        str2 += "CurrentGoodwillTip_Neutral".Translate(0.ToString("F0"), 75.ToString("F0"));
+                        break;
+                    case FactionRelationKind.Hostile:
+                        str2 += "CurrentGoodwillTip_Hostile".Translate(0.ToString("F0"));
+                        break;
+                }
+                if (faction.Faction.def.goodwillDailyGain > 0f || faction.Faction.def.goodwillDailyFall > 0f)
+                {
+                    str2 = str2 + "\n\n" + "CurrentGoodwillTip_NaturalGoodwill".Translate(faction.Faction.def.naturalColonyGoodwill.min.ToString("F0"), faction.Faction.def.naturalColonyGoodwill.max.ToString("F0"), faction.Faction.def.goodwillDailyGain.ToString("0.#"), faction.Faction.def.goodwillDailyFall.ToString("0.#"));
+                }
+            }
+            TooltipHandler.TipRegion(r, str2);
+
+            GUI.color = faction.Faction.Color;
+            Widgets.DrawHighlight(r);
+            GUI.color = Color.white;
+
+            if (Widgets.ButtonInvisible(r))
+            {
+                currentFaction = faction;
+            }
+            y += 60;
         }
     }
 }

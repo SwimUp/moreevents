@@ -121,4 +121,11 @@
 
 Вы можете связаться с ними через планетарную консоль связи</Quest_ResourceHelp.letterText>  
   
+  <Quest_BuildNewBase.label>Переезд</Quest_BuildNewBase.label>
+  <Quest_BuildNewBase.letterLabel>Переезд</Quest_BuildNewBase.letterLabel>
+  <Quest_BuildNewBase.letterText>Фракция {0} собирается построить новую базу, и ей нужна помощь в виде рабочей силы. Они просят у вас нескольких колонистов на пару дней.
+
+Вы можете связаться с ними через Geocape.</Quest_BuildNewBase.letterText>  
+  
+  
 </LanguageData>

@@ -28,7 +28,7 @@ namespace MoreEvents.Quests
 
         public override void DrawAdditionalOptions(Rect rect)
         {
-            Rect rect2 = new Rect(rect.x, rect.y, rect.width, rect.height);
+            Rect rect2 = rect;
             int requestSliderLength = RequestItems.Values.Count * 30;
             Rect requestRect = new Rect(0, 0, rect.width, requestSliderLength);
             Rect scrollRewVertRectFact = new Rect(0, 0, rect2.x, requestSliderLength);

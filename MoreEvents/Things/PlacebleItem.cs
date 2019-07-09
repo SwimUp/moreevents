@@ -24,8 +24,8 @@ namespace MoreEvents.Things
         private Command CreateBlueprint()
         {
             Command_Action command = new Command_Action();
-            command.defaultLabel = Translator.Translate("InstallCommand_Title");
-            command.defaultDesc = Translator.Translate("InstallCommand_Desc");
+            command.defaultLabel = "DS_InstallCommand_Title".Translate(Props.PlaceDef.LabelCap);
+            command.defaultDesc = "DS_InstallCommand_Desc".Translate();
             command.icon = Props.PlaceDef.uiIcon;
             command.action = delegate
             {

@@ -65,6 +65,13 @@ namespace QuestRim
             return text;
         }
 
+        public override void Tick()
+        {
+            base.Tick();
+
+            quest.SiteTick();
+        }
+
         public override string GetDescription()
         {
             return quest.GetDescription();

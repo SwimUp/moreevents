@@ -645,7 +645,7 @@ You can contact them via geocape.
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>MoreEvents.Events.IncidentWorker_Quest_ResourceHelp</workerClass>
+		<workerClass>MoreEvents.Events.IncidentWorker_Quest_BuildNewBase</workerClass>
 		<category>Misc</category>
 		<minRefireDays>90</minRefireDays>
 		<baseChance>0.7</baseChance>

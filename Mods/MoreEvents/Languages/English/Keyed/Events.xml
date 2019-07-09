@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+	<DS_InstallCommand_Title>Build {0}</DS_InstallCommand_Title>
+	<DS_InstallCommand_Desc>Build new object</DS_InstallCommand_Desc>
+
   <Supernova_label>Supernova explosion</Supernova_label>
   <SupernovaExp_low>At a distance of several hundred thousand light years, a supernova explosion occurred. It will not cause harm, but will allow to observe a beautiful sight.</SupernovaExp_low>
   <SupernovaExp_medium>At a distance of several tens of thousands of light years, a supernova explosion occurred. Expect a small meteor shower, temperature increase</SupernovaExp_medium>

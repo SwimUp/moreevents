@@ -1,10 +1,12 @@
-﻿using QuestRim;
+﻿using MoreEvents.Quests;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace MoreEvents.Events
@@ -42,28 +44,44 @@ namespace MoreEvents.Events
             if (!GetNewTile(factionBase.Tile, out int newTile))
                 return false;
 
-            Quest_ThingsHelp quest = new Quest_ThingsHelp();
+            Quest_BuildNewBase quest = new Quest_BuildNewBase();
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             quest.Faction = faction;
-            float marketValue = GenerateRequestItems(quest);
 
+            int playerPawns = 0;
+            foreach(var map in Find.Maps)
+            {
+                if(map.IsPlayerHome)
+                {
+                    playerPawns += map.mapPawns.ColonistCount;
+                }
+            }
+            playerPawns = Mathf.Max(2, playerPawns / 2);
+            quest.PawnsRequired = Rand.Range(1, playerPawns);
+
+            float value = 250 * playerPawns;
             ThingSetMakerParams parms2 = default;
-            parms2.totalMarketValueRange = new FloatRange(marketValue * 0.8f, marketValue * 1.3f);
+            parms2.totalMarketValueRange = new FloatRange(250, value);
             quest.Rewards = ThingSetMakerDefOf.ResourcePod.root.Generate(parms2);
 
-            LookTargets target = new LookTargets(factionBase.Tile);
+            LookTargets target = new LookTargets(newTile);
             quest.Target = target;
-            quest.TicksToPass = Rand.Range(5, 11) * 60000;
+            quest.TicksToPass = Rand.Range(8, 14) * 60000;
+            //quest.TicksToEnd = Rand.Range(3, 5) * 60000);
+            quest.TicksToEnd = 15000;
 
             QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);
-            questPlace.Tile = factionBase.Tile;
+            quest.Site = questPlace;
+            quest.OldSettlement = factionBase;
+
+            questPlace.Tile = newTile;
             questPlace.SetFaction(faction);
             questPlace.Init(quest);
 
             Find.WorldObjects.Add(questPlace);
             QuestsManager.Communications.AddQuest(quest);
 
-            SendStandardLetter(target);
+            SendStandardLetter(target, textArgs: faction.Name);
 
             return true;
         }
