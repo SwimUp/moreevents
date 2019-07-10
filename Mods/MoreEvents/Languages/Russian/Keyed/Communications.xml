@@ -38,4 +38,16 @@
   <FactionInteractionDef>Фракция: {0}</FactionInteractionDef>
   <AdditionalContent>Дополнительная информация</AdditionalContent>
   
+  <CommOption_GetHelp_Label>Просить помощи (осталось: {0})</CommOption_GetHelp_Label>
+  <Help_AskResoucesTitle>Ресурсы отправлены</Help_AskResoucesTitle>
+  <Help_AskResouces>Фракция {0} помнит о своем долге и отправляет вам ресурсы, которые она смогла собрать. {1}</Help_AskResouces>
+  <Help_AskPowerTitle>Подмога отправлена</Help_AskPowerTitle>
+  <Help_AskPower>Фракция {0} помнит о своем долге и отправляет вам группу своих бойцов для поддержки вашего поселения.</Help_AskPower>
+  <UsingCaravan>Технологии фракции не позволяют ей использовать капсулы, поэтому они отправили караван.</UsingCaravan>
+  <UsingCapsules>Поддержка была отправлена капсулами.</UsingCapsules>
+  <GiftHasBeenDroppedTitle>Ресурсы выданы</GiftHasBeenDroppedTitle>
+  <GiftHasBeenDropped>Ресурсы оставлены недалеко от вашей колонии. (нажмите, что перейти)</GiftHasBeenDropped>
+  <AssistCaravan_GifterArrivedTitle>Дружественный отряд прибыл</AssistCaravan_GifterArrivedTitle>
+  <AssistCaravan_GifterArrived>Дружественный отряд прибыл по вашему запросу. Они оставят вещи рядом с вашей колонией.</AssistCaravan_GifterArrived>
+  
 </LanguageData>

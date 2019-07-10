@@ -11,5 +11,6 @@ namespace MoreEvents
     public static class DialogDefOfLocal
     {
         public static DialogDef DoomsdayHelp;
+        public static DialogDef CommOptionGetHelp;
     }
 }

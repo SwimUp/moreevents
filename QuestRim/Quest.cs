@@ -63,6 +63,29 @@ namespace QuestRim
 
         }
 
+        public virtual void GenerateRewards(ThingFilter filter, FloatRange totalValue, IntRange countRange, TechLevel? techLevel, float? totalMass)
+        {
+            ThingSetMaker_MarketValue maker = new ThingSetMaker_MarketValue();
+            ThingSetMakerParams parms2 = default;
+            parms2.totalMarketValueRange = totalValue;
+            parms2.countRange = countRange;
+            parms2.filter = filter;
+            parms2.techLevel = techLevel;
+            parms2.maxTotalMass = totalMass;
+
+            maker.fixedParams = parms2;
+
+            Rewards = maker.Generate();
+        }
+
+        public virtual ThingFilter GetQuestThingFilter()
+        {
+            ThingFilter filter = new ThingFilter();
+            filter.SetAllow(ThingCategoryDefOf.Root, true);
+
+            return filter;
+        }
+
         public virtual void Tick()
         {
             if (!UnlimitedTime)

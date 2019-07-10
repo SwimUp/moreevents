@@ -3,20 +3,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace QuestRim
 {
-    public class InteractionOption : IExposable
+    public abstract class InteractionOption : IExposable
     {
-        public string Label;
+        public virtual int SortOrder { get; set; }
 
-        public List<InteractionAction> Actions;
+        public abstract string Label { get; }
 
-        public void ExposeData()
+        public virtual Color TextColor => Color.white;
+
+        public bool Enabled = true;
+
+        public abstract void DoAction(FactionInteraction interaction, Pawn speaker, Pawn defendant);
+
+        public virtual void ExposeData()
         {
-            Scribe_Values.Look(ref Label, "Label");
-            Scribe_Collections.Look(ref Actions, "Actions", LookMode.Deep);
+            Scribe_Values.Look(ref Enabled, "Enabled");
         }
     }
 }

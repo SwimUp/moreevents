@@ -42,14 +42,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             comp.SetTimer(Rand.Range(10, 20));
 
             CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "DoomsdayCardLabel".Translate(), "DoomsdayDesc".Translate(site.Faction.Name), site.Faction, def, new List<CommOption> {
-                new CommOption()
-                {
-                    Label = "DiscussWithOtherFactions".Translate(),
-                    Actions = new List<CommAction>
-                    {
-                        new CommAction_DoomsdayDialog(site, site.Faction)
-                    }
-                }
+                new CommOption_DiscussWithOtherFactions(site, site.Faction)
             });
             comp.Dialog = dialog;
 

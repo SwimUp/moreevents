@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
     <Compile Include="Building_Geoscape.cs" />
-    <Compile Include="InteractionAction.cs" />
-    <Compile Include="CommAction.cs" />
     <Compile Include="InteractionOption.cs" />
     <Compile Include="CommunicationComponent.cs" />
     <Compile Include="Extensions.cs" />
@@ -70,7 +68,6 @@
     <Compile Include="JobDriver_UseGeoscape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quest.cs" />
-    <Compile Include="QuestAction.cs" />
     <Compile Include="QuestRim.cs" />
     <Compile Include="QuestSite.cs" />
     <Compile Include="QuestsManager.cs" />

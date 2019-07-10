@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MoreEvents.Communications;
+using QuestRim;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +26,34 @@ namespace DiaRim
             if (Input.GetKeyDown(KeyCode.F6))
             {
                 Find.WindowStack.Add(new TestDialogsWindow());
+            }
+
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                Find.WindowStack.Add(new TestTools());
+            }
+        }
+
+        public class TestTools : Window
+        {
+            public override void DoWindowContents(Rect inRect)
+            {
+                Listing_Standard listing = new Listing_Standard();
+                listing.Begin(inRect);
+                if(listing.ButtonText("Try add GetHelp option"))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach(var faction in QuestsManager.Communications.FactionManager.Factions)
+                    {
+                        list.Add(new FloatMenuOption(faction.Faction.Name, delegate
+                        {
+                            CommOption_GetHelp.AddComponentWithStack(faction.Faction, 1);
+                        }));
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+                listing.End();
             }
         }
 

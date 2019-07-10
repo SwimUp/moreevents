@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- пометка 
+	<!-- пометка 
 backstory: ключ Childhood или AdultHood и если не указан ConditionId, то 1
 Gender: ключ Male, Female и если не указан ConditionId, то 1 (например Male1)
 SkillReq: ключ skillReq и если не указан ConditionId, то 1  (например skillReq1)
@@ -18,7 +18,8 @@ Trait: ключ traitReq  (например traitReq1)
 				<Text>- Как вы уже, наверное, знаете, одна из фракций намерена уничтожить планету. Требуются незамедлительные действия.</Text>
 				<Options>
 					<li>
-						<Label>MustUnite</Label> <!-- ключ -->
+						<Label>MustUnite</Label>
+						<!-- ключ -->
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
@@ -34,7 +35,8 @@ Trait: ключ traitReq  (например traitReq1)
 						</Transitions>
 					</li>
 					<li>
-						<Label>EndCooms</Label> <!-- ключ -->
+						<Label>EndCooms</Label>
+						<!-- ключ -->
 						<ResolveTree>True</ResolveTree>
 						<ResolveSignal>конец</ResolveSignal>
 					</li>
@@ -694,5 +696,35 @@ Trait: ключ traitReq  (например traitReq1)
 		</Pages>
 	</DiaRim.DialogDef>
 
-
+	<DiaRim.DialogDef>
+		<defName>CommOptionGetHelp</defName>
+		<label>Опция - просить помощи</label>
+		<WindowSize>(500, 500)</WindowSize>
+		<FirstPageId>1</FirstPageId>
+		<Pages>
+			<li>
+				<UniqueId>1</UniqueId>
+				<Title>Просьба о помощи</Title>
+				<Text>Вы вызываете лидера дружественной фракции на связь. Не торопясь он отвечает грубым голосом: ало?</Text>
+				<Options>
+					<li>
+						<Label>AskForResources</Label>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>resources</ResolveSignal>
+					</li>
+					<li>
+						<Label>AskForPower</Label>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>power</ResolveSignal>
+					</li>
+					<li>
+						<Label>EndCooms</Label>
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
+					</li>
+				</Options>
+			</li>
+		</Pages>
+	</DiaRim.DialogDef>
+	
 </Defs>

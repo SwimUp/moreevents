@@ -1,4 +1,5 @@
-﻿using QuestRim;
+﻿using MoreEvents.Communications;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -14,7 +15,7 @@ namespace MoreEvents.Quests
     {
         public override string CardLabel => "Quest_BuildNewBase_Label".Translate();
 
-        public override string Description => "Quest_BuildNewBase_Description".Translate(Faction);
+        public override string Description => "Quest_BuildNewBase_Description".Translate(Faction.Name, Faction.leader.Name.ToStringFull);
 
         public override string PlaceLabel => "Quest_BuildNewBase_Place".Translate(Faction);
 
@@ -40,6 +41,19 @@ namespace MoreEvents.Quests
             }
         }
 
+        public override ThingFilter GetQuestThingFilter()
+        {
+            ThingFilter filter = new ThingFilter();
+            filter.SetAllow(ThingCategoryDefOf.Apparel, true);
+            filter.SetAllow(ThingCategoryDefOf.Weapons, true);
+            filter.SetAllow(ThingCategoryDefOf.ResourcesRaw, true);
+            filter.SetAllow(ThingCategoryDefOf.Medicine, true);
+            filter.SetAllow(ThingCategoryDefOf.Leathers, true);
+            filter.SetAllow(ThingCategoryDefOf.Items, true);
+
+            return filter;
+        }
+
         public override string GetInspectString()
         {
             return "HowToGivePawns".Translate(PawnsRequired, GenDate.TicksToDays(TicksToEnd).ToString("f2"));
@@ -55,13 +69,18 @@ namespace MoreEvents.Quests
         {
             base.EndQuest(caravan, condition);
 
-            CaravanMaker.MakeCaravan(EnteredPawns, RimWorld.Faction.OfPlayer, Site.Tile, false);
+            if (condition == EndCondition.Success)
+            {
+                CaravanMaker.MakeCaravan(EnteredPawns, RimWorld.Faction.OfPlayer, Site.Tile, false);
 
-            Find.LetterStack.ReceiveLetter("BuildingSeccessEndTitle".Translate(), "BuildingSeccessEnd".Translate(Faction.Name), LetterDefOf.PositiveEvent);
+                Find.LetterStack.ReceiveLetter("BuildingSeccessEndTitle".Translate(), "BuildingSeccessEnd".Translate(Faction.Name), LetterDefOf.PositiveEvent);
 
-            Faction.TryAffectGoodwillWith(Faction.OfPlayer, 20);
+                CommOption_GetHelp.AddComponentWithStack(Faction, 1);
 
-            OldSettlement.Tile = Site.Tile;
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, 20);
+
+                OldSettlement.Tile = Site.Tile;
+            }
         }
 
         public override void ExposeData()

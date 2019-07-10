@@ -41,6 +41,12 @@
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>
+    <Reference Include="MoreEvents">
+      <HintPath>..\MoreEvents\bin\Release\MoreEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="QuestRim">
+      <HintPath>..\QuestRim\bin\Release\QuestRim.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +67,9 @@
     <Compile Include="Maps\RoofData.cs" />
     <Compile Include="Maps\ThingData.cs" />
     <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

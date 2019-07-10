@@ -65,9 +65,11 @@
     <Compile Include="AI\JobGiver_FireAround.cs" />
     <Compile Include="AI\JobGiver_WanderInArea.cs" />
     <Compile Include="AI\LordJob_Arson.cs" />
+    <Compile Include="AI\LordJob_CaravanBringItems.cs" />
     <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
-    <Compile Include="Communications\CommAction_DoomsdayDialog.cs" />
+    <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
+    <Compile Include="Communications\CommOption_GetHelp.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition_PawnCount.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_Doomsday.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_GiveRansom.cs" />
+    <Compile Include="Communications\CommOption_DiscussWithOtherFactions.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdaySite.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\DoomsdayUltimatumComp_Main.cs" />

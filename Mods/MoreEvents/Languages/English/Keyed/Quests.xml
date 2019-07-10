@@ -13,5 +13,22 @@ List of required resources:</HelpResourcesDescriptionTitle>
 	<GiveItemsOption>Transfer resources</GiveItemsOption>
 	
 	<Quest_HelpItems_Label>Request for resources</Quest_HelpItems_Label>
-	<Quest_HelpItems_Description>The {0} faction asks for resources for the further development of its settlement, in return, they will give what they have in abundance. \nWe can form a caravan with necessary items and send it to them.</Quest_HelpItems_Description>
+	<Quest_HelpItems_Description>The leader of the {0} faction contacts you and tells you that they are going to expand their settlement, but they don’t have so many available resources. They request some resources from you in the hope that you have them and you can transfer them. Instead, they will give what they have in abundance. \nWe can form a caravan with the necessary items and send it to them.
+</Quest_HelpItems_Description>
+
+	<HowToGivePawns>To assist the settlement, send a caravan with the required number of pawns ({0}) to the construction site. \nConstruction time: {1}</HowToGivePawns>
+	<Quest_BuildNewBase_Label>Construction of a new settlement</Quest_BuildNewBase_Label>
+	<Quest_BuildNewBase_Description>The faction {0} is about to change their place of residence. The leader of the faction {1} explains this by the lack of basic resources in the current place of residence, as well as poor landscape and unpleasant weather. Building a new base is costly and long, fortunately, they have enough resources, but there are no pawns capable of holding a hammer. In order not to delay the construction, he asks you for a few of your pawns to assist in the construction. \n\nConstruction may take several days. At this time, your pawns will be unavailable, and upon completion of construction you will receive an award and your pawns.
+</Quest_BuildNewBase_Description>
+	<Quest_BuildNewBase_Place>Construction site {0}</Quest_BuildNewBase_Place>
+	<NotEnoughPawnsToHelp>Not enough pawns in the caravan</NotEnoughPawnsToHelp>
+	<HelpStartedTitle>Construction started</HelpStartedTitle>
+	<HelpStarted>You have come to the construction site of a new settlement base. According to preliminary calculations, the construction will take {0} days, after which your pawns will return to you again.</HelpStarted>
+	<BuildingAlreadyStarted>Construction has already begun</BuildingAlreadyStarted>
+	<Quest_HelpWithBuilding_Option>To help</Quest_HelpWithBuilding_Option>
+	<PawnsRequired>Pawns required: {0}</PawnsRequired>
+	<BuildingSeccessEndTitle>Construction completed</BuildingSeccessEndTitle>
+	<BuildingSeccessEnd>Construction of settlement for {0} is over. They thank you for their help and notify you that you can now ask them to help you in a difficult situation with resources or military help. (You can request through the Geoscape)
+</BuildingSeccessEnd>
+	
 </LanguageData>

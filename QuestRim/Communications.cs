@@ -108,12 +108,12 @@ namespace QuestRim
 
         public void RemoveCommunication(CommunicationDialog dialog)
         {
-            communicationDialogs.Remove(dialog);
+            CommunicationDialogs.Remove(dialog);
         }
 
         public void RemoveQuest(Quest quest, EndCondition condition = EndCondition.None, bool showMessage = true)
         {
-            quests.Remove(quest);
+            Quests.Remove(quest);
 
             if(showMessage)
                 SendEndQuestMessage(condition, quest);
@@ -126,7 +126,7 @@ namespace QuestRim
                 Quest quest = Quests[i];
                 if (quest.id == key)
                 {
-                    quests.Remove(quest);
+                    Quests.Remove(quest);
 
                     if (showMessage)
                         SendEndQuestMessage(condition, quest);
@@ -138,14 +138,14 @@ namespace QuestRim
 
         public void RegisterComponent(CommunicationComponent component)
         {
-            components.Add(component);
+            Components.Add(component);
         }
 
         public CommunicationComponent GetComponent(int id)
         {
-            for(int i = 0; i < components.Count; i++)
+            for(int i = 0; i < Components.Count; i++)
             {
-                CommunicationComponent component = components[i];
+                CommunicationComponent component = Components[i];
                 if(component.id == id)
                 {
                     return component;
@@ -157,12 +157,12 @@ namespace QuestRim
 
         public void RemoveComponent(int id)
         {
-            for (int i = 0; i < components.Count; i++)
+            for (int i = 0; i < Components.Count; i++)
             {
                 CommunicationComponent component = components[i];
                 if (component.id == id)
                 {
-                    components.Remove(component);
+                    Components.Remove(component);
                     return;
                 }
             }
@@ -170,7 +170,7 @@ namespace QuestRim
 
         public void RemoveComponent(CommunicationComponent component)
         {
-            components.Remove(component);
+            Components.Remove(component);
         }
 
         private void SendEndQuestMessage(EndCondition condition, Quest quest)

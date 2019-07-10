@@ -8,9 +8,11 @@ using Verse;
 
 namespace QuestRim.Actions
 {
-    public class CommAction_OpenDialogWithFaction : CommAction
+    public abstract class CommAction_OpenDialogWithFaction : CommOption
     {
         public DialogDef Dialog;
+
+        public override string Label => throw new NotImplementedException();
 
         public CommAction_OpenDialogWithFaction(DialogDef def) => Dialog = def;
 

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace MoreEvents.Events
@@ -41,14 +42,13 @@ namespace MoreEvents.Events
             if (Find.WorldObjects.WorldObjectAt(factionBase.Tile, QuestRim.WorldObjectDefOfLocal.QuestPlace) != null)
                 return false;
 
-            Quest_ThingsHelp quest = new Quest_ThingsHelp();
-            quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
-            quest.Faction = faction;
+            Quest_ThingsHelp quest = new Quest_ThingsHelp
+            {
+                id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID(),
+                Faction = faction
+            };
             float marketValue = GenerateRequestItems(quest);
-
-            ThingSetMakerParams parms2 = default;
-            parms2.totalMarketValueRange = new FloatRange(marketValue * 0.8f, marketValue * 1.3f);
-            quest.Rewards = ThingSetMakerDefOf.ResourcePod.root.Generate(parms2);
+            quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(marketValue * 1.3f, marketValue * 1.7f), new IntRange(3, 6), null, null);
 
             LookTargets target = new LookTargets(factionBase.Tile);
             quest.Target = target;
@@ -75,7 +75,7 @@ namespace MoreEvents.Events
             do
             {
                 ThingDef thingDef = RandomRequiredDef();
-                int num = Rand.Range(20, 40);
+                int num = Rand.Range(20, 150);
                 if (num > thingDef.stackLimit)
                 {
                     num = thingDef.stackLimit;

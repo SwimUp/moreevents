@@ -6,9 +6,14 @@ using Verse;
 
 namespace QuestRim
 {
-    public class CommunicationComponent : IExposable, ILoadReferenceable
+    public abstract class CommunicationComponent : IExposable, ILoadReferenceable
     {
         public int id;
+
+        public virtual void Tick()
+        {
+
+        }
 
         public virtual void ExposeData()
         {

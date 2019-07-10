@@ -47,6 +47,22 @@ namespace QuestRim
                         }
                     }
                 }
+
+                if (communications.Components != null)
+                {
+                    List<CommunicationComponent> components = communications.Components;
+                    for (int i = 0; i < components.Count; i++)
+                    {
+                        try
+                        {
+                            components[i].Tick();
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Error($"Exception ticking {components[i].id} --> {ex}");
+                        }
+                    }
+                }
             }
         }
 

@@ -64,6 +64,7 @@ namespace QuestRim
         private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
         private static readonly Color JumpToLocationColor = new ColorInt(101, 172, 247).ToColor;
         private static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
+        private static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
@@ -160,9 +161,9 @@ namespace QuestRim
                 if (currentDialog.Options != null)
                 {
                     int sliderLength = currentDialog.Options.Count * 40;
-                    Rect buttonRect = new Rect(0, 0, 622, sliderLength);
+                    Rect buttonRect = new Rect(0, 0, 620, sliderLength);
                     Rect scrollVertRectFact = new Rect(0, 0, inRect.x, sliderLength);
-                    Widgets.BeginScrollView(new Rect(332, 540, 622, 115), ref commButtonsCommSlider, scrollVertRectFact, false);
+                    Widgets.BeginScrollView(new Rect(334, 540, 620, 115), ref commButtonsCommSlider, scrollVertRectFact, false);
                     DoButtonsComms(buttonRect);
                     Widgets.EndScrollView();
                 }
@@ -173,19 +174,33 @@ namespace QuestRim
 
         private void DoButtonsComms(Rect rect)
         {
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(rect);
-            foreach(var option in currentDialog.Options)
+            Text.Anchor = TextAnchor.MiddleCenter;
+
+            Rect startRect = rect;
+            startRect.height = 35;
+            foreach (var option in currentDialog.Options)
             {
-                if(listing.ButtonText(option.Label))
+                if(DrawCustomButton(startRect, option.Label, Color.white))
                 {
-                    foreach(var action in option.Actions)
-                    {
-                        action.DoAction(currentDialog, speaker, defendant);
-                    }
+                    option.DoAction(currentDialog, speaker, defendant);
                 }
+                startRect.y += 40;
             }
-            listing.End();
+
+            Text.Anchor = TextAnchor.UpperLeft;
+        }
+
+        private bool DrawCustomButton(Rect rect, string label, Color textColor)
+        {
+            GUI.color = textColor;
+            Widgets.Label(rect, label);
+            GUI.color = CommCardBGColor;
+            Widgets.DrawHighlight(rect);
+            GUI.color = CommBorderColor;
+            Widgets.DrawBox(rect);
+            GUI.color = Color.white;
+            Widgets.DrawHighlightIfMouseover(rect);
+            return Widgets.ButtonInvisible(rect);
         }
 
         private void DrawPawnCard()
@@ -281,9 +296,10 @@ namespace QuestRim
         private void DrawCommCard(Rect rect, ref int y, CommunicationDialog dialog)
         {
             Rect r = new Rect(10, y, rect.width - 20, 60);
-            Widgets.Label(r, dialog.CardLabel);
+            Rect titleRect = new Rect(15, y, rect.width - 20, 60);
+            Widgets.Label(titleRect, dialog.CardLabel);
             Text.Font = GameFont.Tiny;
-            Rect rect2 = new Rect(10, y + 22, rect.width - 20, 20);
+            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 20);
             Widgets.Label(rect2, dialog.RelatedIncident != null ? "RelatedEventCom".Translate(dialog.RelatedIncident.LabelCap) : "NoEventComm".Translate());
             rect2.y += 20;
             Widgets.Label(rect2, dialog.Faction != null ? "FactionComm".Translate(dialog.Faction.Name) : "NoFactionComm".Translate());
@@ -330,9 +346,10 @@ namespace QuestRim
         private void DrawQuestCard(Rect rect, ref int y, Quest quest)
         {
             Rect r = new Rect(10, y, rect.width - 20, 90);
-            Widgets.Label(r, quest.CardLabel);
+            Rect titleRect = new Rect(15, y, rect.width - 20, 90);
+            Widgets.Label(titleRect, quest.CardLabel);
             Text.Font = GameFont.Tiny;
-            Rect rect2 = new Rect(10, y + 22, rect.width - 20, 20);
+            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 20);
             Widgets.Label(rect2, quest.Faction != null ? "FactionComm".Translate(quest.Faction.Name) : "NoFactionComm".Translate());
             rect2.y += 20;
             Widgets.Label(rect2, quest.UnlimitedTime ? "UnlimitedTime".Translate() : "QuestTimer".Translate(GenDate.TicksToDays(quest.TicksToPass).ToString("f2")));
@@ -424,19 +441,21 @@ namespace QuestRim
 
         private void DoButtonsQuest(Rect rect)
         {
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(rect);
+            Text.Anchor = TextAnchor.MiddleCenter;
+
+            Rect startRect = rect;
+            startRect.height = 35;
             foreach (var option in currentQuest.Options)
             {
-                if (listing.ButtonText(option.Label))
+                if (DrawCustomButton(startRect, option.Label, Color.white))
                 {
-                    foreach (var action in option.Actions)
-                    {
-                        action.DoAction(currentQuest, speaker, defendant);
-                    }
+                    option.DoAction(currentQuest, speaker, defendant);
                 }
+                startRect.y += 40;
             }
-            listing.End();
+
+            Text.Anchor = TextAnchor.UpperLeft;
+
         }
 
         private void InteractionPage(Rect inRect)
@@ -570,19 +589,30 @@ namespace QuestRim
 
         private void DrawInteractionButtons(Rect rect)
         {
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(rect);
-            foreach (var option in currentFaction.Options)
+            Text.Anchor = TextAnchor.MiddleCenter;
+
+            Rect startRect = rect;
+            startRect.height = 25;
+            if(DrawCustomButton(startRect, "CallOnRadio".Translate(currentFaction.Faction.Name), Color.white))
             {
-                if (listing.ButtonText(option.Label))
+                Dialog_Negotiation dialog_Negotiation = new Dialog_Negotiation(speaker, currentFaction.Faction, FactionDialogMaker.FactionDialogFor(speaker, currentFaction.Faction), radioMode: true);
+                dialog_Negotiation.soundAmbient = SoundDefOf.RadioComms_Ambience;
+                Find.WindowStack.Add(dialog_Negotiation);
+            }
+            startRect.y += 30;
+            foreach (var option in currentFaction.Options.OrderBy(o => o.SortOrder))
+            {
+                if (option.Enabled)
                 {
-                    foreach (var action in option.Actions)
+                    if (DrawCustomButton(startRect, option.Label, option.TextColor))
                     {
-                        action.DoAction(currentFaction, speaker, defendant);
+                        option.DoAction(currentFaction, speaker, defendant);
                     }
+                    startRect.y += 30;
                 }
             }
-            listing.End();
+
+            Text.Anchor = TextAnchor.UpperLeft;
         }
 
         private void DrawFactionCard(Rect rect, ref int y, FactionInteraction faction)

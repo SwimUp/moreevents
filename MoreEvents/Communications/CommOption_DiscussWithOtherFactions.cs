@@ -1,10 +1,12 @@
-﻿
-using DiaRim;
+﻿using DiaRim;
 using MoreEvents.Events.DoomsdayUltimatum;
 using QuestRim;
+using QuestRim.Actions;
 using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Verse;
 
 namespace MoreEvents.Communications
@@ -16,8 +18,9 @@ namespace MoreEvents.Communications
         None
     }
 
-    public class CommAction_DoomsdayDialog : CommAction
+    public class CommOption_DiscussWithOtherFactions : CommOption
     {
+        public override string Label => "DiscussWithOtherFactions".Translate();
 
         private DialogDef Dialog => DialogDefOfLocal.DoomsdayHelp;
 
@@ -27,15 +30,15 @@ namespace MoreEvents.Communications
 
         private Faction currentFaction;
 
-        public CommAction_DoomsdayDialog()
+        public CommOption_DiscussWithOtherFactions()
         {
         }
 
-        public CommAction_DoomsdayDialog(DoomsdaySite site, Faction attacker)
+        public CommOption_DiscussWithOtherFactions(DoomsdaySite site, Faction attacker)
         {
             this.site = site;
 
-            foreach(var faction in Find.FactionManager.AllFactionsVisibleInViewOrder.Where(x => !x.IsPlayer && x != attacker && x.RelationKindWith(site.Faction) == FactionRelationKind.Hostile))
+            foreach (var faction in Find.FactionManager.AllFactionsVisibleInViewOrder.Where(x => !x.IsPlayer && x != attacker && x.RelationKindWith(site.Faction) == FactionRelationKind.Hostile))
             {
                 factions.Add(faction);
                 answers.Add(Answer.None);
@@ -84,12 +87,12 @@ namespace MoreEvents.Communications
 
         private void CheckAnswer(string answer)
         {
-            if(answer == "удача")
+            if (answer == "удача")
             {
                 SetAnswer(currentFaction, Answer.Yes);
                 site.comp.AddFaction(currentFaction);
             }
-            if(answer == "неудача")
+            if (answer == "неудача")
             {
                 SetAnswer(currentFaction, Answer.No);
             }
@@ -133,7 +136,7 @@ namespace MoreEvents.Communications
     {
         public static string TranslateAnswer(this Answer answer)
         {
-            switch(answer)
+            switch (answer)
             {
                 case Answer.No:
                     return "NoHelpDoomsday".Translate();

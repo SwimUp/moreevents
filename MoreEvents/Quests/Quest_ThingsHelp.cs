@@ -49,6 +49,18 @@ namespace MoreEvents.Quests
             listing.End();
         }
 
+        public override ThingFilter GetQuestThingFilter()
+        {
+            ThingFilter filter = new ThingFilter();
+            filter.SetAllow(ThingCategoryDefOf.ResourcesRaw, true);
+            filter.SetAllow(ThingCategoryDefOf.Apparel, true);
+            filter.SetAllow(ThingCategoryDefOf.Items, true);
+            filter.SetAllow(ThingCategoryDefOf.Manufactured, true);
+            filter.SetAllow(ThingCategoryDefOf.Medicine, true);
+
+            return filter;
+        }
+
         public override string GetInspectString()
         {
             return "HowToCheckReqList".Translate();

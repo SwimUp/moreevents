@@ -7,16 +7,14 @@ using Verse;
 
 namespace QuestRim
 {
-    public class QuestOption : IExposable
+    public abstract class QuestOption : IExposable
     {
-        public string Label;
+        public abstract string Label { get; }
 
-        public List<QuestAction> Actions;
+        public abstract void DoAction(Quest quest, Pawn speaker, Pawn defendant);
 
-        public void ExposeData()
+        public virtual void ExposeData()
         {
-            Scribe_Values.Look(ref Label, "Label");
-            Scribe_Collections.Look(ref Actions, "Actions", LookMode.Deep);
         }
     }
 }

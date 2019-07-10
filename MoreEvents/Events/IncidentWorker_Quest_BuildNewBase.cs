@@ -24,6 +24,14 @@ namespace MoreEvents.Events
             if (faction == null)
                 return false;
 
+            foreach (var quest in QuestsManager.Communications.Quests)
+            {
+                if (quest.Faction == faction && quest is Quest_BuildNewBase)
+                {
+                    return false;
+                }
+            }
+
             return true;
         }
 
@@ -34,6 +42,15 @@ namespace MoreEvents.Events
                 return false;
 
             Faction faction = GetFaction();
+
+            foreach (var q in QuestsManager.Communications.Quests)
+            {
+                if (q.Faction == faction && q is Quest_BuildNewBase)
+                {
+                    return false;
+                }
+            }
+
             List<Settlement> factionBases = Find.WorldObjects.Settlements.Where(x => x.Faction == faction).ToList();
 
             if (factionBases.Count == 0)
@@ -56,19 +73,17 @@ namespace MoreEvents.Events
                     playerPawns += map.mapPawns.ColonistCount;
                 }
             }
-            playerPawns = Mathf.Max(2, playerPawns / 2);
+            playerPawns = Mathf.Max(2, playerPawns);
             quest.PawnsRequired = Rand.Range(1, playerPawns);
 
-            float value = 250 * playerPawns;
-            ThingSetMakerParams parms2 = default;
-            parms2.totalMarketValueRange = new FloatRange(250, value);
-            quest.Rewards = ThingSetMakerDefOf.ResourcePod.root.Generate(parms2);
+            float value = (250 * quest.PawnsRequired) * 1.8f;
+
+            quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(value, value), new IntRange(2, 5), null, null);
 
             LookTargets target = new LookTargets(newTile);
             quest.Target = target;
             quest.TicksToPass = Rand.Range(8, 14) * 60000;
-            //quest.TicksToEnd = Rand.Range(3, 5) * 60000);
-            quest.TicksToEnd = 15000;
+            quest.TicksToEnd = Rand.Range(3, 5) * 60000;
 
             QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);
             quest.Site = questPlace;
