@@ -32,4 +32,16 @@
   <DoomsdayDesc>The {0} faction gathered to arrange a kawabanga on this planet. We can try to collect the missing amount, or maybe other factions will be able to help in the raid on their base?</DoomsdayDesc>
   <AdditionalContent>Additional Information</AdditionalContent>
   
+  <CommOption_GetHelp_Label>Ask for help (left: {0})</CommOption_GetHelp_Label>
+  <Help_AskResoucesTitle>Resources sent</Help_AskResoucesTitle>
+  <Help_AskResouces>The {0} faction remembers its duty and sends you the resources that it was able to collect. {1}</Help_AskResouces>
+  <Help_AskPowerTitle>Help was sent</Help_AskPowerTitle>
+  <Help_AskPower>The faction {0} remembers its duty and sends you a group of its fighters to support your settlement.</Help_AskPower>
+  <UsingCaravan>The faction technology does not allow it to use capsules, so they sent a caravan.</UsingCaravan>
+  <UsingCapsules>Support was sent by capsules.</UsingCapsules>
+  <GiftHasBeenDroppedTitle>Resources transferred</GiftHasBeenDroppedTitle>
+  <GiftHasBeenDropped>Resources left close to your colony. (click that go)</GiftHasBeenDropped>
+  <AssistCaravan_GifterArrivedTitle>Friendly squad arrived</AssistCaravan_GifterArrivedTitle>
+  <AssistCaravan_GifterArrived>A friendly squad arrived at your request. They will leave things near your colony.</AssistCaravan_GifterArrived>
+  
 </LanguageData>
