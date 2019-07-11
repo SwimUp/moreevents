@@ -17,7 +17,7 @@ namespace QuestRim
 
         public virtual void ExposeData()
         {
-
+            Scribe_Values.Look(ref id, "id");
         }
 
         public string GetUniqueLoadID()

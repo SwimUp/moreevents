@@ -60,9 +60,7 @@ namespace MoreEvents.Events
             questPlace.Init(quest);
 
             Find.WorldObjects.Add(questPlace);
-            QuestsManager.Communications.AddQuest(quest);
-
-            SendStandardLetter(target);
+            QuestsManager.Communications.AddQuest(quest, QuestsManager.Communications.MakeQuestLetter(quest, description: def.description, lookTarget: target));
 
             return true;
         }

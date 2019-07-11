@@ -1,5 +1,6 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using MoreEvents.Things;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -171,6 +172,9 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 comp.CachedRelations.Clear();
                 comp.CachedFactions.Clear();
             }
+
+            QuestsManager.Communications.RemoveCommunication(comp.Dialog);
+            comp.Dialog = null;
 
             base.PreForceReform(mapParent);
         }

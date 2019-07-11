@@ -1,0 +1,22 @@
+﻿using QuestRim;
+using RimWorld.Planet;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Verse;
+
+namespace MoreEvents.Events.AttackFriendlySettlement
+{
+    public class Quest_AttackFriendlySettlement : Quest
+    {
+        public override string CardLabel => "Quest_AttackFriendlySettlement_CardLabel".Translate();
+
+        public override string Description => "Quest_AttackFriendlySettlement_Description".Translate(Faction.leader.Name.ToStringFull, Faction.Name);
+
+        public override void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
+        {
+            base.EndQuest(caravan, condition);
+        }
+    }
+}

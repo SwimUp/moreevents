@@ -12,6 +12,8 @@ namespace MoreEvents.Events.AttackFriendlySettlement
     {
         public CaravanArrivalAction_HelpFriendlySettlement caravanAction;
 
+        public Quest_AttackFriendlySettlement Quest;
+
         public bool AttackRepelled = false;
 
         public override void SpawnSetup()
@@ -28,6 +30,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             base.ExposeData();
 
             Scribe_Values.Look(ref AttackRepelled, "AttackRepelled");
+            Scribe_References.Look(ref Quest, "Quest");
         }
 
         public override bool CanLeave()

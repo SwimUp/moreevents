@@ -1,6 +1,7 @@
 ﻿using MapGenerator;
 using MoreEvents.MapGeneratorFactionBase;
 using MoreEvents.Things;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -16,6 +17,8 @@ namespace MoreEvents.Events.ClimateBomb
         private int detonationTimer = 0;
 
         public Building_ClimateBomb Bomb;
+
+        public CommunicationDialog CommunicationDialog;
 
         public bool BlownUp = false;
 
@@ -52,6 +55,7 @@ namespace MoreEvents.Events.ClimateBomb
             Scribe_Values.Look(ref BlownUp, "BlownUp");
             Scribe_Values.Look(ref currentWave, "currentWave");
             Scribe_References.Look(ref Bomb, "Bomb");
+            Scribe_References.Look(ref CommunicationDialog, "CommunicationDialog");
         }
 
         public override void PostMapGenerate()

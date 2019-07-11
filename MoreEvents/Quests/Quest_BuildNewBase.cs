@@ -67,8 +67,6 @@ namespace MoreEvents.Quests
 
         public override void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
         {
-            base.EndQuest(caravan, condition);
-
             if (condition == EndCondition.Success)
             {
                 CaravanMaker.MakeCaravan(EnteredPawns, RimWorld.Faction.OfPlayer, Site.Tile, false);
@@ -81,6 +79,13 @@ namespace MoreEvents.Quests
 
                 OldSettlement.Tile = Site.Tile;
             }
+
+            if(condition == EndCondition.Timeout)
+            {
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, -10);
+            }
+
+            base.EndQuest(caravan, condition);
         }
 
         public override void ExposeData()

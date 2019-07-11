@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -39,11 +40,17 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             if (factionBase == null)
                 return false;
 
+            Quest_AttackFriendlySettlement quest = new Quest_AttackFriendlySettlement();
+            quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
+            quest.Faction = faction;
+
             FriendlySettlement site = (FriendlySettlement)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.FriendlySettlementHelp);
             site.Tile = factionBase.Tile;
+            site.Quest = quest;
             site.SetFaction(faction);
             var comp = site.GetComponent<FriendlySettlementComp>();
             comp.TicksToAttack = Rand.Range(8, 15) * 60000;
+            quest.TicksToPass = comp.TicksToAttack;
             comp.OffensiveFaction = faction2;
             comp.InitPoints();
             Find.WorldObjects.Add(site);
@@ -59,7 +66,8 @@ namespace MoreEvents.Events.AttackFriendlySettlement
                 letterText = "AttackFriendlySettlementLetter1".Translate(faction.Name);
             }
 
-            Find.LetterStack.ReceiveLetter(def.letterLabel, letterText, def.letterDef, site);
+            quest.Target = site;
+            QuestsManager.Communications.AddQuest(quest, QuestsManager.Communications.MakeQuestLetter(quest, description: letterText, lookTarget: quest.Target));
 
             return true;
         }

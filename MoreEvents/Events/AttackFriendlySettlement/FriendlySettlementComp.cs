@@ -173,14 +173,15 @@ namespace MoreEvents.Events.AttackFriendlySettlement
                 return;
             }
 
-            var relation = settlement.Faction.RelationWith(Faction.OfPlayer, true);
-            relation.goodwill += 2 + savedPawns;
+            settlement.Quest.EndQuest(null, QuestRim.EndCondition.Success);
+
+            settlement.Faction.TryAffectGoodwillWith(Faction.OfPlayer, 2 + savedPawns);
 
             FloatRange value = (RewardMarketValueRange * (int)settlement.Faction.def.techLevel);
             int pawnsValue = savedPawns * 50;
             value.min += pawnsValue;
             value.max += pawnsValue;
-            List<Thing> rewards = GetenrateRewards(value);
+            List<Thing> rewards = GenerateRewards(value);
             StringBuilder builder = new StringBuilder();
             foreach (var thing in rewards)
             {
@@ -196,7 +197,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             Find.WindowStack.Add(dialog);
         }
 
-        private List<Thing> GetenrateRewards(FloatRange totalValue)
+        private List<Thing> GenerateRewards(FloatRange totalValue)
         {
             ThingSetMakerParams parms = default(ThingSetMakerParams);
             parms.countRange = new IntRange(2, 10);
@@ -236,6 +237,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
 
         public void DoLose(bool anyHelp = false)
         {
+            settlement.Quest.EndQuest(null, QuestRim.EndCondition.Fail);
             bool defeated = true;
             DiaNode node = null;
             if (anyHelp)

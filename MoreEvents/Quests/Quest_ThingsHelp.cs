@@ -84,6 +84,16 @@ namespace MoreEvents.Quests
             return CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction.CanGiveItems(caravan, mapParent), () => caravanAction, "GiveItemsOption".Translate(), caravan, mapParent.Tile, mapParent);
         }
 
+        public override void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
+        {
+            if(condition == EndCondition.Timeout)
+            {
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, -10);
+            }
+
+            base.EndQuest(caravan, condition);
+        }
+
         public override void GiveRewards(Caravan caravan)
         {
             int level = (int)TechLevel.Spacer;

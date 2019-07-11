@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,12 @@ namespace MoreEvents.Events.ClimateBomb
 
             ClimateBombSite site = (ClimateBombSite)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.ClimateBombSite);
             site.Tile = spawnPoint;
-            site.GetComponent<ClimateBombComp>().SetTimer();
+            ClimateBombComp comp = site.GetComponent<ClimateBombComp>();
+            comp.SetTimer();
             Find.WorldObjects.Add(site);
+
+            CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "ClimateBombTitle".Translate(), "ClimateBombDesc".Translate(), incident: def);
+            comp.CommunicationDialog = dialog;
 
             SendStandardLetter(site);
 

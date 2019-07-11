@@ -72,9 +72,6 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
                 GeneratePawns(comp, ref enterPos, map);
             }
-
-            comp.Dialog = null;
-            QuestsManager.Communications.RemoveCommunication(comp.Dialog);
         }
 
         private void GeneratePawns(DoomsdayUltimatumComp comp, ref IntVec3 enterPos, Map map)

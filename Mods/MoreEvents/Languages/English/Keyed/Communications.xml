@@ -44,4 +44,18 @@
   <AssistCaravan_GifterArrivedTitle>Friendly squad arrived</AssistCaravan_GifterArrivedTitle>
   <AssistCaravan_GifterArrived>A friendly squad arrived at your request. They will leave things near your colony.</AssistCaravan_GifterArrived>
   
+  <ClimateBombTitle>Climate bomb</ClimateBombTitle>
+  <ClimateBombDesc>We found a climate bomb. Thoughts in my head mixed up. Who and why left it on this planet is not clear, but we need to neutralize it, if we don’t want the next couple of seasons to have anything happen to our climate. \n\nWe need to assemble a good squad, most likely there will be enemy factions, probably will be tied the battle.
+</ClimateBombDesc>
+  
+  <Comm_MassiveFireTitle>Massive fires</Comm_MassiveFireTitle>
+  <Comm_MassiveFireDesc>Near our settlement a fire broke out, probably caused by the weather. With every minute it inflames more and more. It is fraught with ignition of neighboring lands, including ours. \nWe can hope for rain or try to put it out ourselves.</Comm_MassiveFireDesc>
+  
+  <Comm_ShipCrashTitle>Ship crash</Comm_ShipCrashTitle>
+  <Comm_ShipCrashDesc>We saw a ship crash. In appearance - a general purpose ship. When it fell, it fell apart, some of them were large, some small. These are probably cargo and living compartments. \nThe ship's parts are scattered all over the planet. The plating of the ship is made of plastal, so probably a lot could have survived. You can form a caravan and see what remains of the compartments, taking the contents yourself. True, such a profit is likely to attract uninvited guests.</Comm_ShipCrashDesc>
+  
+  <Comm_SiegeCampTitle>Siege Camp</Comm_SiegeCampTitle>
+  <Comm_SiegeCampDesc>Not far from us the camp of gangsters was founded. They have mortars and a desire to kill us. They will attack us at short intervals, simultaneously rebuilding their camp and increasing their combat power. We need to destroy him as soon as possible, before he becomes a real problem.</Comm_SiegeCampDesc>
+  
+  
 </LanguageData>

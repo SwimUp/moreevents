@@ -70,6 +70,8 @@
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
     <Compile Include="Communications\CommOption_GetHelp.cs" />
+    <Compile Include="Communications\MessageAnwer_OpenDialog.cs" />
+    <Compile Include="Communications\TimeComp.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition_PawnCount.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Events\AttackFriendlySettlement\FriendlySettlementComp.cs" />
     <Compile Include="Events\AttackFriendlySettlement\FriendlySettlementComp_Main.cs" />
     <Compile Include="Events\AttackFriendlySettlement\IncidentWorker_AttackFriendlySettlement.cs" />
+    <Compile Include="Events\AttackFriendlySettlement\Quest_AttackFriendlySettlement.cs" />
     <Compile Include="Events\CaravanArrivalAction_EnterToMap.cs" />
     <Compile Include="Events\ClimateBomb\CaravanVisitAction_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\ClimateBombComp.cs" />

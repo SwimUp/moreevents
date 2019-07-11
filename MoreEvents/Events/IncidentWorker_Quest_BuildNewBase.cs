@@ -94,9 +94,9 @@ namespace MoreEvents.Events
             questPlace.Init(quest);
 
             Find.WorldObjects.Add(questPlace);
-            QuestsManager.Communications.AddQuest(quest);
 
-            SendStandardLetter(target, textArgs: faction.Name);
+            string text = string.Format(def.letterText, faction.Name).CapitalizeFirst();
+            QuestsManager.Communications.AddQuest(quest, QuestsManager.Communications.MakeQuestLetter(quest, description: text, lookTarget: target));
 
             return true;
         }

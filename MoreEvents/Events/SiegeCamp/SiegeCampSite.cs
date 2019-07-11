@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace MoreEvents.Events.SiegeCamp
     public class SiegeCampSite : VisitableSite
     {
         public CaravanVisitAction_SiegeCamp caravanAction;
+
+        public CommunicationDialog Dialog;
 
         private SiegeCampSiteComp comp;
 
@@ -89,6 +92,7 @@ namespace MoreEvents.Events.SiegeCamp
             base.ExposeData();
 
             Scribe_Values.Look(ref MapSiegeTile, "MapSiegeTile");
+            Scribe_References.Look(ref Dialog, "Dialog");
         }
 
         public override void PostMapGenerate()
@@ -119,6 +123,8 @@ namespace MoreEvents.Events.SiegeCamp
             comp.Start();
 
             RemoveAfterLeave = true;
+
+            QuestsManager.Communications.RemoveCommunication(Dialog);
 
             base.PreForceReform(mapParent);
         }

@@ -45,6 +45,7 @@ namespace QuestRim
         private readonly List<CommunicationDialog> communicationsDialogs;
         private readonly List<Quest> quests;
         private readonly List<FactionInteraction> factions;
+        private readonly List<EmailMessage> emailMessages;
 
         private Communications communications;
 
@@ -53,10 +54,12 @@ namespace QuestRim
         private int commDialogSliderLength = 0;
         private int commQuestsSliderLength = 0;
         private int commFactionSliderLength = 0;
+        private int commEmailsSliderLength = 0;
 
         private CommunicationDialog currentDialog;
         private Quest currentQuest;
         private FactionInteraction currentFaction;
+        private EmailMessage currentMessage;
 
         private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
@@ -71,6 +74,7 @@ namespace QuestRim
             communicationsDialogs = communications.CommunicationDialogs;
             quests = communications.Quests;
             factions = communications.FactionManager.Factions;
+            emailMessages = communications.PlayerBox.Messages;
 
             this.communications = communications;
             this.speaker = speaker;
@@ -78,6 +82,7 @@ namespace QuestRim
             commDialogSliderLength = communicationsDialogs.Count * 78;
             commQuestsSliderLength = quests.Count * 108;
             commFactionSliderLength = factions.Count * 60;
+            commEmailsSliderLength = emailMessages.Count * 130;
 
             forcePause = true;
         }
@@ -474,10 +479,10 @@ namespace QuestRim
             rect3.height = 50;
             rect3.width = 280;
             rect3.x = 20;
-            DrawBottomInterButtons(ref rect3, "InteractionInterTab".Translate(), () => interTab = InterTab.Interaction);
+            DrawBottomInterButtons(ref rect3, "InteractionInterTab".Translate(), () => { interTab = InterTab.Interaction; });
             rect3.x = 330;
             rect3.width = 300;
-            DrawBottomInterButtons(ref rect3, "MessagesInterTab".Translate(), () => interTab = InterTab.Messages);
+            DrawBottomInterButtons(ref rect3, "MessagesInterTab".Translate(), () => { interTab = InterTab.Messages; currentMessage = null; });
             rect3.x = 660;
             rect3.width = 280;
             DrawBottomInterButtons(ref rect3, "AllianceInterTab".Translate(), () => interTab = InterTab.Alliance);
@@ -488,7 +493,7 @@ namespace QuestRim
                     DrawInteraction(inRect);
                     break;
                 case InterTab.Messages:
-
+                    DrawEmailBox(inRect);
                     break;
                 case InterTab.Alliance:
 
@@ -497,6 +502,118 @@ namespace QuestRim
 
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
+        }
+
+        private void DrawEmailBox(Rect inRect)
+        {
+            if (currentMessage == null)
+            {
+                DrawEmailMessages(inRect);
+            }
+            else
+            {
+                DrawEmailMessage(inRect);
+            }
+        }
+
+        private void DrawEmailMessage(Rect rect)
+        {
+            rect.height = 560;
+            rect.y = 20;
+
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            Text.Font = GameFont.Medium;
+            Rect titleRect = new Rect(15, rect.y + 15, rect.width - 20, 50);
+            Widgets.Label(titleRect, currentMessage.Subject);
+            Text.Font = GameFont.Small;
+            Rect headerRect = rect;
+            headerRect.height = 20;
+            headerRect.y = 60;
+            headerRect.x = 15;
+            Widgets.Label(headerRect, "EmailMessage_From".Translate(currentMessage.From));
+            headerRect.y += 20;
+            Widgets.Label(headerRect, "EmailMessage_To".Translate(currentMessage.From));
+            headerRect.y += 20;
+            GUI.color = MenuSectionBGBorderColor;
+            Widgets.DrawLineHorizontal(0, headerRect.y + 1, rect.width);
+            GUI.color = Color.white;
+
+            Rect textRect = rect;
+            textRect.x = 15;
+            textRect.y = headerRect.y + 5;
+            textRect.width -= 20;
+            textRect.height = 470;
+            Widgets.LabelScrollable(textRect, currentMessage.Message, ref commInfoSlider);
+        }
+
+        private void DrawEmailMessages(Rect inRect)
+        {
+            Rect rect = inRect;
+            rect.height = 560;
+            Rect scrollVertRectFact = new Rect(0, 0, rect.x, commEmailsSliderLength);
+            int y = 10;
+            Widgets.BeginScrollView(rect, ref commSlider, scrollVertRectFact, false);
+            for(int i = 0; i < emailMessages.Count; i++)
+            {
+                EmailMessage message = emailMessages[i];
+                DrawEmailMessage(rect, ref y, message);
+            }
+            Widgets.EndScrollView();
+        }
+
+        private void DrawEmailMessage(Rect rect, ref int y, EmailMessage message)
+        {
+            Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Medium;
+
+            Rect r = new Rect(10, y, rect.width - 20, 120);
+            Rect titleRect = new Rect(15, y, rect.width - 20, 50);
+            Widgets.Label(titleRect, message.Subject);
+            Text.Font = GameFont.Tiny;
+            Rect rect2 = new Rect(15, y + 26, rect.width - 20, 20);
+            Widgets.Label(rect2, "EmailMessage_From".Translate(message.From));
+            rect2.y += 15;
+            Widgets.Label(rect2, "EmailMessage_To".Translate(message.From));
+            rect2.y += 25;
+
+            Text.Anchor = TextAnchor.MiddleCenter;
+            for(int i = 0; i < Mathf.Min(4, message.Answers.Count); i++)
+            {
+                EmailMessageOption answer = message.Answers[i];
+
+                if (DrawCustomButton(new Rect(rect2.x, rect2.y, 200, rect2.height), answer.Label, Color.white))
+                {
+
+                }
+                rect2.x += 220;
+            }
+
+            if (DrawCustomButton(new Rect(15, rect2.y + 25, 200, rect2.height), "DeleteMessage".Translate(), Color.white))
+            {
+                communications.PlayerBox.DeleteMessage(message);
+            }
+
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            Text.Font = GameFont.Small;
+            if(Mouse.IsOver(r))
+            {
+                Widgets.DrawBox(r);
+            }
+
+            string str = $"{message.Message.Substring(0, message.Message.Length > 150 ? 150 : message.Message.Length)}...";
+            TooltipHandler.TipRegion(r, str);
+
+            GUI.color = CommCardBGColor;
+            Widgets.DrawHighlight(r);
+            GUI.color = Color.white;
+
+            if (Widgets.ButtonInvisible(r))
+            {
+                currentMessage = message;
+            }
+            y += 130;
         }
 
         private void DrawBottomInterButtons(ref Rect rect, string text, Action click)

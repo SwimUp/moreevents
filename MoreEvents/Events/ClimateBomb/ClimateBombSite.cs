@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MoreEvents.Things;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -55,6 +56,11 @@ namespace MoreEvents.Events.ClimateBomb
 
         public void DetonateBomb()
         {
+            RemoveAfterLeave = true;
+            var condition = GameConditionMaker.MakeCondition(GameConditionDefOfLocal.ClimateChaos, Rand.Range(15, 25) * 60000);
+            Find.World.gameConditionManager.RegisterCondition(condition);
+            Find.LetterStack.ReceiveLetter(GameConditionDefOfLocal.ClimateChaos.label, GameConditionDefOfLocal.ClimateChaos.description, LetterDefOf.NegativeEvent);
+
             if (HasMap)
             {
                 Bomb.Detonate();
@@ -63,11 +69,13 @@ namespace MoreEvents.Events.ClimateBomb
             {
                 Find.WorldObjects.Remove(this);
             }
+        }
 
-            RemoveAfterLeave = true;
-            var condition = GameConditionMaker.MakeCondition(GameConditionDefOfLocal.ClimateChaos, Rand.Range(15, 25) * 60000);
-            Find.World.gameConditionManager.RegisterCondition(condition);
-            Find.LetterStack.ReceiveLetter(GameConditionDefOfLocal.ClimateChaos.label, GameConditionDefOfLocal.ClimateChaos.description, LetterDefOf.NegativeEvent);
+        public override void PreForceReform(MapParent mapParent)
+        {
+            QuestsManager.Communications.RemoveCommunication(Comp.CommunicationDialog);
+
+            base.PreForceReform(mapParent);
         }
     }
 }

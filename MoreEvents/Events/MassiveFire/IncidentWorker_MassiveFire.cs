@@ -1,4 +1,5 @@
 ﻿using MoreEvents.Events.ShipCrash.Map.MapGenerator;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -75,6 +76,9 @@ namespace MoreEvents.Events.MassiveFire
             site.RootTile = map.Tile;
             site.RootMap = map;
             Find.WorldObjects.Add(site);
+
+            CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "Comm_MassiveFireTitle".Translate(), "Comm_MassiveFireDesc".Translate(), incident: def);
+            site.CommunicationDialog = dialog;
 
             SendStandardLetter(site);
 

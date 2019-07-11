@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+	<QuestPrefix>Quest</QuestPrefix>
+
 	<Quest_RequiredItems>Requested resources</Quest_RequiredItems>
 	<Quest_HelpItems_Site>Place of transfer of resources</Quest_HelpItems_Site>
 	<HowToCheckReqList>To view a list of required items, open detailed information.</HowToCheckReqList>
@@ -30,5 +32,10 @@ List of required resources:</HelpResourcesDescriptionTitle>
 	<BuildingSeccessEndTitle>Construction completed</BuildingSeccessEndTitle>
 	<BuildingSeccessEnd>Construction of settlement for {0} is over. They thank you for their help and notify you that you can now ask them to help you in a difficult situation with resources or military help. (You can request through the Geoscape)
 </BuildingSeccessEnd>
+
+	<Quest_AttackFriendlySettlement_CardLabel>Attack on a friendly settlement</Quest_AttackFriendlySettlement_CardLabel>
+	<Quest_AttackFriendlySettlement_Description>The leader of the {0} allied faction {1} reports that their scouts noticed an approaching threat in the form of an enemy raid on their settlement. At the moment, most of their fighters on the mission, which, unfortunately, can not tell you. \nThey ask you to help them repel this attack. For this, they will be able to provide you with intelligence information from time to time. \n\nTo help a settlement repel an attack, collect a caravan with everything you need and head to the attack point on the map. \nThe reward depends on the number of surviving settlers of the allied settlement.
+</Quest_AttackFriendlySettlement_Description>
+	
 	
 </LanguageData>

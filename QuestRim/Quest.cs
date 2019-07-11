@@ -108,6 +108,9 @@ namespace QuestRim
 
         public virtual void GiveRewards(Caravan caravan)
         {
+            if (Rewards == null || Rewards.Count == 0)
+                return;
+
             Map map = Find.AnyPlayerHomeMap;
             IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
             DropPodUtility.DropThingsNear(intVec, map, Rewards, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);

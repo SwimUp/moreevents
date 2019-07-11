@@ -75,17 +75,47 @@ namespace QuestRim
             }
         }
 
+        public List<EmailBox> EmailBoxes
+        {
+            get
+            {
+                if (emailBoxes == null)
+                {
+                    emailBoxes = new List<EmailBox>();
+                    emailBoxes.Add(new EmailBox()
+                    {
+                        Owner = Faction.OfPlayer
+                    });
+                }
+
+                return emailBoxes;
+            }
+        }
+        public EmailBox PlayerBox
+        {
+            get
+            {
+                if(playerBox == null)
+                {
+                    playerBox = EmailBoxes.Where(box => box.Owner == Faction.OfPlayer).FirstOrDefault();
+                }
+
+                return playerBox;
+            }
+        }
+        private EmailBox playerBox;
+
+
         private List<CommunicationDialog> communicationDialogs;
         private List<Quest> quests;
         private UniqueIdManager uniqueIdManager;
         private List<CommunicationComponent> components;
         private FactionManager factionManager;
+        private List<EmailBox> emailBoxes;
 
         public Communications()
         {
-            communicationDialogs = new List<CommunicationDialog>();
-            quests = new List<Quest>();
-            uniqueIdManager = new UniqueIdManager();
+
         }
 
         public void OpenCommunications(Pawn speaker)
@@ -195,9 +225,36 @@ namespace QuestRim
             }
         }
 
-        public void AddQuest(Quest quest)
+        public void AddQuest(Quest quest, Letter letter = null)
         {
             Quests.Add(quest);
+
+            if(letter != null)
+            {
+                Find.LetterStack.ReceiveLetter(letter);
+            }
+        }
+
+        public Letter MakeQuestLetter(Quest quest, string label = null, string description = null, LetterDef letterDef = null, LookTargets lookTarget = null)
+        {
+            if (letterDef == null)
+                letterDef = LetterDefOf.NeutralEvent;
+
+            if (string.IsNullOrEmpty(label))
+            {
+                label = $"{"QuestPrefix".Translate()}: {quest.CardLabel}";
+            }
+
+            if (string.IsNullOrEmpty(description))
+                description = quest.Description;
+
+            Letter letter;
+            if(lookTarget == null)
+                letter = LetterMaker.MakeLetter(label, description, letterDef);
+            else
+                letter = LetterMaker.MakeLetter(label, description, letterDef, lookTarget);
+
+            return letter;
         }
 
         public CommunicationDialog AddCommunication(int id, string cardLabel, string description, Faction faction = null, IncidentDef incident = null, List<CommOption> options = null)
@@ -239,6 +296,7 @@ namespace QuestRim
             Scribe_Collections.Look(ref communicationDialogs, "CommunicationDialogs", LookMode.Deep);
             Scribe_Collections.Look(ref quests, "Quests", LookMode.Deep);
             Scribe_Collections.Look(ref components, "components", LookMode.Deep);
+            Scribe_Collections.Look(ref emailBoxes, "EmailBoxes", LookMode.Deep);
         }
     }
 }

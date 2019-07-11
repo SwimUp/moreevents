@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,9 @@ namespace MoreEvents.Events.SiegeCamp
                 site.SetFaction(GetEnemyFaction());
                 site.SetMap(map);
                 Find.WorldObjects.Add(site);
+
+                CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "Comm_SiegeCampTitle".Translate(), "Comm_SiegeCampDesc".Translate(), incident: def);
+                site.Dialog = dialog;
 
                 SendStandardLetter(site);
 

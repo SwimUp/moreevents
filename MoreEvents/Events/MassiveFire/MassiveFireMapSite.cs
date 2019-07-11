@@ -1,5 +1,6 @@
 ﻿using MoreEvents.Biomes;
 using MoreEvents.Events.Comps;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -26,6 +27,8 @@ namespace MoreEvents.Events.MassiveFire
             }
         }
         private Material material;
+
+        public CommunicationDialog CommunicationDialog;
 
         private static MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
 
@@ -170,6 +173,8 @@ namespace MoreEvents.Events.MassiveFire
                     }
                 }
             }
+
+            QuestsManager.Communications.RemoveCommunication(CommunicationDialog);
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)

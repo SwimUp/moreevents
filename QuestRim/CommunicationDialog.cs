@@ -19,7 +19,7 @@ namespace QuestRim
         public Faction Faction;
         public List<CommOption> Options;
 
-        public void ExposeData()
+        public virtual void ExposeData()
         {
             Scribe_Values.Look(ref id, "id");
 

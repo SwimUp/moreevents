@@ -1,4 +1,6 @@
-﻿using MoreEvents.Events.ShipCrash.Map.MapGenerator;
+﻿using MoreEvents.Communications;
+using MoreEvents.Events.ShipCrash.Map.MapGenerator;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -63,6 +65,12 @@ namespace MoreEvents.Events.ShipCrash
             }
 
             SendStandardLetter();
+
+            CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "Comm_ShipCrashTitle".Translate(), "Comm_ShipCrashDesc".Translate(), incident: def);
+
+            TimeComp timeComp = new TimeComp(dialog, 7000);
+            timeComp.id = QuestsManager.Communications.UniqueIdManager.GetNextComponentID();
+            QuestsManager.Communications.RegisterComponent(timeComp);
 
             ShipCrash_Controller.ShipCount++;
 
