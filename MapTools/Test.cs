@@ -63,6 +63,52 @@ namespace DiaRim
 
                     Find.WindowStack.Add(new CreateMessageWindow(message));
                 }
+                if (listing.ButtonText("End quest..."))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach(EndCondition condition in Enum.GetValues(typeof(EndCondition)))
+                    {
+                        list.Add(new FloatMenuOption(condition.ToString(), delegate
+                        {
+                            List<FloatMenuOption> list2 = new List<FloatMenuOption>();
+                            foreach (var quest in QuestsManager.Communications.Quests)
+                            {
+                                list2.Add(new FloatMenuOption(quest.CardLabel, delegate
+                                {
+                                    quest.EndQuest(null, condition);
+                                }));
+                            }
+
+                            Find.WindowStack.Add(new FloatMenu(list2));
+                        }));
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+                if (listing.ButtonText("Add scout component"))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach (var faction in QuestsManager.Communications.FactionManager.Factions)
+                    {
+                        list.Add(new FloatMenuOption(faction.Faction.Name, delegate
+                        {
+                            if (!ScoutingComp.ScoutAlready(faction.Faction, out ScoutingComp outComp))
+                            {
+                                ScoutingComp comp = new ScoutingComp(faction.Faction, 4000, 200000, 5);
+                                comp.id = QuestsManager.Communications.UniqueIdManager.GetNextComponentID();
+
+                                QuestsManager.Communications.RegisterComponent(comp);
+                            }
+                            else
+                            {
+                                Messages.Message("Already has", MessageTypeDefOf.PositiveEvent, false);
+                            }
+                        }));
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+
                 listing.End();
             }
         }

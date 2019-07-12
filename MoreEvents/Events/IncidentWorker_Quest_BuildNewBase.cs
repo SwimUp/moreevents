@@ -58,7 +58,7 @@ namespace MoreEvents.Events
 
             Settlement factionBase = factionBases.RandomElement();
 
-            if (!GetNewTile(factionBase.Tile, out int newTile))
+            if (!TryGetNewTile(factionBase.Tile, out int newTile))
                 return false;
 
             Quest_BuildNewBase quest = new Quest_BuildNewBase();
@@ -106,7 +106,7 @@ namespace MoreEvents.Events
             return Find.FactionManager.RandomAlliedFaction();
         }
 
-        private bool GetNewTile(int root, out int newTile)
+        private bool TryGetNewTile(int root, out int newTile)
         {
             return TileFinder.TryFindPassableTileWithTraversalDistance(root, 5, 9, out newTile, (int i) => !Find.WorldObjects.AnyWorldObjectAt(i));
         }

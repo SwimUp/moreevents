@@ -36,6 +36,9 @@ List of required resources:</HelpResourcesDescriptionTitle>
 	<Quest_AttackFriendlySettlement_CardLabel>Attack on a friendly settlement</Quest_AttackFriendlySettlement_CardLabel>
 	<Quest_AttackFriendlySettlement_Description>The leader of the {0} allied faction {1} reports that their scouts noticed an approaching threat in the form of an enemy raid on their settlement. At the moment, most of their fighters on the mission, which, unfortunately, can not tell you. \nThey ask you to help them repel this attack. For this, they will be able to provide you with intelligence information from time to time. \n\nTo help a settlement repel an attack, collect a caravan with everything you need and head to the attack point on the map. \nThe reward depends on the number of surviving settlers of the allied settlement.
 </Quest_AttackFriendlySettlement_Description>
-	
+	<ScoutComp_GiveTitle>Intelligence agreement</ScoutComp_GiveTitle>
+	<ScoutComp_Give>You have signed an intelligence agreement with the {0} faction, whereby they will provide intelligence data every {1} days for {2} days that may contain (depending on the success of the intelligence) information about imminent threats.</ScoutComp_Give>
+	<ScoutComp_AlreadyGiveTitle>Intelligence agreement</ScoutComp_AlreadyGiveTitle>
+	<ScoutComp_AlreadyGive>The agreement with faction {0} has already been signed, so it has been extended for {1} days.</ScoutComp_AlreadyGive>
 	
 </LanguageData>

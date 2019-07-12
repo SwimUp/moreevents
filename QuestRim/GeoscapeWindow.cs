@@ -528,22 +528,22 @@ namespace QuestRim
             Widgets.Label(titleRect, currentMessage.Subject);
             Text.Font = GameFont.Small;
             Rect headerRect = rect;
-            headerRect.height = 20;
+            headerRect.height = 22;
             headerRect.y = 60;
             headerRect.x = 15;
             Widgets.Label(headerRect, "EmailMessage_From".Translate(currentMessage.From));
-            headerRect.y += 20;
-            Widgets.Label(headerRect, "EmailMessage_To".Translate(currentMessage.From));
+            headerRect.y += 22;
+            Widgets.Label(headerRect, "EmailMessage_To".Translate(currentMessage.To));
             headerRect.y += 20;
             GUI.color = MenuSectionBGBorderColor;
-            Widgets.DrawLineHorizontal(0, headerRect.y + 1, rect.width);
+            Widgets.DrawLineHorizontal(0, headerRect.y + 3, rect.width);
             GUI.color = Color.white;
 
             Rect textRect = rect;
             textRect.x = 15;
-            textRect.y = headerRect.y + 5;
+            textRect.y = headerRect.y + 10;
             textRect.width -= 20;
-            textRect.height = 470;
+            textRect.height = 465;
             Widgets.LabelScrollable(textRect, currentMessage.Message, ref commInfoSlider);
         }
 
@@ -574,7 +574,7 @@ namespace QuestRim
             Rect rect2 = new Rect(15, y + 26, rect.width - 20, 20);
             Widgets.Label(rect2, "EmailMessage_From".Translate(message.From));
             rect2.y += 15;
-            Widgets.Label(rect2, "EmailMessage_To".Translate(message.From));
+            Widgets.Label(rect2, "EmailMessage_To".Translate(message.To));
             rect2.y += 25;
 
             Text.Anchor = TextAnchor.MiddleCenter;

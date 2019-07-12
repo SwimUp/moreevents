@@ -1,4 +1,6 @@
-﻿using QuestRim;
+﻿using MoreEvents.Communications;
+using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,11 @@ namespace MoreEvents.Events.AttackFriendlySettlement
         public override void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
         {
             base.EndQuest(caravan, condition);
+
+            if(condition == EndCondition.Success)
+            {
+                ScoutingComp.GiveScoutingComp(Faction, 2, 15, 5, 5);
+            }
         }
     }
 }

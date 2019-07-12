@@ -626,7 +626,7 @@ You can contact them via geocape.
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Quest_ResourceHelp</workerClass>
 		<category>Misc</category>
-		<minRefireDays>80</minRefireDays>
+		<minRefireDays>45</minRefireDays>
 		<baseChance>1.1</baseChance>
 		<earliestDay>60</earliestDay>
 	</IncidentDef>
@@ -650,6 +650,25 @@ You can contact them via geocape.
 		<minRefireDays>90</minRefireDays>
 		<baseChance>0.7</baseChance>
 		<earliestDay>77</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Задание: постройка новой базы -->
+	<IncidentDef>
+		<defName>Quest_MissingPeople</defName>
+		<label>Missing people</label>
+		<letterLabel>Missing people</letterLabel>
+		<letterText>The leader of the faction {0} contacted us and reported that a couple of days ago a small group of their settlers went on a journey to get resources. Estimated time of their journey was estimated at {1} days. More than {2} days passed, but the settlers never returned. Attempts to get in touch have failed and they are worried that the settlers might get lost or be attacked. \nThe food intakes they had enough will last for about {3} days, after which they will starve. He asks us to find the missing settlers and return them to them.
+</letterText>
+	    <letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Quest_MissingPeople</workerClass>
+		<category>Misc</category>
+		<minRefireDays>70</minRefireDays>
+		<baseChance>0.7</baseChance>
+		<earliestDay>40</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 	

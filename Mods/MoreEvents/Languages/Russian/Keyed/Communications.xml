@@ -67,6 +67,12 @@
   <EmailMessageReceivedTitle>Получено сообщение</EmailMessageReceivedTitle>
   <EmailMessageReceived>Вы получили сообщение от {0} на тему {1}. Вы можете посмотреть его в почтовой ящике, в планетарной консоли связи.</EmailMessageReceived>
   <DeleteMessage>Удалить сообщение</DeleteMessage>
-  <ReplyMessage>Ответить на сообщение</ReplyMessage>
+  
+  <ScoutingComp_InfoTitle>Приветствую! Отправляю вам информацию от наших разведчиков, которую они смогли собрать для вашего поселения. В отчете указаны опасность и примерное время.\n\n</ScoutingComp_InfoTitle>
+  <ScoutingComp_ThreatKnown>(Уровень угрозы: {0})</ScoutingComp_ThreatKnown>
+  <ScoutingComp_ThreatUnknown>(Уровень угрозы неизвестен)</ScoutingComp_ThreatUnknown>
+  <ScoutingComp_CommingTime> примерное время прибытия {0} (дней)</ScoutingComp_CommingTime>
+  <ScoutingComp_NoThreatsInfoTitle>Приветствую! После нескольких дней отсутствия наши разведчики наконец вернулись. Они не обнаружили никаких надвигающихся угроз.</ScoutingComp_NoThreatsInfoTitle>
+  <ScoutingComp_Subject>Отчёт разведки</ScoutingComp_Subject>
   
 </LanguageData>

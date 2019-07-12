@@ -57,5 +57,17 @@
   <Comm_SiegeCampTitle>Siege Camp</Comm_SiegeCampTitle>
   <Comm_SiegeCampDesc>Not far from us the camp of gangsters was founded. They have mortars and a desire to kill us. They will attack us at short intervals, simultaneously rebuilding their camp and increasing their combat power. We need to destroy him as soon as possible, before he becomes a real problem.</Comm_SiegeCampDesc>
   
+  <EmailMessage_From>From: {0}</EmailMessage_From>
+  <EmailMessage_To>To: {0}</EmailMessage_To>
+  <EmailMessageReceivedTitle>Message received</EmailMessageReceivedTitle>
+  <EmailMessageReceived>You have received a message from {0} on the topic {1}. You can view it in the mailbox, in Geoscape.</EmailMessageReceived>
+  <DeleteMessage>Delete message</DeleteMessage>
+  
+  <ScoutingComp_InfoTitle>Greetings I am sending you information from our intelligence officers that they were able to collect for your settlement. The report indicates the danger and the estimated time.\n\n</ScoutingComp_InfoTitle>
+  <ScoutingComp_ThreatKnown>(Threat: {0})</ScoutingComp_ThreatKnown>
+  <ScoutingComp_ThreatUnknown>(Threat level unknown)</ScoutingComp_ThreatUnknown>
+  <ScoutingComp_CommingTime> estimated time of arrival {0} (days)</ScoutingComp_CommingTime>
+  <ScoutingComp_NoThreatsInfoTitle>Greetings After several days of absence, our scouts finally returned. They did not detect any looming threats.</ScoutingComp_NoThreatsInfoTitle>
+  <ScoutingComp_Subject>Intelligence report</ScoutingComp_Subject>
   
 </LanguageData>

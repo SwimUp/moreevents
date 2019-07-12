@@ -46,6 +46,13 @@ namespace QuestRim
             }
         }
 
+        public override void PostMapGenerate()
+        {
+            base.PostMapGenerate();
+
+            Quest.PostMapGenerate();
+        }
+
         public override IEnumerable<FloatMenuOption> GetTransportPodsFloatMenuOptions(IEnumerable<IThingHolder> pods, CompLaunchable representative)
         {
             foreach (var opt in base.GetTransportPodsFloatMenuOptions(pods, representative))

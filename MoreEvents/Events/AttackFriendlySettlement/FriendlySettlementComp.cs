@@ -257,7 +257,6 @@ namespace MoreEvents.Events.AttackFriendlySettlement
                 Find.WorldObjects.Remove(settlement);
             }
 
-            var relation = settlement.Faction.RelationWith(Faction.OfPlayer, true);
             if (defeated)
             {
                 var factionSettlement = Find.WorldObjects.SettlementAt(settlement.Tile);
@@ -273,20 +272,14 @@ namespace MoreEvents.Events.AttackFriendlySettlement
 
                 if(!settlement.Faction.defeated)
                 {
-                    if (relation != null)
-                    {
-                        relation.goodwill -= 5 * (int)OffensiveFaction?.def.techLevel;
-                    }
+                    settlement.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -(5 * (int)OffensiveFaction?.def.techLevel));
                 }
             }
             else
             {
                 if (!settlement.Faction.defeated)
                 {
-                    if (relation != null)
-                    {
-                        relation.goodwill -= 2 * (int)OffensiveFaction?.def.techLevel;
-                    }
+                    settlement.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -(5 * (int)OffensiveFaction?.def.techLevel));
                 }
             }
 

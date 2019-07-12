@@ -78,6 +78,11 @@ namespace QuestRim
             Rewards = maker.Generate();
         }
 
+        public virtual void PostMapGenerate()
+        {
+
+        }
+
         public virtual ThingFilter GetQuestThingFilter()
         {
             ThingFilter filter = new ThingFilter();
