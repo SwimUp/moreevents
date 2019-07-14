@@ -1,10 +1,13 @@
-﻿using QuestRim;
+﻿using MapGeneratorBlueprints.MapGenerator;
+using MoreEvents.Communications;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace MoreEvents.Quests
@@ -17,34 +20,22 @@ namespace MoreEvents.Quests
 
         public override string PlaceLabel => "Quest_MissingPeople_PlaceLabel".Translate();
 
-        public override string ExpandingIconPath => "Quests/Quest_MissingPeople";
+        public override string ExpandingIconPath => saved ? expandingIconPath2 : "Quests/Quest_MissingPeople";
+
+        private string expandingIconPath2 => "Quests/Quest_MissingPeople2";
 
         public float FindChance => 0.35f;
-        public int BaseTile;
         private int minDays = 5;
         private int passedDays = 8;
 
+        private bool saved = false;
+
         private List<Pawn> savedPawns = new List<Pawn>();
+        public List<Pawn> SavedPawns => savedPawns;
 
         public Quest_MissingPeople()
         {
 
-        }
-
-        public override void PostMapGenerate()
-        {
-            base.PostMapGenerate();
-
-            GenerateAlliedPawns();
-        }
-
-        private void GenerateAlliedPawns()
-        {
-            for(int i = 0; i < Rand.Range(2, 4); i++)
-            {
-                Pawn p = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction);
-                savedPawns.Add(p);
-            }
         }
 
         public Quest_MissingPeople(int daysLeft, int minDays = 5, int passedDays = 8)
@@ -54,15 +45,108 @@ namespace MoreEvents.Quests
             this.passedDays = passedDays;
         }
 
+        public override void Notify_CaravanFormed(QuestSite site, Caravan caravan)
+        {
+            foreach (var pawn in savedPawns)
+            {
+                if (pawn != null && !pawn.Dead)
+                {
+                    caravan.AddPawn(pawn, false);
+
+                    pawn.DestroyOrPassToWorld();
+                }
+            }
+
+            saved = true;
+            ResetIcon();
+
+            Settlement settlement = null;
+            if (Find.WorldObjects.Settlements.Where(s => s.Faction == Faction).TryRandomElement(out settlement))
+            {
+                int arrivalTime = CaravanArrivalTimeEstimator.EstimatedTicksToArrive(site.Tile, settlement.Tile, caravan);
+                TicksToPass = arrivalTime  + (3 * 60000);
+                UnlimitedTime = false;
+                
+                Find.LetterStack.ReceiveLetter("Quest_MissingPeople_Stage2Title".Translate(), "Quest_MissingPeople_Stage2".Translate(TicksToPass.ToStringTicksToDays("0.#")), LetterDefOf.PositiveEvent);
+                site.Tile = settlement.Tile;
+
+                Target = new LookTargets(site.Tile);
+            }
+
+            Current.Game.DeinitAndRemoveMap(site.Map);
+        }
+
+        public override bool CanLeaveFromSite(QuestSite site)
+        {
+            if (GenHostility.AnyHostileActiveThreatToPlayer(site.Map))
+            {
+                Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
+                return false;
+            }
+
+            return true;
+        }
+
+        public override void PostMapGenerate(Map map)
+        {
+            foreach(var data in MapDefOfLocal.Camp.MapData)
+            {
+                if(data.key.Kind != null)
+                {
+                    data.key.Kind = Faction.RandomPawnKind();
+                }
+            }
+
+            MapGeneratorHandler.GenerateMap(MapDefOfLocal.Camp, map, out savedPawns, fog: false, unFogRoom: true, spawnPawns: true, createRoof: true, forceFaction: Faction.OfPlayer);
+
+            if (TryGetEnemyFaction(Faction, out Faction enemyFac))
+            {
+                int @int = Rand.Int;
+                IncidentParms raidParms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, map);
+                raidParms.forced = true;
+                raidParms.faction = enemyFac;
+                raidParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
+                raidParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkIn;
+                raidParms.points = Rand.Range(400, 1000);
+                raidParms.pawnGroupMakerSeed = @int;
+                var incident = new FiringIncident(IncidentDefOf.RaidEnemy, null, raidParms);
+                Find.Storyteller.TryFire(incident);
+            }
+        }
+
+        private bool TryGetEnemyFaction(Faction hostileTo, out Faction faction)
+        {
+            if ((from x in Find.FactionManager.AllFactions
+                 where !x.IsPlayer && !x.def.hidden && !x.defeated && x.def.humanlikeFaction&& x.HostileTo(hostileTo)
+                 select x).TryRandomElement(out faction))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public override void Tick()
         {
-
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
         {
-            CaravanArrivalAction_CheckMissingPeople caravanAction = new CaravanArrivalAction_CheckMissingPeople(mapParent, this);
-            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => true, () => caravanAction, "Quest_CheckMissingPeople_Action".Translate(), caravan, mapParent.Tile, mapParent);
+            if (saved)
+            {
+                CaravanArrivalAction_TransferMissingPeople caravanAction2 = new CaravanArrivalAction_TransferMissingPeople(mapParent, this);
+                foreach (var opt in CaravanArrivalActionUtility.GetFloatMenuOptions(() => true, () => caravanAction2, "Quest_CheckMissingPeople_Action2".Translate(), caravan, mapParent.Tile, mapParent))
+                {
+                    yield return opt;
+                }
+            }
+            else
+            {
+                CaravanArrivalAction_CheckMissingPeople caravanAction = new CaravanArrivalAction_CheckMissingPeople(mapParent, this);
+                foreach (var opt in CaravanArrivalActionUtility.GetFloatMenuOptions(() => true, () => caravanAction, "Quest_CheckMissingPeople_Action".Translate(), caravan, mapParent.Tile, mapParent))
+                {
+                    yield return opt;
+                }
+            }
         }
 
         public override ThingFilter GetQuestThingFilter()
@@ -77,13 +161,36 @@ namespace MoreEvents.Quests
             return filter;
         }
 
+        public override void GenerateRewards(ThingFilter filter, FloatRange totalValue, IntRange countRange, TechLevel? techLevel, float? totalMass)
+        {
+            base.GenerateRewards(filter, totalValue, countRange, techLevel, totalMass);
+
+            filter.SetDisallowAll();
+            filter.SetAllow(ThingCategoryDefOf.ResourcesRaw, true);
+            filter.SetAllow(ThingCategoryDefOf.Items, true);
+
+            ThingSetMaker_MarketValue maker = new ThingSetMaker_MarketValue();
+            ThingSetMakerParams parms2 = default;
+            parms2.totalMarketValueRange = new FloatRange(300, 800);
+            parms2.countRange = new IntRange(2, 4);
+            parms2.filter = filter;
+
+            maker.fixedParams = parms2;
+
+            List<Thing> items = maker.Generate();
+            items.ForEach(i => Rewards.Add(i));
+        }
+
         public override void SiteTick()
         {
             TicksToPass--;
 
             if(TicksToPass <= 0)
             {
-                EndQuest(null, EndCondition.Fail);
+                if(saved && savedPawns.Count > 0)
+                    Site.EndQuest(null, EndCondition.Timeout);
+                else
+                    Site.EndQuest(null, EndCondition.Fail);
             }
         }
 
@@ -91,9 +198,37 @@ namespace MoreEvents.Quests
         {
             base.EndQuest(caravan, condition);
 
-            if(condition == EndCondition.Fail || condition == EndCondition.Timeout)
+            if(condition == EndCondition.Timeout)
             {
-                Faction.TryAffectGoodwillWith(Faction.OfPlayer, -10);
+                if(saved && savedPawns.Count > 0)
+                {
+                    foreach(var pawn in savedPawns)
+                    {
+                        pawn.SetFaction(Faction);
+                    }
+
+                    Faction.TryAffectGoodwillWith(Faction.OfPlayer, -50);
+                    Find.LetterStack.ReceiveLetter("Quest_MissingPeople_ThiefTitle".Translate(), "Quest_MissingPeople_Thief".Translate(), LetterDefOf.NegativeEvent);
+
+                    for(int i = 0; i < QuestsManager.Communications.Components.Count;i++)
+                    {
+                        CommunicationComponent comp = QuestsManager.Communications.Components[i];
+                        if (comp is ScoutingComp comp2 && comp2.Faction == Faction)
+                        {
+                            QuestsManager.Communications.RemoveComponent(comp);
+                        }
+                    }
+
+                    CommOption_GetHelp.AddComponentWithStack(Faction, -999);
+                }
+            }
+            if(condition == EndCondition.Fail)
+            {
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, -25);
+            }
+            if(condition == EndCondition.Success)
+            {
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, 20);
             }
         }
 
@@ -107,9 +242,9 @@ namespace MoreEvents.Quests
             base.ExposeData();
 
             Scribe_Collections.Look(ref savedPawns, "savedPawns", LookMode.Reference);
-            Scribe_Values.Look(ref BaseTile, "baseTile");
             Scribe_Values.Look(ref minDays, "minDays");
             Scribe_Values.Look(ref passedDays, "passedDays");
+            Scribe_Values.Look(ref saved, "saved");
         }
     }
 }

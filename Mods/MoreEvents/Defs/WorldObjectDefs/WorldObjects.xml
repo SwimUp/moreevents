@@ -113,6 +113,9 @@
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>Quests/Quest</expandingIconTexture>
     <expandingIconPriority>900</expandingIconPriority>
+    <comps>
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
+    </comps>
     <IncidentTargetTags>
       <li>Map_Misc</li>
     </IncidentTargetTags>

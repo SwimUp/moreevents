@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using Verse;
 
-namespace MoreEvents.Communications
+namespace QuestRim
 {
     public class ScoutingComp : CommunicationComponent
     {
@@ -34,6 +34,11 @@ namespace MoreEvents.Communications
             maxScoutTicks += day * 60000;
         }
 
+        public string GetDays()
+        {
+            return maxScoutTicks.TicksToDays().ToString("f2");
+        }
+
         public static bool ScoutAlready(Faction scoutFaction, out ScoutingComp outComp)
         {
             outComp = null;
@@ -58,6 +63,15 @@ namespace MoreEvents.Communications
 
                 QuestsManager.Communications.RegisterComponent(comp);
 
+                FactionInteraction interaction = QuestsManager.Communications.FactionManager.GetInteraction(faction);
+                foreach(var opt in interaction.Options)
+                {
+                    if(opt is CommOption_SubscribeScout opt2)
+                    {
+                        opt2.Active = true;
+                    }
+                }
+
                 Find.LetterStack.ReceiveLetter("ScoutComp_GiveTitle".Translate(), "ScoutComp_Give".Translate(faction.Name, delayDays, totalDays), LetterDefOf.PositiveEvent);
             }
             else
@@ -73,7 +87,7 @@ namespace MoreEvents.Communications
 
             if(maxScoutTicks <= 0)
             {
-                QuestsManager.Communications.RemoveComponent(this);
+                EndComp();
                 return;
             }
 
@@ -81,6 +95,20 @@ namespace MoreEvents.Communications
             {
                 GenerateScoutInfo();
             }
+        }
+
+        public void EndComp()
+        {
+            FactionInteraction interaction = QuestsManager.Communications.FactionManager.GetInteraction(Faction);
+            foreach (var opt in interaction.Options)
+            {
+                if (opt is CommOption_SubscribeScout opt2)
+                {
+                    opt2.Active = false;
+                }
+            }
+
+            QuestsManager.Communications.RemoveComponent(this);
         }
 
         public void GenerateScoutInfo()
@@ -238,8 +266,6 @@ namespace MoreEvents.Communications
                         item.parms.target.StoryState.Notify_IncidentFired(item);
                         allIncidents.Add(new Pair<IncidentDef, IncidentParms>(item.def, item.parms));
                         item.parms.target.StoryState.Notify_IncidentFired(item);
-                        Dictionary<IIncidentTarget, int> dictionary;
-                        IIncidentTarget target;
                         int num2 = Find.Storyteller.storytellerComps.IndexOf(item.source);
                         daysToEvents.Add(Find.TickManager.TicksGame.TicksToDays());
                     }

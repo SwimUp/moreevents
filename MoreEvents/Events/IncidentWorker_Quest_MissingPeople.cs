@@ -44,7 +44,6 @@ namespace MoreEvents.Events
             Quest_MissingPeople quest = new Quest_MissingPeople(Rand.Range(3, 9), days, passedDays);
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             quest.Faction = faction;
-            quest.BaseTile = map.Tile;
 
             int additionalValue = passedDays * 15;
             quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(700 + additionalValue, 1400 + additionalValue), new IntRange(3, 8), null, null);
@@ -56,6 +55,9 @@ namespace MoreEvents.Events
             questPlace.Tile = newTile;
             questPlace.SetFaction(faction);
             questPlace.Init(quest);
+            questPlace.RemoveAfterLeave = false;
+
+            quest.Site = questPlace;
 
             Find.WorldObjects.Add(questPlace);
 
@@ -67,7 +69,13 @@ namespace MoreEvents.Events
 
         private Faction GetFaction()
         {
-            return Find.FactionManager.RandomAlliedFaction();
+            if ((from x in Find.FactionManager.AllFactions
+                 where !x.IsPlayer && !x.def.hidden && !x.defeated && x.def.humanlikeFaction && (x.PlayerRelationKind == FactionRelationKind.Ally || x.PlayerRelationKind == FactionRelationKind.Neutral)
+                 select x).TryRandomElement(out Faction result))
+            {
+                return result;
+            }
+            return null;
         }
 
         private bool TryGetNewTile(int root, out int newTile)

@@ -41,4 +41,27 @@ List of required resources:</HelpResourcesDescriptionTitle>
 	<ScoutComp_AlreadyGiveTitle>Intelligence agreement</ScoutComp_AlreadyGiveTitle>
 	<ScoutComp_AlreadyGive>The agreement with faction {0} has already been signed, so it has been extended for {1} days.</ScoutComp_AlreadyGive>
 	
+	<Quest_MissingPeople_CardLabel>Missing settlers</Quest_MissingPeople_CardLabel>
+	<Quest_MissingPeople_Description>The leader of the faction {0} contacted us and reported that a couple of days ago a small group of their settlers went on a journey to get resources. Estimated time of their journey was estimated at {1} days. More than {2} days passed, but the settlers never returned. Attempts to get in touch have failed and they are worried that the settlers might get lost or be attacked. \nThe food intakes they had enough will last for about {3} days, after which they will starve. He asks us to find the missing settlers and return them to them.</Quest_MissingPeople_Description>
+	<Quest_MissingPeople_PlaceLabel>Potential Settlers Place</Quest_MissingPeople_PlaceLabel>
+	<Quest_MissingPeople_InspectString>Potential place for lost settlers. \nFood will end in: {0} (days)</Quest_MissingPeople_InspectString>
+	<Quest_CheckMissingPeople_Action>Inspect the place</Quest_CheckMissingPeople_Action>
+	<Quest_MissingPeople_CheckFailTitle>Nothing found</Quest_MissingPeople_CheckFailTitle>
+	<Quest_MissingPeople_CheckFail>We arrived at the place. Wandering around the neighborhood, we looked into every corner, but did not find any traces of the settlers. Probably, we should check another place (the new place is marked on the map)</Quest_MissingPeople_CheckFail>
+	<Quest_MissingPeople_EnterToMapTitle>Missing settlers</Quest_MissingPeople_EnterToMapTitle>
+	<Quest_MissingPeople_EnterToMap>As soon as we entered the territory, we saw a small camp with a couple of settlers, who seem to be about to weaken. We told them that we came for them. In their eyes, there was a desire to live, but as soon as we were ready to leave, a detachment of enemy soldiers appeared on the opposite side. We will have to deal with them first, but we need to remember why we are here.</Quest_MissingPeople_EnterToMap>
+	<Quest_MissingPeople_Stage2Title>Caravan formed and can be sent</Quest_MissingPeople_Stage2Title>
+	<Quest_MissingPeople_Stage2>We were able to repel the attack. It now remains only to escort the settlers home, for this we have {0}. If after this period we do not deliver them, then we will be condemned as thieves (take the caravan to the marked settlement base)</Quest_MissingPeople_Stage2>
+	<Quest_MissingPeople_End>You got to the Allied settlement.\n</Quest_MissingPeople_End>
+	<Quest_MissingPeople_EndFull>\nYou managed to bring all the settlers alive, for which the faction {0} is very grateful to you.</Quest_MissingPeople_EndFull>
+	<Quest_MissingPeople_EndPart>\nYou tell with what difficulties you had to face, that the settlers who died on the way were worthy and they can be proud of them.</Quest_MissingPeople_EndPart>
+	<Quest_MissingPeople_Fiasko>\nYou came with nothing. The leader of the {0} faction is very upset. One of the colonists is trying to calm him down, but he pushes him away and walks away.</Quest_MissingPeople_Fiasko>
+	<Quest_MissingPeople_EndQuest>Quest result</Quest_MissingPeople_EndQuest>
+	<Quest_CheckMissingPeople_Action2>Transfer settlers</Quest_CheckMissingPeople_Action2>
+	<Quest_MissingPeople_ThiefTitle>Prosecution</Quest_MissingPeople_ThiefTitle>
+	<Quest_MissingPeople_Thief>You did not return the surviving settlers in time, and those that were rescued returned on their own. They told their leader about this, which is why he accused you of harboring their settlers. All agreements that existed between you were broken.</Quest_MissingPeople_Thief>
+
+	<Quest_TradeRequestComp_CardLabel>Trade request</Quest_TradeRequestComp_CardLabel>
+	<Quest_BanditCamp_CardLabel>Bandit camp</Quest_BanditCamp_CardLabel>
+	
 </LanguageData>

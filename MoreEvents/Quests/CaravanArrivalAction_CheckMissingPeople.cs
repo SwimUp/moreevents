@@ -21,9 +21,9 @@ namespace MoreEvents.Quests
         public Quest_MissingPeople Quest => quest;
         private Quest_MissingPeople quest;
 
-        public override string Label => "GiveItemsOption".Translate();
+        public override string Label => "Quest_MissingPeople_CardLabel".Translate();
 
-        public override string ReportString => "GiveItemsSuccessTitle".Translate();
+        public override string ReportString => "Quest_MissingPeople_CardLabel".Translate();
 
         public CaravanArrivalAction_CheckMissingPeople()
         {
@@ -74,7 +74,7 @@ namespace MoreEvents.Quests
             }
             else
             {
-                TryGetNewTile(Quest.BaseTile, out int newTile);
+                TryGetNewTile(mapParent.Tile, out int newTile);
                 mapParent.Tile = newTile;
 
                 Find.LetterStack.ReceiveLetter("Quest_MissingPeople_CheckFailTitle".Translate(), "Quest_MissingPeople_CheckFail".Translate(), LetterDefOf.NegativeEvent);
@@ -83,7 +83,7 @@ namespace MoreEvents.Quests
 
         private bool TryGetNewTile(int root, out int newTile)
         {
-            return TileFinder.TryFindPassableTileWithTraversalDistance(root, 5, 9, out newTile, (int i) => !Find.WorldObjects.AnyWorldObjectAt(i));
+            return TileFinder.TryFindPassableTileWithTraversalDistance(root, 1, 2, out newTile, (int i) => !Find.WorldObjects.AnyWorldObjectAt(i));
         }
 
         public override FloatMenuAcceptanceReport StillValid(Caravan caravan, int destinationTile)

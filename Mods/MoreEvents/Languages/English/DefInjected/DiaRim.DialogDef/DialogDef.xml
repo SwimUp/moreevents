@@ -5,7 +5,7 @@
 	<DoomsdayHelp.Pages.page1.Text>- As you probably already know, one of the factions intends to destroy the planet. Immediate action is required.</DoomsdayHelp.Pages.page1.Text>
 	<DoomsdayHelp.Pages.page1.Options.MustUnite.Label>Suggest to unite</DoomsdayHelp.Pages.page1.Options.MustUnite.Label>
 	<DoomsdayHelp.Pages.page1.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page1.Options.EndCooms.Label>
-	<DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>Social required 5</DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>Social required 7</DoomsdayHelp.Pages.page1.Options.MustUnite.Conditions.skillReq1.DisableReason>
 
 	<DoomsdayHelp.Pages.page2.Title>To unite?</DoomsdayHelp.Pages.page2.Title>
 	<DoomsdayHelp.Pages.page2.Text>*He thought, and then answered with interest:* \n- We do not want trouble, so tell me more.</DoomsdayHelp.Pages.page2.Text>
@@ -15,7 +15,7 @@
 	<DoomsdayHelp.Pages.page2.Options.Threaten.Label>Threaten</DoomsdayHelp.Pages.page2.Options.Threaten.Label>
 	<DoomsdayHelp.Pages.page2.Options.Rude.Label>Be rude</DoomsdayHelp.Pages.page2.Options.Rude.Label>
 	<DoomsdayHelp.Pages.page2.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page2.Options.EndCooms.Label>
-	<DoomsdayHelp.Pages.page2.Options.AskHelp.Conditions.skillReq1.DisableReason>Social required 8</DoomsdayHelp.Pages.page2.Options.AskHelp.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page2.Options.AskHelp.Conditions.skillReq1.DisableReason>Social required 7</DoomsdayHelp.Pages.page2.Options.AskHelp.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page2.Options.ReqHelp.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page2.Options.ReqHelp.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.traitReq1.DisableReason>Required trait: good memory</DoomsdayHelp.Pages.page2.Options.NapDolg.Conditions.traitReq1.DisableReason>	  
@@ -33,7 +33,7 @@
 	<DoomsdayHelp.Pages.page3.Options.Insist.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page3.Options.Insist.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.traitReq1.DisableReason>Requires beaty trait</DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.traitReq1.DisableReason>	  
 	<DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page3.Options.Manipulir.Conditions.skillReq1.DisableReason>
-	<DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>Social required 8</DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>Social required 7</DoomsdayHelp.Pages.page3.Options.Ask.Conditions.skillReq1.DisableReason>
 
 	<DoomsdayHelp.Pages.page9.Title>Incredible...</DoomsdayHelp.Pages.page9.Title>
 	<DoomsdayHelp.Pages.page9.Text>- It's really scary. \n*having silenced and sighed heavily, he first took a deep breath and then continued:* \n- I will tell my people to prepare, however, our faction is going through difficult times. I can not be sure that we can come to the rescue.</DoomsdayHelp.Pages.page9.Text>
@@ -43,7 +43,7 @@
 	<DoomsdayHelp.Pages.page9.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page9.Options.EndCooms.Label>
 	<DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.traitReq1.DisableReason>Required trait: kindness</DoomsdayHelp.Pages.page9.Options.FriendlyConver.Conditions.traitReq1.DisableReason>	  
-	<DoomsdayHelp.Pages.page9.Options.SpeakConv.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page9.Options.SpeakConv.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page9.Options.SpeakConv.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page9.Options.SpeakConv.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.traitReq1.DisableReason>Required trait: nasty voice</DoomsdayHelp.Pages.page9.Options.HiddenThreat.Conditions.traitReq1.DisableReason>	 
 
@@ -54,7 +54,7 @@
 	<DoomsdayHelp.Pages.page11.Options.ThreatWarn.Label>The threat to use force</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Label>
 	<DoomsdayHelp.Pages.page11.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page11.Options.EndCooms.Label>
 	<DoomsdayHelp.Pages.page11.Options.TalkBig.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page11.Options.TalkBig.Conditions.skillReq1.DisableReason>  
-	<DoomsdayHelp.Pages.page11.Options.BigYstyp.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page11.Options.BigYstyp.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page11.Options.BigYstyp.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page11.Options.BigYstyp.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page11.Options.ThreatWarn.Conditions.traitReq1.DisableReason>	 
 
@@ -63,7 +63,7 @@
 	<DoomsdayHelp.Pages.page4.Options.NaporUp.Label>Increase pressure</DoomsdayHelp.Pages.page4.Options.NaporUp.Label>
 	<DoomsdayHelp.Pages.page4.Options.NextDavl.Label>Keep up the pressure</DoomsdayHelp.Pages.page4.Options.NextDavl.Label>
 	<DoomsdayHelp.Pages.page4.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page4.Options.EndCooms.Label>
-	<DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.skillReq1.DisableReason>Social required 6</DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page4.Options.NaporUp.Conditions.traitReq1.DisableReason>	  
 	<DoomsdayHelp.Pages.page4.Options.NextDavl.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page4.Options.NextDavl.Conditions.skillReq1.DisableReason> 
 
@@ -72,7 +72,7 @@
 	<DoomsdayHelp.Pages.page17.Options.LastWords.Label>Last talk</DoomsdayHelp.Pages.page17.Options.LastWords.Label>
 	<DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>Psychological pressure</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Label>
 	<DoomsdayHelp.Pages.page17.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page17.Options.EndCooms.Label>
-	<DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>Social required 16</DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>
+	<DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>Social required 12</DoomsdayHelp.Pages.page17.Options.LastWords.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.traitReq1.DisableReason>Required trait: iron nerve</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.traitReq1.DisableReason>	  
 	<DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page17.Options.PsyhoPress.Conditions.skillReq1.DisableReason> 
 
@@ -91,7 +91,7 @@
 	<DoomsdayHelp.Pages.page6.Options.NextDial.Label>Continue the dialogue</DoomsdayHelp.Pages.page6.Options.NextDial.Label>
 	<DoomsdayHelp.Pages.page6.Options.TalkYver.Label>Speak confidently</DoomsdayHelp.Pages.page6.Options.TalkYver.Label>
 	<DoomsdayHelp.Pages.page6.Options.EndCooms.Label>End of communication</DoomsdayHelp.Pages.page6.Options.EndCooms.Label>
-	<DoomsdayHelp.Pages.page6.Options.NextDial.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page6.Options.NextDial.Conditions.skillReq1.DisableReason>  
+	<DoomsdayHelp.Pages.page6.Options.NextDial.Conditions.skillReq1.DisableReason>Social required 10</DoomsdayHelp.Pages.page6.Options.NextDial.Conditions.skillReq1.DisableReason>  
 	<DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.skillReq1.DisableReason>Social required 14</DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.skillReq1.DisableReason>
 	<DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.traitReq1.DisableReason>Required trait: psychologically deaf</DoomsdayHelp.Pages.page6.Options.TalkYver.Conditions.traitReq1.DisableReason>	 
 

@@ -40,8 +40,14 @@ namespace MoreEvents.Quests
                 Pawn pawn = caravan.PawnsListForReading[i];
 
                 quest.EnteredPawns.Add(pawn);
+            }
+
+            foreach(var pawn in quest.EnteredPawns)
+            {
                 caravan.RemovePawn(pawn);
             }
+            if (caravan.pawns.Count == 0)
+                Find.WorldObjects.Remove(caravan);
 
             quest.Entered = true;
 

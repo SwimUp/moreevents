@@ -25,7 +25,8 @@ namespace MoreEvents.Events
             if (plants.Count < 10)
                 return false;
 
-            IntVec3 spawnSpot = CellFinder.RandomEdgeCell(map);
+            CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => !c.Roofed(map) && c.Walkable(map) && c.Standable(map), map, 0f, out IntVec3 pos);
+            IntVec3 spawnSpot = pos;
             IntVec3 startSpot = CellFinder.RandomClosewalkCellNear(spawnSpot, map, 10);
             Faction enemyFaction = Find.FactionManager.RandomEnemyFaction();
 

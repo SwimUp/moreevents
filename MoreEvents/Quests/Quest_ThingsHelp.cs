@@ -116,7 +116,7 @@ namespace MoreEvents.Quests
                 }
             }
 
-            Faction.TryAffectGoodwillWith(Faction.OfPlayer, 15);
+            Faction.TryAffectGoodwillWith(Faction.OfPlayer, 25);
         }
 
         public override void ExposeData()

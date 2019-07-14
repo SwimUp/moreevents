@@ -13,6 +13,8 @@ namespace QuestRim
     {
         public override string Label => quest.PlaceLabel;
 
+        public bool RemoveAfterLeave = true;
+
         public override Texture2D ExpandingIcon => quest.ExpandingIcon ?? def.ExpandingIconTexture;
 
         public Quest Quest => quest;
@@ -40,9 +42,120 @@ namespace QuestRim
                 yield return opt;
             }
 
-            foreach(var opt in quest.GetFloatMenuOptions(caravan, this))
+            foreach (var opt in quest.GetFloatMenuOptions(caravan, this))
             {
                 yield return opt;
+            }
+        }
+
+        private Command LeaveCommand(Verse.Map map)
+        {
+            Command_Action command = new Command_Action();
+            command.defaultLabel = Translator.Translate("ShipSite_LeaveCommandLabel");
+            command.defaultDesc = Translator.Translate("ShipSite_LeaveCommandDesc");
+            command.icon = ContentFinder<Texture2D>.Get("Map/leaving-queue");
+            command.action = delegate
+            {
+                if (Quest.CanLeaveFromSite(this))
+                {
+                    PreForceReform(this);
+                }
+            };
+
+            if (map.mapPawns.FreeColonistsCount == 0)
+            {
+                command.Disable();
+            }
+
+            return command;
+        }
+
+        public void PreForceReform(QuestSite mapParent)
+        {
+            if (Quest.PreForceReform(mapParent))
+            {
+                ForceReform(mapParent);
+            }
+        }
+
+        public override void PostRemove()
+        {
+            Quest.PostSiteRemove(this);
+
+            base.PostRemove();
+        }
+
+        public void ForceReform(MapParent mapParent)
+        {
+            if (Dialog_FormCaravan.AllSendablePawns(mapParent.Map, reform: true).Any((Pawn x) => x.IsColonist))
+            {
+                Messages.Message("MessageYouHaveToReformCaravanNow".Translate(), new GlobalTargetInfo(mapParent.Tile), MessageTypeDefOf.NeutralEvent);
+                Current.Game.CurrentMap = mapParent.Map;
+                Dialog_FormCaravan window = new Dialog_FormCaravan(mapParent.Map, reform: true, delegate
+                {
+                    if (RemoveAfterLeave && mapParent.HasMap)
+                    {
+                        Find.WorldObjects.Remove(mapParent);
+                    }
+
+                    Quest.PostForceReform(this);
+
+                }, mapAboutToBeRemoved: true);
+                Find.WindowStack.Add(window);
+                return;
+            }
+            List<Pawn> tmpPawns = new List<Pawn>();
+            tmpPawns.Clear();
+            tmpPawns.AddRange(from x in mapParent.Map.mapPawns.AllPawns
+                              where x.Faction == Faction.OfPlayer || x.HostFaction == Faction.OfPlayer
+                              select x);
+            if (tmpPawns.Any((Pawn x) => CaravanUtility.IsOwner(x, Faction.OfPlayer)))
+            {
+                CaravanExitMapUtility.ExitMapAndCreateCaravan(tmpPawns, Faction.OfPlayer, mapParent.Tile, mapParent.Tile, -1);
+            }
+            tmpPawns.Clear();
+
+            if (RemoveAfterLeave)
+                Find.WorldObjects.Remove(mapParent);
+
+            Quest.PostForceReform(this);
+        }
+
+        public override void Notify_CaravanFormed(Caravan caravan)
+        {
+            base.Notify_CaravanFormed(caravan);
+
+            Quest.Notify_CaravanFormed(this, caravan);
+        }
+
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach(var gizmo in base.GetGizmos())
+            {
+                yield return gizmo;
+            }
+
+            if (Quest.UseLeaveCommand && base.HasMap)
+            {
+                yield return LeaveCommand(base.Map);
+            }
+
+            foreach (var gizmo in quest.GetGizmos(this))
+            {
+                yield return gizmo;
+            }
+        }
+
+        public override IEnumerable<Gizmo> GetCaravanGizmos(Caravan caravan)
+        {
+            foreach (var gizmo in base.GetCaravanGizmos(caravan))
+            {
+                yield return gizmo;
+            }
+
+            foreach (var gizmo in quest.GetCaravanGizmos(caravan))
+            {
+                yield return gizmo;
             }
         }
 
@@ -50,7 +163,7 @@ namespace QuestRim
         {
             base.PostMapGenerate();
 
-            Quest.PostMapGenerate();
+            Quest.PostMapGenerate(Map);
         }
 
         public override IEnumerable<FloatMenuOption> GetTransportPodsFloatMenuOptions(IEnumerable<IThingHolder> pods, CompLaunchable representative)
@@ -101,6 +214,7 @@ namespace QuestRim
             base.ExposeData();
 
             Scribe_References.Look(ref quest, "Quest");
+            Scribe_Values.Look(ref RemoveAfterLeave, "RemoveAfterLeave");
         }
     }
 }

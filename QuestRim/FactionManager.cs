@@ -81,7 +81,10 @@ namespace QuestRim
 
         public List<InteractionOption> StandartOptions()
         {
-            return new List<InteractionOption>();
+            var list = new List<InteractionOption>();
+            list.Add(new CommOption_SubscribeScout());
+
+            return list;
         }
 
         public void RecacheFactions()
@@ -111,6 +114,7 @@ namespace QuestRim
                     Remove(faction);
                 }
             }
+
         }
 
         public void ExposeData()

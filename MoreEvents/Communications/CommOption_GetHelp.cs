@@ -21,23 +21,29 @@ namespace MoreEvents.Communications
         private FactionInteraction interaction;
         private Pawn speaker;
 
+        public override int SortOrder => 100;
+
         public CommOption_GetHelp()
         {
+
         }
 
-        public static void AddComponentWithStack(Faction faction, int addOrSetCount)
+        public static void AddComponentWithStack(Faction faction, int addCount)
         {
             FactionInteraction interaction = QuestsManager.Communications.FactionManager.GetInteraction(faction);
             foreach (var option in interaction.Options)
             {
                 if (option is CommOption_GetHelp optionGetHelp)
                 {
-                    optionGetHelp.HelpCount += addOrSetCount;
+                    optionGetHelp.HelpCount += addCount;
+
+                    if (optionGetHelp.HelpCount < 0)
+                        optionGetHelp.HelpCount = 0;
                     return;
                 }
             }
 
-            CommOption_GetHelp getHelp = new CommOption_GetHelp(addOrSetCount);
+            CommOption_GetHelp getHelp = new CommOption_GetHelp(addCount);
             interaction.Options.Add(getHelp);
         }
 

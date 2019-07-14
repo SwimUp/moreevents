@@ -19,6 +19,8 @@ namespace QuestRim
 
     public abstract class Quest : IExposable, ILoadReferenceable
     {
+        public QuestSite Site;
+
         public int id;
 
         public virtual string AdditionalQuestContentString => "AdditionalContent".Translate();
@@ -27,6 +29,8 @@ namespace QuestRim
         public abstract string Description { get; }
 
         public virtual string ExpandingIconPath { get; }
+
+        public virtual bool UseLeaveCommand => true;
 
         public virtual Texture2D ExpandingIcon
         {
@@ -63,6 +67,36 @@ namespace QuestRim
 
         }
 
+        protected void ResetIcon()
+        {
+            expandingIcon = null;
+        }
+
+        public virtual bool CanLeaveFromSite(QuestSite site)
+        {
+            return true;
+        }
+
+        public virtual void PostSiteRemove(QuestSite site)
+        {
+
+        }
+
+        public virtual void Notify_CaravanFormed(QuestSite site, Caravan caravan)
+        {
+
+        }
+
+        public virtual bool PreForceReform(QuestSite mapParent)
+        {
+            return true;
+        }
+
+        public virtual void PostForceReform(QuestSite mapParent)
+        {
+
+        }
+
         public virtual void GenerateRewards(ThingFilter filter, FloatRange totalValue, IntRange countRange, TechLevel? techLevel, float? totalMass)
         {
             ThingSetMaker_MarketValue maker = new ThingSetMaker_MarketValue();
@@ -78,9 +112,28 @@ namespace QuestRim
             Rewards = maker.Generate();
         }
 
-        public virtual void PostMapGenerate()
+        public void GenerateRewards(ThingSetMakerDef maker, FloatRange totalValue, IntRange? countRange)
+        {
+            ThingSetMakerParams parms = default(ThingSetMakerParams);
+            parms.totalMarketValueRange = totalValue;
+            parms.countRange = countRange;
+
+            Rewards = maker.root.Generate(parms);
+        }
+
+        public virtual void PostMapGenerate(Map map)
         {
 
+        }
+
+        public virtual IEnumerable<Gizmo> GetGizmos(QuestSite site)
+        {
+            yield break;
+        }
+
+        public virtual IEnumerable<Gizmo> GetCaravanGizmos(Caravan caravan)
+        {
+            yield break;
         }
 
         public virtual ThingFilter GetQuestThingFilter()
@@ -150,6 +203,7 @@ namespace QuestRim
             Scribe_Deep.Look(ref Target, "Target");
             Scribe_Collections.Look(ref Options, "Options", LookMode.Deep);
             Scribe_Collections.Look(ref Rewards, "Rewards", LookMode.Deep);
+            Scribe_References.Look(ref Site, "Site");
         }
 
         public virtual string GetDescription()

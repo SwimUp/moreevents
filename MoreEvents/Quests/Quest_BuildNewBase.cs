@@ -25,7 +25,6 @@ namespace MoreEvents.Quests
         public int TicksToEnd;
         public bool Entered = false;
         public List<Pawn> EnteredPawns = new List<Pawn>();
-        public QuestSite Site;
         public Settlement OldSettlement;
 
         public override void SiteTick()
@@ -75,14 +74,14 @@ namespace MoreEvents.Quests
 
                 CommOption_GetHelp.AddComponentWithStack(Faction, 1);
 
-                Faction.TryAffectGoodwillWith(Faction.OfPlayer, 20);
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, 25);
 
                 OldSettlement.Tile = Site.Tile;
             }
 
-            if(condition == EndCondition.Timeout)
+            if(condition == EndCondition.Timeout || condition == EndCondition.Fail)
             {
-                Faction.TryAffectGoodwillWith(Faction.OfPlayer, -10);
+                Faction.TryAffectGoodwillWith(Faction.OfPlayer, -15);
             }
 
             base.EndQuest(caravan, condition);
@@ -92,7 +91,6 @@ namespace MoreEvents.Quests
         {
             base.ExposeData();
 
-            Scribe_References.Look(ref Site, "Site");
             Scribe_References.Look(ref OldSettlement, "OldSettlement");
             Scribe_Collections.Look(ref EnteredPawns, "Pawns", LookMode.Reference);
             Scribe_Values.Look(ref Entered, "Entered");

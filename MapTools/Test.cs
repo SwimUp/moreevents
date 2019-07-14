@@ -75,7 +75,10 @@ namespace DiaRim
                             {
                                 list2.Add(new FloatMenuOption(quest.CardLabel, delegate
                                 {
-                                    quest.EndQuest(null, condition);
+                                    if (quest.Site != null)
+                                        quest.Site.EndQuest(null, condition);
+                                    else
+                                        quest.EndQuest(null, condition);
                                 }));
                             }
 

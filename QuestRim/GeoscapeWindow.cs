@@ -716,6 +716,7 @@ namespace QuestRim
                 dialog_Negotiation.soundAmbient = SoundDefOf.RadioComms_Ambience;
                 Find.WindowStack.Add(dialog_Negotiation);
             }
+
             startRect.y += 30;
             foreach (var option in currentFaction.Options.OrderBy(o => o.SortOrder))
             {

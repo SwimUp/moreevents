@@ -10,9 +10,11 @@ namespace MapGeneratorBlueprints.MapGenerator
 {
     public static class MapGeneratorHandler
     {
-        public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
+        public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, out List<Pawn> spawnedPawns, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
             , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null)
         {
+            spawnedPawns = new List<Pawn>();
+
             map.regionAndRoomUpdater.Enabled = false;
             if (clearMap)
             {
@@ -47,7 +49,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction);
 
             if (spawnPawns)
-                SpawnPawns(mapGenerator.MapData, map, forceFaction);
+                SpawnPawns(mapGenerator.MapData, map, forceFaction, spawnedPawns);
 
             map.powerNetManager.UpdatePowerNetsAndConnections_First();
 
@@ -162,7 +164,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             }
         }
 
-        public static void SpawnPawns(List<MapObject> mapObjects, Map map, Faction forceFaction)
+        public static void SpawnPawns(List<MapObject> mapObjects, Map map, Faction forceFaction, List<Pawn> spawnedPawns)
         {
             foreach (var thing in mapObjects)
             {
@@ -181,6 +183,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                             Pawn pawn = PawnGenerator.GeneratePawn(data.Kind, faction);
 
                             pawn = GenSpawn.Spawn(pawn, pos, map) as Pawn;
+                            spawnedPawns.Add(pawn);
 
                             LordJob_DefendPoint lordJob = new LordJob_DefendPoint(pawn.Position);
                             Lord lord = LordMaker.MakeNewLord(faction, lordJob, map);

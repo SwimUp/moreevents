@@ -87,7 +87,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 Map.terrainGrid.SetTerrain(cell, TerrainDefOf.Soil);
             }
 
-            MapGeneratorHandler.GenerateMap(MapDefOfLocal.Doomsday, Map, true, true, true, false, true, true, true, Faction);
+            MapGeneratorHandler.GenerateMap(MapDefOfLocal.Doomsday, Map, out List<Pawn> pawns, true, true, true, false, true, true, true, Faction);
 
             IntVec3 spawnPos = new IntVec3(126, 0, 163);
             Thing thing = ThingMaker.MakeThing(ThingDefOfLocal.DoomsdayUltimateBomb);

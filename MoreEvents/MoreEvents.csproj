@@ -46,7 +46,8 @@
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>
-    <Reference Include="QuestRim">
+    <Reference Include="QuestRim, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QuestRim\bin\Release\QuestRim.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -71,7 +72,6 @@
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
     <Compile Include="Communications\CommOption_GetHelp.cs" />
     <Compile Include="Communications\MessageAnwer_OpenDialog.cs" />
-    <Compile Include="Communications\ScoutingComp.cs" />
     <Compile Include="Communications\TimeComp.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
@@ -114,7 +114,7 @@
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
     <Compile Include="Events\HasExitCellsComp.cs" />
-    <Compile Include="Events\HasExitCells_Comp.cs" />
+    <Compile Include="Events\DoesntHasExitCells_Comp.cs" />
     <Compile Include="Events\IncidentWorker_Arsonists.cs" />
     <Compile Include="Events\IncidentWorker_DropInsaneAnimals.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
@@ -190,10 +190,16 @@
     <Compile Include="MentalBreaks\PositiveCharge\MentalState_PositiveCharge.cs" />
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Patch\ExitCells_Patch.cs" />
+    <Compile Include="Patch\IncidentWorker_QuestBanditCamp.cs" />
+    <Compile Include="Patch\IncidentWorker_QuestItemStash.cs" />
+    <Compile Include="Patch\IncidentWorker_QuestTradeRequest.cs" />
+    <Compile Include="Patch\Quest_BanditCamp.cs" />
+    <Compile Include="Patch\Quest_TradeRequestComp.cs" />
     <Compile Include="Patch\ToxicFallout_Patch.cs" />
     <Compile Include="PawnKindDefOfLocal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_TransferMissingPeople.cs" />
     <Compile Include="Quests\CaravanArrivalAction_CheckMissingPeople.cs" />
     <Compile Include="Quests\CaravanArrivalAction_HelpWithBuildings.cs" />
     <Compile Include="Quests\CaravanArrivalAction_GiveItems.cs" />

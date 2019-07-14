@@ -23,8 +23,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>6</SkillLevel>
-								<DisableReason>Требуется общение 5</DisableReason>
+								<SkillLevel>7</SkillLevel>
+								<DisableReason>Требуется общение 7</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -52,8 +52,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>8</SkillLevel>
-								<DisableReason>Требуется общение 8</DisableReason>
+								<SkillLevel>7</SkillLevel>
+								<DisableReason>Требуется общение 7</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -217,8 +217,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>8</SkillLevel>
-								<DisableReason>Требуется общение 8</DisableReason>
+								<SkillLevel>7</SkillLevel>
+								<DisableReason>Требуется общение 7</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -231,16 +231,6 @@ Trait: ключ traitReq  (например traitReq1)
 								<value>0.45</value>
 							</li>
 						</Transitions>
-					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-5</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>
@@ -278,8 +268,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>16</SkillLevel>
-								<DisableReason>Требуется общение 16</DisableReason>
+								<SkillLevel>10</SkillLevel>
+								<DisableReason>Требуется общение 10</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -317,16 +307,6 @@ Trait: ключ traitReq  (например traitReq1)
 							</li>
 						</Transitions>
 					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-5</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
-					</li>
 				</Options>
 			</li>
 			<li>
@@ -359,8 +339,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>14</SkillLevel>
-								<DisableReason>Требуется общение 14</DisableReason>
+								<SkillLevel>10</SkillLevel>
+								<DisableReason>Требуется общение 10</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -399,16 +379,6 @@ Trait: ключ traitReq  (например traitReq1)
 							</li>
 						</Transitions>
 					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-15</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
-					</li>
 				</Options>
 			</li>
 			<li>
@@ -421,8 +391,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>16</SkillLevel>
-								<DisableReason>Требуется общение 16</DisableReason>
+								<SkillLevel>6</SkillLevel>
+								<DisableReason>Требуется общение 6</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Trait">
 								<ReqTrait>Nerves</ReqTrait>
@@ -443,13 +413,6 @@ Trait: ключ traitReq  (например traitReq1)
 					</li>
 					<li>
 						<Label>NextDavl</Label>
-						<Conditions>
-							<li Class="DiaRim.Conditions.Condition_SkillReq">
-								<Skill>Social</Skill>
-								<SkillLevel>14</SkillLevel>
-								<DisableReason>Требуется общение 14</DisableReason>
-							</li>
-						</Conditions>
 						<Transitions> 
 							<li>
 								<key>28</key>
@@ -460,16 +423,6 @@ Trait: ключ traitReq  (например traitReq1)
 								<value>0.25</value>
 							</li>
 						</Transitions>
-					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-20</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>
@@ -483,8 +436,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>16</SkillLevel>
-								<DisableReason>Требуется общение 16</DisableReason>
+								<SkillLevel>12</SkillLevel>
+								<DisableReason>Требуется общение 12</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -523,16 +476,6 @@ Trait: ключ traitReq  (например traitReq1)
 							</li>
 						</Transitions>
 					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-30</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
-					</li>
 				</Options>
 			</li>
 			<li>
@@ -545,8 +488,8 @@ Trait: ключ traitReq  (например traitReq1)
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
 								<Skill>Social</Skill>
-								<SkillLevel>14</SkillLevel>
-								<DisableReason>Требуется общение 14</DisableReason>
+								<SkillLevel>10</SkillLevel>
+								<DisableReason>Требуется общение 10</DisableReason>
 							</li>
 						</Conditions>
 						<Transitions> 
@@ -584,16 +527,6 @@ Trait: ключ traitReq  (например traitReq1)
 								<value>0.05</value>
 							</li>
 						</Transitions>
-					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-15</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>
@@ -604,13 +537,6 @@ Trait: ключ traitReq  (например traitReq1)
 				<Options>
 					<li>
 						<Label>NextDial</Label>
-						<Conditions>
-							<li Class="DiaRim.Conditions.Condition_SkillReq">
-								<Skill>Social</Skill>
-								<SkillLevel>14</SkillLevel>
-								<DisableReason>Требуется общение 14</DisableReason>
-							</li>
-						</Conditions>
 						<Transitions> 
 							<li>
 								<key>28</key>
@@ -646,16 +572,6 @@ Trait: ключ traitReq  (например traitReq1)
 								<value>0.05</value>
 							</li>
 						</Transitions>
-					</li>
-					<li>
-						<Label>EndCooms</Label>
-						<Actions> 
-							<li Class="DiaRim.Actions.Action_DeteriorationRelations">
-								<Amount>-15</Amount>
-							</li>
-						</Actions>
-						<ResolveTree>True</ResolveTree>
-						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>

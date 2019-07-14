@@ -15,6 +15,13 @@ namespace MoreEvents.Events
     {
         private EventSettings settings => Settings.EventsSettings["Quest_ResourceHelp"];
 
+        private readonly SimpleCurve ValueFactorFromWealthCurve = new SimpleCurve
+        {
+            new CurvePoint(0, 1),
+            new CurvePoint(50000, 1.5f),
+            new CurvePoint(300000, 2.2f)
+        };
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             if (!settings.Active)
@@ -47,7 +54,7 @@ namespace MoreEvents.Events
                 id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID(),
                 Faction = faction
             };
-            float marketValue = GenerateRequestItems(quest);
+            float marketValue = GenerateRequestItems(quest, (Map)parms.target);
             quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(marketValue * 1.3f, marketValue * 1.7f), new IntRange(3, 6), null, null);
 
             LookTargets target = new LookTargets(factionBase.Tile);
@@ -58,6 +65,7 @@ namespace MoreEvents.Events
             questPlace.Tile = factionBase.Tile;
             questPlace.SetFaction(faction);
             questPlace.Init(quest);
+            quest.Site = questPlace;
 
             Find.WorldObjects.Add(questPlace);
             QuestsManager.Communications.AddQuest(quest, QuestsManager.Communications.MakeQuestLetter(quest, description: def.description, lookTarget: target));
@@ -65,10 +73,10 @@ namespace MoreEvents.Events
             return true;
         }
 
-        private float GenerateRequestItems(Quest_ThingsHelp quest)
+        private float GenerateRequestItems(Quest_ThingsHelp quest, Map map)
         {
             int totalCount = 0;
-            int maxCount = Rand.Range(2, 7);
+            int maxCount = (int)(Rand.Range(2f, 7f) * ValueFactorFromWealthCurve.Evaluate(map.wealthWatcher.WealthTotal));
             float marketValue = 0;
             do
             {

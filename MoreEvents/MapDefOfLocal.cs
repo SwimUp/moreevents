@@ -11,5 +11,6 @@ namespace MoreEvents
     public static class MapDefOfLocal
     {
         public static MapGeneratorDef Doomsday;
+        public static MapGeneratorDef Camp;
     }
 }

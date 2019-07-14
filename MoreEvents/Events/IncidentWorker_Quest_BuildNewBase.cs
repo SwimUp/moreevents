@@ -103,7 +103,13 @@ namespace MoreEvents.Events
 
         private Faction GetFaction()
         {
-            return Find.FactionManager.RandomAlliedFaction();
+            if ((from x in Find.FactionManager.AllFactions
+                 where !x.IsPlayer && !x.def.hidden && !x.defeated && x.def.humanlikeFaction && (x.PlayerRelationKind == FactionRelationKind.Ally || x.PlayerRelationKind == FactionRelationKind.Neutral)
+                 select x).TryRandomElement(out Faction result))
+            {
+                return result;
+            }
+            return null;
         }
 
         private bool TryGetNewTile(int root, out int newTile)

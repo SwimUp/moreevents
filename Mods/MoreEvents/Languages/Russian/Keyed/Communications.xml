@@ -75,4 +75,12 @@
   <ScoutingComp_NoThreatsInfoTitle>Приветствую! После нескольких дней отсутствия наши разведчики наконец вернулись. Они не обнаружили никаких надвигающихся угроз.</ScoutingComp_NoThreatsInfoTitle>
   <ScoutingComp_Subject>Отчёт разведки</ScoutingComp_Subject>
   
+  <CommOption_SubscribeScout_Label>Разведывательное соглашение</CommOption_SubscribeScout_Label>
+  <CommOption_SubscribeScout_SubTitle>Разведывательное соглашение\n\nПодписав соглашения, фракция, с которой оно было подписано будет присылать на почту результаты разведки своих людей, в которых может содержаться информация о прбилижающихся угрозах\n\n</CommOption_SubscribeScout_SubTitle>
+  <CommOption_SubscribeScout_SubAlready>[Соглашение уже подписано: осталось {0} дней до конца]</CommOption_SubscribeScout_SubAlready>
+  <CommOption_SubscribeScout_SubButton>Подписать</CommOption_SubscribeScout_SubButton>
+  <CommOption_SubscribeScout_SubAlreadyOption>уже подписано</CommOption_SubscribeScout_SubAlreadyOption>
+  <CommOption_SubscribeScout_SubGoodWillOption>требуется минимум 80 репутации</CommOption_SubscribeScout_SubGoodWillOption>
+  <CommOption_ExitNode>Отмена</CommOption_ExitNode>
+  
 </LanguageData>
