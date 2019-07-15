@@ -30,13 +30,22 @@ namespace QuestRim
 
         public FactionInteraction GetInteraction(Faction faction)
         {
+            FactionInteraction interaction = null;
             foreach(var f in factions)
             {
                 if (f.Faction == faction)
-                    return f;
+                {
+                    interaction = f;
+                }
             }
 
-            return null;
+            if(interaction == null)
+            {
+                Log.Warning("[FactionManager]Null interaction, create new");
+                Add(faction);
+            }
+
+            return interaction;
         }
 
         public void Add(Faction faction)

@@ -11,5 +11,7 @@ namespace MoreEvents.MentalBreaks
     public static class MentalBreakDefOfLocal
     {
         public static MentalBreakDef PositiveCharge;
+
+        public static MentalBreakDef RunWild;
     }
 }

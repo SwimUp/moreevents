@@ -15,13 +15,17 @@
         <HealModiff>5</HealModiff>
 		<HealTicks>6000</HealTicks>
       </li>
+      <li Class="MoreEvents.Hediffs.HediffCompProperties_GiveMentalBreak">
+        <MentalBreak>RunWild</MentalBreak>
+		<MinSeverity>0.9</MinSeverity>
+      </li>
       <li Class="HediffCompProperties_TendDuration">
         <baseTendDurationHours>38</baseTendDurationHours>
         <severityPerDayTended>-1.5</severityPerDayTended>
 		<disappearsAtTotalTendQuality>80</disappearsAtTotalTendQuality>
       </li>
       <li Class="HediffCompProperties_Immunizable">
-        <severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+        <severityPerDayNotImmune>0.25</severityPerDayNotImmune> <!-- 0.25 -->
       </li>
     </comps>
     <label>zero mechanites</label>
@@ -29,6 +33,7 @@
       <li>
         <painOffset>0.2</painOffset>
         <label>mild pain</label>
+		<hungerRateFactor>2</hungerRateFactor>
         <restFallFactorOffset>0.7</restFallFactorOffset>
         <capMods>
           <li>
@@ -41,6 +46,7 @@
         <minSeverity>0.5</minSeverity>
         <label>intense pain</label>
         <painOffset>0.6</painOffset>
+		<hungerRateFactor>2</hungerRateFactor>
         <restFallFactorOffset>1.0</restFallFactorOffset>
         <capMods>
           <li>

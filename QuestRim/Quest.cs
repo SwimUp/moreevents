@@ -151,7 +151,10 @@ namespace QuestRim
                 TicksToPass--;
                 if (TicksToPass <= 0)
                 {
-                    EndQuest(null, EndCondition.Timeout);
+                    if (Site != null)
+                        Site.EndQuest(null, EndCondition.Timeout);
+                    else
+                        EndQuest(null, EndCondition.Timeout);
                 }
             }
         }

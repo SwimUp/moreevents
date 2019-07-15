@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <ZeroMechanites.label>Нулевые механиты</ZeroMechanites.label>
+  <ZeroMechanites.stages.mild_pain.label>легкая боль</ZeroMechanites.stages.mild_pain.label>
+  <ZeroMechanites.stages.intense_pain.label>сильная боль</ZeroMechanites.stages.intense_pain.label>
+  
   <Irradiation.label>Облучение радиацией</Irradiation.label>
   <Irradiation.stages.initial-0.label>незаметное</Irradiation.stages.initial-0.label>
   <Irradiation.stages.initial-1.label>начальное</Irradiation.stages.initial-1.label>

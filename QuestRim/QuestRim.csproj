@@ -80,7 +80,6 @@
     <Compile Include="TerminalCommand.cs" />
     <Compile Include="TerminalDef.cs" />
     <Compile Include="UniqueIdManager.cs" />
-    <Compile Include="VanillaFactionManagerPatch.cs" />
     <Compile Include="WorldObjectDefOfLocal.cs" />
   </ItemGroup>
   <ItemGroup />

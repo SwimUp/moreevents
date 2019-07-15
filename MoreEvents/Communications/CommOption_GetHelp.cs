@@ -31,6 +31,18 @@ namespace MoreEvents.Communications
         public static void AddComponentWithStack(Faction faction, int addCount)
         {
             FactionInteraction interaction = QuestsManager.Communications.FactionManager.GetInteraction(faction);
+            if(interaction == null)
+            {
+                Log.Warning("[CommOption_GetHelp] Faction not found.");
+                return;
+            }
+
+            if(interaction.Options == null)
+            {
+                Log.Warning("[CommOption_GetHelp] Interaction is null. Init.");
+                interaction.Options = QuestsManager.Communications.FactionManager.StandartOptions();
+            }
+
             foreach (var option in interaction.Options)
             {
                 if (option is CommOption_GetHelp optionGetHelp)

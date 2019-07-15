@@ -9,4 +9,8 @@
   <Disease_NeurofibromatousWorms.letterLabel>Нейрофиброматозные черви</Disease_NeurofibromatousWorms.letterLabel>
   <Disease_NeurofibromatousWorms.letterText>У {0} из ваших поселенцев {1}.\n\nНейрофиброматозные черви поражают части головного мозга отвечающие за зрение и слух, а так-же поражают нервные окончания. Если их во время не вылечить, то колонист оглохнет и ослепнет навсегда!</Disease_NeurofibromatousWorms.letterText>
   
+  <Disease_ZeroMechanites.label>Нулевые механиты</Disease_ZeroMechanites.label>
+  <Disease_ZeroMechanites.letterLabel>Нулевые механиты</Disease_ZeroMechanites.letterLabel>
+  <Disease_ZeroMechanites.letterText>У {0} из ваших поселенцев {1}.\n\nНулевые механиты увеличивают скорость заживления ран, усталось, скорость голода и скорость работы. Если их не лечить, то ваши колонисты одичают.</Disease_ZeroMechanites.letterText>
+
 </LanguageData>

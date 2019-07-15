@@ -9,4 +9,9 @@
   <Disease_NeurofibromatousWorms.letterLabel>Neurofibromatous Worms</Disease_NeurofibromatousWorms.letterLabel>
   <Disease_NeurofibromatousWorms.letterText>У {0} of your settlers {1}.\n\nNeurofibromatous worms affect parts of the brain that are responsible for vision and hearing, and also affect nerve endings. If they are not cured in time, the colonist will deaf and blind forever!</Disease_NeurofibromatousWorms.letterText>
   
+  <Disease_ZeroMechanites.label>Zero mechanites</Disease_ZeroMechanites.label>
+  <Disease_ZeroMechanites.letterLabel>Zero mechanites</Disease_ZeroMechanites.letterLabel>
+  <Disease_ZeroMechanites.letterText>{0} of your settlers {1}. \n\nZero mechanites increase wound healing speed, tiredness, hunger speed, and work speed. If you do not treat them, they will become wild.</Disease_ZeroMechanites.letterText>
+
+  
 </LanguageData>
