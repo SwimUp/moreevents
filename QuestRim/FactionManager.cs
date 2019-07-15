@@ -31,7 +31,7 @@ namespace QuestRim
         public FactionInteraction GetInteraction(Faction faction)
         {
             FactionInteraction interaction = null;
-            foreach(var f in factions)
+            foreach(var f in Factions)
             {
                 if (f.Faction == faction)
                 {

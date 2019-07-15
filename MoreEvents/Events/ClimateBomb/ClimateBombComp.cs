@@ -27,10 +27,10 @@ namespace MoreEvents.Events.ClimateBomb
             700,
             1200,
             1700,
+            2000,
             2400,
-            4500,
-            5000,
-            5400
+            3300,
+            3900
         };
         private float[] reqDefuse = new float[]
         {
