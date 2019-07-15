@@ -133,4 +133,8 @@
 
 Вы можете связаться с ними через планетарную консоль связи.</Quest_MissingPeople.letterText>  
   
+  <Psychogas.label>Психогаз</Psychogas.label>
+  <Psychogas.letterLabel>Психогаз</Psychogas.letterLabel>
+  <Psychogas.letterText>Кто-то выпустил тонны изменяющих разум химикатов в воздух, поэтому все, кто находяться на улице будут терять рассудок.</Psychogas.letterText>  
+  
 </LanguageData>

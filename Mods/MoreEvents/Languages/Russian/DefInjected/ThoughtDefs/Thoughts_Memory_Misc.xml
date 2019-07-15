@@ -7,5 +7,7 @@
   <PositiveCharge.stages.Positive_Charge.label>Заряд позитива</PositiveCharge.stages.Positive_Charge.label>
   <PositiveCharge.stages.Positive_Charge.description>Уныние для слабых. Я готов к любым проблемам и плохому настроению меня не сломать!</PositiveCharge.stages.Positive_Charge.description>
  
+  <MentalImpact.stages.Mental_impact.label>Психическое воздействие</MentalImpact.stages.Mental_impact.label>
+  <MentalImpact.stages.Mental_impact.description>Каждый раз вдыхая этот газ в моей голове что-то происходит</MentalImpact.stages.Mental_impact.description>
  
 </LanguageData>

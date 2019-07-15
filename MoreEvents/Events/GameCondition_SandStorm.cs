@@ -21,24 +21,25 @@ namespace MoreEvents.Events
 
             WeatherDef storm = WeatherDefOfLocal.Sandstorm;
             storm.durationRange = new IntRange(Duration, Duration + 1000);
+
             foreach(var map in AffectedMaps)
                 map.weatherManager.TransitionTo(storm);
         }
 
-        public override void GameConditionTick()
-        {
-            base.GameConditionTick();
+        //public override void GameConditionTick()
+        //{
+        //    base.GameConditionTick();
 
-            foreach (var map in AffectedMaps)
-            {
-                if (map.weatherManager.curWeather != WeatherDefOfLocal.Sandstorm)
-                {
-                    WeatherDef storm = WeatherDefOfLocal.Sandstorm;
-                    storm.durationRange = new IntRange(Duration, Duration + 1000);
-                    map.weatherManager.TransitionTo(storm);
-                }
-            }
-        }
+        //    foreach (var map in AffectedMaps)
+        //    {
+        //        if (map.weatherManager.curWeather != WeatherDefOfLocal.Sandstorm)
+        //        {
+        //            WeatherDef storm = WeatherDefOfLocal.Sandstorm;
+        //            storm.durationRange = new IntRange(Duration, Duration + 1000);
+        //            map.weatherManager.TransitionTo(storm);
+        //        }
+        //    }
+        //}
 
         public override void End()
         {

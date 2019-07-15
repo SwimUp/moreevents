@@ -152,5 +152,14 @@
     <endMessage>Constellation is gone</endMessage>
 	<canBePermanent>false</canBePermanent>
   </GameConditionDef>
+  
+  <GameConditionDef>
+    <defName>Psychogas</defName>
+    <conditionClass>MoreEvents.Events.GameCondition_Psychogas</conditionClass>
+    <label>Psychogas</label>
+    <description>Someone has released tons of mind-altering chemicals into the air, so everyone who is in the open air will lose their sanity.</description>
+    <endMessage>Most of the gases evaporated. Outdoors is safe again.</endMessage>
+	<canBePermanent>false</canBePermanent>
+  </GameConditionDef>
  
 </Defs>

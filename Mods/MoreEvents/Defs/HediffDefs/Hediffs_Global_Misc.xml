@@ -1,6 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <HediffDef ParentName="InfectionBase">
+    <defName>ZeroMechanites</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <makesSickThought>true</makesSickThought>
+    <makesAlert>false</makesAlert>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.1</initialSeverity>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="MoreEvents.Hediffs.HediffCompProperties_AutoHeal">
+        <HealModiff>5</HealModiff>
+		<HealTicks>6000</HealTicks>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>38</baseTendDurationHours>
+        <severityPerDayTended>-1.5</severityPerDayTended>
+		<disappearsAtTotalTendQuality>80</disappearsAtTotalTendQuality>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <label>zero mechanites</label>
+    <stages>
+      <li>
+        <painOffset>0.2</painOffset>
+        <label>mild pain</label>
+        <restFallFactorOffset>0.7</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>intense pain</label>
+        <painOffset>0.6</painOffset>
+        <restFallFactorOffset>1.0</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
 	<HediffDef>
 		<defName>Irradiation</defName>
 		<hediffClass>HediffWithComps</hediffClass>

@@ -53,4 +53,8 @@
   <Earthquake.description>Началось землетрясение, всем на улицу!</Earthquake.description>
   <Earthquake.endMessage>Землетрясение прекратилось</Earthquake.endMessage>  
   
+  <Psychogas.label>Психогаз</Psychogas.label>
+  <Psychogas.description>Кто-то выпустил тонны изменяющих разум химикатов в воздух, поэтому все, кто находяться на улице будут терять рассудок.</Psychogas.description>
+  <Psychogas.endMessage>Большая часть газов испаряется. Снаружи снова безопасно.</Psychogas.endMessage>  
+  
 </LanguageData>

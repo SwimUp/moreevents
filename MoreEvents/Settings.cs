@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 33;
+        private static int totalSettings = 34;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -292,6 +292,12 @@ namespace MoreEvents
                 {
                     Active = true
                 }
+            },
+            {
+            "Psychogas", new EventSettings("Psychogas")
+                {
+                    Active = true
+                }
             }
         };
 
@@ -299,12 +305,12 @@ namespace MoreEvents
 
         static Settings()
         {
-            foreach(var setting in EventsSettings)
+            length = EventsSettings.Count * 60;
+            foreach (var setting in EventsSettings)
             {
-                length += 40;
                 foreach(var param in setting.Value.Parameters)
                 {
-                    length += 25;
+                    length += 30;
                 }
             }
         }
@@ -578,6 +584,12 @@ namespace MoreEvents
             },
             {
             "Quest_MissingPeople", new EventSettings("Quest_MissingPeople")
+                {
+                    Active = true
+                }
+            } ,
+            {
+            "Psychogas", new EventSettings("Psychogas")
                 {
                     Active = true
                 }

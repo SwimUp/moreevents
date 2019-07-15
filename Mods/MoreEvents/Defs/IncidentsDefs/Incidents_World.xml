@@ -7,9 +7,9 @@
 		<label>Supernova explosion</label>
 		<letterLabel>Super nova</letterLabel>
 		<letterText>Super nova explosion</letterText>
-	    <letterDef>PositiveEvent</letterDef>
+		<letterDef>PositiveEvent</letterDef>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_SuperNova</workerClass>
 		<category>Misc</category>
@@ -18,13 +18,13 @@
 		<earliestDay>80</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
-    <!-- Событие: Тепловая волна 2.0 -->
+
+	<!-- Событие: Тепловая волна 2.0 -->
 	<IncidentDef>
 		<defName>SuperHeatWave</defName>
 		<label>Super heat wave</label>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<category>Misc</category>
 		<workerClass>MoreEvents.Events.IncidentWorker_SuperHeatWave</workerClass>
@@ -39,13 +39,13 @@
 			<max>35.0</max>
 		</durationDays>
 	</IncidentDef>
-	
+
 	<!-- Событие: Метеоритный дождь -->
 	<IncidentDef>
 		<defName>BoulderMassHit</defName>
 		<label>Meteor rain</label>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<gameCondition>BoulderMassHit</gameCondition>
 		<workerClass>MoreEvents.Events.IncidentWorker_BoulderMassHit</workerClass>
@@ -58,14 +58,14 @@
 		<earliestDay>60</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
-    <!-- Событие: Длительный день -->
+
+	<!-- Событие: Длительный день -->
 	<IncidentDef>
 		<defName>Endlessday</defName>
 		<label>Endless day</label>
-			<category>Misc</category>
+		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>Endlessday</gameCondition>
@@ -78,16 +78,16 @@
 			<min>2.0</min>
 			<max>5.0</max>
 		</durationDays>
-    </IncidentDef>
+	</IncidentDef>
 	<!-- s=======================s -->
-  
+
 	<!-- Событие: Обедненная атмосфера -->
 	<IncidentDef>
 		<defName>LeanAtmosphere</defName>
 		<label>Lean atmosphere</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>LeanAtmosphere</gameCondition>
@@ -104,14 +104,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Повышенный радиационный фон -->
 	<IncidentDef>
 		<defName>RadiationFon</defName>
 		<label>Increased radiation background</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>RadiationFon</gameCondition>
@@ -128,14 +128,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Нет солнца -->
 	<IncidentDef>
 		<defName>NoSun</defName>
 		<label>No sun</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>NoSun</gameCondition>
@@ -152,14 +152,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Плотная атмосфера -->
 	<IncidentDef>
 		<defName>DenseAtmosphere</defName>
 		<label>Dense atmosphere</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>DenseAtmosphere</gameCondition>
@@ -176,14 +176,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Ледяной шторм -->
 	<IncidentDef>
 		<defName>IceStorm</defName>
 		<label>Ice Storm</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>IceStorm</gameCondition>
@@ -205,14 +205,14 @@
 		</allowedBiomes>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Тяжелый воздух -->
 	<IncidentDef>
 		<defName>HeavyAir</defName>
 		<label>Heavy air</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>HeavyAir</gameCondition>
@@ -229,14 +229,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Портал механоидов -->
 	<IncidentDef>
 		<defName>MechanoidPortal</defName>
 		<label>Mechanoid portal</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_MechanoidPortalStart</workerClass>
 		<letterLabel>Mechanoid portal!</letterLabel>
@@ -248,14 +248,14 @@
 		<minDifficulty>2</minDifficulty>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Улей -->
 	<IncidentDef>
 		<defName>BeetleRush</defName>
 		<label>Hive!</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_BeetleRush</workerClass>
 		<letterLabel>Hive!</letterLabel>
@@ -267,14 +267,14 @@
 		<minDifficulty>2</minDifficulty>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Подрыв дороги -->
 	<IncidentDef>
 		<defName>DestroyRoad</defName>
 		<label>Undermining the road</label>
 		<letterLabel>Undermining the road</letterLabel>
 		<letterText>A small detachment of robbers blew one of the roads.</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+		<letterDef>NegativeEvent</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -285,14 +285,14 @@
 		<earliestDay>120</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Крушение корабля -->
 	<IncidentDef>
 		<defName>ShipCrash</defName>
 		<label>Ship wrech</label>
 		<letterLabel>Ship wrech</letterLabel>
 		<letterText>Unknown ship crashed. Many pieces were scattered around the planet. You can research them to get resources or find new technologies.</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -303,14 +303,14 @@
 		<earliestDay>40</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
-    <!-- Событие: Песчанная буря -->
+
+	<!-- Событие: Песчанная буря -->
 	<IncidentDef>
 		<defName>SandStorm</defName>
 		<label>Sand storm</label>
-			<category>Misc</category>
+		<category>Misc</category>
 		<targetTags>
-		  <li>Map_PlayerHome</li>
+			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>SandStorm</gameCondition>
@@ -327,16 +327,16 @@
 			<li>Desert</li>
 			<li>ExtremeDesert</li>
 		</allowedBiomes>
-    </IncidentDef>
+	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Массовый пожар -->
 	<IncidentDef>
 		<defName>MassiveFire</defName>
 		<label>Massive fire</label>
 		<letterLabel>Massive fire</letterLabel>
 		<letterText>A massive fire started in the neighboring land. If it is not put out, it will destroy all the neighboring forests!</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+		<letterDef>NegativeEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -353,14 +353,14 @@
 		</allowedBiomes>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Климматическая бомба -->
 	<IncidentDef>
 		<defName>ClimateBomb</defName>
 		<label>Climate bomb detected</label>
 		<letterLabel>Climate bomb detected</letterLabel>
 		<letterText>Location detected climate bomb. Who laid it - is unknown, but one thing is clear: if it is not defused, the climate will go craz</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -371,14 +371,14 @@
 		<earliestDay>100</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
-    <!-- Событие: Климатический хаос -->
+
+	<!-- Событие: Климатический хаос -->
 	<IncidentDef>
 		<defName>ClimateChaos</defName>
 		<label>Climate chaos</label>
-			<category>Misc</category>
+		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>ClimateChaos</gameCondition>
@@ -391,16 +391,16 @@
 			<min>10.0</min>
 			<max>25.0</max>
 		</durationDays>
-    </IncidentDef>
+	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Ионизированная атмосфера -->
 	<IncidentDef>
 		<defName>IonizedAtmosphere</defName>
 		<label>Ionized atmosphere</label>
 		<category>Misc</category>
 		<targetTags>
-		  <li>World</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>IonizedAtmosphere</gameCondition>
@@ -417,14 +417,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Землетрясение -->
 	<IncidentDef>
 		<defName>Earthquake</defName>
 		<label>Earthquake</label>
 		<letterLabel>Earthquake!</letterLabel>
 		<letterText>An earthquake began, everyone in the shelter!</letterText>
-	    <letterDef>NegativeEvent</letterDef>
+		<letterDef>NegativeEvent</letterDef>
 		<gameCondition>Earthquake</gameCondition>
 		<targetTags>
 			<li>Map_PlayerHome</li>
@@ -441,14 +441,14 @@
 		</durationDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Осадный лагерь -->
 	<IncidentDef>
 		<defName>SiegeCamp</defName>
 		<label>Siege camp</label>
 		<letterLabel>Siege camp</letterLabel>
 		<letterText>The enemy camp was set up near your settlement. They will raid and bombard your settlement until you destroy them.</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -459,14 +459,14 @@
 		<earliestDay>135</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Нападение на дружественное поселение -->
 	<IncidentDef>
 		<defName>AttackFriendlySettlement</defName>
 		<label>Attack on a friendly settlement</label>
 		<letterLabel>Attack on a friendly settlement</letterLabel>
 		<letterText>A friendly settlement scout reports that one of the hostile factions is preparing an attack on them. They ask you for help in defense.</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -477,32 +477,32 @@
 		<earliestDay>50</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Вызов созвездия -->
 	<IncidentDef>
 		<defName>Constellations</defName>
 		<label>Constellations</label>
 		<letterLabel>Constellations</letterLabel>
 		<letterText>Constellations</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Constellations.IncidentWorker_Constellations</workerClass>
 		<category>Misc</category>
-		<minRefireDays>10</minRefireDays>
-		<baseChance>1.2</baseChance>
+		<minRefireDays>50</minRefireDays>
+		<baseChance>0.7</baseChance>
 		<earliestDay>15</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Ресурсный метеорит -->
 	<IncidentDef>
 		<defName>MineralMeteorite</defName>
 		<label>Mineral meteorite</label>
 		<letterLabel>Mineral meteorite</letterLabel>
 		<letterText>A large meteorite consisting of minerals entered the atmosphere.</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -513,14 +513,14 @@
 		<earliestDay>50</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Десант бешеных животных -->
 	<IncidentDef>
 		<defName>DropAnimalInsanity</defName>
 		<label>Mineral meteorite</label>
 		<letterLabel>Landing insanity animals</letterLabel>
 		<letterText>Enemy settlement sent capsules with crazy animals.</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -531,14 +531,14 @@
 		<earliestDay>70</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Нападение голодных каннибалов -->
 	<IncidentDef>
 		<defName>HungryCannibalRaid</defName>
 		<label>Hungry cannibal raid</label>
 		<letterLabel>Hungry cannibals!</letterLabel>
 		<letterText>A tribe of cannibals attacks the settlement from all sides! They don't need captives, they need human meat</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -549,7 +549,7 @@
 		<earliestDay>55</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Ультиматум судного дня -->
 	<IncidentDef>
 		<defName>DoomsdayUltimatum</defName>
@@ -557,7 +557,7 @@
 		<letterLabel>Doomsday Ultimatum</letterLabel>
 		<letterText>The enemy faction reports that it has a weapon capable of destroying the planet. She makes demands: 50,000 silver.
 You can start collecting silver together with other factions or organize an assault.</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -568,14 +568,14 @@ You can start collecting silver together with other factions or organize an assa
 		<earliestDay>250</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Поджигатели -->
 	<IncidentDef>
 		<defName>Arsonists</defName>
 		<label>Arsonists</label>
 		<letterLabel>Arsonists</letterLabel>
 		<letterText>Several fighters of the enemy faction have arrived to burn your forest.</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -592,14 +592,14 @@ You can start collecting silver together with other factions or organize an assa
 		</allowedBiomes>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Объединенный рейд -->
 	<IncidentDef>
 		<defName>UnifiedRaid</defName>
 		<label>Unified raid</label>
 		<letterLabel>Unified raid</letterLabel>
 		<letterText>Two hostile groups decided to join forces and attack the colony.</letterText>
-	    <letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -610,7 +610,7 @@ You can start collecting silver together with other factions or organize an assa
 		<earliestDay>80</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Задание: помощь ресурсами -->
 	<IncidentDef>
 		<defName>Quest_ResourceHelp</defName>
@@ -619,8 +619,8 @@ You can start collecting silver together with other factions or organize an assa
 		<letterText>One of the factions is requesting resources to build their settlement.
 
 You can contact them via geocape.
-</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -631,7 +631,7 @@ You can contact them via geocape.
 		<earliestDay>60</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Задание: постройка новой базы -->
 	<IncidentDef>
 		<defName>Quest_BuildNewBase</defName>
@@ -640,8 +640,8 @@ You can contact them via geocape.
 		<letterText>The {0} faction is going to build a new base, and it needs help in the form of manpower. They ask you for several colonists for a couple of days.
 
 You can contact them via geocape.
-</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -652,15 +652,15 @@ You can contact them via geocape.
 		<earliestDay>77</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Задание: постройка новой базы -->
 	<IncidentDef>
 		<defName>Quest_MissingPeople</defName>
 		<label>Missing people</label>
 		<letterLabel>Missing people</letterLabel>
 		<letterText>The leader of the faction {0} contacted us and reported that a couple of days ago a small group of their settlers went on a journey to get resources. Estimated time of their journey was estimated at {1} days. More than {2} days passed, but the settlers never returned. Attempts to get in touch have failed and they are worried that the settlers might get lost or be attacked. \nThe food intakes they had enough will last for about {3} days, after which they will starve. He asks us to find the missing settlers and return them to them.
-</letterText>
-	    <letterDef>NeutralEvent</letterDef>
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -671,5 +671,53 @@ You can contact them via geocape.
 		<earliestDay>40</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
+	<!-- Событие: Психогаз -->
+	<IncidentDef>
+		<defName>Psychogas</defName>
+		<label>Psychogas</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>Psychogas</gameCondition>
+		<letterLabel>Psychogas</letterLabel>
+		<letterText>Someone has released tons of mind-altering chemicals into the air, so everyone who is in the open air will lose their sanity.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0.15</baseChance>
+		<earliestDay>120</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<durationDays>
+			<min>2</min>
+			<max>4</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+
+	<!-- Событие: Психогаз -->
+	<IncidentDef>
+		<defName>RaidEnemyWithAnimals</defName>
+		<label>enemy raid</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_RaidEnemyWithAnimals</workerClass>
+		<baseChance>4.4</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+	</IncidentDef>
+	<!-- s=======================s -->
+
+	<!-- Событие: Нулевые механиты -->
+	<IncidentDef ParentName="DiseaseIncident">
+		<defName>Disease_ZeroMechanites</defName>
+		<label>Zero mechanites</label>
+		<diseaseIncident>ZeroMechanites</diseaseIncident>
+		<letterLabel>Disease (Zero mechanites)</letterLabel>
+	</IncidentDef>
+	<!-- s=======================s -->
+
+
 </Defs>

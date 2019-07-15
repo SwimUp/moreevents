@@ -29,5 +29,20 @@
 	</ThoughtDef>
 	<!-- s=======================s -->
 	
+	<!-- Состояние: Психическое воздействие -->
+	<ThoughtDef>
+		<defName>MentalImpact</defName>
+		<durationDays>0.3</durationDays>
+        <stackLimit>15</stackLimit>
+		<stages>
+			<li>
+				<label>Mental impact</label>
+				<description>Every time you breathe this gas in my head, something happens.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- s=======================s -->
+	
 	
 </Defs>

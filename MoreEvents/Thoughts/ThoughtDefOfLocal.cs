@@ -7,5 +7,6 @@ namespace MoreEvents
     {
         public static ThoughtDef AwesomeSight;
         public static ThoughtDef PositiveCharge;
+        public static ThoughtDef MentalImpact;
     }
 }

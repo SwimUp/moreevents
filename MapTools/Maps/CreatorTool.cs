@@ -551,7 +551,7 @@ namespace TestTools.MapGenerator
                 {
                     if (Widgets.ButtonText(new Rect(0, y, 170, 20), def.defName))
                     {
-                        MapGeneratorHandler.GenerateMap(def, Find.CurrentMap, true, Terrain, Fog, RoomFog, Pawns, Roof, GeneratePlants, Find.FactionManager.RandomEnemyFaction());
+                        MapGeneratorHandler.GenerateMap(def, Find.CurrentMap, out List<Pawn> spawnedPawns, true, Terrain, Fog, RoomFog, Pawns, Roof, GeneratePlants, Find.FactionManager.RandomEnemyFaction());
                     }
                     y += 22;
                 }
