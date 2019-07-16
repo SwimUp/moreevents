@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+	<TryStartQuestDialog>Check quests</TryStartQuestDialog>
 
 	<QuestFail>Quest {0} failed</QuestFail>
 	<QuestSuccess>Quest {0} completed</QuestSuccess>
@@ -83,5 +84,9 @@
 	<CommOption_SubscribeScout_SubAlreadyOption>already signed</CommOption_SubscribeScout_SubAlreadyOption>
 	<CommOption_SubscribeScout_SubGoodWillOption>at least 80 reputation required</CommOption_SubscribeScout_SubGoodWillOption>
 	<CommOption_ExitNode>Cancel</CommOption_ExitNode>
+
+	<QuestPawn_Title>Greetings! What would you like to discuss?</QuestPawn_Title>
+	<QuestPawn_Line1>{0} from the faction {1} ({2}: {3})</QuestPawn_Line1>
+	<QuestPawn_Line1_Player>{0}</QuestPawn_Line1_Player>
 
 </LanguageData>

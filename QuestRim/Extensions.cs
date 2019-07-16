@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Verse;
 
 namespace QuestRim
 {
@@ -19,6 +20,21 @@ namespace QuestRim
             }
 
             return false;
+        }
+
+        public static bool GetQuestPawn(this Pawn pawn, out QuestPawn questPawn)
+        {
+            questPawn = QuestsManager.Communications.QuestPawns.FirstOrDefault(p => p.Pawn == pawn);
+            return questPawn != null;
+        }
+
+        public static bool CanGetQuests(this Pawn pawn)
+        {
+            if (pawn.Dead || !pawn.Spawned || !pawn.CanCasuallyInteractNow() ||
+                (pawn.Downed) ||
+                (pawn.Faction != null && pawn.Faction.HostileTo(Faction.OfPlayer))) return false;
+
+            return pawn.GetQuestPawn(out QuestPawn questPawn);
         }
     }
 }

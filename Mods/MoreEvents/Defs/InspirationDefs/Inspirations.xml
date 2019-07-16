@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<InspirationDef>
+		<defName>Frenzy_SummerWork</defName>
+		<label>work frenzy</label>
+		<baseDurationDays>2</baseDurationDays>
+		<beginLetter>[PAWN_nameIndef] has experienced an inspiration!\n\n[PAWN_pronoun] will work faster for the next 2 days.</beginLetter>
+		<beginLetterDef>PositiveEvent</beginLetterDef>
+		<endMessage>{0} is no longer inspired (work frenzy).</endMessage>
+		<baseInspectLine>Inspired: Work frenzy</baseInspectLine>
+		<statFactors>
+			<WorkSpeedGlobal>1.4</WorkSpeedGlobal>
+		</statFactors>
+	</InspirationDef>
+
+	<InspirationDef>
 		<defName>Constellations_Frenzy_Shooting</defName>
 		<label>Благословение охотника</label>
 		<baseDurationDays>5</baseDurationDays>
@@ -18,7 +31,6 @@
 			<Shooting>8</Shooting>
 		</requiredSkills>
 	</InspirationDef>
-
 
 	<InspirationDef>
 		<defName>Constellations_Frenzy_Melee</defName>

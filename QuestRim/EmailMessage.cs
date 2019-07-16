@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace QuestRim
 
         public string Message;
 
+        public Faction Faction;
+
         public List<EmailMessageOption> Answers = new List<EmailMessageOption>();
 
         public void ExposeData()
@@ -23,6 +26,8 @@ namespace QuestRim
             Scribe_Values.Look(ref To, "To");
             Scribe_Values.Look(ref Subject, "Subject");
             Scribe_Values.Look(ref Message, "Message");
+
+            Scribe_References.Look(ref Faction, "Faction");
 
             Scribe_Collections.Look(ref Answers, "Answers", LookMode.Deep);
         }

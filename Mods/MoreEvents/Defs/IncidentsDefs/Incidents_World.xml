@@ -196,7 +196,7 @@
 		<minDifficulty>2</minDifficulty>
 		<durationDays>
 			<min>3</min>
-			<max>14</max>
+			<max>7</max>
 		</durationDays>
 		<allowedBiomes>
 			<li>ColdBog</li>
@@ -695,7 +695,7 @@ You can contact them via geocape.
 	</IncidentDef>
 	<!-- s=======================s -->
 
-	<!-- Событие: Психогаз -->
+	<!-- Событие: Рейд с животными -->
 	<IncidentDef>
 		<defName>RaidEnemyWithAnimals</defName>
 		<label>enemy raid</label>
@@ -716,6 +716,42 @@ You can contact them via geocape.
 		<label>Zero mechanites</label>
 		<diseaseIncident>ZeroMechanites</diseaseIncident>
 		<letterLabel>Disease (Zero mechanites)</letterLabel>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Летнее солнцестояние -->
+	<IncidentDef>
+		<defName>SummerSolstice</defName>
+		<label>Summer solstice</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_SummerSolstice</workerClass>
+		<letterLabel>Summer solstice</letterLabel>
+		<letterText>The longest day. Your colonists got a positive charge!</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<baseChance>15.5</baseChance>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>45</minRefireDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Летнее солнцестояние -->
+	<IncidentDef>
+		<defName>Pocahontas</defName>
+		<label>Pocahontas</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_SummerSolstice</workerClass>
+		<letterLabel>Pocahontas</letterLabel>
+		<letterText>The settlement {0} offers you {0} - {1} to reside in your settlement as a sign of strong friendship between you.</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<baseChance>2.7</baseChance>
+		<earliestDay>50</earliestDay>
+		<minRefireDays>250</minRefireDays>
 	</IncidentDef>
 	<!-- s=======================s -->
 

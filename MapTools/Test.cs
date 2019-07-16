@@ -1,4 +1,5 @@
 ﻿using MoreEvents.Communications;
+using MoreEvents.Quests;
 using QuestRim;
 using RimWorld;
 using System;
@@ -22,6 +23,16 @@ namespace DiaRim
         public TestDialogs(Game game)
         {
 
+        }
+
+        public class TestOption : QuestOption
+        {
+            public override string Label => "TEST" + Rand.Range(1, 25);
+
+            public override void DoAction(Quest quest, Pawn speaker, Pawn defendant)
+            {
+                Log.Message($"TRIGGER --> {quest.CardLabel}: {speaker.Name} : {defendant?.Name}");
+            }
         }
 
         public override void GameComponentTick()
@@ -107,6 +118,54 @@ namespace DiaRim
                                 Messages.Message("Already has", MessageTypeDefOf.PositiveEvent, false);
                             }
                         }));
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+
+                if (listing.ButtonText("Add quest pawn"))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach (var pawn in Find.CurrentMap.mapPawns.AllPawnsSpawned)
+                    {
+                        if (pawn.Name != null)
+                        {
+                            list.Add(new FloatMenuOption(pawn.Name.ToStringFull, delegate
+                            {
+                                List<FloatMenuOption> list2 = new List<FloatMenuOption>();
+                                list2.Add(new FloatMenuOption("Missing people", delegate
+                                {
+                                    Quest_MissingPeople quest = new Quest_MissingPeople(Rand.Range(3, 9), 5, 5);
+                                    quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
+                                    quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(1000, 6000), new IntRange(4, 25), null, null);
+                                    quest.Options = new List<QuestOption>();
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.Faction = Find.FactionManager.RandomNonHostileFaction();
+                                    QuestsManager.Communications.AddQuestPawn(pawn, quest);
+                                    QuestsManager.Communications.AddQuest(quest);
+                                }));
+                                list2.Add(new FloatMenuOption("Building new base", delegate
+                                {
+                                    Quest_BuildNewBase quest = new Quest_BuildNewBase();
+                                    quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
+                                    quest.Faction = Find.FactionManager.RandomNonHostileFaction();
+                                    quest.Options = new List<QuestOption>();
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.Options.Add(new TestOption());
+                                    quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(1000, 6000), new IntRange(4, 25), null, null);
+                                    QuestsManager.Communications.AddQuestPawn(pawn, quest);
+                                    QuestsManager.Communications.AddQuest(quest);
+                                }));
+
+                                Find.WindowStack.Add(new FloatMenu(list2));
+                            }));
+                        }
                     }
 
                     Find.WindowStack.Add(new FloatMenu(list));

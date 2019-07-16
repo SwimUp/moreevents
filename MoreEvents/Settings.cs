@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 34;
+        private static int totalSettings = 36;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -298,6 +298,18 @@ namespace MoreEvents
                 {
                     Active = true
                 }
+            },
+            {
+            "Disease_ZeroMechanites", new EventSettings("Disease_ZeroMechanites")
+                {
+                    Active = true
+                }
+            },
+            {
+            "SummerSolstice", new EventSettings("SummerSolstice")
+                {
+                    Active = true
+            }
             }
         };
 
@@ -328,7 +340,6 @@ namespace MoreEvents
             {
                 try
                 {
-
                     listing_Standard.Label(setting.Value.Name, tooltip: setting.Value.Description);
                     Rect rect2 = new Rect(0, listing_Standard.CurHeight, 600, 20);
                     if (listing_Standard.RadioButton(Translator.Translate("EventActive"), setting.Value.Active))
@@ -587,12 +598,24 @@ namespace MoreEvents
                 {
                     Active = true
                 }
-            } ,
+            },
             {
             "Psychogas", new EventSettings("Psychogas")
                 {
                     Active = true
                 }
+            },
+            {
+            "Disease_ZeroMechanites", new EventSettings("Disease_ZeroMechanites")
+                {
+                    Active = true
+                }
+            },
+            {
+            "SummerSolstice", new EventSettings("SummerSolstice")
+                {
+                    Active = true
+            }
             }
             };
         }

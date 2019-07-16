@@ -9,6 +9,6 @@ namespace MoreEvents
     [DefOf]
     public static class InspirationDefOfLocal
     {
-
+        public static InspirationDef Frenzy_SummerWork;
     }
 }

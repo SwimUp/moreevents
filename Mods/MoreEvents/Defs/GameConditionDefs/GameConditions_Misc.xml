@@ -161,5 +161,14 @@
     <endMessage>Most of the gases evaporated. Outdoors is safe again.</endMessage>
 	<canBePermanent>false</canBePermanent>
   </GameConditionDef>
+  
+  <GameConditionDef>
+    <defName>SummerSolstice</defName>
+    <conditionClass>MoreEvents.Events.GameCondition_Psychogas</conditionClass>
+    <label>Summer solstice</label>
+    <description>Midsummer, the longest day</description>
+    <endMessage>Long summer day is over</endMessage>
+	<canBePermanent>false</canBePermanent>
+  </GameConditionDef>
  
 </Defs>

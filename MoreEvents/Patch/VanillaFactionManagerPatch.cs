@@ -15,7 +15,9 @@ namespace QuestRim
     {
         static void Postfix(ref Faction faction)
         {
-            Log.Message("YES");
+            if (faction.def.hidden || faction.IsPlayer)
+                return;
+
             QuestsManager.Communications.FactionManager.Add(faction);
         }
     }
@@ -27,6 +29,7 @@ namespace QuestRim
         static void Postfix(ref Faction faction)
         {
             QuestsManager.Communications.FactionManager.Remove(faction);
+            QuestsManager.Communications.FactionManager.RecacheFactions();
         }
     }
 }

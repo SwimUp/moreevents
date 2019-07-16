@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_FireAround.cs" />
+    <Compile Include="AI\JobDriver_SpeakWithPawn.cs" />
     <Compile Include="AI\JobGiver_FireAround.cs" />
     <Compile Include="AI\JobGiver_WanderInArea.cs" />
     <Compile Include="AI\LordJob_Arson.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Events\IncidentWorker_Quest_MissingPeople.cs" />
     <Compile Include="Events\IncidentWorker_Quest_ResourceHelp.cs" />
     <Compile Include="Events\IncidentWorker_RaidEnemyWithAnimals.cs" />
+    <Compile Include="Events\IncidentWorker_SummerSolstice.cs" />
     <Compile Include="Events\IncidentWorker_UnifiedRaid.cs" />
     <Compile Include="Events\SiegeCamp\CaravanVisitAction_SiegeCamp.cs" />
     <Compile Include="Events\SiegeCamp\IncidentWorker_SiegeCamp.cs" />
@@ -196,10 +198,12 @@
     <Compile Include="MentalBreaks\PositiveCharge\MentalStateWorker_PositiveCharge.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalState_PositiveCharge.cs" />
     <Compile Include="MoreEventsMod.cs" />
+    <Compile Include="Patch\AddHumanlikeOrdersPatch.cs" />
     <Compile Include="Patch\ExitCells_Patch.cs" />
     <Compile Include="Patch\IncidentWorker_QuestBanditCamp.cs" />
     <Compile Include="Patch\IncidentWorker_QuestItemStash.cs" />
     <Compile Include="Patch\IncidentWorker_QuestTradeRequest.cs" />
+    <Compile Include="Patch\PawnUIOverlayPatch.cs" />
     <Compile Include="Patch\Quest_BanditCamp.cs" />
     <Compile Include="Patch\Quest_TradeRequestComp.cs" />
     <Compile Include="Patch\ToxicFallout_Patch.cs" />

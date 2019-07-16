@@ -105,6 +105,19 @@ namespace QuestRim
         }
         private EmailBox playerBox;
 
+        public List<QuestPawn> QuestPawns
+        {
+            get
+            {
+                if(questPawns == null)
+                {
+                    questPawns = new List<QuestPawn>();
+                }
+
+                return questPawns;
+            }
+        }
+        private List<QuestPawn> questPawns;
 
         private List<CommunicationDialog> communicationDialogs;
         private List<Quest> quests;
@@ -116,6 +129,35 @@ namespace QuestRim
         public Communications()
         {
 
+        }
+
+        public void AddQuestPawn(Pawn pawn, Quest quest)
+        {
+            pawn.GetQuestPawn(out QuestPawn questPawn);
+            if (questPawn != null)
+            {
+                if (!questPawn.Quests.Contains(quest))
+                {
+                    questPawn.Quests.Add(quest);
+                }
+            }
+            else
+            {
+                questPawn = new QuestPawn();
+                questPawn.Pawn = pawn;
+                questPawn.Quests.Add(quest);
+
+                QuestPawns.Add(questPawn);
+            }
+        }
+
+        public void RemoveQuestPawn(Pawn pawn)
+        {
+            pawn.GetQuestPawn(out QuestPawn questPawn);
+            if (questPawn != null)
+            {
+                QuestPawns.Remove(questPawn);
+            }
         }
 
         public void OpenCommunications(Pawn speaker)
@@ -297,6 +339,7 @@ namespace QuestRim
             Scribe_Collections.Look(ref quests, "Quests", LookMode.Deep);
             Scribe_Collections.Look(ref components, "components", LookMode.Deep);
             Scribe_Collections.Look(ref emailBoxes, "EmailBoxes", LookMode.Deep);
+            Scribe_Collections.Look(ref questPawns, "QuestPawns", LookMode.Deep);
         }
     }
 }

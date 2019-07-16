@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld.Planet;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,35 +33,34 @@ namespace QuestRim
 
             if (communications != null)
             {
-                if (communications.Quests != null)
+                if(Find.TickManager.TicksGame % 500 == 0)
                 {
-                    List<Quest> quests = communications.Quests;
-                    for (int i = 0; i < quests.Count; i++)
+                    communications.QuestPawns.RemoveAll(q => q.Pawn == null || (WorldPawnsUtility.IsWorldPawn(q.Pawn) && !q.WorldQuester) || q.Pawn.Dead || q.Pawn.Destroyed);
+                }
+
+                List<Quest> quests = communications.Quests;
+                for (int i = 0; i < quests.Count; i++)
+                {
+                    try
                     {
-                        try
-                        {
-                            quests[i].Tick();
-                        }
-                        catch (Exception ex)
-                        {
-                            Log.Error($"Exception ticking {quests[i].id} --> {ex}");
-                        }
+                        quests[i].Tick();
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error($"Exception ticking {quests[i].id} --> {ex}");
                     }
                 }
 
-                if (communications.Components != null)
+                List<CommunicationComponent> components = communications.Components;
+                for (int i = 0; i < components.Count; i++)
                 {
-                    List<CommunicationComponent> components = communications.Components;
-                    for (int i = 0; i < components.Count; i++)
+                    try
                     {
-                        try
-                        {
-                            components[i].Tick();
-                        }
-                        catch (Exception ex)
-                        {
-                            Log.Error($"Exception ticking {components[i].id} --> {ex}");
-                        }
+                        components[i].Tick();
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error($"Exception ticking {components[i].id} --> {ex}");
                     }
                 }
             }

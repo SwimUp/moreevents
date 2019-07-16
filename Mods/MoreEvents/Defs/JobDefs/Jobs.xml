@@ -42,5 +42,11 @@
 		<driverClass>MoreEvents.Events.DoomsdayUltimatum.JobDriver_DisableSecurityDoomsday</driverClass>
 		<reportString>Disables security systems</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>SpeakWithQuester</defName>
+		<driverClass>MoreEvents.AI.JobDriver_SpeakWithPawn</driverClass>
+		<reportString>Discusses quests</reportString>
+	</JobDef>
 
 </Defs>

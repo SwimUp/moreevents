@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using DiaRim;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,10 @@ namespace QuestRim
         public virtual string ExpandingIconPath { get; }
 
         public virtual bool UseLeaveCommand => true;
+
+        public bool ShowInConsole = true;
+
+        public DialogDef Dialog;
 
         public virtual Texture2D ExpandingIcon
         {
@@ -70,6 +75,11 @@ namespace QuestRim
         protected void ResetIcon()
         {
             expandingIcon = null;
+        }
+
+        public virtual void QuesterSelect(Pawn quester)
+        {
+
         }
 
         public virtual bool CanLeaveFromSite(QuestSite site)
@@ -207,6 +217,8 @@ namespace QuestRim
             Scribe_Collections.Look(ref Options, "Options", LookMode.Deep);
             Scribe_Collections.Look(ref Rewards, "Rewards", LookMode.Deep);
             Scribe_References.Look(ref Site, "Site");
+            Scribe_Defs.Look(ref Dialog, "Dialog");
+            Scribe_Values.Look(ref ShowInConsole, "ShowInConsole");
         }
 
         public virtual string GetDescription()

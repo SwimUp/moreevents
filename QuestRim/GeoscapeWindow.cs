@@ -81,7 +81,7 @@ namespace QuestRim
 
             commDialogSliderLength = communicationsDialogs.Count * 78;
             commQuestsSliderLength = quests.Count * 108;
-            commFactionSliderLength = factions.Count * 60;
+            commFactionSliderLength = factions.Count * 65;
             commEmailsSliderLength = emailMessages.Count * 130;
 
             forcePause = true;
@@ -337,7 +337,8 @@ namespace QuestRim
             Widgets.BeginScrollView(rect1, ref commSliderQuests, scrollVertRectFact, false);
             foreach (var quest in quests)
             {
-                DrawQuestCard(rect1, ref y, quest);
+                if(quest.ShowInConsole)
+                    DrawQuestCard(rect1, ref y, quest);
             }
             Widgets.EndScrollView();
 
@@ -584,7 +585,7 @@ namespace QuestRim
 
                 if (DrawCustomButton(new Rect(rect2.x, rect2.y, 200, rect2.height), answer.Label, Color.white))
                 {
-
+                    answer.DoAction(message, QuestsManager.Communications.PlayerBox, message.Faction.leader);
                 }
                 rect2.x += 220;
             }
@@ -722,11 +723,12 @@ namespace QuestRim
             {
                 if (option.Enabled)
                 {
+                    startRect.height = Mathf.Max(30, Text.CalcHeight(option.Label, startRect.width));
                     if (DrawCustomButton(startRect, option.Label, option.TextColor))
                     {
                         option.DoAction(currentFaction, speaker, defendant);
                     }
-                    startRect.y += 30;
+                    startRect.y += startRect.height;
                 }
             }
 

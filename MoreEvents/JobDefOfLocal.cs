@@ -21,5 +21,7 @@ namespace MoreEvents
 
         public static JobDef DeEnergizeDoomsdayBomb;
         public static JobDef DisableSecuritySystems;
+
+        public static JobDef SpeakWithQuester;
     }
 }

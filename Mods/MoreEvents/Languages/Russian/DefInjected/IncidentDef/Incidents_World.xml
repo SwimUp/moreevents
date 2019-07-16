@@ -137,4 +137,8 @@
   <Psychogas.letterLabel>Психогаз</Psychogas.letterLabel>
   <Psychogas.letterText>Кто-то выпустил тонны изменяющих разум химикатов в воздух, поэтому все, кто находяться на улице будут терять рассудок.</Psychogas.letterText>  
   
+  <SummerSolstice.label>Летнее солнцестояние</SummerSolstice.label>
+  <SummerSolstice.letterLabel>Летнее солнцестояние</SummerSolstice.letterLabel>
+  <SummerSolstice.letterText>Самый длинный день. Ваши колонисты получили заряд позитива!</SummerSolstice.letterText>  
+  
 </LanguageData>
