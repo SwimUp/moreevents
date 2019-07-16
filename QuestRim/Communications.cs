@@ -160,6 +160,12 @@ namespace QuestRim
             }
         }
 
+        public void RemoveQuestPawn(QuestPawn questPawn)
+        {
+            if(QuestPawns.Contains(questPawn))
+                QuestPawns.Remove(questPawn);
+        }
+
         public void OpenCommunications(Pawn speaker)
         {
             Find.WindowStack.Add(new GeoscapeWindow(this, speaker));

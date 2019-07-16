@@ -18,6 +18,23 @@ namespace QuestRim
             Find.WindowStack.Add(new Dialog_QuestDialog(this, speaker));
         }
 
+        public void Destroy()
+        {
+            for(int i = 0; i < Quests.Count; i++)
+            {
+                Quest quest = Quests[i];
+                if(quest.Site != null)
+                {
+                    quest.Site.EndQuest(null, EndCondition.None);
+                }
+                else
+                {
+                    quest.EndQuest(null, EndCondition.None);
+                }
+            }
+
+            QuestsManager.Communications.RemoveQuestPawn(this);
+        }
         public void ExposeData()
         {
             Scribe_References.Look(ref Pawn, "Pawn");
