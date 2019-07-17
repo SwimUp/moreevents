@@ -29,17 +29,20 @@ namespace MoreEvents.Patch
                 }
                 else
                 {
-                    if (pawn != (Pawn)localTargetInfo.Thing)
+                    Pawn target = (Pawn)localTargetInfo.Thing;
+                    if (pawn != target)
                     {
-                        opts.Add(new FloatMenuOption("TryStartQuestDialog".Translate(), delegate
-                        {
-                            Job job = new Job(JobDefOfLocal.SpeakWithQuester, localTargetInfo.Thing);
-                            pawn.jobs.TryTakeOrderedJob(job);
-                        }));
-
-                        Pawn target = (Pawn)localTargetInfo.Thing;
                         if (target.GetQuestPawn(out QuestPawn questPawn))
                         {
+                            if (questPawn.Quests.Count > 0)
+                            {
+                                opts.Add(new FloatMenuOption("TryStartQuestDialog".Translate(), delegate
+                                {
+                                    Job job = new Job(JobDefOfLocal.SpeakWithQuester, localTargetInfo.Thing);
+                                    pawn.jobs.TryTakeOrderedJob(job);
+                                }));
+                            }
+
                             foreach (var dialog in questPawn.Dialogs)
                             {
                                 opts.Add(new FloatMenuOption(dialog.CardLabel, delegate
@@ -48,6 +51,7 @@ namespace MoreEvents.Patch
                                     job.count = questPawn.Dialogs.IndexOf(dialog);
                                     pawn.jobs.TryTakeOrderedJob(job);
                                 }));
+
                             }
                         }
                     }

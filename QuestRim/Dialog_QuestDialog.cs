@@ -18,7 +18,7 @@ namespace QuestRim
 
         private Quest currentQuest = null;
 
-        public override Vector2 InitialSize => new Vector2(900, 810);
+        public override Vector2 InitialSize => new Vector2(900, 710);
         private Vector2 commButtonsCommSlider = Vector2.zero;
         private Vector2 commInfoSlider = Vector2.zero;
         private Vector2 questRewardSlider = Vector2.zero;
@@ -58,7 +58,7 @@ namespace QuestRim
             scrollRect.x = 10;
             scrollRect.width = 880;
             scrollRect.y = 70;
-            scrollRect.height = 150;
+            scrollRect.height = 100;
             Rect scrollVertRectFact = new Rect(0, 0, inRect.width, QuestPawn.Quests.Count * 25);
             Widgets.BeginScrollView(scrollRect, ref scroll, scrollVertRectFact, true);
             int elemInRow = Mathf.Max(1, (QuestPawn.Quests.Count + 1) / 2);
@@ -83,23 +83,29 @@ namespace QuestRim
             Widgets.EndScrollView();
             Text.Anchor = TextAnchor.UpperLeft;
             GUI.color = CommCardBGColor;
-            Widgets.DrawLineHorizontal(0, 220, inRect.width);
+            Widgets.DrawLineHorizontal(0, 170, inRect.width);
             GUI.color = Color.white;
 
             if(currentQuest != null)
             {
+                if(!QuestPawn.Quests.Contains(currentQuest))
+                {
+                    currentQuest = null;
+                    return;
+                }
+
                 if (currentQuest.Options != null)
                 {
                     int sliderLength = currentQuest.Options.Count * 40;
                     Rect buttonRect2 = new Rect(0, 0, inRect.width, sliderLength);
                     Rect scrollVertRectFact2 = new Rect(0, 0, inRect.width, sliderLength);
-                    Widgets.BeginScrollView(new Rect(0, 595, inRect.width, 115), ref commButtonsCommSlider, scrollVertRectFact2, false);
+                    Widgets.BeginScrollView(new Rect(0, 495, inRect.width, 115), ref commButtonsCommSlider, scrollVertRectFact2, false);
                     DoButtonsQuest(buttonRect2);
                     Widgets.EndScrollView();
 
                     Text.Anchor = TextAnchor.MiddleCenter;
                     Text.Font = GameFont.Medium;
-                    if (DrawCustomButton(new Rect(0, 725, inRect.width, 40), "TakeQuestFromPawn".Translate(), Color.yellow))
+                    if (DrawCustomButton(new Rect(0, 625, inRect.width, 40), "TakeQuestFromPawn".Translate(), Color.yellow))
                     {
                         currentQuest.TakeQuestByQuester(QuestPawn);
                         currentQuest = null;
@@ -109,30 +115,30 @@ namespace QuestRim
                     Text.Anchor = TextAnchor.UpperLeft;
                 }
 
-                Widgets.LabelScrollable(new Rect(0, 235, inRect.width, 180), currentQuest.Description, ref commInfoSlider, false, false);
+                Widgets.LabelScrollable(new Rect(0, 185, inRect.width, 180), currentQuest.Description, ref commInfoSlider, false, false);
 
                 GUI.color = MenuSectionBGBorderColor;
-                Widgets.DrawLineHorizontal(0, 420, inRect.width);
+                Widgets.DrawLineHorizontal(0, 320, inRect.width);
                 float width = inRect.width / 2;
-                Widgets.DrawLineVertical(width, 420, 170);
-                Widgets.DrawLineHorizontal(60, 449, 290);
-                Widgets.DrawLineHorizontal(510, 449, 290);
-                Widgets.DrawLineHorizontal(0, 590, inRect.width);
+                Widgets.DrawLineVertical(width, 320, 170);
+                Widgets.DrawLineHorizontal(60, 349, 290);
+                Widgets.DrawLineHorizontal(510, 349, 290);
+                Widgets.DrawLineHorizontal(0, 490, inRect.width);
                 GUI.color = Color.white;
 
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(40, 430, 300, 20), "QuestRewards".Translate());
+                Widgets.Label(new Rect(40, 330, 300, 20), "QuestRewards".Translate());
                 Text.Anchor = TextAnchor.UpperLeft;
                 int questSliderLength = currentQuest.Rewards.Count * 30;
                 Rect rewardsRect = new Rect(0, 0, 323, questSliderLength);
                 Rect scrollRewVertRectFact = new Rect(0, 0, inRect.x, questSliderLength);
-                Widgets.BeginScrollView(new Rect(0, 455, 410, 125), ref questRewardSlider, scrollRewVertRectFact, false);
+                Widgets.BeginScrollView(new Rect(0, 355, 410, 125), ref questRewardSlider, scrollRewVertRectFact, false);
                 DrawQuestRewards(rewardsRect, currentQuest);
                 Widgets.EndScrollView();
 
-                Rect rectAdd = new Rect(460, 455, 410, 130);
+                Rect rectAdd = new Rect(460, 355, 410, 125);
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(460, 430, 410, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate() : currentQuest.AdditionalQuestContentString);
+                Widgets.Label(new Rect(460, 330, 410, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate() : currentQuest.AdditionalQuestContentString);
                 Text.Anchor = TextAnchor.UpperLeft;
                 currentQuest.DrawAdditionalOptions(rectAdd);
             }

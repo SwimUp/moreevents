@@ -34,19 +34,40 @@ namespace MoreEvents.Events
                 return false;
             }
 
-            return ArrivalMode(parms);
-            //if((int)parms.faction.def.techLevel < (int)TechLevel.Industrial)
-            //{
-            //    return ArrivalMode(parms);
-            //}
-            //else
-            //{
-            //    return ConsoleMode(parms);
-            //}
+            return ConsoleMode(parms);
+            if ((int)parms.faction.def.techLevel < (int)TechLevel.Industrial)
+            {
+                return ArrivalMode(parms);
+            }
+            else
+            {
+                return ConsoleMode(parms);
+            }
         }
 
         private bool ConsoleMode(IncidentParms parms)
         {
+            Map map = (Map)parms.target;
+
+            Pawn offerPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Villager);
+
+            Settlement settlement = Find.WorldObjects.Settlements.Where(s => s.Faction == parms.faction).RandomElement();
+            string text = "PawnInfo".Translate().Formatted(offerPawn.Named("PAWN")).AdjustedFor(offerPawn);
+            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, text);
+
+            EmailMessage message = QuestsManager.Communications.PlayerBox.FormMessageFrom(parms.faction,
+                dialogDesc, def.letterLabel);
+            message.Answers = new List<EmailMessageOption>();
+            EmailOption_PawnOfferYes emailOption_PawnOfferYes = new EmailOption_PawnOfferYes(offerPawn);
+            EmailOption_ChangeGoodWill emailOption_ChangeGoodWill = new EmailOption_ChangeGoodWill(-20);
+            EmailOption_DeclineDialog emailOption_DeclineDialog = new EmailOption_DeclineDialog(emailOption_ChangeGoodWill);
+
+            message.Answers.Add(emailOption_PawnOfferYes);
+            message.Answers.Add(emailOption_DeclineDialog);
+
+            QuestsManager.Communications.PlayerBox.SendMessage(message);
+
+
             return true;
         }
 
@@ -70,25 +91,22 @@ namespace MoreEvents.Events
             Pawn offerPawn = list.Where(p => p != pawn).RandomElement();
             CommOption_PawnOfferYes commOption_PawnOfferYes = new CommOption_PawnOfferYes();
             commOption_PawnOfferYes.OfferPawn = offerPawn;
+            CommOption_DeclineDialog commOption_DeclineDialog = new CommOption_DeclineDialog();
+            commOption_DeclineDialog.ExecuteOption = new CommOption_ChangeGoodWill(-35);
             dialog.Options = new List<CommOption>();
             dialog.Options.Add(commOption_PawnOfferYes);
+            dialog.Options.Add(commOption_DeclineDialog);
 
             Settlement settlement = Find.WorldObjects.Settlements.Where(s => s.Faction == parms.faction).RandomElement();
-            StringBuilder builder = new StringBuilder();
-
-            builder.AppendLine($"{offerPawn.story.Title}\n{offerPawn.Named("PAWN")}");
-            builder.AppendLine(builder.ToString().AdjustedFor(offerPawn));
-
-            Log.Message($"DEF ==> {def.letterText}");
-            Log.Message($"SETTLEMENT ==> {settlement.Name}");
-            Log.Message($"FACTION --> {parms.faction.Name}");
-            Log.Message($"OFFERPAWN --> {offerPawn.Name.ToStringFull}");
-            Log.Message($"BUILDER --> {builder.ToString()}");
-
-            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, offerPawn.Name.ToStringFull, builder.ToString());
+            string text = "PawnInfo".Translate().Formatted(offerPawn.Named("PAWN")).AdjustedFor(offerPawn);
+            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, text);
             dialog.Description = dialogDesc;
 
+            dialog.ShowInConsole = false;
+            QuestsManager.Communications.AddCommunication(dialog);
             QuestsManager.Communications.AddQuestPawn(pawn, dialog);
+
+            Find.LetterStack.ReceiveLetter(def.letterLabel, dialogDesc, def.letterDef);
 
             return true;
         }

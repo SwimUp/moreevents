@@ -73,7 +73,13 @@
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
+    <Compile Include="Communications\EmailOption_ChangeGoodWill.cs" />
+    <Compile Include="Communications\CommOption_ChangeGoodWill.cs" />
+    <Compile Include="Communications\EmailOption_DeclineDialog.cs" />
+    <Compile Include="Communications\CommOption_DeclineDialog.cs" />
+    <Compile Include="Communications\CommOption_DeclineQuest.cs" />
     <Compile Include="Communications\CommOption_GetHelp.cs" />
+    <Compile Include="Communications\EmailOption_PawnOfferYes.cs" />
     <Compile Include="Communications\CommOption_PawnOfferYes.cs" />
     <Compile Include="Communications\MessageAnwer_OpenDialog.cs" />
     <Compile Include="Communications\TimeComp.cs" />

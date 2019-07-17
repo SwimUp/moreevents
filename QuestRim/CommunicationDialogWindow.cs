@@ -12,12 +12,13 @@ namespace QuestRim
     {
         public Pawn Speaker;
         public Pawn Defendant;
+        public QuestPawn QuestPawn;
         public CommunicationDialog Dialog;
 
         public Vector2 scroll2 = Vector2.zero;
         public Vector2 scroll = Vector2.zero;
 
-        public override Vector2 InitialSize => new Vector2(700, 800);
+        public override Vector2 InitialSize => new Vector2(700, 700);
         protected override float Margin => 0f;
 
         private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
@@ -30,29 +31,38 @@ namespace QuestRim
             Speaker = speaker;
             Defendant = defendant;
             Dialog = dialog;
+
+            defendant.GetQuestPawn(out QuestPawn);
         }
         public override void DoWindowContents(Rect inRect)
         {
+            if(QuestPawn != null && !QuestPawn.Dialogs.Contains(Dialog))
+            {
+                Close(); 
+            }
+
             GUI.color = Color.white;
             Text.Font = GameFont.Medium;
             Rect titleRect = inRect;
             titleRect.y = 10;
-            titleRect.x = 270;
-            titleRect.width = 350;
+            titleRect.x = 10;
+            titleRect.width = 690;
+            Text.Anchor = TextAnchor.UpperCenter;
             Widgets.Label(titleRect, Dialog.CardLabel);
             Text.Font = GameFont.Small;
-            Rect mainRect = new Rect(10, 40, 680, 380);
+            Text.Anchor = TextAnchor.UpperLeft;
+            Rect mainRect = new Rect(10, 40, 680, 280);
             Widgets.LabelScrollable(mainRect, Dialog.Description, ref scroll);
 
             Text.Anchor = TextAnchor.MiddleCenter;
             int sliderLength = Dialog.Options.Count * 30;
             Rect optionsRect = new Rect(0, 0, 680, 25);
             Rect scrollRewVertRectFact = new Rect(0, 0, 700, sliderLength);
-            Widgets.BeginScrollView(new Rect(10, 440, 690, 180), ref scroll2, scrollRewVertRectFact, false);
+            Widgets.BeginScrollView(new Rect(10, 340, 690, 180), ref scroll2, scrollRewVertRectFact, false);
             for(int i = 0; i < Dialog.Options.Count; i++)
             {
                 CommOption option = Dialog.Options[i];
-                if(DrawCustomButton(optionsRect, $"{option.Label} - {i}", Color.white, option))
+                if(DrawCustomButton(optionsRect, $"{option.Label}", Color.white, option))
                 {
                     option.DoAction(Dialog, Speaker, Defendant);
                 }
@@ -62,12 +72,12 @@ namespace QuestRim
             Text.Anchor = TextAnchor.UpperLeft;
 
             GUI.color = CommCardBGColor;
-            Widgets.DrawLineHorizontal(0, 427, inRect.width);
+            Widgets.DrawLineHorizontal(0, 327, inRect.width);
             Widgets.DrawLineHorizontal(20, 37, 660);
-            Widgets.DrawLineHorizontal(0, 630, inRect.width);
-            Widgets.DrawLineVertical(340, 630, 170);
+            Widgets.DrawLineHorizontal(0, 530, inRect.width);
+            Widgets.DrawLineVertical(340, 530, 170);
             GUI.color = Color.white;
-            Rect pawnRect = new Rect(10, 640, 330, 150);
+            Rect pawnRect = new Rect(10, 540, 330, 150);
             DrawPawnCard(Speaker, pawnRect);
             pawnRect.x = 350;
             DrawPawnCard(Defendant, pawnRect);

@@ -93,5 +93,12 @@
 
 	<Pocahontas_CardLabel>Обсудить межфракционный обмен</Pocahontas_CardLabel>
 	<CommOption_PawnOfferYes_Label>Принять {0}</CommOption_PawnOfferYes_Label>
+	<CommOption_PawnOfferYesTitle>Пополнение</CommOption_PawnOfferYesTitle>
+	<CommOption_PawnOfferYes>Вы приняли предложение. Поселенец {0} пополнил ваши ряды. Отношение с фракцией {1} также улучшено.</CommOption_PawnOfferYes>
 
+	<PawnInfo>{PAWN_gender ? Он : Она}, {PAWN_kind}. {PAWN_possessive} зовут {PAWN_nameDef}, и {PAWN_pronoun} {PAWN_title}.</PawnInfo>
+  
+  <CommOption_DeclineQuest_Label>Отказаться</CommOption_DeclineQuest_Label>
+  <CommOption_DeclineDialog_Label>Отказаться</CommOption_DeclineDialog_Label>
+  
 </LanguageData>
