@@ -77,9 +77,16 @@ namespace QuestRim
             expandingIcon = null;
         }
 
-        public virtual void QuesterSelect(Pawn quester)
+        public virtual void TakeQuestByQuester(QuestPawn quester, bool notify = true)
         {
+            ShowInConsole = true;
 
+            if (notify)
+            {
+                Find.LetterStack.ReceiveLetter(QuestsManager.Communications.MakeQuestLetter(this, "TakeQuestFromPawnLetter".Translate(CardLabel), "TakeQuestFromPawnLetterDesc".Translate(CardLabel, Description)));
+            }
+
+            quester.Quests.Remove(this);
         }
 
         public virtual bool CanLeaveFromSite(QuestSite site)

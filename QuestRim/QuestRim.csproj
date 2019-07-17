@@ -55,6 +55,7 @@
     <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
     <Compile Include="Building_Geoscape.cs" />
     <Compile Include="CommOption_SubscribeScout.cs" />
+    <Compile Include="CommunicationDialogWindow.cs" />
     <Compile Include="Dialog_QuestDialog.cs" />
     <Compile Include="EmailMessageOption.cs" />
     <Compile Include="EmailBox.cs" />

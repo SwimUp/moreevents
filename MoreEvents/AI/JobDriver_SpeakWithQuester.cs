@@ -8,10 +8,9 @@ using Verse.AI;
 
 namespace MoreEvents.AI
 {
-    public class JobDriver_SpeakWithPawn : JobDriver
+    public class JobDriver_SpeakWithQuester : JobDriver
     {
         private Pawn Quester => (Pawn)TargetThingA;
-        private int DialogIndex => job.count;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -30,10 +29,7 @@ namespace MoreEvents.AI
                 {
                     if(Quester.GetQuestPawn(out QuestPawn questPawn))
                     {
-                        if(questPawn.Dialogs.Count > DialogIndex)
-                        {
-                            questPawn.Dialogs[DialogIndex].OpenDialog(actor, Quester);
-                        }
+                        questPawn.ShowQuestDialog(actor);
                     }
                 }
             };

@@ -151,6 +151,26 @@ namespace QuestRim
             }
         }
 
+        public void AddQuestPawn(Pawn pawn, CommunicationDialog dialog)
+        {
+            pawn.GetQuestPawn(out QuestPawn questPawn);
+            if (questPawn != null)
+            {
+                if (!questPawn.Dialogs.Contains(dialog))
+                {
+                    questPawn.Dialogs.Add(dialog);
+                }
+            }
+            else
+            {
+                questPawn = new QuestPawn();
+                questPawn.Pawn = pawn;
+                questPawn.Dialogs.Add(dialog);
+
+                QuestPawns.Add(questPawn);
+            }
+        }
+
         public void RemoveQuestPawn(Pawn pawn)
         {
             pawn.GetQuestPawn(out QuestPawn questPawn);
@@ -297,10 +317,12 @@ namespace QuestRim
                 description = quest.Description;
 
             Letter letter;
-            if(lookTarget == null)
-                letter = LetterMaker.MakeLetter(label, description, letterDef);
-            else
+            if(lookTarget == null && quest.Target != null)
+                letter = LetterMaker.MakeLetter(label, description, letterDef, quest.Target);
+            else if (lookTarget != null)
                 letter = LetterMaker.MakeLetter(label, description, letterDef, lookTarget);
+            else
+                letter = LetterMaker.MakeLetter(label, description, letterDef);
 
             return letter;
         }

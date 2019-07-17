@@ -36,6 +36,20 @@ namespace MoreEvents.Patch
                             Job job = new Job(JobDefOfLocal.SpeakWithQuester, localTargetInfo.Thing);
                             pawn.jobs.TryTakeOrderedJob(job);
                         }));
+
+                        Pawn target = (Pawn)localTargetInfo.Thing;
+                        if (target.GetQuestPawn(out QuestPawn questPawn))
+                        {
+                            foreach (var dialog in questPawn.Dialogs)
+                            {
+                                opts.Add(new FloatMenuOption(dialog.CardLabel, delegate
+                                {
+                                    Job job = new Job(JobDefOfLocal.SpeakWithPawn, localTargetInfo.Thing);
+                                    job.count = questPawn.Dialogs.IndexOf(dialog);
+                                    pawn.jobs.TryTakeOrderedJob(job);
+                                }));
+                            }
+                        }
                     }
                 }
             }

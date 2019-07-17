@@ -23,5 +23,6 @@ namespace MoreEvents
         public static JobDef DisableSecuritySystems;
 
         public static JobDef SpeakWithQuester;
+        public static JobDef SpeakWithPawn;
     }
 }

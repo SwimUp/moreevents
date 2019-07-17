@@ -9,5 +9,6 @@
   <DeEnergizeDoomsdayBomb.reportString>Деактивирует энергетическое поле оружия</DeEnergizeDoomsdayBomb.reportString>
   <DisableSecuritySystems.reportString>Отключает системы защиты</DisableSecuritySystems.reportString>
   <SpeakWithQuester.reportString>Обсуждает задания</SpeakWithQuester.reportString>
+  <SpeakWithPawn.reportString>общается</SpeakWithPawn.reportString>
   
 </LanguageData>

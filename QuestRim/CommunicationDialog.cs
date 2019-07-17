@@ -15,6 +15,8 @@ namespace QuestRim
         public string CardLabel;
         public string Description;
 
+        public bool ShowInConsole = true;
+
         public IncidentDef RelatedIncident;
         public Faction Faction;
         public List<CommOption> Options;
@@ -29,6 +31,13 @@ namespace QuestRim
             Scribe_Defs.Look(ref RelatedIncident, "RelatedIncident");
             Scribe_References.Look(ref Faction, "Faction");
             Scribe_Collections.Look(ref Options, "Options", LookMode.Deep);
+
+            Scribe_Values.Look(ref ShowInConsole, "ShowInConsole");
+        }
+
+        public void OpenDialog(Pawn speaker, Pawn defendant)
+        {
+            Find.WindowStack.Add(new CommunicationDialogWindow(this, speaker, defendant));
         }
 
         public string GetUniqueLoadID()

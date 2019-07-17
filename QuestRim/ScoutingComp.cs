@@ -122,6 +122,7 @@ namespace QuestRim
                 {
                     StorytellerCompProperties_OnOffCycle prop = (StorytellerCompProperties_OnOffCycle)onOffCycle.props;
                     GetFutureIncidentsLight(scoutDays, Find.AnyPlayerHomeMap, out List<Pair<IncidentDef, IncidentParms>> allIncidents, out List<float> daysToEvents);
+                    bool foundOne = false;
                     if (allIncidents.Count > 0)
                     {
                         builder.Append("ScoutingComp_InfoTitle".Translate());
@@ -131,6 +132,8 @@ namespace QuestRim
 
                             if (!allowedCategories.Contains(pair.First.category))
                                 continue;
+
+                            foundOne = true;
 
                             builder.Append($"- {pair.First.LabelCap} ");
                             if (pair.Second.points > 0f && Rand.Chance(0.10f * (int)Faction.def.techLevel))
@@ -151,6 +154,9 @@ namespace QuestRim
                     {
                         builder.Append("ScoutingComp_NoThreatsInfoTitle".Translate());
                     }
+
+                    if(!foundOne)
+                        builder.Append("ScoutingComp_NoThreatsInfoTitle".Translate());
 
                     EmailMessage emailMessage = QuestsManager.Communications.PlayerBox.FormMessageFrom(Faction, builder.ToString(), "ScoutingComp_Subject".Translate());
                     QuestsManager.Communications.PlayerBox.SendMessage(emailMessage);

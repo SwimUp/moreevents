@@ -10,6 +10,7 @@ namespace QuestRim
     {
         public Pawn Pawn;
         public List<Quest> Quests = new List<Quest>();
+        public List<CommunicationDialog> Dialogs = new List<CommunicationDialog>();
 
         public bool WorldQuester = false;
 
@@ -39,6 +40,7 @@ namespace QuestRim
         {
             Scribe_References.Look(ref Pawn, "Pawn");
             Scribe_Collections.Look(ref Quests, "Quests", LookMode.Reference);
+            Scribe_Collections.Look(ref Dialogs, "Dialogs", LookMode.Reference);
             Scribe_Values.Look(ref WorldQuester, "WorldQuester");
         }
     }

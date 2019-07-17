@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 36;
+        private static int totalSettings = 37;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -307,6 +307,12 @@ namespace MoreEvents
             },
             {
             "SummerSolstice", new EventSettings("SummerSolstice")
+                {
+                    Active = true
+            }
+            },
+            {
+            "Pocahontas", new EventSettings("Pocahontas")
                 {
                     Active = true
             }
@@ -613,6 +619,12 @@ namespace MoreEvents
             },
             {
             "SummerSolstice", new EventSettings("SummerSolstice")
+                {
+                    Active = true
+            }
+            },
+            {
+            "Pocahontas", new EventSettings("Pocahontas")
                 {
                     Active = true
             }

@@ -18,7 +18,7 @@ namespace QuestRim
 
         private Quest currentQuest = null;
 
-        public override Vector2 InitialSize => new Vector2(900, 800);
+        public override Vector2 InitialSize => new Vector2(900, 810);
         private Vector2 commButtonsCommSlider = Vector2.zero;
         private Vector2 commInfoSlider = Vector2.zero;
         private Vector2 questRewardSlider = Vector2.zero;
@@ -34,6 +34,7 @@ namespace QuestRim
         }
         public override void DoWindowContents(Rect inRect)
         {
+            Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Medium;
             Rect titleRect = new Rect(0, 0, inRect.width, 50);
             Widgets.Label(titleRect, "QuestPawn_Title".Translate());
@@ -92,9 +93,20 @@ namespace QuestRim
                     int sliderLength = currentQuest.Options.Count * 40;
                     Rect buttonRect2 = new Rect(0, 0, inRect.width, sliderLength);
                     Rect scrollVertRectFact2 = new Rect(0, 0, inRect.width, sliderLength);
-                    Widgets.BeginScrollView(new Rect(0, 595, inRect.width, 160), ref commButtonsCommSlider, scrollVertRectFact2, false);
+                    Widgets.BeginScrollView(new Rect(0, 595, inRect.width, 115), ref commButtonsCommSlider, scrollVertRectFact2, false);
                     DoButtonsQuest(buttonRect2);
                     Widgets.EndScrollView();
+
+                    Text.Anchor = TextAnchor.MiddleCenter;
+                    Text.Font = GameFont.Medium;
+                    if (DrawCustomButton(new Rect(0, 725, inRect.width, 40), "TakeQuestFromPawn".Translate(), Color.yellow))
+                    {
+                        currentQuest.TakeQuestByQuester(QuestPawn);
+                        currentQuest = null;
+                        return;
+                    }
+                    Text.Font = GameFont.Small;
+                    Text.Anchor = TextAnchor.UpperLeft;
                 }
 
                 Widgets.LabelScrollable(new Rect(0, 235, inRect.width, 180), currentQuest.Description, ref commInfoSlider, false, false);

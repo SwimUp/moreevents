@@ -737,7 +737,7 @@ You can contact them via geocape.
 	</IncidentDef>
 	<!-- s=======================s -->
 	
-	<!-- Событие: Летнее солнцестояние -->
+	<!-- Событие: Покахонтас -->
 	<IncidentDef>
 		<defName>Pocahontas</defName>
 		<label>Pocahontas</label>
@@ -745,7 +745,7 @@ You can contact them via geocape.
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>MoreEvents.Events.IncidentWorker_SummerSolstice</workerClass>
+		<workerClass>MoreEvents.Events.IncidentWorker_Pocahontas</workerClass>
 		<letterLabel>Pocahontas</letterLabel>
 		<letterText>The settlement {0} offers you {0} - {1} to reside in your settlement as a sign of strong friendship between you.</letterText>
 		<letterDef>PositiveEvent</letterDef>

@@ -88,5 +88,9 @@
 	<QuestPawn_Title>Greetings! What would you like to discuss?</QuestPawn_Title>
 	<QuestPawn_Line1>{0} from the faction {1} ({2}: {3})</QuestPawn_Line1>
 	<QuestPawn_Line1_Player>{0}</QuestPawn_Line1_Player>
+	<TakeQuestFromPawn>Take quest</TakeQuestFromPawn>
+	<TakeQuestFromPawnLetter>Quest "{0}" taken.</TakeQuestFromPawnLetter>
+	<TakeQuestFromPawnLetterDesc>You have taken the quest "{0}". Additional information on the task can be seen in the Geoscape.\n----------------\n{1}</TakeQuestFromPawnLetterDesc>
+
 
 </LanguageData>

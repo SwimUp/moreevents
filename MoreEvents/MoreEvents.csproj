@@ -64,6 +64,7 @@
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_FireAround.cs" />
     <Compile Include="AI\JobDriver_SpeakWithPawn.cs" />
+    <Compile Include="AI\JobDriver_SpeakWithQuester.cs" />
     <Compile Include="AI\JobGiver_FireAround.cs" />
     <Compile Include="AI\JobGiver_WanderInArea.cs" />
     <Compile Include="AI\LordJob_Arson.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
     <Compile Include="Communications\CommOption_GetHelp.cs" />
+    <Compile Include="Communications\CommOption_PawnOfferYes.cs" />
     <Compile Include="Communications\MessageAnwer_OpenDialog.cs" />
     <Compile Include="Communications\TimeComp.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
@@ -189,6 +191,7 @@
     <Compile Include="Hediffs\HediffDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
     <Compile Include="IncidentWorker_MakeGameCondition.cs" />
+    <Compile Include="Events\IncidentWorker_Pocahontas.cs" />
     <Compile Include="InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapDefOfLocal.cs" />

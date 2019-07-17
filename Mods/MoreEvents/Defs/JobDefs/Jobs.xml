@@ -45,8 +45,14 @@
 	
 	<JobDef>
 		<defName>SpeakWithQuester</defName>
-		<driverClass>MoreEvents.AI.JobDriver_SpeakWithPawn</driverClass>
+		<driverClass>MoreEvents.AI.JobDriver_SpeakWithQuester</driverClass>
 		<reportString>Discusses quests</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>SpeakWithPawn</defName>
+		<driverClass>MoreEvents.AI.JobDriver_SpeakWithPawn</driverClass>
+		<reportString>Communicates</reportString>
 	</JobDef>
 
 </Defs>

@@ -140,5 +140,13 @@
   <SummerSolstice.label>Летнее солнцестояние</SummerSolstice.label>
   <SummerSolstice.letterLabel>Летнее солнцестояние</SummerSolstice.letterLabel>
   <SummerSolstice.letterText>Самый длинный день. Ваши колонисты получили заряд позитива!</SummerSolstice.letterText>  
+    
+  <Pocahontas.label>Покахонтас</Pocahontas.label>
+  <Pocahontas.letterLabel>Покахонтас</Pocahontas.letterLabel>
+  <Pocahontas.letterText>Поселение {0} от фракции {1} предлагает вам {2} для совместного проживания. \nЕсли вы примете их предложение, то {3} будет проживать с вами, а так-же вы улучшите отношения между вами.
+Если вы откажетесь, то отношения между вами ухудшаться.
+
+{4} описан как:
+{5}</Pocahontas.letterText>  
   
 </LanguageData>

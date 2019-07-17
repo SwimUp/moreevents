@@ -144,11 +144,12 @@ namespace QuestRim
             Widgets.BeginScrollView(rect1, ref commSlider, scrollVertRectFact, false);
             foreach(var comDialog in communicationsDialogs)
             {
-                DrawCommCard(rect1, ref y, comDialog);
+                if(comDialog.ShowInConsole)
+                    DrawCommCard(rect1, ref y, comDialog);
             }
             Widgets.EndScrollView();
 
-            DrawPawnCard();
+            DrawPawnCard(speaker);
 
             Text.Font = GameFont.Small;
             Rect rect3 = new Rect(340, rect2.yMin + 20, 610, rect2.yMax);
@@ -208,18 +209,18 @@ namespace QuestRim
             return Widgets.ButtonInvisible(rect);
         }
 
-        private void DrawPawnCard()
+        public void DrawPawnCard(Pawn pawn)
         {
-            GUI.DrawTexture(new Rect(0, 530, 100, 140), PortraitsCache.Get(speaker, new Vector2(100, 140)));
-            Widgets.Label(new Rect(100, 550, 210, 30), speaker.Name.ToStringFull);
+            GUI.DrawTexture(new Rect(0, 530, 100, 140), PortraitsCache.Get(pawn, new Vector2(100, 140)));
+            Widgets.Label(new Rect(100, 550, 210, 30), pawn.Name.ToStringFull);
             Widgets.DrawLineHorizontal(100, 570, 210);
 
             Text.Font = GameFont.Tiny;
-            DrawSkill(speaker.skills.GetSkill(SkillDefOf.Social), new Rect(100, 580, 210, 24));
-            DrawSkill(speaker.skills.GetSkill(SkillDefOf.Intellectual), new Rect(100, 610, 210, 24));
+            DrawSkill(pawn.skills.GetSkill(SkillDefOf.Social), new Rect(100, 580, 210, 24));
+            DrawSkill(pawn.skills.GetSkill(SkillDefOf.Intellectual), new Rect(100, 610, 210, 24));
         }
 
-        private void DrawSkill(SkillRecord skill, Rect holdingRect)
+        public static void DrawSkill(SkillRecord skill, Rect holdingRect)
         {
             if (Mouse.IsOver(holdingRect))
             {
@@ -257,7 +258,7 @@ namespace QuestRim
             TooltipHandler.TipRegion(holdingRect, new TipSignal(text, skill.def.GetHashCode() * 397945));
         }
 
-        private string GetSkillDescription(SkillRecord sk)
+        public static string GetSkillDescription(SkillRecord sk)
         {
             StringBuilder stringBuilder = new StringBuilder();
             if (sk.TotallyDisabled)
@@ -342,7 +343,7 @@ namespace QuestRim
             }
             Widgets.EndScrollView();
 
-            DrawPawnCard();
+            DrawPawnCard(speaker);
 
             Text.Font = GameFont.Small;
             Rect rect3 = new Rect(328, rect2.yMin + 20, 610, rect2.yMax);

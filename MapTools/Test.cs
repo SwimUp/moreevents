@@ -27,11 +27,45 @@ namespace DiaRim
 
         public class TestOption : QuestOption
         {
-            public override string Label => "TEST" + Rand.Range(1, 25);
+            public override string Label => "TEST" + Rand.Range(3, 225);
 
             public override void DoAction(Quest quest, Pawn speaker, Pawn defendant)
             {
                 Log.Message($"TRIGGER --> {quest.CardLabel}: {speaker.Name} : {defendant?.Name}");
+            }
+        }
+
+        public class TestOption2 : CommOption
+        {
+            public static int I;
+
+            public override string Label => "TEST" + I;
+
+            public override string Description => "dddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "ddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "dddddddddddddddddddddddddddddddddddddddddddddddddddddddd" +
+                "12341231231331313123";
+
+            public override void DoAction(CommunicationDialog dialog, Pawn speaker, Pawn defendant)
+            {
+                Log.Message($"TRIGGER --> {dialog.CardLabel}: {speaker.Name} : {defendant?.Name}");
             }
         }
 
@@ -146,6 +180,7 @@ namespace DiaRim
                                     quest.Options.Add(new TestOption());
                                     quest.Options.Add(new TestOption());
                                     quest.Faction = Find.FactionManager.RandomNonHostileFaction();
+                                    quest.ShowInConsole = false;
                                     QuestsManager.Communications.AddQuestPawn(pawn, quest);
                                     QuestsManager.Communications.AddQuest(quest);
                                 }));
@@ -159,8 +194,70 @@ namespace DiaRim
                                     quest.Options.Add(new TestOption());
                                     quest.Options.Add(new TestOption());
                                     quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(1000, 6000), new IntRange(4, 25), null, null);
+                                    quest.ShowInConsole = false;
                                     QuestsManager.Communications.AddQuestPawn(pawn, quest);
                                     QuestsManager.Communications.AddQuest(quest);
+                                }));
+
+                                Find.WindowStack.Add(new FloatMenu(list2));
+                            }));
+                        }
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+
+                if (listing.ButtonText("Add pawn dialog"))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach (var pawn in Find.CurrentMap.mapPawns.AllPawnsSpawned)
+                    {
+                        if (pawn.Name != null)
+                        {
+                            list.Add(new FloatMenuOption(pawn.Name.ToStringFull, delegate
+                            {
+                                List<FloatMenuOption> list2 = new List<FloatMenuOption>();
+                                list2.Add(new FloatMenuOption("Диалог для вида 1", delegate
+                                {
+                                    CommunicationDialog dialog = new CommunicationDialog();
+                                    dialog.CardLabel = "Диалог для вида 1";
+                                    dialog.Description = "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "12314rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" +
+                                    "rt343y6yh35y55555555555555555555555555555";
+                                    dialog.Options = new List<CommOption>();
+                                    for (int i = 0; i < 8; i++)
+                                    {
+                                        dialog.Options.Add(new TestOption2());
+                                        TestOption2.I++;
+                                    }
+                                    dialog.id = QuestsManager.Communications.UniqueIdManager.GetNextDialogID();
+                                    QuestsManager.Communications.AddCommunication(dialog);
+                                    QuestsManager.Communications.AddQuestPawn(pawn, dialog);
+                                }));
+                                list2.Add(new FloatMenuOption("Диалог для вида 2", delegate
+                                {
+                                    CommunicationDialog dialog = new CommunicationDialog();
+                                    dialog.Options = new List<CommOption>();
+                                    dialog.CardLabel = "Диалог для вида 2";
+                                    for (int i = 0; i < 4; i++)
+                                    {
+                                        dialog.Options.Add(new TestOption2());
+                                        TestOption2.I++;
+                                    }
+                                    dialog.id = QuestsManager.Communications.UniqueIdManager.GetNextDialogID();
+                                    QuestsManager.Communications.AddCommunication(dialog);
+                                    QuestsManager.Communications.AddQuestPawn(pawn, dialog);
                                 }));
 
                                 Find.WindowStack.Add(new FloatMenu(list2));

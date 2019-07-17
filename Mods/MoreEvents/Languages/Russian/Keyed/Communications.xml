@@ -87,5 +87,11 @@
 	<QuestPawn_Title>Приветствую! Что бы вы хотели обсудить?</QuestPawn_Title>
 	<QuestPawn_Line1>{0} из фракции {1} ({2}: {3})</QuestPawn_Line1>
 	<QuestPawn_Line1_Player>{0}</QuestPawn_Line1_Player>
+	<TakeQuestFromPawn>Взять задание</TakeQuestFromPawn>
+	<TakeQuestFromPawnLetter>Задание "{0}" взято.</TakeQuestFromPawnLetter>
+	<TakeQuestFromPawnLetterDesc>Вы взяли задание "{0}". Дополнительную информацию по заданию можно увидеть в планетарной консоли связи.\n----------------\n{1}</TakeQuestFromPawnLetterDesc>
+
+	<Pocahontas_CardLabel>Обсудить межфракционный обмен</Pocahontas_CardLabel>
+	<CommOption_PawnOfferYes_Label>Принять {0}</CommOption_PawnOfferYes_Label>
 
 </LanguageData>
