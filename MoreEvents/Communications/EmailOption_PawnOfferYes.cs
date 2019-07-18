@@ -1,5 +1,6 @@
 ﻿using QuestRim;
 using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,11 @@ namespace MoreEvents.Communications
         public EmailOption_PawnOfferYes(Pawn pawn)
         {
             OfferPawn = pawn;
+
+            if(!OfferPawn.IsWorldPawn())
+            {
+                Find.WorldPawns.PassToWorld(OfferPawn);
+            }
         }
 
         public override void DoAction(EmailMessage emailMessage, EmailBox box, Pawn pawn)
@@ -45,7 +51,7 @@ namespace MoreEvents.Communications
 
         public override void ExposeData()
         {
-            Scribe_Deep.Look(ref OfferPawn, "OfferPawn");
+            Scribe_References.Look(ref OfferPawn, "OfferPawn");
         }
     }
 }

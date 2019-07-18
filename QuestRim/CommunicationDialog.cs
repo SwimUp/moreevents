@@ -35,6 +35,11 @@ namespace QuestRim
             Scribe_Values.Look(ref ShowInConsole, "ShowInConsole");
         }
 
+        public virtual void Destroy()
+        {
+            QuestsManager.Communications.RemoveCommunication(this);
+        }
+
         public void OpenDialog(Pawn speaker, Pawn defendant)
         {
             Find.WindowStack.Add(new CommunicationDialogWindow(this, speaker, defendant));

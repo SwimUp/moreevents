@@ -73,6 +73,7 @@
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
+    <Compile Include="Communications\CommunicationDialog_Pocahontas.cs" />
     <Compile Include="Communications\EmailOption_ChangeGoodWill.cs" />
     <Compile Include="Communications\CommOption_ChangeGoodWill.cs" />
     <Compile Include="Communications\EmailOption_DeclineDialog.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Events\IncidentWorker_Quest_MissingPeople.cs" />
     <Compile Include="Events\IncidentWorker_Quest_ResourceHelp.cs" />
     <Compile Include="Events\IncidentWorker_RaidEnemyWithAnimals.cs" />
+    <Compile Include="Events\IncidentWorker_MountainAir.cs" />
     <Compile Include="Events\IncidentWorker_SummerSolstice.cs" />
     <Compile Include="Events\IncidentWorker_UnifiedRaid.cs" />
     <Compile Include="Events\SiegeCamp\CaravanVisitAction_SiegeCamp.cs" />
@@ -196,9 +198,11 @@
     <Compile Include="Hediffs\HediffComp_FibroTick.cs" />
     <Compile Include="Hediffs\HediffDefOfLocal.cs" />
     <Compile Include="Events\ShipCrash\IncidentWorker_ShipCrash.cs" />
-    <Compile Include="IncidentWorker_MakeGameCondition.cs" />
+    <Compile Include="Events\IncidentWorker_MakeGameCondition.cs" />
     <Compile Include="Events\IncidentWorker_Pocahontas.cs" />
-    <Compile Include="InspirationDefOfLocal.cs" />
+    <Compile Include="Events\IncidentWorker_SeaAir.cs" />
+    <Compile Include="IncidentWorker_Ambush_TwoEnemyFaction.cs" />
+    <Compile Include="Events\InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapDefOfLocal.cs" />
     <Compile Include="MapGeneratorDefOfLocal.cs" />

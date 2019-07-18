@@ -92,5 +92,19 @@
 	<TakeQuestFromPawnLetter>Quest "{0}" taken.</TakeQuestFromPawnLetter>
 	<TakeQuestFromPawnLetterDesc>You have taken the quest "{0}". Additional information on the task can be seen in the Geoscape.\n----------------\n{1}</TakeQuestFromPawnLetterDesc>
 
+	<Pocahontas_CardLabel>Discuss interfractional exchange</Pocahontas_CardLabel>
+	<CommOption_PawnOfferYes_Label>Accept {0}</CommOption_PawnOfferYes_Label>
+	<CommOption_PawnOfferYesTitle>Replenishment</CommOption_PawnOfferYesTitle>
+	<CommOption_PawnOfferYes>You have accepted the offer. The settler {0} added to your list of colonists. Relations with the {1} faction are also improved.</CommOption_PawnOfferYes>
+
+	<PawnInfo>{PAWN_gender ? He : She}, {PAWN_kind}. {PAWN_possessive} name is {PAWN_nameDef}, and {PAWN_pronoun} {PAWN_title}.</PawnInfo>
+
+	<CommOption_DeclineQuest_Label>Decline</CommOption_DeclineQuest_Label>
+	<CommOption_DeclineDialog_Label>Decline</CommOption_DeclineDialog_Label>
+
+	<ActualOnlyThisMap>The offer is relevant while the guest is with you.</ActualOnlyThisMap>
+	<TimerInfo>The offer is valid {0} days.</TimerInfo>
+	<CommunicationDialog_PocahontasTitle>Offer declined</CommunicationDialog_PocahontasTitle>
+	<CommunicationDialog_Pocahontas>ВYou did not accept a co-residence proposal, which is why your relationship with the {0} faction has been reduced.</CommunicationDialog_Pocahontas>
 
 </LanguageData>

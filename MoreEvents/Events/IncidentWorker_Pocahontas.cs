@@ -34,7 +34,6 @@ namespace MoreEvents.Events
                 return false;
             }
 
-            return ConsoleMode(parms);
             if ((int)parms.faction.def.techLevel < (int)TechLevel.Industrial)
             {
                 return ArrivalMode(parms);
@@ -51,14 +50,26 @@ namespace MoreEvents.Events
 
             Pawn offerPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Villager);
 
+            int timeOut = 2 * 60000;
+
             Settlement settlement = Find.WorldObjects.Settlements.Where(s => s.Faction == parms.faction).RandomElement();
             string text = "PawnInfo".Translate().Formatted(offerPawn.Named("PAWN")).AdjustedFor(offerPawn);
-            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, text);
+            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, text, "TimerInfo".Translate(timeOut.TicksToDays().ToString("f2")));
 
             EmailMessage message = QuestsManager.Communications.PlayerBox.FormMessageFrom(parms.faction,
                 dialogDesc, def.letterLabel);
             message.Answers = new List<EmailMessageOption>();
             EmailOption_PawnOfferYes emailOption_PawnOfferYes = new EmailOption_PawnOfferYes(offerPawn);
+
+            Letter letter = LetterMaker.MakeLetter("CommunicationDialog_PocahontasTitle".Translate(), "CommunicationDialog_Pocahontas".Translate(parms.faction.Name), LetterDefOf.NegativeEvent);
+
+            TimeComp timeComp = new TimeComp(message.Subject, Faction.OfPlayer, timeOut);
+            timeComp.id = QuestsManager.Communications.UniqueIdManager.GetNextComponentID();
+            timeComp.Action = new CommOption_ChangeGoodWill(-20);
+            timeComp.EndLetter = letter;
+            timeComp.Speaker = map.mapPawns.FreeColonists.RandomElement();
+            timeComp.Defendant = parms.faction.leader;
+
             EmailOption_ChangeGoodWill emailOption_ChangeGoodWill = new EmailOption_ChangeGoodWill(-20);
             EmailOption_DeclineDialog emailOption_DeclineDialog = new EmailOption_DeclineDialog(emailOption_ChangeGoodWill);
 
@@ -67,6 +78,7 @@ namespace MoreEvents.Events
 
             QuestsManager.Communications.PlayerBox.SendMessage(message);
 
+            QuestsManager.Communications.RegisterComponent(timeComp);
 
             return true;
         }
@@ -85,9 +97,10 @@ namespace MoreEvents.Events
             LordMaker.MakeNewLord(parms.faction, lordJob, map, list);
             Pawn pawn = list.RandomElement();
 
-            CommunicationDialog dialog = new CommunicationDialog();
+            CommunicationDialog_Pocahontas dialog = new CommunicationDialog_Pocahontas();
             dialog.id = QuestsManager.Communications.UniqueIdManager.GetNextDialogID();
             dialog.CardLabel = "Pocahontas_CardLabel".Translate();
+            dialog.Faction = parms.faction;
             Pawn offerPawn = list.Where(p => p != pawn).RandomElement();
             CommOption_PawnOfferYes commOption_PawnOfferYes = new CommOption_PawnOfferYes();
             commOption_PawnOfferYes.OfferPawn = offerPawn;
@@ -99,7 +112,7 @@ namespace MoreEvents.Events
 
             Settlement settlement = Find.WorldObjects.Settlements.Where(s => s.Faction == parms.faction).RandomElement();
             string text = "PawnInfo".Translate().Formatted(offerPawn.Named("PAWN")).AdjustedFor(offerPawn);
-            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, text);
+            string dialogDesc = string.Format(def.letterText, settlement.Name, parms.faction.Name, offerPawn.Name.ToStringFull, text, "ActualOnlyThisMap".Translate());
             dialog.Description = dialogDesc;
 
             dialog.ShowInConsole = false;

@@ -34,6 +34,15 @@ namespace QuestRim
                 }
             }
 
+            for(int i = 0; i < Dialogs.Count; i++)
+            {
+                CommunicationDialog dialog = Dialogs[i];
+                if(!dialog.ShowInConsole)
+                {
+                    dialog.Destroy();
+                }
+            }
+
             QuestsManager.Communications.RemoveQuestPawn(this);
         }
         public void ExposeData()

@@ -711,7 +711,7 @@ namespace QuestRim
             Text.Anchor = TextAnchor.MiddleCenter;
 
             Rect startRect = rect;
-            startRect.height = 25;
+            startRect.height = Mathf.Max(25, Text.CalcHeight("CallOnRadio".Translate(currentFaction.Faction.Name), startRect.width));
             if(DrawCustomButton(startRect, "CallOnRadio".Translate(currentFaction.Faction.Name), Color.white))
             {
                 Dialog_Negotiation dialog_Negotiation = new Dialog_Negotiation(speaker, currentFaction.Faction, FactionDialogMaker.FactionDialogFor(speaker, currentFaction.Faction), radioMode: true);
@@ -719,17 +719,17 @@ namespace QuestRim
                 Find.WindowStack.Add(dialog_Negotiation);
             }
 
-            startRect.y += 30;
+            startRect.y += startRect.height + 5;
+            startRect.height = 25;
             foreach (var option in currentFaction.Options.OrderBy(o => o.SortOrder))
             {
                 if (option.Enabled)
                 {
-                    startRect.height = Mathf.Max(30, Text.CalcHeight(option.Label, startRect.width));
                     if (DrawCustomButton(startRect, option.Label, option.TextColor))
                     {
                         option.DoAction(currentFaction, speaker, defendant);
                     }
-                    startRect.y += startRect.height;
+                    startRect.y += 30;
                 }
             }
 

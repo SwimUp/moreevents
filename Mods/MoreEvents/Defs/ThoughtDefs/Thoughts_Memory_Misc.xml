@@ -32,8 +32,8 @@
 	<!-- Состояние: Психическое воздействие -->
 	<ThoughtDef>
 		<defName>MentalImpact</defName>
-		<durationDays>0.3</durationDays>
-        <stackLimit>15</stackLimit>
+		<durationDays>1</durationDays>
+        <stackLimit>35</stackLimit>
 		<stages>
 			<li>
 				<label>Mental impact</label>
@@ -44,5 +44,32 @@
 	</ThoughtDef>
 	<!-- s=======================s -->
 	
+	<!-- Состояние: Морской воздух -->
+	<ThoughtDef>
+		<defName>SeaAir</defName>
+		<durationDays>2</durationDays>
+		<stages>
+			<li>
+				<label>Sea air</label>
+				<description>I feel the fresh, bracing sea air</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- s=======================s -->
+	
+	<!-- Состояние: Горный воздух -->
+	<ThoughtDef>
+		<defName>MountainAir</defName>
+		<durationDays>3</durationDays>
+		<stages>
+			<li>
+				<label>Mountain air</label>
+				<description>I feel the freshness of the mountains</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- s=======================s -->
 	
 </Defs>

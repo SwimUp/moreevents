@@ -130,7 +130,7 @@ namespace QuestRim
                 Widgets.Label(new Rect(40, 330, 300, 20), "QuestRewards".Translate());
                 Text.Anchor = TextAnchor.UpperLeft;
                 int questSliderLength = currentQuest.Rewards.Count * 30;
-                Rect rewardsRect = new Rect(0, 0, 323, questSliderLength);
+                Rect rewardsRect = new Rect(0, 0, 390, questSliderLength);
                 Rect scrollRewVertRectFact = new Rect(0, 0, inRect.x, questSliderLength);
                 Widgets.BeginScrollView(new Rect(0, 355, 410, 125), ref questRewardSlider, scrollRewVertRectFact, false);
                 DrawQuestRewards(rewardsRect, currentQuest);

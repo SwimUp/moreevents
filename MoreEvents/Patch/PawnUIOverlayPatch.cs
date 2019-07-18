@@ -22,7 +22,7 @@ namespace MoreEvents.Patch
             var pawn = Traverse.Create(__instance).Field("pawn").GetValue<Pawn>();
             if (pawn.GetQuestPawn(out QuestPawn questPawn))
             {
-                if(questPawn.Quests.Count > 0)
+                if(questPawn.Quests.Count > 0 || questPawn.Dialogs.Count > 0)
                     RenderExclamationPointOverlay(pawn);
             }
         }

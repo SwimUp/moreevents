@@ -718,7 +718,7 @@ You can contact them via geocape.
 		<letterLabel>Disease (Zero mechanites)</letterLabel>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Летнее солнцестояние -->
 	<IncidentDef>
 		<defName>SummerSolstice</defName>
@@ -736,7 +736,7 @@ You can contact them via geocape.
 		<minRefireDays>45</minRefireDays>
 	</IncidentDef>
 	<!-- s=======================s -->
-	
+
 	<!-- Событие: Покахонтас -->
 	<IncidentDef>
 		<defName>Pocahontas</defName>
@@ -747,7 +747,15 @@ You can contact them via geocape.
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Pocahontas</workerClass>
 		<letterLabel>Pocahontas</letterLabel>
-		<letterText>The settlement {0} offers you {0} - {1} to reside in your settlement as a sign of strong friendship between you.</letterText>
+		<letterText>Settlement {0} from faction {1} offers you {2} to live together. \nIf you accept their offer, {2} will live with you, and you will also improve the relationship between you.
+If you refuse, the relationship between you will deteriorate.
+
+{2} is described as:
+{3}
+
+
+{4}
+		</letterText>
 		<letterDef>PositiveEvent</letterDef>
 		<baseChance>2.7</baseChance>
 		<earliestDay>50</earliestDay>
@@ -755,5 +763,73 @@ You can contact them via geocape.
 	</IncidentDef>
 	<!-- s=======================s -->
 
+	<!-- Событие: Морской воздух -->
+	<IncidentDef>
+		<defName>SeaAir</defName>
+		<label>Sea air</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_SeaAir</workerClass>
+		<letterLabel>Sea air</letterLabel>
+		<letterText>Blowing unusually fresh sea air! The settlers feel much better!</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<baseChance>8.5</baseChance>
+		<earliestDay>5</earliestDay>
+		<minRefireDays>30</minRefireDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+
+	<!-- Событие: Горный воздух -->
+	<IncidentDef>
+		<defName>MountainAir</defName>
+		<label>Mountain air</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_MountainAir</workerClass>
+		<letterLabel>Mountain air</letterLabel>
+		<letterText>A breath of fresh mountain air</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<baseChance>5.5</baseChance>
+		<earliestDay>5</earliestDay>
+		<minRefireDays>25</minRefireDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+
+	<!-- Событие: Горный воздух -->
+	<IncidentDef>
+		<defName>AmbushTwoFactions</defName>
+		<label>Shooting of two factions</label>
+		<category>ThreatBig</category>
+		<targetTags>
+			<li>Caravan</li>
+			<li>Map_TempIncident</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Ambush_TwoEnemyFaction</workerClass>
+		<pointsScaleable>true</pointsScaleable>
+		<minRefireDays>1.2</minRefireDays>
+		<letterText>{0} got into a shootout between factions {1} and {2}</letterText>
+		<letterLabel>Shooting of two factions</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<tale>CaravanAmbushedByHumanlike</tale>
+		<mtbDaysByBiome>
+			<TemperateForest>20</TemperateForest>
+			<BorealForest>20</BorealForest>
+			<TropicalRainforest>20</TropicalRainforest>
+			<AridShrubland>20</AridShrubland>
+			<Desert>30</Desert>
+			<Tundra>30</Tundra>
+			<TropicalSwamp>30</TropicalSwamp>
+			<TemperateSwamp>30</TemperateSwamp>
+			<ColdBog>35</ColdBog>
+			<ExtremeDesert>35</ExtremeDesert>
+			<IceSheet>40</IceSheet>
+			<SeaIce>60</SeaIce>
+		</mtbDaysByBiome>
+	</IncidentDef>
+	<!-- s=======================s -->
 
 </Defs>

@@ -97,8 +97,13 @@
 	<CommOption_PawnOfferYes>Вы приняли предложение. Поселенец {0} пополнил ваши ряды. Отношение с фракцией {1} также улучшено.</CommOption_PawnOfferYes>
 
 	<PawnInfo>{PAWN_gender ? Он : Она}, {PAWN_kind}. {PAWN_possessive} зовут {PAWN_nameDef}, и {PAWN_pronoun} {PAWN_title}.</PawnInfo>
-  
-  <CommOption_DeclineQuest_Label>Отказаться</CommOption_DeclineQuest_Label>
-  <CommOption_DeclineDialog_Label>Отказаться</CommOption_DeclineDialog_Label>
-  
+
+	<CommOption_DeclineQuest_Label>Отказаться</CommOption_DeclineQuest_Label>
+	<CommOption_DeclineDialog_Label>Отказаться</CommOption_DeclineDialog_Label>
+
+	<ActualOnlyThisMap>Предложение актуально, пока гость находится у вас.</ActualOnlyThisMap>
+	<TimerInfo>Предложение действительно {0} дней.</TimerInfo>
+	<CommunicationDialog_PocahontasTitle>Предложение отклонено</CommunicationDialog_PocahontasTitle>
+	<CommunicationDialog_Pocahontas>Вы не приняли предложение о совместном проживании, из-за чего ваши отношения с фракцией {0} уменьшены.</CommunicationDialog_Pocahontas>
+
 </LanguageData>

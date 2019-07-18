@@ -1,4 +1,5 @@
 ﻿using QuestRim;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,17 @@ namespace MoreEvents.Communications
     public class TimeComp : CommunicationComponent
     {
         public CommunicationDialog Dialog;
+
+        public string EmailMessageSubject;
+        public Faction EmailBoxOwner; 
+
         public int TicksToRemove = 0;
+
+        public CommOption Action;
+        public Pawn Speaker;
+        public Pawn Defendant;
+
+        public Letter EndLetter;
 
         public TimeComp()
         {
@@ -20,6 +31,13 @@ namespace MoreEvents.Communications
         public TimeComp(CommunicationDialog dialog, int ticks)
         {
             Dialog = dialog;
+            TicksToRemove = ticks;
+        }
+
+        public TimeComp(string messageSubject, Faction boxOwner, int ticks)
+        {
+            EmailMessageSubject = messageSubject;
+            EmailBoxOwner = boxOwner;
             TicksToRemove = ticks;
         }
 
@@ -37,7 +55,30 @@ namespace MoreEvents.Communications
         {
             if(Dialog != null)
             {
-                QuestsManager.Communications.RemoveCommunication(Dialog);
+                Dialog.Destroy();
+            }
+
+            if(!string.IsNullOrEmpty(EmailMessageSubject) && EmailBoxOwner != null)
+            {
+                EmailBox box = QuestsManager.Communications.EmailBoxes.Where(b => b.Owner == EmailBoxOwner).FirstOrDefault();
+                if(box != null)
+                {
+                    EmailMessage message = box.Messages.Where(m => m.Subject == EmailMessageSubject).FirstOrDefault();
+                    if(message != null)
+                    {
+                        box.Messages.Remove(message);
+                    }
+                }
+            }
+
+            if(EndLetter != null)
+            {
+                Find.LetterStack.ReceiveLetter(EndLetter);
+            }
+
+            if(Action != null)
+            {
+                Action.DoAction(null, Speaker, Defendant);
             }
 
             QuestsManager.Communications.RemoveComponent(this);
@@ -49,6 +90,12 @@ namespace MoreEvents.Communications
 
             Scribe_References.Look(ref Dialog, "Dialog");
             Scribe_Values.Look(ref TicksToRemove, "TicksToRemove");
+            Scribe_Values.Look(ref EmailMessageSubject, "EmailMessageSubject");
+            Scribe_References.Look(ref EmailBoxOwner, "EmailBoxOwner");
+            Scribe_Deep.Look(ref Action, "Action");
+            Scribe_Deep.Look(ref EndLetter, "EndLetter");
+            Scribe_References.Look(ref Speaker, "Speaker");
+            Scribe_References.Look(ref Defendant, "Defendant");
         }
     }
 }
