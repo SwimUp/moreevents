@@ -14,6 +14,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
     {
         public override string CardLabel => "Quest_AttackFriendlySettlement_CardLabel".Translate();
 
+        public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
         public override string Description => "Quest_AttackFriendlySettlement_Description".Translate(Faction.leader.Name.ToStringFull, Faction.Name);
 
         public override void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)

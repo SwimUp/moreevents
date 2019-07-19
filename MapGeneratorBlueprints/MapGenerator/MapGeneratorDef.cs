@@ -1,4 +1,5 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,10 @@ namespace MapGeneratorBlueprints.MapGenerator
 {
     public class MapGeneratorDef : Def
     {
+        public List<string> targetTags;
+
+        public float Commonality;
+
         public IntVec2 size;
 
         public List<MapObject> MapData;

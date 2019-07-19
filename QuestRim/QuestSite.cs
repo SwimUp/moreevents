@@ -15,6 +15,8 @@ namespace QuestRim
 
         public bool RemoveAfterLeave = true;
 
+        public bool RemoveIfAllDie = true;
+
         public override Texture2D ExpandingIcon => quest.ExpandingIcon ?? def.ExpandingIconTexture;
 
         public Quest Quest => quest;
@@ -68,6 +70,18 @@ namespace QuestRim
             }
 
             return command;
+        }
+
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
+        {
+            if(!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
+            {
+                alsoRemoveWorldObject = true;
+                return true;
+            }
+
+            alsoRemoveWorldObject = false;
+            return false;
         }
 
         public void PreForceReform(QuestSite mapParent)
@@ -206,7 +220,8 @@ namespace QuestRim
         {
             quest.EndQuest(caravan, condition);
 
-            Find.WorldObjects.Remove(this);
+            if(Find.WorldObjects.Contains(this))
+                Find.WorldObjects.Remove(this);
         }
 
         public override void ExposeData()
@@ -215,6 +230,7 @@ namespace QuestRim
 
             Scribe_References.Look(ref quest, "Quest");
             Scribe_Values.Look(ref RemoveAfterLeave, "RemoveAfterLeave");
+            Scribe_Values.Look(ref RemoveIfAllDie, "RemoveIfAllDie");
         }
     }
 }

@@ -35,6 +35,14 @@ namespace MoreEvents.Quests
             this.quest = quest;
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_References.Look(ref mapParent, "Parent");
+            Scribe_References.Look(ref quest, "Quest");
+        }
+
         public void Enter(Caravan caravan)
         {
             if(mapParent.HasMap)

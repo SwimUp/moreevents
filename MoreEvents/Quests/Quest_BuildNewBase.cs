@@ -21,6 +21,8 @@ namespace MoreEvents.Quests
 
         public override string ExpandingIconPath => "Quests/Quest_BuildNewBase";
 
+        public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
+
         public int PawnsRequired;
         public int TicksToEnd;
         public bool Entered = false;

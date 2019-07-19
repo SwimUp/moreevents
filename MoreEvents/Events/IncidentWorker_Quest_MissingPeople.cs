@@ -34,7 +34,7 @@ namespace MoreEvents.Events
                 return false;
 
             Faction faction = GetFaction();
-            Map map = (Map)parms.target;
+            Map map = Find.AnyPlayerHomeMap;
 
             if (!TryGetNewTile(map.Tile, out int newTile))
                 return false;
@@ -42,7 +42,6 @@ namespace MoreEvents.Events
             int days = Rand.Range(5, 20);
             int passedDays = Rand.Range(days + 3, days + 7);
             Quest_MissingPeople quest = new Quest_MissingPeople(Rand.Range(3, 9), days, passedDays);
-            quest.TicksToPass = 10000;
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             quest.Faction = faction;
 
@@ -79,7 +78,7 @@ namespace MoreEvents.Events
             return null;
         }
 
-        private bool TryGetNewTile(int root, out int newTile)
+        public static bool TryGetNewTile(int root, out int newTile)
         {
             return TileFinder.TryFindPassableTileWithTraversalDistance(root, 5, 9, out newTile, (int i) => !Find.WorldObjects.AnyWorldObjectAt(i));
         }

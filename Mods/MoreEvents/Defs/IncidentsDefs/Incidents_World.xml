@@ -622,7 +622,7 @@ You can contact them via geocape.
 		</letterText>
 		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
-			<li>Map_PlayerHome</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Quest_ResourceHelp</workerClass>
 		<category>Misc</category>
@@ -643,7 +643,7 @@ You can contact them via geocape.
 		</letterText>
 		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
-			<li>Map_PlayerHome</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Quest_BuildNewBase</workerClass>
 		<category>Misc</category>
@@ -653,7 +653,7 @@ You can contact them via geocape.
 	</IncidentDef>
 	<!-- s=======================s -->
 
-	<!-- Задание: постройка новой базы -->
+	<!-- Задание: пропали люди -->
 	<IncidentDef>
 		<defName>Quest_MissingPeople</defName>
 		<label>Missing people</label>
@@ -662,7 +662,7 @@ You can contact them via geocape.
 		</letterText>
 		<letterDef>NeutralEvent</letterDef>
 		<targetTags>
-			<li>Map_PlayerHome</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Quest_MissingPeople</workerClass>
 		<category>Misc</category>
@@ -799,7 +799,7 @@ If you refuse, the relationship between you will deteriorate.
 	</IncidentDef>
 	<!-- s=======================s -->
 
-	<!-- Событие: Горный воздух -->
+	<!-- Событие: Перестрелка двух фракций -->
 	<IncidentDef>
 		<defName>AmbushTwoFactions</defName>
 		<label>Shooting of two factions</label>
@@ -829,6 +829,28 @@ If you refuse, the relationship between you will deteriorate.
 			<IceSheet>40</IceSheet>
 			<SeaIce>60</SeaIce>
 		</mtbDaysByBiome>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Задание: Заказ на убийство вражеского лидера -->
+	<IncidentDef>
+		<defName>Quest_KillLeader</defName>
+		<label>Order to kill an enemy leader</label>
+		<letterLabel>Order to kill an enemy leader</letterLabel>
+		<letterText>{0} talks about the enemy leader-dictator {1} from faction {2}, who may threaten of their settlement and asks you to eliminate it. He marked the place on the world map.
+The information that an assassination attempt is being prepared for him could already have been scattered around all edges of the world, therefore, it is necessary to act as soon as possible.
+
+You can contact them via geocape.
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Quest_KillLeader</workerClass>
+		<category>Misc</category>
+		<minRefireDays>60</minRefireDays>
+		<baseChance>0.8</baseChance>
+		<earliestDay>35</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 

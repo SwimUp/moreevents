@@ -54,7 +54,7 @@ namespace MoreEvents.Events
                 id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID(),
                 Faction = faction
             };
-            float marketValue = GenerateRequestItems(quest, (Map)parms.target);
+            float marketValue = GenerateRequestItems(quest, Find.AnyPlayerHomeMap);
             quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(marketValue * 1.3f, marketValue * 1.7f), new IntRange(3, 6), null, null);
 
             LookTargets target = new LookTargets(factionBase.Tile);

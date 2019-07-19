@@ -1,5 +1,6 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using MoreEvents.Communications;
+using MoreEvents.Events;
 using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
@@ -14,6 +15,8 @@ namespace MoreEvents.Quests
 {
     public class Quest_MissingPeople : Quest
     {
+        public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_MissingPeople;
+
         public override string CardLabel => "Quest_MissingPeople_CardLabel".Translate();
 
         public override string Description => "Quest_MissingPeople_Description".Translate(Faction.Name, minDays, passedDays, TicksToPass.TicksToDays().ToString("f2"));
@@ -43,6 +46,47 @@ namespace MoreEvents.Quests
             TicksToPass = daysLeft * 60000;
             this.minDays = minDays;
             this.passedDays = passedDays;
+        }
+
+        public override bool TryGiveQuestTo(Pawn questPawn, QuestDef questDef)
+        {
+            EventSettings settings = Settings.EventsSettings["Quest_MissingPeople"];
+            if (!settings.Active)
+                return false;
+
+            Faction = questPawn.Faction;
+            Map map = questPawn.Map;
+
+            if (!IncidentWorker_Quest_MissingPeople.TryGetNewTile(map.Tile, out int newTile))
+                return false;
+
+            TicksToPass = Rand.Range(3, 9) * 60000;
+            minDays = Rand.Range(5, 20);
+            passedDays = Rand.Range(minDays + 3, minDays + 7);
+            id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
+
+            int additionalValue = passedDays * 15;
+            GenerateRewards(GetQuestThingFilter(), new FloatRange(700 + additionalValue, 1400 + additionalValue), new IntRange(3, 8), null, null);
+
+            LookTargets target = new LookTargets(newTile);
+            Target = target;
+
+            QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);
+            questPlace.Tile = newTile;
+            questPlace.SetFaction(Faction);
+            questPlace.Init(this);
+            questPlace.RemoveAfterLeave = false;
+
+            Site = questPlace;
+
+            Find.WorldObjects.Add(questPlace);
+
+            ShowInConsole = false;
+
+            QuestsManager.Communications.AddQuestPawn(questPawn, this);
+            QuestsManager.Communications.AddQuest(this);
+
+            return true;
         }
 
         public override void Notify_CaravanFormed(QuestSite site, Caravan caravan)

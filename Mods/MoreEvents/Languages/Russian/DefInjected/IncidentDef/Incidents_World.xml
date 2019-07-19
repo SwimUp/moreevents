@@ -163,5 +163,11 @@
   <AmbushTwoFactions.label>Перестрелка между фракциями</AmbushTwoFactions.label>
   <AmbushTwoFactions.letterLabel>Перестрелка между фракциями</AmbushTwoFactions.letterLabel>
   <AmbushTwoFactions.letterText>{0} попал в перестрелку между фракциями {1} и {2}</AmbushTwoFactions.letterText>  
+  
+  <Quest_KillLeader.label>Заказ на убийство вражеского лидера</Quest_KillLeader.label>
+  <Quest_KillLeader.letterLabel>Заказ на убийство вражеского лидера</Quest_KillLeader.letterLabel>
+  <Quest_KillLeader.letterText>{0} рассказывает о вражеском лидере-диктаторе {1} из фракции {2},который может угрожать безопасности их поселения и просит вас его устранить. Он отметил место на мировой карте. 
+Информация о том, что на него готовится покушение на убийство уже могла разлететься по всем краям мира, поэтому действовать нужно как можно скорее.</Quest_KillLeader.letterText>  
  
+Вы можете связаться с ними через планетарную консоль связи.
 </LanguageData>

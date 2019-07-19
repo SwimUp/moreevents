@@ -133,6 +133,7 @@
     <Compile Include="Events\IncidentWorker_HungryCannibalsRaid.cs" />
     <Compile Include="Events\IncidentWorker_MineralMeteorite.cs" />
     <Compile Include="Events\IncidentWorker_Quest_BuildNewBase.cs" />
+    <Compile Include="Events\IncidentWorker_Quest_KillLeader.cs" />
     <Compile Include="Events\IncidentWorker_Quest_MissingPeople.cs" />
     <Compile Include="Events\IncidentWorker_Quest_ResourceHelp.cs" />
     <Compile Include="Events\IncidentWorker_RaidEnemyWithAnimals.cs" />
@@ -201,7 +202,7 @@
     <Compile Include="Events\IncidentWorker_MakeGameCondition.cs" />
     <Compile Include="Events\IncidentWorker_Pocahontas.cs" />
     <Compile Include="Events\IncidentWorker_SeaAir.cs" />
-    <Compile Include="IncidentWorker_Ambush_TwoEnemyFaction.cs" />
+    <Compile Include="Events\IncidentWorker_Ambush_TwoEnemyFaction.cs" />
     <Compile Include="Events\InspirationDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapDefOfLocal.cs" />
@@ -216,6 +217,8 @@
     <Compile Include="Patch\IncidentWorker_QuestBanditCamp.cs" />
     <Compile Include="Patch\IncidentWorker_QuestItemStash.cs" />
     <Compile Include="Patch\IncidentWorker_QuestTradeRequest.cs" />
+    <Compile Include="Patch\IncidentWorker_VisitorGroupPatch.cs" />
+    <Compile Include="Patch\PawnGroupKindWorker_TraderPatch.cs" />
     <Compile Include="Patch\PawnUIOverlayPatch.cs" />
     <Compile Include="Patch\Quest_BanditCamp.cs" />
     <Compile Include="Patch\Quest_TradeRequestComp.cs" />
@@ -224,11 +227,15 @@
     <Compile Include="PawnKindDefOfLocal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\GameCondition_MeteorIncoming.cs" />
+    <Compile Include="QuestDefOfLocal.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_EnterToKillLeaderMap.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMap.cs" />
     <Compile Include="Quests\CaravanArrivalAction_TransferMissingPeople.cs" />
     <Compile Include="Quests\CaravanArrivalAction_CheckMissingPeople.cs" />
     <Compile Include="Quests\CaravanArrivalAction_HelpWithBuildings.cs" />
     <Compile Include="Quests\CaravanArrivalAction_GiveItems.cs" />
     <Compile Include="Quests\Quest_BuildNewBase.cs" />
+    <Compile Include="Quests\Quest_KillLeader.cs" />
     <Compile Include="Quests\Quest_MissingPeople.cs" />
     <Compile Include="Quests\Quest_ThingsHelp.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />

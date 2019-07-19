@@ -15,6 +15,8 @@ namespace MoreEvents.Patch
         public override string Description => questText;
         private string questText;
 
+        public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
+
         public Site QuestSite;
 
         public Quest_BanditCamp() { }

@@ -24,6 +24,8 @@ namespace MoreEvents.Quests
 
         public override string ExpandingIconPath => "Quests/Quest_HelpResources";
 
+        public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
+
         public Dictionary<ThingDef, int> RequestItems = new Dictionary<ThingDef, int>();
 
         public override void DrawAdditionalOptions(Rect rect)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +37,11 @@ namespace MapTools
                 var list = cell.GetThingList(Find.CurrentMap);
                 if(list != null)
                 {
-                    list.ForEach(x => Log.Message($"Item {x} --> {x.Position}"));
+                    list.ForEach(x => {
+                        Log.Message($"Item {x} --> {x.Position}");
+                        if(x.def.CanHaveFaction)
+                            x.SetFaction(Faction.OfPlayer);
+                        });
                 }
             }
         }

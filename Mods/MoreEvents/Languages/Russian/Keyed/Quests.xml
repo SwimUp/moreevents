@@ -59,4 +59,9 @@
 	<Quest_TradeRequestComp_CardLabel>Торговый запрос</Quest_TradeRequestComp_CardLabel>
 	<Quest_BanditCamp_CardLabel>Лагерь бандитов</Quest_BanditCamp_CardLabel>
 
+	<Quest_KillLeader_CardLabel>Заказ на убийство вражеского лидера</Quest_KillLeader_CardLabel>
+	<Quest_KillLeader_Description>{0} рассказывает о вражеском лидере-диктаторе {1} из фракции {2},который может угрожать безопасности их поселения и просит вас его устранить. Он отметил место на мировой карте.
+Информация о том, что на него готовится покушение на убийство уже могла разлететься по всем краям мира, поэтому действовать нужно как можно скорее.</Quest_KillLeader_Description>
+	<Quest_KillLeader_PlaceLabel>Местонахождение цели</Quest_KillLeader_PlaceLabel>
+
 </LanguageData>

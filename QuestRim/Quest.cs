@@ -20,6 +20,8 @@ namespace QuestRim
 
     public abstract class Quest : IExposable, ILoadReferenceable
     {
+        public abstract QuestDef RelatedQuestDef { get; }
+
         public QuestSite Site;
 
         public int id;
@@ -89,6 +91,11 @@ namespace QuestRim
             quester.Quests.Remove(this);
         }
 
+        public virtual bool TryGiveQuestTo(Pawn questPawn, QuestDef questDef)
+        {
+            return true;
+        }
+
         public virtual bool CanLeaveFromSite(QuestSite site)
         {
             return true;
@@ -127,6 +134,11 @@ namespace QuestRim
             maker.fixedParams = parms2;
 
             Rewards = maker.Generate();
+        }
+
+        public virtual void GenerateRewards()
+        {
+            Rewards = ThingSetMakerDefOf.Reward_ItemStashQuestContents.root.Generate();
         }
 
         public void GenerateRewards(ThingSetMakerDef maker, FloatRange totalValue, IntRange? countRange)
@@ -211,7 +223,7 @@ namespace QuestRim
 
         public virtual string GetInspectString()
         {
-            return null; ;
+            return null;
         }
 
         public virtual void ExposeData()

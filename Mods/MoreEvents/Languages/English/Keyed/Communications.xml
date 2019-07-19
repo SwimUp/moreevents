@@ -105,6 +105,6 @@
 	<ActualOnlyThisMap>The offer is relevant while the guest is with you.</ActualOnlyThisMap>
 	<TimerInfo>The offer is valid {0} days.</TimerInfo>
 	<CommunicationDialog_PocahontasTitle>Offer declined</CommunicationDialog_PocahontasTitle>
-	<CommunicationDialog_Pocahontas>ВYou did not accept a co-residence proposal, which is why your relationship with the {0} faction has been reduced.</CommunicationDialog_Pocahontas>
+	<CommunicationDialog_Pocahontas>You did not accept a co-residence proposal, which is why your relationship with the {0} faction has been reduced.</CommunicationDialog_Pocahontas>
 
 </LanguageData>

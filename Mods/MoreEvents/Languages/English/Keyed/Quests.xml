@@ -64,4 +64,9 @@ List of required resources:</HelpResourcesDescriptionTitle>
 	<Quest_TradeRequestComp_CardLabel>Trade request</Quest_TradeRequestComp_CardLabel>
 	<Quest_BanditCamp_CardLabel>Bandit camp</Quest_BanditCamp_CardLabel>
 	
+	<Quest_KillLeader_CardLabel>Order to kill an enemy leader</Quest_KillLeader_CardLabel>
+	<Quest_KillLeader_Description>{0} talks about the enemy leader-dictator {1} from faction {2}, who may threaten of their settlement and asks you to eliminate it. He marked the place on the world map.
+The information that an assassination attempt is being prepared for him could already have been scattered around all edges of the world, therefore, it is necessary to act as soon as possible.</Quest_KillLeader_Description>
+	<Quest_KillLeader_PlaceLabel>Target location</Quest_KillLeader_PlaceLabel>
+	
 </LanguageData>

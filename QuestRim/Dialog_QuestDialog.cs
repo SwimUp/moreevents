@@ -34,6 +34,9 @@ namespace QuestRim
         }
         public override void DoWindowContents(Rect inRect)
         {
+            if (QuestPawn.Quests.Count == 0)
+                Close();
+
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Medium;
             Rect titleRect = new Rect(0, 0, inRect.width, 50);
@@ -102,18 +105,19 @@ namespace QuestRim
                     Widgets.BeginScrollView(new Rect(0, 495, inRect.width, 115), ref commButtonsCommSlider, scrollVertRectFact2, false);
                     DoButtonsQuest(buttonRect2);
                     Widgets.EndScrollView();
-
-                    Text.Anchor = TextAnchor.MiddleCenter;
-                    Text.Font = GameFont.Medium;
-                    if (DrawCustomButton(new Rect(0, 625, inRect.width, 40), "TakeQuestFromPawn".Translate(), Color.yellow))
-                    {
-                        currentQuest.TakeQuestByQuester(QuestPawn);
-                        currentQuest = null;
-                        return;
-                    }
-                    Text.Font = GameFont.Small;
-                    Text.Anchor = TextAnchor.UpperLeft;
                 }
+
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Text.Font = GameFont.Medium;
+                if (DrawCustomButton(new Rect(0, 625, inRect.width, 40), "TakeQuestFromPawn".Translate(), Color.yellow))
+                {
+                    currentQuest.TakeQuestByQuester(QuestPawn);
+                    currentQuest = null;
+                    Text.Anchor = TextAnchor.UpperLeft;
+                    return;
+                }
+                Text.Font = GameFont.Small;
+                Text.Anchor = TextAnchor.UpperLeft;
 
                 Widgets.LabelScrollable(new Rect(0, 185, inRect.width, 180), currentQuest.Description, ref commInfoSlider, false, false);
 

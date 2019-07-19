@@ -30,6 +30,9 @@ namespace MoreEvents.Patch
                 return component;
             }
         }
+
+        public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
+
         private TradeRequestComp component = null;
         public Quest_TradeRequestComp()
         {

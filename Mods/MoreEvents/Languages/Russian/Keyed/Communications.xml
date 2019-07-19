@@ -106,4 +106,10 @@
 	<CommunicationDialog_PocahontasTitle>Предложение отклонено</CommunicationDialog_PocahontasTitle>
 	<CommunicationDialog_Pocahontas>Вы не приняли предложение о совместном проживании, из-за чего ваши отношения с фракцией {0} уменьшены.</CommunicationDialog_Pocahontas>
 
+	<InspectString_Timer>Осталось {0}</InspectString_Timer>
+	<EnterToMapQuest_Option>Начать задание</EnterToMapQuest_Option>
+	<Quest_KillLeaderTitle>Победа</Quest_KillLeaderTitle>
+	<Quest_KillLeaderDesc>Вражеский лидер мертв, вы можете собрать караван.</Quest_KillLeaderDesc>
+	<LeaderStillAlive>Вражеский лидер до сих пор жив. ({0})</LeaderStillAlive>
+
 </LanguageData>

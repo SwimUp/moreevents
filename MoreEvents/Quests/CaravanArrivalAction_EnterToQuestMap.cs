@@ -1,4 +1,5 @@
 ﻿using MoreEvents.Events.ShipCrash.Map.MapGenerator;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -9,7 +10,7 @@ using Verse;
 
 namespace MoreEvents.Events
 {
-    public class CaravanArrivalAction_EnterToMap: CaravanArrivalAction_Enter
+    public class CaravanArrivalAction_EnterToQuestMap: CaravanArrivalAction_Enter
     {
         public MapParent MapParent => mapParent;
         private MapParent mapParent;
@@ -20,32 +21,26 @@ namespace MoreEvents.Events
 
         public override string ReportString => "CaravanEntering".Translate(mapParent.Label);
 
-        public VisitableSite Site => site;
-        private VisitableSite site;
+        public QuestSite QuestSite => questSite;
+        public QuestSite questSite;
 
-        public CaravanArrivalAction_EnterToMap()
+        public CaravanArrivalAction_EnterToQuestMap()
         {
 
+        }
+
+        public CaravanArrivalAction_EnterToQuestMap(MapParent mapParent)
+        {
+            this.mapParent = mapParent;
+            this.questSite = (QuestSite)mapParent;
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
 
-            Scribe_References.Look(ref site, "Site");
+            Scribe_References.Look(ref questSite, "questSite");
             Scribe_References.Look(ref mapParent, "MapParent");
-        }
-
-        public CaravanArrivalAction_EnterToMap(MapParent mapParent)
-        {
-            this.mapParent = mapParent;
-            this.site = (VisitableSite)mapParent;
-        }
-
-        public CaravanArrivalAction_EnterToMap(MapParent mapParent, VisitableSite site)
-        {
-            this.mapParent = mapParent;
-            this.site = site;
         }
 
         public override void Arrived(Caravan caravan)
@@ -101,12 +96,12 @@ namespace MoreEvents.Events
                 Find.TickManager.Notify_GeneratedPotentiallyHostileMap();
                 PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter_Send(orGenerateMap.mapPawns.AllPawns, "LetterRelatedPawnsSite".Translate(Faction.OfPlayer.def.pawnsPlural), LetterDefOf.NeutralEvent, informEvenIfSeenBefore: true);
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append("LetterCaravanEnteredMap".Translate(caravan.Label, site).CapitalizeFirst());
-                Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredMassiveFire")} {site.Label}", stringBuilder.ToString(), LetterDefOf.NeutralEvent);
+                stringBuilder.Append("LetterCaravanEnteredMap".Translate(caravan.Label, questSite.Label).CapitalizeFirst());
+                Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredMassiveFire")} {questSite.Label}", stringBuilder.ToString(), LetterDefOf.NeutralEvent);
             }
             else
             {
-                Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredMassiveFire")} {site.Label}", "LetterCaravanEnteredMap".Translate(caravan.Label, site).CapitalizeFirst(), LetterDefOf.NeutralEvent, t);
+                Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredMassiveFire")} {questSite.Label}", "LetterCaravanEnteredMap".Translate(caravan.Label, questSite.Label).CapitalizeFirst(), LetterDefOf.NeutralEvent, t);
             }
             Verse.Map map = orGenerateMap;
             CaravanEnterMode enterMode = CaravanEnterMode.Edge;

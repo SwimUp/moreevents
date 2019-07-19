@@ -97,7 +97,7 @@ namespace MoreEvents.Things
                 lord.AddPawn(p);
             }
 
-            Find.LetterStack.ReceiveLetter("DoomsdayContrAttackTitle".Translate(), "DoomsdayContrAttack".Translate(), LetterDefOf.NegativeEvent);
+            Find.LetterStack.ReceiveLetter("DoomsdayContrAttackTitle".Translate(), "DoomsdayContrAttack".Translate(), LetterDefOf.ThreatBig);
 
             RaidSent = true;
         }
