@@ -112,7 +112,7 @@ namespace MoreEvents.Quests
         {
             CheckWon();
 
-            if (!Won)
+            if (!Won && TargetPawn.IsWorldPawn())
                 Find.WorldPawns.PassToWorld(TargetPawn);
         }
 
@@ -142,6 +142,7 @@ namespace MoreEvents.Quests
                 return false;
 
             Faction = alliedFaction;
+            TicksToPass = Rand.Range(8, 15) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             GenerateRewards(GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);
 
@@ -152,6 +153,7 @@ namespace MoreEvents.Quests
             questPlace.RemoveAfterLeave = false;
 
             Target = questPlace;
+            TargetPawn = enemyFaction.leader;
             Site = questPlace;
 
             Find.WorldObjects.Add(questPlace);

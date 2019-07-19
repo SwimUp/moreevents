@@ -46,8 +46,7 @@
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>
-    <Reference Include="QuestRim, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="QuestRim">
       <HintPath>..\QuestRim\bin\Release\QuestRim.dll</HintPath>
     </Reference>
     <Reference Include="System" />

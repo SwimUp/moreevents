@@ -10,17 +10,16 @@ using Verse;
 namespace MoreEvents.Patch
 {
     [HarmonyPatch(typeof(PawnGroupKindWorker_Trader))]
-    [HarmonyPatch("GenerateGuards")]
+    [HarmonyPatch("GenerateTrader")]
     public class PawnGroupKindWorker_TraderPatch
     {
-        static void Postfix(PawnGroupMakerParms parms, PawnGroupMaker groupMaker, Pawn trader,
-            List<Thing> wares, List<Pawn> outPawns)
+        static void Postfix(Pawn __result)
         {
-            if (outPawns.Count > 0)
+            if (Rand.Chance(0.15f))
             {
-                if (outPawns.Where(p => !p.NonHumanlikeOrWildMan() && p.Faction != null).TryRandomElement(out Pawn result))
+                if (__result != null)
                 {
-                    QuestsHandler.TryGiveRandomQuestTo(result);
+                    QuestsHandler.TryGiveRandomQuestTo(__result);
                 }
             }
         }
