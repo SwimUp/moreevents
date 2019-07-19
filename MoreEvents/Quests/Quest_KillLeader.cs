@@ -112,7 +112,7 @@ namespace MoreEvents.Quests
         {
             CheckWon();
 
-            if (!Won && TargetPawn.IsWorldPawn())
+            if (!Won && !TargetPawn.IsWorldPawn())
                 Find.WorldPawns.PassToWorld(TargetPawn);
         }
 
