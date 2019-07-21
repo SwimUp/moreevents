@@ -853,5 +853,27 @@ You can contact them via geocape.
 		<earliestDay>35</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
+	
+	<!-- Задание: Подавление мятежа -->
+	<IncidentDef>
+		<defName>Quest_SuppressionRebellion</defName>
+		<label>Suppression of insurgency</label>
+		<letterLabel>Suppression of insurgency</letterLabel>
+		<letterText>{0} said that in the settlement of {1} faction of {2} insurgency began. The rebels demand independence. They staged multiple pogroms, killed several civilians. The soldiers of the settlement of {1} were able to push them away from the settlement, but they are gaining strength and will attack again.
+{0} asks you to help suppress the rebellion.
+
+You can contact them via geocape.
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Quest_SuppressionRebellion</workerClass>
+		<category>Misc</category>
+		<minRefireDays>60</minRefireDays>
+		<baseChance>0.8</baseChance>
+		<earliestDay>35</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
 
 </Defs>

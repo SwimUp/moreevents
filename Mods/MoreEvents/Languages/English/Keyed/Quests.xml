@@ -69,4 +69,33 @@ List of required resources:</HelpResourcesDescriptionTitle>
 The information that an assassination attempt is being prepared for him could already have been scattered around all edges of the world, therefore, it is necessary to act as soon as possible.</Quest_KillLeader_Description>
 	<Quest_KillLeader_PlaceLabel>Target location</Quest_KillLeader_PlaceLabel>
 	
+	<Quest_SuppressionRebellion_CardLabel>Suppression of insurgency</Quest_SuppressionRebellion_CardLabel>
+	<Quest_SuppressionRebellion_Description>The faction {0} problem with the rebels. The insurgents demand independence. They staged multiple pogroms, killed several civilians. The soldiers of {0} faction were able to push them from the settlement, but they are gaining strength and will attack again.
+We can help suppress insurgency or watch them kill each other. In the end, if the rebels win, a new faction will be formed.</Quest_SuppressionRebellion_Description>
+	<Quest_SuppressionRebellion_PlaceLabel>The location of the insurgents</Quest_SuppressionRebellion_PlaceLabel>
+	<Quest_SuppressionRebellion_Dia>You have entered the territory. In the distance you see a group of insurgents preparing to attack.
+
+You can complete the quest in two ways.
+
+You can do cruelty and kill all the insurgents. In this case, you can pick out all the items from them.
+Or you can try to stun as much as possible and then the {0} fraction will award you with additional items.
+
+In any case, the task will be considered successful.</Quest_SuppressionRebellion_Dia>
+	<Quest_SuppressionRebellionFailTitle>Suppression of the insurgency failed</Quest_SuppressionRebellionFailTitle>
+	<Quest_SuppressionRebellionDesc>The attempt to suppress the insurgency was unsuccessful and the insurgents were able to defeat you.
+They, probably, have already gone to the settlement and it remains to be hoped that they will be able to cope.</Quest_SuppressionRebellionDesc>
+	<Quest_SuppressionRebellionWinTitle>Victory</Quest_SuppressionRebellionWinTitle>
+	<Quest_SuppressionRebellionWinDesc>You were able to defeat the insurgents and save the lives of {0} of them, for which the {1} faction decided to add another {2} silver to your reward.
+--------------
+{3}</Quest_SuppressionRebellionWinDesc>
+	<Quest_SuppressionRebellionRebelWinTitle>The insurgents won</Quest_SuppressionRebellionRebelWinTitle>
+	<Quest_SuppressionRebellionRebelWinDesc>The insurgents were able to defeat the soldiers from the settlement {0}. {1}
+This led to a change of leader and political regime.</Quest_SuppressionRebellionRebelWinDesc>
+	<Quest_SuppressionRebelplayerAffect>The insurgents will remember that your settlement tried to prevent them, because of what the relationship was worsened.</Quest_SuppressionRebelplayerAffect>
+	<Quest_SuppressionRebelNonplayerAffect>Your settlement did not participate in this.</Quest_SuppressionRebelNonplayerAffect>
+	<Quest_SuppressionRebellionNewFactionTitle>The insurgents lost</Quest_SuppressionRebellionNewFactionTitle>
+	<Quest_SuppressionRebellionNewFactionDesc>The rebels could not defeat the {0} and because of what the survivors formed their own faction and called themselves {1}</Quest_SuppressionRebellionNewFactionDesc>
+	<CaravanArrivalAction_EnterToRebelMap_AlreadyStart>The insurgency has already begun</CaravanArrivalAction_EnterToRebelMap_AlreadyStart>
+
+	
 </LanguageData>

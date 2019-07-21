@@ -1,4 +1,5 @@
-﻿using MoreEvents.Quests;
+﻿using MoreEvents.Communications;
+using MoreEvents.Quests;
 using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
@@ -79,6 +80,12 @@ namespace MoreEvents.Events
             float value = (250 * quest.PawnsRequired) * 1.8f;
 
             quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(value, value), new IntRange(2, 5), null, null);
+
+            QuestOption_IncreaseReward questOption_IncreaseReward = new QuestOption_IncreaseReward(15, SkillDefOf.Social, new FloatRange(value, value) * 1.3f, new IntRange(2, 7));
+            quest.Options = new List<QuestOption>
+            {
+                questOption_IncreaseReward
+            };
 
             LookTargets target = new LookTargets(newTile);
             quest.Target = target;

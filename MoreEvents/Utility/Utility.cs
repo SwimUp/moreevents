@@ -60,6 +60,12 @@ namespace MoreEvents
             return false;
         }
 
+        public static FloatRange GetRangeByFactionTechLevel(this Faction faction, int baseA, int baseB)
+        {
+            int level = (int)faction.def.techLevel;
+            return new FloatRange(baseA, baseB) * level;
+        }
+
         public static int GiveHediffToRandomColinists(Map map, List<Pawn> pawnList, HediffDef hediff, int minNumber, int maxAfterCountNumber = 1)
         {
             int num = Rand.Range(minNumber, pawnList.Count - maxAfterCountNumber);

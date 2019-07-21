@@ -142,8 +142,10 @@ namespace QuestRim
             Rect scrollVertRectFact = new Rect(0, 0, rect1.x, commDialogSliderLength);
             int y = 10;
             Widgets.BeginScrollView(rect1, ref commSlider, scrollVertRectFact, false);
-            foreach(var comDialog in communicationsDialogs)
+            for(int i = 0; i < communicationsDialogs.Count; i++)
             {
+                CommunicationDialog comDialog = communicationsDialogs[i];
+
                 if(comDialog.ShowInConsole)
                     DrawCommCard(rect1, ref y, comDialog);
             }
@@ -184,8 +186,10 @@ namespace QuestRim
 
             Rect startRect = rect;
             startRect.height = 35;
-            foreach (var option in currentDialog.Options)
+            for(int i = 0; i < currentDialog.Options.Count; i++)
             {
+                CommOption option = currentDialog.Options[i];
+
                 if(DrawCustomButton(startRect, option.Label, Color.white))
                 {
                     option.DoAction(currentDialog, speaker, defendant);
@@ -336,8 +340,10 @@ namespace QuestRim
             Rect scrollVertRectFact = new Rect(0, 0, rect1.x, commQuestsSliderLength);
             int y = 10;
             Widgets.BeginScrollView(rect1, ref commSliderQuests, scrollVertRectFact, false);
-            foreach (var quest in quests)
+            for(int i = 0; i < quests.Count; i++)
             {
+                Quest quest = quests[i];
+
                 if(quest.ShowInConsole)
                     DrawQuestCard(rect1, ref y, quest);
             }
@@ -439,8 +445,10 @@ namespace QuestRim
             Text.Font = GameFont.Small;
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(rect);
-            foreach (var reward in quest.Rewards)
+            for(int i = 0; i < quest.Rewards.Count; i++)
             {
+                Thing reward = quest.Rewards[i];
+
                 listing.Label(reward.Label, 25, reward.DescriptionFlavor);
             }
             listing.End();
@@ -452,13 +460,18 @@ namespace QuestRim
 
             Rect startRect = rect;
             startRect.height = 35;
-            foreach (var option in currentQuest.Options)
+            for(int i = 0; i < currentQuest.Options.Count; i++)
             {
-                if (DrawCustomButton(startRect, option.Label, Color.white))
+                QuestOption option = currentQuest.Options[i];
+
+                if (option.Enable)
                 {
-                    option.DoAction(currentQuest, speaker, defendant);
+                    if (DrawCustomButton(startRect, option.Label, option.TextColor))
+                    {
+                        option.DoAction(currentQuest, speaker, defendant);
+                    }
+                    startRect.y += 40;
                 }
-                startRect.y += 40;
             }
 
             Text.Anchor = TextAnchor.UpperLeft;
@@ -650,8 +663,10 @@ namespace QuestRim
             Rect scrollVertRectFact = new Rect(0, 0, rect1.x, commFactionSliderLength);
             int y = 10;
             Widgets.BeginScrollView(rect1, ref factionListSlider, scrollVertRectFact, false);
-            foreach (var faction in factions)
+            for(int i = 0; i < factions.Count; i++)
             {
+                FactionInteraction faction = factions[i];
+
                 DrawFactionCard(rect1, ref y, faction);
             }
             Widgets.EndScrollView();

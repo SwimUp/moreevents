@@ -74,9 +74,9 @@ namespace QuestRim
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            if(!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
+            if(RemoveIfAllDie && !base.Map.mapPawns.AnyPawnBlockingMapRemoval)
             {
-                alsoRemoveWorldObject = true;
+                alsoRemoveWorldObject = RemoveAfterLeave;
                 return true;
             }
 
@@ -178,6 +178,13 @@ namespace QuestRim
             base.PostMapGenerate();
 
             Quest.PostMapGenerate(Map);
+        }
+
+        public override void Notify_MyMapRemoved(Map map)
+        {
+            Quest.PostMapRemove(map);
+
+            base.Notify_MyMapRemoved(map);
         }
 
         public override IEnumerable<FloatMenuOption> GetTransportPodsFloatMenuOptions(IEnumerable<IThingHolder> pods, CompLaunchable representative)

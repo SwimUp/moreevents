@@ -15,5 +15,7 @@ namespace MoreEvents
         public static QuestDef Quest_MissingPeople;
 
         public static QuestDef Quest_KillLeader;
+
+        public static QuestDef Quest_BanditCamp;
     }
 }

@@ -157,7 +157,6 @@ namespace MoreEvents.Events
             {
                 if (CellFinder.TryFindRandomCellNear(spot1, map, 6, (IntVec3 x) => x.Standable(map) && !x.Fogged(map), out IntVec3 loc))
                 {
-                    //IntVec3 loc = CellFinder.RandomSpawnCellForPawnNear(spot1, map);
                     GenSpawn.Spawn(faction1[i], loc, map, Rot4.Random);
                 }
             }
@@ -165,7 +164,6 @@ namespace MoreEvents.Events
             {
                 if (CellFinder.TryFindRandomCellNear(spot2, map, 6, (IntVec3 x) => x.Standable(map) && !x.Fogged(map), out IntVec3 loc))
                 {
-                   // IntVec3 loc = CellFinder.RandomSpawnCellForPawnNear(spot2, map);
                     GenSpawn.Spawn(faction2[i], loc, map, Rot4.Random);
                 }
             }

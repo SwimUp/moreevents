@@ -24,6 +24,15 @@ namespace MoreEvents.Events
             if (faction == null)
                 return false;
 
+
+            foreach (var quest in QuestsManager.Communications.Quests)
+            {
+                if (quest.Faction == faction && quest is Quest_MissingPeople)
+                {
+                    return false;
+                }
+            }
+
             return true;
         }
 

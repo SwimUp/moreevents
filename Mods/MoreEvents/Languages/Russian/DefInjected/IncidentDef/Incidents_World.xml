@@ -170,4 +170,10 @@
 Информация о том, что на него готовится покушение на убийство уже могла разлететься по всем краям мира, поэтому действовать нужно как можно скорее.</Quest_KillLeader.letterText>  
  
 Вы можете связаться с ними через планетарную консоль связи.
+
+  <Quest_SuppressionRebellion.label>Мятеж</Quest_SuppressionRebellion.label>
+  <Quest_SuppressionRebellion.letterLabel>Мятеж</Quest_SuppressionRebellion.letterLabel>
+  <Quest_SuppressionRebellion.letterText>{0} сообщает, что в поселении {1} фракции {2} начался мятеж. Мятежники требуют независимости. Они устроили множественные погромы, убили несколько мирных жителей. Воины поселения {1} смогли оттеснить их от поселения, но они набирают силы и будут нападать снова.
+{0} просит вас помочь подавить мятеж.</Quest_SuppressionRebellion.letterText>  
+  
 </LanguageData>

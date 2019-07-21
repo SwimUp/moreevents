@@ -29,6 +29,11 @@ namespace MoreEvents.Quests
         public List<Pawn> EnteredPawns = new List<Pawn>();
         public Settlement OldSettlement;
 
+        public Quest_BuildNewBase()
+        {
+
+        }
+
         public override void SiteTick()
         {
             if(Entered)

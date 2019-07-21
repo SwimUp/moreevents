@@ -22,6 +22,14 @@ namespace MoreEvents.Events
             if (!TryResolveTwoFactions(out Faction alliedFaction, out Faction enemyFaction))
                 return false;
 
+            foreach (var quest in QuestsManager.Communications.Quests)
+            {
+                if (quest.Faction == alliedFaction && quest is Quest_KillLeader)
+                {
+                    return false;
+                }
+            }
+
             return true;
         }
 

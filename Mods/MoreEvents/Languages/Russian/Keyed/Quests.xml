@@ -64,4 +64,32 @@
 Информация о том, что на него готовится покушение на убийство уже могла разлететься по всем краям мира, поэтому действовать нужно как можно скорее.</Quest_KillLeader_Description>
 	<Quest_KillLeader_PlaceLabel>Местонахождение цели</Quest_KillLeader_PlaceLabel>
 
+	<Quest_SuppressionRebellion_CardLabel>Подавление мятежа</Quest_SuppressionRebellion_CardLabel>
+	<Quest_SuppressionRebellion_Description>У фракции {0} проблемы с мятежниками. Мятежники требуют независимости. Они устроили множественные погромы, убили несколько мирных жителей. Воины фракции {0} смогли оттеснить их от поселения, но они набирают силы и будут нападать снова.
+Мы можем помочь подавить мятеж или смотреть, как они дубивают друг-друга. В конечном итоге, если победят мятежники, то образуется новая фракция.</Quest_SuppressionRebellion_Description>
+	<Quest_SuppressionRebellion_PlaceLabel>Местонахождение мятежников</Quest_SuppressionRebellion_PlaceLabel>
+	<Quest_SuppressionRebellion_Dia>Вы вошли на территорию. Вдали вы видите группу мятежников, которая готовится к нападению.
+	
+Пройти задание можно двумя путями. 
+
+Можно поступить жестоко и убить всех мятежников. В таком случае, вы сможете осбрать все предметы с них.
+Или можно попытаться оглушить как можно больше и тогда фракция {0} наградит вас дополнительными предметами.
+
+В любом случае задание будет считаться пройденым успешно.</Quest_SuppressionRebellion_Dia>
+	<Quest_SuppressionRebellionFailTitle>Подавление мятежа провалилось</Quest_SuppressionRebellionFailTitle>
+	<Quest_SuppressionRebellionDesc>Попытка подавить мятеж не увенчалась успехом и мятежники смогли вас одолеть. 
+Они, уже, вероятно, направились на поселение и остается надеяться, что они смогут справиться.</Quest_SuppressionRebellionDesc>
+	<Quest_SuppressionRebellionWinTitle>Победа</Quest_SuppressionRebellionWinTitle>
+	<Quest_SuppressionRebellionWinDesc>Вы смогли победить мятежников и сохранить жизнь {0} из них, за что фракция {1} решила добавить к вашей награде предметов еще на {2} серебра 
+-------------------
+{3}</Quest_SuppressionRebellionWinDesc>
+	<Quest_SuppressionRebellionRebelWinTitle>Мятежники победили</Quest_SuppressionRebellionRebelWinTitle>
+	<Quest_SuppressionRebellionRebelWinDesc>Мятежники смогли победить солдат из поселения {0}. {1}
+Это повлекло смену лидера и политического режима.</Quest_SuppressionRebellionRebelWinDesc>
+	<Quest_SuppressionRebelplayerAffect>Мятежники помнят, что ваше поселение пыталось им помешать, из-за чего отношения были ухудшены.</Quest_SuppressionRebelplayerAffect>
+	<Quest_SuppressionRebelNonplayerAffect>Ваше поселение не участвовало в этом.</Quest_SuppressionRebelNonplayerAffect>
+	<Quest_SuppressionRebellionNewFactionTitle>Мятежники проиграли</Quest_SuppressionRebellionNewFactionTitle>
+	<Quest_SuppressionRebellionNewFactionDesc>Мятежники не смогли одолеть {0} и из-за чего выжившие образовали свою фракцию и назвались {1}</Quest_SuppressionRebellionNewFactionDesc>
+	<CaravanArrivalAction_EnterToRebelMap_AlreadyStart>Мятеж уже начался</CaravanArrivalAction_EnterToRebelMap_AlreadyStart>
+
 </LanguageData>

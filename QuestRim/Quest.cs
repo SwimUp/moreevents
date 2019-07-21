@@ -63,7 +63,7 @@ namespace QuestRim
         public Faction Faction;
         public LookTargets Target;
 
-        public List<Thing> Rewards = new List<Thing>();
+        public List<Thing> Rewards;
         public List<QuestOption> Options;
 
         public int TicksToPass = 60000;
@@ -77,6 +77,11 @@ namespace QuestRim
         protected void ResetIcon()
         {
             expandingIcon = null;
+        }
+
+        public virtual void PostMapRemove(Map map)
+        {
+
         }
 
         public virtual void TakeQuestByQuester(QuestPawn quester, bool notify = true)

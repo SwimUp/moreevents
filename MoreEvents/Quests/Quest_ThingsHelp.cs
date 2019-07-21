@@ -28,6 +28,11 @@ namespace MoreEvents.Quests
 
         public Dictionary<ThingDef, int> RequestItems = new Dictionary<ThingDef, int>();
 
+        public Quest_ThingsHelp()
+        {
+
+        }
+
         public override void DrawAdditionalOptions(Rect rect)
         {
             Rect rect2 = rect;

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,48 @@ namespace QuestRim
 {
     public static class QuestsHandler
     {
+        public static int QuestsCount => DefDatabase<QuestDef>.DefCount;
+
+        public static QuestSite CreateSiteFor(this Quest quest, int tile, Faction faction)
+        {
+            QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(WorldObjectDefOfLocal.QuestPlace);
+            questPlace.Tile = tile;
+            questPlace.SetFaction(faction);
+            questPlace.Init(quest);
+            quest.Site = questPlace;
+            quest.Target = questPlace;
+
+            return questPlace;
+        }
+
+        public static bool TryGiveRandomQuestsTo(Pawn pawn, int min, int max)
+        {
+            if (QuestsCount < max)
+                return false;
+
+            if (min < 0)
+                return false;
+
+            int count = Rand.Range(min, max);
+
+            return TryGiveRandomQuestTo(pawn, count);
+        }
+
         public static bool TryGiveRandomQuestTo(Pawn pawn)
+        {
+            return TryGiveRandomQuestTo(pawn, 1);
+        }
+
+        public static bool TryGiveRandomQuestTo(Pawn pawn, int giveCount)
         {
             Dictionary<IncidentDef, int> lastFireTicks = Find.World.StoryState.lastFireTicks;
             int ticksGame = Find.TickManager.TicksGame;
 
             List<QuestDef> allQuests = DefDatabase<QuestDef>.AllDefsListForReading;
+
+            if (allQuests.Count < giveCount)
+                return false;
+
             List<QuestDef> allQuestsToFire = new List<QuestDef>();
 
             QuestPawn questPawn = null;
@@ -24,7 +61,6 @@ namespace QuestRim
             {
                 if (potentialQuest.Incident == null)
                 {
-                    Log.Warning($"{potentialQuest.defName} has null incident");
                     continue;
                 }
 
@@ -50,11 +86,28 @@ namespace QuestRim
             if (allQuestsToFire.Count == 0)
                 return false;
 
-            if(allQuestsToFire.TryRandomElementByWeight(w => w.Commonality, out QuestDef result))
+            for(int i = 0; i < giveCount; i++)
+            {
+                if (allQuestsToFire.Count == 0)
+                    return true;
+
+                if (allQuestsToFire.TryRandomElementByWeight(w => w.Commonality, out QuestDef result))
+                {
+                    TryGiveQuestTo(pawn, result);
+                    allQuestsToFire.Remove(result);
+                }
+            }
+            return false;
+        }
+
+        public static bool TryGiveQuestTo(Pawn pawn, QuestDef questDef)
+        {
+            Quest quest = (Quest)Activator.CreateInstance(questDef.Quest);
+            if(quest.TryGiveQuestTo(pawn, questDef))
             {
                 FiringIncident inc = new FiringIncident
                 {
-                    def = result.Incident,
+                    def = questDef.Incident,
                     parms = new IncidentParms()
                     {
                         forced = false,
@@ -63,8 +116,7 @@ namespace QuestRim
                 };
                 Find.World.StoryState.Notify_IncidentFired(inc);
 
-                Quest quest = (Quest)Activator.CreateInstance(result.Quest);
-                return quest.TryGiveQuestTo(pawn, result);
+                return true;
             }
 
             return false;

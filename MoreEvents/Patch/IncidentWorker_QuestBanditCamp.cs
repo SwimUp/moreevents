@@ -88,7 +88,7 @@ namespace MoreEvents.Patch
             return ThingSetMakerDefOf.Reward_StandardByDropPod.root.Generate(parms);
         }
 
-        private bool TryFindFactions(out Faction alliedFaction, out Faction enemyFaction)
+        public bool TryFindFactions(out Faction alliedFaction, out Faction enemyFaction)
         {
             if ((from x in Find.FactionManager.AllFactions
                  where !x.def.hidden && !x.defeated && !x.IsPlayer && !x.HostileTo(Faction.OfPlayer) && CommonHumanlikeEnemyFactionExists(Faction.OfPlayer, x) && !AnyQuestExistsFrom(x)
@@ -102,7 +102,7 @@ namespace MoreEvents.Patch
             return false;
         }
 
-        private bool AnyQuestExistsFrom(Faction faction)
+        public static bool AnyQuestExistsFrom(Faction faction)
         {
             List<Site> sites = Find.WorldObjects.Sites;
             for (int i = 0; i < sites.Count; i++)

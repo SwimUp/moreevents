@@ -146,17 +146,7 @@ namespace MoreEvents.Quests
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             GenerateRewards(GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);
 
-            QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);
-            questPlace.Tile = result;
-            questPlace.SetFaction(alliedFaction);
-            questPlace.Init(this);
-            questPlace.RemoveAfterLeave = false;
-
-            Target = questPlace;
             TargetPawn = enemyFaction.leader;
-            Site = questPlace;
-
-            Find.WorldObjects.Add(questPlace);
 
             ShowInConsole = false;
 
@@ -164,6 +154,24 @@ namespace MoreEvents.Quests
             QuestsManager.Communications.AddQuest(this);
 
             return true;
+        }
+
+        public override void TakeQuestByQuester(QuestPawn quester, bool notify = true)
+        {
+            TileFinder.TryFindPassableTileWithTraversalDistance(Find.AnyPlayerHomeMap.Tile, 8, 20, out int result);
+
+            QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);
+            questPlace.Tile = result;
+            questPlace.SetFaction(Faction);
+            questPlace.Init(this);
+            questPlace.RemoveAfterLeave = false;
+
+            Target = questPlace;
+            Site = questPlace;
+
+            Find.WorldObjects.Add(questPlace);
+
+            base.TakeQuestByQuester(quester, notify);
         }
 
         private bool TryResolveTwoFactions(out Faction alliedFaction, out Faction enemyFaction)

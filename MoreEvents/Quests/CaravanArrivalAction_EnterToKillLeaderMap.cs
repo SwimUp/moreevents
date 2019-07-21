@@ -19,9 +19,9 @@ namespace MoreEvents.Quests
         public Quest_KillLeader Quest => quest;
         private Quest_KillLeader quest;
 
-        public override string Label => "Quest_MissingPeople_CardLabel".Translate();
+        public override string Label => "Quest_KillLeader_CardLabel".Translate();
 
-        public override string ReportString => "Quest_MissingPeople_CardLabel".Translate();
+        public override string ReportString => "Quest_KillLeader_CardLabel".Translate();
 
         public CaravanArrivalAction_EnterToKillLeaderMap()
         {

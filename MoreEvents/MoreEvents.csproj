@@ -82,6 +82,7 @@
     <Compile Include="Communications\EmailOption_PawnOfferYes.cs" />
     <Compile Include="Communications\CommOption_PawnOfferYes.cs" />
     <Compile Include="Communications\MessageAnwer_OpenDialog.cs" />
+    <Compile Include="Communications\QuestOption_IncreaseReward.cs" />
     <Compile Include="Communications\TimeComp.cs" />
     <Compile Include="Constellations\Actions\ConstellationAction.cs" />
     <Compile Include="Constellations\Conditions\ConstellationCondition.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Events\IncidentWorker_Quest_KillLeader.cs" />
     <Compile Include="Events\IncidentWorker_Quest_MissingPeople.cs" />
     <Compile Include="Events\IncidentWorker_Quest_ResourceHelp.cs" />
+    <Compile Include="Events\IncidentWorker_Quest_SuppressionRebellion.cs" />
     <Compile Include="Events\IncidentWorker_RaidEnemyWithAnimals.cs" />
     <Compile Include="Events\IncidentWorker_MountainAir.cs" />
     <Compile Include="Events\IncidentWorker_SummerSolstice.cs" />
@@ -229,6 +231,7 @@
     <Compile Include="QuestDefOfLocal.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillLeaderMap.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMap.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_EnterToRebelMap.cs" />
     <Compile Include="Quests\CaravanArrivalAction_TransferMissingPeople.cs" />
     <Compile Include="Quests\CaravanArrivalAction_CheckMissingPeople.cs" />
     <Compile Include="Quests\CaravanArrivalAction_HelpWithBuildings.cs" />
@@ -236,6 +239,7 @@
     <Compile Include="Quests\Quest_BuildNewBase.cs" />
     <Compile Include="Quests\Quest_KillLeader.cs" />
     <Compile Include="Quests\Quest_MissingPeople.cs" />
+    <Compile Include="Quests\Quest_SuppressionRebellion.cs" />
     <Compile Include="Quests\Quest_ThingsHelp.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
     <Compile Include="Settings.cs" />

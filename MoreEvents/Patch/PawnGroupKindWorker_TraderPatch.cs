@@ -15,11 +15,11 @@ namespace MoreEvents.Patch
     {
         static void Postfix(Pawn __result)
         {
-            if (Rand.Chance(0.15f))
+            if (Rand.Chance(0.45f))
             {
                 if (__result != null)
                 {
-                    QuestsHandler.TryGiveRandomQuestTo(__result);
+                    QuestsHandler.TryGiveRandomQuestsTo(__result, 1, 2);
                 }
             }
         }

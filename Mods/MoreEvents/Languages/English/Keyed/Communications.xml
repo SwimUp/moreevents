@@ -107,4 +107,13 @@
 	<CommunicationDialog_PocahontasTitle>Offer declined</CommunicationDialog_PocahontasTitle>
 	<CommunicationDialog_Pocahontas>You did not accept a co-residence proposal, which is why your relationship with the {0} faction has been reduced.</CommunicationDialog_Pocahontas>
 
+	<InspectString_Timer>{0} days left</InspectString_Timer>
+	<EnterToMapQuest_Option>Start quest</EnterToMapQuest_Option>
+	<Quest_KillLeaderTitle>Victory</Quest_KillLeaderTitle>
+	<Quest_KillLeaderDesc>The enemy leader is dead, you can form a caravan.</Quest_KillLeaderDesc>
+	<LeaderStillAlive>The enemy leader is still alive. ({0})</LeaderStillAlive>
+
+	<QuestOption_IncreaseReward_Label>Try to increase the reward ({0} - {1}) </QuestOption_IncreaseReward_Label>
+	<QuestOption_IncreaseReward_Level>Insufficient skill level {0}, required {1} (actual {2})</QuestOption_IncreaseReward_Level>
+
 </LanguageData>

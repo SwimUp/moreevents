@@ -27,8 +27,17 @@ namespace MoreEvents.Events
             if (!settings.Active)
                 return false;
 
-            if (GetFaction() == null)
+            Faction faction = GetFaction();
+            if (faction == null)
                 return false;
+
+            foreach (var quest in QuestsManager.Communications.Quests)
+            {
+                if (quest.Faction == faction && quest is Quest_ThingsHelp)
+                {
+                    return false;
+                }
+            }
 
             return true;
         }

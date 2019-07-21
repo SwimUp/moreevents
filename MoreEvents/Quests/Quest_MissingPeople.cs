@@ -38,7 +38,6 @@ namespace MoreEvents.Quests
 
         public Quest_MissingPeople()
         {
-
         }
 
         public Quest_MissingPeople(int daysLeft, int minDays = 5, int passedDays = 8)
@@ -46,6 +45,7 @@ namespace MoreEvents.Quests
             TicksToPass = daysLeft * 60000;
             this.minDays = minDays;
             this.passedDays = passedDays;
+
         }
 
         public override bool TryGiveQuestTo(Pawn questPawn, QuestDef questDef)
@@ -55,7 +55,7 @@ namespace MoreEvents.Quests
                 return false;
 
             Faction = questPawn.Faction;
-            Map map = questPawn.Map;
+            Map map = questPawn.Map ?? Find.AnyPlayerHomeMap;
 
             if (!IncidentWorker_Quest_MissingPeople.TryGetNewTile(map.Tile, out int newTile))
                 return false;
@@ -67,6 +67,18 @@ namespace MoreEvents.Quests
 
             int additionalValue = passedDays * 15;
             GenerateRewards(GetQuestThingFilter(), new FloatRange(700 + additionalValue, 1400 + additionalValue), new IntRange(3, 8), null, null);
+
+            ShowInConsole = false;
+
+            QuestsManager.Communications.AddQuestPawn(questPawn, this);
+            QuestsManager.Communications.AddQuest(this);
+
+            return true;
+        }
+
+        public override void TakeQuestByQuester(QuestPawn quester, bool notify = true)
+        {
+            IncidentWorker_Quest_MissingPeople.TryGetNewTile(quester.Pawn.Tile, out int newTile);
 
             LookTargets target = new LookTargets(newTile);
             Target = target;
@@ -81,12 +93,7 @@ namespace MoreEvents.Quests
 
             Find.WorldObjects.Add(questPlace);
 
-            ShowInConsole = false;
-
-            QuestsManager.Communications.AddQuestPawn(questPawn, this);
-            QuestsManager.Communications.AddQuest(this);
-
-            return true;
+            base.TakeQuestByQuester(quester, notify);
         }
 
         public override void Notify_CaravanFormed(QuestSite site, Caravan caravan)

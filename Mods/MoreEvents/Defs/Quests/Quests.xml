@@ -18,5 +18,11 @@
 	<Commonality>0.12</Commonality>
 	<Incident>Quest_KillLeader</Incident>
   </QuestRim.QuestDef>
-
+  
+  <QuestRim.QuestDef>
+    <defName>Quest_BanditCamp</defName>
+	<Quest>MoreEvents.Patch.Quest_BanditCamp</Quest>
+	<Commonality>0.33</Commonality>
+	<Incident>Quest_BanditCamp</Incident>
+  </QuestRim.QuestDef>
 </Defs>

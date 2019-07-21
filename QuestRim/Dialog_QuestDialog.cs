@@ -68,8 +68,10 @@ namespace QuestRim
             int row = 0;
             Rect buttonRect = new Rect(0, 0, 410, 20);
             Text.Anchor = TextAnchor.MiddleCenter;
-            foreach (var quest in QuestPawn.Quests)
+            for(int i = 0; i < QuestPawn.Quests.Count; i++)
             {
+                Quest quest = QuestPawn.Quests[i];
+
                 if(row == elemInRow)
                 {
                     buttonRect.x = 430;
@@ -119,7 +121,7 @@ namespace QuestRim
                 Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.UpperLeft;
 
-                Widgets.LabelScrollable(new Rect(0, 185, inRect.width, 180), currentQuest.Description, ref commInfoSlider, false, false);
+                Widgets.LabelScrollable(new Rect(0, 185, inRect.width, 130), currentQuest.Description, ref commInfoSlider, false, false);
 
                 GUI.color = MenuSectionBGBorderColor;
                 Widgets.DrawLineHorizontal(0, 320, inRect.width);
@@ -154,17 +156,21 @@ namespace QuestRim
 
             Rect startRect = rect;
             startRect.height = 35;
-            foreach (var option in currentQuest.Options)
+            for(int i = 0; i < currentQuest.Options.Count; i++)
             {
-                if (DrawCustomButton(startRect, option.Label, Color.white))
+                QuestOption option = currentQuest.Options[i];
+
+                if (option.Enable)
                 {
-                    option.DoAction(currentQuest, Speaker, Quester);
+                    if (DrawCustomButton(startRect, option.Label, option.TextColor))
+                    {
+                        option.DoAction(currentQuest, Speaker, Quester);
+                    }
+                    startRect.y += 40;
                 }
-                startRect.y += 40;
             }
 
             Text.Anchor = TextAnchor.UpperLeft;
-
         }
 
         public void DrawQuestRewards(Rect rect, Quest quest)
@@ -172,8 +178,10 @@ namespace QuestRim
             Text.Font = GameFont.Small;
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(rect);
-            foreach (var reward in quest.Rewards)
+            for(int i = 0; i < quest.Rewards.Count; i++)
             {
+                Thing reward = quest.Rewards[i];
+
                 listing.Label(reward.Label, 25, reward.DescriptionFlavor);
             }
             listing.End();
