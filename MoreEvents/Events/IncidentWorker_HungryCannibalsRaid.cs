@@ -35,7 +35,11 @@ namespace MoreEvents.Events
                 forceOneIncap = true
             };
 
-            IEnumerable<Pawn> pawns = PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms);
+            List<Pawn> pawns = PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms).ToList();
+
+            if (pawns.Count == 0)
+                return false;
+
             LordJob lordJob = new LordJob_AssaultColony(tribalFaction, canKidnap: true, canTimeoutOrFlee: false);
             Lord lord = LordMaker.MakeNewLord(tribalFaction, lordJob, map);
             lord.numPawnsLostViolently = int.MaxValue;
