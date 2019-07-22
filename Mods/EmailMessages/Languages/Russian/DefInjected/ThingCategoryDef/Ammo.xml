@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <AmmoHarpoonArrowPack.label>Пачка стрел</AmmoHarpoonArrowPack.label>
+  <AmmoHarpoonArrowPack.description>Массивные стрелы для гарпуна</AmmoHarpoonArrowPack.description>
+  
+  <AmmoTrashBombsPack.label>Мусорная бомба</AmmoTrashBombsPack.label>
+  <AmmoTrashBombsPack.description>Большой шар с мощным магнитом внутри и окруженный разного рода хламом. Если деактивировать магнит, то осколки разлетаются во все стороны продырявливая все вокруг</AmmoTrashBombsPack.description>
+ 
+  <AmmoStoneArrows.label>Большие стрелы</AmmoStoneArrows.label>
+  <AmmoStoneArrows.description>Большая стрела из камня и стали, предназначенная для баллист.</AmmoStoneArrows.description>
+ 
+  <AmmoStoneBalls.label>Каменный шар</AmmoStoneBalls.label>
+  <AmmoStoneBalls.description>Массивный каменный шар, предназначенный для катапульт.</AmmoStoneBalls.description>
+ 
+</LanguageData>

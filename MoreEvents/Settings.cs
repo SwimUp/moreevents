@@ -71,7 +71,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 40;
+        private static int totalSettings = 41;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -409,109 +409,117 @@ namespace MoreEvents
 
         private void ReloadSettings()
         {
+            Log.Message($"New settings found, reload");
+
             EventsSettings = new Dictionary<string, EventSettings>()
+       {
             {
+                "ShipCrash", new EventSettings("ShipCrash")
                 {
-                    "ShipCrash", new EventSettings("ShipCrash")
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
                     {
-                        Active = true,
-                        Parameters = new Dictionary<string, Parameter>()
-                        {
-                            {"MinParts", new Parameter("MinParts", "4") },
-                            {"MaxParts", new Parameter("MaxParts", "10") },
-                            {"ShipCargo_Mining_MinSupply", new Parameter("ShipCargo_Mining_MinSupply", "5") },
-                            {"ShipCargo_Mining_MaxSupply", new Parameter("ShipCargo_Mining_MaxSupply", "19") },
-                            {"ShipCargo_Food_MinSupply", new Parameter("ShipCargo_Food_MinSupply", "5") },
-                            {"ShipCargo_Food_MaxSupply", new Parameter("ShipCargo_Food_MaxSupply", "19") },
-                            {"ShipCargo_Complex_MinSupply", new Parameter("ShipCargo_Complex_MinSupply", "5") },
-                            {"ShipCargo_Complex_MaxSupply", new Parameter("ShipCargo_Complex_MaxSupply", "19") },
-                            {"ShipCargo_Armory_MinSupply", new Parameter("ShipCargo_Armory_MinSupply", "5") },
-                            {"ShipCargo_Armory_MaxSupply", new Parameter("ShipCargo_Armory_MaxSupply", "12") },
-                            {"ShipCargo_Living_MinSupply", new Parameter("ShipCargo_Living_MinSupply", "1") },
-                            {"ShipCargo_Living_MaxSupply", new Parameter("ShipCargo_Living_MaxSupply", "5") }
-                        }
+                        {"MinParts", new Parameter("MinParts", "4") },
+                        {"MaxParts", new Parameter("MaxParts", "10") },
+                        {"ShipCargo_Mining_MinSupply", new Parameter("ShipCargo_Mining_MinSupply", "5") },
+                        {"ShipCargo_Mining_MaxSupply", new Parameter("ShipCargo_Mining_MaxSupply", "19") },
+                        {"ShipCargo_Food_MinSupply", new Parameter("ShipCargo_Food_MinSupply", "5") },
+                        {"ShipCargo_Food_MaxSupply", new Parameter("ShipCargo_Food_MaxSupply", "19") },
+                        {"ShipCargo_Complex_MinSupply", new Parameter("ShipCargo_Complex_MinSupply", "5") },
+                        {"ShipCargo_Complex_MaxSupply", new Parameter("ShipCargo_Complex_MaxSupply", "19") },
+                        {"ShipCargo_Armory_MinSupply", new Parameter("ShipCargo_Armory_MinSupply", "5") },
+                        {"ShipCargo_Armory_MaxSupply", new Parameter("ShipCargo_Armory_MaxSupply", "12") },
+                        {"ShipCargo_Living_MinSupply", new Parameter("ShipCargo_Living_MinSupply", "1") },
+                        {"ShipCargo_Living_MaxSupply", new Parameter("ShipCargo_Living_MaxSupply", "5") }
                     }
-                },
-                {
-                    "Supernova", new EventSettings("Supernova")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "SuperHeatWave", new EventSettings("SuperHeatWave")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "MechanoidPortal", new EventSettings("MechanoidPortal")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "Disease_NeurofibromatousWorms", new EventSettings("Disease_NeurofibromatousWorms")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "Disease_Fibrodysplasia", new EventSettings("Disease_Fibrodysplasia")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "DestroyRoad", new EventSettings("DestroyRoad")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "BoulderMassHit", new EventSettings("BoulderMassHit")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "BeetleRush", new EventSettings("BeetleRush")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "RadiationFon", new EventSettings("RadiationFon")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "IceStorm", new EventSettings("IceStorm")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                    "HeavyAir", new EventSettings("HeavyAir")
-                    {
-                        Active = true
-                    }
-                },
-                {
-                "SandStorm", new EventSettings("SandStorm")
+                }
+            },
+            {
+                "Supernova", new EventSettings("Supernova")
                 {
                     Active = true
                 }
             },
             {
-            "MassiveFire", new EventSettings("MassiveFire")
+                "SuperHeatWave", new EventSettings("SuperHeatWave")
+                {
+                    Active = true
+                }
+            },
+            {
+                "MechanoidPortal", new EventSettings("MechanoidPortal")
+                {
+                    Active = true
+                }
+            },
+            {
+                "Disease_NeurofibromatousWorms", new EventSettings("Disease_NeurofibromatousWorms")
+                {
+                    Active = true
+                }
+            },
+            {
+                "Disease_Fibrodysplasia", new EventSettings("Disease_Fibrodysplasia")
+                {
+                    Active = true
+                }
+            },
+            {
+                "DestroyRoad", new EventSettings("DestroyRoad")
+                {
+                    Active = true
+                }
+            },
+            {
+                "BoulderMassHit", new EventSettings("BoulderMassHit")
+                {
+                    Active = true
+                }
+            },
+            {
+                "BeetleRush", new EventSettings("BeetleRush")
+                {
+                    Active = true
+                }
+            },
+            {
+                "RadiationFon", new EventSettings("RadiationFon")
+                {
+                    Active = true
+                }
+            },
+            {
+                "IceStorm", new EventSettings("IceStorm")
+                {
+                    Active = true
+                }
+            },
+            {
+                "HeavyAir", new EventSettings("HeavyAir")
                 {
                     Active = true
                 }
             },
             {
             "LeanAtmosphere", new EventSettings("LeanAtmosphere")
+                {
+                    Active = true
+                }
+            },
+            {
+            "NoSun", new EventSettings("NoSun")
+                {
+                    Active = true
+                }
+            },
+            {
+            "SandStorm", new EventSettings("SandStorm")
+                {
+                    Active = true
+                }
+            },
+            {
+            "MassiveFire", new EventSettings("MassiveFire")
                 {
                     Active = true
                 }
@@ -524,12 +532,6 @@ namespace MoreEvents
             },
             {
             "DenseAtmosphere", new EventSettings("DenseAtmosphere")
-                {
-                    Active = true
-                }
-            },
-            {
-            "NoSun", new EventSettings("NoSun")
                 {
                     Active = true
                 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<MakeAmmo_HarpoonArrow.label>Сделать патроны для гарпуна x10</MakeAmmo_HarpoonArrow.label>
+	<MakeAmmo_HarpoonArrow.description>Сделать 10 стрел для гарпуна</MakeAmmo_HarpoonArrow.description>
+	<MakeAmmo_HarpoonArrow.jobString>Делает патроны для гарпуна</MakeAmmo_HarpoonArrow.jobString>
+
+	<MakeAmmo_TrashBomb.label>Сделать снаряды для хламотрона x2</MakeAmmo_TrashBomb.label>
+	<MakeAmmo_TrashBomb.description>Сделать 2 снаряда для хламотрона</MakeAmmo_TrashBomb.description>
+	<MakeAmmo_TrashBomb.jobString>Делает снаряды для хламотрона</MakeAmmo_TrashBomb.jobString>
+
+	<MakeStoneBall.label>Сделать снаряды для катапульты х2</MakeStoneBall.label>
+	<MakeStoneBall.description>Сделать массивные каменные шары для катапульты</MakeStoneBall.description>
+	<MakeStoneBall.jobString>Делает снаряды для катапульты</MakeStoneBall.jobString>
+
+	<MakeBigStoneArrow.label>Сделать стрелы для баллисты х2</MakeBigStoneArrow.label>
+	<MakeBigStoneArrow.description>Сделать большие стрелы для баллисты</MakeBigStoneArrow.description>
+	<MakeBigStoneArrow.jobString>Делает снаряды для баллисты</MakeBigStoneArrow.jobString>
+	
+</LanguageData>

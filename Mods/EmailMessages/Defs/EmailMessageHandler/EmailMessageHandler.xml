@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<EmailMessages.EmailMessageDef>
+		<defName>Message1</defName>
+		<EmailText>Hello, we are sincerely grateful for your long-term cooperation with us. We hope that our union will last a long time, and will work closely with you hand in hand. May we survive all the hardships, the ups and the losses, we will continue to stick together. We wish you growth and prosperity.
+		</EmailText>
+		<SenderAvaliable>Ally</SenderAvaliable>
+		<MinRefiredDays>90</MinRefiredDays>
+		<Subject>Friendly wish</Subject>
+		<Commonality>0.34</Commonality>
+		
+	</EmailMessages.EmailMessageDef>
+ 
+</Defs>

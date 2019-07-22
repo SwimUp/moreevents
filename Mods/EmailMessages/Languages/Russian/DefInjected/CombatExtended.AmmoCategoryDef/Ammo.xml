@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <HarpoonArrow.label>Стрелы для гарпуна</HarpoonArrow.label>
+  <HarpoonArrow.description>Массивные стрелы для гарпуна</HarpoonArrow.description>
+  
+  <TrashBombs.label>Мусорная бомба</TrashBombs.label>
+  <TrashBombs.description>Большой шар с мощным магнитом внутри и окруженный разного рода хламом. Если деактивировать магнит, то осколки разлетаются во все стороны продырявливая все вокруг</TrashBombs.description>
+  
+  <MedeivalProjectiles.label>Средневековые снаряды</MedeivalProjectiles.label>
+  <MedeivalProjectiles.description>Категория боеприпасов для средневекового оружия</MedeivalProjectiles.description>
+  
+</LanguageData>

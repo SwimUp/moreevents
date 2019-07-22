@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapTools", "MapTools\MapToo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestRim", "QuestRim\QuestRim.csproj", "{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMessages", "EmailMessages\EmailMessages.csproj", "{65512406-024E-4486-AC55-FBE952D44CAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836B1EB5-9FFD-4B98-992F-04B60C62C0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65512406-024E-4486-AC55-FBE952D44CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65512406-024E-4486-AC55-FBE952D44CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65512406-024E-4486-AC55-FBE952D44CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65512406-024E-4486-AC55-FBE952D44CAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

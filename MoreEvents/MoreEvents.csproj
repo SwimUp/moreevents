@@ -7,7 +7,7 @@
     <ProjectGuid>{7220686B-A79D-4048-BF76-2D9793488331}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MoreEvents</RootNamespace>
+    <RootNamespace>RimOverhaul</RootNamespace>
     <AssemblyName>MoreEvents</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -212,6 +212,8 @@
     <Compile Include="MentalBreaks\MentalStateDefOfLocal.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalStateWorker_PositiveCharge.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalState_PositiveCharge.cs" />
+    <Compile Include="RimOverhaulModule.cs" />
+    <Compile Include="ModulesHandler.cs" />
     <Compile Include="MoreEventsMod.cs" />
     <Compile Include="Patch\AddHumanlikeOrdersPatch.cs" />
     <Compile Include="Patch\ExitCells_Patch.cs" />

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Ammo_HarpoonArrow.label>Harpoon arrow</Ammo_HarpoonArrow.label>
+  <Ammo_HarpoonArrow.description>Massive arrows for harpoon</Ammo_HarpoonArrow.description>
+  
+  <Ammo_TrashBomb.label>Trash bomb</Ammo_TrashBomb.label>
+  <Ammo_TrashBomb.description>A large ball with a powerful magnet inside and surrounded by all sorts of rubbish. If you deactivate the magnet, then the fragments fly apart in all directions, making holes all around.</Ammo_TrashBomb.description>
+
+  <Ammo_StoneBall.label>Stone ball</Ammo_StoneBall.label>
+  <Ammo_StoneBall.description>A massive stone ball designed for catapults.</Ammo_StoneBall.description>
+
+  <Ammo_BigStoneArrow.label>Big arrow</Ammo_BigStoneArrow.label>
+  <Ammo_BigStoneArrow.description>A large arrow made of stone and steel intended for a ballist.</Ammo_BigStoneArrow.description>
+
+
+</LanguageData>

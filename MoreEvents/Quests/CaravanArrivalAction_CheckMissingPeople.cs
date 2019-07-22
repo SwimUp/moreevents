@@ -85,7 +85,7 @@ namespace MoreEvents.Quests
                 TryGetNewTile(mapParent.Tile, out int newTile);
                 mapParent.Tile = newTile;
 
-                Find.LetterStack.ReceiveLetter("Quest_MissingPeople_CheckFailTitle".Translate(), "Quest_MissingPeople_CheckFail".Translate(), LetterDefOf.NegativeEvent);
+                Find.LetterStack.ReceiveLetter("Quest_MissingPeople_CheckFailTitle".Translate(), "Quest_MissingPeople_CheckFail".Translate(), LetterDefOf.NegativeEvent, mapParent);
             }
         }
 

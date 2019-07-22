@@ -22,11 +22,13 @@ namespace MoreEvents
 
             harmonyInstance = HarmonyInstance.Create("net.funkyshit.moreeventsmod");
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+
+            ModulesHandler.TryInjectModules();
         }
 
         public override string SettingsCategory()
         {
-            return "MoreEventsMod";
+            return "RimOverhaul";
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
