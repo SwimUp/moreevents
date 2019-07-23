@@ -92,4 +92,8 @@
 	<Quest_SuppressionRebellionNewFactionDesc>Мятежники не смогли одолеть {0} и из-за чего выжившие образовали свою фракцию и назвались {1}</Quest_SuppressionRebellionNewFactionDesc>
 	<CaravanArrivalAction_EnterToRebelMap_AlreadyStart>Мятеж уже начался</CaravanArrivalAction_EnterToRebelMap_AlreadyStart>
 
+	<Quest_KillOrder_CardLabel>Заказ на убийство</Quest_KillOrder_CardLabel>
+	<Quest_KillOrder_Description>{0} просит устранить {1} из фракции {2} за вознаграждение. Он отметил место на мировой карте.</Quest_KillOrder_Description>
+	<Quest_KillOrder_PlaceLabel>Местонахождение цели</Quest_KillOrder_PlaceLabel>
+
 </LanguageData>

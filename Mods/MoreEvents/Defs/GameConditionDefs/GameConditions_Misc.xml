@@ -163,12 +163,13 @@
   </GameConditionDef>
   
   <GameConditionDef>
-    <defName>SummerSolstice</defName>
-    <conditionClass>MoreEvents.Events.GameCondition_Psychogas</conditionClass>
-    <label>Summer solstice</label>
-    <description>Midsummer, the longest day</description>
-    <endMessage>Long summer day is over</endMessage>
+    <defName>SpaceBattle</defName>
+    <conditionClass>RimOverhaul.Events.GameCondition_SpaceBattle</conditionClass>
+    <label>Space battle</label>
+    <description>Not far from your planet, two unknown factions staged a space battle. During this time, spaceships and projectiles may collapse on the planet.</description>
+    <endMessage>The battle subsides</endMessage>
 	<canBePermanent>false</canBePermanent>
   </GameConditionDef>
+ 
  
 </Defs>

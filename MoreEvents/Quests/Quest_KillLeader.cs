@@ -58,6 +58,20 @@ namespace MoreEvents.Quests
             pawns[0].GetLord().AddPawn(TargetPawn);
         }
 
+        public override string GetDescription()
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach(var reward in Rewards)
+            {
+                builder.AppendLine(reward.LabelCap);
+            }
+
+            string text = "Quest_KillLeader_CardLabel".Translate();
+            text += $"\n{"Quest_KillOrderTargetInfo".Translate(TargetPawn.Name.ToStringFull, builder.ToString())}";
+
+            return text;
+        }
+
         public override void SiteTick()
         {
             if (Find.TickManager.TicksGame % 500 == 0)

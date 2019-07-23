@@ -49,6 +49,7 @@ namespace EmailMessages
             if (TryGetFaction(msg.SenderAvaliable, out Faction faction))
             {
                 EmailMessage message = playerBox.FormMessageFrom(faction, msg.EmailText, msg.Subject);
+                message.Answers = msg.Options;
 
                 playerBox.SendMessage(message);
 
@@ -76,9 +77,9 @@ namespace EmailMessages
                         continue;
                 }
 
-                if(TryGetFaction(message.SenderAvaliable, out Faction faction))
+                if (TryGetFaction(def.SenderAvaliable, out Faction faction))
                 {
-                    toSend.Add(message);
+                    toSend.Add(def);
                 }
             }
 
@@ -95,13 +96,12 @@ namespace EmailMessages
 
         private bool TryGetFaction(FactionRelationKind kind, out Faction faction)
         {
-            if ((from f in Find.FactionManager.AllFactionsVisible where f.PlayerRelationKind == kind select f).TryRandomElement(out faction))
+            if ((from f in Find.FactionManager.AllFactionsVisible where f != Faction.OfPlayer && f.PlayerRelationKind == kind select f).TryRandomElement(out faction))
             {
                 return true;
             }
             return false;
         }
-
 
         public override void ExposeData()
         {

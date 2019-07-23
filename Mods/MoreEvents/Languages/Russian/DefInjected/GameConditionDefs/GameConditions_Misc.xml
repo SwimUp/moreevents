@@ -57,4 +57,9 @@
   <Psychogas.description>Кто-то выпустил тонны изменяющих разум химикатов в воздух, поэтому все, кто находяться на улице будут терять рассудок.</Psychogas.description>
   <Psychogas.endMessage>Большая часть газов испаряется. Снаружи снова безопасно.</Psychogas.endMessage>  
   
+  <SpaceBattle.label>Космическая битва</SpaceBattle.label>
+  <SpaceBattle.description>Две неизвестные фракции устроили космическую битву недалеко от вашей планеты. В течении этого времени на планету будут падать отсеки кораблей, в которых может быть что-нибудь интересное, а также 
+могут падать промахнувшиеся снаряды.</SpaceBattle.description>  
+  <SpaceBattle.endMessage>Кажется битва утихла</SpaceBattle.endMessage>
+  
 </LanguageData>

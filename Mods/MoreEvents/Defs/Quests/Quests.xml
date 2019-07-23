@@ -25,4 +25,12 @@
 	<Commonality>0.33</Commonality>
 	<Incident>Quest_BanditCamp</Incident>
   </QuestRim.QuestDef>
+  
+  <QuestRim.QuestDef>
+    <defName>Quest_KillOrder</defName>
+	<Quest>MoreEvents.Quests.Quest_KillOrder</Quest>
+	<Commonality>0.33</Commonality>
+	<Incident>Quest_KillOrder</Incident>
+  </QuestRim.QuestDef>
+  
 </Defs>

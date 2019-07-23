@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using QuestRim;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,7 @@ namespace EmailMessages
         public int MinRefiredDays;
 
         public float Commonality;
+
+        public List<EmailMessageOption> Options;
     }
 }

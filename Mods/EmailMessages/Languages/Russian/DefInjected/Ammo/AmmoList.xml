@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-  
-  <MakeAmmo_HarpoonAmmo.label>Сделать патроны для гарпуна x10</MakeAmmo_HarpoonAmmo.label>
-  <MakeAmmo_HarpoonAmmo.description>Сделать 10 стрел для гарпуна</MakeAmmo_HarpoonAmmo.description>
-  <MakeAmmo_HarpoonAmmo.jobString> </MakeAmmo_HarpoonAmmo.jobString>
-  
-</Defs>

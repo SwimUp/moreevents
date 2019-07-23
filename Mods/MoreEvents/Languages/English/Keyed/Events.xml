@@ -216,4 +216,6 @@ Redirecting energy to the control shaft --> OK</DoomsdayTerminal_PowerActivating
 	<SecurityDoomsdayOffTitle>Systems disabled</SecurityDoomsdayOffTitle>
 	<SecurityDoomsdayOff>You were able to disable the security systems of doomsday weapons. Now you can safely destroy it.</SecurityDoomsdayOff>
 	
+	<GameCondition_SpaceBattleTitle>From the sky fell ship bay</GameCondition_SpaceBattleTitle>
+	
 </LanguageData>

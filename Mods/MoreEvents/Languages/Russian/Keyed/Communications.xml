@@ -115,4 +115,9 @@
 	<QuestOption_IncreaseReward_Label>Попробовать увеличить награду ({0} - {1}) </QuestOption_IncreaseReward_Label>
 	<QuestOption_IncreaseReward_Level>Недостаточный уровень навыка {0}, требуется {1} (сейчас {2})</QuestOption_IncreaseReward_Level>
 
+	<OrderedTargetStillAlive>Указанная цель до сих пор жива. ({0})</OrderedTargetStillAlive>
+	<Quest_KillOrderTitle>Заказ выполнен</Quest_KillOrderTitle>
+	<Quest_KillOrderDesc>Вы полнили заказ, устранив {0}.</Quest_KillOrderDesc>
+	<Quest_KillOrderTargetInfo>Цель: {0}\nНаграда:\n {1}</Quest_KillOrderTargetInfo>
+
 </LanguageData>

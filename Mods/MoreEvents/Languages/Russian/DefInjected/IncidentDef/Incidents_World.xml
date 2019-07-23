@@ -175,5 +175,16 @@
   <Quest_SuppressionRebellion.letterLabel>Мятеж</Quest_SuppressionRebellion.letterLabel>
   <Quest_SuppressionRebellion.letterText>{0} сообщает, что в поселении {1} фракции {2} начался мятеж. Мятежники требуют независимости. Они устроили множественные погромы, убили несколько мирных жителей. Воины поселения {1} смогли оттеснить их от поселения, но они набирают силы и будут нападать снова.
 {0} просит вас помочь подавить мятеж.</Quest_SuppressionRebellion.letterText>  
+ 
+  <SpaceBattle.label>Космическая битва</SpaceBattle.label>
+  <SpaceBattle.letterLabel>Космическая битва</SpaceBattle.letterLabel>
+  <SpaceBattle.letterText>Две неизвестные фракции устроили космическую битву недалеко от вашей планеты. В течении этого времени на планету будут падать отсеки кораблей, в которых может быть что-нибудь интересное, а также 
+могут падать промахнувшиеся снаряды.</SpaceBattle.letterText>  
   
+  <Quest_KillOrder.label>Заказ на убийство</Quest_KillOrder.label>
+  <Quest_KillOrder.letterLabel>Заказ на убийство</Quest_KillOrder.letterLabel>
+  <Quest_KillOrder.letterText>{0} просит устранить {1} из фракции {2} за вознаграждение. Он отметил место на мировой карте.
+  
+Вы можете связаться с ними через планетарную консоль связи.</Quest_KillOrder.letterText>  
+
 </LanguageData>

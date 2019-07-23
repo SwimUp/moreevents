@@ -43,11 +43,13 @@ namespace MoreEvents
 
         public string Key;
 
-        public string Name => DefDatabase<IncidentDef>.GetNamed(Key).LabelCap;
+        public string Name => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).LabelCap : $"{Key}_Title".Translate();
 
-        public string Description => DefDatabase<IncidentDef>.GetNamed(Key).description;
+        public string Description => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).letterText : $"{Key}_Desc".Translate();
 
         public bool Active = true;
+
+        public bool UseCustomLabels = false;
 
         public EventSettings()
         {
@@ -63,6 +65,7 @@ namespace MoreEvents
         {
             Scribe_Values.Look(ref Active, "EventActive");
             Scribe_Values.Look(ref Key, "Key");
+            Scribe_Values.Look(ref UseCustomLabels, "UseCustomLabels");
             Scribe_Collections.Look(ref Parameters, "Parameters", LookMode.Value, LookMode.Deep);
         }
     }
@@ -71,10 +74,21 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 41;
+        private static int totalSettings = 44;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
+          {
+                "General", new EventSettings("General")
+                {
+                    UseCustomLabels = true,
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
+                    {
+                        {"UseNewMapSizes", new Parameter("UseNewMapSizes", "1") },
+                    }
+                }
+            },
             {
                 "ShipCrash", new EventSettings("ShipCrash")
                 {
@@ -337,6 +351,18 @@ namespace MoreEvents
             },
             {
             "Quest_SuppressionRebellion", new EventSettings("Quest_SuppressionRebellion")
+            {
+                    Active = true
+            }
+            },
+            {
+            "SpaceBattle", new EventSettings("SpaceBattle")
+            {
+                    Active = true
+            }
+            },
+            {
+            "Quest_KillOrder", new EventSettings("Quest_KillOrder")
             {
                     Active = true
             }
@@ -412,7 +438,18 @@ namespace MoreEvents
             Log.Message($"New settings found, reload");
 
             EventsSettings = new Dictionary<string, EventSettings>()
-       {
+          {
+          {
+                "General", new EventSettings("General")
+                {
+                    UseCustomLabels = true,
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
+                    {
+                        {"UseNewMapSizes", new Parameter("UseNewMapSizes", "1") },
+                    }
+                }
+            },
             {
                 "ShipCrash", new EventSettings("ShipCrash")
                 {
@@ -675,6 +712,18 @@ namespace MoreEvents
             },
             {
             "Quest_SuppressionRebellion", new EventSettings("Quest_SuppressionRebellion")
+            {
+                    Active = true
+            }
+            },
+            {
+            "SpaceBattle", new EventSettings("SpaceBattle")
+            {
+                    Active = true
+            }
+            },
+            {
+            "Quest_KillOrder", new EventSettings("Quest_KillOrder")
             {
                     Active = true
             }

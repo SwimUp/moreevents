@@ -4,6 +4,11 @@
   <MEM_Settings_General>Event configuration</MEM_Settings_General>
   <EventActive>Active?</EventActive>
 
+  <General_Title>General settings</General_Title>
+  <General_Desc>General settings</General_Desc>
+  <UseNewMapSizes_title>Activate additional world sizes</UseNewMapSizes_title>
+  <UseNewMapSizes>Activate additional world sizes (game reload required)</UseNewMapSizes>
+
   <MinParts_title>Min parts</MinParts_title>
   <MinParts>Minimum generated parts scattered around the map</MinParts>
   <MaxParts_title>Max parts</MaxParts_title>

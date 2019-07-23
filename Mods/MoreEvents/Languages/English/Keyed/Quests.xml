@@ -97,5 +97,9 @@ This led to a change of leader and political regime.</Quest_SuppressionRebellion
 	<Quest_SuppressionRebellionNewFactionDesc>The rebels could not defeat the {0} and because of what the survivors formed their own faction and called themselves {1}</Quest_SuppressionRebellionNewFactionDesc>
 	<CaravanArrivalAction_EnterToRebelMap_AlreadyStart>The insurgency has already begun</CaravanArrivalAction_EnterToRebelMap_AlreadyStart>
 
+	<Quest_KillOrder_CardLabel>Kill order</Quest_KillOrder_CardLabel>
+	<Quest_KillOrder_Description>{0} requests to eliminate {1} from {2} faction for silver. He marked the place on the world map.</Quest_KillOrder_Description>
+	<Quest_KillOrder_PlaceLabel>Target location</Quest_KillOrder_PlaceLabel>
+
 	
 </LanguageData>

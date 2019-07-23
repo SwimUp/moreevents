@@ -3,6 +3,11 @@
 
   <MEM_Settings_General>Настройка событий</MEM_Settings_General>
   <EventActive>Активен?</EventActive>
+  
+  <General_Title>Основные настройки</General_Title>
+  <General_Desc>Основные настройки мода</General_Desc>
+  <UseNewMapSizes_title>Активировать дополнительные размеры мира</UseNewMapSizes_title>
+  <UseNewMapSizes>Активировать дополнительные размеры мира (требуется перезагрузка игры)</UseNewMapSizes>
 
   <MinParts_title>Минимум частей</MinParts_title>
   <MinParts>Минимум генерируемых частей разбросанных по карте</MinParts>

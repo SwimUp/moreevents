@@ -116,4 +116,9 @@
 	<QuestOption_IncreaseReward_Label>Try to increase the reward ({0} - {1}) </QuestOption_IncreaseReward_Label>
 	<QuestOption_IncreaseReward_Level>Insufficient skill level {0}, required {1} (actual {2})</QuestOption_IncreaseReward_Level>
 
+	<OrderedTargetStillAlive>The pawn is still alive. ({0})</OrderedTargetStillAlive>
+	<Quest_KillOrderTitle>Order completed</Quest_KillOrderTitle>
+	<Quest_KillOrderDesc>You have completed the order, eliminating {0}.</Quest_KillOrderDesc>
+	<Quest_KillOrderTargetInfo>Target: {0}\nRewards:\n {1}</Quest_KillOrderTargetInfo>
+
 </LanguageData>

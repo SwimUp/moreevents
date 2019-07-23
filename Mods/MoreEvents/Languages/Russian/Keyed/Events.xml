@@ -215,4 +215,6 @@ COMMANDS:
 	<SecurityDoomsdayOffTitle>Системы отключены</SecurityDoomsdayOffTitle>
 	<SecurityDoomsdayOff>Вы смогли отключить системы безопасности у оружия судного дня. Теперь его можно спокойной уничтожить.</SecurityDoomsdayOff>
 
+	<GameCondition_SpaceBattleTitle>С неба обрушился корабельный отсек</GameCondition_SpaceBattleTitle>
+
 </LanguageData>

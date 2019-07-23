@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimOverhaul - Random places module</name>
+  <author>FunkyShit</author>
+  <description>Adds generation of random hidden places that your caravan might stumble upon.</description>
+  <supportedVersions><li>1.0</li></supportedVersions>
+</ModMetaData>

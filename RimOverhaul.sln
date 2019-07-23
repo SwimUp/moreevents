@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestRim", "QuestRim\QuestR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMessages", "EmailMessages\EmailMessages.csproj", "{65512406-024E-4486-AC55-FBE952D44CAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomPlaces", "RandomPlaces\RandomPlaces.csproj", "{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{65512406-024E-4486-AC55-FBE952D44CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65512406-024E-4486-AC55-FBE952D44CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65512406-024E-4486-AC55-FBE952D44CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
