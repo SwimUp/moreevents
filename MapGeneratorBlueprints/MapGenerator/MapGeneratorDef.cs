@@ -17,6 +17,8 @@ namespace MapGeneratorBlueprints.MapGenerator
 
         public IntVec2 size;
 
+        public IntVec3 PawnsSpawnPos;
+
         public List<MapObject> MapData;
 
         public List<RoofObject> RoofData;

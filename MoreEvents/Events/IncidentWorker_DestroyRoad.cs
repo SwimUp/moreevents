@@ -42,20 +42,22 @@ namespace MoreEvents.Events
             if (!settings.Active)
                 return false;
 
-            List<Tile> roadsTiles = new List<Tile>();
-            foreach(var t in Find.WorldGrid.tiles)
+            List<int> roadsTiles = new List<int>();
+            for(int i = 0; i < Find.WorldGrid.TilesCount; i++)
             {
+                Tile t = Find.WorldGrid[i];
                 if (t.potentialRoads != null)
-                    roadsTiles.Add(t);
+                    roadsTiles.Add(i);
             }
 
             if (roadsTiles.Count == 0)
                 return false;
 
-            Tile tile = roadsTiles.RandomElement();
+            int tileID = roadsTiles.RandomElement();
+            Tile tile = Find.WorldGrid[tileID];
             tile.potentialRoads = null;
 
-            SendStandardLetter();
+            SendStandardLetter(new LookTargets(tileID));
 
             Find.World.renderer.SetDirty<WorldLayer_Roads>();
 

@@ -9,12 +9,6 @@
 			<texPath>Things/Buildings/ColdFusion/ColdFusion</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(6, 6)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
 		</graphicData>
 		<altitudeLayer>Building</altitudeLayer>
 		<pathCost>70</pathCost>
@@ -70,12 +64,6 @@
 			<texPath>Things/Buildings/ColdFusionPro/ColdFusionPro</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(6, 6)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
 		</graphicData>
 		<altitudeLayer>Building</altitudeLayer>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
@@ -363,7 +351,7 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 			<VacuumStabilizer>1</VacuumStabilizer>
 		</killedLeavings>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BuildingBase">
 		<defName>Geoscape</defName>
 		<label>Geo scape</label>
@@ -417,4 +405,38 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 		</comps>
 	</ThingDef>
 
+	<ThingDef Abstract="true" Name="MEMTriggerBase">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<altitudeLayer>Building</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<pathCost>100</pathCost>
+		<fillPercent>1</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>false</castEdgeShadows>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MarketValue>350</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<WorkToBuild>35000</WorkToBuild>
+			<Mass>50</Mass>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>1</glowRadius>
+				<glowColor>(255,255,255,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<tradeability>None</tradeability>
+	</ThingDef>
 </Defs>

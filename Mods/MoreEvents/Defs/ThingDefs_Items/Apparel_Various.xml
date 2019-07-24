@@ -158,9 +158,10 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>
 			<Flammability>0.4</Flammability>
-			<StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
-			<StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
-			<StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<Insulation_Cold>5</Insulation_Cold>
 			<EquipDelay>5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>

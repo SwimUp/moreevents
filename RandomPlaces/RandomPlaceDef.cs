@@ -21,5 +21,6 @@ namespace RandomPlaces
         public int MaxSpawn = -1;
         public float Commonality = 1f;
         public FactionRelationKind FactionType;
+        public Type Worker;
     }
 }

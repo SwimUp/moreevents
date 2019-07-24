@@ -110,6 +110,9 @@ namespace MoreEvents.Things
 
         private void SpawnMobs()
         {
+            if (spawnedMobs.Count >= maxMobs[hiveLevel])
+                return;
+
             CheckList();
 
             int count = Rand.Range(minSpawn, maxSpawn);

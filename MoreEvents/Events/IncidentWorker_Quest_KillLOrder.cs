@@ -42,6 +42,7 @@ namespace MoreEvents.Events
                 return false;
 
             Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.AncientSoldier, faction2);
+            Find.WorldPawns.PassToWorld(pawn);
 
             Quest_KillOrder quest = new Quest_KillOrder(pawn, Rand.Range(6, 12));
             quest.Faction = faction1;

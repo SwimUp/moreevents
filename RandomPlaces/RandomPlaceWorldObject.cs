@@ -15,13 +15,24 @@ namespace RandomPlaces
     {
         public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef MapDef;
 
+        public CompRandomPlace Worker;
+
         public override bool AppendFactionToInspectString => false;
+
+        protected override bool UseGenericEnterMapFloatMenuOption => UseEnterMapFloatMenuOption;
+        public bool UseEnterMapFloatMenuOption = true;
+
 
         public override void PostMapGenerate()
         {
             base.PostMapGenerate();
 
-            MapGeneratorHandler.GenerateMap(MapDef, Map, out List<Pawn> pawns, true, true, true, false, true, true, true, Faction);
+            if (MapDef != null)
+            {
+                MapGeneratorHandler.GenerateMap(MapDef, Map, out List<Pawn> pawns, true, true, true, false, true, true, true, Faction);
+            }
+
+            Worker?.PostMapGenerate(Map);
         }
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
@@ -34,6 +45,13 @@ namespace RandomPlaces
 
             alsoRemoveWorldObject = false;
             return false;
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref UseEnterMapFloatMenuOption, "UseEnterMapFloatMenuOption");
         }
     }
 }

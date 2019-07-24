@@ -1,5 +1,6 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using QuestRim;
+using RimOverhaul.AI;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -52,7 +53,11 @@ namespace MoreEvents.Quests
 
             DefDatabase<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>.AllDefsListForReading.Where(gen => gen.targetTags != null && gen.targetTags.Contains(MapGenerator)).TryRandomElementByWeight(w => w.Commonality, out MapGeneratorBlueprints.MapGenerator.MapGeneratorDef result);
 
-            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction);
+            LordJob_DefendPawn lordJob = new LordJob_DefendPawn(TargetPawn);
+            Lord lord = LordMaker.MakeNewLord(TargetPawn.Faction, lordJob, map);
+            lord.numPawnsLostViolently = int.MaxValue;
+
+            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction, lord);
 
             TargetPawn = (Pawn)GenSpawn.Spawn(TargetPawn, pawns.RandomElement().Position, map);
             pawns[0].GetLord().AddPawn(TargetPawn);
@@ -122,7 +127,7 @@ namespace MoreEvents.Quests
             }
         }
 
-        public override void PostSiteRemove(QuestSite site)
+        public override void PostMapRemove(Map map)
         {
             CheckWon();
 

@@ -53,6 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompProperties_TriggerFermBunker.cs" />
+    <Compile Include="CompRandomPlace.cs" />
+    <Compile Include="CompRandomPlace_FermBunker.cs" />
+    <Compile Include="CompTriggerFermBunker.cs" />
+    <Compile Include="CompTriggerGenNewMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomPlaceDef.cs" />
     <Compile Include="RandomPlaces.cs" />
@@ -60,6 +65,7 @@
     <Compile Include="RandomPlacesHandler.cs" />
     <Compile Include="RandomPlacesWorldComponent.cs" />
     <Compile Include="RandomPlaceWorldObject.cs" />
+    <Compile Include="ThingDefOfLocal.cs" />
     <Compile Include="WorldObjectsDefOfLocal.cs" />
     <Compile Include="WorldTrigger.cs" />
   </ItemGroup>

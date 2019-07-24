@@ -64,11 +64,14 @@
     <Compile Include="AI\JobDriver_FireAround.cs" />
     <Compile Include="AI\JobDriver_SpeakWithPawn.cs" />
     <Compile Include="AI\JobDriver_SpeakWithQuester.cs" />
+    <Compile Include="AI\JobGiver_AIDefendLeaderPawn.cs" />
     <Compile Include="AI\JobGiver_FireAround.cs" />
     <Compile Include="AI\JobGiver_WanderInArea.cs" />
     <Compile Include="AI\LordJob_Arson.cs" />
     <Compile Include="AI\LordJob_CaravanBringItems.cs" />
+    <Compile Include="AI\LordJob_DefendPawn.cs" />
     <Compile Include="AI\LordToil_Arson.cs" />
+    <Compile Include="AI\LordToil_DefendPawn.cs" />
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />

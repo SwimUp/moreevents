@@ -67,7 +67,7 @@ namespace MoreEvents.Events
         {
             base.GameConditionTick();
 
-            if(tremors == 0)
+            if (tremors == 0)
             {
                 Find.LetterStack.ReceiveLetter(Translator.Translate("Earthshake"), $"{Translator.Translate("EarthshakeDesc")} {magnitude}", LetterDefOf.PositiveEvent);
                 End();
@@ -82,6 +82,8 @@ namespace MoreEvents.Events
 
                 DoShake();
             }
+
+            Find.CameraDriver.shaker.DoShake(magnitude);
         }
 
         public override void End()
@@ -91,7 +93,6 @@ namespace MoreEvents.Events
 
         private void DoShake()
         {
-            Find.CameraDriver.shaker.DoShake(magnitude);
             int count = Rand.Range(7, 17);
 
             List<Thing> allThings = SingleMap.listerThings.AllThings;

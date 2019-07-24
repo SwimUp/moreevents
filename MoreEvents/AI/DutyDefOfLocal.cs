@@ -11,5 +11,6 @@ namespace MoreEvents.AI
     public static class DutyDefOfLocal
     {
         public static DutyDef Arson;
+        public static DutyDef DefendPawn;
     }
 }

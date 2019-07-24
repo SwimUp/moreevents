@@ -15,6 +15,19 @@ namespace RandomPlaces
         public int Tile;
         public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef Map;
         public Faction Faction;
+        public CompRandomPlace Worker;
+
+        public WorldTrigger()
+        {
+
+        }
+
+        public WorldTrigger(int tile, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef map, Faction faction)
+        {
+            Tile = tile;
+            Map = map;
+            Faction = faction;
+        }
 
         public void DoAction(Caravan caravan)
         {
@@ -22,6 +35,7 @@ namespace RandomPlaces
             obj.Tile = caravan.Tile;
             obj.SetFaction(Faction);
             obj.MapDef = Map;
+            obj.Worker = Worker;
             Find.WorldObjects.Add(obj);
 
             LongEventHandler.QueueLongEvent(delegate
@@ -58,6 +72,7 @@ namespace RandomPlaces
             Scribe_Values.Look(ref Tile, "Tile");
             Scribe_Defs.Look(ref Map, "Map");
             Scribe_References.Look(ref Faction, "Faction");
+            Scribe_Deep.Look(ref Worker, "Worker");
         }
     }
 }

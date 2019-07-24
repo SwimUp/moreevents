@@ -11,7 +11,7 @@ namespace MapGeneratorBlueprints.MapGenerator
     public static class MapGeneratorHandler
     {
         public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, out List<Pawn> spawnedPawns, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
-            , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null)
+            , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null, Lord forceLord = null, bool breakDownBuildings = false)
         {
             spawnedPawns = new List<Pawn>();
 
@@ -46,10 +46,20 @@ namespace MapGeneratorBlueprints.MapGenerator
                 SetTerrain(mapGenerator.MapData, map);
             }
 
-            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction);
+            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction, breakDownBuildings);
 
             if (spawnPawns)
-                SpawnPawns(mapGenerator.MapData, map, forceFaction, spawnedPawns);
+            {
+                SpawnPawns(mapGenerator.MapData, map, forceFaction, spawnedPawns, forceLord);
+
+                if(forceLord != null)
+                {
+                    foreach(var p in spawnedPawns)
+                    {
+                        forceLord.AddPawn(p);
+                    }
+                }
+            }
 
             map.powerNetManager.UpdatePowerNetsAndConnections_First();
 
@@ -164,7 +174,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             }
         }
 
-        public static void SpawnPawns(List<MapObject> mapObjects, Map map, Faction forceFaction, List<Pawn> spawnedPawns)
+        public static void SpawnPawns(List<MapObject> mapObjects, Map map, Faction forceFaction, List<Pawn> spawnedPawns, Lord forceLord)
         {
             foreach (var thing in mapObjects)
             {
@@ -173,7 +183,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                 if (data.Kind != null)
                 {
                     Faction faction = forceFaction;
-                    if(faction == null)
+                    if (faction == null)
                         faction = Find.FactionManager.FirstFactionOfDef(data.Faction);
 
                     if (faction != null)
@@ -185,20 +195,23 @@ namespace MapGeneratorBlueprints.MapGenerator
                             if (pawn.RaceProps.Animal && data.Faction == null)
                                 pawn.SetFaction(null);
 
-                            if (pawn.RaceProps.FleshType == FleshTypeDefOf.Insectoid)
+                            if (pawn.RaceProps.FleshType == FleshTypeDefOf.Insectoid && pawn.Faction != Faction.OfInsects)
                                 pawn.SetFaction(Faction.OfInsects);
 
-                            if (pawn.RaceProps.IsMechanoid)
+                            if (pawn.RaceProps.IsMechanoid && pawn.Faction != Faction.OfMechanoids)
                                 pawn.SetFaction(Faction.OfMechanoids);
 
                             pawn = GenSpawn.Spawn(pawn, pos, map) as Pawn;
                             spawnedPawns.Add(pawn);
 
-                            LordJob_DefendPoint lordJob = new LordJob_DefendPoint(pawn.Position);
-                            Lord lord = LordMaker.MakeNewLord(faction, lordJob, map);
-                            lord.numPawnsLostViolently = int.MaxValue;
+                            if (forceLord == null)
+                            {
+                                LordJob_DefendPoint lordJob = new LordJob_DefendPoint(pawn.Position);
+                                Lord lord = LordMaker.MakeNewLord(faction, lordJob, map);
+                                lord.numPawnsLostViolently = int.MaxValue;
 
-                            lord.AddPawn(pawn);
+                                lord.AddPawn(pawn);
+                            }
                         }
                     }
                     else
@@ -214,7 +227,7 @@ namespace MapGeneratorBlueprints.MapGenerator
         }
 
 
-        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction)
+        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction, bool breakDownBuildings)
         {
             foreach (var thing in mapObjects)
             {
@@ -245,6 +258,15 @@ namespace MapGeneratorBlueprints.MapGenerator
                         if (compRefuelable != null)
                         {
                             compRefuelable.Refuel(compRefuelable.Props.fuelCapacity);
+                        }
+
+                        if(breakDownBuildings)
+                        {
+                            CompBreakdownable compBreakdownable = newThing.TryGetComp<CompBreakdownable>();
+                            if(compBreakdownable != null)
+                            {
+                                compBreakdownable.DoBreakdown();
+                            }
                         }
                     }
                 }

@@ -26,14 +26,14 @@ namespace RandomPlaces
                     {
                         int spawnedCount = 0;
 
-                        MapData mapData = randomPlaceDef.Maps[i];
+                        MapData mapData = randomPlaceDef.Maps[i2];
                         for (int i3 = 0; i3 < mapData.MinAtStart; i3++)
                         {
                             int tile = TileFinder.RandomStartingTile();
                             TryGetFaction(mapData.FactionType, out Faction faction);
-                            MakeTrigger(tile, mapData.Map, faction);
+                            MakeTrigger(tile, mapData.Map, faction, mapData.Worker);
                             spawnedCount++;
-                            Find.LetterStack.ReceiveLetter(tile.ToString(), "K", LetterDefOf.Death, new LookTargets(tile));
+                            Find.LetterStack.ReceiveLetter($"{mapData.Map.defName} - {tile} - {mapData.Worker}", "K", LetterDefOf.Death, new LookTargets(tile));
                         }
 
                         if (spawnedCount >= mapData.MaxSpawn)
@@ -45,8 +45,8 @@ namespace RandomPlaces
                             {
                                 int tile = TileFinder.RandomStartingTile();
                                 TryGetFaction(mapData.FactionType, out Faction faction);
-                                MakeTrigger(tile, mapData.Map, faction);
-                                Find.LetterStack.ReceiveLetter(tile.ToString(), "K", LetterDefOf.Death, new LookTargets(tile));
+                                MakeTrigger(tile, mapData.Map, faction, mapData.Worker);
+                                Find.LetterStack.ReceiveLetter($"{mapData.Map.defName} - {tile} - {mapData.Worker}", "G", LetterDefOf.Death, new LookTargets(tile));
                             }
                         }
                     }
@@ -63,12 +63,17 @@ namespace RandomPlaces
             return false;
         }
 
-        public WorldTrigger MakeTrigger(int tile, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef mapGeneratorDef, Faction faction)
+        public WorldTrigger MakeTrigger(int tile, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef mapGeneratorDef, Faction faction, Type worker)
         {
             WorldTrigger trigger = new WorldTrigger();
             trigger.Tile = tile;
             trigger.Map = mapGeneratorDef;
             trigger.Faction = faction;
+
+            if (worker != null)
+            {
+                trigger.Worker = (CompRandomPlace)Activator.CreateInstance(worker);
+            }
 
             Triggers.Add(tile, trigger);
 

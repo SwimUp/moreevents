@@ -115,9 +115,6 @@
     <ambientSounds>
       <li>Ambient_Wind_Fog</li>
     </ambientSounds>
-    <overlayClasses>
-      <li>MoreEvents.Weather.WeatherOverlay_Sandstorm</li>
-    </overlayClasses>
     <commonalityRainfallFactor>
       <points>
         <li>(0, 0)</li>
