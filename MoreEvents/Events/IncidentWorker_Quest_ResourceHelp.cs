@@ -68,7 +68,7 @@ namespace MoreEvents.Events
 
             LookTargets target = new LookTargets(factionBase.Tile);
             quest.Target = target;
-            quest.TicksToPass = Rand.Range(5, 11) * 60000;
+            quest.TicksToPass = Rand.Range(12, 25) * 60000;
 
             QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);
             questPlace.Tile = factionBase.Tile;

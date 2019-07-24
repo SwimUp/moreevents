@@ -51,7 +51,7 @@ namespace MoreEvents.Events
             Quest_SuppressionRebellion quest = new Quest_SuppressionRebellion();
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             quest.Faction = factionBase.Faction;
-            quest.TicksToPass = Rand.Range(4, 9);
+            quest.TicksToPass = Rand.Range(10, 20) * 60000;
             quest.GenerateRewards(quest.GetQuestThingFilter(), quest.Faction.GetRangeByFactionTechLevel(400, 700), new IntRange(3, 8), null, null);
             QuestSite questSite = quest.CreateSiteFor(rebelPos, quest.Faction);
 

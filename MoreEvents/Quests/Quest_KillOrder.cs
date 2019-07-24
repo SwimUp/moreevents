@@ -148,7 +148,7 @@ namespace MoreEvents.Quests
             Find.WorldPawns.PassToWorld(pawn);
 
             Faction = faction1;
-            TicksToPass = Rand.Range(6, 12) * 60000;
+            TicksToPass = Rand.Range(10, 19) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             GenerateRewards();
 

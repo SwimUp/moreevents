@@ -161,7 +161,7 @@ namespace MoreEvents.Quests
                 return false;
 
             Faction = alliedFaction;
-            TicksToPass = Rand.Range(8, 15) * 60000;
+            TicksToPass = Rand.Range(10, 17) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             GenerateRewards(GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);
 

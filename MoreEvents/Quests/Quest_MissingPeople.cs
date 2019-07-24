@@ -60,7 +60,7 @@ namespace MoreEvents.Quests
             if (!IncidentWorker_Quest_MissingPeople.TryGetNewTile(map.Tile, out int newTile))
                 return false;
 
-            TicksToPass = Rand.Range(3, 9) * 60000;
+            TicksToPass = Rand.Range(5, 9) * 60000;
             minDays = Rand.Range(5, 20);
             passedDays = Rand.Range(minDays + 3, minDays + 7);
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();

@@ -89,7 +89,7 @@ namespace MoreEvents.Events
 
             LookTargets target = new LookTargets(newTile);
             quest.Target = target;
-            quest.TicksToPass = Rand.Range(8, 14) * 60000;
+            quest.TicksToPass = Rand.Range(12, 17) * 60000;
             quest.TicksToEnd = Rand.Range(3, 5) * 60000;
 
             QuestSite questPlace = (QuestSite)WorldObjectMaker.MakeWorldObject(QuestRim.WorldObjectDefOfLocal.QuestPlace);

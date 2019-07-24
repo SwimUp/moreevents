@@ -44,7 +44,7 @@ namespace MoreEvents.Events
             if (!TileFinder.TryFindPassableTileWithTraversalDistance(Find.AnyPlayerHomeMap.Tile, 8, 20, out int result))
                 return false;
 
-            Quest_KillLeader quest = new Quest_KillLeader(enemyFaction.leader, Rand.Range(8, 15));
+            Quest_KillLeader quest = new Quest_KillLeader(enemyFaction.leader, Rand.Range(11, 17));
             quest.Faction = alliedFaction;
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);

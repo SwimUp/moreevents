@@ -48,7 +48,7 @@ namespace MoreEvents.Events
             if (!TryGetNewTile(map.Tile, out int newTile))
                 return false;
 
-            int days = Rand.Range(5, 20);
+            int days = Rand.Range(11, 20);
             int passedDays = Rand.Range(days + 3, days + 7);
             Quest_MissingPeople quest = new Quest_MissingPeople(Rand.Range(3, 9), days, passedDays);
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
