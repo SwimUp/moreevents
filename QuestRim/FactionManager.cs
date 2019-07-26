@@ -41,7 +41,7 @@ namespace QuestRim
 
             if(interaction == null)
             {
-                Log.Warning("[FactionManager]Null interaction, create new");
+                Log.Warning("[FactionManager] Null interaction, create new");
                 Add(faction);
             }
 
@@ -52,7 +52,7 @@ namespace QuestRim
         {
             if(!Factions.Contains(faction))
             {
-                InitNewFaction(faction, StandartOptions());
+                InitNewFaction(faction, StandartOptions(faction));
             }
         }
 
@@ -83,15 +83,24 @@ namespace QuestRim
         {
             FactionInteraction interaction = new FactionInteraction();
             interaction.Faction = faction;
+
             interaction.Options = options;
 
             factions.Add(interaction);
         }
 
-        public List<InteractionOption> StandartOptions()
+        public List<InteractionOption> StandartOptions(Faction forFaction)
         {
             var list = new List<InteractionOption>();
-            list.Add(new CommOption_SubscribeScout());
+
+            if (forFaction.def.permanentEnemy)
+            {
+                list.Add(new CommOption_NonAgressionPact());
+            }
+            else
+            {
+                list.Add(new CommOption_SubscribeScout());
+            }
 
             return list;
         }
@@ -110,7 +119,7 @@ namespace QuestRim
 
                 if (!Factions.Contains(faction))
                 {
-                    InitNewFaction(faction, StandartOptions());
+                    InitNewFaction(faction, StandartOptions(faction));
                 }
             }
 

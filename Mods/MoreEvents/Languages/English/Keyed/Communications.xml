@@ -120,5 +120,13 @@
 	<Quest_KillOrderTitle>Order completed</Quest_KillOrderTitle>
 	<Quest_KillOrderDesc>You have completed the order, eliminating {0}.</Quest_KillOrderDesc>
 	<Quest_KillOrderTargetInfo>Target: {0}\nRewards:\n {1}</Quest_KillOrderTargetInfo>
+	
+	<CommOption_NonAgressionPact_Label>Nonaggression pact ({0})</CommOption_NonAgressionPact_Label>
+	<CommOption_NonAgressionPact_NotEnoughSilver>Not enough silver ({0} required, {1} available)</CommOption_NonAgressionPact_NotEnoughSilver>
+	<CommOption_NonAgressionPact_SuccessTitle>Pact signed</CommOption_NonAgressionPact_SuccessTitle>
+	<CommOption_NonAgressionPact_Success>Non-Aggression Pact with faction {0} signed. The negotiation level {1} allowed to sign it for {2} days. During this time, the faction {0} will not raid your settlement.</CommOption_NonAgressionPact_Success>
+	<NonAfressionPackCompTitle>Pact time is over</NonAfressionPackCompTitle>
+	<NonAfressionPackComp>Pact duration with fraction {0} is over. Now they can attack you again.</NonAfressionPackComp>
+
 
 </LanguageData>

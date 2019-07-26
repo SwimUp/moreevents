@@ -64,58 +64,85 @@ namespace RandomPlaces
 
         private FloatMenuOption EnterOption(Pawn pawn, bool first)
         {
-            return new FloatMenuOption("CheckInsideLuke".Translate(), delegate
+            FloatMenuOption option = new FloatMenuOption("CheckInsideLuke".Translate(), null);
+
+            if (!GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, CollectThingsRadius, false).Where(x => x.Faction == Faction.OfPlayer).Any())
             {
-                if (first)
+                return option;
+            }
+
+            option.action = delegate
+            {
+                DiaOption diaOption = new DiaOption("CheckInsideLuke_OK".Translate());
+                diaOption.resolveTree = true;
+                diaOption.action = () => DoEnter(first);
+
+                DiaOption diaOption2 = new DiaOption("CheckInsideLuke_NO".Translate());
+                diaOption2.resolveTree = true;
+
+                DiaNode diaNode = new DiaNode("CheckInsideLuke_Info".Translate(CollectThingsRadius));
+                diaNode.options.Add(diaOption);
+                diaNode.options.Add(diaOption2);
+
+                Dialog_NodeTree dialog_NodeTree = new Dialog_NodeTree(diaNode, delayInteractivity: true);
+
+                Find.WindowStack.Add(dialog_NodeTree);
+            };
+
+            return option;
+        }
+
+        private void DoEnter(bool first)
+        {
+            if (first)
+            {
+                generator = MapGenDefGetter;
+
+                IntVec3 mapSize = new IntVec3(generator.size.x, 1, generator.size.z);
+
+                mapHolder = (RandomPlaceWorldObject)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.RandomPlace);
+                mapHolder.Tile = parent.Tile;
+                Find.WorldObjects.Add(mapHolder);
+
+                PreMapGenerate(mapHolder);
+
+                Map map = null;
+                LongEventHandler.QueueLongEvent(delegate
                 {
-                    generator = MapGenDefGetter;
+                    map = Verse.MapGenerator.GenerateMap(mapSize, mapHolder, MapGeneratorDefOfLocal.EmptyMap);
 
-                    IntVec3 mapSize = new IntVec3(generator.size.x, 1, generator.size.z);
-
-                    mapHolder = (RandomPlaceWorldObject)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.RandomPlace);
-                    mapHolder.Tile = parent.Tile;
-                    Find.WorldObjects.Add(mapHolder);
-
-                    PreMapGenerate(mapHolder);
-
-                    Map map = null;
-                    LongEventHandler.QueueLongEvent(delegate
+                    LongEventHandler.ExecuteWhenFinished(delegate
                     {
-                        map = Verse.MapGenerator.GenerateMap(mapSize, mapHolder, MapGeneratorDefOfLocal.EmptyMap);
+                        PostMapGenerate(map, mapHolder);
 
-                        LongEventHandler.ExecuteWhenFinished(delegate
+                        MapGeneratorHandler.GenerateMap(generator, map, out List<Pawn> pawns, ClearMap, SetTerrain, Fog, UnFogRooms, SpawnPawns, CreateRoof, GeneratePlants, forceFaction, forceLord, BreakdownBuildings);
+
+                        var things = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, CollectThingsRadius, false).Where(x => x.Faction == Faction.OfPlayer);
+                        foreach (var t in things)
                         {
-                            PostMapGenerate(map, mapHolder);
+                            t.DeSpawn();
 
-                            MapGeneratorHandler.GenerateMap(generator, map, out List<Pawn> pawns, ClearMap, SetTerrain, Fog, UnFogRooms, SpawnPawns, CreateRoof, GeneratePlants, forceFaction, forceLord, BreakdownBuildings);
+                            GenSpawn.Spawn(t, generator.PawnsSpawnPos, map);
+                        }
 
-                            var things = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, CollectThingsRadius, false).Where(x => x.Faction == Faction.OfPlayer);
-                            foreach (var t in things)
-                            {
-                                t.DeSpawn();
+                        PostMapDefGenerate(map, mapHolder);
 
-                                GenSpawn.Spawn(t, generator.PawnsSpawnPos, map);
-                            }
+                        if (OneUse)
+                            parent.Destroy();
+                    });
 
-                            PostMapDefGenerate(map, mapHolder);
-
-                            if (OneUse)
-                                parent.Destroy();
-                        });
-
-                    }, "GeneratingMapForNewEncounter", doAsynchronously: false, null);
-                }
-                else
+                }, "GeneratingMapForNewEncounter", doAsynchronously: false, null);
+            }
+            else
+            {
+                var things = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, CollectThingsRadius, false).Where(x => x.Faction == Faction.OfPlayer);
+                foreach (var t in things)
                 {
-                    var things = GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, CollectThingsRadius, false).Where(x => x.Faction == Faction.OfPlayer);
-                    foreach (var t in things)
-                    {
-                        t.DeSpawn();
+                    t.DeSpawn();
 
-                        GenSpawn.Spawn(t, generator.PawnsSpawnPos, mapHolder.Map);
-                    }
+                    GenSpawn.Spawn(t, generator.PawnsSpawnPos, mapHolder.Map);
                 }
-            });
+            }
         }
 
         public override void PostExposeData()

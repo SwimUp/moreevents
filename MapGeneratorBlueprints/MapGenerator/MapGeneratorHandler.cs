@@ -12,7 +12,7 @@ namespace MapGeneratorBlueprints.MapGenerator
     {
         public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, out List<Pawn> spawnedPawns, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
             , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null, Lord forceLord = null, bool breakDownBuildings = false)
-        {
+            {
             spawnedPawns = new List<Pawn>();
 
             map.regionAndRoomUpdater.Enabled = false;
@@ -46,20 +46,10 @@ namespace MapGeneratorBlueprints.MapGenerator
                 SetTerrain(mapGenerator.MapData, map);
             }
 
-            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction, breakDownBuildings);
+            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction);
 
             if (spawnPawns)
-            {
                 SpawnPawns(mapGenerator.MapData, map, forceFaction, spawnedPawns, forceLord);
-
-                if(forceLord != null)
-                {
-                    foreach(var p in spawnedPawns)
-                    {
-                        forceLord.AddPawn(p);
-                    }
-                }
-            }
 
             map.powerNetManager.UpdatePowerNetsAndConnections_First();
 
@@ -143,7 +133,8 @@ namespace MapGeneratorBlueprints.MapGenerator
             {
                 map.mapDrawer.MapMeshDirty(allCell, MapMeshFlag.FogOfWar);
             }
-            FloodFillerFog.FloodUnfog(CellFinder.RandomEdgeCell(map), map);
+            CellFinder.TryFindRandomEdgeCellWith((IntVec3 x) => !x.Roofed(map) && x.Walkable(map), map, 0f, out IntVec3 result); ;
+            FloodFillerFog.FloodUnfog(result, map);
         }
 
         private static void AddRoomsToFog(List<Room> allRooms, Map map, bool fogDoors = false)
@@ -212,6 +203,10 @@ namespace MapGeneratorBlueprints.MapGenerator
 
                                 lord.AddPawn(pawn);
                             }
+                            else
+                            {
+                                forceLord.AddPawn(pawn);
+                            }
                         }
                     }
                     else
@@ -226,8 +221,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             }
         }
 
-
-        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction, bool breakDownBuildings)
+        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction)
         {
             foreach (var thing in mapObjects)
             {
@@ -258,15 +252,6 @@ namespace MapGeneratorBlueprints.MapGenerator
                         if (compRefuelable != null)
                         {
                             compRefuelable.Refuel(compRefuelable.Props.fuelCapacity);
-                        }
-
-                        if(breakDownBuildings)
-                        {
-                            CompBreakdownable compBreakdownable = newThing.TryGetComp<CompBreakdownable>();
-                            if(compBreakdownable != null)
-                            {
-                                compBreakdownable.DoBreakdown();
-                            }
                         }
                     }
                 }

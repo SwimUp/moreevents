@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD4FE41A-66B6-415E-A3C6-F79FD1A2D550}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RimArmorCore</RootNamespace>
+    <AssemblyName>ArmorCore</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MoreEvents\Libs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\QuestRim\Libs\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreEvents">
+      <HintPath>..\MoreEvents\bin\Release\MoreEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="QuestRim">
+      <HintPath>..\QuestRim\bin\Release\QuestRim.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\QuestRim\Libs\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArmorCoreModule.cs" />
+    <Compile Include="JobDefOfLocal.cs" />
+    <Compile Include="Mk1\Apparel_Mk1.cs" />
+    <Compile Include="Mk1\ArmorCore.cs" />
+    <Compile Include="Mk1\CompProperties_ArmorCore.cs" />
+    <Compile Include="Mk1\Gizmo_FillableMk1.cs" />
+    <Compile Include="Mk1\ITab_ModifyMk1.cs" />
+    <Compile Include="Mk1\JobDriver_CarryReactorToStation.cs" />
+    <Compile Include="Mk1\JobDriver_LoadArmorIntoStand.cs" />
+    <Compile Include="Mk1\JobDriver_UnLoadArmorIntoStand.cs" />
+    <Compile Include="Mk1\Mk1PowerStation.cs" />
+    <Compile Include="Patches\HeavyAir_RimOverhaul.cs" />
+    <Compile Include="Patches\IceStorm_RimOverhaul.cs" />
+    <Compile Include="Patches\RadiationFon_RimOverhaul.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThingDefOfLocal.cs" />
+    <Compile Include="ToxicFallout_Patch.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

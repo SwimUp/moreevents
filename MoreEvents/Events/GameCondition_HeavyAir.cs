@@ -2,7 +2,9 @@
 using Verse;
 using System.Collections.Generic;
 using UnityEngine;
-using MoreEvents.Things.Mk1;
+using System.Reflection;
+using Harmony;
+using RimOverhaul;
 
 namespace MoreEvents.Events
 {
@@ -60,7 +62,7 @@ namespace MoreEvents.Events
             for (int i = 0; i < allPawnsSpawned.Count; i++)
             {
                 Pawn pawn = allPawnsSpawned[i];
-                if (!pawn.Position.Roofed(map) && pawn.def.race.IsFlesh && !Apparel_Mk1.HasMk1Enable(pawn))
+                if (CanDamage(pawn, map))
                 {
                     float num = 0.028758334f;
                     num *= pawn.GetStatValue(StatDefOf.ToxicSensitivity, true);
@@ -72,6 +74,16 @@ namespace MoreEvents.Events
                     }
                 }
             }
+        }
+
+        public bool CanDamage(Pawn pawn, Map map)
+        {
+            if (pawn.Position.Roofed(map) && !pawn.def.race.IsFlesh)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

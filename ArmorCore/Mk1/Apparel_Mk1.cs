@@ -24,7 +24,7 @@ namespace MoreEvents.Things.Mk1
 
         public bool FullCharge => EnergyCharge >= CoreComp.PowerCapacity;
 
-        public Apparel GetHelmet => Wearer.apparel.WornApparel.Where(a => a.def == ThingDefOfLocal.Apparel_MK1ThunderHead).FirstOrDefault();
+        public Apparel GetHelmet => Wearer.apparel.WornApparel.Where(a => a.def == RimArmorCore.ThingDefOfLocal.Apparel_MK1ThunderHead).FirstOrDefault();
         private bool HasHelmet = false;
 
         public bool Active => Core != null && HasHelmet && EnergyCharge > 0f;
@@ -46,7 +46,7 @@ namespace MoreEvents.Things.Mk1
 
             foreach(var apparel in p.apparel.WornApparel)
             {
-                if(apparel.def == ThingDefOfLocal.Apparel_MK1Thunder)
+                if(apparel.def == RimArmorCore.ThingDefOfLocal.Apparel_MK1Thunder)
                 {
                     Apparel_Mk1 mk1 = (Apparel_Mk1)apparel;
                     if (mk1.Active)

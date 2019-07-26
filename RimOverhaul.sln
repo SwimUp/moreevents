@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMessages", "EmailMessa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomPlaces", "RandomPlaces\RandomPlaces.csproj", "{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmorCore", "ArmorCore\ArmorCore.csproj", "{BD4FE41A-66B6-415E-A3C6-F79FD1A2D550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B80D7BC-4D8B-4C8F-9C9C-70F2D07D9B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4FE41A-66B6-415E-A3C6-F79FD1A2D550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4FE41A-66B6-415E-A3C6-F79FD1A2D550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4FE41A-66B6-415E-A3C6-F79FD1A2D550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4FE41A-66B6-415E-A3C6-F79FD1A2D550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

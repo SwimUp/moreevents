@@ -3,30 +3,55 @@
 
 	<RandomPlaces.RandomPlaceDef>
 		<defName>Ferms</defName>
-		<Commonality>1</Commonality>
-		<Maps> 
-			<li>
-				<Map>Village1</Map>
-				<MinAtStart>1</MinAtStart>
-				<MaxSpawn>3</MaxSpawn>
-				<Commonality>0.45</Commonality>
-				<FactionType>Hostile</FactionType>
-			</li>
-			<li>
-				<Map>Village2</Map>
-				<MinAtStart>2</MinAtStart>
-				<MaxSpawn>2</MaxSpawn>
-				<FactionType>Hostile</FactionType>
-				<Worker>RandomPlaces.CompRandomPlace_FermBunker</Worker>
-			</li>
-			<li>
-				<Map>Village3</Map>
-				<MinAtStart>2</MinAtStart>
-				<MaxSpawn>4</MaxSpawn>
-				<Commonality>0.66</Commonality>
-				<FactionType>Hostile</FactionType>
-			</li>
-		</Maps>
+		<Commonality>0.76</Commonality>
+		<Map>Village1</Map>
+		<MinAtStart>1</MinAtStart>
+		<MaxSpawn>3</MaxSpawn>
+		<FactionType>Hostile</FactionType>
 	</RandomPlaces.RandomPlaceDef>
- 
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Ferms2</defName>
+		<Commonality>1</Commonality>
+		<Map>Village2</Map>
+		<MinAtStart>2</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+		<Worker Class="RandomPlaces.CompRandomPlace_FermBunker" />
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Ferms3</defName>
+		<Commonality>0.54</Commonality>
+		<Map>Village3</Map>
+		<MinAtStart>2</MinAtStart>
+		<MaxSpawn>4</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Settlements1</defName>
+		<Map>MiniSettlement</Map>
+		<MinAtStart>1</MinAtStart>
+		<MaxSpawn>3</MaxSpawn>
+		<Commonality>0.45</Commonality>
+		<FactionType>Hostile</FactionType>
+		<ExtraLord Class="RandomPlaces.ExtraLord_DefendBase">
+			<BaseCenter>(58, 0, 82)</BaseCenter>
+		</ExtraLord>
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Settlements2</defName>
+		<Map>MiniSettlement2</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>1</MaxSpawn>
+		<Commonality>0.45</Commonality>
+		<FactionType>Hostile</FactionType>
+		<ExtraLord Class="RandomPlaces.ExtraLord_DefendBase">
+			<BaseCenter>(87, 0, 78)</BaseCenter>
+		</ExtraLord>
+	</RandomPlaces.RandomPlaceDef>
+
+
 </Defs>

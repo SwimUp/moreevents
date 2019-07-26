@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef>
+		<defName>MiniColdFusionReactor</defName>
+		<label>minified cold fusion reactor</label>
+		<description>Reduced cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/ColdFusion/Core</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.5, 0.5)</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>250</Plasteel>
+			<Steel>500</Steel>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ColdFusionReactorHeath>1</ColdFusionReactorHeath>
+		</costList>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>4000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>100</PowerCapacity>
+				<StationLabel>ColdFusionCore</StationLabel>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>MiniArcReactor</defName>
+		<label>minified arc reactor</label>
+		<description>Reduced arc reactor. More effective than a cold fusion reactor, is its direct modification.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/ColdFusionPro/Core</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.5, 0.5)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>6000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>300</Plasteel>
+			<Steel>500</Steel>
+			<Plasteel>50</Plasteel>
+			<Gold>30</Gold>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<ComponentSpacer>15</ComponentSpacer>
+			<PalladiumCore>1</PalladiumCore>
+			<Enricher>1</Enricher>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>200</PowerCapacity>
+				<StationLabel>ArcReactorCore</StationLabel>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+</Defs>

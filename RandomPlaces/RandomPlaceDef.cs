@@ -11,16 +11,12 @@ namespace RandomPlaces
     {
         public float Commonality;
 
-        public List<MapData> Maps;
-    }
-
-    public class MapData
-    {
         public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef Map;
         public int MinAtStart = 0;
         public int MaxSpawn = -1;
-        public float Commonality = 1f;
         public FactionRelationKind FactionType;
-        public Type Worker;
+        public ExtraLord ExtraLord;
+        public CompRandomPlace Worker;
+        public bool UseMapSpawnSpot;
     }
 }

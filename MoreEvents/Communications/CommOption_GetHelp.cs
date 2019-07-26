@@ -40,7 +40,7 @@ namespace MoreEvents.Communications
             if(interaction.Options == null)
             {
                 Log.Warning("[CommOption_GetHelp] Interaction is null. Init.");
-                interaction.Options = QuestsManager.Communications.FactionManager.StandartOptions();
+                interaction.Options = QuestsManager.Communications.FactionManager.StandartOptions(faction);
             }
 
             foreach (var option in interaction.Options)

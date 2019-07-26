@@ -84,7 +84,7 @@ namespace MoreEvents.Things.Mk1
             {
                 yield return new FloatMenuOption("UnloadArmor".Translate(), delegate
                 {
-                    Job job = new Job(JobDefOfLocal.UnLoadArmorIntoStation, this);
+                    Job job = new Job(RimArmorCore.JobDefOfLocal.UnLoadArmorIntoStation, this);
                     selPawn.jobs.TryTakeOrderedJob(job);
                 });
             }
@@ -92,7 +92,7 @@ namespace MoreEvents.Things.Mk1
             {
                 yield return new FloatMenuOption("LoadArmor".Translate(), delegate
                 {
-                    var armors = this.Map.listerThings.ThingsOfDef(ThingDefOfLocal.Apparel_MK1Thunder);
+                    var armors = this.Map.listerThings.ThingsOfDef(RimArmorCore.ThingDefOfLocal.Apparel_MK1Thunder);
                     if (armors.Count == 0)
                     {
                         Messages.Message("NoAvaliableArmors".Translate(), MessageTypeDefOf.NeutralEvent, false);
@@ -103,7 +103,7 @@ namespace MoreEvents.Things.Mk1
                     foreach (var armor in armors)
                         list.Add(new FloatMenuOption($"{armor.LabelCap}", delegate
                         {
-                            Job job = new Job(JobDefOfLocal.LoadArmorIntoStation, this, armor);
+                            Job job = new Job(RimArmorCore.JobDefOfLocal.LoadArmorIntoStation, this, armor);
                             job.count = 1;
                             selPawn.jobs.TryTakeOrderedJob(job);
                         }));

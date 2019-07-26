@@ -15,40 +15,34 @@ namespace RandomPlaces
         public void InitPlaces()
         {
             List<RandomPlaceDef> allPlaces = DefDatabase<RandomPlaceDef>.AllDefsListForReading;
+            Triggers.Clear();
 
             for(int i = 0; i < allPlaces.Count; i++)
             {
                 RandomPlaceDef randomPlaceDef = allPlaces[i];
 
-                if (Rand.Chance(randomPlaceDef.Commonality))
+                int spawnedCount = 0;
+
+                for (int i3 = 0; i3 < randomPlaceDef.MinAtStart; i3++)
                 {
-                    for(int i2 = 0; i2 < randomPlaceDef.Maps.Count; i2++)
+                    int tile = TileFinder.RandomStartingTile();
+                    TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
+                    Triggers.Add(tile, MakeTrigger(tile, randomPlaceDef, faction));
+                    spawnedCount++;
+                    Find.LetterStack.ReceiveLetter($"{randomPlaceDef.Map.defName} - {tile} - {randomPlaceDef.Worker}", "K", LetterDefOf.Death, new LookTargets(tile));
+                }
+
+               if (spawnedCount >= randomPlaceDef.MaxSpawn)
+                continue;
+
+                for (int i4 = 0; i4 < randomPlaceDef.MaxSpawn - spawnedCount; i4++)
+                {
+                    if (Rand.Chance(randomPlaceDef.Commonality))
                     {
-                        int spawnedCount = 0;
-
-                        MapData mapData = randomPlaceDef.Maps[i2];
-                        for (int i3 = 0; i3 < mapData.MinAtStart; i3++)
-                        {
-                            int tile = TileFinder.RandomStartingTile();
-                            TryGetFaction(mapData.FactionType, out Faction faction);
-                            MakeTrigger(tile, mapData.Map, faction, mapData.Worker);
-                            spawnedCount++;
-                            Find.LetterStack.ReceiveLetter($"{mapData.Map.defName} - {tile} - {mapData.Worker}", "K", LetterDefOf.Death, new LookTargets(tile));
-                        }
-
-                        if (spawnedCount >= mapData.MaxSpawn)
-                            continue;
-
-                        for (int i4 = 0; i4 < mapData.MaxSpawn - spawnedCount; i4++)
-                        {
-                            if (Rand.Chance(mapData.Commonality))
-                            {
-                                int tile = TileFinder.RandomStartingTile();
-                                TryGetFaction(mapData.FactionType, out Faction faction);
-                                MakeTrigger(tile, mapData.Map, faction, mapData.Worker);
-                                Find.LetterStack.ReceiveLetter($"{mapData.Map.defName} - {tile} - {mapData.Worker}", "G", LetterDefOf.Death, new LookTargets(tile));
-                            }
-                        }
+                        int tile = TileFinder.RandomStartingTile();
+                        TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
+                        Triggers.Add(tile, MakeTrigger(tile, randomPlaceDef, faction));
+                        Find.LetterStack.ReceiveLetter($"{randomPlaceDef.Map.defName} - {tile} - {randomPlaceDef.Worker}", "G", LetterDefOf.Death, new LookTargets(tile));
                     }
                 }
             }
@@ -63,19 +57,9 @@ namespace RandomPlaces
             return false;
         }
 
-        public WorldTrigger MakeTrigger(int tile, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef mapGeneratorDef, Faction faction, Type worker)
+        public WorldTrigger MakeTrigger(int tile, RandomPlaceDef def, Faction faction)
         {
-            WorldTrigger trigger = new WorldTrigger();
-            trigger.Tile = tile;
-            trigger.Map = mapGeneratorDef;
-            trigger.Faction = faction;
-
-            if (worker != null)
-            {
-                trigger.Worker = (CompRandomPlace)Activator.CreateInstance(worker);
-            }
-
-            Triggers.Add(tile, trigger);
+            WorldTrigger trigger = new WorldTrigger(tile, def, faction);
 
             return trigger;
         }

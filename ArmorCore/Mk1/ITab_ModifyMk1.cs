@@ -49,7 +49,7 @@ namespace MoreEvents
                         {
                             list1.Add(new FloatMenuOption($"{p.Name}", delegate
                             {
-                                Job job = new Job(JobDefOfLocal.CarryReactorToStation, Station, core);
+                                Job job = new Job(RimArmorCore.JobDefOfLocal.CarryReactorToStation, Station, core);
                                 job.count = 1;
                                 p.jobs.TryTakeOrderedJob(job);
                             }));
@@ -100,42 +100,22 @@ namespace MoreEvents
 
         private List<Thing> GetCores()
         {
-            IntVec3 position = Station.Position;
-            Region region = position.GetRegion(Station.Map);
-            TraverseParms traverseParams = TraverseParms.For(TraverseMode.NoPassClosedDoors);
-            RegionEntryPredicate entryCondition = (Region from, Region r) => r.Allows(traverseParams, isDestination: false);
             List<Thing> chosenThings = new List<Thing>();
 
-            RegionProcessor regionProcessor = delegate (Region r)
+            List<SlotGroup> allGroupsListForReading = Station.Map.haulDestinationManager.AllGroupsListForReading;
+            for (int i = 0; i < allGroupsListForReading.Count; i++)
             {
-                List<Thing> list = r.ListerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.HaulableEver));
-                for (int i = 0; i < list.Count; i++)
+                SlotGroup slotGroup = allGroupsListForReading[i];
+                foreach (var item in slotGroup.HeldThings)
                 {
-                    Thing thing = list[i];
-
-                    if (!chosenThings.Contains(thing) && thing.TryGetComp<ArmorCore>() != null)
+                    if (!chosenThings.Contains(item) && item.TryGetComp<MoreEvents.Things.Mk1.ArmorCore>() != null)
                     {
-                        chosenThings.Add(thing);
+                        chosenThings.Add(item);
                     }
                 }
-                return false;
-            };
-            RegionTraverser.BreadthFirstTraverse(region, entryCondition, regionProcessor, 99999);
-
-            return chosenThings;
-            /*
-            List<ArmorCore> cores = new List<ArmorCore>();
-
-            IEnumerable<Region> regions = Station.Map.regionGrid.AllRegions;
-            foreach (var region in regions)
-            {
-                region.ListerThings.ThingsOfDef(ThingDefOfLocal.MiniArcReactor).ForEach(f => cores.Add(f as ArmorCore));
-                region.ListerThings.ThingsOfDef(ThingDefOfLocal.MiniColdFusionReactor).ForEach(f => cores.Add(f as ArmorCore));
             }
 
-
-            return cores;
-            */
+            return chosenThings;
         }
 
         public ITab_ModifyMk1()

@@ -1,6 +1,5 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using QuestRim;
-using RimOverhaul.AI;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -53,14 +52,12 @@ namespace MoreEvents.Quests
 
             DefDatabase<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>.AllDefsListForReading.Where(gen => gen.targetTags != null && gen.targetTags.Contains(MapGenerator)).TryRandomElementByWeight(w => w.Commonality, out MapGeneratorBlueprints.MapGenerator.MapGeneratorDef result);
 
-            LordJob_DefendPawn lordJob = new LordJob_DefendPawn(TargetPawn);
-            Lord lord = LordMaker.MakeNewLord(TargetPawn.Faction, lordJob, map);
-            lord.numPawnsLostViolently = int.MaxValue;
-
-            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction, lord);
+            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction);
 
             TargetPawn = (Pawn)GenSpawn.Spawn(TargetPawn, pawns.RandomElement().Position, map);
             pawns[0].GetLord().AddPawn(TargetPawn);
+
+            UnlimitedTime = true;
         }
 
         public override void SiteTick()
@@ -79,7 +76,7 @@ namespace MoreEvents.Quests
                 return false;
             }
 
-            if (AnyHostileOnMap(site.Map, TargetPawn.Faction))
+            if (TargetPawn != null && AnyHostileOnMap(site.Map, TargetPawn.Faction))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
@@ -113,7 +110,7 @@ namespace MoreEvents.Quests
             }
         }
 
-        public override void PostMapRemove(Map Map)
+        public override void PostMapRemove(Map map)
         {
             CheckWon();
 
@@ -145,10 +142,9 @@ namespace MoreEvents.Quests
                 return false;
 
             Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.AncientSoldier, faction2);
-            Find.WorldPawns.PassToWorld(pawn);
 
             Faction = faction1;
-            TicksToPass = Rand.Range(10, 19) * 60000;
+            TicksToPass = Rand.Range(6, 12) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             GenerateRewards();
 
@@ -217,6 +213,7 @@ namespace MoreEvents.Quests
             base.ExposeData();
 
             Scribe_References.Look(ref TargetPawn, "TargetPawn");
+            Scribe_Values.Look(ref Won, "Won");
         }
     }
 }

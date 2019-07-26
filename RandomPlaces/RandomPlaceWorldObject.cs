@@ -13,9 +13,7 @@ namespace RandomPlaces
 {
     public class RandomPlaceWorldObject : MapParent
     {
-        public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef MapDef;
-
-        public CompRandomPlace Worker;
+        public RandomPlaceDef RandomPlaceDef;
 
         public override bool AppendFactionToInspectString => false;
 
@@ -27,12 +25,16 @@ namespace RandomPlaces
         {
             base.PostMapGenerate();
 
-            if (MapDef != null)
+            if (RandomPlaceDef != null)
             {
-                MapGeneratorHandler.GenerateMap(MapDef, Map, out List<Pawn> pawns, true, true, true, false, true, true, true, Faction);
-            }
+                List<Pawn> pawns = null;
+                if (RandomPlaceDef.Map != null)
+                {
+                    MapGeneratorHandler.GenerateMap(RandomPlaceDef.Map, Map, out pawns, true, true, true, false, true, true, true, Faction, RandomPlaceDef.ExtraLord?.GetLord(Faction, Map));
+                }
 
-            Worker?.PostMapGenerate(Map);
+                RandomPlaceDef.Worker?.PostMapGenerate(Map, pawns);
+            }
         }
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
@@ -52,6 +54,7 @@ namespace RandomPlaces
             base.ExposeData();
 
             Scribe_Values.Look(ref UseEnterMapFloatMenuOption, "UseEnterMapFloatMenuOption");
+            Scribe_Defs.Look(ref RandomPlaceDef, "RandomPlaceDef");
         }
     }
 }

@@ -89,6 +89,11 @@ namespace MoreEvents.Events
             return true;
         }
 
+        protected override void ResolveRaidStrategy(IncidentParms parms, PawnGroupKindDef groupKind)
+        {
+            parms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
+        }
+
         protected LordJob MakeLordJob(IncidentParms parms, Map map, List<Pawn> pawns, int raidSeed)
         {
             IntVec3 originCell = (!parms.spawnCenter.IsValid) ? pawns[0].PositionHeld : parms.spawnCenter;

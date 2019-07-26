@@ -26,6 +26,7 @@ namespace MoreEvents
                     if(!Modules.ContainsKey(type))
                     {
                         Modules[type] = (RimOverhaulModule)Activator.CreateInstance(type);
+                        Modules[type].Loaded();
 
                         Log.Message($"[RimOevrhaul] Module {Modules[type].ModuleName} loaded");
                     }

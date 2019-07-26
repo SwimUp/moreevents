@@ -13,6 +13,6 @@ namespace RandomPlaces
 
         }
 
-        public abstract void PostMapGenerate(Map map);
+        public abstract void PostMapGenerate(Map map, List<Pawn> pawns);
     }
 }

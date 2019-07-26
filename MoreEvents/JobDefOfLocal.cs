@@ -12,11 +12,6 @@ namespace MoreEvents
     {
         public static JobDef DisableClimateBomb;
 
-        public static JobDef LoadArmorIntoStation;
-        public static JobDef UnLoadArmorIntoStation;
-
-        public static JobDef CarryReactorToStation;
-
         public static JobDef FireAround;
 
         public static JobDef DeEnergizeDoomsdayBomb;

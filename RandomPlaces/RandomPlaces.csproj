@@ -53,11 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompProperties_TriggerFermBunker.cs" />
     <Compile Include="CompRandomPlace.cs" />
     <Compile Include="CompRandomPlace_FermBunker.cs" />
     <Compile Include="CompTriggerFermBunker.cs" />
     <Compile Include="CompTriggerGenNewMap.cs" />
+    <Compile Include="ExtraLord.cs" />
+    <Compile Include="ExtraLord_AttackPlayer.cs" />
+    <Compile Include="ExtraLord_DefendBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomPlaceDef.cs" />
     <Compile Include="RandomPlaces.cs" />

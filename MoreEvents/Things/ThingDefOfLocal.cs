@@ -37,11 +37,6 @@ namespace MoreEvents
         public static ThingDef QuantumConverter;
         public static ThingDef VacuumPump;
 
-        public static ThingDef Apparel_MK1Thunder;
-        public static ThingDef Apparel_MK1ThunderHead;
-        public static ThingDef MiniColdFusionReactor;
-        public static ThingDef MiniArcReactor;
-
         public static ThingDef MeteoriteIncomingPlus;
         public static ThingDef DropPodIncomingPlus;
         public static ThingDef ActiveDropPodPlus;

@@ -48,7 +48,10 @@ namespace MoreEvents.Events
         {
             Map map = (Map)parms.target;
 
-            Pawn offerPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Villager);
+            PawnKindDef spaceRefugee = PawnKindDefOf.SpaceRefugee;
+            Pawn pawn = PawnGenerator.GeneratePawn(spaceRefugee);
+
+            Pawn offerPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.SpaceRefugee);
 
             int timeOut = 2 * 60000;
 

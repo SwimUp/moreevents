@@ -20,6 +20,9 @@ namespace RandomPlaces
         {
             base.WorldComponentTick();
 
+            if (handler == null)
+                return;
+
             if (handler.Triggers.Count == 0)
                 return;
 

@@ -217,6 +217,7 @@
     <Compile Include="MentalBreaks\MentalStateDefOfLocal.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalStateWorker_PositiveCharge.cs" />
     <Compile Include="MentalBreaks\PositiveCharge\MentalState_PositiveCharge.cs" />
+    <Compile Include="Patch\IncidentWorker_RaidEnemyNonAgressivePact.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillOrderMap.cs" />
     <Compile Include="Quests\Quest_KillOrder.cs" />
     <Compile Include="RimOverhaulModule.cs" />
@@ -232,7 +233,6 @@
     <Compile Include="Patch\PawnUIOverlayPatch.cs" />
     <Compile Include="Patch\Quest_BanditCamp.cs" />
     <Compile Include="Patch\Quest_TradeRequestComp.cs" />
-    <Compile Include="Patch\ToxicFallout_Patch.cs" />
     <Compile Include="Patch\VanillaFactionManagerPatch.cs" />
     <Compile Include="PawnKindDefOfLocal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -263,15 +263,6 @@
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
     <Compile Include="Things\DropPodIncomingPlus.cs" />
-    <Compile Include="Things\Gizmo_FillableMk1.cs" />
-    <Compile Include="Things\Mk1\Apparel_Mk1.cs" />
-    <Compile Include="Things\Mk1\ArmorCore.cs" />
-    <Compile Include="Things\Mk1\CompProperties_ArmorCore.cs" />
-    <Compile Include="Things\Mk1\ITab_ModifyMk1.cs" />
-    <Compile Include="Things\Mk1\JobDriver_CarryReactorToStation.cs" />
-    <Compile Include="Things\Mk1\JobDriver_UnLoadArmorIntoStand.cs" />
-    <Compile Include="Things\Mk1\JobDriver_LoadArmorIntoStand.cs" />
-    <Compile Include="Things\Mk1\Mk1PowerStation.cs" />
     <Compile Include="Things\SkyfallerPlus.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />

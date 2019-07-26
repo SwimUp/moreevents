@@ -13,19 +13,18 @@ namespace RandomPlaces
     public class WorldTrigger : IExposable
     {
         public int Tile;
-        public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef Map;
         public Faction Faction;
-        public CompRandomPlace Worker;
+        public RandomPlaceDef RandomPlaceDef;
 
         public WorldTrigger()
         {
 
         }
 
-        public WorldTrigger(int tile, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef map, Faction faction)
+        public WorldTrigger(int tile, RandomPlaceDef def, Faction faction)
         {
             Tile = tile;
-            Map = map;
+            RandomPlaceDef = def;
             Faction = faction;
         }
 
@@ -34,8 +33,7 @@ namespace RandomPlaces
             RandomPlaceWorldObject obj = (RandomPlaceWorldObject)WorldObjectMaker.MakeWorldObject(WorldObjectsDefOfLocal.RandomPlace);
             obj.Tile = caravan.Tile;
             obj.SetFaction(Faction);
-            obj.MapDef = Map;
-            obj.Worker = Worker;
+            obj.RandomPlaceDef = RandomPlaceDef;
             Find.WorldObjects.Add(obj);
 
             LongEventHandler.QueueLongEvent(delegate
@@ -46,7 +44,7 @@ namespace RandomPlaces
 
         private IntVec3 GetMapSize()
         {
-            return new IntVec3(Map.size.x, 1, Map.size.z);
+            return new IntVec3(RandomPlaceDef.Map.size.x, 1, RandomPlaceDef.Map.size.z);
         }
 
         public virtual void DoEnter(Caravan caravan, MapParent mapParent)
@@ -59,7 +57,11 @@ namespace RandomPlaces
             stringBuilder.Append("LetterCaravanEnteredMap".Translate(caravan.Label, "EnteredToRandomPlace".Translate()).CapitalizeFirst());
             Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredMassiveFire")} {"EnteredToRandomPlace".Translate()}", stringBuilder.ToString(), LetterDefOf.NeutralEvent);
             CaravanEnterMode enterMode = CaravanEnterMode.Edge;
-            CaravanEnterMapUtility.Enter(caravan, orGenerateMap, enterMode, CaravanDropInventoryMode.DoNotDrop);
+
+            if(RandomPlaceDef.UseMapSpawnSpot)
+                CaravanEnterMapUtility.Enter(caravan, orGenerateMap, (Pawn p) => RandomPlaceDef.Map.PawnsSpawnPos, CaravanDropInventoryMode.DoNotDrop);
+            else
+                CaravanEnterMapUtility.Enter(caravan, orGenerateMap, enterMode, CaravanDropInventoryMode.DoNotDrop);
         }
 
         public virtual Map GetOrGenerateMap(int tile, IntVec3 mapSize, MapParent mapParent, WorldObjectDef suggestedMapParentDef)
@@ -70,9 +72,8 @@ namespace RandomPlaces
         public void ExposeData()
         {
             Scribe_Values.Look(ref Tile, "Tile");
-            Scribe_Defs.Look(ref Map, "Map");
+            Scribe_Defs.Look(ref RandomPlaceDef, "RandomPlaceDef");
             Scribe_References.Look(ref Faction, "Faction");
-            Scribe_Deep.Look(ref Worker, "Worker");
         }
     }
 }

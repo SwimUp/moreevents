@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
     <Compile Include="Building_Geoscape.cs" />
+    <Compile Include="CommOption_NonAgressionPact.cs" />
     <Compile Include="CommOption_SubscribeScout.cs" />
     <Compile Include="CommunicationDialogWindow.cs" />
     <Compile Include="Dialog_QuestDialog.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="FactionInteraction.cs" />
     <Compile Include="FactionManager.cs" />
+    <Compile Include="NonAfressionPackComp.cs" />
     <Compile Include="QuestsHandler.cs" />
     <Compile Include="QuestDef.cs" />
     <Compile Include="QuestOption.cs" />

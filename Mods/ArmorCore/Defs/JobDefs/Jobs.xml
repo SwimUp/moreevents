@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<JobDef>
+		<defName>LoadArmorIntoStation</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_LoadArmorIntoStand</driverClass>
+		<reportString>Connects the armor to the stand</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>UnLoadArmorIntoStation</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_UnLoadArmorIntoStand</driverClass>
+		<reportString>Disconnects armor from the stand</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>CarryReactorToStation</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_CarryReactorToStation</driverClass>
+		<reportString>Carries reactor to station</reportString>
+	</JobDef>
+
+</Defs>
