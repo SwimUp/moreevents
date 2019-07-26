@@ -111,6 +111,7 @@
     <Compile Include="Events\ClimateBomb\IncidentWorker_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\JobDriver_DisableClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
+    <Compile Include="Events\ConcantrationCamp\ConcantrationCamp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_Doomsday.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_GiveRansom.cs" />
     <Compile Include="Communications\CommOption_DiscussWithOtherFactions.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Events\HasExitCellsComp.cs" />
     <Compile Include="Events\DoesntHasExitCells_Comp.cs" />
     <Compile Include="Events\IncidentWorker_Arsonists.cs" />
+    <Compile Include="Events\ConcantrationCamp\IncidentWorker_ConcantrationCamp.cs" />
     <Compile Include="Events\IncidentWorker_DropInsaneAnimals.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
     <Compile Include="Events\IncidentWorker_HungryCannibalsRaid.cs" />

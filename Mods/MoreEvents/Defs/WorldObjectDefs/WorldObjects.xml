@@ -121,5 +121,21 @@
     </IncidentTargetTags>
   </WorldObjectDef>
   
+  <WorldObjectDef>
+    <defName>ConcantrationCamp</defName>
+    <label>Concentration camp</label>
+    <description>Concentration camp\nProbably here pirates contain prisoners</description>
+    <worldObjectClass>QuestRim.QuestSite</worldObjectClass>
+    <texture>Map/ConcantrationCamp</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Map/ConcantrationCamp</expandingIconTexture>
+    <expandingIconPriority>100</expandingIconPriority>
+    <comps>
+	  <li Class="MoreEvents.Events.DoesntHasExitCells_Comp" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
   
 </Defs>

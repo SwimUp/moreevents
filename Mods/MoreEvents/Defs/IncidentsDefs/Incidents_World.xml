@@ -915,9 +915,31 @@ You can contact them via geocape.
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Quest_KillLOrder</workerClass>
 		<category>Misc</category>
-		<minRefireDays>60</minRefireDays>
+		<minRefireDays>55</minRefireDays>
 		<baseChance>0.7</baseChance>
 		<earliestDay>35</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Концлагерь -->
+	<IncidentDef>
+		<defName>ConcantrationCamp</defName>
+		<label>Concentration camp</label>
+		<letterLabel>Concentration camp</letterLabel>
+		<letterText>A person who is out of breath communicates with you, and tells you that they live in a concentration camp with others. He quickly sends you the coordinates and asks for help, otherwise they will be killed in the gas chambers.
+He is trying to give his name as abruptly the connection is broken.
+
+You can see event in geocape.
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.IncidentWorker_ConcantrationCamp</workerClass>
+		<category>Misc</category>
+		<minRefireDays>75</minRefireDays>
+		<baseChance>0.7</baseChance>
+		<earliestDay>60</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 

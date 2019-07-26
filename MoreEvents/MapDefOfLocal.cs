@@ -12,5 +12,6 @@ namespace MoreEvents
     {
         public static MapGeneratorDef Doomsday;
         public static MapGeneratorDef Camp;
+        public static MapGeneratorDef ConcantrationCamp;
     }
 }

@@ -4,7 +4,7 @@
 		<defName>ConcantrationCamp</defName>
 		<size>(125, 125)</size>
 		<targetTags>
-			<li>Quest_ConcantrationCamp</li>
+			<li>ConcantrationCamp</li>
 		</targetTags>
 		<PawnsSpawnPos>(5, 0, 120)</PawnsSpawnPos>
 		<MapData>
