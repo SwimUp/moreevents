@@ -139,6 +139,27 @@ namespace MoreEvents.Events
             }
         }
 
-
+        protected override bool TryResolveRaidFaction(IncidentParms parms)
+        {
+            Map map = (Map)parms.target;
+            if (parms.faction != null)
+            {
+                return true;
+            }
+            float num = parms.points;
+            if (num <= 0f)
+            {
+                num = 999999f;
+            }
+            if (PawnGroupMakerUtility.TryGetRandomFactionForCombatPawnGroup(num, out parms.faction, (Faction f) => FactionCanBeGroupSource(f, map), allowNonHostileToPlayer: true, allowHidden: false, allowDefeated: true))
+            {
+                return true;
+            }
+            if (PawnGroupMakerUtility.TryGetRandomFactionForCombatPawnGroup(num, out parms.faction, (Faction f) => FactionCanBeGroupSource(f, map, desperate: true), allowNonHostileToPlayer: true, allowHidden: false, allowDefeated: true))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
