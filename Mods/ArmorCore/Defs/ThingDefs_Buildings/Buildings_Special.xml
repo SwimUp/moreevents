@@ -6,9 +6,6 @@
 		<label>Mk1 power station</label>
 		<description>Charging station and create armor type mk1</description>
 		<thingClass>MoreEvents.Things.Mk1.Mk1PowerStation</thingClass>
-		<inspectorTabs> 
-			<li>MoreEvents.ITab_ModifyMk1</li>
-		</inspectorTabs>
 		<graphicData>
 			<texPath>Things/Buildings/PowerBuildingMK1/mk1power</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

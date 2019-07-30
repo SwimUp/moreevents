@@ -217,4 +217,7 @@ COMMANDS:
 
 	<GameCondition_SpaceBattleTitle>С неба обрушился корабельный отсек</GameCondition_SpaceBattleTitle>
 
+	<ConcantrationCampTitle>Заключенные</ConcantrationCampTitle>
+	<ConcantrationCamp>Как только вы вошли на территорию концлагеря, на средства связи ваших колонистов стали поступать сигналы. Вам удалось их отследить и теперь вы точно знаете, где держат заключенных.</ConcantrationCamp>
+
 </LanguageData>

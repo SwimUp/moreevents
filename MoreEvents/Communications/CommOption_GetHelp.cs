@@ -123,7 +123,6 @@ namespace MoreEvents.Communications
                     raidStrategy = RaidStrategyDefOf.ImmediateAttack,
                     forceOneIncap = true
                 };
-                List<Pawn> pawns = PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms).ToList();
 
                 IncidentParms incidentParms = new IncidentParms();
                 incidentParms.target = speaker.Map;

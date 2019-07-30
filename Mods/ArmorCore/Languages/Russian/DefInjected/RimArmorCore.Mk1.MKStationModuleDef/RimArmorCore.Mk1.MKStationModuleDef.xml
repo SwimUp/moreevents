@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+ 
+  <CondenserBatteries.label>Конденсаторные батареи</CondenserBatteries.label>
+  <CondenserBatteries.description>Блок батарей, которые медленно накапливают энергию. Используется как вторичный источник питания станции. Подзаряжает броню когда станция не подключена к основному источнику питания (при наличии заряда). Заряжается, когда питание у станции активно.\n\nСамые медленные и малоемкостные батареи.</CondenserBatteries.description>
+
+</LanguageData>

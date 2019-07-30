@@ -1,7 +1,9 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using MoreEvents;
 using MoreEvents.Events;
+using QuestRim;
 using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +15,37 @@ namespace RimOverhaul.Events.ConcantrationCamp
 {
     public class ConcantrationCamp : VisitableSite
     {
+        public int Timer = 0;
+        public List<Pawn> Pawns;
+
+        public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef MapDef => MapDefOfLocal.ConcantrationCamp;
+
         public override bool CanLeave()
         {
-            if (GenHostility.AnyHostileActiveThreatToPlayer(this.Map))
+            if (AnyHostileOnMap(Map, Faction))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
             }
 
             return true;
+        }
+
+        private bool AnyHostileOnMap(Map map, Faction enemyFaction)
+        {
+            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && !p.Dead && p.RaceProps.Humanlike).ToList();
+
+            if (enemyPawns == null || enemyPawns.Count == 0)
+                return false;
+
+            return true;
+        }
+
+        public override void Notify_CaravanFormed(Caravan caravan)
+        {
+            QuestsManager.Communications.CommunicationDialogs.RemoveAll(x => x.RelatedIncident == IncidentDefOfLocal.ConcantrationCamp);
+
+            base.Notify_CaravanFormed(caravan);
         }
 
         public override void PostMapGenerate()
@@ -34,11 +58,81 @@ namespace RimOverhaul.Events.ConcantrationCamp
             MapGeneratorHandler.GenerateMap(MapDefOfLocal.ConcantrationCamp, Map, out List<Pawn> pawns, true, true, true, false, true, true, true, Faction, lord);
 
             GeneratePrisoners();
+
+            Find.LetterStack.ReceiveLetter("ConcantrationCampTitle".Translate(), "ConcantrationCamp".Translate(), LetterDefOf.NeutralEvent);
+        }
+
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
+        {
+            CaravanArrivalAction_EnterToEmptyMap caravanArrivalAction = new CaravanArrivalAction_EnterToEmptyMap(this, new IntVec3(MapDef.size.x, 1, MapDef.size.z));
+            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanArrivalAction.CanVisit(caravan, mapParent), () => caravanArrivalAction, "EnterMap".Translate(mapParent.LabelCap), caravan, mapParent.Tile, mapParent);
+        }
+
+        public void GeneratePawns(int count)
+        {
+            Pawns = new List<Pawn>();
+
+            for(int i = 0; i < count; i++)
+            {
+                Pawn p = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+                Find.WorldPawns.PassToWorld(p);
+
+                Pawns.Add(p);
+            }
         }
 
         private void GeneratePrisoners()
         {
             Room room = GridsUtility.GetRoom(new IntVec3(65, 0, 80), Map);
+
+            if (Pawns != null)
+            {
+                foreach (var p in Pawns)
+                {
+                    Thing t = GenSpawn.Spawn(p, room.Cells.RandomElement(), Map);
+                    t.SetFaction(Faction.OfPlayer);
+                }
+            }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+
+            if(!HasMap)
+            {
+                Timer--;
+
+                if(Timer <= 0)
+                {
+                    PrisonersKilled();
+                }
+            }
+        }
+
+        private void PrisonersKilled()
+        {
+            for (int i = 0; i < Pawns.Count; i++)
+            {
+                Pawn pawn = Pawns[i];
+                Find.WorldPawns.RemovePawn(pawn);
+                pawn.Destroy();
+            }
+
+            Find.WorldObjects.Remove(this);
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref Timer, "Ticks");
+            Scribe_Collections.Look(ref Pawns, "Pawns", LookMode.Reference);
+        }
+
+        public override string GetInspectString()
+        {
+            return "InspectString_Timer".Translate(Timer.TicksToDays().ToString("f2"));
         }
     }
 }

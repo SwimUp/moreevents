@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<Station_ModuleTitle>Модули</Station_ModuleTitle>
+	<Station_NoModule>Установить модуль</Station_NoModule>
+	
+	<Modules_ArmorTab>Броня</Modules_ArmorTab>
+	<Modules_CapacityTab>Доп.энергия</Modules_CapacityTab>
+	<Modules_ChargingTab>Зарядка</Modules_ChargingTab>
+	
+	<ModuleWorker_CondenserBatteries_StatDescription>- скорость зарядки батарей: {0}</ModuleWorker_CondenserBatteries_StatDescription>
+	
+	<Station_ModuleItemNotFound>(предмет отсутствует на складе)</Station_ModuleItemNotFound>
+	<Station_NeedResearch>(требуется исследование: {0})</Station_NeedResearch>
+	<Station_ModuleCannotInstal>Модуль не может быть установлен. \nПричина: {0}</Station_ModuleCannotInstal>
+	<Station_InstallModule>Установить модуль</Station_InstallModule>
+</LanguageData>

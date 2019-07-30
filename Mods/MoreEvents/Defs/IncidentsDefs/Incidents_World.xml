@@ -926,8 +926,7 @@ You can contact them via geocape.
 		<defName>ConcantrationCamp</defName>
 		<label>Concentration camp</label>
 		<letterLabel>Concentration camp</letterLabel>
-		<letterText>A person who is out of breath communicates with you, and tells you that they live in a concentration camp with others. He quickly sends you the coordinates and asks for help, otherwise they will be killed in the gas chambers.
-He is trying to give his name as abruptly the connection is broken.
+		<letterText>Unknown person contacts you. Out of breath, but still having the strength, he tells you about a concentration camp set up by pirates. He quickly sends you the coordinates and asks to help him and the others get out of it.
 
 You can see event in geocape.
 		</letterText>
@@ -935,7 +934,7 @@ You can see event in geocape.
 		<targetTags>
 			<li>World</li>
 		</targetTags>
-		<workerClass>RimOverhaul.Events.IncidentWorker_ConcantrationCamp</workerClass>
+		<workerClass>RimOverhaul.Events.ConcantrationCamp.IncidentWorker_ConcantrationCamp</workerClass>
 		<category>Misc</category>
 		<minRefireDays>75</minRefireDays>
 		<baseChance>0.7</baseChance>

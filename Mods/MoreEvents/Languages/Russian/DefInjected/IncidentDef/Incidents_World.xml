@@ -186,5 +186,11 @@
   <Quest_KillOrder.letterText>{0} просит устранить {1} из фракции {2} за вознаграждение. Он отметил место на мировой карте.
   
 Вы можете связаться с ними через планетарную консоль связи.</Quest_KillOrder.letterText>  
+  
+  <ConcantrationCamp.label>Концлагерь</ConcantrationCamp.label>
+  <ConcantrationCamp.letterLabel>Концлагерь</ConcantrationCamp.letterLabel>
+  <ConcantrationCamp.letterText>Неизвестный человек связывается с вами. Запыхавшись, но все же имея силы он рассказывает вам о концлагере устроенном пиратами. ОН быстро передает вам координаты и просит помочь ему и остальным выбраться из него.
+
+Вы можете увидеть событие в планетарной консоли связи.</ConcantrationCamp.letterText>  
 
 </LanguageData>

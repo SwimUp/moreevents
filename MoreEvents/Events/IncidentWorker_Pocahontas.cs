@@ -34,7 +34,7 @@ namespace MoreEvents.Events
                 return false;
             }
 
-            if ((int)parms.faction.def.techLevel < (int)TechLevel.Industrial)
+            if (!Building_Geoscape.PlayerHasGeoscape || (int)parms.faction.def.techLevel < (int)TechLevel.Industrial)
             {
                 return ArrivalMode(parms);
             }

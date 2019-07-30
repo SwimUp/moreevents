@@ -78,6 +78,8 @@ namespace MoreEvents.Events.SiegeCamp
             if (downedPawns == pawns.Count)
             {
                 comp.UpdateCamp();
+
+                comp.Start();
             }
         }
 

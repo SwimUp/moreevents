@@ -59,6 +59,18 @@ namespace MoreEvents.Events.MassiveFire
             material = MaterialPool.MatFrom(textures[fireLevel], ShaderDatabase.WorldOverlayTransparentLit, WorldMaterials.WorldObjectRenderQueue);
         }
 
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
+        {
+            if (!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
+            {
+                alsoRemoveWorldObject = true;
+                return true;
+            }
+
+            alsoRemoveWorldObject = false;
+            return false;
+        }
+
         public override void Draw()
         {
             float averageTileSize = Find.WorldGrid.averageTileSize;

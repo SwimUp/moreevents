@@ -10,5 +10,6 @@ namespace MoreEvents
     public static class FactionDefOfLocal
     {
         public static FactionDef TribeRough;
+        public static FactionDef Pirate;
     }
 }

@@ -14,6 +14,8 @@ namespace QuestRim
     {
         public CompPowerTrader power;
 
+        public static bool PlayerHasGeoscape = false;
+
         public bool HasPower
         {
             get

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RimArmorCore.Mk1.MKStationModuleDef>
+		<defName>CondenserBatteries</defName>
+		<label>Condenser batteries</label>
+		<description>Block of capacitor banks that can store energy</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<EnergyBankCharge>0.07</EnergyBankCharge>
+		<Item>CondenserBatteries</Item>
+		<EnergyBankCapacity>50</EnergyBankCapacity>
+		<Icon>Modules/CondenserBatteries</Icon>
+	</RimArmorCore.Mk1.MKStationModuleDef>
+	
+	<RimArmorCore.Mk1.MKStationModuleDef>
+		<defName>CondenserBatteries2</defName>
+		<label>Condenser batteries</label>
+		<description>Block of capacitor banks that can store energy</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<EnergyBankCharge>0.07</EnergyBankCharge>
+		<Icon>Modules/CondenserBatteries</Icon>
+	</RimArmorCore.Mk1.MKStationModuleDef>
+	
+	<RimArmorCore.Mk1.MKStationModuleDef>
+		<defName>CondenserBatterie3</defName>
+		<label>Condenser batteries</label>
+		<description>Block of capacitor banks that can store energy</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<EnergyBankCharge>0.07</EnergyBankCharge>
+		<Icon>Modules/CondenserBatteries</Icon>
+	</RimArmorCore.Mk1.MKStationModuleDef>
+	
+	<RimArmorCore.Mk1.MKStationModuleDef>
+		<defName>CondenserBatterie4s</defName>
+		<label>Condenser batteries</label>
+		<description>Block of capacitor banks that can store energy</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<EnergyBankCharge>0.07</EnergyBankCharge>
+		<Icon>Modules/CondenserBatteries</Icon>
+	</RimArmorCore.Mk1.MKStationModuleDef>
+	
+	<RimArmorCore.Mk1.MKStationModuleDef>
+		<defName>CondenserBatterie7s</defName>
+		<label>Condenser batteries</label>
+		<description>Block of capacitor banks that can store energy</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<EnergyBankCharge>0.07</EnergyBankCharge>
+		<Icon>Modules/CondenserBatteries</Icon>
+	</RimArmorCore.Mk1.MKStationModuleDef>
+	
+	<RimArmorCore.Mk1.MKStationModuleDef>
+		<defName>CondenserBatterie2s</defName>
+		<label>rwrew</label>
+		<description>Block of capacitor banks that can store energy</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<EnergyBankCharge>0.07</EnergyBankCharge>
+		<Icon>Modules/CondenserBatteries</Icon>
+	</RimArmorCore.Mk1.MKStationModuleDef>
+	
+</Defs>

@@ -13,6 +13,6 @@ namespace RimArmorCore
         public static JobDef LoadArmorIntoStation;
         public static JobDef UnLoadArmorIntoStation;
         public static JobDef CarryReactorToStation;
-
+        public static JobDef OpenStation;
     }
 }

@@ -63,10 +63,18 @@
     <Compile Include="Mk1\CompProperties_ArmorCore.cs" />
     <Compile Include="Mk1\Gizmo_FillableMk1.cs" />
     <Compile Include="Mk1\ITab_ModifyMk1.cs" />
-    <Compile Include="Mk1\JobDriver_CarryReactorToStation.cs" />
-    <Compile Include="Mk1\JobDriver_LoadArmorIntoStand.cs" />
-    <Compile Include="Mk1\JobDriver_UnLoadArmorIntoStand.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_OpenStation.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_CarryReactorToStation.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_LoadArmorIntoStand.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_UnLoadArmorIntoStand.cs" />
     <Compile Include="Mk1\Mk1PowerStation.cs" />
+    <Compile Include="Mk1\MKStationModuleDef.cs" />
+    <Compile Include="Mk1\MKStationModuleDefOfLocal.cs" />
+    <Compile Include="Mk1\MKStationWindow.cs" />
+    <Compile Include="Mk1\MKStationModule.cs" />
+    <Compile Include="Mk1\ModuleMenuWindow.cs" />
+    <Compile Include="Mk1\ModuleSlot.cs" />
+    <Compile Include="Mk1\Workers\ModuleWorker_CondenserBatteries.cs" />
     <Compile Include="Patches\HeavyAir_RimOverhaul.cs" />
     <Compile Include="Patches\IceStorm_RimOverhaul.cs" />
     <Compile Include="Patches\RadiationFon_RimOverhaul.cs" />
@@ -74,5 +82,6 @@
     <Compile Include="ThingDefOfLocal.cs" />
     <Compile Include="ToxicFallout_Patch.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

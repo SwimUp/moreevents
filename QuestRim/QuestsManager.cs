@@ -76,6 +76,7 @@ namespace QuestRim
         public QuestsManager(Game game)
         {
             communications = null;
+            Building_Geoscape.PlayerHasGeoscape = false;
         }
 
         public override void ExposeData()
@@ -83,6 +84,21 @@ namespace QuestRim
             base.ExposeData();
 
             Scribe_Deep.Look(ref communications, "communications");
+        }
+
+        public override void FinalizeInit()
+        {
+            foreach (var map in Find.Maps)
+            {
+                if (map.IsPlayerHome)
+                {
+                    if (map.listerBuildings.allBuildingsColonist.Any(b => b is Building_Geoscape))
+                    {
+                        Building_Geoscape.PlayerHasGeoscape = true;
+                        break;
+                    }
+                }
+            }
         }
     }
 }

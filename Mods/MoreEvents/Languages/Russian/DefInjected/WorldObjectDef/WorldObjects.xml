@@ -18,5 +18,8 @@
      
   <QuestPlace.label>Место квеста</QuestPlace.label>
   <QuestPlace.description>Место квеста.</QuestPlace.description>
+  
+  <ConcantrationCamp.label>Концлагерь</ConcantrationCamp.label>
+  <ConcantrationCamp.description>Концлагерь\nВероятно, здесь пираты держат заключенных</ConcantrationCamp.description>
  
 </LanguageData>

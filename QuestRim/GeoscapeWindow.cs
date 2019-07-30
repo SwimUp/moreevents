@@ -593,15 +593,18 @@ namespace QuestRim
             rect2.y += 25;
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            for(int i = 0; i < Mathf.Min(4, message.Answers.Count); i++)
+            if (message.Answers != null)
             {
-                EmailMessageOption answer = message.Answers[i];
-
-                if (DrawCustomButton(new Rect(rect2.x, rect2.y, 200, rect2.height), answer.Label, Color.white))
+                for (int i = 0; i < Mathf.Min(4, message.Answers.Count); i++)
                 {
-                    answer.DoAction(message, QuestsManager.Communications.PlayerBox, message.Faction.leader);
+                    EmailMessageOption answer = message.Answers[i];
+
+                    if (DrawCustomButton(new Rect(rect2.x, rect2.y, 200, rect2.height), answer.Label, Color.white))
+                    {
+                        answer.DoAction(message, QuestsManager.Communications.PlayerBox, message.Faction.leader);
+                    }
+                    rect2.x += 220;
                 }
-                rect2.x += 220;
             }
 
             if (DrawCustomButton(new Rect(15, rect2.y + 25, 200, rect2.height), "DeleteMessage".Translate(), Color.white))

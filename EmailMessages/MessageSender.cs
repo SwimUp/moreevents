@@ -22,6 +22,9 @@ namespace EmailMessages
         {
             base.WorldComponentTick();
 
+            if (!Building_Geoscape.PlayerHasGeoscape)
+                return;
+
             if(Find.TickManager.TicksGame % 5000 == 0)
             {
                 if(TryFindMessage(out EmailMessageDef message))
@@ -46,12 +49,14 @@ namespace EmailMessages
         {
             EmailBox playerBox = QuestsManager.Communications.PlayerBox;
 
-            if (TryGetFaction(msg.SenderAvaliable, out Faction faction))
+            if (TryGetFaction(msg.SenderAvaliable, msg.MinReqGoodWill, out Faction faction))
             {
                 EmailMessage message = playerBox.FormMessageFrom(faction, msg.EmailText, msg.Subject);
                 message.Answers = msg.Options;
 
                 playerBox.SendMessage(message);
+
+                msg.MessageWorker?.OnReceived(message, playerBox);
 
                 return true;
             }
@@ -77,10 +82,16 @@ namespace EmailMessages
                         continue;
                 }
 
-                if (TryGetFaction(def.SenderAvaliable, out Faction faction))
-                {
-                    toSend.Add(def);
-                }
+                if (!TryGetFaction(def.SenderAvaliable, def.MinReqGoodWill, out Faction faction))
+                    continue;
+
+                if (GenDate.DaysPassed < def.EarliestDay)
+                    continue;
+
+                if (def.MessageWorker != null && !def.MessageWorker.CanReceiveNow())
+                    continue;
+
+                toSend.Add(def);
             }
 
             if (toSend.Count == 0)
@@ -94,9 +105,9 @@ namespace EmailMessages
             return false;
         }
 
-        private bool TryGetFaction(FactionRelationKind kind, out Faction faction)
+        private bool TryGetFaction(FactionRelationKind kind, IntRange minReqGoodWill, out Faction faction)
         {
-            if ((from f in Find.FactionManager.AllFactionsVisible where f != Faction.OfPlayer && f.PlayerRelationKind == kind select f).TryRandomElement(out faction))
+            if ((from f in Find.FactionManager.AllFactionsVisible where f != Faction.OfPlayer && f.PlayerRelationKind == kind && minReqGoodWill.InRange(f.PlayerGoodwill) select f).TryRandomElement(out faction))
             {
                 return true;
             }

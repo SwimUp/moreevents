@@ -102,6 +102,7 @@
     <Compile Include="Events\AttackFriendlySettlement\FriendlySettlementComp_Main.cs" />
     <Compile Include="Events\AttackFriendlySettlement\IncidentWorker_AttackFriendlySettlement.cs" />
     <Compile Include="Events\AttackFriendlySettlement\Quest_AttackFriendlySettlement.cs" />
+    <Compile Include="Events\CaravanArrivalAction_EnterToEmptyMap.cs" />
     <Compile Include="Events\CaravanArrivalAction_EnterToMap.cs" />
     <Compile Include="Events\ClimateBomb\CaravanVisitAction_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\ClimateBombComp.cs" />

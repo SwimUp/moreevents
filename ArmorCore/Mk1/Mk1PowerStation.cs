@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using RimArmorCore.Mk1;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +13,36 @@ namespace MoreEvents.Things.Mk1
     [StaticConstructorOnStartup]
     public class Mk1PowerStation : Building
     {
+        public int MaxModules => 3;
+
         public Thing ContainedArmor;
 
         public float ChargeSpeed = 0.06f;
+
+        public List<ModuleSlot> Slots
+        {
+            get
+            {
+                if(slots == null)
+                {
+                    slots = new List<ModuleSlot>(MaxModules);
+                    for(int i = 0; i < MaxModules; i++)
+                    {
+                        slots.Add(new ModuleSlot());
+                    }
+                    AddModule(MKStationModuleDefOfLocal.CondenserBatteries);
+                }
+
+                return slots;
+            }
+        }
+        private List<ModuleSlot> slots;
 
         public bool HasPower
         {
             get
             {
-                if (power != null && power.PowerOn)
+                if ((power != null && power.PowerOn))
                 {
                     return !this.Map.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare);
                 }
@@ -35,6 +57,8 @@ namespace MoreEvents.Things.Mk1
 
         public CompPowerTrader power;
 
+        public float EnergyBank;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -48,18 +72,90 @@ namespace MoreEvents.Things.Mk1
                 Apparel_Mk1 mk1 = (Apparel_Mk1)ContainedArmor;
                 mk1.CoreComp = mk1.Core.TryGetComp<ArmorCore>();
             }
+
+            ChargeSpeed = 0.06f;
+            EnergyBank = 0f;
+            for (int i = 0; i < Slots.Count; i++)
+            {
+                ModuleSlot slot = Slots[i];
+
+                if (slot.Module != null)
+                {
+                    EnergyBank += slot.Module.def.EnergyBankCapacity;
+                    ChargeSpeed += slot.Module.def.AdditionalChargeSpeed;
+                }
+            }
+        }
+
+        public void AddModule(MKStationModuleDef moduleDef)
+        {
+            MKStationModule module = (MKStationModule)Activator.CreateInstance(moduleDef.workerClass);
+            module.def = moduleDef;
+            module.Station = this;
+
+            foreach (var slot in Slots)
+            {
+                if (slot.Module == null)
+                {
+                    slot.Module = module;
+                    break;
+                }
+            }
+        }
+
+        public void RemoveModule(MKStationModuleDef moduleDef)
+        {
+            for (int i = 0; i < Slots.Count; i++)
+            {
+                ModuleSlot slot = Slots[i];
+                if(slot.Module.def == moduleDef)
+                {
+                    slot.Module = null;
+                }
+            }
+        }
+
+        public bool TryChargeEnergyBank(float charge)
+        {
+            if (EnergyBank >= 100f)
+                return false;
+
+            EnergyBank = Mathf.Clamp(EnergyBank + charge, 0, 100);
+
+            return true;
         }
 
         public override void Tick()
         {
             if (Find.TickManager.TicksGame % 200 == 0)
             {
-                if (HasPower && HasArmor)
+                if (HasArmor)
                 {
                     var armor = (Apparel_Mk1)ContainedArmor;
-                    armor.AddCharge(ChargeSpeed);
+
+                    if (HasPower)
+                    {
+                        armor.AddCharge(ChargeSpeed);
+                    }
+                    else if(EnergyBank > 0f)
+                    {
+                        float chargeCount = Mathf.Min(EnergyBank, ChargeSpeed);
+                        EnergyBank -= chargeCount;
+
+                        armor.AddCharge(chargeCount);
+                    }
                 }
             }
+
+            for(int i = 0; i < Slots.Count; i++)
+            {
+                Slots[i].Module?.StationTick();
+            }
+        }
+
+        public void OpenStation()
+        {
+            Find.WindowStack.Add(new MKStationWindow(this));
         }
 
         private void CreateAnim()
@@ -76,41 +172,17 @@ namespace MoreEvents.Things.Mk1
             base.ExposeData();
 
             Scribe_Deep.Look(ref ContainedArmor, "ContainedArmor");
+            Scribe_Collections.Look(ref slots, "Slots", LookMode.Deep);
+            Scribe_Values.Look(ref EnergyBank, "EnergyBank");
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
         {
-            if (HasArmor)
+            yield return new FloatMenuOption("OpenMKStation".Translate(), delegate
             {
-                yield return new FloatMenuOption("UnloadArmor".Translate(), delegate
-                {
-                    Job job = new Job(RimArmorCore.JobDefOfLocal.UnLoadArmorIntoStation, this);
-                    selPawn.jobs.TryTakeOrderedJob(job);
-                });
-            }
-            else
-            {
-                yield return new FloatMenuOption("LoadArmor".Translate(), delegate
-                {
-                    var armors = this.Map.listerThings.ThingsOfDef(RimArmorCore.ThingDefOfLocal.Apparel_MK1Thunder);
-                    if (armors.Count == 0)
-                    {
-                        Messages.Message("NoAvaliableArmors".Translate(), MessageTypeDefOf.NeutralEvent, false);
-                        return;
-                    }
-
-                    List<FloatMenuOption> list = new List<FloatMenuOption>();
-                    foreach (var armor in armors)
-                        list.Add(new FloatMenuOption($"{armor.LabelCap}", delegate
-                        {
-                            Job job = new Job(RimArmorCore.JobDefOfLocal.LoadArmorIntoStation, this, armor);
-                            job.count = 1;
-                            selPawn.jobs.TryTakeOrderedJob(job);
-                        }));
-
-                    Find.WindowStack.Add(new FloatMenu(list));
-                });
-            }
+                Job job = new Job(RimArmorCore.JobDefOfLocal.OpenStation, this);
+                selPawn.jobs.TryTakeOrderedJob(job);
+            });
         }
 
         public override void Draw()

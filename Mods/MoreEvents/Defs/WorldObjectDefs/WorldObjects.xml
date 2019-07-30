@@ -125,7 +125,7 @@
     <defName>ConcantrationCamp</defName>
     <label>Concentration camp</label>
     <description>Concentration camp\nProbably here pirates contain prisoners</description>
-    <worldObjectClass>QuestRim.QuestSite</worldObjectClass>
+    <worldObjectClass>RimOverhaul.Events.ConcantrationCamp.ConcantrationCamp</worldObjectClass>
     <texture>Map/ConcantrationCamp</texture>
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>Map/ConcantrationCamp</expandingIconTexture>

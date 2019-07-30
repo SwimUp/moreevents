@@ -20,6 +20,12 @@ namespace EmailMessages
 
         public float Commonality;
 
+        public int EarliestDay = 0;
+
+        public IntRange MinReqGoodWill = new IntRange(-100, 100);
+
         public List<EmailMessageOption> Options;
+
+        public EmailMessageWorker MessageWorker;
     }
 }

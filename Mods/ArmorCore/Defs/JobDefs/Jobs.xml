@@ -18,5 +18,11 @@
 		<driverClass>MoreEvents.Things.Mk1.JobDriver_CarryReactorToStation</driverClass>
 		<reportString>Carries reactor to station</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>OpenStation</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_OpenStation</driverClass>
+		<reportString>Uses the station</reportString>
+	</JobDef>
 
 </Defs>
