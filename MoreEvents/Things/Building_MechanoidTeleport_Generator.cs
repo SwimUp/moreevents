@@ -41,7 +41,8 @@ namespace MoreEvents.Things
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            Teleport.Destroy(0);
+            if(Teleport != null)
+                Teleport.Destroy(0);
             base.Destroy(mode);
         }
 
