@@ -2,4 +2,28 @@
 <LanguageData>
 	<Station_ModuleTitle>Modules</Station_ModuleTitle>
 	<Station_NoModule>Setup module</Station_NoModule>
+	
+	<Modules_ArmorTab>Armor</Modules_ArmorTab>
+	<Modules_CapacityTab>Additional energy</Modules_CapacityTab>
+	<Modules_ChargingTab>Charging</Modules_ChargingTab>
+	
+	<ModuleWorker_StatDescription_Capacity>- additional battery capacity: {0}</ModuleWorker_StatDescription_Capacity>
+	<ModuleWorker_StatDescription_Charging>- battery charging speed: {0}</ModuleWorker_StatDescription_Charging>
+	<ModuleWorker_StatDescription_PowerLimit>- energy load on the system: {0}</ModuleWorker_StatDescription_PowerLimit>
+	<ModuleWorker_StatDescription_AddCharge>- additional charging rate: {0}</ModuleWorker_StatDescription_AddCharge>
+	
+	<Station_ModuleItemNotFound>(item out of storage)</Station_ModuleItemNotFound>
+	<Station_NeedResearch>(research is required: {0})</Station_NeedResearch>
+	<Station_ModuleCannotInstal>Module cannot be installed. \nReason: {0}</Station_ModuleCannotInstal>
+	<Station_InstallModule>Install module</Station_InstallModule>
+	
+	<Station_PowerLimitInfo>Energy load on the system</Station_PowerLimitInfo>
+	<Station_PowerLimit>SYSTEM OVERLOADED</Station_PowerLimit>
+	<Station_OverDrive>Power overload</Station_OverDrive>
+	
+	<OverDrive_Wait>Unable to activate overload, the system has not yet cooled.</OverDrive_Wait>
+	<OverDrive_Disabled>Power Overload Unavailable.</OverDrive_Disabled>
+	<OverDrive_ON>Power overload switched. If the overload is active, the station will take damage, but the armor charge is doubled. \nIf you do not turn it off before it reaches 100%, the station will receive significant damage.</OverDrive_ON>
+	
+	<Station_SecondTableInfo>Active modules: {0} / {1} \nArmor charge rate: {2} \nInternal energy storage: {3} / {4} \nStorage charge rate: {5}</Station_SecondTableInfo>
 </LanguageData>

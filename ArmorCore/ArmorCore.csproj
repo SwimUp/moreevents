@@ -63,6 +63,7 @@
     <Compile Include="Mk1\CompProperties_ArmorCore.cs" />
     <Compile Include="Mk1\Gizmo_FillableMk1.cs" />
     <Compile Include="Mk1\ITab_ModifyMk1.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_SetupModule.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_OpenStation.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_CarryReactorToStation.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_LoadArmorIntoStand.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Mk1\MKStationModule.cs" />
     <Compile Include="Mk1\ModuleMenuWindow.cs" />
     <Compile Include="Mk1\ModuleSlot.cs" />
+    <Compile Include="Mk1\Workers\ModuleWorker_Transformers.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_CondenserBatteries.cs" />
     <Compile Include="Patches\HeavyAir_RimOverhaul.cs" />
     <Compile Include="Patches\IceStorm_RimOverhaul.cs" />

@@ -3,4 +3,6 @@
   <OpenMKStation>Использовать станцию</OpenMKStation>
   <StationTab>Станция</StationTab>
   <ArmorTab>Подключенная броня</ArmorTab>
+  
+  <Station_UnloadModule>Отключить и убрать модуль</Station_UnloadModule>
 </LanguageData>

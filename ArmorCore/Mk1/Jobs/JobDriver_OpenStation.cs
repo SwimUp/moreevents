@@ -11,12 +11,10 @@ namespace MoreEvents.Things.Mk1
 {
     public class JobDriver_OpenStation : JobDriver
     {
-        public Mk1PowerStation station;
+        public Mk1PowerStation station => (Mk1PowerStation)TargetA.Thing;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            station = (Mk1PowerStation)TargetA.Thing;
-
             return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
         }
 
@@ -28,7 +26,7 @@ namespace MoreEvents.Things.Mk1
             {
                 initAction = delegate
                 {
-                    station.OpenStation();
+                    station.OpenStation(pawn);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };

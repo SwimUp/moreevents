@@ -15,10 +15,5 @@ namespace RimArmorCore.Mk1.Workers
                 Station.TryChargeEnergyBank(def.EnergyBankCharge);
             }
         }
-
-        public override string StatDescription()
-        {
-            return "ModuleWorker_CondenserBatteries_StatDescription".Translate(def.EnergyBankCharge);
-        }
     }
 }

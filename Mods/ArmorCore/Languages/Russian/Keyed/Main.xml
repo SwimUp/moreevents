@@ -7,10 +7,23 @@
 	<Modules_CapacityTab>Доп.энергия</Modules_CapacityTab>
 	<Modules_ChargingTab>Зарядка</Modules_ChargingTab>
 	
-	<ModuleWorker_CondenserBatteries_StatDescription>- скорость зарядки батарей: {0}</ModuleWorker_CondenserBatteries_StatDescription>
+	<ModuleWorker_StatDescription_Capacity>- дополнительная емкость батарей: {0}</ModuleWorker_StatDescription_Capacity>
+	<ModuleWorker_StatDescription_Charging>- скорость зарядки батарей: {0}</ModuleWorker_StatDescription_Charging>
+	<ModuleWorker_StatDescription_PowerLimit>- нагрузка на систему: {0}</ModuleWorker_StatDescription_PowerLimit>
+	<ModuleWorker_StatDescription_AddCharge>- дополнительная скорость зарядки: {0}</ModuleWorker_StatDescription_AddCharge>
 	
 	<Station_ModuleItemNotFound>(предмет отсутствует на складе)</Station_ModuleItemNotFound>
 	<Station_NeedResearch>(требуется исследование: {0})</Station_NeedResearch>
 	<Station_ModuleCannotInstal>Модуль не может быть установлен. \nПричина: {0}</Station_ModuleCannotInstal>
 	<Station_InstallModule>Установить модуль</Station_InstallModule>
+	
+	<Station_PowerLimitInfo>Нагрузка на систему</Station_PowerLimitInfo>
+	<Station_PowerLimit>СИСТЕМА ПЕРЕГРУЖЕНА</Station_PowerLimit>
+	<Station_OverDrive>Перегрузка мощности</Station_OverDrive>
+	
+	<OverDrive_Wait>Невозможно активировать перегрузку, система еще не остыла.</OverDrive_Wait>
+	<OverDrive_Disabled>Перегрузка мощности недоступна.</OverDrive_Disabled>
+	<OverDrive_ON>Перегрузка мощности переключена. Если перегрузка активна, то станция будет получать урон, но зарядка брони увеличена в 2 раза. \nЕсли не отключить его до того, как он достигнет 100% - станция получит значительный урон.</OverDrive_ON>
+	
+	<Station_SecondTableInfo>Активно модулей: {0} / {1}\nСкорость зарядки брони: {2}\nВнутреннее энергохранилище: {3} / {4}\nСкорость зарядки хранилища: {5}</Station_SecondTableInfo>
 </LanguageData>

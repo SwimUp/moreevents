@@ -53,5 +53,141 @@
 		</ExtraLord>
 	</RandomPlaces.RandomPlaceDef>
 
+	<RandomPlaces.RandomPlaceDef>
+		<defName>AbandonedOutpost</defName>
+		<Commonality>0.33</Commonality>
+		<Map>AbandonedOutpost</Map>
+		<MinAtStart>1</MinAtStart>
+		<MaxSpawn>3</MaxSpawn>
+		<RefuelGenerators>false</RefuelGenerators>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>AbandonedMines</defName>
+		<Commonality>0.75</Commonality>
+		<Map>AbandonedMines</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
 
+	<RandomPlaces.RandomPlaceDef>
+		<defName>AbandonedMines3</defName>
+		<Commonality>0.42</Commonality>
+		<Map>AbandonedMines3</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+		<ExtraLord Class="RandomPlaces.ExtraLord_AttackPlayer" />
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>ShipCrash</defName>
+		<Commonality>0.42</Commonality>
+		<Map>ShipCrash</Map>
+		<MinAtStart>1</MinAtStart>
+		<MaxSpawn>3</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>LeftOutpost</defName>
+		<Commonality>0.45</Commonality>
+		<Map>LeftOutpost</Map>
+		<MinAtStart>3</MinAtStart>
+		<MaxSpawn>5</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>TribalFishermen</defName>
+		<Commonality>0.65</Commonality>
+		<Map>TribalFishermen</Map>
+		<MinAtStart>2</MinAtStart>
+		<MaxSpawn>4</MaxSpawn>
+		<FactionType>Neutral</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>SettlementHunters</defName>
+		<Commonality>0.45</Commonality>
+		<Map>SettlementHunters</Map>
+		<MinAtStart>1</MinAtStart>
+		<MaxSpawn>4</MaxSpawn>
+		<FactionType>Neutral</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Ruins1</defName>
+		<Commonality>0.45</Commonality>
+		<Map>Ruins1</Map>
+		<MinAtStart>2</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Ruins2</defName>
+		<Commonality>0.35</Commonality>
+		<Map>Ruins2</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>3</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Ruins3</defName>
+		<Commonality>0.67</Commonality>
+		<Map>Ruins3</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Ruins4</defName>
+		<Commonality>0.65</Commonality>
+		<Map>Ruins4</Map>
+		<MinAtStart>1</MinAtStart>
+		<MaxSpawn>4</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Fishermans</defName>
+		<Commonality>0.45</Commonality>
+		<Map>Fishermans</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>4</MaxSpawn>
+		<FactionType>Ally</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>BurnedSettlement1</defName>
+		<Commonality>0.21</Commonality>
+		<Map>BurnedSettlement1</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>BurnedSettlement2</defName>
+		<Commonality>0.21</Commonality>
+		<Map>BurnedSettlement2</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>2</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
+	<RandomPlaces.RandomPlaceDef>
+		<defName>Stonehensgj</defName>
+		<Commonality>0.1</Commonality>
+		<Map>Stonehensgj</Map>
+		<MinAtStart>0</MinAtStart>
+		<MaxSpawn>1</MaxSpawn>
+		<FactionType>Hostile</FactionType>
+	</RandomPlaces.RandomPlaceDef>
+	
 </Defs>

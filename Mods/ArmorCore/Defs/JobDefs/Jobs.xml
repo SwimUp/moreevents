@@ -25,4 +25,10 @@
 		<reportString>Uses the station</reportString>
 	</JobDef>
 
+	<JobDef>
+		<defName>SetupModuleForStation</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_SetupModule</driverClass>
+		<reportString>improves the station</reportString>
+	</JobDef>
+
 </Defs>

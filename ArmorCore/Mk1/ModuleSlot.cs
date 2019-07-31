@@ -12,9 +12,12 @@ namespace RimArmorCore.Mk1
 
         public MKStationModule Module;
 
+        public Thing Item;
+
         public void ExposeData()
         {
             Scribe_Deep.Look(ref Module, "Module");
+            Scribe_Deep.Look(ref Item, "Item");
         }
     }
 }

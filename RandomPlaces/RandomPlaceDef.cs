@@ -18,5 +18,6 @@ namespace RandomPlaces
         public ExtraLord ExtraLord;
         public CompRandomPlace Worker;
         public bool UseMapSpawnSpot;
+        public bool RefuelGenerators = true;
     }
 }

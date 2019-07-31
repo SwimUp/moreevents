@@ -21,7 +21,24 @@ namespace RimArmorCore.Mk1
 
         public virtual string StatDescription()
         {
-            return "";
+            StringBuilder builder = new StringBuilder();
+            if(def.PowerLimit > 0f)
+            {
+                builder.AppendLine("ModuleWorker_StatDescription_PowerLimit".Translate(def.PowerLimit));
+            }
+            if(def.AdditionalChargeSpeed > 0f)
+            {
+                builder.AppendLine("ModuleWorker_StatDescription_AddCharge".Translate(def.AdditionalChargeSpeed));
+            }
+            if(def.EnergyBankCharge > 0f)
+            {
+                builder.AppendLine("ModuleWorker_StatDescription_Charging".Translate(def.EnergyBankCharge));
+            }
+            if(def.EnergyBankCapacity > 0f)
+            {
+                builder.AppendLine("ModuleWorker_StatDescription_Capacity".Translate(def.EnergyBankCapacity));
+            }
+            return builder.ToString();
         }
 
         public virtual void ExposeData()

@@ -26,10 +26,14 @@ namespace RandomPlaces
                 for (int i3 = 0; i3 < randomPlaceDef.MinAtStart; i3++)
                 {
                     int tile = TileFinder.RandomStartingTile();
-                    TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
-                    Triggers.Add(tile, MakeTrigger(tile, randomPlaceDef, faction));
-                    spawnedCount++;
-                    Find.LetterStack.ReceiveLetter($"{randomPlaceDef.Map.defName} - {tile} - {randomPlaceDef.Worker}", "K", LetterDefOf.Death, new LookTargets(tile));
+
+                    if (randomPlaceDef.Worker == null || randomPlaceDef.Worker.CanPlace(tile))
+                    {
+                        TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
+                        Triggers.Add(tile, MakeTrigger(tile, randomPlaceDef, faction));
+                        spawnedCount++;
+
+                    }
                 }
 
                if (spawnedCount >= randomPlaceDef.MaxSpawn)
@@ -40,11 +44,18 @@ namespace RandomPlaces
                     if (Rand.Chance(randomPlaceDef.Commonality))
                     {
                         int tile = TileFinder.RandomStartingTile();
-                        TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
-                        Triggers.Add(tile, MakeTrigger(tile, randomPlaceDef, faction));
-                        Find.LetterStack.ReceiveLetter($"{randomPlaceDef.Map.defName} - {tile} - {randomPlaceDef.Worker}", "G", LetterDefOf.Death, new LookTargets(tile));
+                        if (randomPlaceDef.Worker == null || randomPlaceDef.Worker.CanPlace(tile))
+                        {
+                            TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
+                            Triggers.Add(tile, MakeTrigger(tile, randomPlaceDef, faction));
+                        }
                     }
                 }
+            }
+
+            if(Prefs.DevMode)
+            {
+                Log.Message($"TOTAL: {Triggers.Count}");
             }
         }
 

@@ -21,6 +21,9 @@ namespace MoreEvents.Events
             if (tribalFaction == null)
                 return false;
 
+            if (tribalFaction.PlayerRelationKind != FactionRelationKind.Hostile)
+                return false;
+
             Map map = (Map)parms.target;
 
             parms.points = StorytellerUtility.DefaultThreatPointsNow(map) * 1.2f;

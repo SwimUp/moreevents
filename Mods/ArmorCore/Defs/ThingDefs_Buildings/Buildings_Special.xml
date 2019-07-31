@@ -25,7 +25,7 @@
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<statBases>
 			<MarketValue>900</MarketValue>
-			<MaxHitPoints>250</MaxHitPoints>
+			<MaxHitPoints>500</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<WorkToBuild>20000</WorkToBuild>
 			<Mass>15</Mass>

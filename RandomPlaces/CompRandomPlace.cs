@@ -14,5 +14,10 @@ namespace RandomPlaces
         }
 
         public abstract void PostMapGenerate(Map map, List<Pawn> pawns);
+
+        public virtual bool CanPlace(int tile)
+        {
+            return true;
+        }
     }
 }

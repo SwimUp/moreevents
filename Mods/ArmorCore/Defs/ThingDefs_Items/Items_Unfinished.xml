@@ -144,8 +144,8 @@
 
 	<ThingDef>
 		<defName>CondenserBatteries</defName>
-		<label>minified arc reactor</label>
-		<description>Condenser batteries</description>
+		<label>Condenser batteries</label>
+		<description>Module for MK station\n\nA battery pack that slowly accumulates energy. Used as a secondary station power supply. Charges armor when the station is not connected to the main power source (if there is a charge). Charges when the power to the station is active. \n\nThe slowest and low-capacity batteries.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
 			<texPath>Modules/CondenserBatteries_Thing</texPath>
@@ -188,12 +188,448 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>300</Plasteel>
+			<Plasteel>30</Plasteel>
 			<Steel>500</Steel>
+			<Gold>10</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Uranium>15</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>RoboticManipulators</defName>
+		<label>Robotic manipulators</label>
+		<description>Module for MK station\n\nA set of robotic manipulators to simplify the repair and modernization of armor. They are designed to provide a more detailed improvement in armor due to a special artificial intelligence.
+
+Allow you to install a second level of modules for armor.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/Manipulator_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(2, 2)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>7</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
 			<Plasteel>50</Plasteel>
-			<Gold>30</Gold>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<ComponentSpacer>15</ComponentSpacer>
+			<Steel>300</Steel>
+			<Gold>10</Gold>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>Nanorobots</defName>
+		<label>Nanorobots</label>
+		<description>Module for MK station\n\nLiquid enriched with specially programmed nanorobots for very fine work. Moreover, due to their size and type of fluid, they can penetrate where people cannot.
+
+Opens the last level of modules for armor.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/Nanites_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>200</Steel>
+			<Gold>20</Gold>
+			<ComponentIndustrial>7</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>Transformers</defName>
+		<label>Transformers</label>
+		<description>Module for MK station\n\nA step-up transformer with a winding of steel allows you to increase the speed of charging armor.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/Transformator_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>15</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>100</Plasteel>
+			<Steel>500</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Uranium>30</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>PowerAccelerator</defName>
+		<label>Power accelerator</label>
+		<description>Module for MK station\n\nAccelerator and enricher charged particles. Increases the speed of charging armor, and thanks to a special design allows you to activate power overload to use the maximum power (attention: explosive!)</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/PowerAccelerator_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>50</Plasteel>
+			<Steel>250</Steel>
+			<Gold>15</Gold>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>EnergyCell</defName>
+		<label>Energy cell</label>
+		<description>Module for MK station\n\nEnergy cell accumulating a small amount of energy and radiating with increased power. Provides increased armor charging speed.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/EnergyCell_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>50</Plasteel>
+			<Steel>300</Steel>
+			<Gold>20</Gold>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Uranium>20</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>NanoYolk</defName>
+		<label>'Nano-yolk' high capacity</label>
+		<description>Module for MK station\n\nThe hollow shell of titanium dioxide, inside which (like the yolk in the egg) is a filler of aluminum powder, sulfuric acid and titanium oxysulfate. The size of the filler can vary regardless of the shell. The use of such particles allowed a three-fold increase in the capacity of the batteries, and significantly reduce the charging speed.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/NanoYolk_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>50</Plasteel>
+			<Steel>300</Steel>
+			<Gold>10</Gold>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>Instruments</defName>
+		<label>Instruments</label>
+		<description>Module for MK station\n\nA set of tools for basic armor upgrades.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Modules/Instruments_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>

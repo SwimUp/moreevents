@@ -7,11 +7,22 @@ using Verse;
 
 namespace RimArmorCore.Mk1
 {
+    public enum Category
+    {
+        Armor,
+        Capacity,
+        Charging
+    };
+
     public class MKStationModuleDef : Def
     {
         public string Icon;
 
+        public Category ModuleCategory;
+
         public ThingDef Item;
+
+        public float PowerLimit;
 
         public Texture2D IconImage
         {
@@ -31,6 +42,8 @@ namespace RimArmorCore.Mk1
         private Texture2D iconImage;
 
         public float EnergyBankCharge;
+
+        public bool EnableOverDrive = false;
 
         public float EnergyBankCapacity;
 

@@ -30,7 +30,7 @@ namespace RandomPlaces
                 List<Pawn> pawns = null;
                 if (RandomPlaceDef.Map != null)
                 {
-                    MapGeneratorHandler.GenerateMap(RandomPlaceDef.Map, Map, out pawns, true, true, true, false, true, true, true, Faction, RandomPlaceDef.ExtraLord?.GetLord(Faction, Map));
+                    MapGeneratorHandler.GenerateMap(RandomPlaceDef.Map, Map, out pawns, true, true, true, false, true, true, true, Faction, RandomPlaceDef.ExtraLord?.GetLord(Faction, Map), RandomPlaceDef.RefuelGenerators);
                 }
 
                 RandomPlaceDef.Worker?.PostMapGenerate(Map, pawns);

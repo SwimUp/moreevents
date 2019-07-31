@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace RimArmorCore.Mk1
 {
@@ -120,30 +121,31 @@ namespace RimArmorCore.Mk1
             switch (tab)
             {
                 case Tab.Armor:
-                    
+                    DrawModuleTab(rect2, Category.Armor);
                     break;
                 case Tab.Capacity:
-                    DrawCapacityTab(rect2);
+                    DrawModuleTab(rect2, Category.Capacity);
                     break;
                 case Tab.Charging:
-
+                    DrawModuleTab(rect2, Category.Charging);
                     break;
             }
         }
 
-        private void DrawCapacityTab(Rect inRect)
+        private void DrawModuleTab(Rect inRect, Category selectCategory)
         {
             Rect scrollVertRectFact = new Rect(0, 0, inRect.x, DefDatabase<MKStationModuleDef>.DefCount * 35);
 
             GUI.color = MenuSectionBGBorderColor;
-            Widgets.DrawLineVertical(236, inRect.y, 465);
+            Widgets.DrawLineVertical(245, inRect.y, 465);
+            Widgets.DrawLineHorizontal(0, inRect.y, inRect.width);
             GUI.color = Color.white;
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            Rect rect2 = new Rect(inRect.x + 10, 0, 220, 30);
+            Rect rect2 = new Rect(inRect.x + 10, 0, 230, 30);
             Rect sliderRect = new Rect(inRect.x, inRect.y + 10, inRect.width, inRect.height);
             Widgets.BeginScrollView(sliderRect, ref slider, scrollVertRectFact, true);
-            foreach (var module in DefDatabase<MKStationModuleDef>.AllDefsListForReading)
+            foreach (var module in DefDatabase<MKStationModuleDef>.AllDefsListForReading.Where(x => x.ModuleCategory == selectCategory))
             {
                 Color bColor = canUse.ContainsKey(module) ? Color.gray : Color.white;
                 if (DrawCustomButton(rect2, module.LabelCap, bColor))
@@ -174,15 +176,15 @@ namespace RimArmorCore.Mk1
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
 
-            Rect mainRect = new Rect(rect.x + 10, textureRect.y + 115, 490, 300);
+            Rect mainRect = new Rect(rect.x + 15, textureRect.y + 115, 470, 300);
             Widgets.LabelScrollable(mainRect, module.description, ref slider2);
 
             GUI.color = MenuSectionBGBorderColor;
-            Widgets.DrawLineHorizontal(rect.x + 40, rect.y + 25, rect.width - 80);
+            Widgets.DrawLineHorizontal(rect.x + 45, rect.y + 30, rect.width - 80);
             GUI.color = Color.white;
 
             Color bColor = canUse.ContainsKey(module) ? Color.gray : Color.white;
-            Rect buttonRect = new Rect(rect.x + 10, rect.y + 320, rect.width - 20, 20);
+            Rect buttonRect = new Rect(rect.x + 15, rect.y + 315, rect.width - 20, 20);
 
             Text.Anchor = TextAnchor.MiddleCenter;
             if (DrawCustomButton(buttonRect, "Station_InstallModule".Translate(), bColor))
@@ -193,14 +195,48 @@ namespace RimArmorCore.Mk1
                 }
                 else
                 {
-
+                   CarryModule(module);
                 }
             }
             if (canUse.ContainsKey(module))
             {
-                Widgets.Label(new Rect(buttonRect.x + 10, buttonRect.y + 5, rect.width - 20, 60), canUse[module]);
+                Widgets.Label(new Rect(rect.x + 15, buttonRect.y - 2, rect.width - 20, 60), canUse[module]);
             }
             Text.Anchor = TextAnchor.UpperLeft;
+        }
+
+        private void CarryModule(MKStationModuleDef def)
+        {
+            Thing item = FindModuleItem(def.Item);
+
+            if (item != null)
+            {
+                mkStationWindow.Close();
+                Close();
+
+                Job job = new Job(RimArmorCore.JobDefOfLocal.SetupModuleForStation, mkStationWindow.mkStation, item);
+                job.count = 1;
+                mkStationWindow.SelPawn.jobs.TryTakeOrderedJob(job);
+            }
+        }
+
+        private Thing FindModuleItem(ThingDef itemDef)
+        {
+            Map map = mkStationWindow.mkStation.Map;
+            List<SlotGroup> allGroupsListForReading = map.haulDestinationManager.AllGroupsListForReading;
+            for (int i = 0; i < allGroupsListForReading.Count; i++)
+            {
+                SlotGroup slotGroup = allGroupsListForReading[i];
+                foreach (var item in slotGroup.HeldThings)
+                {
+                    if (item.def == itemDef)
+                    {
+                        return item;
+                    }
+                }
+            }
+
+            return null;
         }
 
         private bool DrawCustomButton(Rect rect, string label, Color textColor)

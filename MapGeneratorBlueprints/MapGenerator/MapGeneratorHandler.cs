@@ -11,7 +11,7 @@ namespace MapGeneratorBlueprints.MapGenerator
     public static class MapGeneratorHandler
     {
         public static void GenerateMap(MapGeneratorDef mapGenerator, Map map, out List<Pawn> spawnedPawns, bool clearMap = false, bool setTerrain = false, bool fog = true, bool unFogRoom = false, bool spawnPawns = true
-            , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null, Lord forceLord = null, bool breakDownBuildings = false)
+            , bool createRoof = false, bool generatePlants = false, Faction forceFaction = null, Lord forceLord = null, bool breakDownBuildings = false, bool refuel = true)
             {
             spawnedPawns = new List<Pawn>();
 
@@ -46,7 +46,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                 SetTerrain(mapGenerator.MapData, map);
             }
 
-            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction);
+            PlaceBuildingsAndItems(mapGenerator.MapData, map, forceFaction, refuel);
 
             if (spawnPawns)
                 SpawnPawns(mapGenerator.MapData, map, forceFaction, spawnedPawns, forceLord);
@@ -221,7 +221,7 @@ namespace MapGeneratorBlueprints.MapGenerator
             }
         }
 
-        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction)
+        public static void PlaceBuildingsAndItems(List<MapObject> mapObjects, Map map, Faction forceFaction, bool refuel)
         {
             foreach (var thing in mapObjects)
             {
@@ -249,7 +249,7 @@ namespace MapGeneratorBlueprints.MapGenerator
                             newThing.SetFaction(forceFaction);
 
                         CompRefuelable compRefuelable = newThing.TryGetComp<CompRefuelable>();
-                        if (compRefuelable != null)
+                        if (compRefuelable != null && refuel)
                         {
                             compRefuelable.Refuel(compRefuelable.Props.fuelCapacity);
                         }

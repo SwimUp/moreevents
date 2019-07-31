@@ -30,7 +30,6 @@ namespace MoreEvents.Things.Mk1
                     {
                         slots.Add(new ModuleSlot());
                     }
-                    AddModule(MKStationModuleDefOfLocal.CondenserBatteries);
                 }
 
                 return slots;
@@ -58,6 +57,15 @@ namespace MoreEvents.Things.Mk1
         public CompPowerTrader power;
 
         public float EnergyBank;
+        public float EnergyBankCharge;
+
+        public float PowerLimit;
+
+        public float OverDriveMultiplier => OverDriveEnabled ? 2f : 1f;
+        public float OverDrive;
+        public bool OverDriveEnabled;
+
+        public bool CanOverDrive;
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
@@ -73,8 +81,39 @@ namespace MoreEvents.Things.Mk1
                 mk1.CoreComp = mk1.Core.TryGetComp<ArmorCore>();
             }
 
+            Notify_ModulesChanges();
+        }
+
+        public override string GetInspectString()
+        {
+            return base.GetInspectString();
+        }
+
+        public void SetOverDrive(bool value)
+        {
+            if(!CanOverDrive)
+            {
+                Messages.Message("OverDrive_Disabled".Translate(), MessageTypeDefOf.NeutralEvent);
+                return;
+            }
+
+            if(!OverDriveEnabled && OverDrive > 0f)
+            {
+                Messages.Message("OverDrive_Wait".Translate(), MessageTypeDefOf.NeutralEvent);
+                return;
+            }
+
+            OverDriveEnabled = value;
+
+            Messages.Message("OverDrive_ON".Translate(), MessageTypeDefOf.NeutralEvent);
+        }
+
+        public void Notify_ModulesChanges()
+        {
             ChargeSpeed = 0.06f;
             EnergyBank = 0f;
+            PowerLimit = 0f;
+
             for (int i = 0; i < Slots.Count; i++)
             {
                 ModuleSlot slot = Slots[i];
@@ -83,11 +122,15 @@ namespace MoreEvents.Things.Mk1
                 {
                     EnergyBank += slot.Module.def.EnergyBankCapacity;
                     ChargeSpeed += slot.Module.def.AdditionalChargeSpeed;
+                    PowerLimit += slot.Module.def.PowerLimit;
+
+                    if (!CanOverDrive)
+                        CanOverDrive = slot.Module.def.EnableOverDrive;
                 }
             }
         }
 
-        public void AddModule(MKStationModuleDef moduleDef)
+        public void AddModule(MKStationModuleDef moduleDef, Thing item)
         {
             MKStationModule module = (MKStationModule)Activator.CreateInstance(moduleDef.workerClass);
             module.def = moduleDef;
@@ -98,6 +141,8 @@ namespace MoreEvents.Things.Mk1
                 if (slot.Module == null)
                 {
                     slot.Module = module;
+                    slot.Item = item;
+                    Notify_ModulesChanges();
                     break;
                 }
             }
@@ -113,49 +158,81 @@ namespace MoreEvents.Things.Mk1
                     slot.Module = null;
                 }
             }
+
+            Notify_ModulesChanges();
         }
 
         public bool TryChargeEnergyBank(float charge)
         {
-            if (EnergyBank >= 100f)
+            if (EnergyBank >= EnergyBankCharge)
                 return false;
 
-            EnergyBank = Mathf.Clamp(EnergyBank + charge, 0, 100);
+            EnergyBankCharge = Mathf.Clamp(EnergyBankCharge + charge, 0, EnergyBank);
 
             return true;
         }
 
         public override void Tick()
         {
+            if(PowerLimit > 100f)
+                return;
+
             if (Find.TickManager.TicksGame % 200 == 0)
             {
                 if (HasArmor)
                 {
                     var armor = (Apparel_Mk1)ContainedArmor;
+                    float chargeCount = HasPower ? ChargeSpeed * OverDriveMultiplier : 0f;
 
-                    if (HasPower)
+                    if (!HasPower && EnergyBank > 0f)
                     {
-                        armor.AddCharge(ChargeSpeed);
-                    }
-                    else if(EnergyBank > 0f)
-                    {
-                        float chargeCount = Mathf.Min(EnergyBank, ChargeSpeed);
+                        chargeCount = Mathf.Min(EnergyBank, ChargeSpeed * OverDriveMultiplier);
                         EnergyBank -= chargeCount;
-
-                        armor.AddCharge(chargeCount);
                     }
+
+                    if (chargeCount == 0f)
+                        return;
+
+                    armor.AddCharge(ChargeSpeed);
+
+                    OverDriveTick();
                 }
             }
 
-            for(int i = 0; i < Slots.Count; i++)
+            for (int i = 0; i < Slots.Count; i++)
             {
                 Slots[i].Module?.StationTick();
             }
         }
 
-        public void OpenStation()
+        private void OverDriveTick()
         {
-            Find.WindowStack.Add(new MKStationWindow(this));
+            if(!OverDriveEnabled)
+            {
+                OverDrive = Mathf.Clamp(OverDrive - 0.02f, 0, 100);
+                return;
+            }
+
+            if(OverDrive >= 100f)
+            {
+                SetOverDrive(false);
+
+                int totalHp = HitPoints;
+                int totalDamage = Rand.Range(100, 400);
+                if (totalHp - totalDamage <= 0)
+                    totalDamage = 0;
+
+                TakeDamage(new DamageInfo(DamageDefOf.Crush, totalDamage));
+                return;
+            }
+
+            TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Range(1, 2)));
+            OverDrive += 0.08f;
+        }
+
+        public void OpenStation(Pawn pawn)
+        {
+            Find.WindowStack.Add(new MKStationWindow(this, pawn));
         }
 
         private void CreateAnim()
@@ -173,7 +250,9 @@ namespace MoreEvents.Things.Mk1
 
             Scribe_Deep.Look(ref ContainedArmor, "ContainedArmor");
             Scribe_Collections.Look(ref slots, "Slots", LookMode.Deep);
-            Scribe_Values.Look(ref EnergyBank, "EnergyBank");
+            Scribe_Values.Look(ref EnergyBankCharge, "EnergyBankCharge");
+            Scribe_Values.Look(ref OverDriveEnabled, "OverDriveEnabled");
+            Scribe_Values.Look(ref OverDrive, "OverDrive");
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
