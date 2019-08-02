@@ -3,5 +3,6 @@
   
   <OpenStation.reportString>Использует станцию</OpenStation.reportString>
   <SetupModuleForStation.reportString>Улучшает станцию</SetupModuleForStation.reportString>
+<SetupModuleForArmor.reportString>Улучшает броню</SetupModuleForArmor.reportString>
 	
 </LanguageData>

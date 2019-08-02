@@ -10,14 +10,13 @@ namespace MoreEvents.Things.Mk1
 {
     public class JobDriver_UnLoadArmorIntoStand : JobDriver
     {
-        public Mk1PowerStation station;
+        public Mk1PowerStation station => (Mk1PowerStation)TargetThingA;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             Pawn pawn = base.pawn;
             LocalTargetInfo targetA = base.job.targetA;
             Job job = base.job;
-            station = (Mk1PowerStation)TargetThingA;
 
             return pawn.Reserve(targetA, job, 1, -1, null, errorOnFailed);
         }

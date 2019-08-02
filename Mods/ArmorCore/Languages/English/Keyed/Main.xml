@@ -26,4 +26,21 @@
 	<OverDrive_ON>Power overload switched. If the overload is active, the station will take damage, but the armor charge is doubled. \nIf you do not turn it off before it reaches 100%, the station will receive significant damage.</OverDrive_ON>
 	
 	<Station_SecondTableInfo>Active modules: {0} / {1} \nArmor charge rate: {2} \nInternal energy storage: {3} / {4} \nStorage charge rate: {5}</Station_SecondTableInfo>
+	<StationInspectorInfo>Armor charge: {0} / {1}\nInternal energy storage: {2} / {3}</StationInspectorInfo>
+	<StationInspectorInfo_NOARMOR>No armor</StationInspectorInfo_NOARMOR>
+	<StationInspectorInfo_NoCore>No core in armor</StationInspectorInfo_NoCore>
+	
+	<Station_NoCore>The core is missing</Station_NoCore>
+	<Station_CoreInfo>- Capacity: {0}</Station_CoreInfo>
+	<Station_CoreParam>Energy Core Parameters</Station_CoreParam>
+	<Station_InstallCore>Install Core</Station_InstallCore>
+	<Station_RemoveCore>Remove core</Station_RemoveCore>
+	
+	<ArmorModuleCategory_Body>Body</ArmorModuleCategory_Body>
+	<ArmorModuleCategory_General>General</ArmorModuleCategory_General>
+	<ArmorModuleCategory_Head>Head</ArmorModuleCategory_Head>
+	<ArmorModuleCategory_Legs>Legs</ArmorModuleCategory_Legs>
+	
+	<Station_LevelReq>(station level required: {0}, now {1})</Station_LevelReq>
+	
 </LanguageData>

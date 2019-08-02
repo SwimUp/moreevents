@@ -5,4 +5,7 @@
   <ArmorTab>Connected armor</ArmorTab>
   
   <Station_UnloadModule>Disable and remove the module</Station_UnloadModule>
+  <Station_LoadArmor>Connect armor to the station</Station_LoadArmor>
+  <Station_UnloadArmor>Disconnect armor from the station</Station_UnloadArmor>
+  
 </LanguageData>

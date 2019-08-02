@@ -5,4 +5,7 @@
   <ArmorTab>Подключенная броня</ArmorTab>
   
   <Station_UnloadModule>Отключить и убрать модуль</Station_UnloadModule>
+  <Station_LoadArmor>Подключить броню к станции</Station_LoadArmor>
+  <Station_UnloadArmor>Отключить броню от станции</Station_UnloadArmor>
+  
 </LanguageData>

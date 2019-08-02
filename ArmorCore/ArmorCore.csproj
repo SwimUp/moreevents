@@ -58,23 +58,33 @@
   <ItemGroup>
     <Compile Include="ArmorCoreModule.cs" />
     <Compile Include="JobDefOfLocal.cs" />
+    <Compile Include="Mk1\Apparel_MkArmor.cs" />
     <Compile Include="Mk1\Apparel_Mk1.cs" />
     <Compile Include="Mk1\ArmorCore.cs" />
+    <Compile Include="Mk1\ArmorModuleDef.cs" />
+    <Compile Include="Mk1\ArmorStats\ArmorStat.cs" />
     <Compile Include="Mk1\CompProperties_ArmorCore.cs" />
     <Compile Include="Mk1\Gizmo_FillableMk1.cs" />
     <Compile Include="Mk1\ITab_ModifyMk1.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_SetupModuleForArmor.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_SetupModule.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_OpenStation.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_CarryReactorToStation.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_LoadArmorIntoStand.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_UnLoadArmorIntoStand.cs" />
     <Compile Include="Mk1\Mk1PowerStation.cs" />
+    <Compile Include="Mk1\MKArmorModule.cs" />
+    <Compile Include="Mk1\MKModule.cs" />
     <Compile Include="Mk1\MKStationModuleDef.cs" />
     <Compile Include="Mk1\MKStationModuleDefOfLocal.cs" />
     <Compile Include="Mk1\MKStationWindow.cs" />
     <Compile Include="Mk1\MKStationModule.cs" />
+    <Compile Include="Mk1\ArmorModuleWindow.cs" />
     <Compile Include="Mk1\ModuleMenuWindow.cs" />
     <Compile Include="Mk1\ModuleSlot.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_BasicFiltrationSystem.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_Plato.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_GuidanceSystem.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_Transformers.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_CondenserBatteries.cs" />
     <Compile Include="Patches\HeavyAir_RimOverhaul.cs" />
@@ -83,6 +93,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThingDefOfLocal.cs" />
     <Compile Include="ToxicFallout_Patch.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

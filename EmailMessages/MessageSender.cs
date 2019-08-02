@@ -75,6 +75,10 @@ namespace EmailMessages
             for (int i = 0; i < messages.Count; i++)
             {
                 EmailMessageDef def = messages[i];
+
+                if (GenDate.DaysPassed < def.EarliestDay)
+                    continue;
+
                 if (lastSendedMessages.TryGetValue(def, out int value))
                 {
                     float num = (float)(ticksGame - value) / 60000f;
@@ -83,9 +87,6 @@ namespace EmailMessages
                 }
 
                 if (!TryGetFaction(def.SenderAvaliable, def.MinReqGoodWill, out Faction faction))
-                    continue;
-
-                if (GenDate.DaysPassed < def.EarliestDay)
                     continue;
 
                 if (def.MessageWorker != null && !def.MessageWorker.CanReceiveNow())

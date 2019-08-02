@@ -29,4 +29,10 @@
   <Instruments.label>Инструменты</Instruments.label>
   <Instruments.description>Модуль для станции МК\n\nНабор инструментов для базовой модернизации брони.</Instruments.description>
 
+  <GuidanceSystem.label>Система наведения</GuidanceSystem.label>
+  <GuidanceSystem.description>Модуль для брони\n\nCистема подсветки и наведения на цели. Благодаря тепловизору и лазерному наведению удалось обеспечить дополнительную меткость, особенно при стрельбе в непогоду.\n\nОбеспечивают дополнительную точность.</GuidanceSystem.description>
+
+  <BasicFiltrationSystem.label>Базовая система фильтрации</BasicFiltrationSystem.label>
+  <BasicFiltrationSystem.description>Модуль для брони\n\n\nБазовые системы фильтрации воздуха. Помогут при несерьёзном отравлении воздуха.\n\nЗащищает от легких эффектов отравляющих воздух</BasicFiltrationSystem.description>
+  
 </LanguageData>

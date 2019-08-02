@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+ 
+  <GuidanceSystem.label>Система наведения</GuidanceSystem.label>
+  <GuidanceSystem.description>Cистема подсветки и наведения на цели. Благодаря тепловизору и лазерному наведению удалось обеспечить дополнительную меткость, особенно при стрельбе в непогоду.\n\nОбеспечивают дополнительную точность.</GuidanceSystem.description>
+
+  <BasicFiltrationSystem.label>Базовая система фильтрации</BasicFiltrationSystem.label>
+  <BasicFiltrationSystem.description>Базовые системы фильтрации воздуха. Помогут при несерьёзном отравлении воздуха</BasicFiltrationSystem.description>
+  
+  <Plato.label>Эхосистема "платон"</Plato.label>
+  <Plato.description>Позволяет контролировать обстановку на 360 градусов за счет множества подшлемных датчиков, расположенных по всему шлему., благодаря чему не будет непредвиденных атак со спины\nУвеличивает шанс уворота</Plato.description>
+  
+</LanguageData>

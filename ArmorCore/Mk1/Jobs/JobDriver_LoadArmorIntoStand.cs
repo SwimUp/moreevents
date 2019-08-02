@@ -11,8 +11,8 @@ namespace MoreEvents.Things.Mk1
 {
     public class JobDriver_LoadArmorIntoStand : JobDriver
     {
-        public Mk1PowerStation station;
-        public Apparel_Mk1 armor;
+        public Mk1PowerStation station => (Mk1PowerStation)TargetThingA;
+        public Apparel_MkArmor armor => (Apparel_MkArmor)TargetThingB;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -26,9 +26,6 @@ namespace MoreEvents.Things.Mk1
                 pawn = base.pawn;
                 target = job.GetTarget(TargetIndex.B).Thing;
                 job = base.job;
-
-                station = (Mk1PowerStation)TargetThingA;
-                armor = (Apparel_Mk1)TargetThingB;
 
                 result = (pawn.Reserve(target, job, 1, -1, null) ? 1 : 0);
             }

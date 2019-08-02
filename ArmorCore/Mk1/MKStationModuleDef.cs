@@ -24,6 +24,8 @@ namespace RimArmorCore.Mk1
 
         public float PowerLimit;
 
+        public int GainStationLevel = 1;
+
         public Texture2D IconImage
         {
             get

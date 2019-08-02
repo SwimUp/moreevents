@@ -30,5 +30,11 @@
 		<driverClass>MoreEvents.Things.Mk1.JobDriver_SetupModule</driverClass>
 		<reportString>improves the station</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>SetupModuleForArmor</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_SetupModuleForArmor</driverClass>
+		<reportString>improves the armor</reportString>
+	</JobDef>
 
 </Defs>

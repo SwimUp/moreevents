@@ -25,35 +25,29 @@ namespace RimArmorCore.Mk1
         private MKStationWindow mkStationWindow;
         private MKStationModuleDef currentModule;
 
-        private enum Tab
-        {
-            Armor,
-            Charging,
-            Capacity
-        }
-
         private Dictionary<MKStationModuleDef, string> canUse = new Dictionary<MKStationModuleDef, string>();
 
-        private Tab tab;
+        private Category tab;
 
         public ModuleMenuWindow(MKStationWindow mKStationWindow)
         {
+            doCloseX = true;
+
             mkStationWindow = mKStationWindow;
 
             canUse = new Dictionary<MKStationModuleDef, string>();
             foreach(var module in DefDatabase<MKStationModuleDef>.AllDefs)
             {
-                if(!CanUseRightNow(module, out string reason))
+                if(!CanUseRightNow(module.Item, mkStationWindow.mkStation.Map, out string reason))
                 {
                     canUse.Add(module, reason);
                 }
             }
         }
 
-        private bool CanUseRightNow(MKStationModuleDef module, out string reason)
+        public static bool CanUseRightNow(ThingDef searchedItem, Map map, out string reason)
         {
             reason = string.Empty;
-            ThingDef searchedItem = module.Item;
 
             if (searchedItem == null)
             {
@@ -61,7 +55,6 @@ namespace RimArmorCore.Mk1
                 return false;
             }
 
-            Map map = mkStationWindow.mkStation.Map;
             List<SlotGroup> allGroupsListForReading = map.haulDestinationManager.AllGroupsListForReading;
             bool found = false;
             for (int i = 0; i < allGroupsListForReading.Count; i++)
@@ -103,33 +96,22 @@ namespace RimArmorCore.Mk1
             tabsList.Clear();
             tabsList.Add(new TabRecord("Modules_ArmorTab".Translate(), delegate
             {
-                tab = Tab.Armor;
-            }, tab == Tab.Armor));
+                tab = Category.Armor;
+            }, tab == Category.Armor));
             tabsList.Add(new TabRecord("Modules_CapacityTab".Translate(), delegate
             {
-                tab = Tab.Capacity;
-            }, tab == Tab.Capacity));
+                tab = Category.Capacity;
+            }, tab == Category.Capacity));
             tabsList.Add(new TabRecord("Modules_ChargingTab".Translate(), delegate
             {
-                tab = Tab.Charging;
-            }, tab == Tab.Charging));
+                tab = Category.Charging;
+            }, tab == Category.Charging));
 
             Widgets.DrawMenuSection(rect2);
             TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 250);
             tabsList.Clear();
 
-            switch (tab)
-            {
-                case Tab.Armor:
-                    DrawModuleTab(rect2, Category.Armor);
-                    break;
-                case Tab.Capacity:
-                    DrawModuleTab(rect2, Category.Capacity);
-                    break;
-                case Tab.Charging:
-                    DrawModuleTab(rect2, Category.Charging);
-                    break;
-            }
+            DrawModuleTab(rect2, tab);
         }
 
         private void DrawModuleTab(Rect inRect, Category selectCategory)

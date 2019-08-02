@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/StatDef[defName="MeleeDodgeChance"]/skillNeedOffsets</xpath>
+		<value>
+			<parts>
+				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+			</parts>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/StatDef[defName="MeleeHitChance"]/skillNeedOffsets</xpath>
+		<value>
+			<parts>
+				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+			</parts>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/StatDef[defName="ShootingAccuracyPawn"]/skillNeedOffsets</xpath>
+		<value>
+			<parts>
+				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+			</parts>
+		</value>
+	</Operation>
+
+</Patch>

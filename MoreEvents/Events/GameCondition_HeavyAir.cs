@@ -65,7 +65,6 @@ namespace MoreEvents.Events
                 if (CanDamage(pawn, map))
                 {
                     float num = 0.028758334f;
-                    num *= pawn.GetStatValue(StatDefOf.CarryingCapacity, true);
                     if (num != 0f)
                     {
                         float num2 = Mathf.Lerp(0.85f, 1.15f, Rand.ValueSeeded(pawn.thingIDNumber ^ 74374237));

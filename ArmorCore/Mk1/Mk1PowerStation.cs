@@ -15,27 +15,27 @@ namespace MoreEvents.Things.Mk1
     {
         public int MaxModules => 3;
 
-        public Thing ContainedArmor;
+        public Apparel_MkArmor ContainedArmor;
 
         public float ChargeSpeed = 0.06f;
 
-        public List<ModuleSlot> Slots
+        public List<ModuleSlot<MKStationModule>> Slots
         {
             get
             {
                 if(slots == null)
                 {
-                    slots = new List<ModuleSlot>(MaxModules);
+                    slots = new List<ModuleSlot<MKStationModule>>(MaxModules);
                     for(int i = 0; i < MaxModules; i++)
                     {
-                        slots.Add(new ModuleSlot());
+                        slots.Add(new ModuleSlot<MKStationModule>());
                     }
                 }
 
                 return slots;
             }
         }
-        private List<ModuleSlot> slots;
+        private List<ModuleSlot<MKStationModule>> slots;
 
         public bool HasPower
         {
@@ -67,6 +67,8 @@ namespace MoreEvents.Things.Mk1
 
         public bool CanOverDrive;
 
+        public int StationLevel = 0;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -86,7 +88,12 @@ namespace MoreEvents.Things.Mk1
 
         public override string GetInspectString()
         {
-            return base.GetInspectString();
+            if(ContainedArmor == null)
+                return $"StationInspectorInfo_NOARMOR".Translate();
+            else if(ContainedArmor.Core == null)
+                return $"StationInspectorInfo_NoCore".Translate();
+            else
+                return $"StationInspectorInfo".Translate(ContainedArmor.EnergyCharge.ToString("f2"), ContainedArmor.CoreComp.PowerCapacity, EnergyBankCharge.ToString("f2"), EnergyBank);
         }
 
         public void SetOverDrive(bool value)
@@ -108,6 +115,26 @@ namespace MoreEvents.Things.Mk1
             Messages.Message("OverDrive_ON".Translate(), MessageTypeDefOf.NeutralEvent);
         }
 
+        public List<Thing> GetCores()
+        {
+            List<Thing> chosenThings = new List<Thing>();
+
+            List<SlotGroup> allGroupsListForReading = Map.haulDestinationManager.AllGroupsListForReading;
+            for (int i = 0; i < allGroupsListForReading.Count; i++)
+            {
+                SlotGroup slotGroup = allGroupsListForReading[i];
+                foreach (var item in slotGroup.HeldThings)
+                {
+                    if (!chosenThings.Contains(item) && item.TryGetComp<MoreEvents.Things.Mk1.ArmorCore>() != null)
+                    {
+                        chosenThings.Add(item);
+                    }
+                }
+            }
+
+            return chosenThings;
+        }
+
         public void Notify_ModulesChanges()
         {
             ChargeSpeed = 0.06f;
@@ -116,7 +143,7 @@ namespace MoreEvents.Things.Mk1
 
             for (int i = 0; i < Slots.Count; i++)
             {
-                ModuleSlot slot = Slots[i];
+                ModuleSlot<MKStationModule> slot = Slots[i];
 
                 if (slot.Module != null)
                 {
@@ -126,8 +153,13 @@ namespace MoreEvents.Things.Mk1
 
                     if (!CanOverDrive)
                         CanOverDrive = slot.Module.def.EnableOverDrive;
+
+                    if (slot.Module.def.GainStationLevel > StationLevel)
+                        StationLevel = slot.Module.def.GainStationLevel;
                 }
             }
+
+            EnergyBankCharge = Mathf.Clamp(EnergyBankCharge, 0, EnergyBank);
         }
 
         public void AddModule(MKStationModuleDef moduleDef, Thing item)
@@ -152,10 +184,11 @@ namespace MoreEvents.Things.Mk1
         {
             for (int i = 0; i < Slots.Count; i++)
             {
-                ModuleSlot slot = Slots[i];
+                ModuleSlot<MKStationModule> slot = Slots[i];
                 if(slot.Module.def == moduleDef)
                 {
                     slot.Module = null;
+                    break;
                 }
             }
 
@@ -164,7 +197,7 @@ namespace MoreEvents.Things.Mk1
 
         public bool TryChargeEnergyBank(float charge)
         {
-            if (EnergyBank >= EnergyBankCharge)
+            if (EnergyBank <= EnergyBankCharge)
                 return false;
 
             EnergyBankCharge = Mathf.Clamp(EnergyBankCharge + charge, 0, EnergyBank);
@@ -201,7 +234,7 @@ namespace MoreEvents.Things.Mk1
 
             for (int i = 0; i < Slots.Count; i++)
             {
-                Slots[i].Module?.StationTick();
+                Slots[i].Module?.Tick();
             }
         }
 
@@ -262,6 +295,56 @@ namespace MoreEvents.Things.Mk1
                 Job job = new Job(RimArmorCore.JobDefOfLocal.OpenStation, this);
                 selPawn.jobs.TryTakeOrderedJob(job);
             });
+
+            if (ContainedArmor == null)
+            {
+                if (GetAllArmors(Map).Any())
+                {
+                    yield return new FloatMenuOption("Station_LoadArmor".Translate(), delegate
+                    {
+                        List<Thing> obtainedArmors = GetAllArmors(Map).ToList();
+                        List<FloatMenuOption> options = new List<FloatMenuOption>();
+                        foreach (var armor in obtainedArmors)
+                        {
+                            options.Add(new FloatMenuOption($"{armor.LabelCap}", delegate
+                            {
+                                Job job = new Job(RimArmorCore.JobDefOfLocal.LoadArmorIntoStation, this, armor);
+                                job.count = 1;
+                                selPawn.jobs.TryTakeOrderedJob(job);
+                            }));
+                        }
+
+                        Find.WindowStack.Add(new FloatMenu(options));
+                    });
+                }
+                else
+                {
+                    yield return new FloatMenuOption("Station_LoadArmor".Translate(), null);
+                }
+            }
+            else
+            {
+                yield return new FloatMenuOption("Station_UnloadArmor".Translate(), delegate
+                {
+                    Job job = new Job(RimArmorCore.JobDefOfLocal.UnLoadArmorIntoStation, this);
+                    selPawn.jobs.TryTakeOrderedJob(job);
+                });
+            }
+        }
+
+        private IEnumerable<Thing> GetAllArmors(Map map)
+        {
+            List<SlotGroup> groups = map.haulDestinationManager.AllGroupsListForReading;
+            foreach(var group in groups)
+            {
+                foreach(var item in group.HeldThings)
+                {
+                    if(item is Apparel_MkArmor)
+                    {
+                        yield return item;
+                    }
+                }
+            }
         }
 
         public override void Draw()

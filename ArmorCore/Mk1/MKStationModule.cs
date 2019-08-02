@@ -7,19 +7,19 @@ using Verse;
 
 namespace RimArmorCore.Mk1
 {
-    public class MKStationModule : IExposable
+    public class MKStationModule : MKModule
     {
         public MKStationModuleDef def;
 
         public Mk1PowerStation Station;
 
-        public virtual int SortOrder => 1;
+        public override int SortOrder => 1;
 
-        public virtual void StationTick()
+        public override void Tick()
         {
         }
 
-        public virtual string StatDescription()
+        public override string StatDescription()
         {
             StringBuilder builder = new StringBuilder();
             if(def.PowerLimit > 0f)
@@ -41,7 +41,7 @@ namespace RimArmorCore.Mk1
             return builder.ToString();
         }
 
-        public virtual void ExposeData()
+        public override void ExposeData()
         {
             Scribe_Defs.Look(ref def, "def");
             Scribe_References.Look(ref Station, "Station");

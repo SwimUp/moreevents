@@ -28,30 +28,17 @@ namespace QuestRim
             if (playerSilver >= SilverCost)
             {
                 int remaining = SilverCost;
-                List<SlotGroup> allGroupsListForReading = map.haulDestinationManager.AllGroupsListForReading;
-                for(int i = 0; i < allGroupsListForReading.Count; i++)
+                List<Thing> silver = map.listerThings.ThingsOfDef(ThingDefOf.Silver);
+                for(int i = 0; i < silver.Count; i++)
                 {
-                    SlotGroup slotGroup = allGroupsListForReading[i];
-                    foreach (var item in slotGroup.HeldThings)
-                    {
-                        if (item.def == ThingDefOf.Silver)
-                        {
-                            int num = Mathf.Min(remaining, item.stackCount);
-                            if(item.stackCount > num)
-                            {
-                                Thing t = item.SplitOff(num);
-                                t.Destroy();
+                    Thing item = silver[i];
 
-                                Success(interaction.Faction, speaker);
-
-                                return;
-                            }
-
-                            remaining -= num;
-                            item.Destroy();
-                        }
-                    }
+                    int num = Mathf.Min(remaining, item.stackCount);
+                    item.SplitOff(num).Destroy();
+                    remaining -= num;
                 }
+
+                Success(interaction.Faction, speaker);
             }
             else
             {

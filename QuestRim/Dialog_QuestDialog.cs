@@ -31,6 +31,7 @@ namespace QuestRim
             QuestPawn = quester;
             Speaker = speaker;
             forcePause = true;
+            doCloseX = true;
         }
         public override void DoWindowContents(Rect inRect)
         {

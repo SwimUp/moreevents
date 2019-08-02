@@ -10,6 +10,7 @@
 		<ModuleCategory>Armor</ModuleCategory>
 		<Item>Instruments</Item>
 		<PowerLimit>0</PowerLimit>
+		<GainStationLevel>1</GainStationLevel>
 		<Icon>Modules/Instruments</Icon>
 	</RimArmorCore.Mk1.MKStationModuleDef>
 	
@@ -23,6 +24,7 @@ Allow you to install a second level of modules for armor.</description>
 		<ModuleCategory>Armor</ModuleCategory>
 		<Item>RoboticManipulators</Item>
 		<PowerLimit>30</PowerLimit>
+		<GainStationLevel>2</GainStationLevel>
 		<Icon>Modules/Manipulator</Icon>
 	</RimArmorCore.Mk1.MKStationModuleDef>
 	
@@ -36,6 +38,7 @@ Opens the last level of modules for armor.</description>
 		<ModuleCategory>Armor</ModuleCategory>
 		<PowerLimit>35</PowerLimit>
 		<Item>Nanorobots</Item>
+		<GainStationLevel>3</GainStationLevel>
 		<Icon>Modules/Nanites</Icon>
 	</RimArmorCore.Mk1.MKStationModuleDef>
 	

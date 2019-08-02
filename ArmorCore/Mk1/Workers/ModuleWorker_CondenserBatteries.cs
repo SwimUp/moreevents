@@ -8,7 +8,7 @@ namespace RimArmorCore.Mk1.Workers
 {
     public class ModuleWorker_CondenserBatteries : MKStationModule
     {
-        public override void StationTick()
+        public override void Tick()
         {
             if (Find.TickManager.TicksGame % 400 == 0)
             {

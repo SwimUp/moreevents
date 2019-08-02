@@ -25,5 +25,28 @@
 	<OverDrive_Disabled>Перегрузка мощности недоступна.</OverDrive_Disabled>
 	<OverDrive_ON>Перегрузка мощности переключена. Если перегрузка активна, то станция будет получать урон, но зарядка брони увеличена в 2 раза. \nЕсли не отключить его до того, как он достигнет 100% - станция получит значительный урон.</OverDrive_ON>
 	
-	<Station_SecondTableInfo>Активно модулей: {0} / {1}\nСкорость зарядки брони: {2}\nВнутреннее энергохранилище: {3} / {4}\nСкорость зарядки хранилища: {5}</Station_SecondTableInfo>
+	<Station_SecondTableInfo>Активно модулей: {0} / {1}\nСкорость зарядки брони: {2}\nЗаряд брони: {3} / {4}\nВнутреннее энергохранилище: {5} / {6}\nСкорость зарядки хранилища: {7}</Station_SecondTableInfo>
+	<StationInspectorInfo>Зарядка брони: {0} / {1}\nЕмкость внутреннего хранилища: {2} / {3}</StationInspectorInfo>
+	<StationInspectorInfo_NOARMOR>Броня отсутствует</StationInspectorInfo_NOARMOR>
+	<StationInspectorInfo_NoCore>Нет ядра в броне</StationInspectorInfo_NoCore>
+	
+	<Station_NoCore>Ядро отсутствует</Station_NoCore>
+	<Station_CoreInfo>- Емкость: {0}</Station_CoreInfo>
+	<Station_CoreParam>Параметры ядра</Station_CoreParam>
+	<Station_InstallCore>Установить ядро</Station_InstallCore>
+	<Station_RemoveCore>Достать ядро</Station_RemoveCore>
+	
+	<ArmorModuleCategory_Body>Тело</ArmorModuleCategory_Body>
+	<ArmorModuleCategory_General>Общее</ArmorModuleCategory_General>
+	<ArmorModuleCategory_Head>Голова</ArmorModuleCategory_Head>
+	<ArmorModuleCategory_Legs>Ноги</ArmorModuleCategory_Legs>
+	
+	<Station_LevelReq>(требуется уровень станции: {0}, у вас {1})</Station_LevelReq>
+	
+	<Station_FullInfo>Чтобы установить модуль нажмите по пустому слоту.\nЧтобы убрать модуль, нажмите на него.\nПараметры брони:\n{0}</Station_FullInfo>
+	
+	<ArmorModuleWorker_GuidanceSystem>- дополнительный шанс попасть: {0}</ArmorModuleWorker_GuidanceSystem>
+	<ArmorModuleWorker_BasicFiltrationSystem>Защита от:\n-Тяжелый воздух</ArmorModuleWorker_BasicFiltrationSystem>
+	<ArmorModuleWorker_Plato>- дополнительный шанс уворота: {0}</ArmorModuleWorker_Plato>
+
 </LanguageData>

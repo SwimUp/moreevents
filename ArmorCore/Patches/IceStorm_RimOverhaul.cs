@@ -1,4 +1,5 @@
 ﻿using Harmony;
+using MoreEvents;
 using MoreEvents.Events;
 using MoreEvents.Things.Mk1;
 using System;
@@ -15,10 +16,23 @@ namespace RimArmorCore.Patches
     {
         static void Postfix(ref bool __result, Pawn pawn, Map map)
         {
-            if (Apparel_Mk1.HasMk1Enable(pawn))
+            var app = Apparel_MkArmor.HasAnyMK(pawn);
+            if (app != null)
             {
-                __result = false;
-                return;
+                foreach (var armorSlot in app.Slots)
+                {
+                    foreach (var slot in armorSlot.Modules)
+                    {
+                        if (slot.Module != null)
+                        {
+                            if (!slot.Module.CanAffectCondition(GameConditionDefOfLocal.IceStorm))
+                            {
+                                __result = false;
+                                return;
+                            }
+                        }
+                    }
+                }
             }
 
             __result = true;

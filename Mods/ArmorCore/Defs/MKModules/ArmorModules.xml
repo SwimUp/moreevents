@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Tier 1: голова -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>GuidanceSystem</defName>
+		<label>Guidance system</label>
+		<description>Target illumination and guidance system. Thanks to the thermal imager and laser guidance, it was possible to provide additional accuracy, especially when shooting in bad weather\n\nProvide extra accuracy.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_GuidanceSystem</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<Item>GuidanceSystem</Item>
+		<StatAffecter>
+			<li>ShootingAccuracyPawn</li>
+		</StatAffecter>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/GuidanceSystem</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>BasicFiltrationSystem</defName>
+		<label>Basic filtration system</label>
+		<description>Basic air filtration systems. Help with not serious air poisoning</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_BasicFiltrationSystem</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Item>BasicFiltrationSystem</Item>
+		<Icon>ArmorModules/BasicFiltrationSystem</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<!-- ======================= -->
+	
+	<!-- Tier 2: голова -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>Plato</defName>
+		<label>Echo System 'Plato'</label>
+		<description>The echo system “Plato” allows you to control the situation by 360 degrees due to the many helmet-mounted sensors located throughout the helmet. Therefore, there will be no unforeseen attacks from the back\n\nIncreases Dodge Chance </description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Plato</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<StatAffecter>
+			<li>MeleeDodgeChance</li>
+		</StatAffecter>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/Plato</Icon>
+		<Item>Plato</Item>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>Instruments</defName>
+		<label>Instruments</label>
+		<description>A set of tools for basic armor upgrades.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/Instruments</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<!-- ======================= -->
+	
+</Defs>

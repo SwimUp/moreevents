@@ -85,6 +85,7 @@ namespace QuestRim
             commEmailsSliderLength = emailMessages.Count * 130;
 
             forcePause = true;
+            doCloseX = true;
         }
 
         public override void DoWindowContents(Rect inRect)

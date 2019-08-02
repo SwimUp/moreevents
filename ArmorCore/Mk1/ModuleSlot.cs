@@ -6,11 +6,11 @@ using Verse;
 
 namespace RimArmorCore.Mk1
 {
-    public class ModuleSlot : IExposable
+    public class ModuleSlot<T> : IExposable where T : MKModule
     {
         public int Order => Module == null ? 1 : Module.SortOrder;
 
-        public MKStationModule Module;
+        public T Module;
 
         public Thing Item;
 
