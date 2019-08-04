@@ -19,16 +19,29 @@ namespace RimArmorCore.Mk1.ArmorStats
                 {
                     var armor = Apparel_MkArmor.HasAnyMK(p);
 
-                    if (armor != null) //&& armor.Active
+                    if (armor != null)
                     {
                         foreach (var armorSlot in armor.Slots)
                         {
                             foreach (var slot in armorSlot.Modules)
                             {
-                                if (slot.Module != null && slot.Module.def.StatAffecter.Contains(parentStat))
+                                if (slot.Module != null && slot.Module.def.StatAffecter != null && slot.Module.def.StatAffecter.ContainsKey(parentStat))
                                 {
-                                    return $"{armor.LabelCap}: x{slot.Module.TransformValue}";
+                                    return slot.Module.StatDescription();
                                 }
+                            }
+                        }
+                    }
+                }
+                else if (req.Thing is Apparel_MkArmor armor)
+                {
+                    foreach (var armorSlot in armor.Slots)
+                    {
+                        foreach (var slot in armorSlot.Modules)
+                        {
+                            if (slot.Module != null && slot.Module.def.StatAffecter != null && slot.Module.def.StatAffecter.ContainsKey(parentStat))
+                            {
+                                return slot.Module.StatDescription();
                             }
                         }
                     }
@@ -47,16 +60,28 @@ namespace RimArmorCore.Mk1.ArmorStats
                 {
                     var armor = Apparel_MkArmor.HasAnyMK(p);
 
-                    if (armor != null) //&& armor.Active
+                    if (armor != null)
                     {
                         foreach (var armorSlot in armor.Slots)
                         {
                             foreach(var slot in armorSlot.Modules)
                             {
-                                if(slot.Module != null && slot.Module.def.StatAffecter.Contains(parentStat))
+                                if(slot.Module != null && slot.Module.def.StatAffecter != null)
                                 {
                                     slot.Module.TransformStat(parentStat, ref val);
                                 }
+                            }
+                        }
+                    }
+                }else if(req.Thing is Apparel_MkArmor armor)
+                {
+                    foreach (var armorSlot in armor.Slots)
+                    {
+                        foreach (var slot in armorSlot.Modules)
+                        {
+                            if (slot.Module != null && slot.Module.def.StatAffecter != null)
+                            {
+                                slot.Module.TransformStat(parentStat, ref val);
                             }
                         }
                     }

@@ -25,5 +25,18 @@ namespace RimArmorCore
 
             return "";
         }
+
+        public static string[] ToArrayValues<T,D>(this Dictionary<T, D> dictionary)
+        {
+            string[] result = new string[dictionary.Count];
+
+            for(int i = 0; i < dictionary.Count; i++)
+            {
+                D value = dictionary.ElementAt(i).Value;
+                result[i] = value.ToString();
+            }
+
+            return result;
+        }
     }
 }

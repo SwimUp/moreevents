@@ -9,16 +9,22 @@ namespace RimArmorCore.Mk1.Workers
 {
     public class ArmorModuleWorker_GuidanceSystem : MKArmorModule
     {
-        public override float TransformValue => 15;
-
         public override string StatDescription()
         {
-            return $"ArmorModuleWorker_GuidanceSystem".Translate(TransformValue);
+            string result = string.Format("ArmorModuleWorker_GuidanceSystem".Translate(), def.StatAffecter.ToArrayValues());
+
+            return result;
         }
 
-        public override void TransformStat(StatDef def, ref float value)
+        public override void TransformStat(StatDef statDef, ref float value)
         {
-            value += 15;
+            if (!Armor.Active)
+                return;
+
+            if (def.StatAffecter.ContainsKey(statDef))
+            {
+                value += def.StatAffecter[statDef];
+            }
         }
     }
 }

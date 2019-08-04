@@ -63,7 +63,7 @@ namespace RimArmorCore.Mk1
             EnergyBarFrame = ContentFinder<Texture2D>.Get("batteryframe");
             EnergyBar = ContentFinder<Texture2D>.Get("batterybar");
 
-            HeadPart = ContentFinder<Texture2D>.Get("StationPart/Part_Head");
+            HeadPart = ContentFinder<Texture2D>.Get("Things/Apparels/Mk1/Helmet/helmet");
             BodyPart = ContentFinder<Texture2D>.Get("Things/Apparels/Mk1/Mk1");
 
             EnergyBarFrame_Rec = ContentFinder<Texture2D>.Get("batteryreactorframe");
@@ -184,7 +184,7 @@ namespace RimArmorCore.Mk1
                 moduleRect.x += 140;
             }
 
-            Rect fullInfoRect = new Rect(875, rect.y + 5, 220, rect.height - 10);
+            Rect fullInfoRect = new Rect(875, rect.y + 5, 210, rect.height - 10);
             StringBuilder builder = new StringBuilder();
             foreach(var armorSlot in mkStation.ContainedArmor.Slots)
             {
@@ -264,15 +264,15 @@ namespace RimArmorCore.Mk1
         private void DrawCore(Rect rect)
         {
             Rect label = rect;
-            label.height = 25;
+            label.height = 35;
 
             GUI.color = MenuSectionBGBorderColor;
-            Widgets.DrawLineHorizontal(70, label.y + 24, 140);
-            Widgets.DrawLineHorizontal(60, label.y + 120, 160);
+            Widgets.DrawLineHorizontal(70, label.y + 34, 140);
+            Widgets.DrawLineHorizontal(60, label.y + 132, 160);
             Widgets.DrawLineHorizontal(0, label.y + 200, 280);
             GUI.color = Color.white;
 
-            Rect r2 = new Rect(105, rect.y + 30, 70, 70);
+            Rect r2 = new Rect(105, rect.y + 40, 70, 70);
             Widgets.DrawAtlas(r2, Widgets.ButtonSubtleAtlas);
             Widgets.DrawHighlightIfMouseover(r2);
 
@@ -328,12 +328,12 @@ namespace RimArmorCore.Mk1
             {
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Widgets.Label(label, mkStation.ContainedArmor.Core.LabelCap);
-                Widgets.Label(new Rect(rect.x, rect.y + 98, rect.width, 25), "Station_CoreParam".Translate());
+                Widgets.Label(new Rect(rect.x, rect.y + 108, rect.width, 35), "Station_CoreParam".Translate());
                 Text.Anchor = TextAnchor.UpperLeft;
 
-                Widgets.Label(new Rect(rect.x, rect.y + 125, rect.width, 70), "Station_CoreInfo".Translate(mkStation.ContainedArmor.CoreComp.PowerCapacity));
+                Widgets.Label(new Rect(rect.x, rect.y + 135, rect.width, 60), "Station_CoreInfo".Translate(mkStation.ContainedArmor.CoreComp.PowerCapacity));
 
-                GUI.DrawTexture(new Rect(108, rect.y + 30, 64, 64), ContentFinder<Texture2D>.Get(mkStation.ContainedArmor.Core.def.graphicData.texPath));
+                GUI.DrawTexture(new Rect(108, rect.y + 43, 64, 64), ContentFinder<Texture2D>.Get(mkStation.ContainedArmor.Core.def.graphicData.texPath));
             }
         }
 
@@ -376,7 +376,7 @@ namespace RimArmorCore.Mk1
 
             float armorCharge = 0f;
             float maxRef = 0f;
-            if (mkStation.ContainedArmor.CoreComp != null)
+            if (mkStation.ContainedArmor != null && mkStation.ContainedArmor.CoreComp != null)
             {
                 armorCharge = mkStation.ContainedArmor.EnergyCharge;
                 maxRef = mkStation.ContainedArmor.CoreComp.PowerCapacity;

@@ -35,10 +35,11 @@ namespace QuestRim
             {
                 if(Find.TickManager.TicksGame % 500 == 0)
                 {
-                    for(int i = 0; i < communications.QuestPawns.Count; i++)
+                    for (int i = 0; i < communications.QuestPawns.Count; i++)
                     {
                         QuestPawn questPawn = communications.QuestPawns[i];
-                        if(questPawn.Pawn == null || (WorldPawnsUtility.IsWorldPawn(questPawn.Pawn) && !questPawn.WorldQuester) || questPawn.Pawn.Dead || questPawn.Pawn.Destroyed)
+
+                        if (questPawn.Pawn == null || (WorldPawnsUtility.IsWorldPawn(questPawn.Pawn) && !questPawn.WorldQuester) || questPawn.Pawn.Dead || questPawn.Pawn.Destroyed)
                         {
                             questPawn.Destroy();
                         }

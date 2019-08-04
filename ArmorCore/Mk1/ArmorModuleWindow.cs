@@ -184,7 +184,7 @@ namespace RimArmorCore.Mk1
             }
             if (canUse.ContainsKey(module))
             {
-                Widgets.Label(new Rect(rect.x + 15, buttonRect.y - 2, rect.width - 20, 60), canUse[module]);
+                Widgets.Label(new Rect(rect.x + 15, buttonRect.y + 1, rect.width - 20, 70), canUse[module]);
             }
             Text.Anchor = TextAnchor.UpperLeft;
         }

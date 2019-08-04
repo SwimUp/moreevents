@@ -35,4 +35,38 @@
   <BasicFiltrationSystem.label>Базовая система фильтрации</BasicFiltrationSystem.label>
   <BasicFiltrationSystem.description>Модуль для брони\n\n\nБазовые системы фильтрации воздуха. Помогут при несерьёзном отравлении воздуха.\n\nЗащищает от легких эффектов отравляющих воздух</BasicFiltrationSystem.description>
   
+  <Plato.label>Эхосистема "платон"</Plato.label>
+  <Plato.description>Модуль для брони\n\n\nПозволяет контролировать обстановку на 360 градусов за счет множества подшлемных датчиков, расположенных по всему шлему., благодаря чему не будет непредвиденных атак со спины\nУвеличивает шанс уворота</Plato.description>
+  
+  <AdvancedFiltrationSystem.label>Передовая система фильтрации</AdvancedFiltrationSystem.label>
+  <AdvancedFiltrationSystem.description>Модуль для брони\n\n\nПередовая система фильтрации воздуха. Включает специальную технологию закрытого контура, благодаря которой достигается не только защита от серьёзных отравлений воздуха, но и последствий переохлажденного/перегретого воздуха</AdvancedFiltrationSystem.description>
+  
+  <Stimulants.label>Стимуляторы</Stimulants.label>
+  <Stimulants.description>Модуль для брони\n\n\nСтимуляторы, установленные прямо в броню, осуществляют направленные инъекции адреналина, ускорающие носителя и уменьшающие шанс получить потрясение</Stimulants.description>
+
+  <ReinforcedArmorCloth.label>Усиленная подброневая ткань</ReinforcedArmorCloth.label>
+  <ReinforcedArmorCloth.description>Модуль для брони\n\n\nСложная ткань, состоящая из микрочастиц и использующая технологию отражающего сетевого экрана, дополнительную обеспечивает защиту от обычных и электронных атак.</ReinforcedArmorCloth.description>
+  
+  <ReinforcedPlates.label>Усиленные пластины</ReinforcedPlates.label>
+  <ReinforcedPlates.description>Модуль для брони\n\n\nУсиленные пластины выполненные из сплава стали и пластали вставляются в броню для повышения её эффективности.</ReinforcedPlates.description>
+  
+  <AntitoxicSeals.label>Антитоксичные уплотнители</AntitoxicSeals.label>
+  <AntitoxicSeals.description>Модуль для брони\n\n\nГерметично закрытая броня обеспечивает улучшенную защиту от радиации, газов, токсичных веществ и температуры.</AntitoxicSeals.description>
+  
+  <FirstAidInterface.label>Интерфейс первой помощи</FirstAidInterface.label>
+  <FirstAidInterface.description>Модуль для брони\n\n\nМикропроцессоры, встроенные в броню, контролируют состояние жизненно важных систем организма и осуществляют направленное выделение небольших доз панацелина для ускорения процесса заживления..</FirstAidInterface.description>
+  
+  <ActivePlates.label>Активные пластины</ActivePlates.label>
+  <ActivePlates.description>Модуль для брони\n\n\nЭкспериментальные пластины, меняющие свой угол под снаряд для создания угла рикошета. Увеличивают поглощение брони.</ActivePlates.description>
+  
+  <ProteinTherapyAntigenesis.label>Протеиновая терапия антиогенеза</ProteinTherapyAntigenesis.label>
+  <ProteinTherapyAntigenesis.description>Модуль для брони\n\n\nМодуль стимулирует образование кровеносных сосудов во всех частях тела, что повышает способность пользователя противостоять урону и одновременно с этим ослабляет негативные последствия от ран.</ProteinTherapyAntigenesis.description>
+    
+  <AdrenalineInjectors.label>Адреналиновые инъекторы</AdrenalineInjectors.label>
+  <AdrenalineInjectors.description>Модуль для брони\n\n\nСпециальные инъекторы, которые пассивно впрыскивают в кровь небольшие дозы адреналина. Увеличивают скорость передвижения, прицеливания и силу атаки.</AdrenalineInjectors.description>
+
+  <KineticBuffer.label>Кинетический буфер</KineticBuffer.label>
+  <KineticBuffer.description>Модуль для брони\n\n\nУскоритель метаболизма контролирует состояние жизненно важных систем организма и осуществляет инъекции генетически модифицированных стимуляторов для повышения боевых навыков и атлетических способностей.</KineticBuffer.description>
+
+
 </LanguageData>

@@ -20,7 +20,7 @@ namespace MoreEvents.Patch
             for (int i = 0; i < allPawnsSpawned.Count; i++)
             {
                 Pawn pawn = allPawnsSpawned[i];
-                if (!pawn.Position.Roofed(map) && pawn.def.race.IsFlesh && !Apparel_Mk1.HasMk1Enable(pawn, RimArmorCore.ThingDefOfLocal.Apparel_MK1ThunderHead))
+                if (CanDamage(pawn) && !pawn.Position.Roofed(map) && pawn.def.race.IsFlesh && !Apparel_Mk1.HasMk1Enable(pawn, RimArmorCore.ThingDefOfLocal.Apparel_MK1ThunderHead))
                 {
                     float num = 0.028758334f;
                     num *= pawn.GetStatValue(StatDefOf.ToxicSensitivity);
@@ -33,6 +33,29 @@ namespace MoreEvents.Patch
                 }
             }
             return false;
+        }
+
+        private static bool CanDamage(Pawn p)
+        {
+            var app = Apparel_MkArmor.HasAnyMK(p);
+            if (app != null)
+            {
+                foreach (var armorSlot in app.Slots)
+                {
+                    foreach (var slot in armorSlot.Modules)
+                    {
+                        if (slot.Module != null)
+                        {
+                            if (!slot.Module.CanAffectCondition(GameConditionDefOfLocal.IceStorm))
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }

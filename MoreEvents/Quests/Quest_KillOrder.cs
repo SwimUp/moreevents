@@ -143,12 +143,16 @@ namespace MoreEvents.Quests
 
             Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.AncientSoldier, faction2);
 
+            if (pawn == null)
+                return false;
+
             Faction = faction1;
             TicksToPass = Rand.Range(6, 12) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
-            GenerateRewards();
 
             TargetPawn = pawn;
+
+            GenerateRewards();
 
             ShowInConsole = false;
 

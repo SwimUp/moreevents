@@ -11,7 +11,7 @@ namespace MoreEvents.Things
     [StaticConstructorOnStartup]
     public class Gizmo_FillableMk1 : Gizmo
     {
-        public Apparel_Mk1 Apparel;
+        public Apparel_MkArmor Apparel;
 
         private static readonly Texture2D FullShieldBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
 
@@ -54,6 +54,7 @@ namespace MoreEvents.Things
                 }
 
             });
+            Text.Anchor = TextAnchor.UpperLeft;
             return new GizmoResult(GizmoState.Clear);
         }
     }

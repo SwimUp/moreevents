@@ -10,7 +10,10 @@
 		<ModuleCategory>Head</ModuleCategory>
 		<Item>GuidanceSystem</Item>
 		<StatAffecter>
-			<li>ShootingAccuracyPawn</li>
+			<li>
+				<key>ShootingAccuracyPawn</key>
+				<value>15</value>
+			</li>
 		</StatAffecter>
 		<StationLevelRequired>1</StationLevelRequired>
 		<Icon>ArmorModules/GuidanceSystem</Icon>
@@ -37,7 +40,10 @@
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Plato</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
 		<StatAffecter>
-			<li>MeleeDodgeChance</li>
+			<li>
+				<key>MeleeDodgeChance</key>
+				<value>10</value>
+			</li>
 		</StatAffecter>
 		<StationLevelRequired>2</StationLevelRequired>
 		<Icon>ArmorModules/Plato</Icon>
@@ -45,15 +51,266 @@
 	</RimArmorCore.Mk1.ArmorModuleDef>
 
 	<RimArmorCore.Mk1.ArmorModuleDef>
-		<defName>Instruments</defName>
-		<label>Instruments</label>
-		<description>A set of tools for basic armor upgrades.</description>
-		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_CondenserBatteries</workerClass>
+		<defName>AdvancedFiltrationSystem</defName>
+		<label>Advanced filtration system</label>
+		<description>Advanced air filtration system. It includes a special technology of a closed circuit, thanks to which not only protection against serious air poisoning is achieved, but also the consequences of supercooled/superheated air</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AdvancedFiltrationSystem</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
 		<StationLevelRequired>2</StationLevelRequired>
-		<Icon>ArmorModules/Instruments</Icon>
+		<Icon>ArmorModules/AdvancedFiltrationSystem</Icon>
+		<Item>AdvancedFiltrationSystem</Item>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
 	<!-- ======================= -->
 	
+	<!-- Tier 1: тело -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>Stimulants</defName>
+		<label>Stimulants</label>
+		<description>Stimulants mounted directly in the armor provide targeted adrenaline injections, accelerating the wearer and reducing the chance of shock</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Stimulants</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>Stimulants</Item>
+		<StatAffecter>
+			<li>
+				<key>PainShockThreshold</key>
+				<value>-0.10</value>
+			</li>
+			<li>
+				<key>MoveSpeed</key>
+				<value>2.4</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/Stimulants</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ReinforcedArmorCloth</defName>
+		<label>Reinforced Armor Cloth</label>
+		<description>Complex fabric consisting of microparticles and using the technology of a reflective firewall, additional provides protection against conventional and electronic attacks.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ReinforcedArmorCloth</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>ReinforcedArmorCloth</Item>
+		<StatAffecter>
+			<li>
+				<key>ArmorRating_Sharp</key>
+				<value>0.05</value>
+			</li>
+			<li>
+				<key>ArmorRating_Blunt</key>
+				<value>0.05</value>
+			</li>
+			<li>
+				<key>ArmorRating_Heat</key>
+				<value>0.05</value>
+			</li>
+		</StatAffecter>
+		<DamageListener>true</DamageListener>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/ReinforcedArmorCloth</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ReinforcedPlates</defName>
+		<label>Reinforced plates</label>
+		<description>Reinforced plates made of an alloy of steel and plasteel are inserted into the armor to increase its effectiveness.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ReinforcedPlates</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>ReinforcedPlates</Item>
+		<StatAffecter>
+			<li>
+				<key>ArmorRating_Sharp</key>
+				<value>0.12</value>
+			</li>
+			<li>
+				<key>ArmorRating_Blunt</key>
+				<value>0.12</value>
+			</li>
+			<li>
+				<key>ArmorRating_Heat</key>
+				<value>0.12</value>
+			</li>
+			<li>
+				<key>MoveSpeed</key>
+				<value>-3.5</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/ReinforcedPlates</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>AntitoxicSeals</defName>
+		<label>Antitoxic seals</label>
+		<description>Hermetically sealed armor provides improved protection against radiation, gases, toxic substances and temperature</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AntitoxicSeals</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<StatAffecter>
+			<li>
+				<key>ComfyTemperatureMin</key>
+				<value>-30</value>
+			</li>
+			<li>
+				<key>ComfyTemperatureMax</key>
+				<value>30</value>
+			</li>
+		</StatAffecter>
+		<Item>AntitoxicSeals</Item>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/AntitoxicSeals</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<!-- ======================= -->
+	
+	<!-- Tier 2: тело -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>FirstAidInterface</defName>
+		<label>First aid interface</label>
+		<description>Microprocessors built into the armor control the state of the vital systems of the body and carry out the directed allocation of small doses of panacelin to speed up the healing process.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>FirstAidInterface</Item>
+		<HealRate>5</HealRate>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/FirstAidInterface</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ActivePlates</defName>
+		<label>Active plates</label>
+		<description>Experimental plates that change their angle under the projectile to create a rebound angle.\nIncrease Armor</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>ActivePlates</Item>
+		<StatAffecter>
+			<li>
+				<key>ArmorRating_Sharp</key>
+				<value>0.1</value>
+			</li>
+			<li>
+				<key>ArmorRating_Blunt</key>
+				<value>0.1</value>
+			</li>
+			<li>
+				<key>ArmorRating_Heat</key>
+				<value>0.1</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/ActivePlates</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ProteinTherapyAntigenesis</defName>
+		<label>Protein therapy of antigenesis</label>
+		<description>Module stimulates the formation of blood vessels in all parts of the body, which increases the user's ability to withstand damage and at the same time weakens the negative effects of wounds</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ProteinTherapyAntigenesis</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>ProteinTherapyAntigenesis</Item>
+		<StatAffecter>
+			<li>
+				<key>PainShockThreshold</key>
+				<value>-0.20</value>
+			</li>
+			<li>
+				<key>MoveSpeed</key>
+				<value>0.3</value>
+			</li>
+			<li>
+				<key>CarryingCapacity</key>
+				<value>10</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/ProteinTherapyAntigenesis</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>AdrenalineInjectors</defName>
+		<label>Adrenaline injectors</label>
+		<description>Special injectors that passively inject small doses of adrenaline into the blood. Increases movement speed, aiming and attack power.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AdrenalineInjectors</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>AdrenalineInjectors</Item>
+		<StatAffecter>
+			<li>
+				<key>MeleeDPS</key>
+				<value>1.2</value>
+			</li>
+			<li>
+				<key>AimingDelayFactor</key>
+				<value>-0.15</value>
+			</li>
+			<li>
+				<key>MoveSpeed</key>
+				<value>3.0</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/AdrenalineInjectors</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<!-- ======================= -->
+	
+	<!-- Tier 3: тело -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>KineticBuffer</defName>
+		<label>Kinetic buffer</label>
+		<description>Metabolism accelerator controls the state of vital systems of the body and injects genetically modified stimulants to increase combat skills and athletic abilities.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>KineticBuffer</Item>
+		<StatAffecter>
+			<li>
+				<key>MeleeDPS</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>AimingDelayFactor</key>
+				<value>-0.10</value>
+			</li>
+			<li>
+				<key>MeleeHitChance</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>ShootingAccuracyPawn</key>
+				<value>10</value>
+			</li>
+			<li>
+				<key>MoveSpeed</key>
+				<value>1.4</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/KineticBuffer</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>SecurityInterface</defName>
+		<label>Security interface</label>
+		<description>Improved VI systems control enemy fire and redistribute energy to vulnerable points.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>SecurityInterface</Item>
+		<StatAffecter>
+			<li>
+				<key>ArmorRating_Sharp</key>
+				<value>0.2</value>
+			</li>
+			<li>
+				<key>ArmorRating_Blunt</key>
+				<value>0.2</value>
+			</li>
+			<li>
+				<key>ArmorRating_Heat</key>
+				<value>0.2</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/SecurityInterface</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+		<!-- ======================= -->
 </Defs>

@@ -21,25 +21,34 @@ namespace QuestRim
 
         public void Destroy()
         {
-            for(int i = 0; i < Quests.Count; i++)
+            if (Quests != null)
             {
-                Quest quest = Quests[i];
-                if(quest.Site != null)
+                for (int i = 0; i < Quests.Count; i++)
                 {
-                    quest.Site.EndQuest(null, EndCondition.None);
-                }
-                else
-                {
-                    quest.EndQuest(null, EndCondition.None);
+                    Quest quest = Quests[i];
+                    if (quest != null)
+                    {
+                        if (quest.Site != null)
+                        {
+                            quest.Site.EndQuest(null, EndCondition.None);
+                        }
+                        else
+                        {
+                            quest.EndQuest(null, EndCondition.None);
+                        }
+                    }
                 }
             }
 
-            for(int i = 0; i < Dialogs.Count; i++)
+            if (Dialogs != null)
             {
-                CommunicationDialog dialog = Dialogs[i];
-                if(!dialog.ShowInConsole)
+                for (int i = 0; i < Dialogs.Count; i++)
                 {
-                    dialog.Destroy();
+                    CommunicationDialog dialog = Dialogs[i];
+                    if (!dialog.ShowInConsole)
+                    {
+                        dialog.Destroy();
+                    }
                 }
             }
 

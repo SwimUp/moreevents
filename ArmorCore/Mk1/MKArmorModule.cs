@@ -14,8 +14,6 @@ namespace RimArmorCore.Mk1
 
         public Apparel_MkArmor Armor;
 
-        public virtual float TransformValue { get; set; }
-
         public override void ExposeData()
         {
             Scribe_Defs.Look(ref def, "def");
@@ -32,14 +30,28 @@ namespace RimArmorCore.Mk1
 
         }
 
+        public virtual void CheckPreAbsorbDamage(DamageInfo dInfo, ref bool absorb)
+        {
+
+        }
+
+
         public override string StatDescription()
         {
             return "";
         }
 
-        public virtual void TransformStat(StatDef def, ref float value)
+        public virtual void TransformStat(StatDef statDef, ref float value)
         {
-            
+            if (def.StatAffecter.ContainsKey(statDef))
+            {
+                value += def.StatAffecter[statDef];
+            }
+        }
+
+        public virtual IEnumerable<Gizmo> GetGizmos()
+        {
+            yield break;
         }
     }
 }

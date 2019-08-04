@@ -55,7 +55,7 @@ namespace MoreEvents.Events
             List<Pawn> pawns = ManhunterPackIncidentUtility.GenerateAnimals(animalKind, map.Tile, points * 1f);
             foreach (var pawn in pawns)
             {
-                if (animals.Count >= 50)
+                if (animals.Count >= 30)
                     break;
 
                 animals.Add(pawn);

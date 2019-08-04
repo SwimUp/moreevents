@@ -66,7 +66,7 @@ namespace MoreEvents.Events
             for (int i = 0; i < allPawnsSpawned.Count; i++)
             {
                 Pawn pawn = allPawnsSpawned[i];
-                if (!pawn.Dead && !pawn.Position.Roofed(map) && pawn.RaceProps.Humanlike)
+                if (CanDamage(pawn, map))
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfLocal.MentalImpact);
                 }
@@ -84,6 +84,16 @@ namespace MoreEvents.Events
         public override bool AllowEnjoyableOutsideNow(Map map)
         {
             return false;
+        }
+
+        public bool CanDamage(Pawn pawn, Map map)
+        {
+            if (pawn.Dead || pawn.Position.Roofed(map) || !pawn.RaceProps.Humanlike)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

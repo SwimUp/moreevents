@@ -29,5 +29,7 @@ namespace MoreEvents
         /*=======================*/
 
         public static GameConditionDef Constellations;
+
+        public static GameConditionDef Psychogas;
     }
 }

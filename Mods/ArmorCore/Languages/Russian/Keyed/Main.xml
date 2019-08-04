@@ -43,10 +43,22 @@
 	
 	<Station_LevelReq>(требуется уровень станции: {0}, у вас {1})</Station_LevelReq>
 	
-	<Station_FullInfo>Чтобы установить модуль нажмите по пустому слоту.\nЧтобы убрать модуль, нажмите на него.\nПараметры брони:\n{0}</Station_FullInfo>
+	<Station_FullInfo>Чтобы установить модуль нажмите по пустому слоту.\nЧтобы убрать модуль, нажмите на него.\n\nПараметры брони:\n{0}</Station_FullInfo>
 	
 	<ArmorModuleWorker_GuidanceSystem>- дополнительный шанс попасть: {0}</ArmorModuleWorker_GuidanceSystem>
 	<ArmorModuleWorker_BasicFiltrationSystem>Защита от:\n-Тяжелый воздух</ArmorModuleWorker_BasicFiltrationSystem>
 	<ArmorModuleWorker_Plato>- дополнительный шанс уворота: {0}</ArmorModuleWorker_Plato>
-
+	<ArmorModuleWorker_AdvancedFiltrationSystem>Защита от всех воздушных эффектов, кроме радиации</ArmorModuleWorker_AdvancedFiltrationSystem>
+	<ArmorModuleWorker_Stimulants>- снижение порога шока: {0}\n- ускорение передвижения: {1}</ArmorModuleWorker_Stimulants>
+	<ArmorModuleWorker_ReinforcedArmorCloth>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n\n- увеличение брони (темп.): {2}\n- иммунитет к стан гранатам</ArmorModuleWorker_ReinforcedArmorCloth>
+	<ArmorModuleWorker_ReinforcedPlates>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}\n- уменьшение скорости: {3} м/с</ArmorModuleWorker_ReinforcedPlates>
+	<ArmorModuleWorker_AntitoxicSeals>Защита от радиации\n- Макс.температура: +30\n- Мин.температура: +30</ArmorModuleWorker_AntitoxicSeals>
+	<ArmorModuleWorker_FirstAidInterface>- ускорение заживления ран: {0}</ArmorModuleWorker_FirstAidInterface>
+	<ArmorModuleWorker_ActivePlates>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}</ArmorModuleWorker_ActivePlates>
+	<ArmorModuleWorker_ProteinTherapyAntigenesis>- снижение порога шока: {0}\n- увеличение скорости: {1}\n- переносимый вес: +{2}</ArmorModuleWorker_ProteinTherapyAntigenesis>
+	<ArmorModuleWorker_AdrenalineInjectors>- урон: +{0}\n- скорость прицеливания: {1}\n- увеличение скорости: {2}\nАктивируемая способность: передозировка</ArmorModuleWorker_AdrenalineInjectors>
+ 	<ArmorModuleWorker_AdrenalineInjectors_Action>Передозировка</ArmorModuleWorker_AdrenalineInjectors_Action>
+	<ArmorModuleWorker_AdrenalineInjectors_Action_CoolDown>Адреналиновые инъекторы еще не готовы.</ArmorModuleWorker_AdrenalineInjectors_Action_CoolDown>
+	<ArmorModuleWorker_SecurityInterface>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}</ArmorModuleWorker_SecurityInterface>
+	
 </LanguageData>

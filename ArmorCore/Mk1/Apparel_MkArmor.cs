@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace MoreEvents.Things.Mk1
@@ -46,8 +47,28 @@ namespace MoreEvents.Things.Mk1
 
         public bool Active => Core != null && HasHelmet && EnergyCharge > 0f;
 
+        public bool CanHeal;
+        public float HealRate;
+        protected virtual float healRate { get; }
+
         public Thing Core;
-        public ArmorCore CoreComp;
+        public ArmorCore CoreComp
+        {
+            get
+            {
+                if (coreComp == null)
+                {
+                    coreComp = Core.TryGetComp<ArmorCore>();
+                }
+
+                return coreComp;
+            }
+            set
+            {
+                coreComp = value;
+            }
+        }
+        private ArmorCore coreComp = null;
 
         public abstract int[] SlotsNumber { get; }
 
@@ -64,11 +85,11 @@ namespace MoreEvents.Things.Mk1
 
         protected List<ArmorSlot> slots;
 
+        private List<MKArmorModule> damageListeners;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-
-            CoreComp = Core.TryGetComp<ArmorCore>();
 
             ModulesInit();
 
@@ -77,6 +98,28 @@ namespace MoreEvents.Things.Mk1
 
         public void Notify_ModulesChanges()
         {
+            damageListeners = new List<MKArmorModule>();
+
+            HealRate = 0;
+
+            foreach (var armorSlot in Slots)
+            {
+                foreach (var slot in armorSlot.Modules)
+                {
+                    if (slot.Module != null)
+                    {
+                        HealRate += slot.Module.def.HealRate;
+
+                        if(slot.Module.def.DamageListener)
+                        {
+                            damageListeners.Add(slot.Module);
+                        }
+                    }
+                }
+            }
+
+            if (HealRate > 0f)
+                CanHeal = true;
         }
 
         public virtual void ModulesInit()
@@ -232,7 +275,7 @@ namespace MoreEvents.Things.Mk1
         public void ChangeCore(Thing newCore)
         {
             Core = newCore;
-            CoreComp = Core.TryGetComp<ArmorCore>();
+            coreComp = null;
         }
 
         public void AddCharge(float num)
@@ -280,20 +323,22 @@ namespace MoreEvents.Things.Mk1
             Scribe_Values.Look(ref HasHelmet, "HasHelmet");
             Scribe_Deep.Look(ref Core, "Core");
             Scribe_Collections.Look(ref slots, "Slots", LookMode.Deep);
+
+            Notify_ModulesChanges();
         }
 
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
         {
             if (Active)
             {
-                EnergyCharge -= dinfo.Amount * 0.1f;
+                bool absorb = false;
 
-                if(EnergyCharge < 0)
+                foreach (var listener in damageListeners)
                 {
-                    return false;
+                    listener.CheckPreAbsorbDamage(dinfo, ref absorb);
                 }
 
-                return true;
+                return absorb;
             }
 
             return false;
@@ -301,11 +346,10 @@ namespace MoreEvents.Things.Mk1
 
         public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
         {
-            float damage = dinfo.Amount * 0.8f;
-            if (dinfo.Def == DamageDefOf.Cut || dinfo.Def == DamageDefOf.Blunt)
-                damage *= 0.1f;
-
-            dinfo.SetAmount(damage);
+            if (Active)
+            {
+                EnergyCharge = Mathf.Clamp(EnergyCharge - (dinfo.Amount * 0.3f), 0, CoreComp.PowerCapacity);
+            }
 
             absorbed = false;
         }
@@ -318,11 +362,26 @@ namespace MoreEvents.Things.Mk1
 
                 if (Active)
                 {
-                    EnergyCharge -= dischargeRate;
+                    EnergyCharge = Mathf.Clamp(EnergyCharge - dischargeRate, 0, EnergyCharge);
 
-                    if (EnergyCharge < 0)
-                        EnergyCharge = 0;
+                    if(CanHeal)
+                    {
+                        TryHeal();
+                    }
                 }
+            }
+        }
+
+        private void TryHeal()
+        {
+            if (Wearer == null)
+                return;
+
+            if ((from x in Wearer.health.hediffSet.GetHediffs<Hediff_Injury>()
+                 where x.CanHealNaturally() || x.CanHealFromTending()
+                 select x).TryRandomElement(out Hediff_Injury result2))
+            {
+                result2.Heal(HealRate);
             }
         }
 
@@ -369,8 +428,22 @@ namespace MoreEvents.Things.Mk1
         {
             yield return new Gizmo_FillableMk1
             {
-              //  Apparel = this
+                Apparel = this
             };
+
+            foreach (var armorSlot in Slots)
+            {
+                foreach (var slot in armorSlot.Modules)
+                {
+                    if (slot.Module != null)
+                    {
+                        foreach(var gizmo in slot.Module.GetGizmos())
+                        {
+                            yield return gizmo;
+                        }
+                    }
+                }
+            }
         }
     }
 }

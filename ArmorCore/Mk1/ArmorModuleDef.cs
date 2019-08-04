@@ -22,9 +22,13 @@ namespace RimArmorCore.Mk1
 
         public Type workerClass;
 
-        public List<StatDef> StatAffecter;
+        public Dictionary<StatDef, float> StatAffecter;
+
+        public float HealRate;
 
         public ThingDef Item;
+
+        public bool DamageListener = false;
 
         public ArmorModuleCategory ModuleCategory;
 

@@ -1,5 +1,6 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using QuestRim;
+using RimOverhaul.AI;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -52,7 +53,7 @@ namespace MoreEvents.Quests
 
             DefDatabase<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>.AllDefsListForReading.Where(gen => gen.targetTags != null && gen.targetTags.Contains(MapGenerator)).TryRandomElementByWeight(w => w.Commonality, out MapGeneratorBlueprints.MapGenerator.MapGeneratorDef result);
 
-            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction);
+            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction, lord);
 
             TargetPawn = (Pawn)GenSpawn.Spawn(TargetPawn, pawns.RandomElement().Position, map);
             pawns[0].GetLord().AddPawn(TargetPawn);
@@ -101,7 +102,7 @@ namespace MoreEvents.Quests
 
         private bool AnyHostileOnMap(Map map, Faction enemyFaction)
         {
-            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && !p.Dead && p.RaceProps.Humanlike).ToList();
+            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && (!p.Dead  || p.Downed) && p.RaceProps.Humanlike).ToList();
 
             if (enemyPawns == null || enemyPawns.Count == 0)
                 return false;

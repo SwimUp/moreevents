@@ -9,16 +9,22 @@ namespace RimArmorCore.Mk1.Workers
 {
     public class ArmorModuleWorker_Plato : MKArmorModule
     {
-        public override float TransformValue => 10;
-
         public override string StatDescription()
         {
-            return $"ArmorModuleWorker_Plato".Translate(TransformValue);
+            string result = string.Format("ArmorModuleWorker_Plato".Translate(), def.StatAffecter.ElementAt(0));
+
+            return result;
         }
 
-        public override void TransformStat(StatDef def, ref float value)
+        public override void TransformStat(StatDef statDef, ref float value)
         {
-            value += 10;
+            if (!Armor.Active)
+                return;
+
+            if (def.StatAffecter.ContainsKey(statDef))
+            {
+                value += def.StatAffecter[statDef];
+            }
         }
     }
 }

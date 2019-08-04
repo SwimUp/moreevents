@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>AdrenalinePush</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
+		<initialSeverity>0.5</initialSeverity>
+		<label>Adrenaline overdose</label>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4.5</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0.15</painFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.7</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

@@ -27,6 +27,9 @@ namespace RandomPlaces
                 {
                     int tile = TileFinder.RandomStartingTile();
 
+                    if (Triggers.ContainsKey(tile))
+                        continue;
+
                     if (randomPlaceDef.Worker == null || randomPlaceDef.Worker.CanPlace(tile))
                     {
                         TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
@@ -44,6 +47,10 @@ namespace RandomPlaces
                     if (Rand.Chance(randomPlaceDef.Commonality))
                     {
                         int tile = TileFinder.RandomStartingTile();
+
+                        if (Triggers.ContainsKey(tile))
+                            continue;
+
                         if (randomPlaceDef.Worker == null || randomPlaceDef.Worker.CanPlace(tile))
                         {
                             TryGetFaction(randomPlaceDef.FactionType, out Faction faction);
