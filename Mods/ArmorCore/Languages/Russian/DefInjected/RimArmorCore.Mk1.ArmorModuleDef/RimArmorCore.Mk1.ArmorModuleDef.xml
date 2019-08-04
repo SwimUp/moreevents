@@ -40,4 +40,9 @@
   <KineticBuffer.label>Кинетический буфер</KineticBuffer.label>
   <KineticBuffer.description>Ускоритель метаболизма контролирует состояние жизненно важных систем организма и осуществляет инъекции генетически модифицированных стимуляторов для повышения боевых навыков и атлетических способностей.</KineticBuffer.description>
 
+  <SecurityInterface.label>Защитный интерфейс</SecurityInterface.label>
+  <SecurityInterface.description>Усовершенствованные системы ВИ контролируют огонь противника и перераспределяют энергию в уязвимые точки.</SecurityInterface.description>
+
+
+
 </LanguageData>
