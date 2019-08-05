@@ -45,6 +45,7 @@ Good, bad, whatever the main thing is that sooner or later you will get worse wh
 			<min>-100</min>
 			<max>-90</max>
 		</MinReqGoodWill>
+		<EarliestDay>35</EarliestDay>
 	</EmailMessages.EmailMessageDef>
 	
 	<EmailMessages.EmailMessageDef>
