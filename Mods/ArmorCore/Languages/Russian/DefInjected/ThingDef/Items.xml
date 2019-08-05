@@ -70,6 +70,24 @@
 
   <SecurityInterface.label>Защитный интерфейс</SecurityInterface.label>
   <SecurityInterface.description>Модуль для брони\n\n\nУсовершенствованные системы ВИ контролируют огонь противника и перераспределяют энергию в уязвимые точки.</SecurityInterface.description>
+ 
+  <CombatExoskeleton.label>Боевой экзоскелет</CombatExoskeleton.label>
+  <CombatExoskeleton.description>Модуль для брони\n\n\nЭта экспериментальная броня сочетает в себе механический усилитель и сетевой экран, увеличивая физическую силу бойца и обеспечивая защиту от традиционного вооружения.</CombatExoskeleton.description>
+  
+  <MedicalExoskeleton.label>Медицинский экзоскелет</MedicalExoskeleton.label>
+  <MedicalExoskeleton.description>Модуль для брони\n\n\nЭкспериментальное улучшение, сочетающее в себе различные медицинские технологии для контроля над состоянием всех жизненно важных систем организма и увеличения эффективности лечения и скорости восстановления.</MedicalExoskeleton.description>
 
-
+  <ShockAbsorbers.label>Амортизаторы</ShockAbsorbers.label>
+  <ShockAbsorbers.description>Модуль для брони\n\n\nУстановка в броню микро гравиметрических механизмов обеспечивает более удобное передвижение.</ShockAbsorbers.description>
+  
+  <MotorizedJoints.label>Моторизованные суставы</MotorizedJoints.label>
+  <MotorizedJoints.description>Модуль для брони\n\n\nСпециальные механизмы помогающие суставам. Позволяют передвигаться быстрее и удобнее.</MotorizedJoints.description>
+  
+  <AblationCoating.label>Абляционое покрытие</AblationCoating.label>
+  <AblationCoating.description>Модуль для брони\n\n\nАбляционное покрытие отделяется при ударе, уводя от тела энергию удара, производимую пулями и снарядами. Может быть использована 10 раз, за тем покрытие нужно сменить.</AblationCoating.description>
+  
+  <ShieldModulator.label>Модулятор щита</ShieldModulator.label>
+  <ShieldModulator.description>Модуль для брони\n\n\nМодулятор, генерирующий энергетическое поле вокруг брони. Силового поля достаточно, чтобы отразить небольшой урон. Требует энергию, которую он берет из реактора костюма.</ShieldModulator.description>
+  
+  
 </LanguageData>

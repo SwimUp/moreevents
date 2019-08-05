@@ -38,7 +38,7 @@ namespace MoreEvents.Things.Mk1
                     return CoreComp.EnergyCharge;
             }
         }
-        public virtual float dischargeRate { get; set; } = 0.35f;
+        public virtual float dischargeRate { get; set; } = 0.20f;
 
         public bool FullCharge => EnergyCharge >= CoreComp.PowerCapacity;
 
@@ -85,7 +85,11 @@ namespace MoreEvents.Things.Mk1
 
         protected List<ArmorSlot> slots;
 
-        private List<MKArmorModule> damageListeners;
+        private List<MKArmorModule> damageListeners = new List<MKArmorModule>();
+
+        public IEnumerable<MKArmorModule> StatsListeners => statsListeners;
+        private List<MKArmorModule> statsListeners = new List<MKArmorModule>();
+        private List<MKArmorModule> wornExtraListeners = new List<MKArmorModule>();
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
@@ -98,7 +102,8 @@ namespace MoreEvents.Things.Mk1
 
         public void Notify_ModulesChanges()
         {
-            damageListeners = new List<MKArmorModule>();
+            damageListeners.Clear();
+            statsListeners.Clear();
 
             HealRate = 0;
 
@@ -113,6 +118,16 @@ namespace MoreEvents.Things.Mk1
                         if(slot.Module.def.DamageListener)
                         {
                             damageListeners.Add(slot.Module);
+                        }
+
+                        if(slot.Module.def.StatListener)
+                        {
+                            statsListeners.Add(slot.Module);
+                        }
+
+                        if(slot.Module.def.WornExtraListener)
+                        {
+                            wornExtraListeners.Add(slot.Module);
                         }
                     }
                 }
@@ -148,11 +163,6 @@ namespace MoreEvents.Things.Mk1
                 {
                     foreach(var slot in armorSlot.Modules)
                     {
-                        if(moduleDef.ExcludesModules != null && slot.Module != null && moduleDef.ExcludesModules.Contains(slot.Module.def))
-                        {
-                            RemoveModule(slot.Module.def, true);
-                        }
-
                         if (slot.Module == null)
                         {
                             slot.Module = module;
@@ -185,7 +195,7 @@ namespace MoreEvents.Things.Mk1
             Notify_ModulesChanges();
         }
 
-        public void RemoveModule(ArmorModuleDef moduleDef, bool drop)
+        public void RemoveModule(ArmorModuleDef moduleDef, IntVec3 pos, Map map, bool drop)
         {
             foreach (var armorSlot in Slots)
             {
@@ -193,19 +203,22 @@ namespace MoreEvents.Things.Mk1
                 {
                     foreach (var slot in armorSlot.Modules)
                     {
-                        if (slot.Module.def == moduleDef)
+                        if (slot.Module != null)
                         {
-                            slot.Module = null;
-
-                            if(drop && slot.Item != null)
+                            if (slot.Module.def == moduleDef)
                             {
-                                if (CellFinder.TryFindRandomCellNear(Position, Map, 4, null, out IntVec3 result))
+                                slot.Module = null;
+
+                                if (drop && slot.Item != null)
                                 {
-                                    GenSpawn.Spawn(slot.Item, result, Map);
-                                    slot.Item = null;
+                                    if (CellFinder.TryFindRandomCellNear(pos, map, 4, null, out IntVec3 result))
+                                    {
+                                        GenSpawn.Spawn(slot.Item, result, map);
+                                        slot.Item = null;
+                                    }
                                 }
+                                break;
                             }
-                            break;
                         }
                     }
                 }
@@ -329,19 +342,16 @@ namespace MoreEvents.Things.Mk1
 
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
         {
-            if (Active)
+            bool absorb = false;
+
+            for(int i = 0; i < damageListeners.Count; i++)
             {
-                bool absorb = false;
+                MKArmorModule listener = damageListeners[i];
 
-                foreach (var listener in damageListeners)
-                {
-                    listener.CheckPreAbsorbDamage(dinfo, ref absorb);
-                }
-
-                return absorb;
+                listener.CheckPreAbsorbDamage(dinfo, ref absorb);
             }
 
-            return false;
+            return absorb;
         }
 
         public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
@@ -356,6 +366,13 @@ namespace MoreEvents.Things.Mk1
 
         public override void DrawWornExtras()
         {
+            for (int i = 0; i < wornExtraListeners.Count; i++)
+            {
+                MKArmorModule listener = wornExtraListeners[i];
+
+                listener.DrawWornExtras();
+            }
+
             if (Find.TickManager.TicksGame % 200 == 0)
             {
                 CheckHelmet();
@@ -364,7 +381,7 @@ namespace MoreEvents.Things.Mk1
                 {
                     EnergyCharge = Mathf.Clamp(EnergyCharge - dischargeRate, 0, EnergyCharge);
 
-                    if(CanHeal)
+                    if (CanHeal)
                     {
                         TryHeal();
                     }

@@ -20,7 +20,7 @@ namespace MoreEvents.Patch
             for (int i = 0; i < allPawnsSpawned.Count; i++)
             {
                 Pawn pawn = allPawnsSpawned[i];
-                if (CanDamage(pawn) && !pawn.Position.Roofed(map) && pawn.def.race.IsFlesh && !Apparel_Mk1.HasMk1Enable(pawn, RimArmorCore.ThingDefOfLocal.Apparel_MK1ThunderHead))
+                if (CanDamage(pawn) && !pawn.Position.Roofed(map) && pawn.def.race.IsFlesh)
                 {
                     float num = 0.028758334f;
                     num *= pawn.GetStatValue(StatDefOf.ToxicSensitivity);
@@ -46,7 +46,7 @@ namespace MoreEvents.Patch
                     {
                         if (slot.Module != null)
                         {
-                            if (!slot.Module.CanAffectCondition(GameConditionDefOfLocal.IceStorm))
+                            if (!slot.Module.CanAffectCondition(GameConditionDefOf.ToxicFallout))
                             {
                                 return false;
                             }

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArmorCoreModule.cs" />
+    <Compile Include="ExplosionPlus.cs" />
     <Compile Include="HediffDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="Mk1\Apparel_MkArmor.cs" />
@@ -83,19 +84,26 @@
     <Compile Include="Mk1\ArmorModuleWindow.cs" />
     <Compile Include="Mk1\ModuleMenuWindow.cs" />
     <Compile Include="Mk1\ModuleSlot.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_AblationCoating.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ActivePlates.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AdrenalineInjectors.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AdvancedFiltrationSystem.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AntitoxicSeals.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_BasicFiltrationSystem.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_CombatExoskeleton.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_FirstAidInterface.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_KineticBuffer.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_MotorizedJoints.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_Plato.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_GuidanceSystem.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ProteinTherapyAntigenesis.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ReinforcedArmorCloth.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_SecurityInterface.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_ShieldModulator.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_ShockAbsorbers.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_Stimulants.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ReinforcedPlates.cs" />
+    <Compile Include="Mk1\Workers\ArmorWorkerModule_MedicalExoskeleton.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_Transformers.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_CondenserBatteries.cs" />
     <Compile Include="Patches\HeavyAir_RimOverhaul.cs" />

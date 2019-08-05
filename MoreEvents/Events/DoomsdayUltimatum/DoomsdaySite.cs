@@ -22,9 +22,6 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public DoomsdayUltimatumComp comp;
 
-        private int checkColonistTicker = 0;
-        private int checkColonistInterval = 5000;
-
         public override void SpawnSetup()
         {
             base.SpawnSetup();
@@ -37,45 +34,19 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             comp = GetComponent<DoomsdayUltimatumComp>();
         }
 
-        public override void Tick()
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            base.Tick();
-
-            if (HasMap)
-            {
-                checkColonistTicker--;
-                if (checkColonistTicker <= 0)
-                {
-                    checkColonistTicker = checkColonistInterval;
-
-                    CheckColonistsNow();
-                }
-            }
-        }
-
-        public void CheckColonistsNow()
-        {
-            if (Weapon.WeaponDeactivated)
-                return;
-
-            List<Pawn> pawns = Map.mapPawns.FreeColonists.ToList();
-
-            int downedPawns = 0;
-            pawns.ForEach(delegate (Pawn p)
-            {
-                if (p.Downed || p.Dead || !p.Spawned)
-                {
-                    downedPawns++;
-                }
-            });
-
-            if (downedPawns == pawns.Count)
+            if (!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
             {
                 var letter = LetterMaker.MakeLetter("YourAttackWasRepelledTitle".Translate(), "YourAttackWasRepelledDesc".Translate(), LetterDefOf.NeutralEvent);
                 Find.LetterStack.ReceiveLetter(letter);
 
-                Current.Game.DeinitAndRemoveMap(Map);
+                alsoRemoveWorldObject = false;
+                return true;
             }
+
+            alsoRemoveWorldObject = false;
+            return false;
         }
 
         public override void PostMapGenerate()

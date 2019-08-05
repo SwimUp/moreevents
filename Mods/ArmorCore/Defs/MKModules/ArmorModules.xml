@@ -9,6 +9,7 @@
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_GuidanceSystem</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
 		<Item>GuidanceSystem</Item>
+		<StatListener>true</StatListener>
 		<StatAffecter>
 			<li>
 				<key>ShootingAccuracyPawn</key>
@@ -39,6 +40,7 @@
 		<description>The echo system “Plato” allows you to control the situation by 360 degrees due to the many helmet-mounted sensors located throughout the helmet. Therefore, there will be no unforeseen attacks from the back\n\nIncreases Dodge Chance </description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Plato</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
+		<StatListener>true</StatListener>
 		<StatAffecter>
 			<li>
 				<key>MeleeDodgeChance</key>
@@ -71,6 +73,7 @@
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Stimulants</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
 		<Item>Stimulants</Item>
+		<StatListener>true</StatListener>
 		<StatAffecter>
 			<li>
 				<key>PainShockThreshold</key>
@@ -91,6 +94,7 @@
 		<description>Complex fabric consisting of microparticles and using the technology of a reflective firewall, additional provides protection against conventional and electronic attacks.</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ReinforcedArmorCloth</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<Item>ReinforcedArmorCloth</Item>
 		<StatAffecter>
 			<li>
@@ -117,6 +121,7 @@
 		<description>Reinforced plates made of an alloy of steel and plasteel are inserted into the armor to increase its effectiveness.</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ReinforcedPlates</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<Item>ReinforcedPlates</Item>
 		<StatAffecter>
 			<li>
@@ -146,6 +151,7 @@
 		<description>Hermetically sealed armor provides improved protection against radiation, gases, toxic substances and temperature</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AntitoxicSeals</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<StatAffecter>
 			<li>
 				<key>ComfyTemperatureMin</key>
@@ -180,8 +186,9 @@
 		<defName>ActivePlates</defName>
 		<label>Active plates</label>
 		<description>Experimental plates that change their angle under the projectile to create a rebound angle.\nIncrease Armor</description>
-		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ActivePlates</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<Item>ActivePlates</Item>
 		<StatAffecter>
 			<li>
@@ -207,6 +214,7 @@
 		<description>Module stimulates the formation of blood vessels in all parts of the body, which increases the user's ability to withstand damage and at the same time weakens the negative effects of wounds</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ProteinTherapyAntigenesis</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<Item>ProteinTherapyAntigenesis</Item>
 		<StatAffecter>
 			<li>
@@ -232,6 +240,7 @@
 		<description>Special injectors that passively inject small doses of adrenaline into the blood. Increases movement speed, aiming and attack power.</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AdrenalineInjectors</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<Item>AdrenalineInjectors</Item>
 		<StatAffecter>
 			<li>
@@ -258,8 +267,10 @@
 		<defName>KineticBuffer</defName>
 		<label>Kinetic buffer</label>
 		<description>Metabolism accelerator controls the state of vital systems of the body and injects genetically modified stimulants to increase combat skills and athletic abilities.</description>
-		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_KineticBuffer</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
+		<DamageListener>true</DamageListener>
 		<Item>KineticBuffer</Item>
 		<StatAffecter>
 			<li>
@@ -291,8 +302,9 @@
 		<defName>SecurityInterface</defName>
 		<label>Security interface</label>
 		<description>Improved VI systems control enemy fire and redistribute energy to vulnerable points.</description>
-		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_FirstAidInterface</workerClass>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_SecurityInterface</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
 		<Item>SecurityInterface</Item>
 		<StatAffecter>
 			<li>
@@ -312,5 +324,131 @@
 		<Icon>ArmorModules/SecurityInterface</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
-		<!-- ======================= -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>CombatExoskeleton</defName>
+		<label>Combat exoskeleton</label>
+		<description>This experimental armor combines a mechanical amplifier and a firewall, increasing the physical strength of the fighter and providing protection from traditional weapons.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_CombatExoskeleton</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
+		<Item>CombatExoskeleton</Item>
+		<StatAffecter>
+			<li>
+				<key>ArmorRating_Sharp</key>
+				<value>0.05</value>
+			</li>
+			<li>
+				<key>ArmorRating_Blunt</key>
+				<value>0.05</value>
+			</li>
+			<li>
+				<key>ArmorRating_Heat</key>
+				<value>0.05</value>
+			</li>
+			<li>
+				<key>MeleeDPS</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>AimingDelayFactor</key>
+				<value>-0.06</value>
+			</li>
+			<li>
+				<key>CarryingCapacity</key>
+				<value>25</value>
+			</li>
+			<li>
+				<key>MiningSpeed</key>
+				<value>0.20</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/CombatExoskeleton</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>MedicalExoskeleton</defName>
+		<label>Medical exoskeleton</label>
+		<description>This experimental armor combines a mechanical amplifier and a firewall, increasing the physical strength of the fighter and providing protection from traditional weapons.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorWorkerModule_MedicalExoskeleton</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<Item>MedicalExoskeleton</Item>
+		<HealRate>10</HealRate>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/MedicalExoskeleton</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	<!-- ======================= -->
+		
+	<!-- Tier 1: ноги -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ShockAbsorbers</defName>
+		<label>Shock absorbers</label>
+		<description>The installation of micro gravimetric mechanisms in the armor provides more convenient movement.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ShockAbsorbers</workerClass>
+		<ModuleCategory>Legs</ModuleCategory>
+		<StatListener>true</StatListener>
+		<ExcludesModules> 
+			<li>MotorizedJoints</li>
+		</ExcludesModules>
+		<Item>ShockAbsorbers</Item>
+		<StatAffecter>
+			<li>
+				<key>MoveSpeed</key>
+				<value>0.1</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/ShockAbsorbers</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	<!-- ======================= -->
+	
+	<!-- Tier 2: ноги -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>MotorizedJoints</defName>
+		<label>Motorized joints</label>
+		<description>Special mechanisms that help joints. Allow you to move faster and more convenient.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_MotorizedJoints</workerClass>
+		<ModuleCategory>Legs</ModuleCategory>
+		<StatListener>true</StatListener>
+		<ExcludesModules> 
+			<li>ShockAbsorbers</li>
+		</ExcludesModules>
+		<Item>MotorizedJoints</Item>
+		<StatAffecter>
+			<li>
+				<key>MoveSpeed</key>
+				<value>0.25</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/MotorizedJoints</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	<!-- ======================= -->
+	
+	<!-- Tier 2: общие -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>AblationCoating</defName>
+		<label>Ablation coating</label>
+		<description>The ablation coating is separated upon impact, removing the impact energy produced by bullets and shells from the body. It can be used 10 times, after that the coating needs to be changed.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AblationCoating</workerClass>
+		<ModuleCategory>General</ModuleCategory>
+		<DamageListener>true</DamageListener>
+		<Item>AblationCoating</Item>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/AblationCoating</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ShieldModulator</defName>
+		<label>Shield Modulator</label>
+		<description>Modulator generating an energy field around the armor. The force field is enough to reflect small damage. It requires the energy that it takes from the suit reactor.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ShieldModulator</workerClass>
+		<ModuleCategory>General</ModuleCategory>
+		<DamageListener>true</DamageListener>
+		<WornExtraListener>true</WornExtraListener>
+		<Item>ShieldModulator</Item>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/ShieldModulator</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	<!-- ======================= -->
 </Defs>

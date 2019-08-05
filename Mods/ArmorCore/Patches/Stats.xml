@@ -149,5 +149,14 @@
 			</parts>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/StatDef[defName="MiningSpeed"]/scenarioRandomizable</xpath>
+		<value>
+			<parts>
+				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+			</parts>
+		</value>
+	</Operation>	
 
 </Patch>

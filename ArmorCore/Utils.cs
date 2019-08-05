@@ -1,4 +1,5 @@
 ﻿using RimArmorCore.Mk1;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,5 +39,49 @@ namespace RimArmorCore
 
             return result;
         }
+
+        public static void DoExplosionPlus(IntVec3 center, Predicate<IntVec3> validator, Map map, float radius, DamageDef damType, Thing instigator, int damAmount = -1, float armorPenetration = -1f, SoundDef explosionSound = null, ThingDef weapon = null, ThingDef projectile = null, Thing intendedTarget = null, ThingDef postExplosionSpawnThingDef = null, float postExplosionSpawnChance = 0f, int postExplosionSpawnThingCount = 1, bool applyDamageToExplosionCellsNeighbors = false, ThingDef preExplosionSpawnThingDef = null, float preExplosionSpawnChance = 0f, int preExplosionSpawnThingCount = 1, float chanceToStartFire = 0f, bool damageFalloff = false)
+        {
+            if (map == null)
+            {
+                Log.Warning("Tried to do explosion in a null map.");
+                return;
+            }
+            if (damAmount < 0)
+            {
+                damAmount = damType.defaultDamage;
+                armorPenetration = damType.defaultArmorPenetration;
+                if (damAmount < 0)
+                {
+                    Log.ErrorOnce("Attempted to trigger an explosion without defined damage", 91094882);
+                    damAmount = 1;
+                }
+            }
+            if (armorPenetration < 0f)
+            {
+                armorPenetration = (float)damAmount * 0.015f;
+            }
+            ExplosionPlus explosion = (ExplosionPlus)GenSpawn.Spawn(ThingDefOfLocal.ExplosionPlus, center, map);
+            explosion.radius = radius;
+            explosion.damType = damType;
+            explosion.instigator = instigator;
+            explosion.damAmount = damAmount;
+            explosion.armorPenetration = armorPenetration;
+            explosion.weapon = weapon;
+            explosion.projectile = projectile;
+            explosion.intendedTarget = intendedTarget;
+            explosion.preExplosionSpawnThingDef = preExplosionSpawnThingDef;
+            explosion.preExplosionSpawnChance = preExplosionSpawnChance;
+            explosion.preExplosionSpawnThingCount = preExplosionSpawnThingCount;
+            explosion.postExplosionSpawnThingDef = postExplosionSpawnThingDef;
+            explosion.postExplosionSpawnChance = postExplosionSpawnChance;
+            explosion.postExplosionSpawnThingCount = postExplosionSpawnThingCount;
+            explosion.applyDamageToExplosionCellsNeighbors = applyDamageToExplosionCellsNeighbors;
+            explosion.chanceToStartFire = chanceToStartFire;
+            explosion.damageFalloff = damageFalloff;
+            explosion.validator = validator;
+            explosion.StartExplosion(explosionSound);
+        }
+
     }
 }

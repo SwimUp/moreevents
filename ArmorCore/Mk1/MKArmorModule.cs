@@ -49,6 +49,11 @@ namespace RimArmorCore.Mk1
             }
         }
 
+        public virtual void DrawWornExtras()
+        {
+
+        }
+
         public virtual IEnumerable<Gizmo> GetGizmos()
         {
             yield break;

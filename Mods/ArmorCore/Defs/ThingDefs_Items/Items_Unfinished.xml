@@ -1494,4 +1494,370 @@ Opens the last level of modules for armor.</description>
 		<pathCost>15</pathCost>
 	</ThingDef>
 	
+	<ThingDef>
+		<defName>CombatExoskeleton</defName>
+		<label>Combat exoskeleton</label>
+		<description>Module for Armor\n\nThis experimental armor combines a mechanical amplifier and a firewall, increasing the physical strength of the fighter and providing protection from traditional weapons.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/CombatExoskeleton_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>MedicalExoskeleton</defName>
+		<label>Medical exoskeleton</label>
+		<description>Module for Armor\n\nThis experimental armor combines a mechanical amplifier and a firewall, increasing the physical strength of the fighter and providing protection from traditional weapons.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/MedicalExoskeleton_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>ShockAbsorbers</defName>
+		<label>Shock absorbers</label>
+		<description>Module for Armor\n\nThe installation of micro gravimetric mechanisms in the armor provides more convenient movement.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/ShockAbsorbers_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>MotorizedJoints</defName>
+		<label>Motorized joints</label>
+		<description>Module for Armor\n\nSpecial mechanisms that help joints. Allow you to move faster and more convenient.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/MotorizedJoints_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>AblationCoating</defName>
+		<label>Ablation coating</label>
+		<description>Module for Armor\n\nThe ablation coating is separated upon impact, removing the impact energy produced by bullets and shells from the body. It can be used 10 times, after that the coating needs to be changed.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/AblationCoating</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>ShieldModulator</defName>
+		<label>Shield Modulator</label>
+		<description>Module for Armor\n\nModulator generating an energy field around the armor. The force field is enough to reflect small damage. It requires the energy that it takes from the suit reactor.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/ShieldModulator_Thing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>10</Uranium>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
 </Defs>

@@ -65,7 +65,7 @@
 mobility. The chest cables are covered under the chest plate and as a result are much better protected, thanks to more efficient cooling systems.
 \n\nThe helmet is equipped with automatic touch devices that allow the wearer to hear as well as without a helmet, and in addition, due to the fact that all incoming information first passes through the computer, the helmet enhances vision and hearing, while making deafening sounds quieter and darkening eyesight . The carrier also gets the opportunity to see in infrared and ultraviolet radiation, can approximate the view and emit sounds from noise, if necessary.</description>
 		<techLevel>Spacer</techLevel>
-		<tickerType>Rare</tickerType>
+		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Apparels/Mk1/Mk1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

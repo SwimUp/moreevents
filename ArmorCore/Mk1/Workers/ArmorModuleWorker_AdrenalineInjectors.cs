@@ -36,6 +36,7 @@ namespace RimArmorCore.Mk1.Workers
                 {
                     defaultLabel = "ArmorModuleWorker_AdrenalineInjectors_Action".Translate(),
                     icon = def.Item.uiIcon,
+                    defaultDesc = "ArmorModuleWorker_AdrenalineInjectors_Action_Desc".Translate(),
                     action = delegate
                     {
                         float value = Find.TickManager.TicksGame - lastFireTick;

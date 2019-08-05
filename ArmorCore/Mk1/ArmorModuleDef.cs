@@ -30,6 +30,10 @@ namespace RimArmorCore.Mk1
 
         public bool DamageListener = false;
 
+        public bool StatListener = false;
+
+        public bool WornExtraListener = false;
+
         public ArmorModuleCategory ModuleCategory;
 
         public int StationLevelRequired = 1;

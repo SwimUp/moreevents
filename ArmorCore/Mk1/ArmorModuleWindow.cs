@@ -118,7 +118,7 @@ namespace RimArmorCore.Mk1
 
         private void DrawModuleTab(Rect inRect, ArmorModuleCategory selectCategory)
         {
-            Rect scrollVertRectFact = new Rect(0, 0, inRect.x, DefDatabase<MKStationModuleDef>.DefCount * 35);
+            Rect scrollVertRectFact = new Rect(0, 0, inRect.x, DefDatabase<ArmorModuleDef>.AllDefsListForReading.Where(x => x.ModuleCategory == selectCategory).Count() * 35);
 
             GUI.color = MenuSectionBGBorderColor;
             Widgets.DrawLineVertical(245, inRect.y, 465);
@@ -127,8 +127,8 @@ namespace RimArmorCore.Mk1
 
             Text.Anchor = TextAnchor.MiddleCenter;
             Rect rect2 = new Rect(inRect.x + 10, 0, 230, 30);
-            Rect sliderRect = new Rect(inRect.x, inRect.y + 10, inRect.width, inRect.height);
-            Widgets.BeginScrollView(sliderRect, ref slider, scrollVertRectFact, true);
+            Rect sliderRect = new Rect(inRect.x, inRect.y + 10, inRect.width, 410);
+            Widgets.BeginScrollView(sliderRect, ref slider, scrollVertRectFact, false);
             foreach (var module in DefDatabase<ArmorModuleDef>.AllDefsListForReading.Where(x => x.ModuleCategory == selectCategory))
             {
                 Color bColor = canUse.ContainsKey(module) ? Color.gray : Color.white;
@@ -195,12 +195,33 @@ namespace RimArmorCore.Mk1
 
             if (item != null)
             {
+                CheckModules(def);
+
                 mkStationWindow.Close();
                 Close();
 
                 Job job = new Job(RimArmorCore.JobDefOfLocal.SetupModuleForArmor, mkStationWindow.mkStation, item, mkStationWindow.mkStation.ContainedArmor);
                 job.count = 1;
                 mkStationWindow.SelPawn.jobs.TryTakeOrderedJob(job);
+            }
+        }
+
+        private void CheckModules(ArmorModuleDef def)
+        {
+            foreach (var armorSlot in mkStationWindow.mkStation.ContainedArmor.Slots)
+            {
+                foreach (var slot in armorSlot.Modules)
+                {
+                    if (def.ExcludesModules != null && slot.Module != null && def.ExcludesModules.Contains(slot.Module.def))
+                    {
+                        mkStationWindow.mkStation.ContainedArmor.RemoveModule(slot.Module.def, mkStationWindow.mkStation.Position, mkStationWindow.mkStation.Map, true);
+                    }
+
+                    if(slot.Module != null && slot.Module.def == def)
+                    {
+                        mkStationWindow.mkStation.ContainedArmor.RemoveModule(slot.Module.def, mkStationWindow.mkStation.Position, mkStationWindow.mkStation.Map, true);
+                    }
+                }
             }
         }
 

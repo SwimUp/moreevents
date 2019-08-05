@@ -11,7 +11,7 @@ namespace RimArmorCore.Mk1.Workers
     {
         public override string StatDescription()
         {
-            string result = string.Format("ArmorModuleWorker_Plato".Translate(), def.StatAffecter.ElementAt(0));
+            string result = string.Format("ArmorModuleWorker_Plato".Translate(), def.StatAffecter.ToArrayValues());
 
             return result;
         }

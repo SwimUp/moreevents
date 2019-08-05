@@ -18,6 +18,9 @@ namespace RimArmorCore.Mk1.Workers
 
         public override void CheckPreAbsorbDamage(DamageInfo dInfo, ref bool absorb)
         {
+            if (!Armor.Active)
+                return;
+
             if(dInfo.Def == DamageDefOf.Stun)
             {
                 absorb = true;

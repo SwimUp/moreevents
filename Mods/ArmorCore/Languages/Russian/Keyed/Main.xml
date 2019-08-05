@@ -42,7 +42,7 @@
 	<ArmorModuleCategory_Legs>Ноги</ArmorModuleCategory_Legs>
 	
 	<Station_LevelReq>(требуется уровень станции: {0}, у вас {1})</Station_LevelReq>
-	
+
 	<Station_FullInfo>Чтобы установить модуль нажмите по пустому слоту.\nЧтобы убрать модуль, нажмите на него.\n\nПараметры брони:\n{0}</Station_FullInfo>
 	
 	<ArmorModuleWorker_GuidanceSystem>- дополнительный шанс попасть: {0}</ArmorModuleWorker_GuidanceSystem>
@@ -58,7 +58,31 @@
 	<ArmorModuleWorker_ProteinTherapyAntigenesis>- снижение порога шока: {0}\n- увеличение скорости: {1}\n- переносимый вес: +{2}</ArmorModuleWorker_ProteinTherapyAntigenesis>
 	<ArmorModuleWorker_AdrenalineInjectors>- урон: +{0}\n- скорость прицеливания: {1}\n- увеличение скорости: {2}\nАктивируемая способность: передозировка</ArmorModuleWorker_AdrenalineInjectors>
  	<ArmorModuleWorker_AdrenalineInjectors_Action>Передозировка</ArmorModuleWorker_AdrenalineInjectors_Action>
+	<ArmorModuleWorker_AdrenalineInjectors_Action_Desc>Впрыскивает увеличенное количество адреналина, увеличивая все параметры носителя. Осторожно! при больших дозировках может убить, а при чрезмерном употреблении вызвать проблемы с сердцем</ArmorModuleWorker_AdrenalineInjectors_Action_Desc>
 	<ArmorModuleWorker_AdrenalineInjectors_Action_CoolDown>Адреналиновые инъекторы еще не готовы.</ArmorModuleWorker_AdrenalineInjectors_Action_CoolDown>
+	<ArmorModuleWorker_KineticBuffer>- увеличение урона: {0}\n- скорость прицеливания: {1}\n- шанс попадения (ближн.): {2}\n- увеличение точности (дальн.): {3}\n- увеличение скорости: {4}</ArmorModuleWorker_KineticBuffer>
+	<ArmorModuleWorker_KineticBuffer_Action>Высвободить буффер ({0} / 100)</ArmorModuleWorker_KineticBuffer_Action>
+	<ArmorModuleWorker_KineticBuffer_Action_Desc>Высвобождает энергию кинетического буффера, выпуская волну энергии</ArmorModuleWorker_KineticBuffer_Action_Desc>
+	<ArmorModuleWorker_KineticBuffer_NotEnoughBuffer>Недостаточно энергии.</ArmorModuleWorker_KineticBuffer_NotEnoughBuffer>
 	<ArmorModuleWorker_SecurityInterface>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}</ArmorModuleWorker_SecurityInterface>
+	<ArmorModuleWorker_CombatExoskeleton>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}\n- увеличение урона: {3}\n- скорость прицеливания: {4}\n- переносимый вес: +{5}\n- скорость добычи руды/камня: +{6}\nПерегрузка мощности - увеличение скорости на 15% и скорости работы на 60%</ArmorModuleWorker_CombatExoskeleton>
+	<ArmorModuleWorker_CombatExoskeleton_Action_Already>Перегрузка мощности уже активна</ArmorModuleWorker_CombatExoskeleton_Action_Already>
+	<ArmorModuleWorker_CombatExoskeleton_Action_Energy>Недостаточно энергии в костюме. Требуется {0}.</ArmorModuleWorker_CombatExoskeleton_Action_Energy>
+	<ArmorModuleWorker_CombatExoskeleton_Action_Cooldown>Перезарядка</ArmorModuleWorker_CombatExoskeleton_Action_Cooldown>
+	<ArmorModuleWorker_CombatExoskeleton_Action>Перегрузка мощности</ArmorModuleWorker_CombatExoskeleton_Action>
+	<ArmorModuleWorker_CombatExoskeleton_Action_Desc>Перегружает экзоскелет, повышая силовые способности носителя. Требуется {0} энергии.</ArmorModuleWorker_CombatExoskeleton_Action_Desc>
+	<ArmorWorkerModule_MedicalExoskeleton>- скорость лечения: {0}\nПередозировка - сверхлечение</ArmorWorkerModule_MedicalExoskeleton>
+	<ArmorWorkerModule_MedicalExoskeleton_Action>Передозировка</ArmorWorkerModule_MedicalExoskeleton_Action>
+	<ArmorWorkerModule_MedicalExoskeleton_Action_Desc>Выпускает большое количество специального препарата, который мгновенно залечивает все раны.</ArmorWorkerModule_MedicalExoskeleton_Action_Desc>
+	<ArmorWorkerModule_MedicalExoskeleton_Action_Cooldown>Препарат еще не готов.</ArmorWorkerModule_MedicalExoskeleton_Action_Cooldown>
+	<ArmorWorkerModule_MedicalExoskeleton_Action_Already>Препарат уже введен.</ArmorWorkerModule_MedicalExoskeleton_Action_Already>
+	<ArmorModuleWorker_ShockAbsorbers>- увеличение скорости передвижения: {0}</ArmorModuleWorker_ShockAbsorbers>
+	<ArmorModuleWorker_MotorizedJoints>- увеличение скорости передвижения: {0}</ArmorModuleWorker_MotorizedJoints>
+	<ArmorModuleWorker_AblationCoating>Блокируют урон, пока есть заряды у абляционого покрытия</ArmorModuleWorker_AblationCoating>
+	<ArmorModuleWorker_AblationCoating_Action>{0} / 10</ArmorModuleWorker_AblationCoating_Action>
+	<ArmorModuleWorker_AblationCoating_Action_Desc>Показывает сколько осталось зарядов у покрытия. Пока есть заряды, урон будет полностью отражен. Каждое попадение уничтожает 1 заряд.</ArmorModuleWorker_AblationCoating_Action_Desc>
+	<ArmorModuleWorker_ShieldModulator>Отражает весь урон меньше или равный 15. Требует зарядки, зарядка происходит от основого реактора.</ArmorModuleWorker_ShieldModulator>
+	<ArmorModuleWorker_ShieldModulator_Action>{0} / {1}</ArmorModuleWorker_ShieldModulator_Action>
+	<ArmorModuleWorker_ShieldModulator_Action_Desc>Показывает уровень заряда щита. Щит заряжается со скорость {0}. Энергия берется из главного реактора. Работает, даже если главный реактор отключен.</ArmorModuleWorker_ShieldModulator_Action_Desc>
 	
 </LanguageData>

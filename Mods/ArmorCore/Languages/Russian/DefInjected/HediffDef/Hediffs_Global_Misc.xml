@@ -3,5 +3,11 @@
   
   <AdrenalinePush.label>Передозировка адреналина</AdrenalinePush.label>
   <AdrenalinePush.stages.easy.label></AdrenalinePush.stages.easy.label>
-
+  
+  <CombatExoskeletonOverDrive.label>Боевой экзоскелет - перегрузка мощности</CombatExoskeletonOverDrive.label>
+  <CombatExoskeletonOverDrive.stages.easy.label></CombatExoskeletonOverDrive.stages.easy.label>
+  
+  <MedicalExoskeletonOverdose.label>Медицинский экзоскелет - передозировка</MedicalExoskeletonOverdose.label>
+  <MedicalExoskeletonOverdose.stages.easy.label></MedicalExoskeletonOverdose.stages.easy.label>
+  
 </LanguageData>
