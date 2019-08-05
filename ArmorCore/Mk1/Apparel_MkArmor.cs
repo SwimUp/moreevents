@@ -338,6 +338,8 @@ namespace MoreEvents.Things.Mk1
             Scribe_Collections.Look(ref slots, "Slots", LookMode.Deep);
 
             Notify_ModulesChanges();
+
+            ModulesInit();
         }
 
         public override bool CheckPreAbsorbDamage(DamageInfo dinfo)

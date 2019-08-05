@@ -91,6 +91,7 @@
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AntitoxicSeals.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_BasicFiltrationSystem.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_CombatExoskeleton.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_EnergyBoots.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_FirstAidInterface.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_KineticBuffer.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_MotorizedJoints.cs" />

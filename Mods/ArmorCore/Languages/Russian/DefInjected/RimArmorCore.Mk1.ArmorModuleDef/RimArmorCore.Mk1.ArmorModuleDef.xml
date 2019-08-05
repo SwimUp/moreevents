@@ -61,4 +61,7 @@
   <ShieldModulator.label>Модулятор щита</ShieldModulator.label>
   <ShieldModulator.description>Модулятор, генерирующий энергетическое поле вокруг брони. Силового поля достаточно, чтобы отразить небольшой урон. Требует энергию, которую он берет из реактора костюма.</ShieldModulator.description>
   
+  <EnergyBoots.label>Энергетические ботинки</EnergyBoots.label>
+  <EnergyBoots.description>Обувь, ускоряющая своего владельца за счет сильного сцепления с поверхностью и выпуска небольшого количества энергии. Увеличивает потребление энергии.</EnergyBoots.description>
+  
 </LanguageData>

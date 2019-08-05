@@ -425,6 +425,27 @@
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	<!-- ======================= -->
 	
+	<!-- Tier 3: ноги -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>EnergyBoots</defName>
+		<label>Energy boots</label>
+		<description>Shoes accelerating its owner due to strong adhesion to the surface and the release of a small amount of energy. Increases energy consumption.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_MotorizedJoints</workerClass>
+		<ModuleCategory>Legs</ModuleCategory>
+		<StatListener>true</StatListener>
+		<Item>EnergyBoots</Item>
+		<StatAffecter>
+			<li>
+				<key>MoveSpeed</key>
+				<value>0.34</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/EnergyBoots</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	<!-- ======================= -->
+	 
+	
 	<!-- Tier 2: общие -->
 	<RimArmorCore.Mk1.ArmorModuleDef>
 		<defName>AblationCoating</defName>

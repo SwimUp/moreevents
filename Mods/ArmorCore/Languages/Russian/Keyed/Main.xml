@@ -84,5 +84,6 @@
 	<ArmorModuleWorker_ShieldModulator>Отражает весь урон меньше или равный 15. Требует зарядки, зарядка происходит от основого реактора.</ArmorModuleWorker_ShieldModulator>
 	<ArmorModuleWorker_ShieldModulator_Action>{0} / {1}</ArmorModuleWorker_ShieldModulator_Action>
 	<ArmorModuleWorker_ShieldModulator_Action_Desc>Показывает уровень заряда щита. Щит заряжается со скорость {0}. Энергия берется из главного реактора. Работает, даже если главный реактор отключен.</ArmorModuleWorker_ShieldModulator_Action_Desc>
+	<ArmorModuleWorker_EnergyBoots>- увеличение скорости передвижения: {0}\n- увеличение потребление энергии: +0.10</ArmorModuleWorker_EnergyBoots>
 	
 </LanguageData>
