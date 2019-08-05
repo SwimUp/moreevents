@@ -427,7 +427,7 @@ namespace RimArmorCore.Mk1
             maxRef = Mathf.Clamp(maxRef, 1, maxRef);
             float offset = mainRect.height * (fill / maxRef);
             float maxHeight = Mathf.Clamp(mainRect.height - offset, 0, mainRect.height);
-            GUI.DrawTexture(new Rect(mainRect.x, mainRect.y + (offset + maxHeight), mainRect.width, maxHeight), emptyTexture);
+            GUI.DrawTexture(new Rect(mainRect.x, mainRect.y + offset, mainRect.width, maxHeight), emptyTexture);
         }
 
         private void DrawModulesSlots(Rect rect)
