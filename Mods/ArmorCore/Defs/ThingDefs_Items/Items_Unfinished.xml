@@ -1645,8 +1645,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>6600</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<WorkToMake>5000</WorkToMake>
+			<MarketValue>1800</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1666,15 +1666,15 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>13</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
 			<Plasteel>50</Plasteel>
 			<Steel>200</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
-			<Uranium>60</Uranium>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Uranium>30</Uranium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
