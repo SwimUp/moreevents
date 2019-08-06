@@ -2,6 +2,72 @@
 <Defs>
 
 	<ThingDef>
+		<defName>ArmorBattareis</defName>
+		<label>Battery pack</label>
+		<description>The easiest source of energy.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/ArmorBattareis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>BasicEnergyStorage</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>500</Steel>
+			<ComponentIndustrial>25</ComponentIndustrial>
+		</costList>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorCoreSpecial</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>4000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>50</PowerCapacity>
+				<StationLabel>ColdFusionCore</StationLabel>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef>
 		<defName>MiniColdFusionReactor</defName>
 		<label>minified cold fusion reactor</label>
 		<description>Reduced cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</description>
@@ -1380,7 +1446,7 @@ Opens the last level of modules for armor.</description>
 	
 	<ThingDef>
 		<defName>KineticBuffer</defName>
-		<label>Adrenaline injectors</label>
+		<label>Kinetic buffer</label>
 		<description>Module for Armor\n\nMetabolism accelerator controls the state of vital systems of the body and injects genetically modified stimulants to increase combat skills and athletic abilities.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>

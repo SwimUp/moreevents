@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
  
+  <ArmorBattareis.label>Блок аккумуляторов</ArmorBattareis.label>
+  <ArmorBattareis.description>Самый простой источник энергии.</ArmorBattareis.description>
+
   <CondenserBatteries.label>Конденсаторные батареи</CondenserBatteries.label>
   <CondenserBatteries.description>Модуль для станции МК\n\nБлок батарей, которые медленно накапливают энергию. Используется как вторичный источник питания станции. Подзаряжает броню когда станция не подключена к основному источнику питания (при наличии заряда). Заряжается, когда питание у станции активно.\n\nСамые медленные и малоемкостные батареи.</CondenserBatteries.description>
 

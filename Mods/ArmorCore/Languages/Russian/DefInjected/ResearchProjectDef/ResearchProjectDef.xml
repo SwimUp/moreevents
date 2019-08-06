@@ -9,27 +9,27 @@
 Открывает возможность построить псамый простой источник энергии - блок аккумуляторов.</BasicEnergyStorage.description>
 
   <AdvancedEnergySources.label>Продвинутые источники энергии</AdvancedEnergySources.label>
-  <AdvancedEnergySources.description>С помощью уникальных находок мы можем сделать источники энергии в несколько раз превосходящими наши.
+  <AdvancedEnergySources.description>С помощью уникальных находок мы можем создать источники энергии, превосходящие наши в несколько раз.
 Открывает возможность строить уменьшенные версии реактора холодного синтеза и дугового.</AdvancedEnergySources.description>
 
   <BasicArmorImprovement.label>Базовое улучшение брони</BasicArmorImprovement.label>
-  <BasicArmorImprovement.description>Мы можем улучшить броню, добавив её модули, которые могут улучшить её параметры.
+  <BasicArmorImprovement.description>Мы можем улучшить броню, добавив новые модули, которые смогут улучшить её параметры.
 Дает создать инструменты для улучшения брони.</BasicArmorImprovement.description>
 
   <RoboticStation.label>Роботизированная станция</RoboticStation.label>
-  <RoboticStation.description>Роботы помошники обеспечат дополнительную точность рабоыт с броней, что позволит устанавливать более лучшие модули.
+  <RoboticStation.description>Роботы помошники обеспечат дополнительную точность работы с броней, что позволит устанавливать более совершенные модули.
 Позволяет создать роботизированные манипуляторы для установки модулей 2 уровня.</RoboticStation.description>
 
   <Nanorobots.label>Нанороботы</Nanorobots.label>
-  <Nanorobots.description>Теперь мы сможем использовать нанороботов при улучшении брони. Это позволит изменять недоступные ранее места брони.
+  <Nanorobots.description>Теперь мы сможем использовать нанороботов при улучшении брони. Это позволит изменять параметры брони, недоступные нам ранее.
 Позволяет создавать нанороботов для установки улучшений 3 уровня.</Nanorobots.description>
 
   <AdvancedEnergyManagementTechniques.label>Улучшенные методы управления энергией</AdvancedEnergyManagementTechniques.label>
-  <AdvancedEnergyManagementTechniques.description>Мы можем оптимизировать расходы энергии перенаправив сохранившуюся энергию в другиме места.
+  <AdvancedEnergyManagementTechniques.description>Мы можем оптимизировать расходы энергии, перенаправив сохранившуюся энергию в другиме места.
 Позволяет создать конденсаторные батареи и трансформаторы.</AdvancedEnergyManagementTechniques.description>
 
   <EnergyOptimization.label>Оптимизация расходов энергии</EnergyOptimization.label>
-  <EnergyOptimization.description>Используя продвинутые материалы мы можем создать оптимальные батареи для хранения большего количества энергии и оптимизировать расходы энергии для более быстрой зарядки брони.
+  <EnergyOptimization.description>Используя продвинутые материалы, мы можем создать оптимальные батареи для хранения большего количества энергии и сократить расходы энергии для ускорения зарядки брони.
 Позволяет создавать наножелток и энергетическую ячейку.</EnergyOptimization.description>
 
   <EnergyAccelerator.label>Энергетический ускоритель</EnergyAccelerator.label>
@@ -49,8 +49,8 @@
 Позволяет создать систему наведения.</SimpleGuidanceSystem.description>
 
   <Stimulants.label>Стимуляторы</Stimulants.label>
-  <Stimulants.description>Стимулчторы позволят вводить носителю адреналин, благодаря чему его боевые навыки будут лучше.
-Позволяет создавать стимулчторы.</Stimulants.description>
+  <Stimulants.description>Стимуляторы позволят вводить адреналин в тело носителя, благодаря что временно увеличит его боевые навыки.
+Позволяет создавать стимуляторы.</Stimulants.description>
 
   <LightProtection.label>Легкая защита</LightProtection.label>
   <LightProtection.description>Создание материала, который можно расположить под броней для улучшения защиты.
@@ -61,11 +61,11 @@
 Позволяет создавать усиленные пластины.</HeavyProtection.description>
 
   <ImprovedMobility.label>Повышение удобности передвижения</ImprovedMobility.label>
-  <ImprovedMobility.description>Создание и установка амортизаторов в нижнюю часть брони позволит носителю более удобно передвигаться.
+  <ImprovedMobility.description>Создание и установка амортизаторов в нижнюю часть брони позволит носителю передвигаться с удобством.
 Позволяет создавать амортизаторы.</ImprovedMobility.description>
 
   <SimpleMedicalSystems.label>Простые медицинские системы</SimpleMedicalSystems.label>
-  <SimpleMedicalSystems.description>Создание базовой медицинской системы позволит мониторить жищненные показатели носителя и принимать действия по оказанию медицинской помощи.
+  <SimpleMedicalSystems.description>Создание базовой медицинской системы позволит мониторить жизненные показатели носителя и принимать действия по оказанию медицинской помощи.
 Позволяет создать интерфейс первой помощи.</SimpleMedicalSystems.description>
 
   <ProteinTherapyAntigenesis.label>Протеиновая терапия антиогенеза</ProteinTherapyAntigenesis.label>
@@ -73,26 +73,26 @@
 Позволяет создавать протеиновую терапию антиогенеза.</ProteinTherapyAntigenesis.description>
 
   <AdrenalineInjectors.label>Адреналиновые инъекторы</AdrenalineInjectors.label>
-  <AdrenalineInjectors.description>Создание адреналиновых инъекторов позволит значительно усилить носителя, а благодаря специальной системе впрыска можно устроить передозировку, чтобы получить сверхбойца.
+  <AdrenalineInjectors.description>Создание адреналиновых инъекторов позволит значительно усилить носителя, а благодаря специальной системе ввода веществ, можно устроить передозировку, получив сверхбойца.
 Позволяет создавать адреналиновые инъекторы.</AdrenalineInjectors.description>
 
   <ActiveArmor.label>Активная броня</ActiveArmor.label>
-  <ActiveArmor.description>Создание брони, адаптарующиюся под каждый выстрел позволит значительно усилить броню.
+  <ActiveArmor.description>Создание брони, которая адаптируется под каждый выстрел, позволит значительно усилить броню.
 Позволяет создавать активные пластины.</ActiveArmor.description>
 
   <CircularEcholocation.label>Круговая эхолокация</CircularEcholocation.label>
-  <CircularEcholocation.description>Специальный эколокатор позволит контролировать пространство вокруг носителя, из-за чего повысится маневренность бойца.
+  <CircularEcholocation.description>Специальный эхолокатор позволит контролировать пространство вокруг носителя, что значительно повысит маневренность бойца.
 Позволяет создавать эхосистему 'платон'.</CircularEcholocation.description>
 
   <AdvancedFiltrationSystems.label>Передовые системы фильтрации</AdvancedFiltrationSystems.label>
-  <AdvancedFiltrationSystems.description>Создание филтров нового поколения позволит защитить носителя брони от всех возможных проблем, связанных с воздухом.</AdvancedFiltrationSystems.description>
+  <AdvancedFiltrationSystems.description>Создание фильтров нового поколения позволит защитить носителя брони от всех возможных проблем, связанных с воздухом.</AdvancedFiltrationSystems.description>
 
   <JointImprovement.label>Улучшение суставов</JointImprovement.label>
   <JointImprovement.description>Создание моторизированных суставов может значительно облегчить движение в костюме и поднять скорость.
 Позволяет создавать моторизированные суставы.</JointImprovement.description>
 
   <UpperLayerArmor.label>Верхнеслойная броня</UpperLayerArmor.label>
-  <UpperLayerArmor.description>Создание отделяющийся при ударе брони позволит защитить носителя брони на ограниченное количество попаданий.
+  <UpperLayerArmor.description>Создание отделяющихся при ударе пластин брони, позволит защитить носителя на ограниченное количество попаданий.
 Позволяет создать Абляционое покрытие.</UpperLayerArmor.description>
 
   <EnergyShieldSystem.label>Система энергетического щита</EnergyShieldSystem.label>
@@ -100,7 +100,7 @@
 Позволяет создать модулятор щита.</EnergyShieldSystem.description>
 
   <KineticBuffer.label>Кинетический буфер</KineticBuffer.label>
-  <KineticBuffer.description>Буфер позволит аккумулировать кинетическую энергию от физических ударов и попаданий и выпускать её обратно в большом количествве по сигналу от носителя брони.
+  <KineticBuffer.description>Буфер позволит аккумулировать кинетическую энергию от физических ударов и попаданий и выпускать её обратно в большом количестве по сигналу от носителя брони.
 Позволяет создавать кинетический буфер.</KineticBuffer.description>
 
   <AdvancedSecuritySystems.label>Передовые системы защиты</AdvancedSecuritySystems.label>
@@ -108,7 +108,7 @@
 Позволяет создавать защитный интерфейс.</AdvancedSecuritySystems.description>
 
   <CombatExoskeleton.label>Боевой экзоскелет</CombatExoskeleton.label>
-  <CombatExoskeleton.description>Боевой экзоскелет включает в себя большую систему, для повышения физических способностей носителя брони.
+  <CombatExoskeleton.description>Боевой экзоскелет включает в себя большую систему для повышения физических способностей носителя брони.
 Позволяет создавать боевой экзоскелет.</CombatExoskeleton.description>
 
   <MedicalExoskeleton.label>Медицинский экзоскелет</MedicalExoskeleton.label>

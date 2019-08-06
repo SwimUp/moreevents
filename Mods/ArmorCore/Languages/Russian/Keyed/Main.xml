@@ -50,19 +50,19 @@
 	<ArmorModuleWorker_Plato>- дополнительный шанс уворота: {0}</ArmorModuleWorker_Plato>
 	<ArmorModuleWorker_AdvancedFiltrationSystem>Защита от всех воздушных эффектов, кроме радиации</ArmorModuleWorker_AdvancedFiltrationSystem>
 	<ArmorModuleWorker_Stimulants>- снижение порога шока: {0}\n- ускорение передвижения: {1}</ArmorModuleWorker_Stimulants>
-	<ArmorModuleWorker_ReinforcedArmorCloth>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n\n- увеличение брони (темп.): {2}\n- иммунитет к стан гранатам</ArmorModuleWorker_ReinforcedArmorCloth>
+	<ArmorModuleWorker_ReinforcedArmorCloth>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}\n- иммунитет к стан гранатам</ArmorModuleWorker_ReinforcedArmorCloth>
 	<ArmorModuleWorker_ReinforcedPlates>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}\n- уменьшение скорости: {3} м/с</ArmorModuleWorker_ReinforcedPlates>
 	<ArmorModuleWorker_AntitoxicSeals>Защита от радиации\n- Макс.температура: +30\n- Мин.температура: +30</ArmorModuleWorker_AntitoxicSeals>
 	<ArmorModuleWorker_FirstAidInterface>- ускорение заживления ран: {0}</ArmorModuleWorker_FirstAidInterface>
 	<ArmorModuleWorker_ActivePlates>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}</ArmorModuleWorker_ActivePlates>
 	<ArmorModuleWorker_ProteinTherapyAntigenesis>- снижение порога шока: {0}\n- увеличение скорости: {1}\n- переносимый вес: +{2}</ArmorModuleWorker_ProteinTherapyAntigenesis>
-	<ArmorModuleWorker_AdrenalineInjectors>- урон: +{0}\n- скорость прицеливания: {1}\n- увеличение скорости: {2}\nАктивируемая способность: передозировка</ArmorModuleWorker_AdrenalineInjectors>
+	<ArmorModuleWorker_AdrenalineInjectors>- ближний урон: +{0}\n- скорость прицеливания: {1}\n- увеличение скорости: {2}\nАктивируемая способность: передозировка</ArmorModuleWorker_AdrenalineInjectors>
  	<ArmorModuleWorker_AdrenalineInjectors_Action>Передозировка</ArmorModuleWorker_AdrenalineInjectors_Action>
 	<ArmorModuleWorker_AdrenalineInjectors_Action_Desc>Впрыскивает увеличенное количество адреналина, увеличивая все параметры носителя. Осторожно! при больших дозировках может убить, а при чрезмерном употреблении вызвать проблемы с сердцем</ArmorModuleWorker_AdrenalineInjectors_Action_Desc>
 	<ArmorModuleWorker_AdrenalineInjectors_Action_CoolDown>Адреналиновые инъекторы еще не готовы.</ArmorModuleWorker_AdrenalineInjectors_Action_CoolDown>
-	<ArmorModuleWorker_KineticBuffer>- увеличение урона: {0}\n- скорость прицеливания: {1}\n- шанс попадения (ближн.): {2}\n- увеличение точности (дальн.): {3}\n- увеличение скорости: {4}</ArmorModuleWorker_KineticBuffer>
-	<ArmorModuleWorker_KineticBuffer_Action>Высвободить буффер ({0} / 100)</ArmorModuleWorker_KineticBuffer_Action>
-	<ArmorModuleWorker_KineticBuffer_Action_Desc>Высвобождает энергию кинетического буффера, выпуская волну энергии</ArmorModuleWorker_KineticBuffer_Action_Desc>
+	<ArmorModuleWorker_KineticBuffer>- ближний урон: +{0}\n- скорость прицеливания: {1}\n- шанс попадения (ближн.): {2}\n- увеличение точности (дальн.): {3}\n- увеличение скорости: {4}</ArmorModuleWorker_KineticBuffer>
+	<ArmorModuleWorker_KineticBuffer_Action>Высвободить буфер ({0} / 100)</ArmorModuleWorker_KineticBuffer_Action>
+	<ArmorModuleWorker_KineticBuffer_Action_Desc>Высвобождает энергию кинетического буфера, выпуская волну энергии</ArmorModuleWorker_KineticBuffer_Action_Desc>
 	<ArmorModuleWorker_KineticBuffer_NotEnoughBuffer>Недостаточно энергии.</ArmorModuleWorker_KineticBuffer_NotEnoughBuffer>
 	<ArmorModuleWorker_SecurityInterface>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}</ArmorModuleWorker_SecurityInterface>
 	<ArmorModuleWorker_CombatExoskeleton>- увеличение брони (проник.): {0}\n- увеличение брони (туп.): {1}\n- увеличение брони (темп.): {2}\n- увеличение урона: {3}\n- скорость прицеливания: {4}\n- переносимый вес: +{5}\n- скорость добычи руды/камня: +{6}\nПерегрузка мощности - увеличение скорости на 15% и скорости работы на 60%</ArmorModuleWorker_CombatExoskeleton>

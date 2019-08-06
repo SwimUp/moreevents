@@ -63,6 +63,11 @@ namespace RimArmorCore.Mk1.Workers
                 matrix.SetTRS(vector, Quaternion.AngleAxis(angle, Vector3.up), s);
                 Graphics.DrawMesh(MeshPool.plane10, matrix, BubbleMat, 0);
             }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
 
             if (charge < maxCharge)
             {

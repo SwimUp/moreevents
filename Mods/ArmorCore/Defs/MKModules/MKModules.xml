@@ -88,8 +88,7 @@ Opens the last level of modules for armor.</description>
 	<RimArmorCore.Mk1.MKStationModuleDef>
 		<defName>EnergyCell</defName>
 		<label>Energy cell</label>
-		<description>Energy cell accumulating a small amount of energy and radiating with increased power. Provides increased armor charging speed.
-</description>
+		<description>Energy cell accumulating a small amount of energy and radiating with increased power. Provides increased armor charging speed.</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_Transformers</workerClass>
 		<ModuleCategory>Charging</ModuleCategory>
 		<AdditionalChargeSpeed>0.044</AdditionalChargeSpeed>
@@ -101,8 +100,7 @@ Opens the last level of modules for armor.</description>
 	<RimArmorCore.Mk1.MKStationModuleDef>
 		<defName>PowerAccelerator</defName>
 		<label>Power accelerator</label>
-		<description>Accelerator and enricher charged particles. Increases the speed of charging armor, and thanks to a special design allows you to activate power overload to use the maximum power (attention: explosive!)
-</description>
+		<description>Accelerator and enricher charged particles. Increases the speed of charging armor, and thanks to a special design allows you to activate power overload to use the maximum power (attention: explosive!)</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ModuleWorker_Transformers</workerClass>
 		<ModuleCategory>Charging</ModuleCategory>
 		<AdditionalChargeSpeed>0.1</AdditionalChargeSpeed>

@@ -44,60 +44,75 @@ namespace QuestRim
 
         public static bool TryGiveRandomQuestTo(Pawn pawn, int giveCount)
         {
-            Dictionary<IncidentDef, int> lastFireTicks = Find.World.StoryState.lastFireTicks;
-            int ticksGame = Find.TickManager.TicksGame;
-
-            List<QuestDef> allQuests = DefDatabase<QuestDef>.AllDefsListForReading;
-
-            if (allQuests.Count < giveCount)
-                return false;
-
-            List<QuestDef> allQuestsToFire = new List<QuestDef>();
-
-            QuestPawn questPawn = null;
-            pawn.GetQuestPawn(out questPawn);
-
-            foreach (var potentialQuest in allQuests)
+            try
             {
-                if (potentialQuest.Incident == null)
-                {
-                    continue;
-                }
+                if (pawn == null)
+                    return false;
 
-                if (lastFireTicks.TryGetValue(potentialQuest.Incident, out int value))
+                Dictionary<IncidentDef, int> lastFireTicks = Find.World.StoryState.lastFireTicks;
+
+                if (lastFireTicks == null)
+                    return false;
+
+                int ticksGame = Find.TickManager.TicksGame;
+
+                List<QuestDef> allQuests = DefDatabase<QuestDef>.AllDefsListForReading;
+
+                if (allQuests.Count < giveCount)
+                    return false;
+
+                List<QuestDef> allQuestsToFire = new List<QuestDef>();
+
+                QuestPawn questPawn = null;
+                pawn.GetQuestPawn(out questPawn);
+
+                foreach (var potentialQuest in allQuests)
                 {
-                    float num = (float)(ticksGame - value) / 60000f;
-                    if (num < potentialQuest.Incident.minRefireDays)
+                    if (potentialQuest.Incident == null)
+                    {
                         continue;
-                }
+                    }
 
-                if (QuestsManager.Communications.Quests.Any(q => q.RelatedQuestDef == potentialQuest && q.Faction == pawn.Faction))
-                    continue;
+                    if (lastFireTicks.TryGetValue(potentialQuest.Incident, out int value))
+                    {
+                        float num = (float)(ticksGame - value) / 60000f;
+                        if (num < potentialQuest.Incident.minRefireDays)
+                            continue;
+                    }
 
-                if (questPawn != null)
-                {
-                    if (questPawn.Quests.Any(q => q.RelatedQuestDef == potentialQuest))
+                    if (QuestsManager.Communications.Quests.Any(q => q.RelatedQuestDef == potentialQuest && q.Faction == pawn.Faction))
                         continue;
+
+                    if (questPawn != null)
+                    {
+                        if (questPawn.Quests.Any(q => q.RelatedQuestDef == potentialQuest))
+                            continue;
+                    }
+
+                    allQuestsToFire.Add(potentialQuest);
                 }
 
-                allQuestsToFire.Add(potentialQuest);
-            }
-
-            if (allQuestsToFire.Count == 0)
-                return false;
-
-            for(int i = 0; i < giveCount; i++)
-            {
                 if (allQuestsToFire.Count == 0)
-                    return true;
+                    return false;
 
-                if (allQuestsToFire.TryRandomElementByWeight(w => w.Commonality, out QuestDef result))
+                for (int i = 0; i < giveCount; i++)
                 {
-                    TryGiveQuestTo(pawn, result);
-                    allQuestsToFire.Remove(result);
+                    if (allQuestsToFire.Count == 0)
+                        return true;
+
+                    if (allQuestsToFire.TryRandomElementByWeight(w => w.Commonality, out QuestDef result))
+                    {
+                        TryGiveQuestTo(pawn, result);
+                        allQuestsToFire.Remove(result);
+                    }
                 }
+                return false;
+            }catch(Exception ex)
+            {
+                Log.Message($"Error while giving quest --> {ex}");
+
+                return false;
             }
-            return false;
         }
 
         public static bool TryGiveQuestTo(Pawn pawn, QuestDef questDef)

@@ -100,6 +100,18 @@ namespace MoreEvents.Things.Mk1
             Notify_ModulesChanges();
         }
 
+        public override void Tick()
+        {
+            base.Tick();
+
+            for (int i = 0; i < wornExtraListeners.Count; i++)
+            {
+                MKArmorModule listener = wornExtraListeners[i];
+
+                listener.Tick();
+            }
+        }
+
         public void Notify_ModulesChanges()
         {
             damageListeners.Clear();

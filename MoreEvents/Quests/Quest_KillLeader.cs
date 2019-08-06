@@ -163,9 +163,11 @@ namespace MoreEvents.Quests
             Faction = alliedFaction;
             TicksToPass = Rand.Range(8, 15) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
-            GenerateRewards(GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);
 
             TargetPawn = enemyFaction.leader;
+
+            GenerateRewards(GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);
+
 
             ShowInConsole = false;
 

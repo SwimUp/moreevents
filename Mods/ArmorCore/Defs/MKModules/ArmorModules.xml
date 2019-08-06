@@ -37,7 +37,7 @@
 	<RimArmorCore.Mk1.ArmorModuleDef>
 		<defName>Plato</defName>
 		<label>Echo System 'Plato'</label>
-		<description>The echo system “Plato” allows you to control the situation by 360 degrees due to the many helmet-mounted sensors located throughout the helmet. Therefore, there will be no unforeseen attacks from the back\n\nIncreases Dodge Chance </description>
+		<description>The echo system “Plato” allows you to control the situation by 360 degrees due to the many helmet-mounted sensors located throughout the helmet. Therefore, there will be no unforeseen attacks from the back\n\nIncreases Dodge Chance</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Plato</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
 		<StatListener>true</StatListener>
