@@ -91,7 +91,7 @@ namespace MoreEvents.Quests
                 return false;
             }
 
-            if (TargetPawn != null && AnyHostileOnMap(site.Map, TargetPawn.Faction))
+            if (TargetPawn != null && site.Map != null && AnyHostileOnMap(site.Map, TargetPawn.Faction))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
