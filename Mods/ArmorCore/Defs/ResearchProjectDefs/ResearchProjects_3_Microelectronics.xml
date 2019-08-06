@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>EnergyArmorResearch</defName>
+		<label>Energy armor research</label>
+		<description>Research in the field of energy armor will allow you to create a new type of protection, if, of course, you have an energy source capable of supplying it.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>0</researchViewX>
+		<researchViewY>6</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BasicEnergyStorage</defName>
+		<label>Basic energy storage</label>
+		<description>Energy armor is demanding on energy sources. We cannot carry a large power station with us, so we need a compact source of energy.
+It opens up the possibility of building the simplest source of energy - the battery pack.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EnergyArmorResearch</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1</researchViewX>
+		<researchViewY>6</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>AdvancedEnergySources</defName>
+		<label>Advanced energy sources</label>
+		<description>With the help of unique finds, we can make energy sources several times superior to ours.
+It opens up the possibility of building smaller versions of a cold fusion and arc reactor.</description>
+		<baseCost>3800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicEnergyStorage</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2</researchViewX>
+		<researchViewY>6</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BasicArmorImprovement</defName>
+		<label>Basic Armor Improvement</label>
+		<description>We can improve the armor by adding its modules, which can improve its parameters.
+Allows you to create tools to improve armor.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EnergyArmorResearch</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1</researchViewX>
+		<researchViewY>7</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>RoboticStation</defName>
+		<label>Robotic station</label>
+		<description>Assistant robots will provide additional accuracy with armor, which will allow you to install better modules.
+Allows you to create robotic manipulators for installing level 2 modules.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>5</researchViewX>
+		<researchViewY>7</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Nanorobots</defName>
+		<label>Nanorobots</label>
+		<description>Now we can use nanorobots to improve armor. This will allow you to change previously inaccessible places of reservation.
+Allows you to create nanorobots to install level 3 improvements.</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>10</researchViewX>
+		<researchViewY>7</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>AdvancedEnergyManagementTechniques</defName>
+		<label>Advanced Energy Management Techniques</label>
+		<description>We can optimize energy consumption by redirecting stored energy to another location.
+Allows you to create capacitor banks and transformers.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EnergyArmorResearch</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1</researchViewX>
+		<researchViewY>3</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>EnergyOptimization</defName>
+		<label>Energy optimization</label>
+		<description>Using advanced materials, we can create optimal batteries to store more energy and optimize energy consumption for faster charging of armor.
+Allows you to create a nano-yolk and an energy cell.</description>
+		<baseCost>3200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EnergyArmorResearch</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1</researchViewX>
+		<researchViewY>4</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>EnergyAccelerator</defName>
+		<label>Energy accelerator</label>
+		<description>Having assembled a special energy accelerator, we can use the entire energy potential of the station.
+Opens the opportunity to create an energy amplifier.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EnergyArmorResearch</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1</researchViewX>
+		<researchViewY>5</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<!-- tier 1 -->
+	<ResearchProjectDef>
+		<defName>BasicRespiratoryProtection</defName>
+		<label>Basic respiratory protection</label>
+		<description>The installation of special filters allows you to protect yourself from simple toxic gases and effects.
+Allows you to create a basic filtration system.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>0</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ProtectiveMaterial</defName>
+		<label>Protective material</label>
+		<description>For physical protection from the effects of weather and human activities, we need material that can protect against bad weather and radiation.
+Allows you to create antitoxic seals.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>0</researchViewX>
+		<researchViewY>9</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>SimpleGuidanceSystem</defName>
+		<label>Simple guidance system</label>
+		<description>Creating a simple guidance system will increase accuracy.
+Allows you to create a guidance system.</description>
+		<baseCost>3000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>0.8</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Stimulants</defName>
+		<label>Stimulants</label>
+		<description>Stimulants will allow the carrier to inject adrenaline, so that his combat skills will be better.
+Allows you to create stimulants.</description>
+		<baseCost>2700</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1.6</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>LightProtection</defName>
+		<label>Light protection</label>
+		<description>Creating material that can be placed under the armor to improve protection.
+Allows the creation of reinforced armor cloth.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2.4</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>HeavyProtection</defName>
+		<label>Heavy protection</label>
+		<description>Creating plates that can be installed in the upper layers of the armor to further increase protection.
+Allows you to create reinforced plates.</description>
+		<baseCost>6000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2.4</researchViewX>
+		<researchViewY>8.5</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ImprovedMobility</defName>
+		<label>Improved mobility</label>
+		<description>Creating and installing shock absorbers in the lower part of the armor will allow the wearer to move more conveniently.
+Allows you to create shock absorbers.</description>
+		<baseCost>3200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BasicArmorImprovement</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3.2</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	<!-- ============ -->
+
+	<!-- tier 2 -->
+	<ResearchProjectDef>
+		<defName>SimpleMedicalSystems</defName>
+		<label>Simple medical systems</label>
+		<description>The creation of a basic medical system will allow monitoring the health indicators of a carrier and taking actions to provide medical care.
+Allows you to create a first aid interface.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4.5</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ProteinTherapyAntigenesis</defName>
+		<label>Protein therapy of antigenesis</label>
+		<description>Thanks to the automatic protein therapy system, we can increase the survivability of the carrier and its combat parameters.
+Allows you to create protein therapy of antigenesis.</description>
+		<baseCost>4500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4.5</researchViewX>
+		<researchViewY>8.8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AdrenalineInjectors</defName>
+		<label>Adrenaline injectors</label>
+		<description>Creating adrenaline injectors will significantly strengthen the carrier, and thanks to a special injection system, you can arrange an overdose to get a super fighter.
+Allows you to create adrenaline injectors.</description>
+		<baseCost>2300</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4.5</researchViewX>
+		<researchViewY>9.5</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ActiveArmor</defName>
+		<label>Active armor</label>
+		<description>Creating armor that adapts to each shot will significantly enhance the armor.
+Allows you to create active plates.</description>
+		<baseCost>8000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>5.3</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CircularEcholocation</defName>
+		<label>Circular echolocation</label>
+		<description>A special eco-locator will allow you to control the space around the carrier, which will increase the maneuverability of the fighter.
+Allows you to create a echo system 'Plato'</description>
+		<baseCost>7600</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>6.1</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AdvancedFiltrationSystems</defName>
+		<label>Advanced Filtration Systems</label>
+		<description>Creating a new generation of filters will protect the wearer of the armor from all possible problems associated with air.</description>
+		<baseCost>5500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>6.1</researchViewX>
+		<researchViewY>8.6</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>JointImprovement</defName>
+		<label>Joint improvement</label>
+		<description>Creating motorized joints can greatly facilitate movement in a suit and increase speed.
+Allows you to create motorized joints.</description>
+		<baseCost>6500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>6.9</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>UpperLayerArmor</defName>
+		<label>Upper layer armor</label>
+		<description>Creating detachable upon impact of armor will protect the wearer of armor for a limited number of hits.
+Allows you to create ablation coating.</description>
+		<baseCost>7000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>7.7</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>EnergyShieldSystem</defName>
+		<label>Energy shield system</label>
+		<description>The shield system will create a powerful energy field around the carrier to protect against damage.
+Allows you to create a shield modulator.</description>
+		<baseCost>12000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>7.7</researchViewX>
+		<researchViewY>9</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	<!-- ============ -->
+	
+	<!-- tier 3 -->
+	<ResearchProjectDef>
+		<defName>KineticBuffer</defName>
+		<label>Kinetic buffer</label>
+		<description>The buffer will allow you to accumulate kinetic energy from physical impacts and hits and release it back in large quantities by a signal from the armor carrier.
+Allows you to create a kinetic buffer.</description>
+		<baseCost>7000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>9</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AdvancedSecuritySystems</defName>
+		<label>Advanced security systems</label>
+		<description>An advanced protection system will allow you to redistribute energy in the armor and transfer it to the place of impact.
+Allows you to create a protective interface.</description>
+		<baseCost>6500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>9.8</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CombatExoskeleton</defName>
+		<label>Combat exoskeleton</label>
+		<description>Combat exoskeleton includes a large system to enhance the physical abilities of an armor carrier.
+Allows you to create a combat exoskeleton.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>10.6</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>MedicalExoskeleton</defName>
+		<label>Medical exoskeleton</label>
+		<description>A medical exoskeleton will allow you to monitor vital signs at the internal level and instantly respond to any threats to life.
+Allows you to create a medical exoskeleton.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>10.6</researchViewX>
+		<researchViewY>8.8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>EnergyBoots</defName>
+		<label>Energy boots</label>
+		<description>Shoes with built-in energy amplifiers will achieve maximum comfort and speed.
+Allows you to create energy boots.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>11.4</researchViewX>
+		<researchViewY>8</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	<!-- ============ -->
+</Defs>

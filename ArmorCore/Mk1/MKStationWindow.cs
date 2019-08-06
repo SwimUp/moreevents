@@ -372,6 +372,7 @@ namespace RimArmorCore.Mk1
             else
                 Widgets.Label(labelRect, "Station_SecondTableInfo".Translate(mkStation.Slots.Where(s => s.Module != null).Count(), mkStation.Slots.Count, mkStation.ChargeSpeed, mkStation.ContainedArmor.EnergyCharge.ToString("f2"), mkStation.ContainedArmor.CoreComp.PowerCapacity, mkStation.EnergyBankCharge.ToString("f2"), mkStation.EnergyBank, bankChargeSpeed.ToString("f2")));
 
+
             DrawCustomFillableBarForEnergyBar(new Rect(560, 135, 200, 450), mkStation.EnergyBankCharge, mkStation.EnergyBank, EnergyBarFrame, EnergyBar, EmptyBarTex2);
 
             float armorCharge = 0f;
@@ -384,32 +385,12 @@ namespace RimArmorCore.Mk1
             DrawCustomFillableBarForEnergyBar(new Rect(840, 135, 200, 450), armorCharge, maxRef, EnergyBarFrame_Rec, EnergyBar_Rec, EmptyBarTex2);
         }
 
-        private void DrawCustomFillableBar(Rect mainRect, float fill, Texture2D fillTexture, Texture2D emptyTexture)
-        {
-            float offset = mainRect.width * (fill / 100);
-            float maxWidth = Mathf.Clamp(mainRect.width - offset, 0, mainRect.width);
-            GUI.DrawTexture(mainRect, fillTexture);
-            GUI.DrawTexture(new Rect(mainRect.x + offset, mainRect.y, maxWidth, 30), emptyTexture);
-        }
-
-        private void DrawCustomFillableBar(Rect mainRect, float fill, Texture2D fillTexture, Texture2D emptyTexture, string text, Color textColor)
-        {
-            float offset = mainRect.width * (fill / 100);
-            GUI.DrawTexture(mainRect, fillTexture);
-            float maxWidth = Mathf.Clamp(mainRect.width - offset, 0, mainRect.width);
-            GUI.DrawTexture(new Rect(mainRect.x + offset, mainRect.y, maxWidth, mainRect.height), emptyTexture);
-            Text.Anchor = TextAnchor.MiddleCenter;
-            GUI.color = textColor;
-            Widgets.Label(mainRect, text);
-            GUI.color = Color.white;
-            Text.Anchor = TextAnchor.UpperLeft;
-        }
-
         private void DrawCustomFillableBar(Rect mainRect, float fill, Texture2D fillTexture, Texture2D emptyTexture, string text, Color textColor, Texture2D border)
         {
             float offset = mainRect.width * (fill / 100);
             GUI.DrawTexture(mainRect, fillTexture);
             float maxWidth = Mathf.Clamp(mainRect.width - offset, 0, mainRect.width);
+
             GUI.DrawTexture(new Rect(mainRect.x + offset, mainRect.y, maxWidth, mainRect.height), emptyTexture);
             GUI.DrawTexture(mainRect, border);
             Text.Anchor = TextAnchor.MiddleCenter;
@@ -425,9 +406,13 @@ namespace RimArmorCore.Mk1
             GUI.DrawTexture(mainRect, fillTexture);
 
             maxRef = Mathf.Clamp(maxRef, 1, maxRef);
-            float offset = mainRect.height * (fill / maxRef);
-            float maxHeight = Mathf.Clamp(mainRect.height - offset, 0, mainRect.height);
-            GUI.DrawTexture(new Rect(mainRect.x, mainRect.y + offset, mainRect.width, maxHeight), emptyTexture);
+
+            Rect rect = mainRect;
+            rect.height = 255;
+            rect.y += 33;
+            float offset = rect.height * (fill / maxRef);
+            float maxHeight = Mathf.Clamp(rect.height - offset, 0, mainRect.height);
+            GUI.DrawTexture(new Rect(rect.x, rect.y, mainRect.width, maxHeight), emptyTexture);
         }
 
         private void DrawModulesSlots(Rect rect)

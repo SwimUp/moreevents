@@ -60,6 +60,11 @@ namespace MoreEvents.Quests
             Scribe_References.Look(ref RebelSettlement, "RebelSettlement");
         }
 
+        public override string GetInspectString()
+        {
+            return $"InspectString_Timer".Translate(UnlimitedTime ? rebelFight.TicksToDays().ToString("f2") : TicksToPass.TicksToDays().ToString("f2"));
+        }
+
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
         {
             CaravanArrivalAction_EnterToRebelMap caravanAction = new CaravanArrivalAction_EnterToRebelMap(mapParent, this);
@@ -223,6 +228,11 @@ namespace MoreEvents.Quests
             faction.loadID = Find.UniqueIDsManager.GetNextFactionID();
 
             Find.FactionManager.Add(faction);
+
+            foreach(var map in Find.Maps)
+            {
+                map.pawnDestinationReservationManager.RegisterFaction(faction);
+            }
 
             return faction;
         }

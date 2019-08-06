@@ -112,6 +112,7 @@
     <Compile Include="Patches\Psychogas_RimOverhaul.cs" />
     <Compile Include="Patches\RadiationFon_RimOverhaul.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResearchProjectDefOfLocal.cs" />
     <Compile Include="ThingDefOfLocal.cs" />
     <Compile Include="Patches\ToxicFallout_Patch.cs" />
     <Compile Include="Utils.cs" />

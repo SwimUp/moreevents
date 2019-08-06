@@ -331,6 +331,7 @@
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_CombatExoskeleton</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
 		<StatListener>true</StatListener>
+		<DamageListener>true</DamageListener>
 		<Item>CombatExoskeleton</Item>
 		<StatAffecter>
 			<li>

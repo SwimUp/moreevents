@@ -8,4 +8,11 @@
       <iconPath>UI/Icons/ThingCategories/MortarShells</iconPath>
     </ThingCategoryDef>
 	
+  <ThingCategoryDef>
+    <defName>RimOverhaulSpecial</defName>
+    <label>special</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+  
+	
 </Defs>

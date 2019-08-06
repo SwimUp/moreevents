@@ -12,7 +12,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<category>Item</category>
 		<size>(1, 1)</size>
@@ -62,7 +62,7 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<statBases>
 			<MarketValue>2800</MarketValue>
@@ -98,7 +98,7 @@
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -140,7 +140,7 @@
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<recipeMaker>
 		  <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
@@ -197,7 +197,7 @@
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -246,7 +246,7 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<statBases>
 			<MarketValue>9000</MarketValue>
@@ -295,7 +295,7 @@
 			<Mass>5</Mass>
 		</statBases>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>RimOverhaulSpecial</li>
 		</thingCategories>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>

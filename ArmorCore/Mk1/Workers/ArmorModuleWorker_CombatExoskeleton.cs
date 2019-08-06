@@ -22,6 +22,17 @@ namespace RimArmorCore.Mk1.Workers
             return result;
         }
 
+        public override void CheckPreAbsorbDamage(DamageInfo dInfo, ref bool absorb)
+        {
+            if (!Armor.Active)
+                return;
+
+            if (dInfo.Def == DamageDefOf.Stun)
+            {
+                absorb = true;
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

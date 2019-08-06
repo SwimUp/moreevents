@@ -149,7 +149,7 @@ namespace MoreEvents.Things.Mk1
                 {
                     EnergyBank += slot.Module.def.EnergyBankCapacity;
                     ChargeSpeed += slot.Module.def.AdditionalChargeSpeed;
-                    PowerLimit = Mathf.Clamp(PowerLimit + slot.Module.def.PowerLimit, 0, 100);
+                    PowerLimit = Mathf.Clamp(PowerLimit + slot.Module.def.PowerLimit, 0, 9999);
 
                     if (!CanOverDrive)
                         CanOverDrive = slot.Module.def.EnableOverDrive;

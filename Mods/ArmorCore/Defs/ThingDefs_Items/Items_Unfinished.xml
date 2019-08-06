@@ -17,16 +17,16 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -38,7 +38,7 @@
 		</costList>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorCoreSpecial</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -82,7 +82,7 @@
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorCoreSpecial</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -103,14 +103,14 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>15</Crafting>
 			</skillRequirements>
@@ -154,7 +154,7 @@
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -175,16 +175,16 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdvancedEnergyManagementTechniques</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -218,7 +218,7 @@ Allow you to install a second level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(2, 2)</size>
 		<useHitPoints>true</useHitPoints>
@@ -239,16 +239,16 @@ Allow you to install a second level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>RoboticStation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>9</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -282,7 +282,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -303,16 +303,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>Nanorobots</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>17</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -344,7 +344,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -365,16 +365,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdvancedEnergyManagementTechniques</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -405,7 +405,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -426,16 +426,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>EnergyAccelerator</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>9</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -468,7 +468,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -489,16 +489,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>EnergyOptimization</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -531,7 +531,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -552,16 +552,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>EnergyOptimization</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>16</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -594,7 +594,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -615,16 +615,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>BasicArmorImprovement</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -654,7 +654,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -675,16 +675,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>SimpleGuidanceSystem</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>17</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -716,7 +716,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -737,16 +737,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>BasicRespiratoryProtection</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -778,7 +778,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -799,16 +799,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>CircularEcholocation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>9</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -839,7 +839,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -860,16 +860,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdvancedFiltrationSystems</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>11</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -900,7 +900,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -921,16 +921,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>Stimulants</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>11</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -961,7 +961,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -989,9 +989,9 @@ Opens the last level of modules for armor.</description>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>LightProtection</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1022,7 +1022,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1050,9 +1050,9 @@ Opens the last level of modules for armor.</description>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>HeavyProtection</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1083,7 +1083,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1111,9 +1111,9 @@ Opens the last level of modules for armor.</description>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>ProtectiveMaterial</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>9</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1145,7 +1145,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1166,16 +1166,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>SimpleMedicalSystems</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>18</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1206,7 +1206,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1227,14 +1227,14 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>ActiveArmor</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>15</Crafting>
 			</skillRequirements>
@@ -1268,7 +1268,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1289,14 +1289,14 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>ProteinTherapyAntigenesis</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>15</Crafting>
 			</skillRequirements>
@@ -1329,7 +1329,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1350,14 +1350,14 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdrenalineInjectors</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>15</Crafting>
 			</skillRequirements>
@@ -1390,7 +1390,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1411,16 +1411,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>KineticBuffer</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>17</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1451,7 +1451,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1472,16 +1472,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>AdvancedSecuritySystems</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>17</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1512,7 +1512,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1533,16 +1533,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>CombatExoskeleton</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>17</Crafting>
+				<Crafting>20</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1574,7 +1574,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1595,16 +1595,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>MedicalExoskeleton</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>20</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1636,7 +1636,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1657,16 +1657,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>ImprovedMobility</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>7</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1697,7 +1697,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1718,16 +1718,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>JointImprovement</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1758,7 +1758,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1779,16 +1779,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>UpperLayerArmor</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1819,7 +1819,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1840,16 +1840,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>EnergyShieldSystem</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>20</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -1880,7 +1880,7 @@ Opens the last level of modules for armor.</description>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>ArmorModules</li>
 		</thingCategories>
 		<size>(1, 1)</size>
 		<useHitPoints>true</useHitPoints>
@@ -1901,16 +1901,16 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>TableMachining</li>
+				<li>FabricationBench</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+			<researchPrerequisite>EnergyBoots</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>12</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
