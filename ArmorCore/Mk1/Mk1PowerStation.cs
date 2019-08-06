@@ -79,8 +79,8 @@ namespace MoreEvents.Things.Mk1
 
             if(ContainedArmor != null)
             {
-                Apparel_Mk1 mk1 = (Apparel_Mk1)ContainedArmor;
-                mk1.CoreComp = mk1.Core.TryGetComp<ArmorCore>();
+                var mk = ContainedArmor;
+                mk.CoreComp = mk.Core.TryGetComp<ArmorCore>();
             }
 
             Notify_ModulesChanges();
@@ -214,7 +214,7 @@ namespace MoreEvents.Things.Mk1
             {
                 if (HasArmor)
                 {
-                    var armor = (Apparel_Mk1)ContainedArmor;
+                    var armor = ContainedArmor;
                     float chargeCount = HasPower ? ChargeSpeed * OverDriveMultiplier : 0f;
 
                     if (!HasPower && EnergyBank > 0f)

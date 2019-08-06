@@ -60,6 +60,7 @@
     <Compile Include="ExplosionPlus.cs" />
     <Compile Include="HediffDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
+    <Compile Include="Mk1\Apparel_Mk2.cs" />
     <Compile Include="Mk1\Apparel_MkArmor.cs" />
     <Compile Include="Mk1\Apparel_Mk1.cs" />
     <Compile Include="Mk1\ArmorCore.cs" />

@@ -27,6 +27,9 @@
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_BasicFiltrationSystem</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
 		<StationLevelRequired>1</StationLevelRequired>
+		<ExcludesModules> 
+			<li>AdvancedFiltrationSystem</li>
+		</ExcludesModules>
 		<Item>BasicFiltrationSystem</Item>
 		<Icon>ArmorModules/BasicFiltrationSystem</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
@@ -58,6 +61,9 @@
 		<description>Advanced air filtration system. It includes a special technology of a closed circuit, thanks to which not only protection against serious air poisoning is achieved, but also the consequences of supercooled/superheated air</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AdvancedFiltrationSystem</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
+		<ExcludesModules> 
+			<li>BasicFiltrationSystem</li>
+		</ExcludesModules>
 		<StationLevelRequired>2</StationLevelRequired>
 		<Icon>ArmorModules/AdvancedFiltrationSystem</Icon>
 		<Item>AdvancedFiltrationSystem</Item>
@@ -110,6 +116,9 @@
 				<value>0.05</value>
 			</li>
 		</StatAffecter>
+		<ExcludesModules> 
+			<li>AntitoxicSeals</li>
+		</ExcludesModules>
 		<DamageListener>true</DamageListener>
 		<StationLevelRequired>1</StationLevelRequired>
 		<Icon>ArmorModules/ReinforcedArmorCloth</Icon>
@@ -141,6 +150,9 @@
 				<value>-3.5</value>
 			</li>
 		</StatAffecter>
+		<ExcludesModules> 
+			<li>ActivePlates</li>
+		</ExcludesModules>
 		<StationLevelRequired>1</StationLevelRequired>
 		<Icon>ArmorModules/ReinforcedPlates</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
@@ -162,6 +174,9 @@
 				<value>30</value>
 			</li>
 		</StatAffecter>
+		<ExcludesModules> 
+			<li>ReinforcedArmorCloth</li>
+		</ExcludesModules>
 		<Item>AntitoxicSeals</Item>
 		<StationLevelRequired>1</StationLevelRequired>
 		<Icon>ArmorModules/AntitoxicSeals</Icon>
@@ -204,6 +219,9 @@
 				<value>0.1</value>
 			</li>
 		</StatAffecter>
+		<ExcludesModules> 
+			<li>ReinforcedPlates</li>
+		</ExcludesModules>
 		<StationLevelRequired>2</StationLevelRequired>
 		<Icon>ArmorModules/ActivePlates</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
@@ -365,6 +383,9 @@
 		</StatAffecter>
 		<StationLevelRequired>3</StationLevelRequired>
 		<Icon>ArmorModules/CombatExoskeleton</Icon>
+		<ExcludesModules> 
+			<li>MedicalExoskeleton</li>
+		</ExcludesModules>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
 	<RimArmorCore.Mk1.ArmorModuleDef>
@@ -377,6 +398,9 @@
 		<HealRate>10</HealRate>
 		<StationLevelRequired>3</StationLevelRequired>
 		<Icon>ArmorModules/MedicalExoskeleton</Icon>
+		<ExcludesModules> 
+			<li>CombatExoskeleton</li>
+		</ExcludesModules>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	<!-- ======================= -->
 		

@@ -38,8 +38,8 @@ namespace RimArmorCore.Mk1
         private static readonly Texture2D EnergyBarFrame_Rec;
         private static readonly Texture2D EnergyBar_Rec;
 
-        private static readonly Texture2D HeadPart;
-        private static readonly Texture2D BodyPart;
+        private static Texture2D HeadPart;
+        private static Texture2D BodyPart;
 
         private float bankChargeSpeed = 0f;
 
@@ -52,6 +52,12 @@ namespace RimArmorCore.Mk1
 
         private Vector2 fullInfo = Vector2.zero;
 
+        private Dictionary<ThingDef, ThingDef> thingMap = new Dictionary<ThingDef, ThingDef>
+        {
+            { ThingDefOfLocal.Apparel_MK1Thunder, ThingDefOfLocal.Apparel_MK1ThunderHead },
+            { ThingDefOfLocal.Apparel_MK2Aquille, ThingDefOfLocal.Apparel_MK2AquilleHead },
+        };
+
         static MKStationWindow()
         {
             PowerLimitBarTexture = ContentFinder<Texture2D>.Get("PowerLimitBar");
@@ -62,9 +68,6 @@ namespace RimArmorCore.Mk1
             EmptyBarTex2 = ContentFinder<Texture2D>.Get("StationBack2");
             EnergyBarFrame = ContentFinder<Texture2D>.Get("batteryframe");
             EnergyBar = ContentFinder<Texture2D>.Get("batterybar");
-
-            HeadPart = ContentFinder<Texture2D>.Get("Things/Apparels/Mk1/Helmet/helmet");
-            BodyPart = ContentFinder<Texture2D>.Get("Things/Apparels/Mk1/Mk1");
 
             EnergyBarFrame_Rec = ContentFinder<Texture2D>.Get("batteryreactorframe");
             EnergyBar_Rec = ContentFinder<Texture2D>.Get("batteryreactorbar");
@@ -98,6 +101,9 @@ namespace RimArmorCore.Mk1
                     bankChargeSpeed += slot.Module.def.EnergyBankCharge;
                 }
             }
+
+            HeadPart = thingMap[mkStation.ContainedArmor.def].uiIcon;
+            BodyPart = mkStation.ContainedArmor.def.uiIcon;
         }
 
         private ref Vector2 GetVector(ArmorModuleCategory category)

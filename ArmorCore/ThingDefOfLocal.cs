@@ -15,5 +15,7 @@ namespace RimArmorCore
         public static ThingDef MiniColdFusionReactor;
         public static ThingDef MiniArcReactor;
         public static ThingDef ExplosionPlus;
+        public static ThingDef Apparel_MK2Aquille;
+        public static ThingDef Apparel_MK2AquilleHead;
     }
 }
