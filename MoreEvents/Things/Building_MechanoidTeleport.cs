@@ -15,7 +15,7 @@ namespace MoreEvents.Things
         private int spawnTime = 30000;
 
         private int animTime = 30;
-        private int maxCycles = 25;
+        private int maxCycles = 14;
         private string FramePath = "Things/Buildings/MechanoidTeleport/";
         private static Graphic[] Frames = null;
         private int cycle = 1;

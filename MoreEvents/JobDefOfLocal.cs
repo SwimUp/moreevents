@@ -19,5 +19,7 @@ namespace MoreEvents
 
         public static JobDef SpeakWithQuester;
         public static JobDef SpeakWithPawn;
+
+        public static JobDef DestroyTribalCrack;
     }
 }

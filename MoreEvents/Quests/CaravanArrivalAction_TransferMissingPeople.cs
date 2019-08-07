@@ -80,6 +80,11 @@ namespace MoreEvents.Quests
                 }
             }
 
+            if(caravan.pawns.Count == 0)
+            {
+                Find.WorldObjects.Remove(caravan);
+            }
+
             Find.LetterStack.ReceiveLetter("Quest_MissingPeople_EndQuest".Translate(), builder.ToString(), LetterDefOf.NeutralEvent);
             QuestSite site = (QuestSite)mapParent;
             site.EndQuest(caravan, condition);

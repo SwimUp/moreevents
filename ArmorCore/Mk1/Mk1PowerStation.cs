@@ -217,10 +217,10 @@ namespace MoreEvents.Things.Mk1
                     var armor = ContainedArmor;
                     float chargeCount = HasPower ? ChargeSpeed * OverDriveMultiplier : 0f;
 
-                    if (!HasPower && EnergyBank > 0f)
+                    if (!HasPower && EnergyBankCharge > 0f)
                     {
-                        chargeCount = Mathf.Min(EnergyBank, ChargeSpeed * OverDriveMultiplier);
-                        EnergyBank -= chargeCount;
+                        chargeCount = Mathf.Min(EnergyBankCharge, ChargeSpeed * OverDriveMultiplier);
+                        EnergyBankCharge -= chargeCount;
                     }
 
                     if (chargeCount == 0f)

@@ -142,6 +142,7 @@ namespace MoreEvents.Quests
                 return false;
 
             Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.AncientSoldier, faction2);
+            Find.WorldPawns.PassToWorld(pawn);
 
             if (pawn == null)
                 return false;

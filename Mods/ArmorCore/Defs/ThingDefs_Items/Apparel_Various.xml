@@ -248,6 +248,21 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeability>Sellable</tradeability>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="RimArmorCore.Mk1.CompPropertiesIncompatibleModules">
+				<ModuleList>
+					<li>MotorizedJoints</li>
+					<li>EnergyBoots</li>
+				</ModuleList>
+			</li>
+		</comps>
 	</ThingDef>
 	
 <ThingDef ParentName="ArmorMKBase">

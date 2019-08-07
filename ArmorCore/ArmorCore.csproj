@@ -66,8 +66,10 @@
     <Compile Include="Mk1\ArmorCore.cs" />
     <Compile Include="Mk1\ArmorModuleDef.cs" />
     <Compile Include="Mk1\ArmorStats\ArmorStat.cs" />
+    <Compile Include="Mk1\CompPropertiesIncompatibleModules.cs" />
     <Compile Include="Mk1\CompProperties_ArmorCore.cs" />
     <Compile Include="Mk1\Gizmo_FillableMk1.cs" />
+    <Compile Include="Mk1\IncompatibleModulesComp.cs" />
     <Compile Include="Mk1\ITab_ModifyMk1.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_SetupModuleForArmor.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_SetupModule.cs" />

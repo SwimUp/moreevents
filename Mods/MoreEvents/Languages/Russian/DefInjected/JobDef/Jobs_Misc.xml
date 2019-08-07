@@ -10,5 +10,6 @@
   <DisableSecuritySystems.reportString>Отключает системы защиты</DisableSecuritySystems.reportString>
   <SpeakWithQuester.reportString>Обсуждает задания</SpeakWithQuester.reportString>
   <SpeakWithPawn.reportString>общается</SpeakWithPawn.reportString>
+  <DestroyTribalCrack.reportString>идет взрывать туннель</DestroyTribalCrack.reportString>
   
 </LanguageData>

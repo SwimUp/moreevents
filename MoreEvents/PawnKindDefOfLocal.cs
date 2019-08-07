@@ -10,6 +10,6 @@ namespace MoreEvents
     [DefOf]
     public static class PawnKindDefOfLocal
     {
-
+        public static PawnKindDef Tribal_Warrior;
     }
 }

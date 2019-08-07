@@ -195,4 +195,40 @@
     </building>
   </ThingDef>
   
+  <ThingDef ParentName="BuildingBase">
+    <defName>TribalCrack</defName>
+    <label>Tunnel</label>
+    <description>The tunnel leads to an Aboriginal settlement.</description>
+	<thingClass>RimOverhaul.Things.Building_TribalCrack</thingClass>
+	<altitudeLayer>Building</altitudeLayer>
+    <pathCost>150</pathCost>
+    <blockWind>true</blockWind>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <graphicData>
+      <texPath>Things/Crack</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <size>(4,4)</size>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-200</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <drawerType>MapMeshOnly</drawerType>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+	<useHitPoints>false</useHitPoints>
+    <building>
+		<claimable>false</claimable>
+		<roofCollapseDamageMultiplier>0.2</roofCollapseDamageMultiplier>
+    </building>
+  </ThingDef>
+  
 </Defs>

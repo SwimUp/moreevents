@@ -91,6 +91,24 @@ namespace MoreEvents.Things.Mk1
         private List<MKArmorModule> statsListeners = new List<MKArmorModule>();
         private List<MKArmorModule> wornExtraListeners = new List<MKArmorModule>();
 
+        public IncompatibleModulesComp IncompatibleModules
+        {
+            get
+            {
+                if (incompatibleModules == null)
+                {
+                    incompatibleModules = GetComp<IncompatibleModulesComp>();
+                }
+
+                return incompatibleModules;
+            }
+            set
+            {
+                incompatibleModules = value;
+            }
+        }
+        private IncompatibleModulesComp incompatibleModules = null;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);

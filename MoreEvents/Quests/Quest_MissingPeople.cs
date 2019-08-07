@@ -251,26 +251,29 @@ namespace MoreEvents.Quests
 
             if(condition == EndCondition.Timeout)
             {
-                if(saved && savedPawns.Count > 0)
+                if (savedPawns != null)
                 {
-                    foreach(var pawn in savedPawns)
+                    if (saved && savedPawns.Count > 0)
                     {
-                        pawn.SetFaction(Faction);
-                    }
-
-                    Faction.TryAffectGoodwillWith(Faction.OfPlayer, -50);
-                    Find.LetterStack.ReceiveLetter("Quest_MissingPeople_ThiefTitle".Translate(), "Quest_MissingPeople_Thief".Translate(), LetterDefOf.NegativeEvent);
-
-                    for(int i = 0; i < QuestsManager.Communications.Components.Count;i++)
-                    {
-                        CommunicationComponent comp = QuestsManager.Communications.Components[i];
-                        if (comp is ScoutingComp comp2 && comp2.Faction == Faction)
+                        foreach (var pawn in savedPawns)
                         {
-                            QuestsManager.Communications.RemoveComponent(comp);
+                            pawn.SetFaction(Faction);
                         }
-                    }
 
-                    CommOption_GetHelp.AddComponentWithStack(Faction, -999);
+                        Faction.TryAffectGoodwillWith(Faction.OfPlayer, -50);
+                        Find.LetterStack.ReceiveLetter("Quest_MissingPeople_ThiefTitle".Translate(), "Quest_MissingPeople_Thief".Translate(), LetterDefOf.NegativeEvent);
+
+                        for (int i = 0; i < QuestsManager.Communications.Components.Count; i++)
+                        {
+                            CommunicationComponent comp = QuestsManager.Communications.Components[i];
+                            if (comp is ScoutingComp comp2 && comp2.Faction == Faction)
+                            {
+                                QuestsManager.Communications.RemoveComponent(comp);
+                            }
+                        }
+
+                        CommOption_GetHelp.AddComponentWithStack(Faction, -999);
+                    }
                 }
             }
             if(condition == EndCondition.Fail)

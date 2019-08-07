@@ -69,6 +69,8 @@ namespace QuestRim
         private static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
         private static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
 
+        private float rewardCost = 0;
+
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
             communicationsDialogs = communications.CommunicationDialogs;
@@ -391,7 +393,11 @@ namespace QuestRim
             GUI.color = Color.white;
             if (Widgets.ButtonInvisible(r))
             {
+                rewardCost = 0;
+
                 currentQuest = quest;
+                foreach (var k in currentQuest.Rewards)
+                    rewardCost += k.def.BaseMarketValue * k.stackCount;
             }
             y += 107;
         }
@@ -424,7 +430,7 @@ namespace QuestRim
                 GUI.color = Color.white;
 
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(330, 310, 300, 20), "QuestRewards".Translate());
+                Widgets.Label(new Rect(330, 310, 300, 20), "QuestRewards".Translate(rewardCost));
                 Text.Anchor = TextAnchor.UpperLeft;
                 int questSliderLength = currentQuest.Rewards.Count * 30;
                 Rect rewardsRect = new Rect(0, 0, 323, questSliderLength);

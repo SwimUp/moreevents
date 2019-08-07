@@ -193,4 +193,10 @@
 
 Вы можете увидеть событие в планетарной консоли связи.</ConcantrationCamp.letterText>  
 
+  <TunnelRats.label>Туннельные крысы</TunnelRats.label>
+  <TunnelRats.letterLabel>Туннельные крысы</TunnelRats.letterLabel>
+  <TunnelRats.letterText>Фракция аборигенов прокопала тунель к вашей базе. Они будут вылазить из него до тех пор, пока вы его не закопаете.
+
+(чтобы закопать туннель, снарядите пешку гранатами, выбирете её и нажмите ПКМ на туннель)</TunnelRats.letterText>  
+
 </LanguageData>

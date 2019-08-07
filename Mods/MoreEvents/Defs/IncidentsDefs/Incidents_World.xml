@@ -941,5 +941,26 @@ You can see event in geocape.
 		<earliestDay>60</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
+	
+	<!-- Задание: Туннельные крысы -->
+	<IncidentDef>
+		<defName>TunnelRats</defName>
+		<label>Tunnel rats</label>
+		<letterLabel>Tunnel rats</letterLabel>
+		<letterText>The Aboriginal faction dug a tunnel to your base. They will climb out of it until you bury it.
+
+(to bury the tunnel, equip the pawn with grenades, select it and click RMB on the tunnel)
+		</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.IncidentWorker_TunnelRats</workerClass>
+		<category>Misc</category>
+		<minRefireDays>99</minRefireDays>
+		<baseChance>2.8</baseChance>
+		<earliestDay>80</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
 
 </Defs>

@@ -8,7 +8,7 @@
 	<UnlimitedTime>Осталось: неограниченно</UnlimitedTime>
 	<QuestTimer>Осталось: {0} дней</QuestTimer>
 	<JumpToLocation>Перейти к месту ({0})</JumpToLocation>
-	<QuestRewards>Награда</QuestRewards>
+	<QuestRewards>Награда ({0}$)</QuestRewards>
 	<AdditionalQuestContent>Дополнительно</AdditionalQuestContent>
 
 	<OpenCommsGeo>Использовать консоль</OpenCommsGeo>

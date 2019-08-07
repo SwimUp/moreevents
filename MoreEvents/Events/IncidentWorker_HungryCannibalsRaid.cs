@@ -53,6 +53,13 @@ namespace MoreEvents.Events
                 {
                     GenSpawn.Spawn(pawn, pos, map);
                     pawn.health.AddHediff(HediffDefOfLocal.ThirstHumanMeat);
+
+                    if(!pawn.story.traits.HasTrait(TraitDefOf.Cannibal))
+                    {
+                        Trait t = new Trait(TraitDefOf.Cannibal);
+                        pawn.story.traits.GainTrait(t);
+                    }
+
                     lord.AddPawn(pawn);
                 }
             }

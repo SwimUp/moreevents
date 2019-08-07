@@ -79,7 +79,7 @@ namespace MoreEvents.Things
                     count++;
 
             builder.AppendLine($"{Translator.Translate("HiveCreaturesCount")}{count}");
-            builder.AppendLine($"{Translator.Translate("HiveLevel")}{hiveLevel}");
+            builder.Append($"{Translator.Translate("HiveLevel")}{hiveLevel}");
 
             return builder.ToString();
         }
@@ -185,7 +185,7 @@ namespace MoreEvents.Things
             for(int i = count; i > 0; i--)
             {
                 Pawn p = spawnedMobs[i];
-                if (p.Dead)
+                if (p == null || p.Dead)
                     spawnedMobs.RemoveAt(i);
             }
         }
@@ -249,6 +249,7 @@ namespace MoreEvents.Things
 
             dinfo.SetAmount(dinfo.Amount * buildingDamageMultiplier);
         }
+
     }
 
 }

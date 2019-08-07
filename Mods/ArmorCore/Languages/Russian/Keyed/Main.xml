@@ -86,4 +86,6 @@
 	<ArmorModuleWorker_ShieldModulator_Action_Desc>Показывает уровень заряда щита. Щит заряжается со скорость {0}. Энергия берется из главного реактора. Работает, даже если главный реактор отключен.</ArmorModuleWorker_ShieldModulator_Action_Desc>
 	<ArmorModuleWorker_EnergyBoots>- увеличение скорости передвижения: {0}\n- увеличение потребление энергии: +0.10</ArmorModuleWorker_EnergyBoots>
 	
+	<Station_Incopatible>Модуль не совместим с данной броней.</Station_Incopatible>
+	
 </LanguageData>

@@ -36,5 +36,11 @@
 		<driverClass>MoreEvents.AI.JobDriver_SpeakWithPawn</driverClass>
 		<reportString>Communicates</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>DestroyTribalCrack</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_DestroyTribalCrack</driverClass>
+		<reportString>going to blow up the tunnel</reportString>
+	</JobDef>
 
 </Defs>

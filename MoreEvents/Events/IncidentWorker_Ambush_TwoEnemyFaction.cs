@@ -26,6 +26,9 @@ namespace MoreEvents.Events
                     if (faction == Faction.OfPlayer || faction == faction2)
                         continue;
 
+                    if (!faction.def.pawnGroupMakers.Any(x => x.kindDef == PawnGroupKindDefOf.Combat))
+                        continue;
+
                     if(faction.RelationKindWith(faction2) == FactionRelationKind.Hostile)
                     {
                         factions.Add(new Pair<Faction, Faction>(faction, faction2));

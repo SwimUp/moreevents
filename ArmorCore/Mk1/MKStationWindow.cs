@@ -102,8 +102,11 @@ namespace RimArmorCore.Mk1
                 }
             }
 
-            HeadPart = thingMap[mkStation.ContainedArmor.def].uiIcon;
-            BodyPart = mkStation.ContainedArmor.def.uiIcon;
+            if (mkStation.ContainedArmor != null)
+            {
+                HeadPart = thingMap[mkStation.ContainedArmor.def].uiIcon;
+                BodyPart = mkStation.ContainedArmor.def.uiIcon;
+            }
         }
 
         private ref Vector2 GetVector(ArmorModuleCategory category)
@@ -378,6 +381,7 @@ namespace RimArmorCore.Mk1
             else
                 Widgets.Label(labelRect, "Station_SecondTableInfo".Translate(mkStation.Slots.Where(s => s.Module != null).Count(), mkStation.Slots.Count, mkStation.ChargeSpeed, mkStation.ContainedArmor.EnergyCharge.ToString("f2"), mkStation.ContainedArmor.CoreComp.PowerCapacity, mkStation.EnergyBankCharge.ToString("f2"), mkStation.EnergyBank, bankChargeSpeed.ToString("f2")));
 
+            Log.Message(mkStation.EnergyBankCharge.ToString("f2") + "/" + mkStation.EnergyBank);
 
             DrawCustomFillableBarForEnergyBar(new Rect(560, 135, 200, 450), mkStation.EnergyBankCharge, mkStation.EnergyBank, EnergyBarFrame, EnergyBar, EmptyBarTex2);
 

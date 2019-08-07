@@ -39,7 +39,7 @@ namespace QuestRim
             EmailMessage message = new EmailMessage();
             message.Faction = faction;
             message.To = Owner.Name;
-            message.From = $"{faction.Name} ({faction.leader.Name})";
+            message.From = $"{faction?.Name} ({faction.leader?.Name})";
             message.Subject = subject;
             message.Message = text;
 

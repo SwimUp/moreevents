@@ -85,4 +85,7 @@
 	<ArmorModuleWorker_ShieldModulator_Action_Desc>Shows the charge level of the shield. The shield charges at speed {0}. Energy is taken from the main reactor. It works even if the main reactor is turned off.</ArmorModuleWorker_ShieldModulator_Action_Desc>
 	<ArmorModuleWorker_EnergyBoots>- increase movement speed: {0}\n- increased energy consumption: +0.10</ArmorModuleWorker_EnergyBoots>
 	
+	<Station_Incopatible>The module is not compatible with this armor.</Station_Incopatible>
+	
+	
 </LanguageData>

@@ -17,6 +17,7 @@ namespace QuestRim
         private Vector2 scroll = Vector2.zero;
 
         private Quest currentQuest = null;
+        private float rewardCost = 0;
 
         public override Vector2 InitialSize => new Vector2(900, 710);
         private Vector2 commButtonsCommSlider = Vector2.zero;
@@ -81,7 +82,11 @@ namespace QuestRim
 
                 if(DrawCustomButton(buttonRect, quest.CardLabel, Color.white))
                 {
+                    rewardCost = 0;
+
                     currentQuest = quest;
+                    foreach (var k in currentQuest.Rewards)
+                        rewardCost += k.def.BaseMarketValue * k.stackCount; 
                 }
                 buttonRect.y += 25;
                 row++;
@@ -134,7 +139,7 @@ namespace QuestRim
                 GUI.color = Color.white;
 
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(40, 330, 300, 20), "QuestRewards".Translate());
+                Widgets.Label(new Rect(40, 330, 300, 20), "QuestRewards".Translate(rewardCost));
                 Text.Anchor = TextAnchor.UpperLeft;
                 int questSliderLength = currentQuest.Rewards.Count * 30;
                 Rect rewardsRect = new Rect(0, 0, 390, questSliderLength);

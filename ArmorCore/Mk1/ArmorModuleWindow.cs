@@ -86,11 +86,21 @@ namespace RimArmorCore.Mk1
                 }
             }
 
-            if(mkStationWindow.mkStation.ContainedArmor != null)
-            {
                 if (def.StationLevelRequired > mkStationWindow.mkStation.StationLevel)
                 {
                     reason += $"\n{"Station_LevelReq".Translate(def.StationLevelRequired, mkStationWindow.mkStation.StationLevel)}";
+                }
+
+            var incComp = mkStationWindow.mkStation.ContainedArmor.IncompatibleModules;
+            if (incComp != null)
+            {
+                List<ArmorModuleDef> incModules = mkStationWindow.mkStation.ContainedArmor.IncompatibleModules.ModuleList;
+                if (incModules != null)
+                {
+                    if (incModules.Contains(def))
+                    {
+                        reason += $"\n{"Station_Incopatible".Translate()}";
+                    }
                 }
             }
 

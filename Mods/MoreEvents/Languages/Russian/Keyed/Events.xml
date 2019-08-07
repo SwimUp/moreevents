@@ -220,4 +220,10 @@ COMMANDS:
 	<ConcantrationCampTitle>Заключенные</ConcantrationCampTitle>
 	<ConcantrationCamp>Как только вы вошли на территорию концлагеря, на средства связи ваших колонистов стали поступать сигналы. Вам удалось их отследить и теперь вы точно знаете, где держат заключенных.</ConcantrationCamp>
 
+	<Building_TribalCrack_OptionInactive>Невозможно уничтожить, у выбранной пешки нет гранат.</Building_TribalCrack_OptionInactive>
+	<Building_TribalCrack_Option>Спуститься в туннель и взорвать его</Building_TribalCrack_Option>
+
+	<Building_TribalCrack_Title>Туннель уничтожен</Building_TribalCrack_Title>
+	<Building_TribalCrack_Desc>{0} уничтожил туннель связывающий вас с поселением аборигенов.</Building_TribalCrack_Desc>
+
 </LanguageData>

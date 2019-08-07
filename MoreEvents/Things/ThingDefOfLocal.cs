@@ -14,6 +14,7 @@ namespace MoreEvents
         public static ThingDef Marble;
         public static ThingDef Slate;
         public static ThingDef Limestone;
+        public static ThingDef Weapon_GrenadeFrag;
         /* =========================== */
 
         public static ThingDef MechanoidTeleport_Generator;
@@ -43,5 +44,7 @@ namespace MoreEvents
 
         public static ThingDef Geoscape;
         public static ThingDef DoomsdayUltimateBomb;
+
+        public static ThingDef TribalCrack;
     }
 }
