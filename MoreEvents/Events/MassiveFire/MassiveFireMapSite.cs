@@ -232,6 +232,8 @@ namespace MoreEvents.Events.MassiveFire
             command.action = delegate
             {
                 ForceReform(this);
+
+                QuestsManager.Communications.RemoveCommunication(CommunicationDialog);
             };
 
             if (map.mapPawns.FreeColonistsCount == 0)

@@ -34,8 +34,6 @@ namespace RimArmorCore.Patches
                     }
                 }
             }
-
-            __result = true;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace MoreEvents.Events
                 return false;
 
             Map map = (Map)parms.target;
-            if (map.AllCells.Where(cell => (!cell.Roofed(map) || (cell.Roofed(map) && cell.GetRoof(map) == RoofDefOf.RoofConstructed)) && cell.DistanceToEdge(map) > 7).TryRandomElement(out IntVec3 pos))
+            if (map.AllCells.Where(cell => (!cell.Roofed(map) || (cell.Roofed(map) && cell.GetRoof(map) == RoofDefOf.RoofConstructed)) && cell.DistanceToEdge(map) > 10).TryRandomElement(out IntVec3 pos))
             {
                 var faller = SkyfallerPlusMaker.SpawnSkyfaller(ThingDefOfLocal.MeteoriteIncomingPlus, pos, map, () => MeteorImpact(pos, map));
 

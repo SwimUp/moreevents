@@ -35,7 +35,6 @@ namespace ArmorCore.Patches
                     }
                 }
             }
-            __result =  true;
         }
     }
 }
