@@ -32,9 +32,12 @@ namespace MoreEvents.Events
 
             Map map = (Map)parms.target;
 
+            if (map.mapPawns == null)
+                return false;
+
             foreach (var pawn in map.mapPawns.AllPawnsSpawned)
             {
-                if (!pawn.Dead && pawn.RaceProps.Humanlike && pawn.RaceProps.IsFlesh)
+                if (pawn != null && !pawn.Dead && pawn.RaceProps.Humanlike && pawn.RaceProps.IsFlesh)
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfLocal.MountainAir);
                 }

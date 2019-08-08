@@ -10,7 +10,15 @@
 
   <AdvancedEnergySources.label>Продвинутые источники энергии</AdvancedEnergySources.label>
   <AdvancedEnergySources.description>С помощью уникальных находок мы можем создать источники энергии, превосходящие наши в несколько раз.
-Открывает возможность строить уменьшенные версии реактора холодного синтеза и дугового.</AdvancedEnergySources.description>
+Открывает возможность создавать улучшенные батареи.</AdvancedEnergySources.description>
+
+  <EnergyGridBatteries.label>Аккумуляторы с использованием энергетических решеток</EnergyGridBatteries.label>
+  <EnergyGridBatteries.description>Использование энергетических решеток еще больше увеличело емкость.
+Открывает возможность создавать батареи на основе энергетической решетки.</EnergyGridBatteries.description>
+  
+  <NanotechnologyBatteries.label>Нанотехнологичные батареи</NanotechnologyBatteries.label>
+  <NanotechnologyBatteries.description>Использование нанотехнологий в создании аккумуляторов позволяет создать источник энергии, превосходящий любой предыдущий.
+Открывает возможность создавать Батареи с кремниевыми нанопроводами.</NanotechnologyBatteries.description>
 
   <BasicArmorImprovement.label>Базовое улучшение брони</BasicArmorImprovement.label>
   <BasicArmorImprovement.description>Мы можем улучшить броню, добавив новые модули, которые смогут улучшить её параметры.

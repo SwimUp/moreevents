@@ -35,10 +35,10 @@ namespace MoreEvents.Things
 
         private int[] levelHitPoints = new int[]
         {
-            5000,
-            4300,
-            3500,
-            2000
+            2000,
+            1000,
+            500,
+            200
         };
 
         private readonly float buildingDamageMultiplier = 0.7f;
@@ -64,8 +64,6 @@ namespace MoreEvents.Things
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-
-            spawnedMobs.Clear();
         }
 
         public override string GetInspectString()
@@ -233,7 +231,7 @@ namespace MoreEvents.Things
                 }
             }
 
-            if(!KingIsSpawn && this.HitPoints <= 2000)
+            if(!KingIsSpawn && this.HitPoints <= 500)
             {
                 PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveBeetleKing, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
                 Pawn pawn = PawnGenerator.GeneratePawn(request);
@@ -242,7 +240,7 @@ namespace MoreEvents.Things
                 KingIsSpawn = true;
             }
 
-            if(Rand.Chance(0.12f))
+            if(Rand.Chance(0.07f))
             {
                 SpawnMobs();
             }

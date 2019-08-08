@@ -9,7 +9,18 @@ namespace MoreEvents.Things.Mk1
     public class CompProperties_ArmorCore : CompProperties
     {
         public float PowerCapacity;
-        public string StationLabel;
+
+        public ThingDef Fuel;
+
+        public float FuelConsumption;
+
+        public float ChargingSpeed;
+
+        public int MaxFuel;
+
+        public float HeatSpeed;
+        public bool CanOverHeat;
+        public float CoolingRate;
 
         public CompProperties_ArmorCore()
         {

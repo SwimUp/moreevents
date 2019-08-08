@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>IronOre</defName>
+		<label>Iron ore</label>
+		<description>It is by mass the most common element on Earth, forming much of Earth's outer and inner core. It is the fourth most common element in the Earth's crust.
+
+Pristine and smooth pure iron surfaces are mirror-like silvery-gray. However, iron reacts readily with oxygen and water to give brown to black hydrated iron oxides, commonly known as rust. Unlike the oxides of some other metals, that form passivating layers, rust occupies more volume than the metal and thus flakes off, exposing fresh surfaces for corrosion.
+
+Iron ingots can be melted in a simple furnace.</description>
+		<graphicData>
+			<texPath>Things/Resources/IronOre</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>0.9</MarketValue>
+			<Mass>0.5</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>4</deepCommonality>
+		<deepCountPerPortion>25</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>20</min>
+			<max>30</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>IronIngot</defName>
+		<label>Iron ingot</label>
+		<description>Recycled Iron Ore. It can be used in other recipes, or to create things.
+		
+It is by mass the most common element on Earth, forming much of Earth's outer and inner core. It is the fourth most common element in the Earth's crust.
+
+Pristine and smooth pure iron surfaces are mirror-like silvery-gray. However, iron reacts readily with oxygen and water to give brown to black hydrated iron oxides, commonly known as rust. Unlike the oxides of some other metals, that form passivating layers, rust occupies more volume than the metal and thus flakes off, exposing fresh surfaces for corrosion.</description>
+		<graphicData>
+			<texPath>Things/Resources/IronIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>2.5</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.74</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.34</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>1.00</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(130,130,130)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.4</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>CopperOre</defName>
+		<label>Copper ore</label>
+		<description>A freshly exposed surface of pure copper has a pinkish-orange color. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.
+		
+Copper ingots can be melted in a simple furnace.</description>
+		<graphicData>
+			<texPath>Things/Resources/CopperOre</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>0.6</MarketValue>
+			<Mass>0.3</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>4</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>20</min>
+			<max>40</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>CopperIngot</defName>
+		<label>Copper ingot</label>
+		<description>Recycled Iron Ore. It can be used in other recipes, or to create things.
+		
+A freshly exposed surface of pure copper has a pinkish-orange color. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.</description>
+		<graphicData>
+			<texPath>Things/Resources/CopperIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.9</MarketValue>
+			<Mass>0.3</Mass>
+			<StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.28</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>1.00</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(189, 126, 17)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.55</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Coal</defName>
+		<label>Coal</label>
+		<description>Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams.</description>
+		<graphicData>
+			<texPath>Things/Resources/Coal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<MarketValue>0.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>5</Flammability>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>NickelOre</defName>
+		<label>Nickel ore</label>
+		<description>Nickel belongs to the transition metals and is hard and ductile. Pure nickel, powdered to maximize the reactive surface area, shows a significant chemical activity, but larger pieces are slow to react with air under standard conditions because an oxide layer forms on the surface and prevents further corrosion (passivation).
+		
+Nickel can be processed in an arc furnace.</description>
+		<graphicData>
+			<texPath>Things/Resources/NickelOre</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.2</MarketValue>
+			<Mass>0.45</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>2</deepCommonality>
+		<deepCountPerPortion>10</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>5</min>
+			<max>10</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>NickelIngot</defName>
+		<label>Nickel ingot</label>
+		<description>Recycled nickel ore. It can be used in other recipes, or to create things.
+		
+Nickel belongs to the transition metals and is hard and ductile. Pure nickel, powdered to maximize the reactive surface area, shows a significant chemical activity, but larger pieces are slow to react with air under standard conditions because an oxide layer forms on the surface and prevents further corrosion (passivation).</description>
+		<graphicData>
+			<texPath>Things/Resources/NickelIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>3.5</MarketValue>
+			<Mass>0.45</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CobaltIngot</defName>
+		<label>Cobalt ingot</label>
+		<description>Recycled nickel ore. It can be used in other recipes, or to create things.
+		
+Like nickel, cobalt is found in the Earth's crust only in chemically combined form, save for small deposits found in alloys of natural meteoric iron. The free element, produced by reductive smelting, is a hard, lustrous, silver-gray metal. </description>
+		<graphicData>
+			<texPath>Things/Resources/CobaltIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>2.5</MarketValue>
+			<Mass>0.35</Mass>
+			<StuffPower_Armor_Sharp>0.62</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.65</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(212, 201, 182)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>IlmeniteOre</defName>
+		<label>Ilmenite ore</label>
+		<description>Titanium is resistant to corrosion in sea water, aqua regia, and chlorine. 
+		
+The element occurs within a number of mineral deposits, principally rutile and ilmenite, which are widely distributed in the Earth's crust and lithosphere, and it is found in almost all living things, water bodies, rocks, and soils.
+		
+Ilmenite ingots can be melted in a simple furnace.</description>
+		<graphicData>
+			<texPath>Things/Resources/IlmeniteOre</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>3.0</MarketValue>
+			<Mass>0.2</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>1</deepCommonality>
+		<deepCountPerPortion>5</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>1</min>
+			<max>5</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>IlmeniteIngot</defName>
+		<label>Ilmenite ingot</label>
+		<description>Recycled Ilmenite Ore. It can be used in other recipes, or to create things.</description>
+		<graphicData>
+			<texPath>Things/Resources/IlmeniteIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>4.5</MarketValue>
+			<Mass>0.22</Mass>
+			<StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.55</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.12</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(171, 171, 171)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.25</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>PalladiumIngot</defName>
+		<label>Palladium ingot</label>
+		<description>Palladium is used in electronics, dentistry, medicine, hydrogen purification, chemical applications, groundwater treatment, and jewelry. Palladium is a key component of fuel cells, which react hydrogen with oxygen to produce electricity, heat, and water.</description>
+		<graphicData>
+			<texPath>Things/Resources/PalladiumIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>6.0</MarketValue>
+			<Mass>0.2</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Chromium</defName>
+		<label>Chromium</label>
+		<description>Chromium metal is of high value for its high corrosion resistance and hardness. A major development in steel production was the discovery that steel could be made highly resistant to corrosion and discoloration by adding metallic chromium to form stainless steel.</description>
+		<graphicData>
+			<texPath>Things/Resources/Chromium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+			<Mass>0.22</Mass>
+			<StuffPower_Armor_Sharp>0.84</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.6</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.10</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(196, 196, 196)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Tillium</defName>
+		<label>Tillium</label>
+		<description>Tillium is a metal similar to palladium and uranium, but less toxic and more effective. Outwardly it looks like white metal with black grains. The enrichment of palladium with uranium under high pressure allowed the development of a new radioactive metal. Without adding plasteel, it is unstable.</description>
+		<graphicData>
+			<texPath>Things/Resources/Tillium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>15.0</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CokeCoal</defName>
+		<label>Coke coal</label>
+		<description>Solid gray porous product obtained by coking of coal at temperatures of 950–1100 ° С without oxygen.</description>
+		<graphicData>
+			<texPath>Things/Resources/CokeCoal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<MarketValue>0.5</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>10</Flammability>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>

@@ -128,6 +128,11 @@ namespace MoreEvents.Things.Mk1
 
                 listener.Tick();
             }
+
+            if(CoreComp != null && CoreComp.Props.Fuel != null)
+            {
+                CoreComp.CompTick();
+            }
         }
 
         public void Notify_ModulesChanges()
@@ -479,6 +484,14 @@ namespace MoreEvents.Things.Mk1
             {
                 Apparel = this
             };
+
+            if (CoreComp != null)
+            {
+                foreach (var gizmo in CoreComp.CompGetGizmosExtra())
+                {
+                    yield return gizmo;
+                }
+            }
 
             foreach (var armorSlot in Slots)
             {

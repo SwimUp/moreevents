@@ -34,8 +34,6 @@ namespace RimOverhaul.Things
             {
                 Destroy();
             }
-
-            Log.Message($"{blownUp}");
         }
 
         public override void Tick()
@@ -53,9 +51,6 @@ namespace RimOverhaul.Things
             if (bomber != null)
             {
                 blownUp--;
-
-                Log.Message($"{blownUp}");
-
                 if (blownUp <= 0)
                 {
                     GoDestroy();

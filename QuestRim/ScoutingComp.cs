@@ -145,7 +145,7 @@ namespace QuestRim
                                 builder.Append("ScoutingComp_ThreatUnknown".Translate());
                             }
 
-                            float time = Rand.Range(daysToEvents[i2] * 0.7f, daysToEvents[i2] * 1.4f);
+                            float time = Rand.Range(daysToEvents[i2] * 1.02f, daysToEvents[i2] * 1.05f);
                             builder.Append("ScoutingComp_CommingTime".Translate(time.ToString("f2")));
                             builder.Append("\n");
                         }

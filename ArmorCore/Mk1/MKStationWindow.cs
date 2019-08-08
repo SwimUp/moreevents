@@ -340,7 +340,13 @@ namespace RimArmorCore.Mk1
                 Widgets.Label(new Rect(rect.x, rect.y + 108, rect.width, 35), "Station_CoreParam".Translate());
                 Text.Anchor = TextAnchor.UpperLeft;
 
-                Widgets.Label(new Rect(rect.x, rect.y + 135, rect.width, 60), "Station_CoreInfo".Translate(mkStation.ContainedArmor.CoreComp.PowerCapacity));
+                StringBuilder builder = new StringBuilder();
+                builder.Append("Station_CoreInfo".Translate(mkStation.ContainedArmor.CoreComp.PowerCapacity));
+                if(mkStation.ContainedArmor.CoreComp.Props.Fuel != null)
+                {
+                    builder.Append("Station_CoreInfoFuel".Translate(mkStation.ContainedArmor.CoreComp.Props.Fuel.LabelCap, mkStation.ContainedArmor.CoreComp.Props.ChargingSpeed));
+                }
+                Widgets.Label(new Rect(rect.x, rect.y + 135, rect.width, 60), builder.ToString());
 
                 GUI.DrawTexture(new Rect(108, rect.y + 43, 64, 64), ContentFinder<Texture2D>.Get(mkStation.ContainedArmor.Core.def.graphicData.texPath));
             }

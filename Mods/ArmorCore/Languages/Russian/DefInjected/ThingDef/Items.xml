@@ -3,6 +3,15 @@
  
   <ArmorBattareis.label>Блок аккумуляторов</ArmorBattareis.label>
   <ArmorBattareis.description>Самый простой источник энергии.</ArmorBattareis.description>
+  
+  <ImprovedArmorBattareis.label>Улучшенный блок аккумуляторов</ImprovedArmorBattareis.label>
+  <ImprovedArmorBattareis.description>Новые технологии хранения энергии позволили увеличить емкость.</ImprovedArmorBattareis.description>
+
+  <EnergyGridBatteries.label>Батареи на основе энергетической решетки</EnergyGridBatteries.label>
+  <EnergyGridBatteries.description>Передовые технологии позволили создать батареи большой емкости почти без увеличения размера.</EnergyGridBatteries.description>
+  
+  <SiliconNanowireBatteries.label>Батареи с кремниевыми нанопроводами</SiliconNanowireBatteries.label>
+  <SiliconNanowireBatteries.description>Батареи, в которых вместо графитовых анодов используются кремниевые нанопровода диаметром 100 нм и длиной в несколько микрон. Это позволило еще больше поднять емкость.</SiliconNanowireBatteries.description>
 
   <CondenserBatteries.label>Конденсаторные батареи</CondenserBatteries.label>
   <CondenserBatteries.description>Модуль для станции МК\n\nБлок батарей, которые медленно накапливают энергию. Используется как вторичный источник питания станции. Подзаряжает броню когда станция не подключена к основному источнику питания (при наличии заряда). Заряжается, когда питание у станции активно.\n\nСамые медленные и малоемкостные батареи.</CondenserBatteries.description>
@@ -94,6 +103,4 @@
   
   <EnergyBoots.label>Энергетические ботинки</EnergyBoots.label>
   <EnergyBoots.description>Модуль для брони\n\n\nОбувь, ускоряющая своего владельца за счет сильного сцепления с поверхностью и выпуска небольшого количества энергии. Увеличивает потребление энергии.</EnergyBoots.description>
-  
-  
 </LanguageData>

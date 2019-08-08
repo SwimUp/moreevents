@@ -36,14 +36,46 @@ It opens up the possibility of building the simplest source of energy - the batt
 		<defName>AdvancedEnergySources</defName>
 		<label>Advanced energy sources</label>
 		<description>With the help of unique finds, we can make energy sources several times superior to ours.
-It opens up the possibility of building smaller versions of a cold fusion and arc reactor.</description>
-		<baseCost>3800</baseCost>
+It opens up the possibility of create improved battery pack.</description>
+		<baseCost>3000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicEnergyStorage</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>2</researchViewX>
+		<researchViewY>6</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>EnergyGridBatteries</defName>
+		<label>Energy grid batteries</label>
+		<description>The use of energy gratings increased capacity even further.
+It opens up the possibility of create energy grid batteries.</description>
+		<baseCost>3800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>AdvancedEnergySources</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3</researchViewX>
+		<researchViewY>6</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>NanotechnologyBatteries</defName>
+		<label>Nanotechnology batteries</label>
+		<description>The use of nanotechnology in the creation of batteries allows you to create an energy source that surpasses any previous one.
+It opens up the possibility of create Silicon nanowire batteries.</description>
+		<baseCost>7000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>EnergyGridBatteries</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4</researchViewX>
 		<researchViewY>6</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>SmeltingIronIngots</defName>
+		<label>Smelt iron ingots</label>
+		<description>Melt iron ore to get iron ingots.</description>
+		<jobString>Smelts ingots</jobString>
+		<workAmount>1200</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronOre</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<IronIngot>10</IronIngot>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronOre</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>SmeltingCopperIngots</defName>
+		<label>Smelt copper ingots</label>
+		<description>Melt copper ore to get copper ingots.</description>
+		<jobString>Smelts ingots</jobString>
+		<workAmount>1200</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CopperOre</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<CopperIngot>10</CopperIngot>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CopperOre</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>SmeltingNickelIngots</defName>
+		<label>Smelt nickel ore</label>
+		<description>Melt nickel ore to get nickel ingots and cobalt ingots.</description>
+		<jobString>Smelts ingots</jobString>
+		<workAmount>2500</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>NickelOre</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<NickelIngot>5</NickelIngot>
+			<CobaltIngot>2</CobaltIngot>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>NickelOre</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>SmeltingPalladiumIngot</defName>
+		<label>Smelt Palladium Ingots</label>
+		<description>Smelting a palladium ingots by combining nickel, silver and copper</description>
+		<jobString>Smelts ingots</jobString>
+		<workAmount>3000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>NickelIngot</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CopperIngot</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<PalladiumIngot>5</PalladiumIngot>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>NickelOre</li>
+				<li>Silver</li>
+				<li>CopperIngot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>SmeltingTitanIngots</defName>
+		<label>Smelt titan ingots</label>
+		<description>Melt ilmenite ore to get titan ingots.</description>
+		<jobString>Smelts ingots</jobString>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IlmeniteOre</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<NickelIngot>5</NickelIngot>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IlmeniteOre</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>SmeltingChorium</defName>
+		<label>Smelt chormium</label>
+		<description>Melt chormium by combining iron and coke coal</description>
+		<jobString>Smelts ingots</jobString>
+		<workAmount>3200</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronIngot</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CokeCoal</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+			<Chromium>5</Chromium>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronIngot</li>
+				<li>CokeCoal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>BurnWoodToCoal</defName>
+		<label>Make charcoal</label>
+		<description>Get charcoal by burning wood</description>
+		<jobString>Making charcoal</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<Coal>10</Coal>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>SmeltingPlasteel</defName>
+		<label>Smelt plasteel</label>
+		<description>Get plasteel by combining steel, titan and cobalt</description>
+		<jobString>Smelting plasteel</jobString>
+		<workAmount>3500</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IlmeniteIngot</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CobaltIngot</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<Plasteel>20</Plasteel>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>CobaltIngot</li>
+				<li>IlmeniteIngot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>SmeltingSteel</defName>
+		<label>Smelt steel</label>
+		<description>Get steel by combining iron ingot and coal</description>
+		<jobString>Smelting steel</jobString>
+		<workAmount>2300</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronIngot</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Coal</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+		</ingredients>
+		<products>
+			<Steel>60</Steel>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronIngot</li>
+				<li>Coal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+</Defs>

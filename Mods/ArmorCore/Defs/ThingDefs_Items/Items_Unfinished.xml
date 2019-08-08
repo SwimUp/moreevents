@@ -30,8 +30,8 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>500</Steel>
-			<ComponentIndustrial>25</ComponentIndustrial>
+			<Steel>200</Steel>
+			<ComponentIndustrial>15</ComponentIndustrial>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -55,7 +55,276 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
 				<PowerCapacity>50</PowerCapacity>
-				<StationLabel>ColdFusionCore</StationLabel>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>ImprovedArmorBattareis</defName>
+		<label>Improved battery pack</label>
+		<description>New energy storage technologies increase capacity.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/ImprovedArmorBattareis</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>350</Steel>
+			<ComponentIndustrial>20</ComponentIndustrial>
+		</costList>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorCoreSpecial</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>4000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>80</PowerCapacity>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>EnergyGridBatteries</defName>
+		<label>Energy grid batteries</label>
+		<description>Advanced technology has created high-capacity batteries with almost no increase in size.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/EnergyGridBatteries</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyGridBatteries</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>350</Steel>
+			<ComponentIndustrial>20</ComponentIndustrial>
+		</costList>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorCoreSpecial</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>4000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>120</PowerCapacity>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>SiliconNanowireBatteries</defName>
+		<label>Silicon nanowire batteries</label>
+		<description>Batteries in which silicon nanowires with a diameter of 100 nm and a length of several microns are used instead of graphite anodes. This made it possible to further increase the capacity.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/SiliconNanowireBatteries</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>NanotechnologyBatteries</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>350</Steel>
+			<ComponentIndustrial>20</ComponentIndustrial>
+		</costList>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorCoreSpecial</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>4000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>200</PowerCapacity>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>MiniNuclearReactor</defName>
+		<label>minified nuclear reactor</label>
+		<description>Reduced nuclear reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects. Radioactive.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/ColdFusion/Core</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.5, 0.5)</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>250</Plasteel>
+			<Steel>500</Steel>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ColdFusionReactorHeath>1</ColdFusionReactorHeath>
+		</costList>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorCoreSpecial</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>4000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>4</Mass>
+		</statBases>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
+				<PowerCapacity>80</PowerCapacity>
+				<Fuel>Uranium</Fuel>
+				<FuelConsumption>0.1</FuelConsumption>
+				<ChargingSpeed>1</ChargingSpeed>
+				<MaxFuel>10</MaxFuel>
+				<CanOverHeat>true</CanOverHeat>
+				<HeatSpeed>0.5</HeatSpeed>
+				<CoolingRate>1</CoolingRate>
 			</li>
 		</comps>
 		<inspectorTabs>
@@ -124,7 +393,6 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
 				<PowerCapacity>100</PowerCapacity>
-				<StationLabel>ColdFusionCore</StationLabel>
 			</li>
 		</comps>
 		<inspectorTabs>
@@ -196,7 +464,6 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
 				<PowerCapacity>200</PowerCapacity>
-				<StationLabel>ArcReactorCore</StationLabel>
 			</li>
 		</comps>
 		<inspectorTabs>

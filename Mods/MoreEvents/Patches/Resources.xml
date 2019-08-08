@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MineableSteel"]/building</xpath>
+		<value>
+			<building>
+				<isResourceRock>true</isResourceRock>
+				<mineableThing>Steel</mineableThing>
+				<mineableYield>0</mineableYield>
+				<mineableScatterCommonality>0</mineableScatterCommonality>
+				<mineableScatterLumpSizeRange>
+					<min>0</min>
+					<max>0</max>
+				</mineableScatterLumpSizeRange>
+			</building>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MineablePlasteel"]/building</xpath>
+		<value>
+			<building>
+				<isResourceRock>true</isResourceRock>
+				<mineableThing>Plasteel</mineableThing>
+				<mineableYield>0</mineableYield>
+				<mineableScatterCommonality>0</mineableScatterCommonality>
+				<mineableScatterLumpSizeRange>
+					<min>0</min>
+					<max>0</max>
+				</mineableScatterLumpSizeRange>
+			</building>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Steel"]/stuffProps</xpath>
+		<value>
+			<stuffProps>
+				<categories>
+					<li>Metallic</li>
+				</categories>
+				<commonality>1.00</commonality>
+				<constructEffect>ConstructMetal</constructEffect>
+				<color>(130,130,130)</color>
+				<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+				<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+				<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+				<statFactors>
+					<MaxHitPoints>1</MaxHitPoints>
+					<Beauty>1</Beauty>
+					<Flammability>0.25</Flammability>
+				</statFactors>
+				<smeltable>true</smeltable>
+			</stuffProps>
+		</value>
+	</Operation>
+</Patch>

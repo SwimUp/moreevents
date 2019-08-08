@@ -11,8 +11,8 @@ namespace MoreEvents.Things.Mk1
 {
     public class JobDriver_CarryReactorToStation : JobDriver
     {
-        public Mk1PowerStation station;
-        public Thing core;
+        public Mk1PowerStation station => (Mk1PowerStation)TargetThingA;
+        public Thing core => TargetThingB;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -26,9 +26,6 @@ namespace MoreEvents.Things.Mk1
                 pawn = base.pawn;
                 target = job.GetTarget(TargetIndex.B).Thing;
                 job = base.job;
-
-                station = (Mk1PowerStation)TargetThingA;
-                core = TargetThingB;
 
                 result = (pawn.Reserve(target, job, 1, -1, null) ? 1 : 0);
             }
@@ -55,7 +52,7 @@ namespace MoreEvents.Things.Mk1
                 {
                     if (core != null)
                     {
-                        Apparel_Mk1 mk1 = station.ContainedArmor as Apparel_Mk1;
+                        Apparel_MkArmor mk1 = station.ContainedArmor as Apparel_MkArmor;
                         if (mk1 != null)
                         {
                             if (mk1.Core != null)
