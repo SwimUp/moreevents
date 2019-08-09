@@ -79,6 +79,54 @@ It opens up the possibility of create Silicon nanowire batteries.</description>
 		<researchViewY>6</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AutonomousEnergySources</defName>
+		<label>Autonomous energy sources</label>
+		<description>The creation of such an energy source that can itself restore the charge of energy using fuel without connecting to energy sources.
+Allows the creation of a minified nuclear reactor.</description>
+		<baseCost>8000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AdvancedEnergySources</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2</researchViewX>
+		<researchViewY>5</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>NextGenerationReactor</defName>
+		<label>Next generation reactor</label>
+		<description>Сreating a reactor based on cold fusion. It does not overheat, has great power.
+Allows you to create a minified cold fusion reactor.</description>
+		<baseCost>13000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AutonomousEnergySources</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3</researchViewX>
+		<researchViewY>5</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>OverclockedColdFusionReactor</defName>
+		<label>Overclocked cold fusion reactor</label>
+		<description>The use of new tillium fuel instead of palladium allowed the acceleration of the cold fusion reactor to obtain even more power output.
+Allows you to create an arc reactor.</description>
+		<baseCost>25000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>NextGenerationReactor</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4</researchViewX>
+		<researchViewY>5</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
 
 	<ResearchProjectDef>
 		<defName>BasicArmorImprovement</defName>

@@ -103,4 +103,8 @@
   
   <EnergyBoots.label>Энергетические ботинки</EnergyBoots.label>
   <EnergyBoots.description>Модуль для брони\n\n\nОбувь, ускоряющая своего владельца за счет сильного сцепления с поверхностью и выпуска небольшого количества энергии. Увеличивает потребление энергии.</EnergyBoots.description>
+
+  <MiniNuclearReactor.label>Уменьшенный ядерный реактор</MiniNuclearReactor.label>
+  <MiniNuclearReactor.description>Уменьшенный ядерный реактор. Все еще эффективен, но занимает гораздо меньше места, поэтому его можно использовать в более широком спектре объектов. Радиоактивный.</MiniNuclearReactor.description>
+  
 </LanguageData>

@@ -32,7 +32,7 @@
 	
 	<Station_NoCore>Ядро отсутствует</Station_NoCore>
 	<Station_CoreInfo>- Емкость: {0}</Station_CoreInfo>
-	<Station_CoreInfoFuel>\n- Топливо: {0}\n- Скорость зарядки: {1}</Station_CoreInfoFuel>
+	<Station_CoreInfoFuel>\n- Топливо: {0} ({1} / {2})\n- Скорость зарядки: {3}</Station_CoreInfoFuel>
 	<Station_CoreParam>Параметры ядра</Station_CoreParam>
 	<Station_InstallCore>Установить ядро</Station_InstallCore>
 	<Station_RemoveCore>Достать ядро</Station_RemoveCore>
@@ -94,5 +94,8 @@
 	<Core_ArmorCore_OverHeat_Desc>Топливо: {0}\n\nТоплива: {1} / {2}\nНажмите, чтобы переключить.\nОтображает степень перегрева реактора. Когда реактор активен, он заряжается. В неактивном состоянии вы по прежнему можете использовать костюм. Когда нагрев дойдет до 100%, то реактор на время будет выключен, пока температура не спадет минимум на половину.</Core_ArmorCore_OverHeat_Desc>
 	<UseReactorON>Включен</UseReactorON>
 	<UseReactorNO>Выключен</UseReactorNO>
+	
+	<Station_AddFuel>Заправить</Station_AddFuel>
+	<NoAvaliableFuel>Нет доступного топлива - {0}</NoAvaliableFuel>
 	
 </LanguageData>

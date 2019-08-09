@@ -32,8 +32,7 @@ namespace MoreEvents.Events.SiegeCamp
         private Map playerSiegeMap = null;
         public int MapSiegeTile = -1;
 
-        private int checkColonistTicker = 0;
-        private int checkColonistInterval = 5000;
+        private bool victory = false;
 
         public override void SpawnSetup()
         {
@@ -46,41 +45,23 @@ namespace MoreEvents.Events.SiegeCamp
             caravanAction = new CaravanVisitAction_SiegeCamp(this);
         }
 
-        public override void Tick()
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            base.Tick();
-
-            if (HasMap)
+            if (!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
             {
-                checkColonistTicker--;
-                if (checkColonistTicker <= 0)
+                if (!victory)
                 {
-                    checkColonistTicker = checkColonistInterval;
+                    comp.UpdateCamp();
 
-                    CheckColonistsNow();
+                    comp.Start();
                 }
+
+                alsoRemoveWorldObject = false;
+                return true;
             }
-        }
 
-        public void CheckColonistsNow()
-        {
-            List<Pawn> pawns = Map.mapPawns.FreeColonists.ToList();
-
-            int downedPawns = 0;
-            pawns.ForEach(delegate (Pawn p)
-            {
-                if (p.Downed || p.Dead || !p.Spawned)
-                {
-                    downedPawns++;
-                }
-            });
-
-            if (downedPawns == pawns.Count)
-            {
-                comp.UpdateCamp();
-
-                comp.Start();
-            }
+            alsoRemoveWorldObject = false;
+            return false;
         }
 
         public void SetMap(Map map)
@@ -111,7 +92,7 @@ namespace MoreEvents.Events.SiegeCamp
 
         public override bool CanLeave()
         {
-            if (GenHostility.AnyHostileActiveThreatToPlayer(this.Map))
+            if (AnyHostileOnMap(this.Map, Faction))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
@@ -120,9 +101,21 @@ namespace MoreEvents.Events.SiegeCamp
             return true;
         }
 
+        private bool AnyHostileOnMap(Map map, Faction enemyFaction)
+        {
+            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && !p.Dead && p.RaceProps.Humanlike).ToList();
+
+            if (enemyPawns == null || enemyPawns.Count == 0)
+                return false;
+
+            return true;
+        }
+
         public override void PreForceReform(MapParent mapParent)
         {
             comp.Start();
+
+            victory = true;
 
             RemoveAfterLeave = true;
 

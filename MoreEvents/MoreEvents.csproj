@@ -263,6 +263,7 @@
     <Compile Include="Things\ActiveDropPodPlus.cs" />
     <Compile Include="Things\Building_ClimateBomb.cs" />
     <Compile Include="Things\Building_TribalCrack.cs" />
+    <Compile Include="Things\Building_WorkTable_Animated.cs" />
     <Compile Include="Things\Doomsday\Building_DoomsdayGun.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />

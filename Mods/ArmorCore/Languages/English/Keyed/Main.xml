@@ -32,7 +32,7 @@
 	
 	<Station_NoCore>The core is missing</Station_NoCore>
 	<Station_CoreInfo>- Capacity: {0}</Station_CoreInfo>
-	<Station_CoreInfoFuel>\n- Fuel type: {0}\n- Charging speed: {1}</Station_CoreInfoFuel>
+	<Station_CoreInfoFuel>\n- Fuel type: {0} ({1} / {2})\n- Charging speed: {3}</Station_CoreInfoFuel>
 	<Station_CoreParam>Energy Core Parameters</Station_CoreParam>
 	<Station_InstallCore>Install Core</Station_InstallCore>
 	<Station_RemoveCore>Remove core</Station_RemoveCore>
@@ -93,5 +93,8 @@
 	<Core_ArmorCore_OverHeat_Desc>Fuel: {0} \n\nFuel: {1} / {2} \nPress to switch.\nDisplays the degree of overheating of the reactor. When the reactor is active, it is charging. When inactive, you can still use the suit. When the heating reaches 100%, the reactor will be turned off for a while until the temperature drops by at least half.</Core_ArmorCore_OverHeat_Desc>
 	<UseReactorON>Enabled</UseReactorON>
 	<UseReactorNO>Disabled</UseReactorNO>
+	
+	<Station_AddFuel>Refuel</Station_AddFuel>
+	<NoAvaliableFuel>No fuel available - {0}</NoAvaliableFuel>
 	
 </LanguageData>

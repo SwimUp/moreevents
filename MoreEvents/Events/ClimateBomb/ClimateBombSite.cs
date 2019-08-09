@@ -46,6 +46,19 @@ namespace MoreEvents.Events.ClimateBomb
             return true;
         }
 
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
+        {
+            if (!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
+            {
+                Comp.Bomb = null;
+                alsoRemoveWorldObject = false;
+                return true;
+            }
+
+            alsoRemoveWorldObject = false;
+            return false;
+        }
+
         public void DisarmBomb()
         {
             RemoveAfterLeave = true;
@@ -70,6 +83,7 @@ namespace MoreEvents.Events.ClimateBomb
                 Find.WorldObjects.Remove(this);
             }
         }
+
 
         public override void PreForceReform(MapParent mapParent)
         {

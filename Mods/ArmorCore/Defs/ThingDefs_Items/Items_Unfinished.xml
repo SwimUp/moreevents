@@ -264,7 +264,7 @@
 	<ThingDef>
 		<defName>MiniNuclearReactor</defName>
 		<label>minified nuclear reactor</label>
-		<description>Reduced nuclear reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects. Radioactive.</description>
+		<description>Minified nuclear reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects. Radioactive.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
 			<texPath>Things/Buildings/ColdFusion/Core</texPath>
@@ -284,9 +284,9 @@
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
+			<researchPrerequisite>AutonomousEnergySources</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -319,8 +319,8 @@
 			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
 				<PowerCapacity>80</PowerCapacity>
 				<Fuel>Uranium</Fuel>
-				<FuelConsumption>0.1</FuelConsumption>
-				<ChargingSpeed>1</ChargingSpeed>
+				<FuelConsumption>0.04</FuelConsumption>
+				<ChargingSpeed>0.2</ChargingSpeed>
 				<MaxFuel>10</MaxFuel>
 				<CanOverHeat>true</CanOverHeat>
 				<HeatSpeed>0.5</HeatSpeed>
@@ -339,7 +339,7 @@
 	<ThingDef>
 		<defName>MiniColdFusionReactor</defName>
 		<label>minified cold fusion reactor</label>
-		<description>Reduced cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</description>
+		<description>Minified cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
 			<texPath>Things/Buildings/ColdFusion/Core</texPath>
@@ -359,9 +359,9 @@
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
+			<researchPrerequisite>NextGenerationReactor</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>17</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -393,6 +393,11 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
 				<PowerCapacity>100</PowerCapacity>
+				<Fuel>PalladiumIngot</Fuel>
+				<FuelConsumption>0.05</FuelConsumption>
+				<ChargingSpeed>0.33</ChargingSpeed>
+				<MaxFuel>15</MaxFuel>
+				<CanOverHeat>false</CanOverHeat>
 			</li>
 		</comps>
 		<inspectorTabs>
@@ -407,7 +412,7 @@
 	<ThingDef>
 		<defName>MiniArcReactor</defName>
 		<label>minified arc reactor</label>
-		<description>Reduced arc reactor. More effective than a cold fusion reactor, is its direct modification.</description>
+		<description>Minified arc reactor. More effective than a cold fusion reactor, is its direct modification.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
 			<texPath>Things/Buildings/ColdFusionPro/Core</texPath>
@@ -444,9 +449,9 @@
 					<li>Root</li>
 				</categories>
 			</defaultIngredientFilter>
-			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
+			<researchPrerequisite>OverclockedColdFusionReactor</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>20</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
@@ -464,6 +469,11 @@
 			<li Class="CompProperties_Forbiddable"/>
 			<li Class="MoreEvents.Things.Mk1.CompProperties_ArmorCore">
 				<PowerCapacity>200</PowerCapacity>
+				<Fuel>Tillium</Fuel>
+				<FuelConsumption>0.055</FuelConsumption>
+				<ChargingSpeed>0.4</ChargingSpeed>
+				<MaxFuel>20</MaxFuel>
+				<CanOverHeat>false</CanOverHeat>
 			</li>
 		</comps>
 		<inspectorTabs>

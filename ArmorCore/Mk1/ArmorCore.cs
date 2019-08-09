@@ -38,7 +38,7 @@ namespace MoreEvents.Things.Mk1
         {
             base.CompTick();
 
-            if (Find.TickManager.TicksGame % 200 == 0)
+            if (Find.TickManager.TicksGame % 300 == 0)
             {
                 if(isOverHeat || !UseReactor)
                 {
@@ -74,7 +74,7 @@ namespace MoreEvents.Things.Mk1
             yield return new Command_Action()
             {
                 defaultLabel = "Core_ArmorCore_OverHeat".Translate(UseReactor ? "UseReactorON".Translate() : "UseReactorNO".Translate(), OverHeat),
-                defaultDesc = "Core_ArmorCore_OverHeat_Desc".Translate(Props.Fuel.LabelCap, Fuel, Props.MaxFuel),
+                defaultDesc = "Core_ArmorCore_OverHeat_Desc".Translate(Props.Fuel.LabelCap, Fuel.ToString("f2"), Props.MaxFuel),
                 icon = parent.def.uiIcon,
                 action = delegate
                 {

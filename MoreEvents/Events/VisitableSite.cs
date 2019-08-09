@@ -95,7 +95,7 @@ namespace MoreEvents.Events
                 Current.Game.CurrentMap = mapParent.Map;
                 Dialog_FormCaravan window = new Dialog_FormCaravan(mapParent.Map, reform: true, delegate
                 {
-                    if (RemoveAfterLeave && mapParent.HasMap)
+                    if (RemoveAfterLeave)
                     {
                         Find.WorldObjects.Remove(mapParent);
                     }

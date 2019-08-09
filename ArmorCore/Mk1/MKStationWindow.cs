@@ -286,7 +286,7 @@ namespace RimArmorCore.Mk1
             Widgets.DrawHighlightIfMouseover(r2);
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            if (DrawCustomButton(new Rect(10, rect.y + 210, 260, 30), "Station_InstallCore".Translate(), mkStation.ContainedArmor.Core == null ? Color.white : Color.grey))
+            if (DrawCustomButton(new Rect(10, rect.y + 210, 260, 20), "Station_InstallCore".Translate(), mkStation.ContainedArmor.Core == null ? Color.white : Color.grey))
             {
                 if (mkStation.ContainedArmor.Core != null)
                     return;
@@ -314,7 +314,7 @@ namespace RimArmorCore.Mk1
 
                 Find.WindowStack.Add(new FloatMenu(list));
             }
-            if (DrawCustomButton(new Rect(10, rect.y + 250, 260, 30), "Station_RemoveCore".Translate(), mkStation.ContainedArmor.Core == null ? Color.grey : Color.white))
+            if (DrawCustomButton(new Rect(10, rect.y + 235, 260, 20), "Station_RemoveCore".Translate(), mkStation.ContainedArmor.Core == null ? Color.grey : Color.white))
             {
                 if (mkStation.ContainedArmor.Core == null)
                     return;
@@ -323,6 +323,39 @@ namespace RimArmorCore.Mk1
                 {
                     GenSpawn.Spawn(mkStation.ContainedArmor.Core, result, mkStation.Map);
                     mkStation.ContainedArmor.Core = null;
+                    mkStation.ContainedArmor.CoreComp = null;
+                }
+            }
+            Color color = Color.grey;
+            if (mkStation.ContainedArmor.CoreComp != null)
+            {
+                if(mkStation.ContainedArmor.CoreComp.Props.Fuel != null && mkStation.ContainedArmor.CoreComp.Fuel < mkStation.ContainedArmor.CoreComp.Props.MaxFuel)
+                {
+                    color = Color.white;
+                }
+            }
+            if (DrawCustomButton(new Rect(10, rect.y + 260, 260, 20), "Station_AddFuel".Translate(), color))
+            {
+                if (mkStation.ContainedArmor.CoreComp == null)
+                    return;
+
+                if (mkStation.ContainedArmor.CoreComp.Props.Fuel == null)
+                    return;
+
+                if (mkStation.ContainedArmor.CoreComp.Fuel >= mkStation.ContainedArmor.CoreComp.Props.MaxFuel)
+                    return;
+
+                ThingDef fuelDef = mkStation.ContainedArmor.CoreComp.Props.Fuel;
+
+                if (GetFuel(fuelDef, out List<Thing> things))
+                {
+                    RefuelCore(things, fuelDef);
+                }
+                else
+                {
+                    Messages.Message("NoAvaliableFuel".Translate(fuelDef.LabelCap), MessageTypeDefOf.NeutralEvent, false);
+                    Text.Anchor = TextAnchor.UpperLeft;
+                    return;
                 }
             }
             Text.Anchor = TextAnchor.UpperLeft;
@@ -344,12 +377,55 @@ namespace RimArmorCore.Mk1
                 builder.Append("Station_CoreInfo".Translate(mkStation.ContainedArmor.CoreComp.PowerCapacity));
                 if(mkStation.ContainedArmor.CoreComp.Props.Fuel != null)
                 {
-                    builder.Append("Station_CoreInfoFuel".Translate(mkStation.ContainedArmor.CoreComp.Props.Fuel.LabelCap, mkStation.ContainedArmor.CoreComp.Props.ChargingSpeed));
+                    builder.Append("Station_CoreInfoFuel".Translate(mkStation.ContainedArmor.CoreComp.Props.Fuel.LabelCap, mkStation.ContainedArmor.CoreComp.Fuel.ToString("f2"), mkStation.ContainedArmor.CoreComp.Props.MaxFuel, mkStation.ContainedArmor.CoreComp.Props.ChargingSpeed));
                 }
+                Text.Font = GameFont.Tiny;
                 Widgets.Label(new Rect(rect.x, rect.y + 135, rect.width, 60), builder.ToString());
+                Text.Font = GameFont.Small;
 
                 GUI.DrawTexture(new Rect(108, rect.y + 43, 64, 64), ContentFinder<Texture2D>.Get(mkStation.ContainedArmor.Core.def.graphicData.texPath));
             }
+        }
+        private bool GetFuel(ThingDef filter, out List<Thing> fuelList)
+        {
+            fuelList = mkStation.Map.listerThings.ThingsOfDef(filter);
+
+            if (fuelList.Count == 0)
+                return false;
+
+            return true;
+        }
+
+        private void RefuelCore(List<Thing> things, ThingDef fuelDef)
+        {
+            ThingFilter filter = new ThingFilter();
+            filter.SetAllow(fuelDef, true);
+
+            Predicate<Thing> predicate = delegate (Thing x)
+            {
+                if (x.IsForbidden(SelPawn) || !SelPawn.CanReserve(x))
+                {
+                    return false;
+                }
+                if (!filter.Allows(x))
+                {
+                    return false;
+                }
+                return true;
+            };
+
+            Thing bestFuel = GenClosest.ClosestThingReachable(mkStation.Position, mkStation.Map, filter.BestThingRequest, PathEndMode.ClosestTouch, TraverseParms.For(SelPawn), 9999f, predicate);
+
+            Job job = new Job(JobDefOfLocal.RefuelArmorCore, mkStation, bestFuel);
+
+            int toRefuel = (int)(mkStation.ContainedArmor.CoreComp.Props.MaxFuel - mkStation.ContainedArmor.CoreComp.Fuel);
+            int num = Mathf.Min(toRefuel, bestFuel.stackCount);
+
+            job.count = num;
+            SelPawn.jobs.TryTakeOrderedJob(job);
+
+            Close();
+
         }
 
         private void DrawStation(Rect rect)

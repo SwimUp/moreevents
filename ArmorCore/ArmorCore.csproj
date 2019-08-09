@@ -71,6 +71,7 @@
     <Compile Include="Mk1\Gizmo_FillableMk1.cs" />
     <Compile Include="Mk1\IncompatibleModulesComp.cs" />
     <Compile Include="Mk1\ITab_ModifyMk1.cs" />
+    <Compile Include="Mk1\Jobs\JobDriver_RefuelArmorCore.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_SetupModuleForArmor.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_SetupModule.cs" />
     <Compile Include="Mk1\Jobs\JobDriver_OpenStation.cs" />

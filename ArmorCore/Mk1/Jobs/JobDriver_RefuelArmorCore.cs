@@ -9,10 +9,10 @@ using Verse.AI;
 
 namespace MoreEvents.Things.Mk1
 {
-    public class JobDriver_CarryReactorToStation : JobDriver
+    public class JobDriver_RefuelArmorCore : JobDriver
     {
         public Mk1PowerStation station => (Mk1PowerStation)TargetThingA;
-        public Thing core => TargetThingB;
+        public Thing item => TargetThingB;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -50,21 +50,15 @@ namespace MoreEvents.Things.Mk1
             {
                 initAction = delegate
                 {
-                    if (core != null)
+                    if (item != null)
                     {
                         Apparel_MkArmor mk1 = station.ContainedArmor;
                         if (mk1 != null)
                         {
-                            if (mk1.Core != null)
-                            {
-                                CellFinder.TryFindRandomCellNear(station.Position, station.Map, 2, null, out IntVec3 result);
-                                GenSpawn.Spawn(mk1.Core, result, station.Map);
-                                mk1.Core = null;
-                            }
-
-                            mk1.ChangeCore(core);
-                            pawn.carryTracker.TryDropCarriedThing(pawn.Position, ThingPlaceMode.Near, out Thing t);
-                            core.DeSpawn();
+                            int toRefuel = (int)(mk1.CoreComp.Props.MaxFuel - mk1.CoreComp.Fuel);
+                            int num = Mathf.Min(toRefuel, item.stackCount);
+                            item.SplitOff(num).Destroy();
+                            mk1.CoreComp.AddFuel(num);
                         }
                     }
                 },

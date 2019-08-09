@@ -16,5 +16,6 @@ namespace RimArmorCore
         public static JobDef OpenStation;
         public static JobDef SetupModuleForStation;
         public static JobDef SetupModuleForArmor;
+        public static JobDef RefuelArmorCore;
     }
 }

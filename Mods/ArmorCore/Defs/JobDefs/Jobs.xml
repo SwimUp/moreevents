@@ -37,4 +37,10 @@
 		<reportString>improves the armor</reportString>
 	</JobDef>
 
+	<JobDef>
+		<defName>RefuelArmorCore</defName>
+		<driverClass>MoreEvents.Things.Mk1.JobDriver_RefuelArmorCore</driverClass>
+		<reportString>carries fuel for the core</reportString>
+	</JobDef>
+
 </Defs>
