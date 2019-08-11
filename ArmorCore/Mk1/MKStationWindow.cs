@@ -193,7 +193,7 @@ namespace RimArmorCore.Mk1
                 moduleRect.x += 140;
             }
 
-            Rect fullInfoRect = new Rect(875, rect.y + 5, 200, rect.height - 10);
+            Rect fullInfoRect = new Rect(875, rect.y + 5, 195, rect.height - 10);
             StringBuilder builder = new StringBuilder();
             foreach(var armorSlot in mkStation.ContainedArmor.Slots)
             {

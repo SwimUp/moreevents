@@ -37,7 +37,8 @@ namespace MoreEvents.Events
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Faction faction = GetFaction();
-            if (!Find.WorldObjects.Settlements.Where(x => x.Faction == faction).TryRandomElement(out Settlement factionBase))
+            if (!Find.WorldObjects.Settlements.Where(x => x.Faction == faction
+            && CaravanArrivalTimeEstimator.EstimatedTicksToArrive(Find.AnyPlayerHomeMap.Tile, x.Tile, null).TicksToDays() < 6).TryRandomElement(out Settlement factionBase))
                 return false;
 
             List<int> neighbors = new List<int>();

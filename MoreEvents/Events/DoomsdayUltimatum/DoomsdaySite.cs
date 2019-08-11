@@ -38,8 +38,11 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             if (!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
             {
-                var letter = LetterMaker.MakeLetter("YourAttackWasRepelledTitle".Translate(), "YourAttackWasRepelledDesc".Translate(), LetterDefOf.NeutralEvent);
-                Find.LetterStack.ReceiveLetter(letter);
+                if (Weapon != null && !Weapon.WeaponDeactivated)
+                {
+                    var letter = LetterMaker.MakeLetter("YourAttackWasRepelledTitle".Translate(), "YourAttackWasRepelledDesc".Translate(), LetterDefOf.NeutralEvent);
+                    Find.LetterStack.ReceiveLetter(letter);
+                }
 
                 alsoRemoveWorldObject = false;
                 return true;
@@ -95,7 +98,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                 return false;
             }
 
-            if (!Weapon.WeaponDeactivated)
+            if (Weapon != null && !Weapon.WeaponDeactivated)
             {
                 Messages.Message(Translator.Translate("WeaponDeactivated"), MessageTypeDefOf.NeutralEvent, false);
                 return false;

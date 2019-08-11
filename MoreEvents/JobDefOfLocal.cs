@@ -21,5 +21,9 @@ namespace MoreEvents
         public static JobDef SpeakWithPawn;
 
         public static JobDef DestroyTribalCrack;
+
+        public static JobDef CarryItemToCokeFurnace;
+        public static JobDef SwitchCokeFurnace;
+        public static JobDef TakeResultFromCokeFurnace;
     }
 }

@@ -10,7 +10,7 @@ namespace RandomPlaces
     {
         public CompProperties_TriggerFermBunker()
         {
-            compClass = typeof(CompTriggerGenNewMap);
+            compClass = typeof(CompTriggerFermBunker);
         }
     }
 }

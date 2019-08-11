@@ -11,5 +11,8 @@
   <SpeakWithQuester.reportString>Обсуждает задания</SpeakWithQuester.reportString>
   <SpeakWithPawn.reportString>общается</SpeakWithPawn.reportString>
   <DestroyTribalCrack.reportString>идет взрывать туннель</DestroyTribalCrack.reportString>
-  
+  <CarryItemToCokeFurnace.reportString>несет предмет для коксовой печи</CarryItemToCokeFurnace.reportString>
+  <SwitchCokeFurnace.reportString>переключает коксовую печь</SwitchCokeFurnace.reportString>
+  <TakeResultFromCokeFurnace.reportString>достает предмет из коксовой печи</TakeResultFromCokeFurnace.reportString>
+
 </LanguageData>

@@ -71,16 +71,19 @@ namespace MoreEvents.Things.Mk1
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            yield return new Command_Action()
+            if (Props.Fuel != null)
             {
-                defaultLabel = "Core_ArmorCore_OverHeat".Translate(UseReactor ? "UseReactorON".Translate() : "UseReactorNO".Translate(), OverHeat),
-                defaultDesc = "Core_ArmorCore_OverHeat_Desc".Translate(Props.Fuel.LabelCap, Fuel.ToString("f2"), Props.MaxFuel),
-                icon = parent.def.uiIcon,
-                action = delegate
+                yield return new Command_Action()
                 {
-                    UseReactor = !UseReactor;
-                }
-            };
+                    defaultLabel = "Core_ArmorCore_OverHeat".Translate(UseReactor ? "UseReactorON".Translate() : "UseReactorNO".Translate(), OverHeat),
+                    defaultDesc = "Core_ArmorCore_OverHeat_Desc".Translate(Props.Fuel.LabelCap, Fuel.ToString("f2"), Props.MaxFuel),
+                    icon = parent.def.uiIcon,
+                    action = delegate
+                    {
+                        UseReactor = !UseReactor;
+                    }
+                };
+            }
         }
 
         public void AddFuel(int count)

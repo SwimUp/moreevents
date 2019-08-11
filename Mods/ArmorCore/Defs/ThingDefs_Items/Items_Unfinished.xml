@@ -267,9 +267,9 @@
 		<description>Minified nuclear reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects. Radioactive.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>Things/Buildings/ColdFusion/Core</texPath>
+			<texPath>ArmorModules/MiniNuclearReactor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(0.5, 0.5)</drawSize>
+			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -342,9 +342,9 @@
 		<description>Minified cold fusion reactor. Still effective, but takes up much less space, so it can be used in a wider range of objects.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>Things/Buildings/ColdFusion/Core</texPath>
+			<texPath>ArmorModules/MiniColdFusionReactor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(0.5, 0.5)</drawSize>
+			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -415,9 +415,9 @@
 		<description>Minified arc reactor. More effective than a cold fusion reactor, is its direct modification.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>Things/Buildings/ColdFusionPro/Core</texPath>
+			<texPath>ArmorModules/MiniArcReactor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(0.5, 0.5)</drawSize>
+			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<category>Item</category>
 		<thingCategories>

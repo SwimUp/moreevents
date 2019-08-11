@@ -29,6 +29,18 @@ namespace RandomPlaces
             RandomPlacesHandler.InitPlaces();
         }
 
+        public override void LoadedGame()
+        {
+            base.LoadedGame();
+
+            if(RandomPlacesHandler == null)
+            {
+                RandomPlacesHandler = new RandomPlacesHandler();
+
+                RandomPlacesHandler.InitPlaces();
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

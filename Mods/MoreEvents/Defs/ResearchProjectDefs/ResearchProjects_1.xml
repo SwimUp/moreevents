@@ -11,6 +11,7 @@ Allows smelting of iron and copper ingots in a simple furnace.</description>
     <techLevel>Neolithic</techLevel>
     <tags>
       <li>TribalStart</li>
+      <li>ClassicStart</li>
     </tags>
     <researchViewX>0</researchViewX>
     <researchViewY>0</researchViewY>

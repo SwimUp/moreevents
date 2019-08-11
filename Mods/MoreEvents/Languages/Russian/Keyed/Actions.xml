@@ -1,4 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <RelationChangeDialog>Отношения c {0} изменились на {1}</RelationChangeDialog>
+  <TabCokeFurnace>Печь</TabCokeFurnace>
+  <CheckRecipes>Создать: {0}</CheckRecipes>
+  <CockeFurnace_Ingedients>Ингредиенты</CockeFurnace_Ingedients>
+  <CokeFurnace_CarryItem>Принести {0} (осталось {1})</CokeFurnace_CarryItem>
+  <CokeFurnace_CarryItem_NoItem> (нет на складе)</CokeFurnace_CarryItem_NoItem>
+  <CokeFurnace_StartFire>Зажечь печь</CokeFurnace_StartFire>
+  <CokeFurnace_off>Потушить печь</CokeFurnace_off>
+  <CokeFurnace_Started>Печь активна. Потушите, нажав ПКМ выбранным колонистов.</CokeFurnace_Started>
+  <CokeFurnace_Active>Активно. Осталось {0} дней.</CokeFurnace_Active>
+  <CokeFurnace_Inactive>Неактивно.</CokeFurnace_Inactive>
+  <CokeFurnace_TakeItem>ГОТОВО</CokeFurnace_TakeItem>
+  <CokeFurnace_TakeItem2>Достать {0}</CokeFurnace_TakeItem2>
+  
 </LanguageData>

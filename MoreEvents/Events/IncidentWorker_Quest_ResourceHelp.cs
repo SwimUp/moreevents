@@ -48,7 +48,8 @@ namespace MoreEvents.Events
                 return false;
 
             Faction faction = GetFaction();
-            List<Settlement> factionBases = Find.WorldObjects.Settlements.Where(x => x.Faction == faction).ToList();
+            List<Settlement> factionBases = Find.WorldObjects.Settlements.Where(x => x.Faction == faction
+            && CaravanArrivalTimeEstimator.EstimatedTicksToArrive(Find.AnyPlayerHomeMap.Tile, x.Tile, null).TicksToDays() < 7).ToList();
 
             if (factionBases.Count == 0)
                 return false;

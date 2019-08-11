@@ -12,7 +12,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
     {
         public int Timer;
 
-        public DoomsdaySite Parent;
+        public DoomsdaySite Parent => (DoomsdaySite)parent;
 
         private bool end = false;
 
@@ -46,10 +46,6 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         public bool SupportFormed => HelpingFactions.Count == MaxFactions;
         private string helpFactionList = string.Empty;
 
-        public DoomsdayUltimatumComp()
-        {
-            Parent = (DoomsdaySite)parent;
-        }
 
         public void SetTimer(int days) => Timer = days * 60000;
 
@@ -74,7 +70,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             base.CompTick();
 
-            if (Parent != null && Parent.Weapon.WeaponDeactivated)
+            if (Parent.Weapon == null || Parent.Weapon.WeaponDeactivated)
                 return;
 
             Timer--;

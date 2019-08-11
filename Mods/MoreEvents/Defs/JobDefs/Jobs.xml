@@ -42,5 +42,23 @@
 		<driverClass>RimOverhaul.AI.JobDriver_DestroyTribalCrack</driverClass>
 		<reportString>going to blow up the tunnel</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>CarryItemToCokeFurnace</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_CarryItemToFurnace</driverClass>
+		<reportString>carryies item to coke furnace</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>SwitchCokeFurnace</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_SwitchCokeFurnace</driverClass>
+		<reportString>switches coke furnace</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>TakeResultFromCokeFurnace</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_TakeItemFromCokeFurnace</driverClass>
+		<reportString>takes thing from a coke furnace</reportString>
+	</JobDef>
 
 </Defs>

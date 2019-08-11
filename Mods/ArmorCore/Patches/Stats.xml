@@ -1,162 +1,179 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="MeleeDodgeChance"]/skillNeedOffsets</xpath>
-		<value>
-			<parts>
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MeleeDodgeChance"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="MeleeHitChance"]/skillNeedOffsets</xpath>
-		<value>
-			<parts>
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="MeleeHitChance"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MeleeHitChance"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MeleeHitChance"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="ShootingAccuracyPawn"]/skillNeedOffsets</xpath>
-		<value>
-			<parts>
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="ShootingAccuracyPawn"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="ShootingAccuracyPawn"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="PainShockThreshold"]/toStringStyle</xpath>
-		<value>
-			<parts>
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="PainShockThreshold"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="PainShockThreshold"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="PainShockThreshold"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="MoveSpeed"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_Glow">
-					<humanlikeOnly>true</humanlikeOnly>
-					<factorFromGlowCurve>
-						<points>
-							<li>(0,0.80)</li>
-							<li>(0.30,1.00)</li>
-						</points>
-					</factorFromGlowCurve>
-				</li>
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="ComfyTemperatureMin"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_ApparelStatOffset">
-					<apparelStat>Insulation_Cold</apparelStat>
-					<subtract>true</subtract>
-				</li>
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="ComfyTemperatureMax"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_ApparelStatOffset">
-					<apparelStat>Insulation_Heat</apparelStat>
-				</li>
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="CarryingCapacity"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_BodySize" />
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="AimingDelayFactor"]/showOnAnimals</xpath>
-		<value>
-			<parts>
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="AimingDelayFactor"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="AimingDelayFactor"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
-	</Operation>	
+			</value>
+		</match>
+	</Operation>
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="MeleeDPS"]/toStringStyle</xpath>
-		<value>
-			<parts>
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="MeleeDPS"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MeleeDPS"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MeleeDPS"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
-	</Operation>	
+			</value>
+		</match>
+	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="ArmorRating_Sharp"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_Stuff">
-					<priority>100</priority>
-					<stuffPowerStat>StuffPower_Armor_Sharp</stuffPowerStat>
-					<multiplierStat>StuffEffectMultiplierArmor</multiplierStat>
-				</li>
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="ArmorRating_Blunt"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_Stuff">
-					<priority>100</priority>
-					<stuffPowerStat>StuffPower_Armor_Blunt</stuffPowerStat>
-					<multiplierStat>StuffEffectMultiplierArmor</multiplierStat>
-				</li>
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>*/StatDef[defName="ArmorRating_Heat"]/parts</xpath>
 		<value>
-			<parts>
-				<li Class="StatPart_Stuff">
-					<priority>100</priority>
-					<stuffPowerStat>StuffPower_Armor_Heat</stuffPowerStat>
-					<multiplierStat>StuffEffectMultiplierArmor</multiplierStat>
-				</li>
-				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
+			<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
 		</value>
 	</Operation>
-	
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/StatDef[defName="MiningSpeed"]/scenarioRandomizable</xpath>
-		<value>
-			<parts>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="MiningSpeed"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MiningSpeed"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="MiningSpeed"]/parts</xpath>
+			<value>
 				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
-			</parts>
-		</value>
-	</Operation>	
+			</value>
+		</match>
+	</Operation>
 
 </Patch>

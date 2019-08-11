@@ -36,6 +36,9 @@ namespace QuestRim
                     int num = Mathf.Min(remaining, item.stackCount);
                     item.SplitOff(num).Destroy();
                     remaining -= num;
+
+                    if (remaining == 0)
+                        break;
                 }
 
                 Success(interaction.Faction, speaker);

@@ -61,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\DutyDefOfLocal.cs" />
+    <Compile Include="AI\JobDriver_CarryItemToFurnace.cs" />
+    <Compile Include="AI\JobDriver_TakeItemFromCokeFurnace.cs" />
+    <Compile Include="AI\JobDriver_SwitchCokeFurnace.cs" />
     <Compile Include="AI\JobDriver_DestroyTribalCrack.cs" />
     <Compile Include="AI\JobDriver_FireAround.cs" />
     <Compile Include="AI\JobDriver_SpeakWithPawn.cs" />
@@ -264,12 +267,16 @@
     <Compile Include="Things\Building_ClimateBomb.cs" />
     <Compile Include="Things\Building_TribalCrack.cs" />
     <Compile Include="Things\Building_WorkTable_Animated.cs" />
+    <Compile Include="Things\Building_WorkTable_AnimatedHeatPush.cs" />
+    <Compile Include="Things\CokeFurnace\Building_CokeFurnace.cs" />
+    <Compile Include="Things\CokeFurnace\ITab_CokeFurnace.cs" />
     <Compile Include="Things\Doomsday\Building_DoomsdayGun.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
     <Compile Include="Things\DropPodIncomingPlus.cs" />
+    <Compile Include="Things\RecipeDefOfLocal.cs" />
     <Compile Include="Things\SkyfallerPlus.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />

@@ -4,4 +4,10 @@
 	<SimpleFurnace.label>Простая печь</SimpleFurnace.label>
 	<SimpleFurnace.description>Простая кузнечная печь для переплавки простых руд, таких как железо, медь.</SimpleFurnace.description>
 	
+	<CokeFurnace.label>Коксовая печь</CokeFurnace.label>
+	<CokeFurnace.description>Герметичная печь для получения коксового угля и стали.</CokeFurnace.description>
+	
+	<ArcFurnace.label>Электродуговая печь</ArcFurnace.label>
+	<ArcFurnace.description>Электродуговая печь предназначена для обработки продвинутых руд и получения продвинутых сплавов.</ArcFurnace.description>
+	
 </LanguageData>
