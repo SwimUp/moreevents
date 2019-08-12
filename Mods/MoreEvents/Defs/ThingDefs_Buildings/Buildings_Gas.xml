@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="BuildingBase" Name="GasPipe">
+	<ThingDef Name="GasPipe">
 		<defName>GasPipeline</defName>
 		<label>gas pipeline</label>
+		<drawerType>MapMeshAndRealTime</drawerType>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
 		<description>A bundle of electrical cables for moving power around. Can be placed under walls and other buildings.</description>
 		<thingClass>RimOverhaul.Gas.Building_Pipe</thingClass>
 		<category>Building</category>
 		<graphicData>
-			<texPath>Things/Building/Linked/PowerConduit_Atlas</texPath>
+			<texPath>Things/Buildings/GasPipe/PipeOverlay_Atlas</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<linkType>Basic</linkType>
 			<linkFlags>
-				<li>Custom10</li>
+				<li>Custom6</li>
 			</linkFlags>
 			<damageData>
 				<rect>(0,0.35,1,0.3)</rect>
@@ -21,14 +23,12 @@
 		<uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
 		<uiIconScale>0.7</uiIconScale>
 		<building>
-			<ai_chillDestination>false</ai_chillDestination>
 			<isInert>true</isInert>
 			<isEdifice>false</isEdifice>
 			<blueprintGraphicData>
-				<texPath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</texPath>
+				<texPath>Things/Buildings/GasPipe/PipeOverlay_Atlas</texPath>
 			</blueprintGraphicData>
 		</building>
-		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Standable</passability>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<statBases>

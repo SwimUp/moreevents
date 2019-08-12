@@ -12,7 +12,7 @@
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>0</researchViewX>
-		<researchViewY>6</researchViewY>
+		<researchViewY>2.96</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 
@@ -27,8 +27,8 @@ It opens up the possibility of building the simplest source of energy - the batt
 			<li>EnergyArmorResearch</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1</researchViewX>
-		<researchViewY>6</researchViewY>
+		<researchViewX>0.97</researchViewX>
+		<researchViewY>3.83</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 
@@ -43,8 +43,8 @@ It opens up the possibility of create improved battery pack.</description>
 			<li>BasicEnergyStorage</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2</researchViewX>
-		<researchViewY>6</researchViewY>
+		<researchViewX>0.96</researchViewX>
+		<researchViewY>4.66</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -59,8 +59,8 @@ It opens up the possibility of create energy grid batteries.</description>
 			<li>AdvancedEnergySources</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3</researchViewX>
-		<researchViewY>6</researchViewY>
+		<researchViewX>0.51</researchViewX>
+		<researchViewY>5.46</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -75,8 +75,8 @@ It opens up the possibility of create Silicon nanowire batteries.</description>
 			<li>EnergyGridBatteries</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4</researchViewX>
-		<researchViewY>6</researchViewY>
+		<researchViewX>0.50</researchViewX>
+		<researchViewY>6.49</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -91,8 +91,8 @@ Allows the creation of a minified nuclear reactor.</description>
 			<li>AdvancedEnergySources</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>1.39</researchViewX>
+		<researchViewY>5.47</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -107,8 +107,8 @@ Allows you to create a minified cold fusion reactor.</description>
 			<li>AutonomousEnergySources</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>1.38</researchViewX>
+		<researchViewY>6.18</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -123,8 +123,8 @@ Allows you to create an arc reactor.</description>
 			<li>NextGenerationReactor</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewX>1.38</researchViewX>
+		<researchViewY>6.87</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 
@@ -140,7 +140,7 @@ Allows you to create tools to improve armor.</description>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>1</researchViewX>
-		<researchViewY>7</researchViewY>
+		<researchViewY>2.10</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -155,8 +155,8 @@ Allows you to create robotic manipulators for installing level 2 modules.</descr
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>5</researchViewX>
-		<researchViewY>7</researchViewY>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>2.15</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -171,8 +171,8 @@ Allows you to create nanorobots to install level 3 improvements.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>10</researchViewX>
-		<researchViewY>7</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>2.20</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 
@@ -187,8 +187,8 @@ Allows you to create capacitor banks and transformers.</description>
 			<li>EnergyArmorResearch</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1</researchViewX>
-		<researchViewY>3</researchViewY>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3.84</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -203,8 +203,8 @@ Allows you to create a nano-yolk and an energy cell.</description>
 			<li>EnergyArmorResearch</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1</researchViewX>
-		<researchViewY>4</researchViewY>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2.08</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -220,7 +220,7 @@ Opens the opportunity to create an energy amplifier.</description>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>1</researchViewX>
-		<researchViewY>5</researchViewY>
+		<researchViewY>2.97</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -236,8 +236,8 @@ Allows you to create a basic filtration system.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>2.86</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -252,8 +252,8 @@ Allows you to create antitoxic seals.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>9</researchViewY>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>0.57</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -268,8 +268,8 @@ Allows you to create a guidance system.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0.8</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>2.42</researchViewX>
+		<researchViewY>3.71</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -284,8 +284,8 @@ Allows you to create stimulants.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>1.6</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>2.42</researchViewX>
+		<researchViewY>0.05</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -300,8 +300,8 @@ Allows the creation of reinforced armor cloth.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2.4</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>1.08</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -316,8 +316,8 @@ Allows you to create reinforced plates.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2.4</researchViewX>
-		<researchViewY>8.5</researchViewY>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>1.61</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -332,8 +332,8 @@ Allows you to create shock absorbers.</description>
 			<li>BasicArmorImprovement</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3.2</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>4.43</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->
@@ -350,8 +350,8 @@ Allows you to create a first aid interface.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4.5</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>3.7</researchViewX>
+		<researchViewY>5.29</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -366,8 +366,8 @@ Allows you to create protein therapy of antigenesis.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4.5</researchViewX>
-		<researchViewY>8.8</researchViewY>
+		<researchViewX>3.7</researchViewX>
+		<researchViewY>6.16</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -382,8 +382,8 @@ Allows you to create adrenaline injectors.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4.5</researchViewX>
-		<researchViewY>9.5</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>1.50</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -398,8 +398,8 @@ Allows you to create active plates.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>5.3</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>4.03</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -414,8 +414,8 @@ Allows you to create a echo system 'Plato'</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>6.1</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>3.48</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -429,8 +429,8 @@ Allows you to create a echo system 'Plato'</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>6.1</researchViewX>
-		<researchViewY>8.6</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>4.59</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -445,8 +445,8 @@ Allows you to create motorized joints.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>6.9</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>0.13</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -461,8 +461,8 @@ Allows you to create ablation coating.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>7.7</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>2.75</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -477,8 +477,8 @@ Allows you to create a shield modulator.</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>7.7</researchViewX>
-		<researchViewY>9</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>0.66</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->
@@ -495,8 +495,8 @@ Allows you to create a kinetic buffer.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>9</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>4.85</researchViewX>
+		<researchViewY>3.43</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -511,8 +511,8 @@ Allows you to create a protective interface.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>9.8</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>4.85</researchViewX>
+		<researchViewY>3.98</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -527,8 +527,8 @@ Allows you to create a combat exoskeleton.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>10.6</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>4.84</researchViewX>
+		<researchViewY>2.21</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -543,8 +543,8 @@ Allows you to create a medical exoskeleton.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>10.6</researchViewX>
-		<researchViewY>8.8</researchViewY>
+		<researchViewX>4.84</researchViewX>
+		<researchViewY>1.50</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -559,8 +559,8 @@ Allows you to create energy boots.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>11.4</researchViewX>
-		<researchViewY>8</researchViewY>
+		<researchViewX>4.84</researchViewX>
+		<researchViewY>2.74</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->

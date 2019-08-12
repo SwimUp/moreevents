@@ -8,27 +8,29 @@ namespace RimOverhaul.Gas
 {
     public class PipelineNet
     {
-        public int NetType;
+        public PipeType NetType;
 
         public int NetID;
 
-        public List<ThingWithComps> PipedThings = new List<ThingWithComps>();
-
-        public List<CompPipe> Pipes;
+        public List<CompPipe> Pipes = new List<CompPipe>();
+        public List<ThingWithComps> PipesThings = new List<ThingWithComps>();
 
         public GasManager GasManager;
 
-        public virtual void InitNet()
+        public void DeregisterPipe(ThingWithComps thing)
         {
-            Pipes = GenCollection.InRandomOrder((from x in PipedThings
-                                                           where x is Building_Pipe
-                                                           select x).SelectMany((ThingWithComps x) => x.GetComps<CompPipe>()), (IList<CompPipe>)null).ToList();
-            Tick();
+            PipesThings.Remove(thing);
+            InitNet();
         }
 
-        public virtual void Tick()
+        public void InitNet()
         {
-         
+            GenList.RemoveDuplicates(PipesThings);
+
+            Pipes = GenCollection.InRandomOrder<CompPipe>((from x in PipesThings
+                                                           where x is Building_Pipe
+                                                           select x).SelectMany((ThingWithComps x) => x.GetComps<CompPipe>()), null).ToList();
         }
+
     }
 }
