@@ -228,6 +228,7 @@
 				<li>CokeCoal</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>HeavyDutyAlloys</researchPrerequisite>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -351,6 +352,7 @@
 				<li>CokeCoal</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>HeavyDutyAlloys</researchPrerequisite>
 	</RecipeDef>
 
 	<RecipeDef>

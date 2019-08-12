@@ -30,6 +30,8 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public bool Started => started;
         private bool started = false;
+
+        public float TicksRemaining => ticksRemaining;
         private float ticksRemaining = 0;
 
         public float heatPushMaxTemperature = 99999f;
@@ -40,9 +42,15 @@ namespace RimOverhaul.Things.CokeFurnace
 
         private Graphic graphic;
 
+        private CompRefuelable refuelableComp;
+
+        private float consumeWhenActive = 0f;
+        private float consumeWhenInactive = 0;
+
         static Building_CokeFurnace()
         {
             ITab_CokeFurnace.Background = ContentFinder<Texture2D>.Get("UI/CokeFurnaceBack");
+            ITab_CokeFurnace.BackgroundFillableBar = ContentFinder<Texture2D>.Get("UI/furnacebackgroundback");
         }
 
         public void SelectNewRecipe(RecipeDef recipe)
@@ -95,6 +103,11 @@ namespace RimOverhaul.Things.CokeFurnace
             if(SelectedRecipe == null)
                 SelectNewRecipe(Recipes.RandomElement());
 
+            refuelableComp = GetComp<CompRefuelable>();
+
+            consumeWhenActive = refuelableComp.Props.fuelConsumptionRate / 60000f;
+            consumeWhenInactive = consumeWhenActive / 3;
+
             LongEventHandler.ExecuteWhenFinished((Action)FindTexture);
         }
 
@@ -143,7 +156,7 @@ namespace RimOverhaul.Things.CokeFurnace
                     });
                 }
 
-                bool canFire = CheckFurnace();
+                bool canFire = CheckFurnace(out string reason);
                 if (canFire)
                 {
                     yield return new FloatMenuOption("CokeFurnace_StartFire".Translate(), delegate
@@ -151,6 +164,10 @@ namespace RimOverhaul.Things.CokeFurnace
                         Job job = new Job(JobDefOfLocal.SwitchCokeFurnace, this);
                         selPawn.jobs.TryTakeOrderedJob(job);
                     });
+                }
+                else
+                {
+                    yield return new FloatMenuOption($"{"CokeFurnace_StartFire".Translate()}{reason}", null);
                 }
 
                 foreach (var item in ContainedResources)
@@ -214,18 +231,26 @@ namespace RimOverhaul.Things.CokeFurnace
             }
         }
 
-        private bool CheckFurnace()
+        private bool CheckFurnace(out string reason)
         {
+            reason = string.Empty;
+
             foreach (var item in ContainedResources)
             {
                 int baseCount = (int)SelectedRecipe.ingredients.Where(x => x.FixedIngredient == item.Key).FirstOrDefault().GetBaseCount();
                 if (item.Value < baseCount)
                 {
-                    return false;
+                    reason += "CokeFurnace_NoIng".Translate();
+                    break;
                 }
             }
 
-            return true;
+            if (!refuelableComp.HasFuel)
+            {
+                reason += "CokeFurnace_NoFuel".Translate();
+            }
+
+            return string.IsNullOrEmpty(reason);
         }
 
         private bool TryFindBestItem(Pawn pawn, ThingDef thingDef, int need, List<ThingCount> chosen)
@@ -270,14 +295,21 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public override void Tick()
         {
-            if (!started)
+            if (!refuelableComp.HasFuel)
                 return;
+
+            if (!started)
+            {
+                refuelableComp.ConsumeFuel(consumeWhenInactive);
+                return;
+            }
 
             base.Tick();
 
             ticksRemaining--;
+            refuelableComp.ConsumeFuel(consumeWhenActive);
 
-            if(ticksRemaining <= 0)
+            if (ticksRemaining <= 0)
             {
                 FinishCoke();
             }
@@ -286,6 +318,12 @@ namespace RimOverhaul.Things.CokeFurnace
         public void FinishCoke()
         {
             StopCoke();
+
+            if (result != null && result.def == SelectedRecipe.products[0].thingDef)
+            {
+                result.stackCount += SelectedRecipe.products[0].count;
+                return;
+            }
 
             result = ThingMaker.MakeThing(SelectedRecipe.products[0].thingDef);
             result.stackCount = SelectedRecipe.products[0].count;

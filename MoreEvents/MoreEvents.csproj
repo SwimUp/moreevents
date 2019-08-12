@@ -203,6 +203,11 @@
     <Compile Include="Events\ShipCrash\ShipSite.cs" />
     <Compile Include="Events\WorldObjectsDefOfLocal.cs" />
     <Compile Include="FactionDefOfLocal.cs" />
+    <Compile Include="Gas\Building_Pipe.cs" />
+    <Compile Include="Gas\CompPipe.cs" />
+    <Compile Include="Gas\CompProperties_GasPipe.cs" />
+    <Compile Include="Gas\GasManager.cs" />
+    <Compile Include="Gas\PipelineNet.cs" />
     <Compile Include="Hediffs\HediffCompProperties_AutoHeal.cs" />
     <Compile Include="Hediffs\HediffCompProperties_GiveMentalBreak.cs" />
     <Compile Include="Hediffs\HediffCompProperties_NeuroWormsTick.cs" />

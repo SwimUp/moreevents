@@ -23,7 +23,7 @@
 		</graphicData>
 		<recipes>
 			<li>SmeltingIronIngots</li>
-			<li>SmeltingIronIngots</li>
+			<li>SmeltingCopperIngots</li>
 			<li>BurnWoodToCoal</li>
 		</recipes>
 		<costStuffCount>150</costStuffCount>
@@ -134,7 +134,7 @@
 		</stuffCategories>
 		<comps>
 			<li Class="CompProperties_Refuelable">
-				<fuelConsumptionRate>70.0</fuelConsumptionRate>
+				<fuelConsumptionRate>40.0</fuelConsumptionRate>
 				<fuelCapacity>100.0</fuelCapacity>
 				<fuelFilter>
 					<thingDefs>
@@ -152,8 +152,6 @@
 				<heatPerSecond>7</heatPerSecond>
 				<heatPushMaxTemperature>80</heatPushMaxTemperature>
 			</li>
-			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Breakdownable"/>
 		</comps>
 		<researchPrerequisites>
 			<li>BasicOreProcessing</li>
@@ -182,11 +180,13 @@
 		</graphicData>
 		<recipes>
 			<li>SmeltingIronIngots</li>
-			<li>SmeltingIronIngots</li>
+			<li>SmeltingCopperIngots</li>
+			<li>SmeltingChorium</li>
 			<li>BurnWoodToCoal</li>
 			<li>SmeltingNickelIngots</li>
 			<li>SmeltingTitanIngots</li>
 			<li>SmeltingPalladiumIngot</li>
+			<li>SmeltingPlasteel</li>
 		</recipes>
 		<costStuffCount>150</costStuffCount>
 		<altitudeLayer>Building</altitudeLayer>

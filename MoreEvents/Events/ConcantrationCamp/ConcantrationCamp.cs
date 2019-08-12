@@ -91,6 +91,7 @@ namespace RimOverhaul.Events.ConcantrationCamp
                 {
                     Thing t = GenSpawn.Spawn(p, room.Cells.RandomElement(), Map);
                     t.SetFaction(Faction.OfPlayer);
+                    Find.WorldPawns.PassToWorld((Pawn)t);
                 }
             }
         }
@@ -112,11 +113,14 @@ namespace RimOverhaul.Events.ConcantrationCamp
 
         private void PrisonersKilled()
         {
-            for (int i = 0; i < Pawns.Count; i++)
+            if (Pawns != null)
             {
-                Pawn pawn = Pawns[i];
-                Find.WorldPawns.RemovePawn(pawn);
-                pawn.Destroy();
+                for (int i = 0; i < Pawns.Count; i++)
+                {
+                    Pawn pawn = Pawns[i];
+                    Find.WorldPawns.RemovePawn(pawn);
+                    pawn.Destroy();
+                }
             }
 
             Find.WorldObjects.Remove(this);
