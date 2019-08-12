@@ -104,9 +104,8 @@ namespace RimOverhaul.Gas
 
             CompPipe randomPipe = cachedPipes.Where(x => x.PipeType == (PipeType)P && x.GridID == -1).FirstOrDefault();
 
-            for (CompPipe compPipe = cachedPipes.FirstOrDefault((CompPipe k) => k.PipeType == (PipeType)P && k.GridID == -1); compPipe != null; compPipe = cachedPipes.FirstOrDefault((CompPipe k) => k.PipeType == (PipeType)P && k.GridID == -1))
+            if(randomPipe != null)
             {
-                Log.Message("1");
                 PipelineNet newNet = Activator.CreateInstance(typeof(PipelineNet)) as PipelineNet;
                 newNet.GasManager = this;
                 newNet.NetID = masterID;
