@@ -12,6 +12,8 @@ namespace RimOverhaul.Gas
 
         public CompGasWell ParentGasWell = null;
 
+        public bool Enabled => compFlickable.SwitchIsOn && HasPower && pipeNet.Enabled;
+
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -21,7 +23,23 @@ namespace RimOverhaul.Gas
 
         public override void PipelineNet()
         {
-            Log.Message($"tick {ParentGasWell.parent}");
+            
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder builder = new StringBuilder();
+            if(Enabled)
+            {
+                builder.Append("GasPlant_ActiveInfo");
+            }
+            else
+            {
+                builder.Append("GasPlant_ActiveInfoOFF");
+            }
+            builder.Append("GasPlant_GasWellInfo".Translate(ParentGasWell.GasReserves.ToString("f2")));
+
+            return base.CompInspectStringExtra();
         }
     }
 }

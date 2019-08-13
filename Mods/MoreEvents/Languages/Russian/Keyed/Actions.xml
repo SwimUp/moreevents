@@ -21,4 +21,8 @@
   <MustPlaceOnGasWell>Может быть установлен тольког на газовой скважине.</MustPlaceOnGasWell>
   <CompGasWell_GasReserve>Запасы газа: {0}</CompGasWell_GasReserve>
   
+  <GasPlant_ActiveInfo>Активно.</GasPlant_ActiveInfo>
+  <GasPlant_ActiveInfoOFF>Неактивно. Отсутствует место транспортировки или питание.</GasPlant_ActiveInfoOFF>
+  <GasPlant_GasWellInfo>\nЗапасы газа в скважине: {0}</GasPlant_GasWellInfo>
+  
 </LanguageData>

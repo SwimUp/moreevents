@@ -7,35 +7,14 @@ using Verse;
 
 namespace RimOverhaul.Gas
 {
-    public class SectionLayer_LiquidGasPipeOverlay : SectionLayer_Things
+    public class SectionLayer_LiquidGasPipeOverlay : SectionLayer_GasPipeOverlay
     {
-        public PipeType PipeType;
+        public override PipeType PipeType => PipeType.LiquidGas;
 
         public SectionLayer_LiquidGasPipeOverlay(Section section) : base(section)
         {
             relevantChangeTypes = MapMeshFlag.Buildings;
             requireAddToMapMesh = false;
-            PipeType = PipeType.LiquidGas;
-        }
-
-        public override void DrawLayer()
-        {
-            if (Find.DesignatorManager.SelectedDesignator is Designator_Build des)
-            {
-                if (des.PlacingDef is ThingDef thingDef && thingDef.comps != null && thingDef.comps.Any(x => x is CompProperties_GasPipe x2 && x2.pipeType == PipeType))
-                {
-                    base.DrawLayer();
-                }
-            }
-        }
-
-        protected override void TakePrintFrom(Thing t)
-        {
-            var comp = t.TryGetComp<CompPipe>();
-            if (comp != null && comp.PipeType == PipeType)
-            {
-                comp.PrintForGrid(this);
-            }
         }
     }
 }

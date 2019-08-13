@@ -11,15 +11,31 @@ namespace RimOverhaul.Gas
     {
         public CompFlickable compFlickable;
 
-        public PipeType PipeType => Props.pipeType;
+        public PipeType PipeType => GasProps.pipeType;
 
-        private CompProperties_GasPipe Props => (CompProperties_GasPipe)props;
+        public CompProperties_GasPipe GasProps => (CompProperties_GasPipe)props;
 
         public PipelineNet pipeNet;
 
         public GasManager GasManager;
 
         private int pipeTypeInt = 0;
+
+        public CompPowerTrader compPowerTrader;
+
+        public static bool PlayerHasGeoscape = false;
+
+        public bool HasPower
+        {
+            get
+            {
+                if (compPowerTrader != null && compPowerTrader.PowerOn)
+                {
+                    return !parent.Map.gameConditionManager.ConditionIsActive(GameConditionDefOf.SolarFlare);
+                }
+                return false;
+            }
+        }
 
         public int GridID
         {
@@ -32,6 +48,11 @@ namespace RimOverhaul.Gas
             GasManager.DeregisterPipe(this);
             pipeNet.DeregisterPipe(parent);
             base.PostDeSpawn(map);
+        }
+
+        public virtual void NetInit()
+        {
+
         }
 
 
@@ -57,6 +78,8 @@ namespace RimOverhaul.Gas
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             compFlickable = parent.GetComp<CompFlickable>();
+
+            compPowerTrader = parent.GetComp<CompPowerTrader>();
 
             GasManager = parent.Map.GetComponent<GasManager>();
 

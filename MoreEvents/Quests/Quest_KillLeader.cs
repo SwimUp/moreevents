@@ -168,7 +168,6 @@ namespace MoreEvents.Quests
 
             GenerateRewards(GetQuestThingFilter(), new FloatRange(600, 800) * (float)enemyFaction.def.techLevel, new IntRange(1, 3), null, null);
 
-
             ShowInConsole = false;
 
             QuestsManager.Communications.AddQuestPawn(questPawn, this);

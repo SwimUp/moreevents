@@ -33,14 +33,21 @@ namespace RimOverhaul.Gas
             if (!c.InBounds(parent.Map))
                 return false;
 
-            if(GridsUtility.GetTerrain(c, parent.Map).layerable)
-                return false;
+            var firstComp = c.GetFirstThingWithComp<CompPipe>(parent.Map);
+            if (firstComp != null)
+            {
+                var firstComp2 = firstComp.GetComp<CompPipe>();
+                if (firstComp2.GasProps.ConnectEverything)
+                {
+                    return true;
+                }
+            }
 
             if (!parent.Map.GetComponent<GasManager>().PipeAt(c, PipeType))
                 return false;
 
             var comp = parent.TryGetComp<CompPipe>();
-            if (comp != null || comp.PipeType == PipeType)
+            if (comp != null && comp.PipeType == PipeType)
             {
                 return true;
             }

@@ -34,12 +34,7 @@ namespace RimOverhaul.Gas
 
         public override string CompInspectStringExtra()
         {
-            StringBuilder builder = new StringBuilder();
-
-            builder.Append("CompGasWell_GasReserve".Translate(GasReserves.ToString("f2")));
-            builder.AppendLine(base.CompInspectStringExtra());
-
-            return builder.ToString();
+            return "CompGasWell_GasReserve".Translate(GasReserves.ToString("f2"));
         }
     }
 }

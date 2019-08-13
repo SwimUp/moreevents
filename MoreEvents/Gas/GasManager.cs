@@ -155,5 +155,19 @@ namespace RimOverhaul.Gas
         {
             return PipeGrid[(int)P, map.cellIndices.CellToIndex(pos)] >= 0;
         }
+
+        public bool AnyPipeAt(IntVec3 pos)
+        {
+            for(int i = 0; i < PipeGrid.GetLength(0); i++)
+            {
+                Log.Message("GET");
+                if(PipeGrid[i, map.cellIndices.CellToIndex(pos)] >= 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

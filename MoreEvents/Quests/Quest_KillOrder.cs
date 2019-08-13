@@ -97,7 +97,7 @@ namespace MoreEvents.Quests
 
         private void CheckWon()
         {
-            if (!Won && TargetPawn.Dead)
+            if (!Won && (TargetPawn == null || TargetPawn.Dead))
             {
                 UnlimitedTime = true;
                 Won = true;
@@ -131,6 +131,9 @@ namespace MoreEvents.Quests
 
         public override bool TryGiveQuestTo(Pawn questPawn, QuestDef questDef)
         {
+            if (questPawn == null)
+                return false;
+
             EventSettings settings = Settings.EventsSettings["Quest_KillOrder"];
             if (!settings.Active)
                 return false;
@@ -147,11 +150,11 @@ namespace MoreEvents.Quests
             if (pawn == null)
                 return false;
 
+            TargetPawn = pawn;
+
             Faction = faction1;
             TicksToPass = Rand.Range(6, 12) * 60000;
             id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
-
-            TargetPawn = pawn;
 
             GenerateRewards();
 
@@ -159,6 +162,9 @@ namespace MoreEvents.Quests
 
             QuestsManager.Communications.AddQuestPawn(questPawn, this);
             QuestsManager.Communications.AddQuest(this);
+
+            if (TargetPawn == null)
+                return false;
 
             return true;
         }
