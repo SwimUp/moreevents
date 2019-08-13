@@ -13,11 +13,13 @@ namespace RimOverhaul.Gas
 
         public PipeType PipeType => Props.pipeType;
 
-        public CompProperties_GasPipe Props => (CompProperties_GasPipe)props;
+        private CompProperties_GasPipe Props => (CompProperties_GasPipe)props;
 
         public PipelineNet pipeNet;
 
         public GasManager GasManager;
+
+        private int pipeTypeInt = 0;
 
         public int GridID
         {
@@ -42,6 +44,16 @@ namespace RimOverhaul.Gas
             return null;
         }
 
+        public void PrintForGrid(SectionLayer layer)
+        {
+            GasGraphic.PipeOverlayGraphic[pipeTypeInt].Print(layer, parent);
+        }
+
+        public virtual void PipelineNet()
+        {
+
+        }
+
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             compFlickable = parent.GetComp<CompFlickable>();
@@ -49,6 +61,8 @@ namespace RimOverhaul.Gas
             GasManager = parent.Map.GetComponent<GasManager>();
 
             GasManager.RegisterPipe(this, respawningAfterLoad);
+
+            pipeTypeInt = (int)PipeType;
 
             base.PostSpawnSetup(respawningAfterLoad);
         }

@@ -10,11 +10,16 @@ namespace RimOverhaul.Gas
     {
         public CompPipe CompPipe;
 
+        private int pipeInt = 0;
+
+        public override Graphic Graphic => GasGraphic.PipeGraphic[pipeInt];
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            base.SpawnSetup(map, respawningAfterLoad);
             CompPipe = GetComp<CompPipe>();
-        }
+            pipeInt = (int)CompPipe.PipeType;
 
+            base.SpawnSetup(map, respawningAfterLoad);
+        }
     }
 }

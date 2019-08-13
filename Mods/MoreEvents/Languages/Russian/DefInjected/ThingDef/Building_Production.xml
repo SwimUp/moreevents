@@ -10,4 +10,10 @@
 	<ArcFurnace.label>Электродуговая печь</ArcFurnace.label>
 	<ArcFurnace.description>Электродуговая печь предназначена для обработки продвинутых руд и получения продвинутых сплавов.</ArcFurnace.description>
 	
+	<GasWell.label>Газовая скважина</GasWell.label>
+	<GasWell.description>Скважина с запасом газа. Установите газодобывающую установку для добычи газа.</GasWell.description>
+	
+	<GasProductionPlant.label>Газодобывающая установка</GasProductionPlant.label>
+	<GasProductionPlant.description>Выкачивает из скважины газ и подает его в трубы в виде природного газа.</GasProductionPlant.description>
+	
 </LanguageData>

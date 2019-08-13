@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using RimOverhaul.Gas;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,17 +33,7 @@ namespace MapTools
 
             if (Input.GetKeyDown(KeyCode.Mouse2))
             {
-                var cell = UI.MouseCell();
-                Log.Message($"Cell --> {cell}");
-                var list = cell.GetThingList(Find.CurrentMap);
-                if(list != null)
-                {
-                    list.ForEach(x => {
-                        Log.Message($"Item {x} --> {x.Position}");
-                        if(x.def.CanHaveFaction)
-                            x.SetFaction(Faction.OfPlayer);
-                        });
-                }
+                Log.Message($"RES --> {Find.CurrentMap.GetComponent<GasManager>().PipeAt(UI.MouseCell(), PipeType.NaturalGas)}");
             }
         }
     }

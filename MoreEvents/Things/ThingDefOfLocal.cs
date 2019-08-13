@@ -46,5 +46,7 @@ namespace MoreEvents
         public static ThingDef DoomsdayUltimateBomb;
 
         public static ThingDef TribalCrack;
+
+        public static ThingDef GasWell;
     }
 }

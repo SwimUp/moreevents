@@ -16,13 +16,15 @@ namespace RimOverhaul.Gas
 
         public bool[] DirtyPipe;
 
-        public int masterID;
+        public int[] masterID;
 
         public GasManager(Map map) : base(map)
         {
             int length = Enum.GetValues(typeof(PipeType)).Length;
             PipeGrid = new int[length, map.cellIndices.NumGridCells];
             DirtyPipe = new bool[length];
+            masterID = new int[length];
+
             for (int i = 0; i < DirtyPipe.Length; i++)
             {
                 DirtyPipe[i] = true;
@@ -34,7 +36,6 @@ namespace RimOverhaul.Gas
             if (!cachedPipes.Contains(pipe))
             {
                 cachedPipes.Add(pipe);
-                GenList.Shuffle(cachedPipes);
             }
             DirtyPipeGrid(pipe.PipeType);
             if (!respawningAfterLoad)
@@ -42,6 +43,13 @@ namespace RimOverhaul.Gas
                 RegenGrids();
             }
         }
+
+        public override void MapGenerated()
+        {
+            base.MapGenerated();
+            RegenGrids();
+        }
+
 
         public void DirtyPipeGrid(PipeType p)
         {
@@ -71,10 +79,28 @@ namespace RimOverhaul.Gas
             if (cachedPipes.Contains(pipe))
             {
                 cachedPipes.Remove(pipe);
-                GenList.Shuffle(cachedPipes);
             }
             DirtyPipeGrid(pipe.PipeType);
             RegenGrids();
+        }
+
+        public void DirtyAllPipeGrids()
+        {
+            for (int i = 0; i < DirtyPipe.Length; i++)
+            {
+                DirtyPipe[i] = true;
+            }
+            RegenGrids();
+        }
+
+        public override void MapComponentTick()
+        {
+            base.MapComponentTick();
+
+            for(int i = 0; i < PipeNets.Count; i++)
+            {
+                PipeNets[i].PipelineNetTick();
+            }
         }
 
         public void RebuildPipeGrid(int P)
@@ -84,46 +110,31 @@ namespace RimOverhaul.Gas
             {
                 PipeGrid[P, i] = -1;
             }
+            cachedPipes.Where(x => x.PipeType == (PipeType)P).ToList().ForEach(act => act.GridID = -1);
 
             PipeNets.RemoveAll((PipelineNet x) => (int)x.NetType == P);
 
-            (from x in cachedPipes
-             where x.PipeType == (PipeType)P
-             select x).ToList().ForEach(delegate (CompPipe j)
-             {
-                 j.GridID = -1;
-             });
-
-            foreach(var pipe in cachedPipes)
-            {
-                if(pipe.PipeType == (PipeType)P)
-                {
-                    pipe.GridID = -1;
-                }
-            }
-
-            CompPipe randomPipe = cachedPipes.Where(x => x.PipeType == (PipeType)P && x.GridID == -1).FirstOrDefault();
-
-            if(randomPipe != null)
+            IEnumerable<CompPipe> pipes = cachedPipes.Where(x => x.PipeType == (PipeType)P && x.GridID == -1);
+            foreach (var randomPipe in pipes)
             {
                 PipelineNet newNet = Activator.CreateInstance(typeof(PipelineNet)) as PipelineNet;
                 newNet.GasManager = this;
-                newNet.NetID = masterID;
+                newNet.NetID = masterID[P];
                 newNet.NetType = (PipeType)P;
                 PipeNets.Add(newNet);
                 Predicate<IntVec3> predicate = delegate (IntVec3 c)
                 {
-                    foreach (ThingWithComps item in GridsUtility.GetThingList(c, map).OfType<ThingWithComps>())
+                    foreach (var item in GridsUtility.GetThingList(c, map))
                     {
-                        CompPipe compPipe2 = item.GetComp<CompPipe>();
+                        CompPipe compPipe2 = item.TryGetComp<CompPipe>();
                         if (compPipe2 != null && compPipe2.PipeType == (PipeType)P)
                         {
-                            compPipe2.GridID = masterID;
+                            compPipe2.GridID = masterID[P];
                             compPipe2.pipeNet = newNet;
                             newNet.PipesThings.Add(compPipe2.parent);
                             map.mapDrawer.MapMeshDirty(compPipe2.parent.Position, MapMeshFlag.Buildings);
                             map.mapDrawer.MapMeshDirty(compPipe2.parent.Position, MapMeshFlag.Things);
-                            PipeGrid[P, map.cellIndices.CellToIndex(c)] = masterID;
+                            PipeGrid[P, map.cellIndices.CellToIndex(c)] = masterID[P];
                             return true;
                         }
                     }
@@ -131,7 +142,7 @@ namespace RimOverhaul.Gas
                 };
 
                 map.floodFiller.FloodFill(randomPipe.parent.Position, predicate, delegate (IntVec3 x) { });
-                masterID++;
+                masterID[P]++;
             }
 
             foreach (PipelineNet pipeNet in PipeNets)
@@ -140,7 +151,7 @@ namespace RimOverhaul.Gas
             }
         }
 
-        public bool ZoneAt(IntVec3 pos, PipeType P)
+        public bool PipeAt(IntVec3 pos, PipeType P)
         {
             return PipeGrid[(int)P, map.cellIndices.CellToIndex(pos)] >= 0;
         }

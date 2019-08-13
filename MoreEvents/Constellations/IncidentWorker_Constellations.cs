@@ -29,8 +29,14 @@ namespace MoreEvents.Constellations
 
             List<ConstellationsDef> toInvoke = new List<ConstellationsDef>();
 
-            foreach (var con in DefDatabase<ConstellationsDef>.AllDefs.Where(c => (c.ConstellationType == ConstellationType.Positive && positiveEnable == 1) || (c.ConstellationType == ConstellationType.Negative && negativeEnable == 1)))
+            foreach (var con in DefDatabase<ConstellationsDef>.AllDefs)
             {
+                if (con.ConstellationType == ConstellationType.Positive && positiveEnable == 0)
+                    continue;
+
+                if (con.ConstellationType == ConstellationType.Negative && negativeEnable == 0)
+                    continue;
+
                 List<ConstellationCondition> conditions = con.Conditions;
 
                 bool canSpawn = true;
