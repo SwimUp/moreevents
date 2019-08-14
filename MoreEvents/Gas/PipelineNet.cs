@@ -10,42 +10,47 @@ namespace RimOverhaul.Gas
     {
         public PipeType NetType;
 
-        public int NetID;
-
         public List<CompPipe> Pipes = new List<CompPipe>();
         public Dictionary<PipeType, List<CompPipe>> PipesByType;
 
-        private List<CompPipe> thingsForTick;
-
         public List<ThingWithComps> PipesThings = new List<ThingWithComps>();
 
-        public List<GasPlant> GasPlants;
-        public List<CompGasCooler> GasCoolers;
+        public List<GasPlant> GasPlants = new List<GasPlant>();
+        public List<CompGasCooler> GasCoolers = new List<CompGasCooler>();
+        public List<CompGasTank> GasTankers = new List<CompGasTank>();
 
         public GasManager GasManager;
 
-        public bool Enabled;
-
-        public void DeregisterPipe(ThingWithComps thing)
-        {
-            PipesThings.Remove(thing);
-            InitNet();
-        }
+        public bool CanPush = false;
 
         public void InitNet()
         {
             GenList.RemoveDuplicates(PipesThings);
 
-            PipesThings.ForEach(x => x.GetComp<CompPipe>().NetInit());
+            PipesByType = new Dictionary<PipeType, List<CompPipe>>(PipesThings.Count);
 
-            PipesByType = new Dictionary<PipeType, List<CompPipe>>();
-            thingsForTick = new List<CompPipe>();
-            GasPlants = new List<GasPlant>();
-            GasCoolers = new List<CompGasCooler>();
+            foreach (var thing in PipesThings)
+            {
+                Pipes.Add(thing.GetComp<CompPipe>());
 
-            Pipes = PipesThings.Where(x => x is Building_Pipe).Select(x2 => x2.GetComp<CompPipe>()).ToList();
-            GasPlants = PipesThings.Where(x => x.TryGetComp<GasPlant>() != null).Select(x2 => x2.GetComp<GasPlant>()).ToList();
-            GasCoolers = PipesThings.Where(x => x.TryGetComp<CompGasCooler>() != null).Select(x2 => x2.GetComp<CompGasCooler>()).ToList();
+                GasPlant gasPlant = thing.TryGetComp<GasPlant>();
+                if (gasPlant != null)
+                {
+                    GasPlants.Add(gasPlant);
+                }
+
+                CompGasCooler compGasCooler = thing.TryGetComp<CompGasCooler>();
+                if(compGasCooler != null)
+                {
+                    GasCoolers.Add(compGasCooler);
+                }
+
+                CompGasTank compGasTank = thing.TryGetComp<CompGasTank>();
+                if(compGasTank != null)
+                {
+                    GasTankers.Add(compGasTank);
+                }
+            }
 
             foreach (PipeType type in Enum.GetValues(typeof(PipeType)))
             {
@@ -53,21 +58,25 @@ namespace RimOverhaul.Gas
                 PipesByType.Add(type, pipes);
             }
 
-            thingsForTick = PipesThings.Where(x => x.def.tickerType != TickerType.Never).Select(x2 => x2.GetComp<CompPipe>()).ToList();
+            if (GasCoolers.Count > 0)
+                CanPush = true;
 
-          //  if(GasCoolers.Any(cool))
+            PipesThings.ForEach(x => x.GetComp<CompPipe>().NetInit());
         }
 
-        public virtual void PipelineNetTick()
+        public void PushGasIntoNet(GasPlant plant, float count)
         {
-            if (!Enabled)
+            if (!CanPush)
                 return;
 
-            for(int i = 0; i < thingsForTick.Count; i++)
+            List<CompGasCooler> notFuel = GasCoolers.Where(x => !x.Full).ToList();
+            float toPush = count / notFuel.Count;
+            foreach (var cooler in notFuel)
             {
-                thingsForTick[i].PipelineNet();
+                cooler.PushGas(plant, toPush);
             }
-        }
 
+            return;
+        }
     }
 }

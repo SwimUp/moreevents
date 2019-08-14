@@ -157,7 +157,7 @@
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
 		</statBases>
-		<tickerType>Normal</tickerType>
+		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(2,2)</size>
 		<costList>
@@ -167,7 +167,7 @@
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasPlant">
 				<pipeType>NaturalGas</pipeType>
-				<PumpingSpeed>0.12</PumpingSpeed>
+				<PumpingSpeed>1.5</PumpingSpeed>
 			</li>
 			<li Class="CompProperties_Breakdownable"/>
 			<li Class="CompProperties_Power">
@@ -217,7 +217,7 @@
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
 		</statBases>
-		<tickerType>Normal</tickerType>
+		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(2,2)</size>
 		<costList>
@@ -257,7 +257,7 @@
 		<graphicData>
 			<texPath>Things/Buildings/GasVault/gasvault</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(1,2)</drawSize>
+			<drawSize>(3,1)</drawSize>
 			<shadowData>
 				<volume>(1.93,1,1.69)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
@@ -269,7 +269,7 @@
 		<blockWind>true</blockWind>
 		<fillPercent>1.0</fillPercent>
 		<castEdgeShadows>false</castEdgeShadows>
-		<rotatable>false</rotatable>
+		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<WorkToBuild>2500</WorkToBuild>
@@ -278,15 +278,15 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
-		<size>(1,2)</size>
+		<size>(3,1)</size>
 		<costList>
 			<Steel>100</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<comps>
-			<li Class="RimOverhaul.Gas.CompProperties_GasCooler">
+			<li Class="RimOverhaul.Gas.CompProperties_GasTask">
 				<pipeType>LiquidGas</pipeType>
-				<ConnectEverything>true</ConnectEverything>
+				<StorageCapacity>2000</StorageCapacity>
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>

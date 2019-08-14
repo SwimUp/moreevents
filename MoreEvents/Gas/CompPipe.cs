@@ -15,6 +15,8 @@ namespace RimOverhaul.Gas
 
         public CompProperties_GasPipe GasProps => (CompProperties_GasPipe)props;
 
+        public bool Transmitter => GasProps.Transmitter;
+
         public PipelineNet pipeNet;
 
         public GasManager GasManager;
@@ -37,16 +39,9 @@ namespace RimOverhaul.Gas
             }
         }
 
-        public int GridID
-        {
-            get;
-            set;
-        } = -1;
-
         public override void PostDeSpawn(Map map)
         {
             GasManager.DeregisterPipe(this);
-            pipeNet.DeregisterPipe(parent);
             base.PostDeSpawn(map);
         }
 
@@ -55,12 +50,11 @@ namespace RimOverhaul.Gas
 
         }
 
-
         public override string CompInspectStringExtra()
         {
             if (DebugSettings.godMode)
             {
-                return PipeType.ToString() + "_ID:" + GridID;
+                return PipeType.ToString() + "_ID:" + GasManager.PipeAt(parent.Position, PipeType);
             }
             return null;
         }
@@ -68,11 +62,6 @@ namespace RimOverhaul.Gas
         public void PrintForGrid(SectionLayer layer)
         {
             GasGraphic.PipeOverlayGraphic[pipeTypeInt].Print(layer, parent);
-        }
-
-        public virtual void PipelineNet()
-        {
-
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)

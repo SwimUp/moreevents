@@ -2,45 +2,110 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace RimOverhaul.Gas
 {
     public class CompGasCooler : CompPipe
     {
-        public List<CompPipe> OutPipes = new List<CompPipe>();
-        public List<CompPipe> InPipes = new List<CompPipe>();
+        public List<PipelineNet> InNet;
 
         public bool Enabled;
+
+        public float Storage;
+
+        public float MaxStorage => 500;
+
+        public bool Full => Storage == MaxStorage;
+
+        public CompProperties_GasCooler GasCoolerProps => (CompProperties_GasCooler)props;
 
         public override void NetInit()
         {
             base.NetInit();
 
-            OutPipes.Clear();
-            InPipes.Clear();
+            InNet = new List<PipelineNet>();
 
-            CellRect vals = GenAdj.OccupiedRect(parent.Position, Rot4.Invalid, new IntVec2(4,4));
-            foreach(var cell in vals)
+            var vals = GenAdj.CellsAdjacentCardinal(parent);
+            foreach (var cell in vals)
             {
                 var thing = cell.GetFirstThing<Building_Pipe>(parent.Map);
                 if(thing != null)
                 {
                     var compPipe = thing.TryGetComp<CompPipe>();
-                    if(compPipe.PipeType == PipeType.NaturalGas && !InPipes.Contains(compPipe) && !InPipes.Any(x => compPipe.pipeNet != null && x.pipeNet.NetID == compPipe.pipeNet.NetID))
+                    if(compPipe.PipeType == PipeType.NaturalGas && !InNet.Contains(compPipe.pipeNet))
                     {
-                        InPipes.Add(compPipe);
-                    }else if(compPipe.PipeType == PipeType.LiquidGas && !OutPipes.Contains(compPipe) && !OutPipes.Any(x => compPipe.pipeNet != null && x.pipeNet.NetID == compPipe.pipeNet.NetID))
-                    {
-                        OutPipes.Add(compPipe);
+                        InNet.Add(compPipe.pipeNet);
                     }
                 }
             }
 
-            if(InPipes.Count > 0 && OutPipes.Count > 0)
+            if(pipeNet.GasTankers.Count > 0)
             {
                 Enabled = true;
             }
+        }
+
+        public void PushGas(GasPlant plant, float count)
+        {
+            if (Full)
+                return;
+
+            Storage += count;
+            if(Storage > MaxStorage)
+            {
+                Storage = MaxStorage;
+                count -= Storage - MaxStorage;
+            }
+
+            plant.ParentGasWell.GasReserves -= count;
+        }
+
+        public override void CompTickRare()
+        {
+            base.CompTickRare();
+
+            if (!HasPower)
+                return;
+
+            if(Enabled)
+            {
+                List<CompGasTank> tankers = pipeNet.GasTankers.Where(x => !x.Full).ToList();
+                float rate = Mathf.Min(GasCoolerProps.CoolingRate, Storage);
+                float toAdd = rate / tankers.Count;
+                foreach(var tank in tankers)
+                {
+                    tank.PushGas(this, toAdd);
+                }
+            }
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder builder = new StringBuilder();
+            if (DebugSettings.godMode)
+            {
+                builder.AppendLine(base.CompInspectStringExtra());
+            }
+            builder.Append("GasCooler_ActiveInfo".Translate(Storage.ToString("f2"), MaxStorage.ToString("f2"), GasCoolerProps.CoolingRate.ToString("f2")));
+            if (pipeNet.GasTankers.Count == 0)
+            {
+                builder.Append("GasCooler_ActiveInfoNoTankers".Translate());
+            }
+            if (InNet.Count == 0)
+            {
+                builder.Append("GasCooler_ActiveInfoNoInNet".Translate());
+            }
+
+            return builder.ToString();
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+
+            Scribe_Values.Look(ref Storage, "Storage");
         }
     }
 }
