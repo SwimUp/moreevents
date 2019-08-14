@@ -70,7 +70,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
         {
             base.CompTick();
 
-            if (Parent.Weapon == null || Parent.Weapon.WeaponDeactivated)
+            if ((Parent.Weapon != null && Parent.Weapon.WeaponDeactivated) || ParentHasMap)
                 return;
 
             Timer--;

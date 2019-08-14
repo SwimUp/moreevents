@@ -91,7 +91,9 @@ namespace RimOverhaul.Events.ConcantrationCamp
                 {
                     Thing t = GenSpawn.Spawn(p, room.Cells.RandomElement(), Map);
                     t.SetFaction(Faction.OfPlayer);
-                    Find.WorldPawns.PassToWorld((Pawn)t);
+
+                    if(Find.WorldPawns.Contains(p))
+                        Find.WorldPawns.RemovePawn(p);
                 }
             }
         }
@@ -111,6 +113,24 @@ namespace RimOverhaul.Events.ConcantrationCamp
             }
         }
 
+        public override void Notify_MyMapRemoved(Map map)
+        {
+            base.Notify_MyMapRemoved(map);
+
+            if(Pawns != null)
+            {
+                for(int i = 0; i < Pawns.Count; i++)
+                {
+                    Pawn pawn = Pawns[i];
+                    if(pawn != null)
+                    {
+                        if (!Find.WorldPawns.Contains(pawn))
+                            Find.WorldPawns.PassToWorld(pawn);
+                    }
+                }
+            }
+        }
+
         private void PrisonersKilled()
         {
             if (Pawns != null)
@@ -118,8 +138,13 @@ namespace RimOverhaul.Events.ConcantrationCamp
                 for (int i = 0; i < Pawns.Count; i++)
                 {
                     Pawn pawn = Pawns[i];
-                    Find.WorldPawns.RemovePawn(pawn);
-                    pawn.Destroy();
+                    if (pawn != null)
+                    {
+                        if (Find.WorldPawns.Contains(pawn))
+                            Find.WorldPawns.RemovePawn(pawn);
+
+                        pawn.Destroy();
+                    }
                 }
             }
 
@@ -132,6 +157,21 @@ namespace RimOverhaul.Events.ConcantrationCamp
 
             Scribe_Values.Look(ref Timer, "Ticks");
             Scribe_Collections.Look(ref Pawns, "Pawns", LookMode.Reference);
+        }
+
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
+        {
+            if (Pawns != null)
+            {
+                if (!Map.mapPawns.FreeColonists.Where(x => !Pawns.Contains(x) && !x.Dead && !x.Downed).Any())
+                {
+                    alsoRemoveWorldObject = false;
+                    return true;
+                }
+            }
+
+            alsoRemoveWorldObject = false;
+            return false;
         }
 
         public override string GetInspectString()

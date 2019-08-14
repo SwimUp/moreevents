@@ -396,8 +396,12 @@ namespace QuestRim
                 rewardCost = 0;
 
                 currentQuest = quest;
-                foreach (var k in currentQuest.Rewards)
-                    rewardCost += k.def.BaseMarketValue * k.stackCount;
+
+                if (currentQuest.Rewards != null)
+                {
+                    foreach (var k in currentQuest.Rewards)
+                        rewardCost += k.def.BaseMarketValue * k.stackCount;
+                }
             }
             y += 107;
         }
@@ -432,12 +436,15 @@ namespace QuestRim
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Widgets.Label(new Rect(330, 310, 300, 20), "QuestRewards".Translate(rewardCost));
                 Text.Anchor = TextAnchor.UpperLeft;
-                int questSliderLength = currentQuest.Rewards.Count * 30;
-                Rect rewardsRect = new Rect(0, 0, 323, questSliderLength);
-                Rect scrollRewVertRectFact = new Rect(0, 0, inRect.x, questSliderLength);
-                Widgets.BeginScrollView(new Rect(330, 340, 300, 180), ref questRewardSlider, scrollRewVertRectFact, false);
-                DrawQuestRewards(rewardsRect, currentQuest);
-                Widgets.EndScrollView();
+                if (currentQuest.Rewards != null)
+                {
+                    int questSliderLength = currentQuest.Rewards.Count * 30;
+                    Rect rewardsRect = new Rect(0, 0, 323, questSliderLength);
+                    Rect scrollRewVertRectFact = new Rect(0, 0, inRect.x, questSliderLength);
+                    Widgets.BeginScrollView(new Rect(330, 340, 300, 180), ref questRewardSlider, scrollRewVertRectFact, false);
+                    DrawQuestRewards(rewardsRect, currentQuest);
+                    Widgets.EndScrollView();
+                }
 
                 Rect rectAdd = new Rect(660, 340, 300, 180);
                 Text.Anchor = TextAnchor.MiddleCenter;
@@ -452,7 +459,7 @@ namespace QuestRim
             Text.Font = GameFont.Small;
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(rect);
-            for(int i = 0; i < quest.Rewards.Count; i++)
+            for (int i = 0; i < quest.Rewards.Count; i++)
             {
                 Thing reward = quest.Rewards[i];
 

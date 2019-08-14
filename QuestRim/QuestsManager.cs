@@ -100,6 +100,15 @@ namespace QuestRim
                     }
                 }
             }
+
+            for(int i = 0; i < Communications.Quests.Count; i++)
+            {
+                var quest = Communications.Quests[i];
+                if (quest != null)
+                {
+                    quest.GameLoaded();
+                }
+            }
         }
     }
 }

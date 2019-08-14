@@ -13,7 +13,7 @@ namespace MoreEvents.Patch
     {
         public override string CardLabel => "Quest_TradeRequestComp_CardLabel".Translate();
 
-        public override string Description => "LetterCaravanRequest".Translate(SettlementBase.Label, TradeRequestUtility.RequestedThingLabel(component.requestThingDef, component.requestCount).CapitalizeFirst(), (component.requestThingDef.GetStatValueAbstract(StatDefOf.MarketValue) * (float)component.requestCount).ToStringMoney("F0"), GenThing.ThingsToCommaList(component.rewards, useAnd: true).CapitalizeFirst(), GenThing.GetMarketValue(component.rewards).ToStringMoney("F0"), (component.expiration - Find.TickManager.TicksGame).ToStringTicksToDays("F0"), CaravanArrivalTimeEstimator.EstimatedTicksToArrive(Tile, SettlementBase.Tile, null).ToStringTicksToDays("0.#"));
+        public override string Description => "LetterCaravanRequest".Translate(SettlementBase.Label, TradeRequestUtility.RequestedThingLabel(Component.requestThingDef, Component.requestCount).CapitalizeFirst(), (Component.requestThingDef.GetStatValueAbstract(StatDefOf.MarketValue) * (float)Component.requestCount).ToStringMoney("F0"), GenThing.ThingsToCommaList(Component.rewards, useAnd: true).CapitalizeFirst(), GenThing.GetMarketValue(Component.rewards).ToStringMoney("F0"), (Component.expiration - Find.TickManager.TicksGame).ToStringTicksToDays("F0"), CaravanArrivalTimeEstimator.EstimatedTicksToArrive(Tile, SettlementBase.Tile, null).ToStringTicksToDays("0.#"));
 
         public int Tile;
 
@@ -49,6 +49,15 @@ namespace MoreEvents.Patch
             component = comp;
 
             Tile = tile;
+        }
+
+        public override void GameLoaded()
+        {
+            if(Component == null || !Component.ActiveRequest)
+            {
+                Log.Warning($"Somehow the component has been null or inactive request. Removing.");
+                QuestsManager.Communications.RemoveQuest(this);
+            }
         }
 
         public override void ExposeData()

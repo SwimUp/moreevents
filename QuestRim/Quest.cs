@@ -84,6 +84,11 @@ namespace QuestRim
 
         }
 
+        public virtual void GameLoaded()
+        {
+
+        }
+
         public virtual void TakeQuestByQuester(QuestPawn quester, bool notify = true)
         {
             ShowInConsole = true;
