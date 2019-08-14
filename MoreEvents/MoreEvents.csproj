@@ -204,9 +204,11 @@
     <Compile Include="Events\WorldObjectsDefOfLocal.cs" />
     <Compile Include="FactionDefOfLocal.cs" />
     <Compile Include="Gas\Building_Pipe.cs" />
+    <Compile Include="Gas\CompGasTank.cs" />
     <Compile Include="Gas\CompGasWell.cs" />
     <Compile Include="Gas\CompPipe.cs" />
     <Compile Include="Gas\CompProperties_GasCooler.cs" />
+    <Compile Include="Gas\CompProperties_GasTask.cs" />
     <Compile Include="Gas\CompProperties_GasPlant.cs" />
     <Compile Include="Gas\CompProperties_GasPipe.cs" />
     <Compile Include="Gas\CompProperties_GasWell.cs" />

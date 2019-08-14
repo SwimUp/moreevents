@@ -33,7 +33,19 @@ namespace MapTools
 
             if (Input.GetKeyDown(KeyCode.Mouse2))
             {
-                Log.Message($"RES --> {Find.CurrentMap.GetComponent<GasManager>().PipeAt(UI.MouseCell(), PipeType.NaturalGas)}");
+                Log.Message($"POS CLICK --> {UI.MouseCell()}");
+                var net = Find.CurrentMap.GetComponent<GasManager>().PipeNetAt(UI.MouseCell());
+                if (net != null)
+                {
+                    Log.Message($"===== NET =====");
+                    Log.Message($"Type --> {net.NetType}");
+                    Log.Message($"Can push gas --> {net.CanPush}");
+                    Log.Message($"Pipes total --> {net.PipesThings.Count}");
+                    Log.Message($"Gas plants --> {net.GasPlants.Count}");
+                    Log.Message($"Gas coolers --> {net.GasCoolers.Count}");
+                    Log.Message($"Gas tankers --> {net.GasTankers.Count}");
+                    Log.Message($"===============");
+                }
             }
         }
     }

@@ -334,15 +334,13 @@ namespace MoreEvents.Things.Mk1
 
         private IEnumerable<Thing> GetAllArmors(Map map)
         {
-            List<SlotGroup> groups = map.haulDestinationManager.AllGroupsListForReading;
-            foreach(var group in groups)
+            List<Thing> list = map.listerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.HaulableEver));
+            for (int i = 0; i < list.Count; i++)
             {
-                foreach(var item in group.HeldThings)
+                Thing thing = list[i];
+                if (thing is Apparel_MkArmor)
                 {
-                    if(item is Apparel_MkArmor)
-                    {
-                        yield return item;
-                    }
+                    yield return thing;
                 }
             }
         }

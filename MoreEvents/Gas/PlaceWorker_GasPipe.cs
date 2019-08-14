@@ -16,7 +16,7 @@ namespace RimOverhaul.Gas
                 GasManager manager = map.GetComponent<GasManager>();
                 ThingDef val = checkingDef as ThingDef;
                 CompProperties_GasPipe pipe = val.GetCompProperties<CompProperties_GasPipe>();
-                if (manager.PipeAt(loc, pipe.pipeType))
+                if (manager.PipeNetAt(loc) != null)
                 {
                     return false;
                 }

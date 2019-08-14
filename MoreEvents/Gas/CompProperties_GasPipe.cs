@@ -18,6 +18,8 @@ namespace RimOverhaul.Gas
 
         public bool ConnectEverything;
 
+        public bool Transmitter;
+
         public CompProperties_GasPipe()
         {
             compClass = typeof(CompPipe);
