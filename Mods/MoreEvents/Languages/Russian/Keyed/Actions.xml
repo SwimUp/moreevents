@@ -18,7 +18,7 @@
   <CokeFurnace_IngInfo>Требуемый предмет для создания {0}. \n\n{1} требуется в количество {2} (загруженно {3}). \nВыберите колониста и нажмите правой кнопкой по печи и выберите ингредиент для загрузки.</CokeFurnace_IngInfo>
   <CokeFurnace_ResultInfo>В результате вы получите {0} в количестве {1} шт. \n\nДля начала коксования загрузите необходимые элементы в печь, затем выберите колониста, нажмите правой кнопкой мыши по печи и выберите 'Зажечь печь'. Прогресс можно наблюдать ниже.</CokeFurnace_ResultInfo>
   
-  <MustPlaceOnGasWell>Может быть установлен тольког на газовой скважине.</MustPlaceOnGasWell>
+  <MustPlaceOnGasWell>Может быть построено только на газовой скважине.</MustPlaceOnGasWell>
   <CompGasWell_GasReserve>Запасы газа: {0}</CompGasWell_GasReserve>
   
   <GasPlant_ActiveInfo>Активно</GasPlant_ActiveInfo>
@@ -26,9 +26,10 @@
   <GasPlant_GasWellInfo>\nЗапасы газа в скважине: {0}</GasPlant_GasWellInfo>
   
   <GasCooler_ActiveInfo>Внутреннее хранилище: {0} / {1}\nСкорость охлаждения: {2}</GasCooler_ActiveInfo>
-  <GasCooler_ActiveInfoNoTankers>\nОтсутствуют трубы, ведующие в газовое хранилище</GasCooler_ActiveInfoNoTankers>
+  <GasCooler_ActiveInfoNoTankers>\nОтсутствуют трубы, ведущие в газовое хранилище</GasCooler_ActiveInfoNoTankers>
   <GasCooler_ActiveInfoNoInNet>\nОтсутствуют входные трубы</GasCooler_ActiveInfoNoInNet>
   
   <CompGasTank_Storage>Сжиженный газ: {0} / {1}</CompGasTank_Storage>
+  <GasStation_Info>Внутреннее хранилище: {0} / {1}</GasStation_Info>
   
 </LanguageData>

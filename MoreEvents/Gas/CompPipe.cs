@@ -27,6 +27,7 @@ namespace RimOverhaul.Gas
 
         public static bool PlayerHasGeoscape = false;
 
+            
         public bool HasPower
         {
             get

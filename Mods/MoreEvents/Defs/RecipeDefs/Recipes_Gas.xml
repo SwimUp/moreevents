@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>GetHydrogen</defName>
+		<label>Get hydrogen</label>
+		<description>Convert liquefied natural gas to hydrogen.</description>
+		<jobString>Gets hydrogen</jobString>
+		<workAmount>1200</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronIngot</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<HydrogenCylinder>1</HydrogenCylinder>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronIngot</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+</Defs>

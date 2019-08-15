@@ -136,11 +136,11 @@
 		<description>It pumps gas out of the well and feeds it into the pipes in the form of natural gas.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
-			<texPath>Things/Building/Power/WoodFiredGenerator</texPath>
+			<texPath>Things/Buildings/GasPlant/GasPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(2,2)</drawSize>
+			<drawSize>(4,4)</drawSize>
 			<shadowData>
-				<volume>(1.93,1,1.69)</volume>
+				<volume>(3.93,1,3.69)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
 			</shadowData>
 		</graphicData>
@@ -159,7 +159,7 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
-		<size>(2,2)</size>
+		<size>(4,4)</size>
 		<costList>
 			<Steel>100</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
@@ -247,7 +247,6 @@
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 	</ThingDef>
-	
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>SmallGasVault</defName>
@@ -259,7 +258,7 @@
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3,1)</drawSize>
 			<shadowData>
-				<volume>(1.93,1,1.69)</volume>
+				<volume>(2.93,1,0.69)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
 			</shadowData>
 		</graphicData>
@@ -288,11 +287,109 @@
 				<pipeType>LiquidGas</pipeType>
 				<StorageCapacity>2000</StorageCapacity>
 			</li>
+			<li Class="RimOverhaul.Gas.CompProperties_Explosive_GasProp">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<damageAmountBase>20</damageAmountBase>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<designationCategory>GasProduction</designationCategory>
 		<designationHotKey>Misc3</designationHotKey>
 		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>GasProcessingStation</defName>
+		<label>Gas processing station</label>
+		<description>Station for processing liquefied natural gas into other gases.</description>
+		<thingClass>RimOverhaul.Gas.Building_GasStation</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/GasVault/gasvault</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(1.93,1,1.69)</volume>
+				<offset>(-0.03,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<pathCost>150</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>1.0</fillPercent>
+		<castEdgeShadows>false</castEdgeShadows>
+		<rotatable>true</rotatable>
+		<inspectorTabs>
+			<li>RimOverhaul.Gas.ITab_BillsGas</li>
+		</inspectorTabs>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(2,2)</size>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<recipes>
+			<li>GetHydrogen</li>
+		</recipes>
+		<comps>
+			<li Class="RimOverhaul.Gas.CompProperties_GasStation">
+				<pipeType>LiquidGas</pipeType>
+				<GasModifier> 
+					<li>
+						<key>GetHydrogen</key>
+						<value>0.007</value>
+					</li>
+				</GasModifier>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>1200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>5</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li>
+				<compClass>CompReportWorkSpeed</compClass>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="RimOverhaul.Gas.CompProperties_Explosive_GasProp">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<damageAmountBase>35</damageAmountBase>
+				<startWickHitPointsPercent>0.3</startWickHitPointsPercent>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>GasProduction</designationCategory>
+		<designationHotKey>Misc3</designationHotKey>
+		<constructEffect>ConstructMetal</constructEffect>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
 		<researchPrerequisites>
 			<li>Electricity</li>
 		</researchPrerequisites>

@@ -25,4 +25,7 @@
 	<GasCooler.label>Газовый охладитель</GasCooler.label>
 	<GasCooler.description>Охлаждает поступающий газ до -160 и выдает сжиженный природный газ, который можно хранить в большем количестве.</GasCooler.description>
 	
+	<GasProcessingStation.label>Газоперерабатывающая станция</GasProcessingStation.label>
+	<GasProcessingStation.description>Станция для переработки сжиженного природного газа на другие газы.</GasProcessingStation.description>
+	
 </LanguageData>

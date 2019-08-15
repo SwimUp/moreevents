@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace RimOverhaul.Gas
@@ -22,6 +23,10 @@ namespace RimOverhaul.Gas
         public GasManager GasManager;
 
         public bool CanPush = false;
+
+        public float TotalLiquidGasNow => GasTankers.Sum(x => x.Storage);
+
+        public bool HasLiquidGas => TotalLiquidGasNow > 0;
 
         public void InitNet()
         {
@@ -77,6 +82,27 @@ namespace RimOverhaul.Gas
             }
 
             return;
+        }
+
+        public bool GetGasFromNet(float count)
+        {
+            if (!HasLiquidGas)
+                return false;
+
+            float value = count;
+            foreach(var tank in GasTankers.InRandomOrder())
+            {
+                float num = Mathf.Min(tank.Storage, value);
+                tank.Storage -= num;
+                value -= num;
+
+                if(num <= 0)
+                {
+                    break;
+                }
+            }
+
+            return true;
         }
     }
 }

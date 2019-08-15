@@ -4,17 +4,17 @@
 		<defName>Production</defName>
 		<label>Production</label>
 	</ResearchTabDef>
-	
-		<ResearchTabDef>
+
+	<ResearchTabDef>
 		<defName>Electricity</defName>
 		<label>Electricity</label>
 	</ResearchTabDef>
 
-<ResearchTabDef>
+	<ResearchTabDef>
 		<defName>Warfare</defName>
 		<label>Warfare</label>
 	</ResearchTabDef>
-	
+
 	<ResearchTabDef>
 		<defName>Medicine</defName>
 		<label>Medicine</label>
