@@ -8,6 +8,7 @@
 		<graphicData>
 			<texPath>Things/Resources/Gas/Hydrogen</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
@@ -17,6 +18,7 @@
 			<Mass>0.4</Mass>
 			<Flammability>70</Flammability>
 		</statBases>
+		<size>(2,2)</size>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_Explosive_GasProp">
 				<explosiveRadius>1</explosiveRadius>
@@ -39,6 +41,7 @@
 		<graphicData>
 			<texPath>Things/Resources/Gas/LiquidGas</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
@@ -48,6 +51,7 @@
 			<Mass>0.4</Mass>
 			<Flammability>70</Flammability>
 		</statBases>
+		<size>(2,2)</size>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_Explosive_GasProp">
 				<explosiveRadius>1</explosiveRadius>
