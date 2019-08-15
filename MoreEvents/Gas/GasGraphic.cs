@@ -18,7 +18,7 @@ namespace RimOverhaul.Gas
         public static ColorInt[] GraphicColor = new ColorInt[]
         {
             new ColorInt(255, 255, 255),
-            new ColorInt(255, 255, 255)
+            new ColorInt(89, 137, 153)
         };
 
         public static string[] GraphicPathForGrid = new string[]
