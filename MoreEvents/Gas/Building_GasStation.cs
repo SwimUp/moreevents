@@ -127,7 +127,7 @@ namespace RimOverhaul.Gas
             }
             if(BillStack.FirstShouldDoNow != null && GasModifiers.TryGetValue(BillStack.FirstShouldDoNow.recipe, out float value))
             {
-                if (Storage < value)
+                if (Storage < value * BillStack.FirstShouldDoNow.recipe.workAmount)
                     return false;
             }
 

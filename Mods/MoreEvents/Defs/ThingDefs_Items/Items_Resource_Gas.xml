@@ -37,7 +37,7 @@
 		<label>Liquefied natural gas cylinder</label>
 		<description>A cylinder filled with liquefied natural gas. Explosive.</description>
 		<graphicData>
-			<texPath>Things/Resources/Gas/NaturalGas</texPath>
+			<texPath>Things/Resources/Gas/LiquidGas</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>
