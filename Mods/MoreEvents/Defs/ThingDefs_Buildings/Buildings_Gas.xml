@@ -345,6 +345,7 @@
 		</costList>
 		<recipes>
 			<li>GetHydrogen</li>
+			<li>GetLeqGasCycl</li>
 		</recipes>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasStation">
@@ -352,7 +353,11 @@
 				<GasModifier> 
 					<li>
 						<key>GetHydrogen</key>
-						<value>0.007</value>
+						<value>0.012</value>
+					</li>
+					<li>
+						<key>GetLeqGasCycl</key>
+						<value>0.005</value>
 					</li>
 				</GasModifier>
 			</li>
