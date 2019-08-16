@@ -8,6 +8,22 @@
 		<MinAtStart>1</MinAtStart>
 		<MaxSpawn>3</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 7)</li>
+				<li>(0.5, 12)</li>
+				<li>(1, 17)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 15)</li>
+				<li>(0.5, 20)</li>
+				<li>(1, 25)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -18,6 +34,22 @@
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
 		<Worker Class="RandomPlaces.CompRandomPlace_FermBunker" />
+		<MinStartScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5, 6)</li>
+				<li>(1, 8)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5,6)</li>
+				<li>(1, 8)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -27,6 +59,22 @@
 		<MinAtStart>2</MinAtStart>
 		<MaxSpawn>4</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 5)</li>
+				<li>(0.5, 9)</li>
+				<li>(1, 12)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 9)</li>
+				<li>(0.5, 15)</li>
+				<li>(1, 20)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -39,6 +87,22 @@
 		<ExtraLord Class="RandomPlaces.ExtraLord_DefendBase">
 			<BaseCenter>(58, 0, 82)</BaseCenter>
 		</ExtraLord>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 5)</li>
+				<li>(0.5, 10)</li>
+				<li>(1, 15)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 7)</li>
+				<li>(0.5, 15)</li>
+				<li>(1, 20)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -61,8 +125,24 @@
 		<MaxSpawn>3</MaxSpawn>
 		<RefuelGenerators>false</RefuelGenerators>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 3)</li>
+				<li>(0.5, 6)</li>
+				<li>(1, 9)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 6)</li>
+				<li>(0.5, 9)</li>
+				<li>(1, 15)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>AbandonedMines</defName>
 		<Commonality>0.75</Commonality>
@@ -70,6 +150,22 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 0)</li>
+				<li>(0.5, 1)</li>
+				<li>(1, 3)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5, 7)</li>
+				<li>(1, 10)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -80,8 +176,24 @@
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
 		<ExtraLord Class="RandomPlaces.ExtraLord_AttackPlayer" />
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 0)</li>
+				<li>(0.5, 0)</li>
+				<li>(1, 0)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 3)</li>
+				<li>(0.5, 4)</li>
+				<li>(1, 5)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>ShipCrash</defName>
 		<Commonality>0.42</Commonality>
@@ -89,6 +201,22 @@
 		<MinAtStart>1</MinAtStart>
 		<MaxSpawn>3</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 2)</li>
+				<li>(0.5, 3)</li>
+				<li>(1, 4)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 3)</li>
+				<li>(0.3, 6)</li>
+				<li>(0.5, 9)</li>
+				<li>(1, 12)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -98,8 +226,24 @@
 		<MinAtStart>3</MinAtStart>
 		<MaxSpawn>5</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 3)</li>
+				<li>(0.3, 10)</li>
+				<li>(0.5, 20)</li>
+				<li>(1, 30)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 5)</li>
+				<li>(0.3, 20)</li>
+				<li>(0.5, 30)</li>
+				<li>(1, 50)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>TribalFishermen</defName>
 		<Commonality>0.65</Commonality>
@@ -107,8 +251,24 @@
 		<MinAtStart>2</MinAtStart>
 		<MaxSpawn>4</MaxSpawn>
 		<FactionType>Neutral</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 5)</li>
+				<li>(0.5, 10)</li>
+				<li>(1, 13)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 8)</li>
+				<li>(0.5, 12)</li>
+				<li>(1, 20)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>SettlementHunters</defName>
 		<Commonality>0.45</Commonality>
@@ -116,8 +276,24 @@
 		<MinAtStart>1</MinAtStart>
 		<MaxSpawn>4</MaxSpawn>
 		<FactionType>Neutral</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 5)</li>
+				<li>(0.5, 10)</li>
+				<li>(1, 13)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 8)</li>
+				<li>(0.5, 12)</li>
+				<li>(1, 20)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>Ruins1</defName>
 		<Commonality>0.45</Commonality>
@@ -125,6 +301,22 @@
 		<MinAtStart>2</MinAtStart>
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 2)</li>
+				<li>(0.5, 3)</li>
+				<li>(1, 3)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 2)</li>
+				<li>(0.5, 4)</li>
+				<li>(1, 4)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -134,8 +326,24 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>3</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 0)</li>
+				<li>(0.5, 0)</li>
+				<li>(1, 0)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 3)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5, 5)</li>
+				<li>(1, 6)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>Ruins3</defName>
 		<Commonality>0.67</Commonality>
@@ -143,6 +351,22 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 0)</li>
+				<li>(0.5, 2)</li>
+				<li>(1, 4)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5, 6)</li>
+				<li>(1, 8)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
 
 	<RandomPlaces.RandomPlaceDef>
@@ -161,8 +385,24 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>4</MaxSpawn>
 		<FactionType>Ally</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 2)</li>
+				<li>(0.5, 3)</li>
+				<li>(1, 4)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 4)</li>
+				<li>(0.3, 8)</li>
+				<li>(0.5, 10)</li>
+				<li>(1, 10)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>BurnedSettlement1</defName>
 		<Commonality>0.21</Commonality>
@@ -170,8 +410,24 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 1)</li>
+				<li>(0.5, 2)</li>
+				<li>(1, 3)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5, 6)</li>
+				<li>(1, 8)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>BurnedSettlement2</defName>
 		<Commonality>0.21</Commonality>
@@ -179,8 +435,24 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>2</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 2)</li>
+				<li>(0.5, 4)</li>
+				<li>(1, 6)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 2)</li>
+				<li>(0.3, 4)</li>
+				<li>(0.5, 8)</li>
+				<li>(1, 12)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 	<RandomPlaces.RandomPlaceDef>
 		<defName>Stonehensgj</defName>
 		<Commonality>0.1</Commonality>
@@ -188,6 +460,22 @@
 		<MinAtStart>0</MinAtStart>
 		<MaxSpawn>1</MaxSpawn>
 		<FactionType>Hostile</FactionType>
+		<MinStartScale>
+			<points>
+				<li>(0.05, 0)</li>
+				<li>(0.3, 0)</li>
+				<li>(0.5, 0)</li>
+				<li>(1, 0)</li>
+			</points>
+		</MinStartScale>
+		<MaxSpawnScale>
+			<points>
+				<li>(0.05, 1)</li>
+				<li>(0.3, 1)</li>
+				<li>(0.5, 1)</li>
+				<li>(1, 1)</li>
+			</points>
+		</MaxSpawnScale>
 	</RandomPlaces.RandomPlaceDef>
-	
+
 </Defs>

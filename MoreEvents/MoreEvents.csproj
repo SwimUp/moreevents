@@ -203,6 +203,7 @@
     <Compile Include="Events\ShipCrash\ShipSite.cs" />
     <Compile Include="Events\WorldObjectsDefOfLocal.cs" />
     <Compile Include="FactionDefOfLocal.cs" />
+    <Compile Include="Gas\Bill_GasProduction.cs" />
     <Compile Include="Gas\CompExplosive_GasProp.cs" />
     <Compile Include="Gas\CompProperties_Explosive_GasProp.cs" />
     <Compile Include="Gas\ITab_BillsGas.cs" />

@@ -184,13 +184,13 @@ namespace RimOverhaul.Gas
             Job job2 = new Job(JobDefOf.DoBill, (Thing)bill.billStack.billGiver);
             job2.bill = bill;
             job2.targetQueueB = new List<LocalTargetInfo>
-        {
-            uft
-        };
+            {
+                uft
+            };
             job2.countQueue = new List<int>
-        {
-            1
-        };
+            {
+                1
+            };
             job2.haulMode = HaulMode.ToCellNonStorage;
             return job2;
         }
@@ -250,9 +250,9 @@ namespace RimOverhaul.Gas
                 {
                     if (gasStation.GasModifiers.TryGetValue(bill.recipe, out float value))
                     {
-                        if (gasStation.Storage < (bill.recipe.workAmount * value))
+                        if (gasStation.Storage < value)
                         {
-                            JobFailReason.Is("GasBill_NotEnoughGas".Translate(), bill.Label);
+                            JobFailReason.Is("GasBill_NotEnoughGas".Translate(value), bill.Label);
                             continue;
                         }
                     }

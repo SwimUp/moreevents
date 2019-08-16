@@ -86,8 +86,6 @@ namespace RimOverhaul.Gas
             {
                 refuelableComp.Notify_UsedThisTick();
             }
-
-            Storage = Mathf.Clamp(Storage - GasModifiers[BillStack.FirstShouldDoNow.recipe], 0, Storage);
         }
 
         public override void Tick()

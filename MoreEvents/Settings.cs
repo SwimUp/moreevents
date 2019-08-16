@@ -74,7 +74,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 46;
+        private static int totalSettings = 47;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -209,7 +209,11 @@ namespace MoreEvents
             {
             "DenseAtmosphere", new EventSettings("DenseAtmosphere")
                 {
-                    Active = true
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
+                    {
+                        {"DoMapChange", new Parameter("DoMapChange", "1") },
+                    }
                 }
             },
             {
@@ -372,14 +376,21 @@ namespace MoreEvents
             {
                     Active = true
             }
-            },           
+            },
             {
             "TunnelRats", new EventSettings("TunnelRats")
             {
                     Active = true
             }
+            },
+            {
+            "RaidEnemyWithAnimals", new EventSettings("RaidEnemyWithAnimals")
+            {
+                    Active = true,
+                    UseCustomLabels = true
             }
-        };
+            }
+        }; 
 
         private static int length = 0;
 
@@ -582,7 +593,11 @@ namespace MoreEvents
             {
             "DenseAtmosphere", new EventSettings("DenseAtmosphere")
                 {
-                    Active = true
+                    Active = true,
+                    Parameters = new Dictionary<string, Parameter>()
+                    {
+                        {"DoMapChange", new Parameter("DoMapChange", "1") },
+                    }
                 }
             },
             {
@@ -750,6 +765,13 @@ namespace MoreEvents
             "TunnelRats", new EventSettings("TunnelRats")
             {
                     Active = true
+            }
+            },
+            {
+            "RaidEnemyWithAnimals", new EventSettings("RaidEnemyWithAnimals")
+            {
+                    Active = true,
+                    UseCustomLabels = true
             }
             }
             };

@@ -39,4 +39,10 @@
   <EnableNegative_title>Activate negative constellations (1 - yes, 0 - no)</EnableNegative_title>
   <EnableNegative>Activate negative constellations (1 - yes, 0 - no)</EnableNegative>
   
+  <RaidEnemyWithAnimals_Title>Raid with animals</RaidEnemyWithAnimals_Title>
+  <RaidEnemyWithAnimals_Desc>Raid with animals</RaidEnemyWithAnimals_Desc>
+  
+  <DoMapChange_title>Change biomes to the desert gradually (1/0)</DoMapChange_title>
+  <DoMapChange>If active (1), then every few days random tiles will change their biome to the desert</DoMapChange>
+  
 </LanguageData>

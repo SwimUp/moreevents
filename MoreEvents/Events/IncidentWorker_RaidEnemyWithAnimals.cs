@@ -11,6 +11,16 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_RaidEnemyWithAnimals : IncidentWorker_RaidEnemy
     {
+        private EventSettings settings => Settings.EventsSettings["RaidEnemyWithAnimals"];
+
+        protected override bool CanFireNowSub(IncidentParms parms)
+        {
+            if (!settings.Active)
+                return false;
+
+            return base.CanFireNowSub(parms);
+        }
+
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             ResolveRaidPoints(parms);

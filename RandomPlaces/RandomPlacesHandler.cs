@@ -22,8 +22,10 @@ namespace RandomPlaces
                 RandomPlaceDef randomPlaceDef = allPlaces[i];
 
                 int spawnedCount = 0;
+                int minToStart = randomPlaceDef.MinStartScale == null ? randomPlaceDef.MinAtStart : (int)randomPlaceDef.MinStartScale.Evaluate(Find.World.PlanetCoverage);
+                int maxSpawn = randomPlaceDef.MaxSpawnScale == null ? randomPlaceDef.MaxSpawn : (int)randomPlaceDef.MaxSpawnScale.Evaluate(Find.World.PlanetCoverage);
 
-                for (int i3 = 0; i3 < randomPlaceDef.MinAtStart; i3++)
+                for (int i3 = 0; i3 < minToStart; i3++)
                 {
                     int tile = TileFinder.RandomStartingTile();
 
@@ -39,10 +41,10 @@ namespace RandomPlaces
                     }
                 }
 
-               if (spawnedCount >= randomPlaceDef.MaxSpawn)
+               if (spawnedCount >= maxSpawn)
                 continue;
 
-                for (int i4 = 0; i4 < randomPlaceDef.MaxSpawn - spawnedCount; i4++)
+                for (int i4 = 0; i4 < maxSpawn - spawnedCount; i4++)
                 {
                     if (Rand.Chance(randomPlaceDef.Commonality))
                     {

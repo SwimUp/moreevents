@@ -19,5 +19,7 @@ namespace RandomPlaces
         public CompRandomPlace Worker;
         public bool UseMapSpawnSpot;
         public bool RefuelGenerators = true;
+        public SimpleCurve MinStartScale;
+        public SimpleCurve MaxSpawnScale;
     }
 }

@@ -65,6 +65,7 @@ namespace QuestRim
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
         private static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
         private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
+        private static readonly Color CommCardBGColorNotRead = new ColorInt(166, 80, 80).ToColor;
         private static readonly Color JumpToLocationColor = new ColorInt(101, 172, 247).ToColor;
         private static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
         private static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
@@ -77,6 +78,7 @@ namespace QuestRim
             quests = communications.Quests;
             factions = communications.FactionManager.Factions;
             emailMessages = communications.PlayerBox.Messages;
+            emailMessages.SortBy(x => x.SendTick);
 
             this.communications = communications;
             this.speaker = speaker;
@@ -627,7 +629,7 @@ namespace QuestRim
             }
 
             Text.Anchor = TextAnchor.UpperLeft;
-
+            
             Text.Font = GameFont.Small;
             if(Mouse.IsOver(r))
             {
@@ -637,13 +639,14 @@ namespace QuestRim
             string str = $"{message.Message.Substring(0, message.Message.Length > 150 ? 150 : message.Message.Length)}...";
             TooltipHandler.TipRegion(r, str);
 
-            GUI.color = CommCardBGColor;
+            GUI.color = message.MessageRead ? CommCardBGColor : CommCardBGColorNotRead;
             Widgets.DrawHighlight(r);
             GUI.color = Color.white;
 
             if (Widgets.ButtonInvisible(r))
             {
                 currentMessage = message;
+                currentMessage.MessageRead = true;
             }
             y += 130;
         }

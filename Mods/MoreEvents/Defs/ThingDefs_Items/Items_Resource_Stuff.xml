@@ -194,7 +194,7 @@ Nickel can be processed in an arc furnace.</description>
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
-		<deepCommonality>2</deepCommonality>
+		<deepCommonality>0.9</deepCommonality>
 		<deepCountPerPortion>10</deepCountPerPortion>
 		<deepLumpSizeRange>
 			<min>5</min>
@@ -293,7 +293,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
-		<deepCommonality>1</deepCommonality>
+		<deepCommonality>0.56</deepCommonality>
 		<deepCountPerPortion>5</deepCountPerPortion>
 		<deepLumpSizeRange>
 			<min>1</min>
@@ -445,4 +445,75 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>TungstenOre</defName>
+		<label>Tungsten ore</label>
+		<description>Ore containing enough tungsten to get tungsten ingots from it.
+		
+Tungsten ingots can be melted in a arc furnace.</description>
+		<graphicData>
+			<texPath>Things/Resources/TungstenOre</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>3.0</MarketValue>
+			<Mass>0.5</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.2</deepCommonality>
+		<deepCountPerPortion>3</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>1</min>
+			<max>3</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>TungstenIngot</defName>
+		<label>Tungsten ingot</label>
+		<description>The free element is remarkable for its robustness, especially the fact that it has the highest melting point of all the elements discovered, melting at 3422 °C (6192 °F, 3695 K). It also has the highest boiling point, at 5930 °C (10706 °F, 6203 K). Its density is 19.25 times that of water, comparable to that of uranium and gold, and much higher (about 1.7 times) than that of lead.</description>
+		<graphicData>
+			<texPath>Things/Resources/TungstenIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>6.3</MarketValue>
+			<Mass>0.7</Mass>
+			<StuffPower_Armor_Sharp>1.5</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(135, 135, 135)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>400</MaxHitPoints>
+				<Beauty>0.5</Beauty>
+				<Flammability>0.1</Flammability>
+				<WorkToMake>2.2</WorkToMake>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
 </Defs>

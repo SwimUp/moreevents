@@ -18,4 +18,6 @@
 	<MineableIlmenite.label>Ильменитовая руда</MineableIlmenite.label>
 	<MineableIlmenite.description>Титан — лёгкий прочный металл серебристо-белого цвета. Обладает высокой коррозионной стойкостью.</MineableIlmenite.description>
 	
+	<MineableTungsten.label>Вольфрамовая руда</MineableTungsten.label>
+	<MineableTungsten.description>Руда, содержащая достаточно вольфрама, чтобы получить из него вольфрамовые слитки.</MineableTungsten.description>
 </LanguageData>

@@ -39,5 +39,10 @@
   <EnableNegative_title>Активировать негативные созвездия (1 - да, 0 - нет)</EnableNegative_title>
   <EnableNegative>Активировать негативные созвездия (1 - да, 0 - нет)</EnableNegative>
   
+  <RaidEnemyWithAnimals_Title>Рейд с животными</RaidEnemyWithAnimals_Title>
+  <RaidEnemyWithAnimals_Desc>Рейд с животными</RaidEnemyWithAnimals_Desc>
+  
+  <DoMapChange_title>Изменять постепенно биомы на пустыню (1/0)</DoMapChange_title>
+  <DoMapChange>Если активно (1), то каждые несколько дней случайные тайлы будут изменять свой биом на пустыню</DoMapChange>
   
 </LanguageData>

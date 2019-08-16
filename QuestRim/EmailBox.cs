@@ -42,6 +42,8 @@ namespace QuestRim
             message.From = $"{faction?.Name} ({faction.leader?.Name})";
             message.Subject = subject;
             message.Message = text;
+            message.SendTick = Find.TickManager.TicksGame;
+            message.MessageRead = false;
 
             return message;
         }

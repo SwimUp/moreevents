@@ -60,7 +60,7 @@ namespace RimOverhaul.Gas
                             {
                                 Bill.CreateNoPawnsWithSkillDialog(recipe);
                             }
-                            Bill bill2 = recipe.MakeNewBill();
+                            Bill bill2 = new Bill_GasProduction(recipe, SelTable);
                             SelTable.billStack.AddBill(bill2);
                             if (recipe.conceptLearned != null)
                             {

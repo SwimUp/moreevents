@@ -31,6 +31,6 @@
   
   <CompGasTank_Storage>Сжиженный газ: {0} / {1}</CompGasTank_Storage>
   <GasStation_Info>Внутреннее хранилище: {0} / {1}</GasStation_Info>
-  <GasBill_NotEnoughGas>недостаточно газа</GasBill_NotEnoughGas>
+  <GasBill_NotEnoughGas>недостаточно газа ({0})</GasBill_NotEnoughGas>
   
 </LanguageData>
