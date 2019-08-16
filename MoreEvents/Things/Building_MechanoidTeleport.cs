@@ -36,6 +36,12 @@ namespace MoreEvents.Things
             count = Rand.Range(20, 40);
 
             LongEventHandler.ExecuteWhenFinished((Action)CreateAnim);
+
+            if(!Map.listerThings.ThingsOfDef(ThingDefOfLocal.MechanoidTeleport_Generator).Any())
+            {
+                destroyed = true;
+                Destroy();
+            }
         }
 
         private void CreateAnim()

@@ -5,7 +5,7 @@
   <MassiveFireSite.description>Очаг огня</MassiveFireSite.description>
  
   <ClimateBombSite.label>Климатическая бомба</ClimateBombSite.label>
-  <ClimateBombSite.description>Местонахождение климатической бомбы</ClimateBombSite.description>
+  <ClimateBombSite.description>Местонахождение климатической бомбы.</ClimateBombSite.description>
  
   <SiegeCampSite.label>Осадный лагерь</SiegeCampSite.label>
   <SiegeCampSite.description>Здесь находится вражеский лагерь. Они будут бомбардировать наше поселение и совершать набеги, пока мы не уничтожим его.</SiegeCampSite.description>
@@ -13,13 +13,13 @@
   <FriendlySettlementHelp.label>Место рейда</FriendlySettlementHelp.label>
   <FriendlySettlementHelp.description>Место, куда будет совершенно нападение.</FriendlySettlementHelp.description>
     
-  <DoomsdayUltimatumCamp.label>Место судного дня</DoomsdayUltimatumCamp.label>
-  <DoomsdayUltimatumCamp.description>Здесь расположилась фракция со своим неизвестным оружием, угрожающая уничтожить планету</DoomsdayUltimatumCamp.description>
+  <DoomsdayUltimatumCamp.label>Расположение Оружия судного дня.</DoomsdayUltimatumCamp.label>
+  <DoomsdayUltimatumCamp.description>Здесь расположилась фракция со своим неизвестным оружием, угрожающая уничтожить планету.</DoomsdayUltimatumCamp.description>
      
   <QuestPlace.label>Место квеста</QuestPlace.label>
   <QuestPlace.description>Место квеста.</QuestPlace.description>
   
   <ConcantrationCamp.label>Концлагерь</ConcantrationCamp.label>
-  <ConcantrationCamp.description>Концлагерь\nВероятно, здесь пираты держат заключенных</ConcantrationCamp.description>
+  <ConcantrationCamp.description>Концлагерь\nВероятно, здесь пираты держат заключенных.</ConcantrationCamp.description>
  
 </LanguageData>

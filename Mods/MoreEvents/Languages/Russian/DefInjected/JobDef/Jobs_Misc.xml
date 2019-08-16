@@ -9,10 +9,10 @@
   <DeEnergizeDoomsdayBomb.reportString>Деактивирует энергетическое поле оружия</DeEnergizeDoomsdayBomb.reportString>
   <DisableSecuritySystems.reportString>Отключает системы защиты</DisableSecuritySystems.reportString>
   <SpeakWithQuester.reportString>Обсуждает задания</SpeakWithQuester.reportString>
-  <SpeakWithPawn.reportString>общается</SpeakWithPawn.reportString>
-  <DestroyTribalCrack.reportString>идет взрывать туннель</DestroyTribalCrack.reportString>
-  <CarryItemToCokeFurnace.reportString>несет предмет для коксовой печи</CarryItemToCokeFurnace.reportString>
-  <SwitchCokeFurnace.reportString>переключает коксовую печь</SwitchCokeFurnace.reportString>
-  <TakeResultFromCokeFurnace.reportString>достает предмет из коксовой печи</TakeResultFromCokeFurnace.reportString>
+  <SpeakWithPawn.reportString>Общается</SpeakWithPawn.reportString>
+  <DestroyTribalCrack.reportString>Идет взрывать туннель</DestroyTribalCrack.reportString>
+  <CarryItemToCokeFurnace.reportString>Несет предмет для коксовой печи</CarryItemToCokeFurnace.reportString>
+  <SwitchCokeFurnace.reportString>Переключает коксовую печь</SwitchCokeFurnace.reportString>
+  <TakeResultFromCokeFurnace.reportString>Достает предмет из коксовой печи</TakeResultFromCokeFurnace.reportString>
 
 </LanguageData>

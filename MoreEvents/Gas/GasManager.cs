@@ -68,17 +68,19 @@ namespace RimOverhaul.Gas
                         {
                             compPipe2.pipeNet = newNet;
                             newNet.PipesThings.Add(compPipe2.parent);
-                        }else if(compPipe2.GasProps.ConnectEverything)
-                        {
-                            newNet.PipesThings.Add(compPipe2.parent);
+
+                            CellRect cellRect = compPipe2.parent.OccupiedRect();
+                            foreach (var cell in cellRect)
+                            {
+                                int num = map.cellIndices.CellToIndex(cell.x, cell.z);
+                                PipeGrid[pipeTypeInt, map.cellIndices.CellToIndex(c)] = 1;
+                                PipeNets[num] = newNet;
+                            }
                         }
 
-                        CellRect cellRect = compPipe2.parent.OccupiedRect();
-                        foreach(var cell in cellRect)
+                        if(compPipe2.GasProps.ConnectEverything)
                         {
-                            int num = map.cellIndices.CellToIndex(cell.x, cell.z);
-                            PipeGrid[pipeTypeInt, map.cellIndices.CellToIndex(c)] = 1;
-                            PipeNets[num] = newNet;
+                            newNet.PipesThings.Add(compPipe2.parent);
                         }
                         return true;
                     }

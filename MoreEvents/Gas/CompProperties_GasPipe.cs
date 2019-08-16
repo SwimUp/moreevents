@@ -8,8 +8,8 @@ namespace RimOverhaul.Gas
 {
     public enum PipeType : byte
     {
-        NaturalGas,
-        LiquidGas
+        NaturalGas = 0,
+        LiquidGas = 1
     }
 
     public class CompProperties_GasPipe : CompProperties

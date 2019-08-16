@@ -230,6 +230,7 @@
     <Compile Include="Gas\SectionLayer_GasPipeOverlay.cs" />
     <Compile Include="Gas\SectionLayer_LiquidGasPipeOverlay.cs" />
     <Compile Include="Gas\SectionLayer_NaturalGasPipeOverlay.cs" />
+    <Compile Include="Gas\WorkGiver_DoBillGas.cs" />
     <Compile Include="Hediffs\HediffCompProperties_AutoHeal.cs" />
     <Compile Include="Hediffs\HediffCompProperties_GiveMentalBreak.cs" />
     <Compile Include="Hediffs\HediffCompProperties_NeuroWormsTick.cs" />

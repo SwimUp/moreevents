@@ -12,7 +12,6 @@ namespace RimOverhaul.Gas
         public PipeType NetType;
 
         public List<CompPipe> Pipes = new List<CompPipe>();
-        public Dictionary<PipeType, List<CompPipe>> PipesByType;
 
         public List<ThingWithComps> PipesThings = new List<ThingWithComps>();
 
@@ -31,8 +30,6 @@ namespace RimOverhaul.Gas
         public void InitNet()
         {
             GenList.RemoveDuplicates(PipesThings);
-
-            PipesByType = new Dictionary<PipeType, List<CompPipe>>(PipesThings.Count);
 
             foreach (var thing in PipesThings)
             {
@@ -55,12 +52,6 @@ namespace RimOverhaul.Gas
                 {
                     GasTankers.Add(compGasTank);
                 }
-            }
-
-            foreach (PipeType type in Enum.GetValues(typeof(PipeType)))
-            {
-                List<CompPipe> pipes = Pipes.Where(p => p.PipeType == type).ToList();
-                PipesByType.Add(type, pipes);
             }
 
             if (GasCoolers.Count > 0)

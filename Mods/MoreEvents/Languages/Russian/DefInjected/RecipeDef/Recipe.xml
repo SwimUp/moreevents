@@ -8,27 +8,27 @@
 	<Make_BallistaProjectile.description>Сделать большие стрелы для баллисты</Make_BallistaProjectile.description>
 	
 	<SmeltingIronIngots.label>Выплавить железные слитки</SmeltingIronIngots.label>
-	<SmeltingIronIngots.description>Выплавить железные слитки из железной руды для дальнейшего использования.</SmeltingIronIngots.description>
-	<SmeltingIronIngots.jobString>Выплавляет железо</SmeltingIronIngots.jobString>
+	<SmeltingIronIngots.description>Выплавить слитки из железной руды для дальнейшего использования.</SmeltingIronIngots.description>
+	<SmeltingIronIngots.jobString>Выплавляет железный слиток</SmeltingIronIngots.jobString>
 	
 	<SmeltingCopperIngots.label>Выплавить медные слитки</SmeltingCopperIngots.label>
-	<SmeltingCopperIngots.description>Выплавить медные слитки из медной руды для дальнейшего использования.</SmeltingCopperIngots.description>
-	<SmeltingCopperIngots.jobString>Выплавляет медь</SmeltingCopperIngots.jobString>
+	<SmeltingCopperIngots.description>Выплавить слитки из медной руды для дальнейшего использования.</SmeltingCopperIngots.description>
+	<SmeltingCopperIngots.jobString>Выплавляет медный слиток</SmeltingCopperIngots.jobString>
 	
-	<SmeltingNickelIngots.label>Выплавить никелевую руду</SmeltingNickelIngots.label>
-	<SmeltingNickelIngots.description>Выплавить никелевые слитки и кобальтовые из никелевой руды.</SmeltingNickelIngots.description>
-	<SmeltingNickelIngots.jobString>Выплавляет никель</SmeltingNickelIngots.jobString>
+	<SmeltingNickelIngots.label>Переплавить никелевую руду</SmeltingNickelIngots.label>
+	<SmeltingNickelIngots.description>Выплавить никелевые и кобальтовые слитки из никелевой руды.</SmeltingNickelIngots.description>
+	<SmeltingNickelIngots.jobString>Переплавляет никель</SmeltingNickelIngots.jobString>
 	
 	<SmeltingPalladiumIngot.label>Получить палладиевые слитки</SmeltingPalladiumIngot.label>
 	<SmeltingPalladiumIngot.description>Выплавить палладиевые слитки из меди, серебра и никеля.</SmeltingPalladiumIngot.description>
-	<SmeltingPalladiumIngot.jobString>Выплавляет палладий</SmeltingPalladiumIngot.jobString>
+	<SmeltingPalladiumIngot.jobString>Выплавляет палладиевый слиток</SmeltingPalladiumIngot.jobString>
 	
 	<SmeltingTitanIngots.label>Выплавить титановые слитки</SmeltingTitanIngots.label>
 	<SmeltingTitanIngots.description>Выплавить титановые слитки из ильменитовой руды.</SmeltingTitanIngots.description>
-	<SmeltingTitanIngots.jobString>Выплавляет титан</SmeltingTitanIngots.jobString>
+	<SmeltingTitanIngots.jobString>Выплавляет титановый слиток</SmeltingTitanIngots.jobString>
 	
 	<SmeltingChorium.label>Получить хром</SmeltingChorium.label>
-	<SmeltingChorium.description>Выплавить хром, используя железо и коксовый уголь</SmeltingChorium.description>
+	<SmeltingChorium.description>Выплавить хром, используя железо и коксовый уголь.</SmeltingChorium.description>
 	<SmeltingChorium.jobString>Выплавляет хром</SmeltingChorium.jobString>
 	
 	<BurnWoodToCoal.label>Сделать древесный уголь</BurnWoodToCoal.label>
@@ -36,11 +36,11 @@
 	<BurnWoodToCoal.jobString>Получает древесный уголь</BurnWoodToCoal.jobString>
 	
 	<SmeltingPlasteel.label>Выплавить пласталь</SmeltingPlasteel.label>
-	<SmeltingPlasteel.description>Выплавить пласталь, используя сталь, кобальт и титан</SmeltingPlasteel.description>
+	<SmeltingPlasteel.description>Выплавить пласталь, используя сталь, кобальт и титан.</SmeltingPlasteel.description>
 	<SmeltingPlasteel.jobString>Выплавляет пласталь</SmeltingPlasteel.jobString>
 	
 	<SmeltingSteel.label>Выплавить сталь</SmeltingSteel.label>
-	<SmeltingSteel.description>Выплавить сталь, используя железо и уголь</SmeltingSteel.description>
+	<SmeltingSteel.description>Выплавить сталь, используя железо и уголь.</SmeltingSteel.description>
 	<SmeltingSteel.jobString>Выплавляет сталь</SmeltingSteel.jobString>
 	
 </LanguageData>

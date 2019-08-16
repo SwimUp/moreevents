@@ -2,7 +2,7 @@
 <LanguageData>
 
 	<SimpleFurnace.label>Простая печь</SimpleFurnace.label>
-	<SimpleFurnace.description>Простая кузнечная печь для переплавки простых руд, таких как железо, медь.</SimpleFurnace.description>
+	<SimpleFurnace.description>Простая кузнечная печь для переплавки простых руд вроде железной или медной.</SimpleFurnace.description>
 	
 	<CokeFurnace.label>Коксовая печь</CokeFurnace.label>
 	<CokeFurnace.description>Герметичная печь для получения коксового угля и стали.</CokeFurnace.description>
@@ -17,15 +17,15 @@
 	<GasProductionPlant.description>Выкачивает из скважины газ и подает его в трубы в виде природного газа.</GasProductionPlant.description>
 	
 	<GasPipeline.label>Газовая труба (природный газ)</GasPipeline.label>
-	<GasPipeline.description>Газовая труба предназначенная для транспортировки природного газа.</GasPipeline.description>
+	<GasPipeline.description>Газовая труба, предназначенная для транспортировки природного газа.</GasPipeline.description>
 	
 	<LiquidGasPipeline.label>Газовая труба (сжиженный газ)</LiquidGasPipeline.label>
-	<LiquidGasPipeline.description>Газовая труба предназначенная для транспортировки сжиженного природного газа.</LiquidGasPipeline.description>
+	<LiquidGasPipeline.description>Газовая труба, предназначенная для транспортировки сжиженного природного газа.</LiquidGasPipeline.description>
 	
 	<GasCooler.label>Газовый охладитель</GasCooler.label>
-	<GasCooler.description>Охлаждает поступающий газ до -160 и выдает сжиженный природный газ, который можно хранить в большем количестве.</GasCooler.description>
+	<GasCooler.description>Охлаждает поступающий газ до -160 градусов Цельсия и выдает сжиженный природный газ, который можно более компактно хранить.</GasCooler.description>
 	
 	<GasProcessingStation.label>Газоперерабатывающая станция</GasProcessingStation.label>
-	<GasProcessingStation.description>Станция для переработки сжиженного природного газа на другие газы.</GasProcessingStation.description>
+	<GasProcessingStation.description>Станция для переработки сжиженного природного газа в другие газы.</GasProcessingStation.description>
 	
 </LanguageData>

@@ -3,11 +3,11 @@
 
   <Supernova.label>Взрыв сверхновой</Supernova.label>
   <Supernova.letterLabel>Взрыв сверхновой</Supernova.letterLabel>
-  <Supernova.letterText>Произошел взрыв сверхновой</Supernova.letterText>
+  <Supernova.letterText>Произошел взрыв сверхновой.</Supernova.letterText>
   
   <SuperHeatWave.label>Экстремальная жара</SuperHeatWave.label>
   <SuperHeatWave.letterLabel>Экстремальная жара</SuperHeatWave.letterLabel>
-  <SuperHeatWave.letterText>Сверхмощная тепловая волна настигла планету. Температура может подняться до 100 градусов цельсия!</SuperHeatWave.letterText>
+  <SuperHeatWave.letterText>Сверхмощная тепловая волна настигла планету. Температура может подняться до 100 градусов Цельсия!</SuperHeatWave.letterText>
   
   <BoulderMassHit.label>Метеоритный дождь</BoulderMassHit.label>
   <BoulderMassHit.letterLabel>Метеоритный дождь</BoulderMassHit.letterLabel>
@@ -19,11 +19,11 @@
   
   <LeanAtmosphere.label>Обедненная атмосфера</LeanAtmosphere.label>
   <LeanAtmosphere.letterLabel>Обедненная атмосфера</LeanAtmosphere.letterLabel>
-  <LeanAtmosphere.letterText>Вследствие выброса коллосального количества энергии взорвавшейся в дали звездой часть атмосферы планеты выгорела. Это значительно изменило местные климатические условия. Диапазон колебаний температур вырос.</LeanAtmosphere.letterText>
+  <LeanAtmosphere.letterText>Вследствие выброса коллосального количества энергии взорвавшейся вдали звездой часть атмосферы планеты выгорела. Это значительно изменило местные климатические условия. Диапазон колебаний температур вырос.</LeanAtmosphere.letterText>
 
   <RadiationFon.label>Повышенный уровень радиации</RadiationFon.label>
   <RadiationFon.letterLabel>Повышенный уровень радиации</RadiationFon.letterLabel>
-  <RadiationFon.letterText>Вследствие большого количества озоновых дыр космическая радиация легко проходит через атмосферу. Частое нахождение на уличе чревато облучением.</RadiationFon.letterText>
+  <RadiationFon.letterText>Из-за большого количества озоновых дыр космическая радиация легко проходит через атмосферу. Частое нахождение на уличе чревато облучением.</RadiationFon.letterText>
 
   <NoSun.label>Нет звезды</NoSun.label>
   <NoSun.letterLabel>Нет звезды</NoSun.letterLabel>
@@ -31,7 +31,7 @@
   
   <DenseAtmosphere.label>Плотная атмосфера</DenseAtmosphere.label>
   <DenseAtmosphere.letterLabel>Плотная атмосфера</DenseAtmosphere.letterLabel>
-  <DenseAtmosphere.letterText>На планете очень плотная атмосфера, что привело к парниковому эффекту.</DenseAtmosphere.letterText>
+  <DenseAtmosphere.letterText>Атмосфера планеты становится все плотнее, что приводит к парниковому эффекту.</DenseAtmosphere.letterText>
   
   <IceStorm.label>Ледяной шторм</IceStorm.label>
   <IceStorm.letterLabel>Ледяной шторм</IceStorm.letterLabel>
@@ -39,23 +39,23 @@
   
   <HeavyAir.label>Тяжелый воздух</HeavyAir.label>
   <HeavyAir.letterLabel>Тяжелый воздух</HeavyAir.letterLabel>
-  <HeavyAir.letterText>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм. На улицу только с противогазом.</HeavyAir.letterText>
+  <HeavyAir.letterText>Потоки воздуха принесли большое количество тяжелых газов, они затрудняют дыхание и отравляют организм.</HeavyAir.letterText>
   
-  <MechanoidPortal.label>Телепортер механойдов!</MechanoidPortal.label>
-  <MechanoidPortal.letterLabel>Телепортер механойдов</MechanoidPortal.letterLabel>
-  <MechanoidPortal.letterText>На вашу территорию упал загадочный обломок генерирующий телепорт, из которого без остановки появляются механойды. Телепорт не уничтожаем, однако его можно вывести из строя повредив генератор находящийся в упавшем обломке. Похоже, для этого потребуется взрывчатка.</MechanoidPortal.letterText>
+  <MechanoidPortal.label>Телепортер механоидов!</MechanoidPortal.label>
+  <MechanoidPortal.letterLabel>Телепортер механоидов!</MechanoidPortal.letterLabel>
+  <MechanoidPortal.letterText>На вашу территорию упал загадочный обломок древнего космического корабля, генерирующий телепорт, из которого постоянно появляются механоиды. Телепорт нельзя уничтожить, однако его можно вывести из строя, повредив генератор, находящийся в упавшем обломке. Похоже, для этого потребуется взрывчатка.</MechanoidPortal.letterText>
 
   <BeetleRush.label>Улей!</BeetleRush.label>
   <BeetleRush.letterLabel>Улей!</BeetleRush.letterLabel>
-  <BeetleRush.letterText>Пещерные жуки прокопали тоннель из своего улья наружу. Если не завалить тоннель, то вскоре все вокруг будет кишеть жуками.</BeetleRush.letterText>
+  <BeetleRush.letterText>Пещерные жуки прокопали тоннель из своего улья наружу! Если его не завалить, вскоре все вокруг будет кишеть жуками.</BeetleRush.letterText>
 
   <DestroyRoad.label>Подрыв дороги</DestroyRoad.label>
   <DestroyRoad.letterLabel>Подрыв дороги</DestroyRoad.letterLabel>
   <DestroyRoad.letterText>Неизвестный отряд совершил подрыв дороги.</DestroyRoad.letterText>
 
-  <ShipCrash.label>Крущение корабля</ShipCrash.label>
+  <ShipCrash.label>Крушение корабля</ShipCrash.label>
   <ShipCrash.letterLabel>Крушение корабля</ShipCrash.letterLabel>
-  <ShipCrash.letterText>Неизвестный корабль потерпел крушение. Множество частей были разбросаны по планете. Вы можете их исследовать, чтобы добыть ресурсы или найти новые технологии</ShipCrash.letterText>
+  <ShipCrash.letterText>Неизвестный корабль потерпел крушение. Множество частей было разбросано по планете. Вы можете их исследовать, чтобы добыть ресурсы или найти новые технологии.</ShipCrash.letterText>
 
   <SandStorm.label>Песчаная буря</SandStorm.label>
   <SandStorm.letterLabel>Песчаная буря</SandStorm.letterLabel>
@@ -63,11 +63,11 @@
   
   <MassiveFire.label>Масштабный пожар</MassiveFire.label>
   <MassiveFire.letterLabel>Масштабный пожар</MassiveFire.letterLabel>
-  <MassiveFire.letterText>На соседней земле начался масштабный пожар. Если его не потушить, то пламя охватит все соседние леса!</MassiveFire.letterText>
+  <MassiveFire.letterText>На соседней земле начался масштабный пожар. Если его не потушить, пламя охватит все соседние леса!</MassiveFire.letterText>
   
   <ClimateBomb.label>Обнаружена климатическая бомба</ClimateBomb.label>
   <ClimateBomb.letterLabel>Обнаружена климатическая бомба</ClimateBomb.letterLabel>
-  <ClimateBomb.letterText>Обнаружено местоположение климатической бомбы. Кто её заложил - неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума.</ClimateBomb.letterText>
+  <ClimateBomb.letterText>Обнаружено местоположение климатической бомбы. Кто её заложил — неизвестно, но ясно одно: если её не обезвредить, климат сойдет с ума.</ClimateBomb.letterText>
   
   <ClimateChaos.label>Климатический хаос</ClimateChaos.label>
   <ClimateChaos.letterLabel>Климатический хаос</ClimateChaos.letterLabel>
@@ -75,7 +75,7 @@
   
   <IonizedAtmosphere.label>Ионизированная атмосфера</IonizedAtmosphere.label>
   <IonizedAtmosphere.letterLabel>Ионизированная атмосфера</IonizedAtmosphere.letterLabel>
-  <IonizedAtmosphere.letterText>Ионосферный слой уплотнился, ожидаются грозы.</IonizedAtmosphere.letterText>  
+  <IonizedAtmosphere.letterText>Слой ионосферы уплотнился, ожидаются грозы.</IonizedAtmosphere.letterText>  
   
   <Earthquake.label>Землетрясение</Earthquake.label>
   <Earthquake.letterLabel>Землетрясение</Earthquake.letterLabel>
@@ -83,7 +83,7 @@
   
   <SiegeCamp.label>Осадный лагерь</SiegeCamp.label>
   <SiegeCamp.letterLabel>Осадный лагерь</SiegeCamp.letterLabel>
-  <SiegeCamp.letterText>Недалеко от вас основали осадную позицию. Ее основатели будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы что-то не предпримите по отношению к ним.</SiegeCamp.letterText>  
+  <SiegeCamp.letterText>Недалеко от вашего поселения была образована осадная позиция врагов. Ее основатели будут устраивать набеги и обстреливать ваше поселение из минометов, пока вы что-то не предпримете по отношению к ним.</SiegeCamp.letterText>  
   
   <AttackFriendlySettlement.label>Нападение на союзное поселение</AttackFriendlySettlement.label>
   <AttackFriendlySettlement.letterLabel>Нападение на союзное поселение</AttackFriendlySettlement.letterLabel>
@@ -95,10 +95,10 @@
   
   <DropAnimalInsanity.label>Капсулы с бешеными животными!</DropAnimalInsanity.label>
   <DropAnimalInsanity.letterLabel>Капсулы с бешеными животными!</DropAnimalInsanity.letterLabel>
-  <DropAnimalInsanity.letterText>Неизвестная фракция запустила в вашу сторону капсулы с бешеными животными. Животные это не вооруженный десант, однако не стоит их недооценивать.</DropAnimalInsanity.letterText>  
+  <DropAnimalInsanity.letterText>Неизвестная фракция запустила в вашу сторону капсулы с бешеными животными. Животные — не вооруженный десант, однако не стоит их недооценивать.</DropAnimalInsanity.letterText>  
   
-  <HungryCannibalRaid.label>Рейд голодных каннибалов</HungryCannibalRaid.label>
-  <HungryCannibalRaid.letterLabel>Рейд голодных каннибалов</HungryCannibalRaid.letterLabel>
+  <HungryCannibalRaid.label>Рейд голодных каннибалов!</HungryCannibalRaid.label>
+  <HungryCannibalRaid.letterLabel>Рейд голодных каннибалов!</HungryCannibalRaid.letterLabel>
   <HungryCannibalRaid.letterText>Племя людоедов атакует поселение со всех сторон! Им не нужны пленники, им нужно человеческое мясо!</HungryCannibalRaid.letterText>  
   
   <DoomsdayUltimatum.label>Ультиматум судного дня</DoomsdayUltimatum.label>
@@ -109,11 +109,11 @@
   
   <Arsonists.label>Поджигатели</Arsonists.label>
   <Arsonists.letterLabel>Поджигатели</Arsonists.letterLabel>
-  <Arsonists.letterText>Несколько бойцов вражеской фракции прибыли чтобы сжечь ваш лес.</Arsonists.letterText>  
+  <Arsonists.letterText>Несколько бойцов вражеской фракции прибыли, чтобы поджечь ваш лес.</Arsonists.letterText>  
   
   <UnifiedRaid.label>Объединенный рейд</UnifiedRaid.label>
   <UnifiedRaid.letterLabel>Объединенный рейд</UnifiedRaid.letterLabel>
-  <UnifiedRaid.letterText>Две враждебные группировки решили объединить свои силы и атаковать колонию</UnifiedRaid.letterText>  
+  <UnifiedRaid.letterText>Две враждебные группировки решили объединить свои силы и атаковать ваше поселение.</UnifiedRaid.letterText>  
   
   <Quest_ResourceHelp.label>Запрос ресурсов</Quest_ResourceHelp.label>
   <Quest_ResourceHelp.letterLabel>Запрос ресурсов</Quest_ResourceHelp.letterLabel>
@@ -129,21 +129,21 @@
   
   <Quest_MissingPeople.label>Пропавший без вести</Quest_MissingPeople.label>
   <Quest_MissingPeople.letterLabel>Пропавший без вести</Quest_MissingPeople.letterLabel>
-  <Quest_MissingPeople.letterText>С нами связался лидер фракции {0} и сообщил, что пару дней назад небольшая группа их поселенцев отправилась в путешествие за ресурсами. Предположительное время их пути было оценено в {1} дней. Прошло более {2} дней, но поселенцы так и не вернулись. Попытки выйти на связь не увенчались успехом и они волнуются, что поселенцы могли заблудиться, или на них могли напасть. \nЗапасов еды, которым они располагали хватит еще примерно на {3} дней, после чего они начнут голодать. Он просит нас разыскать пропавших поселенцев и вернуть их к ним.
+  <Quest_MissingPeople.letterText>С нами связался лидер фракции {0} и сообщил, что пару дней назад небольшая группа их поселенцев отправилась в поход за ресурсами. Предположительное время их пути было оценено в {1} дней. Прошло более {2} дней, но поселенцы так и не вернулись. Попытки выйти на связь не увенчались успехом. \nЗапасов еды, которым они располагали, хватит еще примерно на {3} дней, после чего они начнут голодать. Он просит нас разыскать пропавших поселенцев и вернуть их обратно.
 
 Вы можете связаться с ними через планетарную консоль связи.</Quest_MissingPeople.letterText>  
   
   <Psychogas.label>Психогаз</Psychogas.label>
   <Psychogas.letterLabel>Психогаз</Psychogas.letterLabel>
-  <Psychogas.letterText>Кто-то выпустил тонны изменяющих разум химикатов в воздух, поэтому все, кто находятся на улице будут терять рассудок.</Psychogas.letterText>  
+  <Psychogas.letterText>ККто-то выпустил тонны изменяющих разум химикатов в воздух, поэтому каждый, кто находится на улице, будет терять рассудок.</Psychogas.letterText>  
   
   <SummerSolstice.label>Летнее солнцестояние</SummerSolstice.label>
   <SummerSolstice.letterLabel>Летнее солнцестояние</SummerSolstice.letterLabel>
-  <SummerSolstice.letterText>Самый длинный день. Ваши колонисты получили заряд позитива!</SummerSolstice.letterText>  
+  <SummerSolstice.letterText>Сегодня самый длинный день в году. Ваши колонисты получили заряд позитива!</SummerSolstice.letterText>  
     
   <Pocahontas.label>Покахонтас</Pocahontas.label>
   <Pocahontas.letterLabel>Покахонтас</Pocahontas.letterLabel>
-  <Pocahontas.letterText>Поселение {0} от фракции {1} предлагает вам {2} для совместного проживания. \nЕсли вы примете их предложение, то {2} будет проживать с вами, а также вы улучшите отношения между вами.
+  <Pocahontas.letterText>Поселение {0} от фракции {1} предлагает вам {2} для совместного проживания. \nЕсли вы примете их предложение, то {2} будет проживать с вами, а также вы улучшите отношения с этой фракцией.
 Если вы откажетесь, то отношения между вами ухудшатся.
 
 {2} описан(а) как:
@@ -158,16 +158,16 @@
  
   <MountainAir.label>Горный воздух</MountainAir.label>
   <MountainAir.letterLabel>Горный воздух</MountainAir.letterLabel>
-  <MountainAir.letterText>Подуло свежим горным воздухом</MountainAir.letterText>  
+  <MountainAir.letterText>Со склонов окрестных гор повеяло свежим горным воздухом. Вашим поселенцам это нравится!</MountainAir.letterText>  
   
   <AmbushTwoFactions.label>Перестрелка между фракциями</AmbushTwoFactions.label>
   <AmbushTwoFactions.letterLabel>Перестрелка между фракциями</AmbushTwoFactions.letterLabel>
-  <AmbushTwoFactions.letterText>{0} попал в перестрелку между фракциями {1} и {2}</AmbushTwoFactions.letterText>  
+  <AmbushTwoFactions.letterText>{0} попал в перестрелку между фракциями {1} и {2}.</AmbushTwoFactions.letterText>  
   
   <Quest_KillLeader.label>Заказ на убийство вражеского лидера</Quest_KillLeader.label>
   <Quest_KillLeader.letterLabel>Заказ на убийство вражеского лидера</Quest_KillLeader.letterLabel>
-  <Quest_KillLeader.letterText>{0} рассказывает о вражеском лидере-диктаторе {1} из фракции {2},который может угрожать безопасности их поселения и просит вас его устранить. Он отметил место на мировой карте. 
-Информация о том, что на него готовится покушение на убийство уже могла разлететься по всем краям мира, поэтому действовать нужно как можно скорее.</Quest_KillLeader.letterText>  
+  <Quest_KillLeader.letterText>{0} рассказывает о вражеском лидере-диктаторе {1} из фракции {2},который может угрожать безопасности их поселения, и просит вас его устранить. Он отметил место на мировой карте. 
+Информация о том, что на него готовится покушение, уже могла разлететься по всем краям мира, поэтому действовать нужно как можно скорее.</Quest_KillLeader.letterText>  
  
 Вы можете связаться с ними через планетарную консоль связи.
 
@@ -178,8 +178,8 @@
  
   <SpaceBattle.label>Космическая битва</SpaceBattle.label>
   <SpaceBattle.letterLabel>Космическая битва</SpaceBattle.letterLabel>
-  <SpaceBattle.letterText>Две неизвестные фракции устроили космическую битву недалеко от вашей планеты. В течении этого времени на планету будут падать отсеки кораблей, в которых может быть что-нибудь интересное, а также 
-могут падать промахнувшиеся снаряды.</SpaceBattle.letterText>  
+  <SpaceBattle.letterText>Две неизвестные фракции устроили космическую битву прямо на орбите вашей планеты. В течении этого времени на планету будут падать обломки кораблей, в которых может быть что-нибудь интересное, а также 
+могут падать не попавшие в цель снаряды.</SpaceBattle.letterText>  
   
   <Quest_KillOrder.label>Заказ на убийство</Quest_KillOrder.label>
   <Quest_KillOrder.letterLabel>Заказ на убийство</Quest_KillOrder.letterLabel>
@@ -189,14 +189,14 @@
   
   <ConcantrationCamp.label>Концлагерь</ConcantrationCamp.label>
   <ConcantrationCamp.letterLabel>Концлагерь</ConcantrationCamp.letterLabel>
-  <ConcantrationCamp.letterText>Неизвестный человек связывается с вами. Запыхавшись, но все же имея силы он рассказывает вам о концлагере устроенном пиратами. ОН быстро передает вам координаты и просит помочь ему и остальным выбраться из него.
+  <ConcantrationCamp.letterText>Неизвестный человек связывается с вами. Запыхавшись, но все же имея силы, он рассказывает вам о концентрационном лагере, устроенном пиратами. Он быстро передает вам координаты и просит помочь ему и остальным выбраться из него.
 
 Вы можете увидеть событие в планетарной консоли связи.</ConcantrationCamp.letterText>  
 
   <TunnelRats.label>Туннельные крысы</TunnelRats.label>
   <TunnelRats.letterLabel>Туннельные крысы</TunnelRats.letterLabel>
-  <TunnelRats.letterText>Фракция аборигенов прокопала тунель к вашей базе. Они будут вылазить из него до тех пор, пока вы его не закопаете.
+  <TunnelRats.letterText>Фракция аборигенов прокопала тунель к вашей базе. Они будут вылазить из него до тех пор, пока вы его не зароете.
 
-(чтобы закопать туннель, снарядите пешку гранатами, выбирете её и нажмите ПКМ на туннель)</TunnelRats.letterText>  
+(чтобы зарыть туннель, снарядите поселенца гранатами, выберите её и нажмите ПКМ на туннель)</TunnelRats.letterText>  
 
 </LanguageData>

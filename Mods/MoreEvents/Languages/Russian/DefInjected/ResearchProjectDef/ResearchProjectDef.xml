@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-	<BasicOreProcessing.label>Базовая обработка и плавка руды</BasicOreProcessing.label>
+	<BasicOreProcessing.label>Базовая обработка руды</BasicOreProcessing.label>
 	<BasicOreProcessing.description>Базовые основы обработки руды и получения из них слитков.
 Позволяет выплавлять железные и медные слитки в простой печи.</BasicOreProcessing.description>
 
 	<AdvancedOreProcessing.label>Продвинутая обработка руды</AdvancedOreProcessing.label>
-	<AdvancedOreProcessing.description>Использование дуговой печи позволит обрабатывать такие руды как ильменитовая и кобальтовая и производить более продвинутые сплавы.
+	<AdvancedOreProcessing.description>Использование дуговой печи позволит обрабатывать такие руды, как ильменитовая и кобальтовая, и производить более продвинутые сплавы.
 Позволяет создавать электрическую дуговую печь для получения кобальта, никеля, хрома и палладия.</AdvancedOreProcessing.description>
 
 	<HeavyDutyAlloys.label>Сверхпрочные сплавы</HeavyDutyAlloys.label>
-	<HeavyDutyAlloys.description>Исследования в области сплавов позволяет создать сплавы, которые по прочности превосходят любой текущий.
+	<HeavyDutyAlloys.description>Исследования в области сплавов позволяют создать сплавы, которые по прочности превосходят любой существующий.
 Позволяет создавать титан и пласталь.</HeavyDutyAlloys.description>
 
 </LanguageData>

@@ -94,9 +94,6 @@ namespace RimOverhaul.Gas
         {
             if(this.IsHashIntervalTick(150))
             {
-                if (!CanWorkWithoutPower)
-                    return;
-
                 if (CurrentNet == null || NetTankers.Count == 0)
                     return;
 
@@ -125,18 +122,13 @@ namespace RimOverhaul.Gas
             {
                 return false;
             }
-            if(BillStack.FirstShouldDoNow != null && GasModifiers.TryGetValue(BillStack.FirstShouldDoNow.recipe, out float value))
-            {
-                if (Storage < value)
-                    return false;
-            }
 
             return true;
         }
 
         public override string GetInspectString()
         {
-            return $"GasStation_Info".Translate(Storage.ToString("f2"), MaxStorage.ToString("f2"));
+            return $"{base.GetInspectString()}\n{"GasStation_Info".Translate(Storage.ToString("f2"), MaxStorage.ToString("f2"))}";
         }
 
         public bool UsableForBillsAfterFueling()
@@ -148,11 +140,6 @@ namespace RimOverhaul.Gas
             if (breakdownableComp != null && breakdownableComp.BrokenDown)
             {
                 return false;
-            }
-            if (BillStack.FirstShouldDoNow != null && GasModifiers.TryGetValue(BillStack.FirstShouldDoNow.recipe, out float value))
-            {
-                if (Storage < value)
-                    return false;
             }
 
             return true;

@@ -2,11 +2,11 @@
 <LanguageData>
 	<TryStartQuestDialog>Проверить задания</TryStartQuestDialog>
 
-	<QuestFail>Задание {0} провалено</QuestFail>
-	<QuestSuccess>Задание {0} выполнено</QuestSuccess>
-	<QuestTimeout>Время для выполнения задания {0} истекло</QuestTimeout>
-	<UnlimitedTime>Осталось: неограниченно</UnlimitedTime>
-	<QuestTimer>Осталось: {0} дней</QuestTimer>
+	<QuestFail>Задание {0} провалено.</QuestFail>
+	<QuestSuccess>Задание {0} выполнено.</QuestSuccess>
+	<QuestTimeout>Время для выполнения задания {0} истекло.</QuestTimeout>
+	<UnlimitedTime>Осталось: неограниченно.</UnlimitedTime>
+	<QuestTimer>Осталось: {0} дней.</QuestTimer>
 	<JumpToLocation>Перейти к месту ({0})</JumpToLocation>
 	<QuestRewards>Награда ({0}$)</QuestRewards>
 	<AdditionalQuestContent>Дополнительно</AdditionalQuestContent>
@@ -26,7 +26,7 @@
 	<HelpingFactionsList>\nПомощь:</HelpingFactionsList>
 	<SupportFullDoomsday>Помощь полностью укомплектована. Вы не можете взять больше фракций.</SupportFullDoomsday>
 	<NoHelpDoomsday>Не помогут</NoHelpDoomsday>
-	<UnknownDoomsdayStatus>Не известно</UnknownDoomsdayStatus>
+	<UnknownDoomsdayStatus>Неизвестно</UnknownDoomsdayStatus>
 	<HelpDoomsday>Помогут</HelpDoomsday>
 	<DiscussWithOtherFactions>Обсудить событие с другими фракциями</DiscussWithOtherFactions>
 	<DoomsdayCardLabel>Конец света</DoomsdayCardLabel>
@@ -52,16 +52,16 @@
 	<AssistCaravan_GifterArrived>Дружественный отряд прибыл по вашему запросу. Они оставят вещи рядом с вашей колонией.</AssistCaravan_GifterArrived>
 
 	<ClimateBombTitle>Климатическая бомба</ClimateBombTitle>
-	<ClimateBombDesc>Мы обнаружили климатическую бомбу. Мысли в голове перемешались. Кто и зачем оставил её на этой планете не понятно, но нам нужно её обезвредить, если не хотим, чтобы ближайшие пару сезонов с нашим климатом что-нибудь случилось.\n\nПотребуется собрать хороший отряд, скорее всего там будут вражеские фракции, наверняка завяжется бой.</ClimateBombDesc>
+	<ClimateBombDesc>Мы обнаружили климатическую бомбу. Мысли в голове перемешались. Кто и зачем оставил её на этой планете? Ничего не понятно. Нам нужно её обезвредить, если мы не хотим, чтобы ближайшие пару сезонов с нашим климатом что-нибудь случилось.\n\nПотребуется собрать хороший отряд, скорее всего там будут вражеские фракции, наверняка завяжется бой.</ClimateBombDesc>
 
 	<Comm_MassiveFireTitle>Массивные пожары</Comm_MassiveFireTitle>
-	<Comm_MassiveFireDesc>Рядом с нашим поселением вспыхнул пожар, вероятно, вызванный погодой. С каждой минутой он разгорается все больше и больше. Это чревато возгоранием соседних земель, в том числе нашей. \nМы можем надяеться на дождь или попробовать потушить его сами.</Comm_MassiveFireDesc>
+	<Comm_MassiveFireDesc>Рядом с нашим поселением вспыхнул пожар, вероятно, вызванный погодой. С каждой минутой он разгорается все сильнее. Это чревато возгоранием соседних земель, в том числе нашей. \nМы можем понадеяться на дождь или попробовать потушить его самостоятельно.</Comm_MassiveFireDesc>
 
 	<Comm_ShipCrashTitle>Крушение корабля</Comm_ShipCrashTitle>
-	<Comm_ShipCrashDesc>Мы видели крушение корабля. На вид - корабль общего назначения. При падении он распадался на части, некоторые из них были большие, какие-то маленькие. Вероятно, это грузовые и жилые отсеки. \nЧасти корабля разбросало по всей планете. Обшивка корабля делается из пластали, поэтому, вероятно, многое могло уцелеть. Можно собрать караван и посмотреть, что осталось от отсеков, забрав содержимое себе. Правда, такая нажива, вероятно, привлечет незванных гостей.</Comm_ShipCrashDesc>
+	<Comm_ShipCrashDesc>Мы видели крушение корабля. На вид - корабль общего назначения. При падении он распадался на части, некоторые из них были большими, некоторые — маленькими. Вероятно, это грузовые и жилые отсеки. \nЧасти корабля разбросало по всей планете. Обшивка корабля делается из пластали, поэтому, вероятно, многое могло уцелеть. Можно собрать караван и посмотреть, что осталось от отсеков, забрав содержимое себе. Правда, такая нажива, вероятно, привлечет незванных гостей.</Comm_ShipCrashDesc>
 
 	<Comm_SiegeCampTitle>Осадный лагерь</Comm_SiegeCampTitle>
-	<Comm_SiegeCampDesc>Недалеко от нас основался лагерь бандитов. У них есть минометы и желание нас убить. Они будут нападать на нас с небольшими промежутками, параллельно отстраивая свой лагерь и наращивая боевюу мощь. Нам нужно уничтожить его как можно скорее, пока он не стал настоящей проблемой.</Comm_SiegeCampDesc>
+	<Comm_SiegeCampDesc>Недалеко от нас основался лагерь бандитов. У них есть минометы и желание нас убить. Они будут нападать на нас с небольшими промежутками, параллельно отстраивая свой лагерь и наращивая боевую мощь. Нам нужно уничтожить этот лагерь как можно скорее, пока он не стал серьезной проблемой.</Comm_SiegeCampDesc>
 
 	<EmailMessage_From>От: {0}</EmailMessage_From>
 	<EmailMessage_To>Кому: {0}</EmailMessage_To>
@@ -69,11 +69,11 @@
 	<EmailMessageReceived>Вы получили сообщение от {0} на тему {1}. Вы можете посмотреть его в почтовой ящике, в планетарной консоли связи.</EmailMessageReceived>
 	<DeleteMessage>Удалить сообщение</DeleteMessage>
 
-	<ScoutingComp_InfoTitle>Приветствую! Отправляю вам информацию от наших разведчиков, которую они смогли собрать для вашего поселения. В отчете указаны опасность и примерное время.\n\n</ScoutingComp_InfoTitle>
+	<ScoutingComp_InfoTitle>Приветствую! Отправляю вам информацию от наших разведчиков, которую они смогли собрать. В отчете указаны опасность и примерное время.\n\n</ScoutingComp_InfoTitle>
 	<ScoutingComp_ThreatKnown>(Уровень угрозы: {0})</ScoutingComp_ThreatKnown>
 	<ScoutingComp_ThreatUnknown>(Уровень угрозы неизвестен)</ScoutingComp_ThreatUnknown>
 	<ScoutingComp_CommingTime> примерное время прибытия {0} (дней)</ScoutingComp_CommingTime>
-	<ScoutingComp_NoThreatsInfoTitle>Приветствую! После нескольких дней отсутствия наши разведчики наконец вернулись. Они не обнаружили никаких надвигающихся угроз.</ScoutingComp_NoThreatsInfoTitle>
+	<ScoutingComp_NoThreatsInfoTitle>Приветствую! После нескольких дней отсутствия наши разведчики вернулись. Они не обнаружили никаких надвигающихся угроз.</ScoutingComp_NoThreatsInfoTitle>
 	<ScoutingComp_Subject>Отчёт разведки</ScoutingComp_Subject>
 
 	<CommOption_SubscribeScout_Label>Разведывательное соглашение</CommOption_SubscribeScout_Label>
