@@ -201,7 +201,7 @@
 		<graphicData>
 			<texPath>Things/Buildings/GasCooler/GasCooler</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(2,0)</drawSize>
+			<drawSize>(4,2)</drawSize>
 			<shadowData>
 				<volume>(2.63,1,1.93)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
@@ -222,7 +222,7 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
-		<size>(4,0)</size>
+		<size>(4,2)</size>
 		<costList>
 			<IlmeniteIngot>5</IlmeniteIngot>
 			<Steel>60</Steel>
