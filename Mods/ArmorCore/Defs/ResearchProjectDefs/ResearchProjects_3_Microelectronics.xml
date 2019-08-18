@@ -20,14 +20,14 @@
 		<defName>MK1Thunder</defName>
 		<label>Mk1 'Thunder'</label>
 		<description>Mk1 'Thunder' - the first development of an energy suit.</description>
-		<baseCost>3000</baseCost>
+		<baseCost>4500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>2.96</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.43</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -35,14 +35,14 @@
 		<defName>MK2Aquilla</defName>
 		<label>Mk2 'Aquille'</label>
 		<description>Updated armor MK1. Increased protection in conjunction with the optimization of the internal space made it possible to create a new effective power armor.</description>
-		<baseCost>12000</baseCost>
+		<baseCost>10000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>MK1Thunder</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>0</researchViewX>
-		<researchViewY>2.96</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0.73</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 

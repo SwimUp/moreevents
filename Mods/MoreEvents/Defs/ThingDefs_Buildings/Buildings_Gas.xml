@@ -263,7 +263,7 @@
 		<graphicData>
 			<texPath>Things/Buildings/GasVault/gasvault</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3,1)</drawSize>
+			<drawSize>(4,2)</drawSize>
 			<shadowData>
 				<volume>(2.93,1,0.69)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
@@ -284,7 +284,7 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
-		<size>(3,1)</size>
+		<size>(4,2)</size>
 		<costList>
 			<Steel>40</Steel>
 			<IronIngot>150</IronIngot>
@@ -321,7 +321,7 @@
 		<graphicData>
 			<texPath>Things/Buildings/GasVault/gasvault2</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(5,2)</drawSize>
+			<drawSize>(6,3)</drawSize>
 			<shadowData>
 				<volume>(4.93,1,1.69)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
@@ -342,7 +342,7 @@
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
-		<size>(5,2)</size>
+		<size>(6,3)</size>
 		<costList>
 			<IlmeniteIngot>5</IlmeniteIngot>
 			<Steel>70</Steel>

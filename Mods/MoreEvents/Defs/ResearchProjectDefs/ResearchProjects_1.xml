@@ -7,8 +7,10 @@
     <description>Basic fundamentals of ore processing and production of ingots from them.
 Allows smelting of iron and copper ingots in a simple furnace.</description>
     <baseCost>500</baseCost>
-	<tab>Production</tab>
     <techLevel>Neolithic</techLevel>
+	<prerequisites>
+	<li>Stonecutting</li>
+    </prerequisites>
     <tags>
       <li>TribalStart</li>
       <li>ClassicStart</li>
@@ -17,4 +19,5 @@ Allows smelting of iron and copper ingots in a simple furnace.</description>
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
   
+
 </Defs>
