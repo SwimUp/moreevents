@@ -79,13 +79,15 @@
 
 	<ThingDef Name="BaseArtilleryBuildingCatapult" ParentName="BaseArtilleryBuildingMedeival" Abstract="True">
 		<costList>
+			<IronIngot>50</IronIngot>
+			<CopperIngot>50</CopperIngot>
 			<WoodLog>300</WoodLog>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0.9</Flammability>
-			<WorkToBuild>1900</WorkToBuild>
+			<WorkToBuild>5000</WorkToBuild>
 			<Mass>50</Mass>
 			<Beauty>-20</Beauty>
 		</statBases>
@@ -181,11 +183,13 @@
 			<WoodLog>250</WoodLog>
 			<ComponentIndustrial>3</ComponentIndustrial>
 			<Steel>35</Steel>
+			<CopperIngot>60</CopperIngot>
+			<IronIngot>90</IronIngot>
 		</costList>
 		<statBases>
 			<MaxHitPoints>220</MaxHitPoints>
 			<Flammability>0.9</Flammability>
-			<WorkToBuild>1900</WorkToBuild>
+			<WorkToBuild>5600</WorkToBuild>
 			<Mass>50</Mass>
 			<Beauty>-20</Beauty>
 		</statBases>

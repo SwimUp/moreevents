@@ -94,7 +94,7 @@
 		<label>Smelt Palladium Ingots</label>
 		<description>Smelting a palladium ingots by combining nickel, silver and copper</description>
 		<jobString>Smelts ingots</jobString>
-		<workAmount>2500</workAmount>
+		<workAmount>5500</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -113,7 +113,7 @@
 						<li>Silver</li>
 					</thingDefs>
 				</filter>
-				<count>100</count>
+				<count>10</count>
 			</li>
 			<li>
 				<filter>
@@ -141,7 +141,7 @@
 		<label>Smelt Tilium Ingots</label>
 		<description>Getting tilium ingots</description>
 		<jobString>Smelts ingots</jobString>
-		<workAmount>120000</workAmount>
+		<workAmount>5000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -274,7 +274,7 @@
 		<label>Make charcoal</label>
 		<description>Get charcoal by burning wood</description>
 		<jobString>Making charcoal</jobString>
-		<workAmount>800</workAmount>
+		<workAmount>1200</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -303,7 +303,7 @@
 		<label>Smelt plasteel</label>
 		<description>Get plasteel by combining steel, titan and cobalt</description>
 		<jobString>Smelting plasteel</jobString>
-		<workAmount>2300</workAmount>
+		<workAmount>6300</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -360,7 +360,7 @@
 		<label>Smelt steel</label>
 		<description>Get steel by combining iron ingot and coal</description>
 		<jobString>Smelting steel</jobString>
-		<workAmount>15000</workAmount>
+		<workAmount>4000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -398,7 +398,7 @@
 		<label>Make coke coal</label>
 		<description>Get coke coal by burning coal</description>
 		<jobString>Making coke coal</jobString>
-		<workAmount>60000</workAmount>
+		<workAmount>15000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -418,6 +418,44 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Coal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>SmeltingTungsten</defName>
+		<label>Get tungsten</label>
+		<description>Get tungsten ingots</description>
+		<jobString>Making coke coal</jobString>
+		<workAmount>15000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>TungstenOre</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HydrogenCylinder</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<TungstenIngot>20</TungstenIngot>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>TungstenOre</li>
+				<li>HydrogenCylinder</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>

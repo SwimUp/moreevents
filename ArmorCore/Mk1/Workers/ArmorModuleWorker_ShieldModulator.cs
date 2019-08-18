@@ -21,6 +21,13 @@ namespace RimArmorCore.Mk1.Workers
             return "ArmorModuleWorker_ShieldModulator".Translate();
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref charge, "charge");
+        }
+
         public override void CheckPreAbsorbDamage(DamageInfo dInfo, ref bool absorb)
         {
             if(dInfo.Amount > 15)

@@ -33,7 +33,7 @@ Iron ingots can be melted in a simple furnace.</description>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>IronIngot</defName>
-		<label>Iron ingot</label>
+		<label>Iron</label>
 		<description>Recycled Iron Ore. It can be used in other recipes, or to create things.
 		
 It is by mass the most common element on Earth, forming much of Earth's outer and inner core. It is the fourth most common element in the Earth's crust.
@@ -71,7 +71,7 @@ Pristine and smooth pure iron surfaces are mirror-like silvery-gray. However, ir
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statFactors>
-				<MaxHitPoints>200</MaxHitPoints>
+				<MaxHitPoints>1.8</MaxHitPoints>
 				<Beauty>0.6</Beauty>
 				<Flammability>0.1</Flammability>
 				<WorkToMake>1.2</WorkToMake>
@@ -110,7 +110,7 @@ Copper ingots can be melted in a simple furnace.</description>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>CopperIngot</defName>
-		<label>Copper ingot</label>
+		<label>Copper</label>
 		<description>Recycled Iron Ore. It can be used in other recipes, or to create things.
 		
 A freshly exposed surface of pure copper has a pinkish-orange color. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.</description>
@@ -136,6 +136,9 @@ A freshly exposed surface of pure copper has a pinkish-orange color. Copper is u
 			<li>ResourcesRaw</li>
 		</thingCategories>
 		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
 			<commonality>1.00</commonality>
 			<constructEffect>ConstructMetal</constructEffect>
 			<color>(189, 126, 17)</color>
@@ -143,7 +146,7 @@ A freshly exposed surface of pure copper has a pinkish-orange color. Copper is u
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statFactors>
-				<MaxHitPoints>200</MaxHitPoints>
+				<MaxHitPoints>1.3</MaxHitPoints>
 				<Beauty>1.3</Beauty>
 				<Flammability>0.1</Flammability>
 				<WorkToMake>0.8</WorkToMake>
@@ -163,7 +166,7 @@ A freshly exposed surface of pure copper has a pinkish-orange color. Copper is u
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>20</MaxHitPoints>
 			<MarketValue>1.5</MarketValue>
 			<Mass>0.2</Mass>
 			<Flammability>5</Flammability>
@@ -204,7 +207,7 @@ Nickel can be processed in an arc furnace.</description>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>NickelIngot</defName>
-		<label>Nickel ingot</label>
+		<label>Nickel</label>
 		<description>Recycled nickel ore. It can be used in other recipes, or to create things.
 		
 Nickel belongs to the transition metals and is hard and ductile. Pure nickel, powdered to maximize the reactive surface area, shows a significant chemical activity, but larger pieces are slow to react with air under standard conditions because an oxide layer forms on the surface and prevents further corrosion (passivation).</description>
@@ -226,7 +229,7 @@ Nickel belongs to the transition metals and is hard and ductile. Pure nickel, po
 	
 	<ThingDef ParentName="ResourceBase">
 		<defName>CobaltIngot</defName>
-		<label>Cobalt ingot</label>
+		<label>Cobalt</label>
 		<description>Recycled nickel ore. It can be used in other recipes, or to create things.
 		
 Like nickel, cobalt is found in the Earth's crust only in chemically combined form, save for small deposits found in alloys of natural meteoric iron. The free element, produced by reductive smelting, is a hard, lustrous, silver-gray metal.</description>
@@ -303,7 +306,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>IlmeniteIngot</defName>
-		<label>Ilmenite ingot</label>
+		<label>Ilmenite</label>
 		<description>Recycled Ilmenite Ore. It can be used in other recipes, or to create things.</description>
 		<graphicData>
 			<texPath>Things/Resources/IlmeniteIngot</texPath>
@@ -327,6 +330,9 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>	
 			<commonality>0.12</commonality>
 			<constructEffect>ConstructMetal</constructEffect>
 			<color>(171, 171, 171)</color>
@@ -334,7 +340,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statFactors>
-				<MaxHitPoints>400</MaxHitPoints>
+				<MaxHitPoints>2.5</MaxHitPoints>
 				<Beauty>0.5</Beauty>
 				<Flammability>0.1</Flammability>
 				<WorkToMake>2.2</WorkToMake>
@@ -345,7 +351,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 	
 	<ThingDef ParentName="ResourceBase">
 		<defName>PalladiumIngot</defName>
-		<label>Palladium ingot</label>
+		<label>Palladium</label>
 		<description>Palladium is used in electronics, dentistry, medicine, hydrogen purification, chemical applications, groundwater treatment, and jewelry. Palladium is a key component of fuel cells, which react hydrogen with oxygen to produce electricity, heat, and water.</description>
 		<graphicData>
 			<texPath>Things/Resources/PalladiumIngot</texPath>
@@ -389,6 +395,9 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
 			<commonality>0.10</commonality>
 			<constructEffect>ConstructMetal</constructEffect>
 			<color>(196, 196, 196)</color>
@@ -396,7 +405,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statFactors>
-				<MaxHitPoints>300</MaxHitPoints>
+				<MaxHitPoints>2.6</MaxHitPoints>
 				<Beauty>1.2</Beauty>
 				<Flammability>0.2</Flammability>
 			</statFactors>
@@ -476,7 +485,7 @@ Tungsten ingots can be melted in a arc furnace.</description>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>TungstenIngot</defName>
-		<label>Tungsten ingot</label>
+		<label>Tungsten</label>
 		<description>The free element is remarkable for its robustness, especially the fact that it has the highest melting point of all the elements discovered, melting at 3422 °C (6192 °F, 3695 K). It also has the highest boiling point, at 5930 °C (10706 °F, 6203 K). Its density is 19.25 times that of water, comparable to that of uranium and gold, and much higher (about 1.7 times) than that of lead.</description>
 		<graphicData>
 			<texPath>Things/Resources/TungstenIngot</texPath>
@@ -493,27 +502,12 @@ Tungsten ingots can be melted in a arc furnace.</description>
 			<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
 			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+			<BluntDamageMultiplier>1.3</BluntDamageMultiplier>
 		</statBases>
 		<useHitPoints>false</useHitPoints>
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
-		<stuffProps>
-			<commonality>0.05</commonality>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(135, 135, 135)</color>
-			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statFactors>
-				<MaxHitPoints>400</MaxHitPoints>
-				<Beauty>0.5</Beauty>
-				<Flammability>0.1</Flammability>
-				<WorkToMake>2.2</WorkToMake>
-			</statFactors>
-			<smeltable>true</smeltable>
-		</stuffProps>
 	</ThingDef>
 	
 </Defs>

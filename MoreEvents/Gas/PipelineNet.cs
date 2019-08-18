@@ -77,7 +77,7 @@ namespace RimOverhaul.Gas
 
         public bool GetGasFromNet(float count)
         {
-            if (!HasLiquidGas)
+            if (TotalLiquidGasNow < count)
                 return false;
 
             float value = count;

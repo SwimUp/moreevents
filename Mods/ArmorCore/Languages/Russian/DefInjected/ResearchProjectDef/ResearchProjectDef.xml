@@ -4,6 +4,12 @@
 	<EnergyArmorResearch.label>Энергетическая броня</EnergyArmorResearch.label>
 	<EnergyArmorResearch.description>Исследования в области энергетической брони позволят вам создать новый тип защиты, если, конечно, у вас есть источник энергии, способный обеспечить её энергией.</EnergyArmorResearch.description>
 
+	<MK1Thunder.label>Мк1 'Гром'</MK1Thunder.label>
+	<MK1Thunder.description>Мк1 'Гром' - первая разработка энергетического костюма.</MK1Thunder.description>
+	
+	<MK2Aquilla.label>Мк2 'Аквилла'</MK2Aquilla.label>
+	<MK2Aquilla.description>Обновленная броня МК1. Увеличенная защита в совокупе с оптимизацией внутреннего пространства позволило создать новую эффективвную силовую броню.</MK2Aquilla.description>
+
 	<BasicEnergyStorage.label>Базовый источник энергии</BasicEnergyStorage.label>
 	<BasicEnergyStorage.description>Энергетическая броня требовательна к источникам энергии. Мы не можем носить с собой большую электростанцию, поэтому нам нужен компактный источник энергии.
 Открывает возможность построить псамый простой источник энергии - блок аккумуляторов.</BasicEnergyStorage.description>

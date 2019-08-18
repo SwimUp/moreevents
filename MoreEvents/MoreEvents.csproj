@@ -205,7 +205,10 @@
     <Compile Include="FactionDefOfLocal.cs" />
     <Compile Include="Gas\Bill_GasProduction.cs" />
     <Compile Include="Gas\CompExplosive_GasProp.cs" />
+    <Compile Include="Gas\CompGasPowerPlant.cs" />
+    <Compile Include="Gas\CompGasPowerPlantSettings.cs" />
     <Compile Include="Gas\CompProperties_Explosive_GasProp.cs" />
+    <Compile Include="Gas\CompProperties_GasPowerPlant.cs" />
     <Compile Include="Gas\ITab_BillsGas.cs" />
     <Compile Include="Gas\Building_GasStation.cs" />
     <Compile Include="Gas\Building_Pipe.cs" />

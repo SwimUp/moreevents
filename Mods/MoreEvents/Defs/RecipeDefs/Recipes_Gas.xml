@@ -17,17 +17,18 @@
 						<li>IronIngot</li>
 					</thingDefs>
 				</filter>
-				<count>3</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<products>
-			<HydrogenCylinder>1</HydrogenCylinder>
+			<HydrogenCylinder>2</HydrogenCylinder>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>IronIngot</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>HydrogenProduction</researchPrerequisite>
 	</RecipeDef>
 	
 	<RecipeDef>
@@ -46,11 +47,11 @@
 						<li>IronIngot</li>
 					</thingDefs>
 				</filter>
-				<count>3</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<products>
-			<LiquefiedNaturalGasCylinder>1</LiquefiedNaturalGasCylinder>
+			<LiquefiedNaturalGasCylinder>2</LiquefiedNaturalGasCylinder>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>

@@ -158,14 +158,16 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<MarketValue>150</MarketValue>
+			<MarketValue>400</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<WorkToBuild>10000</WorkToBuild>
+			<WorkToBuild>5000</WorkToBuild>
 			<Mass>3</Mass>
 		</statBases>
 		<costList>
+		  <CopperIngot>100</CopperIngot>
 		  <Steel>100</Steel>
+		  <TungstenIngot>50</TungstenIngot>
 		  <ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>

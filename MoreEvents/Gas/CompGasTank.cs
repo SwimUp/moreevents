@@ -49,17 +49,20 @@ namespace RimOverhaul.Gas
         {
             base.PostDraw();
 
-            GenDraw.FillableBarRequest r = default(GenDraw.FillableBarRequest);
-            r.center = parent.DrawPos + Vector3.up * 0.1f;
-            r.size = BarSize;
-            r.fillPercent = Storage / Props.StorageCapacity;
-            r.filledMat = PowerPlantSolarBarFilledMat;
-            r.unfilledMat = PowerPlantSolarBarUnfilledMat;
-            r.margin = 0.15f;
-            Rot4 rotation = parent.Rotation;
-            rotation.Rotate(RotationDirection.Clockwise);
-            r.rotation = rotation;
-            GenDraw.DrawFillableBar(r);
+            if (Find.Selector.SingleSelectedThing == parent)
+            {
+                GenDraw.FillableBarRequest r = default(GenDraw.FillableBarRequest);
+                r.center = parent.DrawPos + Vector3.up * 0.1f;
+                r.size = BarSize;
+                r.fillPercent = Storage / Props.StorageCapacity;
+                r.filledMat = PowerPlantSolarBarFilledMat;
+                r.unfilledMat = PowerPlantSolarBarUnfilledMat;
+                r.margin = 0.15f;
+                Rot4 rotation = parent.Rotation;
+                rotation.Rotate(RotationDirection.Clockwise);
+                r.rotation = rotation;
+                GenDraw.DrawFillableBar(r);
+            }
         }
 
         public override string CompInspectStringExtra()

@@ -28,4 +28,13 @@
 	<GasProcessingStation.label>Газоперерабатывающая станция</GasProcessingStation.label>
 	<GasProcessingStation.description>Станция для переработки сжиженного природного газа в другие газы.</GasProcessingStation.description>
 	
+	<SmallGasVault.label>Малый газовый бак</SmallGasVault.label>
+	<SmallGasVault.description>Малый газовый бак для хранения сжиженного природного газа.</SmallGasVault.description>
+
+	<BigGasVault.label>Большой газовый бак</BigGasVault.label>
+	<BigGasVault.description>Большой газовый бак для хранения сжиженного природного газа.</BigGasVault.description>
+
+	<GasTurbine.label>Газовая турбина</GasTurbine.label>
+	<GasTurbine.description>Лопаточная машина, в ступенях которой энергия сжатого и/или нагретого газа преобразуется в механическую работу на валу.</GasTurbine.description>
+
 </LanguageData>

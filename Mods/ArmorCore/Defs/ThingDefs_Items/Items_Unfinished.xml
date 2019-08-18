@@ -17,7 +17,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -26,12 +26,16 @@
 			</defaultIngredientFilter>
 			<researchPrerequisite>BasicEnergyStorage</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>5</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>200</Steel>
-			<ComponentIndustrial>15</ComponentIndustrial>
+			<Steel>120</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<IlmeniteIngot>50</IlmeniteIngot>
+			<Chromium>60</Chromium>
+			<IronIngot>140</IronIngot>
+			<CopperIngot>230</CopperIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -44,11 +48,11 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>45000</WorkToMake>
-			<MarketValue>4000</MarketValue>
+			<WorkToMake>30000</WorkToMake>
+			<MarketValue>1200</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>4</Mass>
+			<Mass>8</Mass>
 		</statBases>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -82,7 +86,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -91,12 +95,16 @@
 			</defaultIngredientFilter>
 			<researchPrerequisite>AdvancedEnergySources</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>7</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>350</Steel>
-			<ComponentIndustrial>20</ComponentIndustrial>
+			<Steel>220</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<IlmeniteIngot>70</IlmeniteIngot>
+			<Chromium>75</Chromium>
+			<IronIngot>220</IronIngot>
+			<CopperIngot>250</CopperIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -109,11 +117,11 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>45000</WorkToMake>
-			<MarketValue>4000</MarketValue>
+			<WorkToMake>35000</WorkToMake>
+			<MarketValue>1400</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>4</Mass>
+			<Mass>6</Mass>
 		</statBases>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -147,7 +155,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -156,12 +164,17 @@
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyGridBatteries</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>7</Crafting>
+				<Crafting>12</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>350</Steel>
-			<ComponentIndustrial>20</ComponentIndustrial>
+			<Steel>200</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<IlmeniteIngot>80</IlmeniteIngot>
+			<Chromium>85</Chromium>
+			<IronIngot>80</IronIngot>
+			<CopperIngot>250</CopperIngot>
+			<NickelIngot>110</NickelIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -174,8 +187,8 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>45000</WorkToMake>
-			<MarketValue>4000</MarketValue>
+			<WorkToMake>40000</WorkToMake>
+			<MarketValue>1600</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>4</Mass>
@@ -212,7 +225,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -221,12 +234,18 @@
 			</defaultIngredientFilter>
 			<researchPrerequisite>NanotechnologyBatteries</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>16</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>350</Steel>
-			<ComponentIndustrial>20</ComponentIndustrial>
+			<Steel>100</Steel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<IlmeniteIngot>110</IlmeniteIngot>
+			<Chromium>100</Chromium>
+			<ComponentSpacer>3</ComponentSpacer>
+			<CopperIngot>100</CopperIngot>
+			<NickelIngot>120</NickelIngot>
+			<TungstenIngot>50</TungstenIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -240,10 +259,10 @@
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>45000</WorkToMake>
-			<MarketValue>4000</MarketValue>
+			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>4</Mass>
+			<Mass>3</Mass>
 		</statBases>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -277,7 +296,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -286,15 +305,18 @@
 			</defaultIngredientFilter>
 			<researchPrerequisite>AutonomousEnergySources</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>13</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>250</Plasteel>
-			<Steel>500</Steel>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<ComponentSpacer>10</ComponentSpacer>
+			<Plasteel>60</Plasteel>
+			<Steel>120</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>8</ComponentSpacer>
 			<ColdFusionReactorHeath>1</ColdFusionReactorHeath>
+			<CopperIngot>220</CopperIngot>
+			<CobaltIngot>85</CobaltIngot>
+			<NickelIngot>90</NickelIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -307,11 +329,11 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>45000</WorkToMake>
-			<MarketValue>4000</MarketValue>
+			<WorkToMake>30000</WorkToMake>
+			<MarketValue>2500</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>4</Mass>
+			<Mass>8</Mass>
 		</statBases>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -352,7 +374,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -365,11 +387,16 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>250</Plasteel>
-			<Steel>500</Steel>
-			<ComponentIndustrial>25</ComponentIndustrial>
+			<Plasteel>80</Plasteel>
+			<Steel>220</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>10</ComponentSpacer>
 			<ColdFusionReactorHeath>1</ColdFusionReactorHeath>
+			<CopperIngot>120</CopperIngot>
+			<CobaltIngot>120</CobaltIngot>
+			<NickelIngot>80</NickelIngot>
+			<Synthread>80</Synthread>
+			<PalladiumIngot>70</PalladiumIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -382,11 +409,11 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>45000</WorkToMake>
-			<MarketValue>4000</MarketValue>
+			<WorkToMake>35000</WorkToMake>
+			<MarketValue>2800</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>4</Mass>
+			<Mass>6</Mass>
 		</statBases>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -430,11 +457,11 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>65000</WorkToMake>
-			<MarketValue>6000</MarketValue>
+			<WorkToMake>55000</WorkToMake>
+			<MarketValue>3000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>4</Mass>
+			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -442,7 +469,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -455,12 +482,15 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>300</Plasteel>
-			<Steel>500</Steel>
-			<Plasteel>50</Plasteel>
-			<Gold>30</Gold>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<ComponentSpacer>15</ComponentSpacer>
+			<Plasteel>220</Plasteel>
+			<Steel>150</Steel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentSpacer>12</ComponentSpacer>
+			<CopperIngot>120</CopperIngot>
+			<CobaltIngot>120</CobaltIngot>
+			<NickelIngot>200</NickelIngot>
+			<Hyperweave>50</Hyperweave>
+			<PalladiumIngot>100</PalladiumIngot>
 			<PalladiumCore>1</PalladiumCore>
 			<Enricher>1</Enricher>
 		</costList>
@@ -506,7 +536,7 @@
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7500</WorkToMake>
+			<WorkToMake>30000</WorkToMake>
 			<MarketValue>1200</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -518,7 +548,7 @@
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -527,16 +557,16 @@
 			</defaultIngredientFilter>
 			<researchPrerequisite>AdvancedEnergyManagementTechniques</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>300</Steel>
-			<Silver>300</Silver>
+			<Plasteel>60</Plasteel>
+			<Steel>200</Steel>
+			<Chromium>90</Chromium>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<Uranium>100</Uranium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -570,8 +600,8 @@ Allow you to install a second level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8300</WorkToMake>
-			<MarketValue>1400</MarketValue>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>1500</MarketValue>
 			<MaxHitPoints>250</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>14</Mass>
@@ -582,7 +612,7 @@ Allow you to install a second level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -591,16 +621,17 @@ Allow you to install a second level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>RoboticStation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>9</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>400</Steel>
-			<Gold>30</Gold>
+			<Plasteel>120</Plasteel>
+			<Steel>100</Steel>
+			<Gold>40</Gold>
 			<ComponentIndustrial>7</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+			<IronIngot>200</IronIngot>
+			<Chromium>140</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -634,11 +665,11 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>9000</WorkToMake>
-			<MarketValue>1600</MarketValue>
-			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>55000</WorkToMake>
+			<MarketValue>2700</MarketValue>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>3</Mass>
+			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -646,7 +677,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -655,16 +686,18 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>Nanorobots</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>17</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>200</Steel>
-			<Gold>100</Gold>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
-			<Uranium>100</Uranium>
+			<Plasteel>30</Plasteel>
+			<Steel>70</Steel>
+			<Gold>50</Gold>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Uranium>60</Uranium>
+			<IlmeniteIngot>90</IlmeniteIngot>
+			<PalladiumIngot>90</PalladiumIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -696,8 +729,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>6000</WorkToMake>
-			<MarketValue>1200</MarketValue>
+			<WorkToMake>40000</WorkToMake>
+			<MarketValue>1600</MarketValue>
 			<MaxHitPoints>500</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>20</Mass>
@@ -708,7 +741,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -717,15 +750,15 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>AdvancedEnergyManagementTechniques</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>6</Crafting>
+				<Crafting>13</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>200</Plasteel>
-			<Steel>600</Steel>
+			<Plasteel>120</Plasteel>
+			<Steel>300</Steel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<Chromium>130</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -757,11 +790,11 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7300</WorkToMake>
-			<MarketValue>1500</MarketValue>
+			<WorkToMake>45000</WorkToMake>
+			<MarketValue>2500</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>12</Mass>
+			<Mass>10</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -769,7 +802,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -778,17 +811,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyAccelerator</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>9</Crafting>
+				<Crafting>16</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>350</Steel>
-			<Silver>100</Silver>
-			<Gold>100</Gold>
+			<Plasteel>120</Plasteel>
+			<Steel>230</Steel>
+			<Silver>400</Silver>
+			<Gold>50</Gold>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>10</Uranium>
+			<NickelIngot>70</NickelIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -820,11 +853,11 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7000</WorkToMake>
-			<MarketValue>2000</MarketValue>
+			<WorkToMake>35000</WorkToMake>
+			<MarketValue>2400</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>10</Mass>
+			<Mass>8</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -832,7 +865,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -841,17 +874,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyOptimization</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>13</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>400</Steel>
-			<Gold>100</Gold>
+			<Plasteel>70</Plasteel>
+			<Steel>160</Steel>
+			<Gold>20</Gold>
 			<ComponentIndustrial>7</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
-			<Uranium>30</Uranium>
-			<Hyperweave>100</Hyperweave>
+			<ComponentSpacer>7</ComponentSpacer>
+			<Hyperweave>50</Hyperweave>
+			<TungstenIngot>50</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -883,11 +916,11 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8000</WorkToMake>
+			<WorkToMake>26000</WorkToMake>
 			<MarketValue>2100</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>8</Mass>
+			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -895,7 +928,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -908,13 +941,15 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>200</Steel>
-			<Gold>60</Gold>
+			<Plasteel>50</Plasteel>
+			<Steel>50</Steel>
+			<Gold>10</Gold>
 			<ComponentIndustrial>7</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
-			<Uranium>40</Uranium>
-			<Hyperweave>100</Hyperweave>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Uranium>50</Uranium>
+			<IronIngot>140</IronIngot>
+			<CopperIngot>140</CopperIngot>
+			<TungstenIngot>40</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -946,7 +981,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>4500</WorkToMake>
+			<WorkToMake>25000</WorkToMake>
 			<MarketValue>1000</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -958,7 +993,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -967,12 +1002,14 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>BasicArmorImprovement</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>20</Plasteel>
+			<Plasteel>120</Plasteel>
 			<Steel>250</Steel>
+			<CopperIngot>120</CopperIngot>
+			<IronIngot>100</IronIngot>
 			<ComponentIndustrial>7</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
@@ -1006,7 +1043,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7500</WorkToMake>
+			<WorkToMake>30000</WorkToMake>
 			<MarketValue>1800</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1018,7 +1055,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1027,16 +1064,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>SimpleGuidanceSystem</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>250</Steel>
+			<Plasteel>100</Plasteel>
+			<Steel>150</Steel>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>7</ComponentSpacer>
-			<Uranium>70</Uranium>
-			<Hyperweave>70</Hyperweave>
+			<CopperIngot>150</CopperIngot>
+			<Synthread>100</Synthread>
+			<Chromium>80</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1068,7 +1106,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>6000</WorkToMake>
+			<WorkToMake>20000</WorkToMake>
 			<MarketValue>1200</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1080,7 +1118,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1089,16 +1127,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>BasicRespiratoryProtection</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>12</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
 			<Plasteel>100</Plasteel>
-			<Steel>250</Steel>
+			<Steel>220</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>5</ComponentSpacer>
 			<Uranium>20</Uranium>
-			<Hyperweave>30</Hyperweave>
+			<Synthread>50</Synthread>
+			<Chromium>80</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1130,8 +1169,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>6500</WorkToMake>
-			<MarketValue>1400</MarketValue>
+			<WorkToMake>25000</WorkToMake>
+			<MarketValue>1600</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>4</Mass>
@@ -1142,7 +1181,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1151,15 +1190,15 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>CircularEcholocation</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>9</Crafting>
+				<Crafting>13</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
 			<Plasteel>80</Plasteel>
-			<Steel>250</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>150</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
-			<Hyperweave>30</Hyperweave>
+			<CobaltIngot>90</CobaltIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1191,7 +1230,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8200</WorkToMake>
+			<WorkToMake>35000</WorkToMake>
 			<MarketValue>2500</MarketValue>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1203,7 +1242,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1216,11 +1255,13 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>200</Plasteel>
-			<Steel>350</Steel>
+			<Plasteel>90</Plasteel>
+			<Steel>200</Steel>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>7</ComponentSpacer>
-			<Uranium>60</Uranium>
+			<PalladiumIngot>20</PalladiumIngot>
+			<NickelIngot>60</NickelIngot>
+			<Hyperweave>50</Hyperweave>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1252,7 +1293,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8000</WorkToMake>
+			<WorkToMake>30000</WorkToMake>
 			<MarketValue>2300</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1264,7 +1305,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1273,15 +1314,16 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>Stimulants</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>11</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>150</Steel>
+			<Plasteel>80</Plasteel>
+			<Steel>90</Steel>
+			<IronIngot>140</IronIngot>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>8</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<Synthread>60</Synthread>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1313,8 +1355,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>6900</WorkToMake>
-			<MarketValue>2100</MarketValue>
+			<WorkToMake>25000</WorkToMake>
+			<MarketValue>2300</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>5</Mass>
@@ -1334,15 +1376,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>LightProtection</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>10</Plasteel>
-			<Steel>150</Steel>
+			<Plasteel>60</Plasteel>
+			<Steel>80</Steel>
 			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Hyperweave>150</Hyperweave>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Hyperweave>80</Hyperweave>
+			<Synthread>80</Synthread>
+			<IlmeniteIngot>30</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1374,11 +1418,11 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>5600</WorkToMake>
+			<WorkToMake>20000</WorkToMake>
 			<MarketValue>1000</MarketValue>
-			<MaxHitPoints>200</MaxHitPoints>
+			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>3</Mass>
+			<Mass>6</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -1395,15 +1439,16 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>HeavyProtection</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>16</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>250</Plasteel>
-			<Steel>450</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>200</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<IronIngot>50</IronIngot>
+			<IlmeniteIngot>50</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1435,8 +1480,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7600</WorkToMake>
-			<MarketValue>2100</MarketValue>
+			<WorkToMake>25000</WorkToMake>
+			<MarketValue>2300</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1456,16 +1501,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>ProtectiveMaterial</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>9</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>40</Plasteel>
-			<Steel>250</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>10</Uranium>
-			<Hyperweave>120</Hyperweave>
+			<Plasteel>50</Plasteel>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Uranium>40</Uranium>
+			<Hyperweave>60</Hyperweave>
+			<Synthread>60</Synthread>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1497,7 +1543,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8900</WorkToMake>
+			<WorkToMake>28000</WorkToMake>
 			<MarketValue>2400</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1509,7 +1555,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1518,15 +1564,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>SimpleMedicalSystems</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>15</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>20</Plasteel>
-			<Steel>250</Steel>
+			<Plasteel>50</Plasteel>
+			<Steel>30</Steel>
 			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
-			<Uranium>60</Uranium>
+			<ComponentSpacer>5</ComponentSpacer>
+			<CopperIngot>150</CopperIngot>
+			<Neutroamine>12</Neutroamine>
+			<MedicineUltratech>3</MedicineUltratech>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1558,7 +1606,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8000</WorkToMake>
+			<WorkToMake>25000</WorkToMake>
 			<MarketValue>2400</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1570,7 +1618,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1583,12 +1631,12 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>150</Plasteel>
-			<Steel>350</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Plasteel>200</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>50</Uranium>
-			<Hyperweave>50</Hyperweave>
+			<Chromium>70</Chromium>
+			<IlmeniteIngot>50</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1620,7 +1668,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8200</WorkToMake>
+			<WorkToMake>29000</WorkToMake>
 			<MarketValue>2500</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1632,7 +1680,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1645,11 +1693,12 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>350</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>7</ComponentSpacer>
-			<Uranium>50</Uranium>
+			<Plasteel>60</Plasteel>
+			<Steel>100</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<CopperIngot>130</CopperIngot>
+			<Neutroamine>20</Neutroamine>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1681,8 +1730,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>9000</WorkToMake>
-			<MarketValue>2600</MarketValue>
+			<WorkToMake>35000</WorkToMake>
+			<MarketValue>2800</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>2</Mass>
@@ -1693,7 +1742,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1702,15 +1751,16 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>AdrenalineInjectors</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>16</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>150</Steel>
+			<Plasteel>50</Plasteel>
+			<Steel>50</Steel>
 			<ComponentIndustrial>12</ComponentIndustrial>
-			<ComponentSpacer>9</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<ComponentSpacer>7</ComponentSpacer>
+			<MedicineUltratech>5</MedicineUltratech>
+			<Neutroamine>35</Neutroamine>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1742,8 +1792,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>6500</WorkToMake>
-			<MarketValue>1700</MarketValue>
+			<WorkToMake>25000</WorkToMake>
+			<MarketValue>1900</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>6</Mass>
@@ -1754,7 +1804,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1763,15 +1813,16 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>KineticBuffer</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>17</Crafting>
+				<Crafting>14</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>80</Plasteel>
-			<Steel>350</Steel>
-			<ComponentIndustrial>8</ComponentIndustrial>
+			<Plasteel>20</Plasteel>
+			<Steel>20</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
 			<ComponentSpacer>4</ComponentSpacer>
-			<Uranium>20</Uranium>
+			<Chromium>140</Chromium>
+			<TungstenIngot>60</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1803,7 +1854,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7000</WorkToMake>
+			<WorkToMake>35000</WorkToMake>
 			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1815,7 +1866,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1828,11 +1879,13 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>20</Plasteel>
-			<Steel>250</Steel>
+			<Plasteel>50</Plasteel>
+			<Steel>100</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>10</Uranium>
+			<ComponentSpacer>5</ComponentSpacer>
+			<NickelIngot>60</NickelIngot>
+			<Chemfuel>60</Chemfuel>
+			<PalladiumIngot>50</PalladiumIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1864,7 +1917,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>16000</WorkToMake>
+			<WorkToMake>67000</WorkToMake>
 			<MarketValue>4000</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -1876,7 +1929,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1885,16 +1938,17 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>CombatExoskeleton</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>20</Crafting>
+				<Crafting>18</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>200</Plasteel>
-			<Steel>550</Steel>
+			<Plasteel>250</Plasteel>
+			<Steel>250</Steel>
 			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
-			<Uranium>40</Uranium>
+			<ComponentSpacer>12</ComponentSpacer>
+			<CopperIngot>200</CopperIngot>
 			<Hyperweave>100</Hyperweave>
+			<PalladiumIngot>120</PalladiumIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1926,8 +1980,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>65000</WorkToMake>
-			<MarketValue>100</MarketValue>
+			<WorkToMake>78000</WorkToMake>
+			<MarketValue>4000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>12</Mass>
@@ -1938,7 +1992,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -1947,16 +2001,20 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>MedicalExoskeleton</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>20</Crafting>
+				<Crafting>19</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>300</Plasteel>
-			<Steel>600</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
+			<Plasteel>250</Plasteel>
+			<Steel>250</Steel>
+			<ComponentIndustrial>12</ComponentIndustrial>
 			<ComponentSpacer>12</ComponentSpacer>
-			<Uranium>100</Uranium>
-			<Hyperweave>100</Hyperweave>
+			<CopperIngot>130</CopperIngot>
+			<Hyperweave>30</Hyperweave>
+			<PalladiumIngot>100</PalladiumIngot>
+			<TungstenIngot>50</TungstenIngot>
+			<MedicineUltratech>8</MedicineUltratech>
+			<Neutroamine>35</Neutroamine>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1988,8 +2046,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>5000</WorkToMake>
-			<MarketValue>1800</MarketValue>
+			<WorkToMake>25000</WorkToMake>
+			<MarketValue>2300</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -2000,7 +2058,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -2009,15 +2067,15 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>ImprovedMobility</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>7</Crafting>
+				<Crafting>16</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>200</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
-			<Uranium>30</Uranium>
+			<Plasteel>100</Plasteel>
+			<Steel>100</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<IlmeniteIngot>60</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2049,7 +2107,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7000</WorkToMake>
+			<WorkToMake>30000</WorkToMake>
 			<MarketValue>2600</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -2061,7 +2119,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -2070,15 +2128,15 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>JointImprovement</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>10</Crafting>
+				<Crafting>17</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>350</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>50</Uranium>
+			<Plasteel>150</Plasteel>
+			<Steel>120</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>8</ComponentSpacer>
+			<IlmeniteIngot>90</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2110,11 +2168,11 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8400</WorkToMake>
+			<WorkToMake>15000</WorkToMake>
 			<MarketValue>2600</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
-			<Mass>12</Mass>
+			<Mass>7</Mass>
 		</statBases>
 		<recipeMaker>
 			<workSpeedStat>SmithingSpeed</workSpeedStat>
@@ -2122,7 +2180,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -2135,11 +2193,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>200</Plasteel>
-			<Steel>450</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
-			<Uranium>60</Uranium>
+			<Plasteel>100</Plasteel>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Uranium>70</Uranium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2171,8 +2229,8 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>7800</WorkToMake>
-			<MarketValue>2500</MarketValue>
+			<WorkToMake>40000</WorkToMake>
+			<MarketValue>3400</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>6</Mass>
@@ -2183,7 +2241,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -2192,15 +2250,16 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyShieldSystem</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>20</Crafting>
+				<Crafting>18</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
 			<Plasteel>200</Plasteel>
-			<Steel>350</Steel>
+			<Steel>40</Steel>
 			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>4</ComponentSpacer>
-			<Uranium>60</Uranium>
+			<ComponentSpacer>8</ComponentSpacer>
+			<CopperIngot>150</CopperIngot>
+			<TungstenIngot>50</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2232,7 +2291,7 @@ Opens the last level of modules for armor.</description>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<WorkToMake>8900</WorkToMake>
+			<WorkToMake>30000</WorkToMake>
 			<MarketValue>2800</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
@@ -2244,7 +2303,7 @@ Opens the last level of modules for armor.</description>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
 			<recipeUsers>
-				<li>FabricationBench</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 			<defaultIngredientFilter>
 				<categories>
@@ -2253,16 +2312,16 @@ Opens the last level of modules for armor.</description>
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyBoots</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>16</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>250</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
+			<Plasteel>70</Plasteel>
+			<Steel>150</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>8</ComponentSpacer>
-			<Uranium>20</Uranium>
-			<Hyperweave>60</Hyperweave>
+			<Uranium>80</Uranium>
+			<Hyperweave>100</Hyperweave>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>

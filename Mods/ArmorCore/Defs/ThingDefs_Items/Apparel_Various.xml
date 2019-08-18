@@ -73,14 +73,14 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<generateCommonality>0</generateCommonality>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		  <researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+		  <researchPrerequisite>MK1Thunder</researchPrerequisite>
 		  <skillRequirements>
 			<Crafting>15</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>70000</WorkToMake>
-			<MaxHitPoints>400</MaxHitPoints>
+			<WorkToMake>80000</WorkToMake>
+			<MaxHitPoints>800</MaxHitPoints>
 			<Mass>18</Mass>
 			<Flammability>0.4</Flammability>
 			<ArmorRating_Sharp>1.12</ArmorRating_Sharp>
@@ -98,9 +98,11 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		</thingCategories>
 		<costList>
 			<ComponentSpacer>15</ComponentSpacer>
-			<Plasteel>300</Plasteel>
-			<Hyperweave>100</Hyperweave>
-			<Uranium>50</Uranium>
+			<Plasteel>200</Plasteel>
+			<Chromium>100</Chromium>
+			<IronIngot>90</IronIngot>
+			<NickelIngot>100</NickelIngot>
+			<IlmeniteIngot>50</IlmeniteIngot>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -140,12 +142,14 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
 			<Plasteel>100</Plasteel>
-			<Hyperweave>60</Hyperweave>
-			<Uranium>30</Uranium>
+			<Synthread>60</Synthread>
+			<IronIngot>30</IronIngot>
+			<Chromium>50</Chromium>
+			<IlmeniteIngot>30</IlmeniteIngot>
 		</costList>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		  <researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+		  <researchPrerequisite>MK1Thunder</researchPrerequisite>
 		  <skillRequirements>
 			<Crafting>15</Crafting>
 		  </skillRequirements>
@@ -154,7 +158,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<WorkToMake>35000</WorkToMake>
+			<WorkToMake>45000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>
 			<Flammability>0.4</Flammability>
@@ -197,13 +201,13 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<generateCommonality>0</generateCommonality>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		  <researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+		  <researchPrerequisite>MK2Aquilla</researchPrerequisite>
 		  <skillRequirements>
 			<Crafting>15</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
 		<statBases>
-			<WorkToMake>70000</WorkToMake>
+			<WorkToMake>100000</WorkToMake>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Mass>18</Mass>
 			<Flammability>0.4</Flammability>
@@ -221,10 +225,13 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<costList>
-			<ComponentSpacer>15</ComponentSpacer>
-			<Plasteel>300</Plasteel>
+			<ComponentSpacer>20</ComponentSpacer>
+			<Plasteel>250</Plasteel>
 			<Hyperweave>100</Hyperweave>
-			<Uranium>50</Uranium>
+			<TungstenIngot>50</TungstenIngot>
+			<PalladiumIngot>40</PalladiumIngot>
+			<NickelIngot>80</NickelIngot>
+			<CobaltIngot>70</CobaltIngot>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -275,14 +282,17 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costList>
-			<ComponentSpacer>10</ComponentSpacer>
-			<Plasteel>100</Plasteel>
-			<Hyperweave>60</Hyperweave>
-			<Uranium>30</Uranium>
+			<ComponentSpacer>15</ComponentSpacer>
+			<Plasteel>150</Plasteel>
+			<Hyperweave>80</Hyperweave>
+			<TungstenIngot>30</TungstenIngot>
+			<PalladiumIngot>20</PalladiumIngot>
+			<NickelIngot>60</NickelIngot>
+			<CobaltIngot>30</CobaltIngot>
 		</costList>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		  <researchPrerequisite>EnergyArmorResearch</researchPrerequisite>
+		  <researchPrerequisite>MK2Aquilla</researchPrerequisite>
 		  <skillRequirements>
 			<Crafting>15</Crafting>
 		  </skillRequirements>
@@ -291,7 +301,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<WorkToMake>35000</WorkToMake>
+			<WorkToMake>50000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>
 			<Flammability>0.4</Flammability>

@@ -8,7 +8,7 @@
 
 Выплавить железные слитки можно в простой печи.</IronOre.description>
 
-	<IronIngot.label>Железный слиток</IronIngot.label>
+	<IronIngot.label>Железо</IronIngot.label>
 	<IronIngot.description>Переработанная железная руда. Может быть использована в других рецептах, либо для создания вещей.
 	
 Один из самых распространённых в земной коре металлов: второе место после алюминия.
@@ -20,7 +20,7 @@
 	
 Выплавить медные слитки можно в простой печи.</CopperOre.description>
 
-	<CopperIngot.label>Медный слиток</CopperIngot.label>
+	<CopperIngot.label>Медь</CopperIngot.label>
 	<CopperIngot.description>Переработанная медная руда. Может быть использована в других рецептах, либо для создания вещей.
 	
 Медь — это пластичный переходный металл золотисто-розового цвета (розового цвета при отсутствии оксидной плёнки). C давних пор широко используется человеком.</CopperIngot.description>
@@ -33,12 +33,12 @@
 	
 Никель может быть обработан в дуговой печи.</NickelOre.description>
 	
-	<NickelIngot.label>Никелевый слиток</NickelIngot.label>
+	<NickelIngot.label>Никель</NickelIngot.label>
 	<NickelIngot.description>Переработанная никелевая руда. Может быть использована в других рецептах, либо для создания вещей.
 	
 Никель — это пластичный, ковкий, переходный металл серебристо-белого цвета, при обычных температурах на воздухе покрывается тонкой плёнкой оксида. Химически малоактивен.</NickelIngot.description>
 
-	<CobaltIngot.label>Кобальтовый слиток</CobaltIngot.label>
+	<CobaltIngot.label>Кобальт</CobaltIngot.label>
 	<CobaltIngot.description>Переработанная никелевая руда. Может быть использована в других рецептах, либо для создания вещей.
 	
 Кобальт — серебристо-белый, слегка желтоватый металл с розоватым или синеватым отливом</CobaltIngot.description>
@@ -48,12 +48,12 @@
 	
 Никель может быть обработан в дуговой печи.</IlmeniteOre.description>
 	
-	<IlmeniteIngot.label>Титановый слиток</IlmeniteIngot.label>
+	<IlmeniteIngot.label>Титан</IlmeniteIngot.label>
 	<IlmeniteIngot.description>Переработанная ильменитовая руда. Может быть использована в других рецептах, либо для создания вещей.
 	
 Титан — лёгкий прочный металл серебристо-белого цвета. Обладает высокой коррозионной стойкостью.</IlmeniteIngot.description>
 
-	<PalladiumIngot.label>Палладиевый слиток</PalladiumIngot.label>
+	<PalladiumIngot.label>Палладий</PalladiumIngot.label>
 	<PalladiumIngot.description>Элемент относится к переходным металлам и к благородным металлам платиновой группы (лёгкие платиноиды). Простое вещество палладий при нормальных условиях — пластичный металл серебристо-белого цвета.</PalladiumIngot.description>
 
 	<Chromium.label>Хром</Chromium.label>
@@ -71,7 +71,7 @@
 
 Вольфрамовая руда может быть обработана в дуговой печи.</TungstenOre.description>
 
-	<TungstenIngot.label>Вольфрамовый слиток</TungstenIngot.label>
+	<TungstenIngot.label>Вольфрам</TungstenIngot.label>
 	<TungstenIngot.description>Вольфрам — самый тугоплавкий из металлов. Более высокую температуру плавления имеет только неметаллический элемент — углерод, но он существует в жидком виде только при высоких давлениях. При стандартных условиях вольфрам химически стоек.</TungstenIngot.description>
 
 </LanguageData>
