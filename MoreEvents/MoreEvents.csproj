@@ -297,6 +297,7 @@
     <Compile Include="ThingDefGenerator_BuildingsCustom.cs" />
     <Compile Include="Things\ActiveDropPodPlus.cs" />
     <Compile Include="Things\Building_ClimateBomb.cs" />
+    <Compile Include="Things\Building_GasHeater.cs" />
     <Compile Include="Things\Building_TribalCrack.cs" />
     <Compile Include="Things\Building_WorkTable_Animated.cs" />
     <Compile Include="Things\Building_WorkTable_AnimatedHeatPush.cs" />

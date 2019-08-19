@@ -36,5 +36,8 @@
 
 	<GasTurbine.label>Газовая турбина</GasTurbine.label>
 	<GasTurbine.description>Лопаточная машина, в ступенях которой энергия сжатого и/или нагретого газа преобразуется в механическую работу на валу.</GasTurbine.description>
+	
+	<GasHeater.label>Газовый обогреватель</GasHeater.label>
+	<GasHeater.description>Газовый обогреватель использует сжиженный газ для выделения тепла. Эффективнее электрического, но требует газ.</GasHeater.description>
 
 </LanguageData>

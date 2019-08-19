@@ -4,4 +4,17 @@
   <EmailMessageOption_SendRaid>Oh yeah, do you really want this? Then you can begin to pray!</EmailMessageOption_SendRaid>
   
   <FuckYou>F#ck you</FuckYou>
+  
+  <WishGoodLuck>Good luck in return</WishGoodLuck>
+  
+  <NiceJoke>Good joke</NiceJoke>
+  <NiceJoke_Explain>Joke? You have so many interesting buildings! {0}, it will be very bad if only one dust remains from them.</NiceJoke_Explain>
+  <NiceJoke_Subject>Bomb</NiceJoke_Subject>
+  <Blef>You are bluffing</Blef>
+  <Blef_Explain>Haha See you in hell!</Blef_Explain>
+  <Blef_Subject>Bomb</Blef_Subject>
+  <DontDoIs>Wait, don’t do this!</DontDoIs>
+  <DontDoIs_Explain>I hear despair in your voice. Unfortunately, the bombs are planted and cannot be turned off. Goodbye!</DontDoIs_Explain>
+  <DontDoIs_Subject>Bomb</DontDoIs_Subject>
+  
 </LanguageData>

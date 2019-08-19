@@ -15,6 +15,7 @@ namespace MoreEvents
         public static ThingDef Slate;
         public static ThingDef Limestone;
         public static ThingDef Weapon_GrenadeFrag;
+        public static ThingDef TrapIED_HighExplosive;
         /* =========================== */
 
         public static ThingDef MechanoidTeleport_Generator;

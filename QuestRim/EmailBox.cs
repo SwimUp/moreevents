@@ -27,6 +27,8 @@ namespace QuestRim
             {
                 Find.LetterStack.ReceiveLetter("EmailMessageReceivedTitle".Translate(), "EmailMessageReceived".Translate(message.From, message.Subject), LetterDefOf.NeutralEvent);
             }
+
+            Messages.SortByDescending(x => x.SendTick);
         }
 
         public void DeleteMessage(EmailMessage message)

@@ -1,4 +1,5 @@
-﻿using MoreEvents.Communications;
+﻿using EmailMessages;
+using MoreEvents.Communications;
 using MoreEvents.Quests;
 using QuestRim;
 using RimWorld;
@@ -151,6 +152,20 @@ namespace DiaRim
                             {
                                 Messages.Message("Already has", MessageTypeDefOf.PositiveEvent, false);
                             }
+                        }));
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+
+                if (listing.ButtonText("Send email message"))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach (var def in DefDatabase<EmailMessageDef>.AllDefs)
+                    {
+                        list.Add(new FloatMenuOption(def.defName, delegate
+                        {
+                            Find.World.GetComponent<MessageSender>().TrySendMessage(def);
                         }));
                     }
 

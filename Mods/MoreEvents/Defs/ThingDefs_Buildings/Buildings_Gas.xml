@@ -101,7 +101,7 @@
 		<description>Well with gas reserves. Install a gas production unit for gas production.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
-			<texPath>Things/Building/Natural/SteamGeyser</texPath>
+			<texPath>Things/Buildings/GasWell/GasWell</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Transparent</shaderType>
 			<drawSize>(4,4)</drawSize>
@@ -201,9 +201,9 @@
 		<graphicData>
 			<texPath>Things/Buildings/GasCooler/GasCooler</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(4,2)</drawSize>
+			<drawSize>(2,2)</drawSize>
 			<shadowData>
-				<volume>(2.63,1,1.93)</volume>
+				<volume>(1.63,1,1.93)</volume>
 				<offset>(-0.03,0,-0.1)</offset>
 			</shadowData>
 		</graphicData>
@@ -213,7 +213,7 @@
 		<blockWind>true</blockWind>
 		<fillPercent>1.0</fillPercent>
 		<castEdgeShadows>false</castEdgeShadows>
-		<rotatable>false</rotatable>
+		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<WorkToBuild>12000</WorkToBuild>
@@ -222,7 +222,7 @@
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
-		<size>(4,2)</size>
+		<size>(2,2)</size>
 		<costList>
 			<IlmeniteIngot>5</IlmeniteIngot>
 			<Steel>60</Steel>
@@ -287,7 +287,7 @@
 		<size>(4,2)</size>
 		<costList>
 			<Steel>40</Steel>
-			<IronIngot>150</IronIngot>
+			<NickelIngot>80</NickelIngot>
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<CopperIngot>100</CopperIngot>
 		</costList>
@@ -346,9 +346,9 @@
 		<costList>
 			<IlmeniteIngot>5</IlmeniteIngot>
 			<Steel>70</Steel>
-			<IronIngot>250</IronIngot>
+			<NickelIngot>150</NickelIngot>
 			<ComponentIndustrial>3</ComponentIndustrial>
-			<CopperIngot>200</CopperIngot>
+			<CopperIngot>250</CopperIngot>
 		</costList>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasTask">
@@ -378,7 +378,7 @@
 		<description>Station for processing liquefied natural gas into other gases.</description>
 		<thingClass>RimOverhaul.Gas.Building_GasStation</thingClass>
 		<graphicData>
-			<texPath>Things/Buildings/GasVault/gasvault</texPath>
+			<texPath>Things/Buildings/GasProduction/GasProduction</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(2,2)</drawSize>
 			<shadowData>
@@ -389,7 +389,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<pathCost>150</pathCost>
 		<blockWind>true</blockWind>
 		<fillPercent>1.0</fillPercent>
@@ -410,7 +410,7 @@
 		<costList>
 			<IlmeniteIngot>15</IlmeniteIngot>
 			<Steel>90</Steel>
-			<IronIngot>150</IronIngot>
+			<Chromium>150</Chromium>
 			<ComponentIndustrial>12</ComponentIndustrial>
 			<CopperIngot>250</CopperIngot>
 			<NickelIngot>120</NickelIngot>
@@ -505,7 +505,7 @@
 		<size>(12,4)</size>
 		<costList>
 			<IlmeniteIngot>15</IlmeniteIngot>
-			<IronIngot>250</IronIngot>
+			<Chromium>150</Chromium>
 			<ComponentIndustrial>15</ComponentIndustrial>
 			<CopperIngot>350</CopperIngot>
 			<NickelIngot>220</NickelIngot>
@@ -537,5 +537,82 @@
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
 	</ThingDef>
+	
+ <ThingDef ParentName="BuildingBase">
+    <defName>GasHeater</defName>
+    <label>gas heater</label>
+    <description>A device that converts gas into heat. It can automatically turn itself on or off to reach a specific target temperature.</description>
+    <thingClass>RimOverhaul.Things.Building_GasHeater</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/GasHeater/GasHeater</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.5,0.3,0.7)</volume>
+        <offset>(0,0,-0.15)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.234375,0,0.515625,0.984375)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <blockWind>true</blockWind>
+    <rotatable>false</rotatable>
+    <fillPercent>0.4</fillPercent>
+    <thingCategories>
+      <li>BuildingsTemperature</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>1000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>6</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <costList>
+			<Chromium>20</Chromium>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<CopperIngot>150</CopperIngot>
+			<NickelIngot>50</NickelIngot>
+			<Steel>120</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>30</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>1</fuelConsumptionRate>
+        <fuelCapacity>2.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>LiquefiedNaturalGasCylinder</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,150,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <designationCategory>GasProduction</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <researchPrerequisites>
+      <li>GasToHeat</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
 
 </Defs>

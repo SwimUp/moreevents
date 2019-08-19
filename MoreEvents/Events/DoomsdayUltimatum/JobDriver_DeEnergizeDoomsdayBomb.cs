@@ -12,14 +12,13 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 {
     public class JobDriver_DeEnergizeDoomsdayBomb : JobDriver
     {
-        public Building_DoomsdayGun weapon;
+        public Building_DoomsdayGun weapon => (Building_DoomsdayGun)TargetThingA;
         public bool AttackSend = false;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             Pawn pawn = base.pawn;
             LocalTargetInfo targetA = base.job.targetA;
-            weapon = (Building_DoomsdayGun)TargetThingA;
             Job job = base.job;
 
             return pawn.Reserve(targetA, job, 1, -1, null, errorOnFailed);
@@ -30,7 +29,6 @@ namespace MoreEvents.Events.DoomsdayUltimatum
             base.ExposeData();
 
             Scribe_Values.Look(ref AttackSend, "AttackSend");
-            Scribe_References.Look(ref weapon, "weapon");
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -52,7 +50,10 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                         foreach (var p in pawns)
                         {
                             Lord lastLord = p.GetLord();
-                            Map.lordManager.RemoveLord(lastLord);
+                            if (lastLord != null)
+                            {
+                                Map.lordManager.RemoveLord(lastLord);
+                            }
 
                             p.ClearMind();
                             lord.AddPawn(p);

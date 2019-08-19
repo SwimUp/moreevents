@@ -265,7 +265,7 @@ Like nickel, cobalt is found in the Earth's crust only in chemically combined fo
 			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 			<statFactors>
-				<MaxHitPoints>300</MaxHitPoints>
+				<MaxHitPoints>2.1</MaxHitPoints>
 				<Beauty>0.9</Beauty>
 				<Flammability>0.2</Flammability>
 				<WorkToMake>1.5</WorkToMake>

@@ -4,4 +4,17 @@
   <EmailMessageOption_SendRaid>Оу да, вы действительно этого хотите? Тогда можете начинать молиться!</EmailMessageOption_SendRaid>
   
   <FuckYou>Пошли в ж#%у!</FuckYou>
+  
+  <WishGoodLuck>Пожелать удачи в ответ</WishGoodLuck>
+  
+  <NiceJoke>Хорошая шутка</NiceJoke>
+  <NiceJoke_Explain>Шутка? У вас столько интересных построек! {0}, будет очень не хорошо, если от них останется одна пыль.</NiceJoke_Explain>
+  <NiceJoke_Subject>Бомба</NiceJoke_Subject>
+  <Blef>Ты блефуешь</Blef>
+  <Blef_Explain>Ха-ха! Увидимся в аду!</Blef_Explain>
+  <Blef_Subject>Бомба</Blef_Subject>
+  <DontDoIs>Стой, не делай этого!</DontDoIs>
+  <DontDoIs_Explain>Я слышу отчаяние в твоем голосе. К сожалению, бомбы заложены и не могут быть отключены. Гудбай!</DontDoIs_Explain>
+  <DontDoIs_Subject>Бомба</DontDoIs_Subject>
+  
 </LanguageData>

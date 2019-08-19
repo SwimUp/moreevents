@@ -38,6 +38,9 @@
     <Reference Include="DiaRim">
       <HintPath>..\DiaRim\bin\Release\DiaRim.dll</HintPath>
     </Reference>
+    <Reference Include="EmailMessages">
+      <HintPath>..\EmailMessages\bin\Release\EmailMessages.dll</HintPath>
+    </Reference>
     <Reference Include="MapGeneratorBlueprints">
       <HintPath>..\MapGeneratorBlueprints\bin\Release\MapGeneratorBlueprints.dll</HintPath>
     </Reference>

@@ -19,6 +19,7 @@
 		<defName>Medicine</defName>
 		<label>Medicine</label>
 	</ResearchTabDef>
+	
 	<ResearchTabDef>
 		<defName>GasIndustry</defName>
 		<label>Gas industry</label>

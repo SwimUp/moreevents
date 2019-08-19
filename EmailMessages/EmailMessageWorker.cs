@@ -8,7 +8,15 @@ namespace EmailMessages
 {
     public abstract class EmailMessageWorker
     {
-        public abstract void OnReceived(EmailMessage message, EmailBox box);
+        public virtual void OnReceived(EmailMessage message, EmailBox box)
+        {
+
+        }
+
+        public virtual bool PreReceived(EmailMessage message, EmailBox box)
+        {
+
+        }
 
         public virtual bool CanReceiveNow()
         {

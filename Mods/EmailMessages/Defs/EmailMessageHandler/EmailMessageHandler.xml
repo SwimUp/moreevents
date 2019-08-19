@@ -8,6 +8,9 @@
 		<Subject>Friendly wish</Subject>
 		<SenderAvaliable>Ally</SenderAvaliable>
 		<MinRefiredDays>90</MinRefiredDays>
+		<Options>
+			<li Class="EmailMessages.EmailMessageOption_GoodLuck"/>
+		</Options>
 		<Commonality>0.7</Commonality>
 		<EarliestDay>44</EarliestDay>
 	</EmailMessages.EmailMessageDef>
@@ -154,6 +157,9 @@ We, in contrast to you, are holding back our words. Wait for the guests, sooner 
 		<EmailText>I look forward to saying that an explosive device has been installed in your settlement. I installed it also in other places, but you don’t need to know about it. Time is short, so I advise you to evacuate. Think carefully before you ignore my message, because you may suffer. Previous recipients were pleased with my gift ...
 		</EmailText>
 		<Subject>Bomb</Subject>
+		<Options>
+			<li Class="EmailMessages.EmailMessageOption_NiceJoke" />
+		</Options>
 		<SenderAvaliable>Neutral</SenderAvaliable>
 		<MinRefiredDays>200</MinRefiredDays>
 		<Commonality>0.65</Commonality>
@@ -191,6 +197,19 @@ We, in contrast to you, are holding back our words. Wait for the guests, sooner 
 		<MinRefiredDays>200</MinRefiredDays>
 		<Commonality>0.77</Commonality>
 		<EarliestDay>180</EarliestDay>
+	</EmailMessages.EmailMessageDef>
+	
+	<EmailMessages.EmailMessageDef>
+		<defName>Message14</defName>
+		<EmailText>Greetings, {0}! How are you with the weather?
+This is the third day {2} here in {1}.
+Recently, the weather is very strange.
+		</EmailText>
+		<Subject>Weather</Subject>
+		<SenderAvaliable>Ally</SenderAvaliable>
+		<MinRefiredDays>56</MinRefiredDays>
+		<Commonality>0.87</Commonality>
+		<EarliestDay>15</EarliestDay>
 	</EmailMessages.EmailMessageDef>
  
 </Defs>

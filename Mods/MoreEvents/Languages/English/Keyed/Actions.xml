@@ -31,4 +31,5 @@
   
   <CompGasTank_Storage>Liquefied natural gas: {0} / {1}</CompGasTank_Storage>
   <GasStation_Info>Storage: {0} / {1}</GasStation_Info>
+  <GasBill_NotEnoughGas>not enough gas ({0})</GasBill_NotEnoughGas>
 </LanguageData>

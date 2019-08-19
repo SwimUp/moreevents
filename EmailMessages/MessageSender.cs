@@ -52,11 +52,24 @@ namespace EmailMessages
                 EmailMessage message = playerBox.FormMessageFrom(faction, msg.EmailText, msg.Subject);
                 message.Answers = msg.Options;
 
-                playerBox.SendMessage(message);
+                bool canSend = true;
+                if (msg.MessageWorker != null)
+                {
+                    canSend = msg.MessageWorker.PreReceived(message, playerBox);
+                }
 
-                msg.MessageWorker?.OnReceived(message, playerBox);
+                if (canSend)
+                {
+                    playerBox.SendMessage(message);
 
-                return true;
+                    msg.MessageWorker?.OnReceived(message, playerBox);
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
 
             return false;

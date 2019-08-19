@@ -107,7 +107,9 @@
 			</damageData>
 		</graphicData>
 		<recipes>
-			<li>SmeltingIronIngots</li>
+			<li>SmeltingSteel</li>
+			<li>SmeltingTiliumIngot</li>
+			<li>BurnCoalToCokeCoal</li>
 		</recipes>
 		<costList>
 			<ComponentIndustrial>8</ComponentIndustrial>

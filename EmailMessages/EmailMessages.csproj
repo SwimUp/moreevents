@@ -56,12 +56,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailMessageDef.cs" />
+    <Compile Include="EmailMessageOption_Blef.cs" />
+    <Compile Include="EmailMessageOption_DontDoIs.cs" />
     <Compile Include="EmailMessageOption_FuckYou.cs" />
+    <Compile Include="EmailMessageOption_GoodLuck.cs" />
+    <Compile Include="EmailMessageOption_NiceJoke.cs" />
     <Compile Include="EmailMessageOption_SendRaid.cs" />
     <Compile Include="EmailMessages.cs" />
     <Compile Include="EmailMessageWorker.cs" />
     <Compile Include="EmailMessageWorker_SendCaravan.cs" />
     <Compile Include="EmailMessageWorker_SendRaid.cs" />
+    <Compile Include="EmailMessageWorker_Weather.cs" />
     <Compile Include="MessageSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />

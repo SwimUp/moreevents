@@ -78,7 +78,6 @@ namespace QuestRim
             quests = communications.Quests;
             factions = communications.FactionManager.Factions;
             emailMessages = communications.PlayerBox.Messages;
-            emailMessages.SortBy(x => x.SendTick);
 
             this.communications = communications;
             this.speaker = speaker;
