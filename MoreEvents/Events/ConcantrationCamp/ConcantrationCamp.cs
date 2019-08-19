@@ -33,15 +33,10 @@ namespace RimOverhaul.Events.ConcantrationCamp
 
         private bool AnyHostileOnMap(Map map, Faction enemyFaction)
         {
-            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && p.health.State != PawnHealthState.Mobile && p.RaceProps.Humanlike).ToList();
+            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && p.health.State == PawnHealthState.Mobile && p.RaceProps.Humanlike).ToList();
 
             if (enemyPawns == null || enemyPawns.Count == 0)
                 return false;
-
-            foreach(var p in enemyPawns)
-            {
-                Find.LetterStack.ReceiveLetter(p.Name.ToStringFull, p.Name.ToStringFull, LetterDefOf.Death, p);
-            }
 
             return true;
         }

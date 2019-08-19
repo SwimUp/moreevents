@@ -11,6 +11,9 @@ namespace MoreEvents.Events
     {
         private EventSettings settings => Settings.EventsSettings["IceStorm"];
 
+        private int ticksBeforeDamage;
+        private bool canDamage;
+
         public override void Init()
         {
             if (!settings.Active)
@@ -23,18 +26,40 @@ namespace MoreEvents.Events
             WeatherDef storm = WeatherDefOfLocal.IncredibleSnowstorm;
             storm.durationRange = new IntRange(Duration, Duration + 1000);
             map.weatherManager.TransitionTo(storm);
+
+            ticksBeforeDamage = Rand.Range(15000, 28000);
+            canDamage = false;
         }
 
         public override void GameConditionTick()
         {
-            List<Map> affectedMaps = base.AffectedMaps;
-            if (Find.TickManager.TicksGame % 400 == 0)
+            if (canDamage)
             {
-                for (int i = 0; i < affectedMaps.Count; i++)
+                List<Map> affectedMaps = base.AffectedMaps;
+                if (Find.TickManager.TicksGame % 400 == 0)
                 {
-                    this.DoPawnsFrostDamage(affectedMaps[i]);
+                    for (int i = 0; i < affectedMaps.Count; i++)
+                    {
+                        this.DoPawnsFrostDamage(affectedMaps[i]);
+                    }
                 }
             }
+            else
+            {
+                ticksBeforeDamage--;
+                if (ticksBeforeDamage <= 0)
+                {
+                    canDamage = true;
+                }
+            }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Values.Look(ref ticksBeforeDamage, "ticksBeforeDamage");
+            Scribe_Values.Look(ref canDamage, "canDamage");
         }
 
         private void DoPawnsFrostDamage(Map map)
@@ -71,7 +96,7 @@ namespace MoreEvents.Events
 
         public override float TemperatureOffset()
         {
-            return GameConditionUtility.LerpInOutValue(this, 10000f, -60);
+            return GameConditionUtility.LerpInOutValue(this, 30000f, -60);
         }
 
         public bool CanDamage(Pawn pawn, Map map)
