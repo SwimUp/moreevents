@@ -7,7 +7,7 @@
 			<building>
 				<isResourceRock>true</isResourceRock>
 				<mineableThing>Steel</mineableThing>
-				<mineableYield>0</mineableYield>
+				<mineableYield>40</mineableYield>
 				<mineableScatterCommonality>0</mineableScatterCommonality>
 				<mineableScatterLumpSizeRange>
 					<min>0</min>
@@ -23,7 +23,7 @@
 			<building>
 				<isResourceRock>true</isResourceRock>
 				<mineableThing>Plasteel</mineableThing>
-				<mineableYield>0</mineableYield>
+				<mineableYield>40</mineableYield>
 				<mineableScatterCommonality>0</mineableScatterCommonality>
 				<mineableScatterLumpSizeRange>
 					<min>0</min>
