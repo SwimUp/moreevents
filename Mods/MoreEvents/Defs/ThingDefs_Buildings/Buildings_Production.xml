@@ -26,9 +26,6 @@
 			<li>SmeltingCopperIngots</li>
 			<li>BurnWoodToCoal</li>
 		</recipes>
-		<costList>
-			<ComponentIndustrial>5</ComponentIndustrial>
-		</costList>
 		<costStuffCount>250</costStuffCount>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.5</fillPercent>
@@ -266,7 +263,7 @@
 			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
 		</placeWorkers>
 		<researchPrerequisites>
-			<li>BasicOreProcessing</li>
+			<li>AdvancedOreProcessing</li>
 		</researchPrerequisites>
 	</ThingDef>
 

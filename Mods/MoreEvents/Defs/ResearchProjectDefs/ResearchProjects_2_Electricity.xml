@@ -73,8 +73,8 @@ Allows you to create a large tanker and gas cylinders.</description>
 		<prerequisites>
 			<li>GasIndustry</li>
 		</prerequisites>
-		<researchViewX>2.86</researchViewX>
-		<researchViewY>2.30</researchViewY>
+		<researchViewX>2.68</researchViewX>
+		<researchViewY>3.28</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -86,8 +86,9 @@ Allows you to create a large tanker and gas cylinders.</description>
 		<tab>GasIndustry</tab>
 		<prerequisites>
 			<li>GasTraspAndStorage</li>
+			<li>GasToHeat</li>
 		</prerequisites>
-		<researchViewX>3.93</researchViewX>
+		<researchViewX>3.61</researchViewX>
 		<researchViewY>3.28</researchViewY>
 	</ResearchProjectDef>
 
@@ -101,8 +102,8 @@ Allows you to create a large tanker and gas cylinders.</description>
 		<prerequisites>
 			<li>GasIndustry</li>
 		</prerequisites>
-		<researchViewX>2.85</researchViewX>
-		<researchViewY>4.27</researchViewY>
+		<researchViewX>2.68</researchViewX>
+		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>
