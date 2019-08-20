@@ -42,12 +42,12 @@ namespace RimOverhaul.Events
                 DoRandomShot(Rand.Range(2, 6));
             }
 
-            if (Rand.Chance(0.15f))
+            if (Rand.Chance(0.06f))
             {
                 DoShipFall();
             }
 
-            if(Rand.Chance(0.55f))
+            if(Rand.Chance(0.12f))
             {
                 DoMapPartDrop();
             }

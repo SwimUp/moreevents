@@ -1,24 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ResearchProjectDef>
-    <defName>BasicOreProcessing</defName>
-    <label>Basic ore processing and smelting</label>
-    <description>Basic fundamentals of ore processing and production of ingots from them.
+	<ResearchProjectDef>
+		<defName>BasicOreProcessing</defName>
+		<label>Basic ore processing and smelting</label>
+		<description>Basic fundamentals of ore processing and production of ingots from them.
 Allows smelting of iron and copper ingots in a simple furnace.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-	<tab>Production</tab>
-	<prerequisites>
-	<li>Stonecutting</li>
-    </prerequisites>
-    <tags>
-      <li>TribalStart</li>
-      <li>ClassicStart</li>
-    </tags>
-    <researchViewX>0</researchViewX>
-    <researchViewY>0</researchViewY>
-  </ResearchProjectDef>
-  
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>Stonecutting</li>
+		</prerequisites>
+		<tags>
+			<li>TribalStart</li>
+			<li>ClassicStart</li>
+		</tags>
+		<researchViewX>1</researchViewX>
+		<researchViewY>3.75</researchViewY>
+	</ResearchProjectDef>
+
 
 </Defs>

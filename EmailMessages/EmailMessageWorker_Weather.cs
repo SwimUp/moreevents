@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using QuestRim;
+using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
@@ -14,10 +15,11 @@ namespace EmailMessages
         {
             base.PreReceived(message, box);
 
-            if (Find.WorldObjects.Settlements.Where(x => x.Faction == message.Faction).TryRandomElement(out Settlement set))
+            var settlementBase = RandomNearbyTradeableSettlement(Find.AnyPlayerHomeMap.Tile, message.Faction);
+            if (settlementBase != null)
             {
                 WeatherDef weather = DefDatabase<WeatherDef>.GetRandom();
-                string text = string.Format(message.Message, box.Owner.Name, set.Name, weather.LabelCap);
+                message.Message = string.Format(message.Message, box.Owner.Name, settlementBase.Name, weather.LabelCap.ToLower());
 
                 return true;
             }
@@ -26,5 +28,17 @@ namespace EmailMessages
                 return false;
             }
         }
+
+        private Settlement RandomNearbyTradeableSettlement(int originTile, Faction faction)
+        {
+            return Find.WorldObjects.Settlements.Where(delegate (Settlement settlement)
+            {
+                if (settlement.Faction != faction)
+                    return false;
+
+                return Find.WorldGrid.ApproxDistanceInTiles(originTile, settlement.Tile) < 36f && Find.WorldReachability.CanReach(originTile, settlement.Tile);
+            }).RandomElementWithFallback();
+        }
+
     }
 }

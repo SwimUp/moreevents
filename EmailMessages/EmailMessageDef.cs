@@ -27,5 +27,7 @@ namespace EmailMessages
         public List<EmailMessageOption> Options;
 
         public EmailMessageWorker MessageWorker;
+
+        public FactionDef StaticFaction;
     }
 }

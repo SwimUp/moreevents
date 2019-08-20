@@ -1,5 +1,4 @@
 ﻿using MoreEvents.Biomes;
-using MoreEvents.Events.Comps;
 using RimWorld;
 using RimWorld.Planet;
 using System;

@@ -197,6 +197,7 @@
 			<li>SmeltingTitanIngots</li>
 			<li>SmeltingPalladiumIngot</li>
 			<li>SmeltingPlasteel</li>
+			<li>SmeltingSteel</li>
 		</recipes>
 		<costList>
 			<ComponentSpacer>5</ComponentSpacer>

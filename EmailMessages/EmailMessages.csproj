@@ -55,20 +55,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailMessageOption_GoodJoke.cs" />
     <Compile Include="EmailMessageDef.cs" />
+    <Compile Include="EmailMessageOption_BadJoke.cs" />
     <Compile Include="EmailMessageOption_Blef.cs" />
     <Compile Include="EmailMessageOption_DontDoIs.cs" />
     <Compile Include="EmailMessageOption_FuckYou.cs" />
     <Compile Include="EmailMessageOption_GoodLuck.cs" />
+    <Compile Include="EmailMessageOption_JustGetABullet.cs" />
+    <Compile Include="EmailMessageOption_NiceCaravan.cs" />
     <Compile Include="EmailMessageOption_NiceJoke.cs" />
     <Compile Include="EmailMessageOption_SendRaid.cs" />
+    <Compile Include="EmailMessageOption_WellOk.cs" />
+    <Compile Include="EmailMessageOption_Wtf.cs" />
     <Compile Include="EmailMessages.cs" />
     <Compile Include="EmailMessageWorker.cs" />
+    <Compile Include="EmailMessageWorker_CheckIncident.cs" />
     <Compile Include="EmailMessageWorker_SendCaravan.cs" />
     <Compile Include="EmailMessageWorker_SendRaid.cs" />
+    <Compile Include="EmailMessageWorker_SpaceBattle.cs" />
+    <Compile Include="EmailMessageWorker_Threat.cs" />
     <Compile Include="EmailMessageWorker_Weather.cs" />
+    <Compile Include="EmailOptionWorker_RandomComb1.cs" />
     <Compile Include="MessageSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThoughtDefOfLocal.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

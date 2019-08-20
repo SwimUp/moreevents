@@ -1,25 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ResearchTabDef>
-		<defName>Production</defName>
-		<label>Production</label>
-	</ResearchTabDef>
 
-	<ResearchTabDef>
-		<defName>Electricity</defName>
-		<label>Electricity</label>
-	</ResearchTabDef>
-
-	<ResearchTabDef>
-		<defName>Warfare</defName>
-		<label>Warfare</label>
-	</ResearchTabDef>
-
-	<ResearchTabDef>
-		<defName>Medicine</defName>
-		<label>Medicine</label>
-	</ResearchTabDef>
-	
 	<ResearchTabDef>
 		<defName>GasIndustry</defName>
 		<label>Gas industry</label>

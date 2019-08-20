@@ -192,7 +192,11 @@ We, in contrast to you, are holding back our words. Wait for the guests, sooner 
 		<defName>Message13</defName>
 		<EmailText>The caravan of our faction took place not far from your settlement and did нnot return. We require an explanation and compensation. As I know, the caravan transported the blueprints. If you do not return them back, I will have to start the bombardment from the satellite above you. I hope you make the right decision.
 		</EmailText>
-		<Subject>Lost Caravan</Subject>
+		<Subject>Lost caravan</Subject>
+		<Options>
+			<li Class="EmailMessages.EmailMessageOption_Wtf" />
+			<li Class="EmailMessages.EmailMessageOption_NiceCaravan" />
+		</Options>
 		<SenderAvaliable>Ally</SenderAvaliable>
 		<MinRefiredDays>200</MinRefiredDays>
 		<Commonality>0.77</Commonality>
@@ -206,10 +210,78 @@ This is the third day {2} here in {1}.
 Recently, the weather is very strange.
 		</EmailText>
 		<Subject>Weather</Subject>
+		<MessageWorker Class="EmailMessages.EmailMessageWorker_Weather" />
+		<SenderAvaliable>Ally</SenderAvaliable>
+		<MinRefiredDays>56</MinRefiredDays>
+		<Commonality>0.87</Commonality>
+		<EarliestDay>15</EarliestDay>
+	</EmailMessages.EmailMessageDef>
+	
+	<EmailMessages.EmailMessageDef>
+		<defName>Message15</defName>
+		<EmailText>Two mechanoids are riding in the Utopian world elevator, the first says:
+“Your laces are loose!”
+And the second answers:
+- 100101011.1
+Ah ha ha ha ha! Well, isn’t it funny? Well, scream!
+		</EmailText>
+		<Subject>Joke</Subject>
+		<Options>
+			<li Class="EmailMessages.EmailMessageOption_GoodJoke" />
+			<li Class="EmailMessages.EmailMessageOption_BadJoke" />
+		</Options>
 		<SenderAvaliable>Ally</SenderAvaliable>
 		<MinRefiredDays>56</MinRefiredDays>
 		<Commonality>0.87</Commonality>
 		<EarliestDay>15</EarliestDay>
 	</EmailMessages.EmailMessageDef>
  
+	<EmailMessages.EmailMessageDef>
+		<defName>Message16</defName>
+		<EmailText>Hello! Last night we saw strange lights in the sky above your settlement.
+Our onlookers ran out to watch, but suddenly there was such a roar that everyone with fright hid around their homes.
+		</EmailText>
+		<Subject>Lights in the sky</Subject>
+		<MessageWorker Class="EmailMessages.EmailMessageWorker_SpaceBattle" />
+		<SenderAvaliable>Ally</SenderAvaliable>
+		<MinRefiredDays>76</MinRefiredDays>
+		<Commonality>0.4</Commonality>
+		<EarliestDay>55</EarliestDay>
+	</EmailMessages.EmailMessageDef>
+ 
+	<EmailMessages.EmailMessageDef>
+		<defName>Message17</defName>
+		<EmailText>Do you think you have any chances? Yes, your {0} is just a miserable worm,
+a {1} - generally a bag of bones! How can you even confront us?.
+		</EmailText>
+		<Subject>Threat</Subject>
+		<Options>
+			<li Class="EmailMessages.EmailMessageOption_WellOk" />
+			<li Class="EmailMessages.EmailMessageOption_JustGetABullet" />
+		</Options>
+		<MessageWorker Class="EmailMessages.EmailMessageWorker_Threat" />
+		<SenderAvaliable>Hostile</SenderAvaliable>
+		<MinRefiredDays>100</MinRefiredDays>
+		<Commonality>0.22</Commonality>
+		<EarliestDay>90</EarliestDay>
+	</EmailMessages.EmailMessageDef>
+ 
+	<EmailMessages.EmailMessageDef>
+		<defName>Message17</defName>
+		<EmailText>Do you think you have any chances? Yes, your {0} is just a miserable worm,
+a {1} - generally a bag of bones! How can you even confront us?.
+		</EmailText>
+		<Subject>Threat</Subject>
+		<Options>
+			<li Class="EmailMessages.EmailOptionWorker_RandomComb1" />
+			<li Class="EmailMessages.EmailMessageOption_JustGetABullet" />
+		</Options>
+		<MessageWorker Class="EmailMessages.EmailMessageWorker_Threat" />
+		<SenderAvaliable>Hostile</SenderAvaliable>
+		<MinRefiredDays>165</MinRefiredDays>
+		<Commonality>0.1</Commonality>
+		<EarliestDay>125</EarliestDay>
+		<StaticFaction>Mechanoids</StaticFaction>
+	</EmailMessages.EmailMessageDef>
+	
 </Defs>

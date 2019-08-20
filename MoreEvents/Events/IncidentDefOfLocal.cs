@@ -31,7 +31,6 @@ namespace MoreEvents
         public static IncidentDef ShipCrash;
 
         public static IncidentDef SandStorm;
-        public static IncidentDef MassiveFire;
         public static IncidentDef ClimateBomb;
         public static IncidentDef ClimateChaos;
 
@@ -43,5 +42,6 @@ namespace MoreEvents
         public static IncidentDef Constellations;
 
         public static IncidentDef ConcantrationCamp;
+        public static IncidentDef SpaceBattle;
     }
 }

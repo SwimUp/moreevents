@@ -160,10 +160,6 @@
     <Compile Include="Events\SiegeCamp\SiegeCampSiteComp.cs" />
     <Compile Include="Events\SiegeCamp\SiegeCampSiteComp_Main.cs" />
     <Compile Include="Events\VisitableSite.cs" />
-    <Compile Include="Events\MassiveFire\CaravanArrivalAction_EnterToMassiveFire.cs" />
-    <Compile Include="Events\MassiveFire\IncidentWorker_MassiveFire.cs" />
-    <Compile Include="Events\MassiveFire\MassiveFireComp.cs" />
-    <Compile Include="Events\MassiveFire\MassiveFireComp_Main.cs" />
     <Compile Include="Events\GameConditionDefOfLocal.cs" />
     <Compile Include="Events\GameCondition_DenseAtmosphere.cs" />
     <Compile Include="Events\GameCondition_Endlessday.cs" />
@@ -183,7 +179,6 @@
     <Compile Include="Events\IncidentWorker_MechanoidPortalStart.cs" />
     <Compile Include="Events\IncidentWorker_SuperHeatWave.cs" />
     <Compile Include="Events\IncidentWorker_SuperNova.cs" />
-    <Compile Include="Events\MassiveFire\MassiveFireMapSite.cs" />
     <Compile Include="Events\ShipCrash\Building_Container.cs" />
     <Compile Include="Events\ShipCrash\CaravanArrivalAction_EnterToShipCrash.cs" />
     <Compile Include="Events\ShipCrash\Map\MapGenerator\Dangerous_AlreadyStand.cs" />

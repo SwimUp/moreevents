@@ -15,7 +15,7 @@ namespace EmailMessages
 
         public virtual bool PreReceived(EmailMessage message, EmailBox box)
         {
-
+            return true;
         }
 
         public virtual bool CanReceiveNow()

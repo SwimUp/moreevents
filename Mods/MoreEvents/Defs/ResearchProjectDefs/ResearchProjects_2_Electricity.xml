@@ -8,13 +8,11 @@
 Allows you to create an electric arc furnace to produce cobalt, nickel, chromium and palladium.</description>
 		<baseCost>1700</baseCost>
 		<techLevel>Industrial</techLevel>
-		<tab>Production</tab>
 		<prerequisites>
-			<li>Electricity</li>
 			<li>BasicOreProcessing</li>
 		</prerequisites>
-		<researchViewX>0</researchViewX>
-		<researchViewY>0.76</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>4.41</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -24,12 +22,11 @@ Allows you to create an electric arc furnace to produce cobalt, nickel, chromium
 Allows you to create plasteel and titanium.</description>
 		<baseCost>2700</baseCost>
 		<techLevel>Industrial</techLevel>
-		<tab>Production</tab>
 		<prerequisites>
 			<li>AdvancedOreProcessing</li>
 		</prerequisites>
-		<researchViewX>0.85</researchViewX>
-		<researchViewY>0.76</researchViewY>
+		<researchViewX>1</researchViewX>
+		<researchViewY>5.08</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -41,9 +38,10 @@ Allows you to create plasteel and titanium.</description>
 		<tab>GasIndustry</tab>
 		<prerequisites>
 			<li>Electricity</li>
+			<li>ElectricityAndGas</li>
 		</prerequisites>
-		<researchViewX>1.73</researchViewX>
-		<researchViewY>3.28</researchViewY>
+		<researchViewX>1.74</researchViewX>
+		<researchViewY>3.27</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -53,13 +51,13 @@ Allows you to create plasteel and titanium.</description>
 Allows you to create a gas turbine to produce energy from gas.</description>
 		<baseCost>1900</baseCost>
 		<techLevel>Industrial</techLevel>
-		<tab>Electricity</tab>
+		<tab>GasIndustry</tab>
 		<prerequisites>
 			<li>SolarPanels</li>
 			<li>BiofuelRefining</li>
 		</prerequisites>
-		<researchViewX>2</researchViewX>
-		<researchViewY>3.1</researchViewY>
+		<researchViewX>1.74</researchViewX>
+		<researchViewY>2.66</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
