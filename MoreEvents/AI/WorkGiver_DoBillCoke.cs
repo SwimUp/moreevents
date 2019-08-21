@@ -123,24 +123,31 @@ namespace RimOverhaul.AI
             Building_CokeFurnace furnace = thing as Building_CokeFurnace;
             if (furnace != null && !furnace.Started)
             {
-                LocalTargetInfo target = thing;
-                bool ignoreOtherReservations = forced;
-                if (pawn.CanReserve(target, 1, -1, null, ignoreOtherReservations) && !thing.IsBurning() && !thing.IsForbidden(pawn))
+                if(furnace.Result != null)
                 {
-                    CompRefuelable compRefuelable = thing.TryGetComp<CompRefuelable>();
-                    if (compRefuelable != null && !compRefuelable.HasFuel)
+                    return new Job(JobDefOfLocal.TakeResultFromCokeFurnace, furnace);
+                }
+                if (furnace.Ready)
+                {
+                    return TryStartFurnace(pawn, furnace);
+                }
+                if (furnace.ProduceCount > 0 || furnace.Infinity)
+                {
+                    LocalTargetInfo target = thing;
+                    bool ignoreOtherReservations = forced;
+                    if (pawn.CanReserve(target, 1, -1, null, ignoreOtherReservations) && !thing.IsBurning() && !thing.IsForbidden(pawn))
                     {
-                        if (!RefuelWorkGiverUtility.CanRefuel(pawn, thing, forced))
+                        CompRefuelable compRefuelable = thing.TryGetComp<CompRefuelable>();
+                        if (compRefuelable != null && !compRefuelable.HasFuel)
                         {
-                            return null;
+                            if (!RefuelWorkGiverUtility.CanRefuel(pawn, thing, forced))
+                            {
+                                return null;
+                            }
+                            return RefuelWorkGiverUtility.RefuelJob(pawn, thing, forced);
                         }
-                        return RefuelWorkGiverUtility.RefuelJob(pawn, thing, forced);
+                        return TryStartJob(pawn, furnace);
                     }
-                    if(furnace.Ready)
-                    {
-                        return TryStartFurnace(pawn, furnace);
-                    }
-                    return TryStartJob(pawn, furnace);
                 }
             }
             return null;

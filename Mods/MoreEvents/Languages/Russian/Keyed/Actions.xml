@@ -33,4 +33,7 @@
   <GasStation_Info>Внутреннее хранилище: {0} / {1}</GasStation_Info>
   <GasBill_NotEnoughGas>недостаточно газа ({0})</GasBill_NotEnoughGas>
   
+  <CokeFurnace_infinity>Бесконечно</CokeFurnace_infinity>
+  <CokeFurnace_Notinfinity>Кол-во</CokeFurnace_Notinfinity>
+  
 </LanguageData>

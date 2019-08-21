@@ -13,6 +13,8 @@ namespace RimOverhaul.Things.CokeFurnace
     {
         private Building_CokeFurnace furnace => (Building_CokeFurnace)base.SelThing;
 
+        public static string buffer;
+
         private Vector2 winSize => new Vector2(420, 520);
 
         public static Texture2D Background;
@@ -22,6 +24,11 @@ namespace RimOverhaul.Things.CokeFurnace
         {
             size = winSize;
             labelKey = "TabCokeFurnace".Translate();
+        }
+
+        public override void TabUpdate()
+        {
+            base.TabUpdate();
         }
 
         protected override void FillTab()
@@ -53,9 +60,20 @@ namespace RimOverhaul.Things.CokeFurnace
 
                 Find.WindowStack.Add(new FloatMenu(options));
             }
+            if (!furnace.Infinity)
+            {
+                Listing_Standard standart = new Listing_Standard();
+                standart.Begin(new Rect(30, 60, mainRect.width - 175, 30));
+                standart.IntEntry(ref furnace.ProduceCount, ref buffer);
+                standart.End();
+            }
+            if (Widgets.ButtonText(new Rect(280, 60, 110, 24), furnace.Infinity ? "CokeFurnace_infinity".Translate() : "CokeFurnace_Notinfinity".Translate()))
+            {
+                furnace.Infinity = !furnace.Infinity;
+            }
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            Rect titleRect = new Rect(22, 80, 380, 25);
+            Rect titleRect = new Rect(22, 90, 380, 25);
             Widgets.Label(titleRect, "CockeFurnace_Ingedients".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
 
@@ -83,7 +101,7 @@ namespace RimOverhaul.Things.CokeFurnace
                 Widgets.Label(new Rect(180, 255, 64, 25), "CokeFurnace_TakeItem".Translate());
             }
 
-            Rect resultRect = new Rect(180, 297, 64, 64);
+            Rect resultRect = new Rect(180, 307, 64, 64);
             Widgets.DrawHighlightIfMouseover(resultRect);
             GUI.DrawTexture(resultRect, furnace.SelectedRecipe.products[0].thingDef.uiIcon);
             Text.Anchor = TextAnchor.MiddleCenter;

@@ -45,8 +45,8 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public bool Ready => refuelableComp.HasFuel && !SelectedRecipe.ingredients.Any(x => x.GetBaseCount() != ContainedResources[x.FixedIngredient]);
 
-        private int produceCount = 0;
-        private bool infinity = false;
+        public int ProduceCount = 0;
+        public bool Infinity = false;
 
         static Building_CokeFurnace()
         {
@@ -76,6 +76,12 @@ namespace RimOverhaul.Things.CokeFurnace
 
             GenSpawn.Spawn(result, InteractionCell, Map);
             result = null;
+
+            if (!Infinity)
+            {
+                ProduceCount = Mathf.Clamp(ProduceCount - 1, 0, ProduceCount);
+                ITab_CokeFurnace.buffer = ProduceCount.ToString();
+            }
         }
 
         public void DropContainedResources()
@@ -171,35 +177,38 @@ namespace RimOverhaul.Things.CokeFurnace
                     yield return new FloatMenuOption($"{"CokeFurnace_StartFire".Translate()}{reason}", null);
                 }
 
-                foreach (var item in ContainedResources)
+                if (ProduceCount > 0)
                 {
-                    int baseCount = (int)SelectedRecipe.ingredients.Where(x => x.FixedIngredient == item.Key).FirstOrDefault().GetBaseCount();
-                    if (item.Value < baseCount)
+                    foreach (var item in ContainedResources)
                     {
-                        int count = baseCount - item.Value;
-                        List<ThingCount> items = new List<ThingCount>();
-                        bool hasItem = TryFindBestItem(selPawn, item.Key, count, items);
-                        string label = "CokeFurnace_CarryItem".Translate(item.Key, count);
-                        if (!hasItem)
-                            label += "CokeFurnace_CarryItem_NoItem".Translate();
-
-                        var option = new FloatMenuOption(label, null);
-                        if (hasItem)
+                        int baseCount = (int)SelectedRecipe.ingredients.Where(x => x.FixedIngredient == item.Key).FirstOrDefault().GetBaseCount();
+                        if (item.Value < baseCount)
                         {
-                            option.action = delegate
+                            int count = baseCount - item.Value;
+                            List<ThingCount> items = new List<ThingCount>();
+                            bool hasItem = TryFindBestItem(selPawn, item.Key, count, items);
+                            string label = "CokeFurnace_CarryItem".Translate(item.Key, count);
+                            if (!hasItem)
+                                label += "CokeFurnace_CarryItem_NoItem".Translate();
+
+                            var option = new FloatMenuOption(label, null);
+                            if (hasItem)
                             {
-                                Job job = new Job(JobDefOfLocal.CarryItemToCokeFurnace, this);
-                                job.countQueue = new List<int>(items.Count);
-                                job.targetQueueB = new List<LocalTargetInfo>(items.Count);
-                                foreach (var toAdd in items)
+                                option.action = delegate
                                 {
-                                    job.countQueue.Add(toAdd.Count);
-                                    job.targetQueueB.Add(toAdd.Thing);
-                                }
-                                selPawn.jobs.TryTakeOrderedJob(job);
-                            };
+                                    Job job = new Job(JobDefOfLocal.CarryItemToCokeFurnace, this);
+                                    job.countQueue = new List<int>(items.Count);
+                                    job.targetQueueB = new List<LocalTargetInfo>(items.Count);
+                                    foreach (var toAdd in items)
+                                    {
+                                        job.countQueue.Add(toAdd.Count);
+                                        job.targetQueueB.Add(toAdd.Thing);
+                                    }
+                                    selPawn.jobs.TryTakeOrderedJob(job);
+                                };
+                            }
+                            yield return option;
                         }
-                        yield return option;
                     }
                 }
             }
