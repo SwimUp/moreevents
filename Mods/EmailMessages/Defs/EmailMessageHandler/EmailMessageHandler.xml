@@ -267,21 +267,20 @@ a {1} - generally a bag of bones! How can you even confront us?.
 	</EmailMessages.EmailMessageDef>
  
 	<EmailMessages.EmailMessageDef>
-		<defName>Message17</defName>
-		<EmailText>Do you think you have any chances? Yes, your {0} is just a miserable worm,
-a {1} - generally a bag of bones! How can you even confront us?.
-		</EmailText>
-		<Subject>Threat</Subject>
+		<defName>Message18</defName>
+		<EmailText>10010110110111000010110010110111011010111010101101010010101001010010101010010101010010100010100</EmailText>
+		<Subject>110110110</Subject>
 		<Options>
 			<li Class="EmailMessages.EmailOptionWorker_RandomComb1" />
-			<li Class="EmailMessages.EmailMessageOption_JustGetABullet" />
+			<li Class="EmailMessages.EmailOptionWorker_RandomComb1" />
+			<li Class="EmailMessages.EmailOptionWorker_RandomComb1" />
+			<li Class="EmailMessages.EmailOptionWorker_RandomComb1" />
 		</Options>
-		<MessageWorker Class="EmailMessages.EmailMessageWorker_Threat" />
 		<SenderAvaliable>Hostile</SenderAvaliable>
 		<MinRefiredDays>165</MinRefiredDays>
 		<Commonality>0.1</Commonality>
 		<EarliestDay>125</EarliestDay>
-		<StaticFaction>Mechanoids</StaticFaction>
+		<StaticFaction>Mechanoid</StaticFaction>
 	</EmailMessages.EmailMessageDef>
 	
 </Defs>

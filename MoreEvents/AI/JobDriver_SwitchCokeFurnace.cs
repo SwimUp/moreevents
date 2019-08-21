@@ -21,23 +21,40 @@ namespace RimOverhaul.AI
         {
             yield return Toils_Reserve.Reserve(TargetIndex.A);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.A).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
-            yield return Toils_General.Wait(300).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
 
-            yield return new Toil()
+            if (Furnace.Result == null)
             {
-                initAction = delegate
+                yield return Toils_General.Wait(300).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
+
+                yield return new Toil()
                 {
-                    if(Furnace.Started)
+                    initAction = delegate
                     {
-                        Furnace.StopCoke();
-                    }
-                    else
+                        if (Furnace.Started)
+                        {
+                            Furnace.StopCoke();
+                        }
+                        else
+                        {
+                            Furnace.StartCoke();
+                        }
+                    },
+                    defaultCompleteMode = ToilCompleteMode.Instant
+                };
+            }
+            else
+            {
+                yield return Toils_General.Wait(200).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
+
+                yield return new Toil()
+                {
+                    initAction = delegate
                     {
-                        Furnace.StartCoke();
-                    }
-                },
-                defaultCompleteMode = ToilCompleteMode.Instant
-            };
+                        Furnace.DropResult();
+                    },
+                    defaultCompleteMode = ToilCompleteMode.Instant
+                };
+            }
         }
     }
 }

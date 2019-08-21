@@ -86,7 +86,7 @@ namespace MoreEvents.Events
 
         public bool CanDamage(Pawn pawn, Map map)
         {
-            if (pawn.Position.Roofed(map) && !pawn.def.race.IsFlesh)
+            if (pawn.Position.Roofed(map) && pawn.def.race.IsFlesh)
             {
                 return false;
             }

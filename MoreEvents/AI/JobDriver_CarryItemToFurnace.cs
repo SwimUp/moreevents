@@ -35,7 +35,7 @@ namespace RimOverhaul.AI
             Toil extract = Toils_JobTransforms.ExtractNextTargetFromQueue(TargetIndex.B);
             yield return extract;
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
-            yield return Toils_Haul.StartCarryThing(TargetIndex.B);
+            yield return Toils_Haul.StartCarryThing(TargetIndex.B, true, false, true);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
             yield return Toils_General.Wait(400).WithProgressBarToilDelay(TargetIndex.A).FailOnDestroyedNullOrForbidden(TargetIndex.A);
 
@@ -52,6 +52,7 @@ namespace RimOverhaul.AI
             };
             yield return finish;
             yield return Toils_Jump.JumpIfHaveTargetInQueue(TargetIndex.B, extract);
+
         }
     }
 }

@@ -63,6 +63,7 @@
 					<thingDefs>
 						<li>Coal</li>
 						<li>CokeCoal</li>
+						<li>WoodLog</li>
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
@@ -198,6 +199,7 @@
 			<li>SmeltingPalladiumIngot</li>
 			<li>SmeltingPlasteel</li>
 			<li>SmeltingSteel</li>
+			<li>SmeltingTungsten</li>
 		</recipes>
 		<costList>
 			<ComponentSpacer>5</ComponentSpacer>

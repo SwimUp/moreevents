@@ -55,7 +55,7 @@ namespace RimOverhaul.Things.CokeFurnace
             }
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            Rect titleRect = new Rect(22, 60, 380, 25);
+            Rect titleRect = new Rect(22, 80, 380, 25);
             Widgets.Label(titleRect, "CockeFurnace_Ingedients".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
 
@@ -80,10 +80,10 @@ namespace RimOverhaul.Things.CokeFurnace
 
             if(furnace.Result != null)
             {
-                Widgets.Label(new Rect(180, 235, 64, 25), "CokeFurnace_TakeItem".Translate());
+                Widgets.Label(new Rect(180, 255, 64, 25), "CokeFurnace_TakeItem".Translate());
             }
 
-            Rect resultRect = new Rect(180, 277, 64, 64);
+            Rect resultRect = new Rect(180, 297, 64, 64);
             Widgets.DrawHighlightIfMouseover(resultRect);
             GUI.DrawTexture(resultRect, furnace.SelectedRecipe.products[0].thingDef.uiIcon);
             Text.Anchor = TextAnchor.MiddleCenter;

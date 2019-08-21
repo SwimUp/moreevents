@@ -17,7 +17,7 @@ Allows you to create an electric arc furnace to produce cobalt, nickel, chromium
 
 	<ResearchProjectDef>
 		<defName>HeavyDutyAlloys</defName>
-		<label>Heavy Duty Alloys</label>
+		<label>Super heavy Alloys</label>
 		<description>The study of alloys will create new generation alloys that are many times superior to current ones.
 Allows you to create plasteel and titanium.</description>
 		<baseCost>2700</baseCost>

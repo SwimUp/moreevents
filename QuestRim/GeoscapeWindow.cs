@@ -619,6 +619,7 @@ namespace QuestRim
                         if (message.MessageRead)
                             return;
 
+                        message.MessageRead = true;
                         answer.DoAction(message, QuestsManager.Communications.PlayerBox, message.Faction.leader);
                     }
                     rect2.x += 220;

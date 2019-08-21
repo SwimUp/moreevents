@@ -144,7 +144,7 @@ namespace EmailMessages
 
         private bool TryGetFactionWithFilter(FactionRelationKind kind, IntRange minReqGoodWill, FactionDef filter, out Faction faction)
         {
-            if ((from f in Find.FactionManager.AllFactionsVisible where f != Faction.OfPlayer && f.PlayerRelationKind == kind && minReqGoodWill.InRange(f.PlayerGoodwill) && f.def == filter select f).TryRandomElement(out faction))
+            if ((from f in Find.FactionManager.AllFactions where f != Faction.OfPlayer && f.PlayerRelationKind == kind && minReqGoodWill.InRange(f.PlayerGoodwill) && f.def == filter select f).TryRandomElement(out faction))
             {
                 return true;
             }

@@ -34,10 +34,6 @@ namespace RimOverhaul.Things.CokeFurnace
         public float TicksRemaining => ticksRemaining;
         private float ticksRemaining = 0;
 
-        public float heatPushMaxTemperature = 99999f;
-
-        public float heatPushMinTemperature = -99999f;
-
         public string GraphicOnPath => base.def.graphic.path + "_on";
 
         private Graphic graphic;
@@ -46,6 +42,11 @@ namespace RimOverhaul.Things.CokeFurnace
 
         private float consumeWhenActive = 0f;
         private float consumeWhenInactive = 0;
+
+        public bool Ready => refuelableComp.HasFuel && !SelectedRecipe.ingredients.Any(x => x.GetBaseCount() != ContainedResources[x.FixedIngredient]);
+
+        private int produceCount = 0;
+        private bool infinity = false;
 
         static Building_CokeFurnace()
         {
@@ -225,9 +226,19 @@ namespace RimOverhaul.Things.CokeFurnace
 
             started = false;
 
-            foreach(var item in SelectedRecipe.ingredients)
+            if (result == null)
             {
-                ContainedResources[item.FixedIngredient] = ContainedResources[item.FixedIngredient] / Rand.Range(2, 3);
+                foreach (var item in SelectedRecipe.ingredients)
+                {
+                    ContainedResources[item.FixedIngredient] = ContainedResources[item.FixedIngredient] / Rand.Range(2, 3);
+                }
+            }
+            else
+            {
+                foreach (var item in SelectedRecipe.ingredients)
+                {
+                    ContainedResources[item.FixedIngredient] = 0;
+                }
             }
         }
 
@@ -317,16 +328,17 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public void FinishCoke()
         {
-            StopCoke();
-
             if (result != null && result.def == SelectedRecipe.products[0].thingDef)
             {
                 result.stackCount += SelectedRecipe.products[0].count;
-                return;
+            }
+            else
+            {
+                result = ThingMaker.MakeThing(SelectedRecipe.products[0].thingDef);
+                result.stackCount = SelectedRecipe.products[0].count;
             }
 
-            result = ThingMaker.MakeThing(SelectedRecipe.products[0].thingDef);
-            result.stackCount = SelectedRecipe.products[0].count;
+            StopCoke();
         }
 
         public override string GetInspectString()

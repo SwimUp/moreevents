@@ -762,4 +762,138 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="TableSculpting"]</xpath>
+		<value>
+			<ThingDef ParentName="BenchBase">
+				<defName>TableSculpting</defName>
+				<label>sculptor's table</label>
+				<description>A workbench equipped for artistic sculpting.</description>
+				<thingClass>Building_WorkTable</thingClass>
+				<graphicData>
+					<texPath>Things/Building/Production/TableSculpting</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(3.5,1.5)</drawSize>
+					<shadowData>
+						<volume>(2.9, 0.3, 0.5)</volume>
+						<offset>(0, 0, 0)</offset>
+					</shadowData>
+					<damageData>
+						<cornerTL>Damage/Corner</cornerTL>
+						<cornerTR>Damage/Corner</cornerTR>
+						<cornerBL>Damage/Corner</cornerBL>
+						<cornerBR>Damage/Corner</cornerBR>
+					</damageData>
+				</graphicData>
+				<stuffCategories>
+					<li>Metallic</li>
+					<li>Woody</li>
+				</stuffCategories>
+				<costStuffCount>75</costStuffCount>
+				<altitudeLayer>Building</altitudeLayer>
+				<fillPercent>0.5</fillPercent>
+				<useHitPoints>True</useHitPoints>
+				<statBases>
+					<WorkToBuild>2500</WorkToBuild>
+					<MaxHitPoints>180</MaxHitPoints>
+					<Flammability>1.0</Flammability>
+					<Cleanliness>-5</Cleanliness>
+				</statBases>
+				<size>(3,1)</size>
+				<designationCategory>Production</designationCategory>
+				<passability>PassThroughOnly</passability>
+				<pathCost>70</pathCost>
+				<hasInteractionCell>True</hasInteractionCell>
+				<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+				<surfaceType>Item</surfaceType>
+				<inspectorTabs>
+					<li>ITab_Bills</li>
+				</inspectorTabs>
+				<building>
+					<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+				</building>
+				<comps>
+					<li Class="CompProperties_AffectedByFacilities">
+						<linkableFacilities>
+							<li>ToolCabinet</li>
+						</linkableFacilities>
+					</li>
+				</comps>
+				<designationHotKey>Misc2</designationHotKey>
+				<placeWorkers>
+					<li>PlaceWorker_ShowFacilitiesConnections</li>
+				</placeWorkers>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="TableStonecutter"]</xpath>
+		<value>
+			<ThingDef ParentName="BenchBase">
+				<defName>TableStonecutter</defName>
+				<label>stonecutter's table</label>
+				<description>A work table with saws and chisels for cutting stone chunks into usable blocks.</description>
+				<thingClass>Building_WorkTable_HeatPush</thingClass>
+				<graphicData>
+					<texPath>Things/Building/Production/TableStonecutter</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(3.5,1.5)</drawSize>
+					<shadowData>
+						<volume>(2.85, 0.3, 0.62)</volume>
+						<offset>(0, 0, 0.20)</offset>
+					</shadowData>
+					<damageData>
+						<cornerTL>Damage/Corner</cornerTL>
+						<cornerTR>Damage/Corner</cornerTR>
+						<cornerBL>Damage/Corner</cornerBL>
+						<cornerBR>Damage/Corner</cornerBR>
+					</damageData>
+				</graphicData>
+				<costStuffCount>75</costStuffCount>
+				<stuffCategories>
+					<li>Metallic</li>
+					<li>Woody</li>
+				</stuffCategories>
+				<altitudeLayer>Building</altitudeLayer>
+				<fillPercent>0.5</fillPercent>
+				<useHitPoints>True</useHitPoints>
+				<statBases>
+					<WorkToBuild>2000</WorkToBuild>
+					<MaxHitPoints>180</MaxHitPoints>
+					<Flammability>1.0</Flammability>
+					<Cleanliness>-5</Cleanliness>
+				</statBases>
+				<size>(3,1)</size>
+				<designationCategory>Production</designationCategory>
+				<passability>PassThroughOnly</passability>
+				<pathCost>70</pathCost>
+				<hasInteractionCell>True</hasInteractionCell>
+				<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+				<surfaceType>Item</surfaceType>
+				<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+				<inspectorTabs>
+					<li>ITab_Bills</li>
+				</inspectorTabs>
+				<building>
+					<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+				</building>
+				<comps>
+					<li Class="CompProperties_AffectedByFacilities">
+						<linkableFacilities>
+							<li>ToolCabinet</li>
+						</linkableFacilities>
+					</li>
+				</comps>
+				<researchPrerequisites>
+					<li>Stonecutting</li>
+				</researchPrerequisites>
+				<designationHotKey>Misc9</designationHotKey>
+				<placeWorkers>
+					<li>PlaceWorker_ShowFacilitiesConnections</li>
+				</placeWorkers>
+			</ThingDef>
+		</value>
+	</Operation>
+
 </Patch>

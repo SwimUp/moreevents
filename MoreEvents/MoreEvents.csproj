@@ -77,6 +77,7 @@
     <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="AI\LordToil_DefendPawn.cs" />
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
+    <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
     <Compile Include="Communications\CommunicationDialog_Pocahontas.cs" />
