@@ -13,8 +13,6 @@ namespace RimOverhaul.Things.CokeFurnace
     {
         private Building_CokeFurnace furnace => (Building_CokeFurnace)base.SelThing;
 
-        public static string buffer;
-
         private Vector2 winSize => new Vector2(420, 520);
 
         public static Texture2D Background;
@@ -24,11 +22,6 @@ namespace RimOverhaul.Things.CokeFurnace
         {
             size = winSize;
             labelKey = "TabCokeFurnace".Translate();
-        }
-
-        public override void TabUpdate()
-        {
-            base.TabUpdate();
         }
 
         protected override void FillTab()
@@ -64,7 +57,7 @@ namespace RimOverhaul.Things.CokeFurnace
             {
                 Listing_Standard standart = new Listing_Standard();
                 standart.Begin(new Rect(30, 60, mainRect.width - 175, 30));
-                standart.IntEntry(ref furnace.ProduceCount, ref buffer);
+                standart.IntEntry(ref furnace.ProduceCount, ref furnace.buffer);
                 standart.End();
             }
             if (Widgets.ButtonText(new Rect(280, 60, 110, 24), furnace.Infinity ? "CokeFurnace_infinity".Translate() : "CokeFurnace_Notinfinity".Translate()))

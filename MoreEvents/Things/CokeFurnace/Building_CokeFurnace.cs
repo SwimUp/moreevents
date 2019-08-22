@@ -47,6 +47,7 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public int ProduceCount = 0;
         public bool Infinity = false;
+        public string buffer;
 
         static Building_CokeFurnace()
         {
@@ -80,7 +81,7 @@ namespace RimOverhaul.Things.CokeFurnace
             if (!Infinity)
             {
                 ProduceCount = Mathf.Clamp(ProduceCount - 1, 0, ProduceCount);
-                ITab_CokeFurnace.buffer = ProduceCount.ToString();
+                buffer = ProduceCount.ToString();
             }
         }
 

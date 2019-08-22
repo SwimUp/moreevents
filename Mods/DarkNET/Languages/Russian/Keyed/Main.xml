@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<OpenCommsDark>Войти в DarkNET</OpenCommsDark>
+	<OpenCommsDarkNoPower>Войти в DarkNET [Нет питания]</OpenCommsDarkNoPower>
+	
+	<DarkNET_TradeTab>Торговля</DarkNET_TradeTab>
+	<DarkNET_TradeTab_Peoples>Люди</DarkNET_TradeTab_Peoples>
+	<DarkNET_TradeTab_Weapons>Вооружение</DarkNET_TradeTab_Weapons>
+	<DarkNET_TradeTab_Medicine>Медицина</DarkNET_TradeTab_Medicine>
+	<DarkNET_TradeTab_Other>Разное</DarkNET_TradeTab_Other>
+	
+</LanguageData>

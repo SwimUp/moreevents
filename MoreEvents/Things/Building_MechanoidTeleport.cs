@@ -15,11 +15,13 @@ namespace MoreEvents.Things
         private int spawnTime = 30000;
 
         private int animTime = 30;
-        private int maxCycles = 14;
+        private int maxCycles = 13;
         private string FramePath = "Things/Buildings/MechanoidTeleport/";
         private static Graphic[] Frames = null;
         private int cycle = 1;
         private Graphic TexMain = null;
+
+        public Thing parentGenerator;
 
         private Lord lord;
 
@@ -36,12 +38,13 @@ namespace MoreEvents.Things
             count = Rand.Range(20, 40);
 
             LongEventHandler.ExecuteWhenFinished((Action)CreateAnim);
+        }
 
-            if(!Map.listerThings.ThingsOfDef(ThingDefOfLocal.MechanoidTeleport_Generator).Any())
-            {
-                destroyed = true;
-                Destroy();
-            }
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_References.Look(ref parentGenerator, "parentGen");
         }
 
         private void CreateAnim()
@@ -68,6 +71,13 @@ namespace MoreEvents.Things
         public override void Tick()
         {
             base.Tick();
+
+            if(parentGenerator == null)
+            {
+                destroyed = true;
+                Destroy();
+                return;
+            }
 
             if (Find.TickManager.TicksGame % animTime == 0)
             {

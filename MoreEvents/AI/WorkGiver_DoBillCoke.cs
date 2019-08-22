@@ -123,29 +123,30 @@ namespace RimOverhaul.AI
             Building_CokeFurnace furnace = thing as Building_CokeFurnace;
             if (furnace != null && !furnace.Started)
             {
-                if(furnace.Result != null)
+                LocalTargetInfo target = thing;
+                bool ignoreOtherReservations = forced;
+                if (pawn.CanReserve(target, 1, -1, null, ignoreOtherReservations) && !thing.IsBurning() && !thing.IsForbidden(pawn))
                 {
-                    return new Job(JobDefOfLocal.TakeResultFromCokeFurnace, furnace);
-                }
-                if (furnace.Ready)
-                {
-                    return TryStartFurnace(pawn, furnace);
-                }
-                if (furnace.ProduceCount > 0 || furnace.Infinity)
-                {
-                    LocalTargetInfo target = thing;
-                    bool ignoreOtherReservations = forced;
-                    if (pawn.CanReserve(target, 1, -1, null, ignoreOtherReservations) && !thing.IsBurning() && !thing.IsForbidden(pawn))
+                    if (furnace.Result != null)
                     {
-                        CompRefuelable compRefuelable = thing.TryGetComp<CompRefuelable>();
-                        if (compRefuelable != null && !compRefuelable.HasFuel)
+                        return new Job(JobDefOfLocal.TakeResultFromCokeFurnace, furnace);
+                    }
+                    if (furnace.Ready)
+                    {
+                        return TryStartFurnace(pawn, furnace);
+                    }
+
+                    CompRefuelable compRefuelable = thing.TryGetComp<CompRefuelable>();
+                    if (compRefuelable != null && !compRefuelable.HasFuel)
+                    {
+                        if (!RefuelWorkGiverUtility.CanRefuel(pawn, thing, forced))
                         {
-                            if (!RefuelWorkGiverUtility.CanRefuel(pawn, thing, forced))
-                            {
-                                return null;
-                            }
-                            return RefuelWorkGiverUtility.RefuelJob(pawn, thing, forced);
+                            return null;
                         }
+                        return RefuelWorkGiverUtility.RefuelJob(pawn, thing, forced);
+                    }
+                    if (furnace.ProduceCount > 0 || furnace.Infinity)
+                    {
                         return TryStartJob(pawn, furnace);
                     }
                 }

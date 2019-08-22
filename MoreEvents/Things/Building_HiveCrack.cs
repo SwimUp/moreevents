@@ -41,6 +41,8 @@ namespace MoreEvents.Things
             200
         };
 
+        private int totalMobs = 50;
+
         private readonly float buildingDamageMultiplier = 0.7f;
 
         private Job currentJob = null;
@@ -59,6 +61,7 @@ namespace MoreEvents.Things
             Scribe_Values.Look(ref giveBuff, "giveBuff");
             Scribe_References.Look(ref lord, "lord");
             Scribe_Collections.Look(ref spawnedMobs, "spawnedMobs", LookMode.Reference);
+            Scribe_Values.Look(ref totalMobs, "totalMobs");
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -73,10 +76,10 @@ namespace MoreEvents.Things
 
             int count = 0;
             foreach (var p in spawnedMobs)
-                if (!p.Dead)
+                if (p != null && !p.Dead)
                     count++;
 
-            builder.AppendLine($"{Translator.Translate("HiveCreaturesCount")}{count}");
+            builder.AppendLine($"{Translator.Translate("HiveCreaturesCount")}{count} / {totalMobs}");
             builder.Append($"{Translator.Translate("HiveLevel")}{hiveLevel}");
 
             return builder.ToString();
@@ -113,16 +116,20 @@ namespace MoreEvents.Things
             if (spawnedMobs.Count >= maxMobs[hiveLevel])
                 return;
 
+            if (totalMobs <= 0)
+                return;
+
             int count = Rand.Range(minSpawn, maxSpawn);
 
-            if (lord == null)
-            {
-                lord = LordMaker.MakeNewLord(Faction.OfInsects, new LordJob_DefendBase(Faction.OfInsects, this.Position), Map);
-            }
+
+            lord = LordMaker.MakeNewLord(Faction.OfInsects, new LordJob_DefendBase(Faction.OfInsects, this.Position), Map);
 
             PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveSpelopede, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
             for (int i = 0; i < count; i++)
             {
+                if (totalMobs <= 0)
+                    return;
+
                 if (spawnedMobs.Count >= maxMobs[hiveLevel])
                     return;
 
@@ -133,6 +140,8 @@ namespace MoreEvents.Things
 
                 if (!IsDay(Map))
                     GiveBuff(pawn);
+
+                totalMobs--;
             }
         }
 

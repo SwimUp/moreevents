@@ -74,6 +74,8 @@ namespace RimOverhaul.Things
 
             bomber.DeSpawn();
             Find.WorldPawns.PassToWorld(bomber);
+
+            Find.LetterStack.ReceiveLetter("TribalCrack_InfoTitle".Translate(), "TribalCrack_InfoDesc".Translate(bomber.Name.ToStringFull, blownUp.TicksToDays().ToString("f2")), LetterDefOf.NeutralEvent);
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -125,10 +127,7 @@ namespace RimOverhaul.Things
 
             int count = Rand.Range(2, 4);
 
-            if (lord == null)
-            {
-                lord = LordMaker.MakeNewLord(TribalFaction, new LordJob_AssaultColony(TribalFaction), Map);
-            }
+            lord = LordMaker.MakeNewLord(TribalFaction, new LordJob_AssaultColony(TribalFaction), Map);
 
             PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.Tribal_Warrior, TribalFaction, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
             for (int i = 0; i < count; i++)

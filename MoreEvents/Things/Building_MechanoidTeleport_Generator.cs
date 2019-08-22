@@ -34,6 +34,7 @@ namespace MoreEvents.Things
                 }
 
                 Teleport = GenSpawn.Spawn(ThingDefOfLocal.MechanoidTeleport, result, map);
+                ((Building_MechanoidTeleport)Teleport).parentGenerator = this;
 
                 Init = true;
             }
