@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_DarkNetConsole.cs" />
+    <Compile Include="DarkNet.cs" />
     <Compile Include="DarkNetModule.cs" />
+    <Compile Include="DarkNetTrader.cs" />
     <Compile Include="DarkNetTraderDef.cs" />
     <Compile Include="DarkNETWindow.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />

@@ -9,6 +9,7 @@ namespace DarkNET
 {
     public class DarkNETWindow : Window
     {
+        private Vector2 commSlider = Vector2.zero;
 
         private enum Tab
         {
@@ -33,12 +34,36 @@ namespace DarkNET
 
         private Pawn speaker;
 
+        private static Dictionary<Tab,  List<DarkNetTrader>> tradersData;
+
+        private static DarkNet darkNet;
+
         public DarkNETWindow(Pawn speaker)
         {
             this.speaker = speaker;
 
             forcePause = true;
             doCloseX = true;
+
+            if(tradersData == null)
+            {
+                CreateTraderList();
+            }
+
+            if(darkNet == null)
+            {
+                darkNet = Current.Game.GetComponent<DarkNet>();
+            }
+        }
+
+        private void CreateTraderList()
+        {
+            tradersData = new Dictionary<Tab, List<DarkNetTrader>>();
+
+            foreach(Tab type in Enum.GetValues(typeof(Tab)))
+            {
+                tradersData.Add(type, darkNet.Traders.Where(x => x.def.TraderType == TraderType.Trader).ToList());
+            }
         }
 
 
@@ -101,7 +126,23 @@ namespace DarkNET
                     break;
             }
 
-            
+            List<DarkNetTrader> traders = tradersData[Tab.Trade].Where(x => (int)x.def.Category == (int)tradeTab).ToList();
+            int sliderLength = traders.Count * 40;
+
+            Rect buttonRect = new Rect(0, 0, 50, 50);
+
+            Rect scrollVertRectFact = new Rect(0, 0, sliderLength, rect.y);
+            Widgets.BeginScrollView(new Rect(0, 690, 1100, 60), ref commSlider, scrollVertRectFact, true);
+            foreach (var trader in traders)
+            {
+                DrawTraderButton(buttonRect, trader);
+                buttonRect.x += 60;
+            }
+            Widgets.EndScrollView();
+        }
+        private void DrawTraderButton(Rect rect, DarkNetTrader trader)
+        {
+            Widgets.DrawBoxSolid(rect, new ColorInt(100, 100, 100).ToColor);
         }
     }
 }
