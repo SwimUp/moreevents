@@ -7,36 +7,25 @@ using Verse;
 
 namespace DarkNET
 {
+    [StaticConstructorOnStartup]
     public class DarkNETWindow : Window
     {
         private Vector2 commSlider = Vector2.zero;
 
-        private enum Tab
-        {
-            Trade
-        }
-
-        private enum TradeTabs
-        {
-            Pawns,
-            Weapons,
-            Medicine,
-            Other
-        }
-
         public override Vector2 InitialSize => new Vector2(1100, 750);
-
-        private Tab tab;
-        private TradeTabs tradeTab;
 
         private static List<TabRecord> tabsList = new List<TabRecord>();
         private static List<TabRecord> tradeTabList = new List<TabRecord>();
 
         private Pawn speaker;
 
-        private static Dictionary<Tab,  List<DarkNetTrader>> tradersData;
+        private DarkNet darkNet;
 
-        private static DarkNet darkNet;
+        private List<DarkNetTrader> onlineTraders = new List<DarkNetTrader>();
+        private int traderListSlider = 0;
+        private DarkNetTrader currentTrader;
+
+        public static readonly Texture2D Info = ContentFinder<Texture2D>.Get("UI/Buttons/InfoButton", true);
 
         public DarkNETWindow(Pawn speaker)
         {
@@ -45,104 +34,76 @@ namespace DarkNET
             forcePause = true;
             doCloseX = true;
 
-            if(tradersData == null)
-            {
-                CreateTraderList();
-            }
+            darkNet = Current.Game.GetComponent<DarkNet>();
 
-            if(darkNet == null)
+            foreach (var trader in darkNet.Traders)
             {
-                darkNet = Current.Game.GetComponent<DarkNet>();
+                if (trader.OnlineEveryTime || trader.Online)
+                {
+                    onlineTraders.Add(trader);
+                }
             }
-        }
-
-        private void CreateTraderList()
-        {
-            tradersData = new Dictionary<Tab, List<DarkNetTrader>>();
-
-            foreach(Tab type in Enum.GetValues(typeof(Tab)))
-            {
-                tradersData.Add(type, darkNet.Traders.Where(x => x.def.TraderType == TraderType.Trader).ToList());
-            }
+            traderListSlider = onlineTraders.Count * 90;
         }
 
 
         public override void DoWindowContents(Rect inRect)
         {
+            Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Rect traderLabelOnlineRect = new Rect(0, 0, 100, 30);
+            Widgets.Label(traderLabelOnlineRect, "DarkNET_TradersOnline".Translate());
+
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
+            Rect tradersList = new Rect(0, 30, 100, 730);
+            Rect traderRect = new Rect(10, 10, 80, 80);
+            Rect scrollVertRectFact = new Rect(0, 0, tradersList.x, traderListSlider);
 
-            Rect rect2 = inRect;
-            rect2.yMin += 35;
-            tabsList.Clear();
-            tabsList.Add(new TabRecord("DarkNET_TradeTab".Translate(), delegate
+            Widgets.BeginScrollView(tradersList, ref commSlider, scrollVertRectFact, true);
+            foreach (var trader in onlineTraders)
             {
-                tab = Tab.Trade;
-            }, tab == Tab.Trade));
-
-            Widgets.DrawMenuSection(rect2);
-            TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 500);
-            tabsList.Clear();
-
-            switch (tab)
-            {
-                case Tab.Trade:
-                    DrawTradeTab(rect2);
-                    break;
-            }
-        }
-
-        private void DrawTradeTab(Rect rect)
-        {
-            Rect main = rect;
-            main.y += 32;
-
-            tradeTabList.Clear();
-            tradeTabList.Add(new TabRecord("DarkNET_TradeTab_Peoples".Translate(), delegate
-            {
-                tradeTab = TradeTabs.Pawns;
-            }, tradeTab == TradeTabs.Pawns));
-            tradeTabList.Add(new TabRecord("DarkNET_TradeTab_Weapons".Translate(), delegate
-            {
-                tradeTab = TradeTabs.Weapons;
-            }, tradeTab == TradeTabs.Weapons));
-            tradeTabList.Add(new TabRecord("DarkNET_TradeTab_Medicine".Translate(), delegate
-            {
-                tradeTab = TradeTabs.Medicine;
-            }, tradeTab == TradeTabs.Medicine));
-            tradeTabList.Add(new TabRecord("DarkNET_TradeTab_Other".Translate(), delegate
-            {
-                tradeTab = TradeTabs.Other;
-            }, tradeTab == TradeTabs.Other));
-
-            Widgets.DrawMenuSection(main);
-            TabDrawer.DrawTabs(main, tradeTabList, maxTabWidth: 500);
-            tradeTabList.Clear();
-
-            switch (tradeTab)
-            {
-                case TradeTabs.Pawns:
-
-                    break;
-            }
-
-            List<DarkNetTrader> traders = tradersData[Tab.Trade].Where(x => (int)x.def.Category == (int)tradeTab).ToList();
-            int sliderLength = traders.Count * 40;
-
-            Rect buttonRect = new Rect(0, 0, 50, 50);
-
-            Rect scrollVertRectFact = new Rect(0, 0, sliderLength, rect.y);
-            Widgets.BeginScrollView(new Rect(0, 690, 1100, 60), ref commSlider, scrollVertRectFact, true);
-            foreach (var trader in traders)
-            {
-                DrawTraderButton(buttonRect, trader);
-                buttonRect.x += 60;
+                DrawTraderIcon(traderRect, trader);
+                traderRect.y += 90;
             }
             Widgets.EndScrollView();
+
+            Rect mainTraderRect = new Rect(112, 40, 990, 740);
+            if (currentTrader != null)
+            {
+                DrawTraderInfo(currentTrader);
+                currentTrader.DrawTraderShop(mainTraderRect);
+
+            }
+
+            GUIUtils.DrawLineVertical(112, 0, inRect.height, Color.gray);
         }
-        private void DrawTraderButton(Rect rect, DarkNetTrader trader)
+
+        private void DrawTraderIcon(Rect rect, DarkNetTrader trader)
         {
-            Widgets.DrawBoxSolid(rect, new ColorInt(100, 100, 100).ToColor);
+            if(Widgets.ButtonImage(rect, trader.IconMenu))
+            {
+                currentTrader = trader;
+            }
+            Widgets.DrawHighlightIfMouseover(rect);
+        }
+
+        private void DrawTraderInfo(DarkNetTrader trader)
+        {
+            Text.Font = GameFont.Medium;
+            Vector2 textSize = Text.CalcSize(currentTrader.Name);
+            Rect labelRect = new Rect(130, 0, textSize.x, 35);
+            Widgets.Label(labelRect, currentTrader.Name);
+            Rect rect = new Rect(labelRect.x + textSize.x + 5, 0, 24, 24);
+            if (Widgets.ButtonImage(rect, Info, GUI.color))
+            {
+                Find.WindowStack.Add(new Dialog_DarkNetTraderCard(trader));
+            }
+            TooltipHandler.TipRegion(rect, "DefTraderInfoTip".Translate());
+
+            GUIUtils.DrawLineHorizontal(112, 32, 360, Color.gray);
+
+            Text.Font = GameFont.Small;
         }
     }
 }

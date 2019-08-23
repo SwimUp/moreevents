@@ -10,6 +10,16 @@ namespace DarkNET
     {
         public List<DarkNetTrader> Traders;
 
+        public DarkNet()
+        {
+
+        }
+
+        public DarkNet(Game game)
+        {
+
+        }
+
         public override void StartedNewGame()
         {
             base.StartedNewGame();
@@ -17,6 +27,22 @@ namespace DarkNET
             if (Traders == null)
             {
                 InitDarkNet();
+            }
+        }
+
+        public override void GameComponentTick()
+        {
+            base.GameComponentTick();
+
+            if (Traders == null)
+                return;
+
+            if(Find.TickManager.TicksGame % 60000 == 0)
+            {
+                foreach(var trader in Traders)
+                {
+                    trader.OnDayPassed();
+                }
             }
         }
 
@@ -46,14 +72,16 @@ namespace DarkNET
         {
             base.ExposeData();
 
-            Scribe_Deep.Look(ref Traders, "Traders");
+            Scribe_Collections.Look(ref Traders, "Traders", LookMode.Deep);
         }
 
         private DarkNetTrader CreateAndInitTrader(DarkNetTraderDef def)
         {
-            DarkNetTrader newTrader = new DarkNetTrader();
+            DarkNetTrader newTrader = (DarkNetTrader)Activator.CreateInstance(def.workerClass);
 
             newTrader.def = def;
+
+            newTrader.FirstInit();
 
             return newTrader;
         }

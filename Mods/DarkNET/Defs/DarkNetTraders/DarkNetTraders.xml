@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DarkNET.DarkNetTraderDef>
+		<defName>RogerEdmonson</defName>
+		<workerClass>DarkNET.Traders.TraderWorker_RogerEdmonson</workerClass>
+		<label>Roger Edmonson</label>
+		<description>Orbiting smuggler.
+Delivers technological items and bionic organs imported from developed worlds.
+
+A native of the developed world, began as usual
+a merchant, but could not succeed, because citizens who needed nothing needed cheaply could get almost everything from advanced machines.
+Paying attention to the outlying worlds, he realized that he could make a fortune by selling exorbitantly used things from developed worlds in exchange for demanded natural resources. But because of the high duties on the sale of technological things that made trade unprofitable, he had to disguise his activities by trading in supplies, hiding real goods in the womb of the ship, and storing the proceeds in the form of natural resources in an asteroid belt, in order to resell them and launder money . But for a long time such activity could not go unnoticed, and the authorities opened a case against him. Now, although it is wanted by the authorities, it still secretly conducts its activities.
+
+He is extremely careful, does not conduct business with unverified people and severely punishes those who deceive him or surrender to the authorities. Appears more or less regularly every 2 weeks, usually has an assortment of used things and organs from developed worlds, but it can also bring along some really interesting things. He can also order things for delivery.</description>
+		<IconTextureInt>Traders/RogerEdmonson/face</IconTextureInt>
+		<FullTextureInt>Traders/RogerEdmonson/main</FullTextureInt>
+	</DarkNET.DarkNetTraderDef>
+	
+	<DarkNET.DarkNetTraderDef>
+		<defName>Eisenberg</defName>
+		<workerClass>DarkNET.Traders.TraderWorker_RogerEdmonson</workerClass>
+		<label>Eisenberg</label>
+		<description>Chemist-manufacturer of powerful drugs and drugs.
+ 
+A specialist in the field of chemistry, can prepare almost any drug. His real name and whereabouts are unknown. It is only known that it is based in Rimworld, has an automatic laboratory with robots and transport capsules, which delivers goods.
+ 
+Always available, has almost the entire range of assortment
+drugs and drugs, buys neutroamine and other ingredients for drugs, as well as luxury goods and everything necessary for a comfortable life.</description>
+		<IconTextureInt>Traders/Eisenberg/face</IconTextureInt>
+		<FullTextureInt>Traders/Eisenberg/main</FullTextureInt>
+	</DarkNET.DarkNetTraderDef>
+	
+	<DarkNET.DarkNetTraderDef>
+		<defName>JohnCarver</defName>
+		<workerClass>DarkNET.Traders.TraderWorker_RogerEdmonson</workerClass>
+		<label>John Carver</label>
+		<description>Space collector. 
+Searches for crash sites ships and space battles and sells found valuable parts, equipment and weapons that remained intact.
+ 
+He was once a pilot in the service of a state from the world of Glitter World, who is in a war with another state. During an orbital battle with enemy ships, his ship was hit, resulting in a shipwreck on an unknown planet. Managing to fix communication, he gave a distress signal, but no one answered him. After spending months in unsuccessful attempts to repair the ship and without waiting for an answer, he decided to collect everything he needed and explore the planet. During wanderings, he once stumbled upon a cemetery of spaceships and, dismantling them, he found the necessary parts for the repair of the ship. Since then, he decided to leave the service and become a space collector.
+ 
+Calm, balanced, peaceful person. Always keeps his word and it is unlikely to expect trouble from him. Appears irregularly, but when it comes, he usually has some interesting little things. Although he has biting prices, the goods always arrive on time and in excellent condition. Can search for custom artifacts.
+Screen reader support included.</description>
+		<IconTextureInt>Traders/JohnCarver/face</IconTextureInt>
+		<FullTextureInt>Traders/JohnCarver/main</FullTextureInt>
+	</DarkNET.DarkNetTraderDef>
+
+</Defs>

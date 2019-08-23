@@ -7,21 +7,10 @@ using Verse;
 
 namespace DarkNET
 {
-    public enum TraderCategory
-    {
-        Pawns,
-        Weapon,
-        Medicine,
-        Other
-    }
-
-    public enum TraderType
-    {
-        Trader
-    }
-
     public class DarkNetTraderDef : Def
     {
+        public Type workerClass;
+
         public Texture2D IconTexture
         {
             get
@@ -35,14 +24,31 @@ namespace DarkNET
             }
         }
 
+        public Texture2D FullTexture
+        {
+            get
+            {
+                if (fullTexture == null)
+                {
+                    fullTexture = ContentFinder<Texture2D>.Get(FullTextureInt);
+                }
+
+                return fullTexture;
+            }
+        }
+
         [Unsaved]
         private Texture2D iconTexture;
 
         [NoTranslate]
         public string IconTextureInt;
 
-        public TraderCategory Category;
+        [Unsaved]
+        private Texture2D fullTexture;
 
-        public TraderType TraderType;
+        [NoTranslate]
+        public string FullTextureInt;
+
+        public List<DarkNetGood> AvaliableGoods;
     }
 }

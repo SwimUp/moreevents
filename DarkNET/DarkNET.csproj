@@ -57,13 +57,17 @@
   <ItemGroup>
     <Compile Include="Building_DarkNetConsole.cs" />
     <Compile Include="DarkNet.cs" />
+    <Compile Include="DarkNetGood.cs" />
     <Compile Include="DarkNetModule.cs" />
     <Compile Include="DarkNetTrader.cs" />
     <Compile Include="DarkNetTraderDef.cs" />
     <Compile Include="DarkNETWindow.cs" />
+    <Compile Include="Dialog_DarkNetTraderCard.cs" />
+    <Compile Include="GUIUtils.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />
     <Compile Include="Jobs\JobDriver_GoToDarkNet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traders\TraderWorker_RogerEdmonson.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
