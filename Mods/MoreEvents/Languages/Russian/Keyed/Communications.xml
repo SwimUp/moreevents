@@ -127,4 +127,6 @@
 	<NonAfressionPackCompTitle>Время пакта закончилось</NonAfressionPackCompTitle>
 	<NonAfressionPackComp>Время действия пакта с фракцией {0} закончилось. Теперь они снова могут нападать на вас.</NonAfressionPackComp>
 
+	<CommunicationComponent_CommunicationDialogTimer>Уведомление</CommunicationComponent_CommunicationDialogTimer>
+
 </LanguageData>

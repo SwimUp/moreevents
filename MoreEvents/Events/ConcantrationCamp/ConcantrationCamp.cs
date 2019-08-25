@@ -89,11 +89,19 @@ namespace RimOverhaul.Events.ConcantrationCamp
             {
                 foreach (var p in Pawns)
                 {
-                    Thing t = GenSpawn.Spawn(p, room.Cells.RandomElement(), Map);
+                    Pawn tempPawn = p;
+
+                    if(tempPawn == null)
+                    {
+                        tempPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist);
+                        Find.WorldPawns.PassToWorld(tempPawn);
+                    }
+
+                    Thing t = GenSpawn.Spawn(tempPawn, room.Cells.RandomElement(), Map);
                     t.SetFaction(Faction.OfPlayer);
 
-                    if(Find.WorldPawns.Contains(p))
-                        Find.WorldPawns.RemovePawn(p);
+                    if(Find.WorldPawns.Contains(tempPawn))
+                        Find.WorldPawns.RemovePawn(tempPawn);
                 }
             }
         }

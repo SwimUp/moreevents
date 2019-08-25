@@ -56,6 +56,9 @@
     <Compile Include="Building_Geoscape.cs" />
     <Compile Include="CommOption_NonAgressionPact.cs" />
     <Compile Include="CommOption_SubscribeScout.cs" />
+    <Compile Include="CommunicationComponent_CommunicationDialogTimer.cs" />
+    <Compile Include="CommunicationComponent_Timer.cs" />
+    <Compile Include="CommunicationDialogMaker.cs" />
     <Compile Include="CommunicationDialogWindow.cs" />
     <Compile Include="Dialog_QuestDialog.cs" />
     <Compile Include="EmailMessageOption.cs" />

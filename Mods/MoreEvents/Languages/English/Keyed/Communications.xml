@@ -24,13 +24,13 @@
 	<NoFactionComm>Faction: no</NoFactionComm>
 
 	<HelpingFactionsList>\nHelp: </HelpingFactionsList>
-	<SupportFullDoomsday>Help is fully staffed. You can not take more frctions.</SupportFullDoomsday>
+	<SupportFullDoomsday>Help is fully staffed. You can not recruit more factions.</SupportFullDoomsday>
 	<NoHelpDoomsday>Will not help</NoHelpDoomsday>
 	<UnknownDoomsdayStatus>Not known</UnknownDoomsdayStatus>
 	<HelpDoomsday>Will help</HelpDoomsday>
 	<DiscussWithOtherFactions>Discuss the event with other factions.</DiscussWithOtherFactions>
 	<DoomsdayCardLabel>End of the world</DoomsdayCardLabel>
-	<DoomsdayDesc>The {0} faction gathered to arrange a kawabanga on this planet. We can try to collect the missing amount, or maybe other factions will be able to help in the raid on their base?</DoomsdayDesc>
+	<DoomsdayDesc>The {0} faction has acquired an Archotech Doomsday weapon and demand a ransom payment. We can try to gather enough silver to meet their demands, or maybe other factions will be able to help conduct a raid on their base?</DoomsdayDesc>
 
 	<InteractionInterTab>Communication</InteractionInterTab>
 	<MessagesInterTab>Mail</MessagesInterTab>
@@ -39,48 +39,48 @@
 	<FactionInteractionDef>Faction: {0}</FactionInteractionDef>
 	<AdditionalContent>Additional Information</AdditionalContent>
 
-	<CommOption_GetHelp_Label>Ask for help (left: {0})</CommOption_GetHelp_Label>
-	<Help_AskResoucesTitle>Resources sent</Help_AskResoucesTitle>
-	<Help_AskResouces>The {0} faction remembers its duty and sends you the resources that it was able to collect. {1}</Help_AskResouces>
+	<CommOption_GetHelp_Label>Ask for help (Remaining: {0})</CommOption_GetHelp_Label>
+	<Help_AskResoucesTitle>Resources Sent</Help_AskResoucesTitle>
+	<Help_AskResouces>The {0} faction answers the call for aid and sends you what resources they could. {1}</Help_AskResouces>
 	<Help_AskPowerTitle>Help was sent</Help_AskPowerTitle>
-	<Help_AskPower>The faction {0} remembers its duty and sends you a group of its fighters to support your settlement.</Help_AskPower>
-	<UsingCaravan>The faction technology does not allow it to use capsules, so they sent a caravan.</UsingCaravan>
-	<UsingCapsules>Support was sent by capsules.</UsingCapsules>
-	<GiftHasBeenDroppedTitle>Resources transferred</GiftHasBeenDroppedTitle>
-	<GiftHasBeenDropped>Resources left close to your colony. (click that go)</GiftHasBeenDropped>
+	<Help_AskPower>The faction {0} answers the call to arms and sends you a group of fighters to support your settlement.</Help_AskPower>
+	<UsingCaravan>The faction technology does not allow it to use cargo pods, they have sent a caravan by land.</UsingCaravan>
+	<UsingCapsules>Support was sent by cargo pods.</UsingCapsules>
+	<GiftHasBeenDroppedTitle>Resources Delivered</GiftHasBeenDroppedTitle>
+	<GiftHasBeenDropped>Resources have been dropped close to your colony.</GiftHasBeenDropped>
 	<AssistCaravan_GifterArrivedTitle>Friendly squad arrived</AssistCaravan_GifterArrivedTitle>
 	<AssistCaravan_GifterArrived>A friendly squad arrived at your request. They will leave things near your colony.</AssistCaravan_GifterArrived>
 
 	<ClimateBombTitle>Climate bomb</ClimateBombTitle>
-	<ClimateBombDesc>We found a climate bomb. Thoughts in my head mixed up. Who and why left it on this planet is not clear, but we need to neutralize it, if we don’t want the next couple of seasons to have anything happen to our climate. \n\nWe need to assemble a good squad, most likely there will be enemy factions, probably will be tied the battle.
+	<ClimateBombDesc>We've discovered the location of an armed climate bomb. Who built it and why it was left on this planet is not clear, but we need to neutralize it. If we don't and allow it to detonate, the next few seasons will be very chaotic. \n\nWe need to assemble a strong combat force, there will likely be enemies defending it.
 	</ClimateBombDesc>
 
 	<Comm_MassiveFireTitle>Massive fires</Comm_MassiveFireTitle>
-	<Comm_MassiveFireDesc>Near our settlement a fire broke out, probably caused by the weather. With every minute it inflames more and more. It is fraught with ignition of neighboring lands, including ours. \nWe can hope for rain or try to put it out ourselves.</Comm_MassiveFireDesc>
+	<Comm_MassiveFireDesc>A forest fire has been spotted raging near our settlement and it is spreading quickly, threatening nearby territories including our own. \nWe can hope for rain or try to put it out ourselves.</Comm_MassiveFireDesc>
 
 	<Comm_ShipCrashTitle>Ship crash</Comm_ShipCrashTitle>
-	<Comm_ShipCrashDesc>We saw a ship crash. In appearance - a general purpose ship. When it fell, it fell apart, some of them were large, some small. These are probably cargo and living compartments. \nThe ship's parts are scattered all over the planet. The plating of the ship is made of plastal, so probably a lot could have survived. You can form a caravan and see what remains of the compartments, taking the contents yourself. True, such a profit is likely to attract uninvited guests.</Comm_ShipCrashDesc>
+	<Comm_ShipCrashDesc>A space ship was spotted breaking apart in atmosphere. It appears to be general purpose traveler's ship. Segments of the ship separate and diverge onto their own crash courses, likely cargo and living compartments of various sizes. \nThe ship's parts have scattered all over the planet. Ship plating is often constructed with plasteel and may have left some of the contents intact. You can travel to the crash sites and attempt to salvage what you can, but many others will have also seen the crash and will surely want to claim some of it for themselves.</Comm_ShipCrashDesc>
 
 	<Comm_SiegeCampTitle>Siege Camp</Comm_SiegeCampTitle>
-	<Comm_SiegeCampDesc>Not far from us the camp of gangsters was founded. They have mortars and a desire to kill us. They will attack us at short intervals, simultaneously rebuilding their camp and increasing their combat power. We need to destroy him as soon as possible, before he becomes a real problem.</Comm_SiegeCampDesc>
+	<Comm_SiegeCampDesc>Not far from us a camp of rogue militants is spotted. They can be seen building long range mortars directed towards us. They will attack us in short intervals, simultaneously fortifying their position and increasing their combat power. We need to destroy them as soon as possible, before they become too big of a problem.</Comm_SiegeCampDesc>
 
 	<EmailMessage_From>From: {0}</EmailMessage_From>
 	<EmailMessage_To>To: {0}</EmailMessage_To>
 	<EmailMessageReceivedTitle>Message received</EmailMessageReceivedTitle>
-	<EmailMessageReceived>You have received a message from {0} on the topic {1}. You can view it in the mailbox, in Geoscape.</EmailMessageReceived>
+	<EmailMessageReceived>You have received a message from {0} on the topic {1}. You can view it via the Geoscape Mailbox.</EmailMessageReceived>
 	<DeleteMessage>Delete message</DeleteMessage>
 
-	<ScoutingComp_InfoTitle>Greetings I am sending you information from our intelligence officers that they were able to collect for your settlement. The report indicates the danger and the estimated time.\n\n</ScoutingComp_InfoTitle>
+	<ScoutingComp_InfoTitle>Greetings, I am sending you information our intelligence officers have gathered for your settlement. The report indicates possible dangers and estimated time until occurence.\n\n</ScoutingComp_InfoTitle>
 	<ScoutingComp_ThreatKnown>(Threat: {0})</ScoutingComp_ThreatKnown>
 	<ScoutingComp_ThreatUnknown>(Threat level unknown)</ScoutingComp_ThreatUnknown>
 	<ScoutingComp_CommingTime> estimated time of arrival {0} (days)</ScoutingComp_CommingTime>
-	<ScoutingComp_NoThreatsInfoTitle>Greetings After several days of absence, our scouts finally returned. They did not detect any looming threats.</ScoutingComp_NoThreatsInfoTitle>
+	<ScoutingComp_NoThreatsInfoTitle>Greetings, our field scounts have finally returned. They did not detect any looming threats.</ScoutingComp_NoThreatsInfoTitle>
 	<ScoutingComp_Subject>Intelligence report</ScoutingComp_Subject>
 
 	<CommOption_SubscribeScout_Label>Intelligence agreement</CommOption_SubscribeScout_Label>
-	<CommOption_SubscribeScout_SubTitle>Intelligence agreement\n\nBy signing the agreement, the faction with which it was signed will send the results of intelligence of its people to the mail, which may contain information about threats\n\n</CommOption_SubscribeScout_SubTitle>
+	<CommOption_SubscribeScout_SubTitle>Intelligence agreement\n\nBy signing the agreement, the faction with which it was signed will share any relevant intelligence reports via Geoscape Mailbox which may contain information on impending threats\n\n</CommOption_SubscribeScout_SubTitle>
 	<CommOption_SubscribeScout_SubAlready>[Agreement has already been signed: {0} days to go]</CommOption_SubscribeScout_SubAlready>
-	<CommOption_SubscribeScout_SubButton>Subscribe</CommOption_SubscribeScout_SubButton>
+	<CommOption_SubscribeScout_SubButton>Sign Agreement</CommOption_SubscribeScout_SubButton>
 	<CommOption_SubscribeScout_SubAlreadyOption>already signed</CommOption_SubscribeScout_SubAlreadyOption>
 	<CommOption_SubscribeScout_SubGoodWillOption>at least 80 reputation required</CommOption_SubscribeScout_SubGoodWillOption>
 	<CommOption_ExitNode>Cancel</CommOption_ExitNode>
@@ -92,10 +92,10 @@
 	<TakeQuestFromPawnLetter>Quest "{0}" taken.</TakeQuestFromPawnLetter>
 	<TakeQuestFromPawnLetterDesc>You have taken the quest "{0}". Additional information on the task can be seen in the Geoscape.\n----------------\n{1}</TakeQuestFromPawnLetterDesc>
 
-	<Pocahontas_CardLabel>Discuss interfractional exchange</Pocahontas_CardLabel>
+	<Pocahontas_CardLabel>Discuss Interfactional Exchange</Pocahontas_CardLabel>
 	<CommOption_PawnOfferYes_Label>Accept {0}</CommOption_PawnOfferYes_Label>
-	<CommOption_PawnOfferYesTitle>Replenishment</CommOption_PawnOfferYesTitle>
-	<CommOption_PawnOfferYes>You have accepted the offer. The settler {0} added to your list of colonists. Relations with the {1} faction are also improved.</CommOption_PawnOfferYes>
+	<CommOption_PawnOfferYesTitle>Recruitment</CommOption_PawnOfferYesTitle>
+	<CommOption_PawnOfferYes>You have accepted the offer. The settler {0} has joined your colony. Relations with the {1} faction are also improved.</CommOption_PawnOfferYes>
 
 	<PawnInfo>{PAWN_gender ? He : She}, {PAWN_kind}. {PAWN_possessive} name is {PAWN_nameDef}, and {PAWN_pronoun} {PAWN_title}.</PawnInfo>
 
@@ -105,28 +105,29 @@
 	<ActualOnlyThisMap>The offer is relevant while the guest is with you.</ActualOnlyThisMap>
 	<TimerInfo>The offer is valid {0} days.</TimerInfo>
 	<CommunicationDialog_PocahontasTitle>Offer declined</CommunicationDialog_PocahontasTitle>
-	<CommunicationDialog_Pocahontas>You did not accept a co-residence proposal, which is why your relationship with the {0} faction has been reduced.</CommunicationDialog_Pocahontas>
+	<CommunicationDialog_Pocahontas>You did not accept the co-residence proposal. Seeing this as an insult, your relationship with the {0} faction has been reduced.</CommunicationDialog_Pocahontas>
 
 	<InspectString_Timer>{0} days left</InspectString_Timer>
 	<EnterToMapQuest_Option>Start quest</EnterToMapQuest_Option>
 	<Quest_KillLeaderTitle>Victory</Quest_KillLeaderTitle>
-	<Quest_KillLeaderDesc>The enemy leader is dead, you can form a caravan.</Quest_KillLeaderDesc>
+	<Quest_KillLeaderDesc>The enemy leader is dead, you can form a caravan to leave.</Quest_KillLeaderDesc>
 	<LeaderStillAlive>The enemy leader is still alive. ({0})</LeaderStillAlive>
 
 	<QuestOption_IncreaseReward_Label>Try to increase the reward ({0} - {1}) </QuestOption_IncreaseReward_Label>
 	<QuestOption_IncreaseReward_Level>Insufficient skill level {0}, required {1} (actual {2})</QuestOption_IncreaseReward_Level>
 
-	<OrderedTargetStillAlive>The pawn is still alive. ({0})</OrderedTargetStillAlive>
+	<OrderedTargetStillAlive>The target is still alive. ({0})</OrderedTargetStillAlive>
 	<Quest_KillOrderTitle>Order completed</Quest_KillOrderTitle>
-	<Quest_KillOrderDesc>You have completed the order, eliminating {0}.</Quest_KillOrderDesc>
+	<Quest_KillOrderDesc>You have completed the contract, eliminating {0}.</Quest_KillOrderDesc>
 	<Quest_KillOrderTargetInfo>Target: {0}\nRewards:\n {1}</Quest_KillOrderTargetInfo>
 	
-	<CommOption_NonAgressionPact_Label>Nonaggression pact ({0})</CommOption_NonAgressionPact_Label>
+	<CommOption_NonAgressionPact_Label>Non-Aggression pact ({0})</CommOption_NonAgressionPact_Label>
 	<CommOption_NonAgressionPact_NotEnoughSilver>Not enough silver ({0} required, {1} available)</CommOption_NonAgressionPact_NotEnoughSilver>
 	<CommOption_NonAgressionPact_SuccessTitle>Pact signed</CommOption_NonAgressionPact_SuccessTitle>
-	<CommOption_NonAgressionPact_Success>Non-Aggression Pact with faction {0} signed. The negotiation level {1} allowed to sign it for {2} days. During this time, the faction {0} will not raid your settlement.</CommOption_NonAgressionPact_Success>
-	<NonAfressionPackCompTitle>Pact time is over</NonAfressionPackCompTitle>
-	<NonAfressionPackComp>Pact duration with fraction {0} is over. Now they can attack you again.</NonAfressionPackComp>
+	<CommOption_NonAgressionPact_Success>A Non-Aggression Pact with faction {0} has been signed. Your negotiator's skill level {1} allowed them to reach a deal for a duration of {2} days. During this time, the faction {0} will not raid your settlement.</CommOption_NonAgressionPact_Success>
+	<NonAfressionPackCompTitle>Pact Expired</NonAfressionPackCompTitle>
+	<NonAfressionPackComp>The Non-Aggression Pact with the faction {0} is over. Now they may attack you again.</NonAfressionPackComp>
 
+	<CommunicationComponent_CommunicationDialogTimer>Notification</CommunicationComponent_CommunicationDialogTimer>
 
 </LanguageData>

@@ -283,6 +283,19 @@ namespace DiaRim
                     Find.WindowStack.Add(new FloatMenu(list));
                 }
 
+                if (listing.ButtonText("Add dialog timer 30k"))
+                {
+                    CommunicationDialog dialog = CommunicationDialogMaker.MakeCommunicationDialog("test", "sasasasasasasasas", Find.FactionManager.RandomNonHostileFaction(),
+                        DefDatabase<IncidentDef>.GetRandom(), null);
+
+                    CommunicationComponent_CommunicationDialogTimer timer = new CommunicationComponent_CommunicationDialogTimer(30000,
+                        dialog);
+
+                    QuestsManager.Communications.RegisterComponent(timer);
+
+                    Messages.Message("added", MessageTypeDefOf.NeutralEvent, false);
+                }
+
                 listing.End();
             }
         }

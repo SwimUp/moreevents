@@ -23,11 +23,11 @@
   <FrostLungs.stages.extreme.label>extreme</FrostLungs.stages.extreme.label>
   
   <Fibrodysplasia.label>Fibrodysplasia</Fibrodysplasia.label>
-  <Fibrodysplasia.stages.minor.label>light skin</Fibrodysplasia.stages.minor.label>
-  <Fibrodysplasia.stages.easy.label>skin destruction</Fibrodysplasia.stages.easy.label>
+  <Fibrodysplasia.stages.minor.label>pale skin</Fibrodysplasia.stages.minor.label>
+  <Fibrodysplasia.stages.easy.label>skin damage</Fibrodysplasia.stages.easy.label>
   <Fibrodysplasia.stages.medium.label>deep penetration</Fibrodysplasia.stages.medium.label>
-  <Fibrodysplasia.stages.hard.label>deadening of internal tissues</Fibrodysplasia.stages.hard.label>
-  <Fibrodysplasia.stages.ultrahard.label>destruction of the body part</Fibrodysplasia.stages.ultrahard.label>
+  <Fibrodysplasia.stages.hard.label>damage of internal tissues</Fibrodysplasia.stages.hard.label>
+  <Fibrodysplasia.stages.ultrahard.label>destruction of body part</Fibrodysplasia.stages.ultrahard.label>
   
   <NeurofibromatousWorms.label>Neurofibromatous Worms</NeurofibromatousWorms.label>
   <NeurofibromatousWorms.stages.easy.label>internal lesion</NeurofibromatousWorms.stages.easy.label>

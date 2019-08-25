@@ -73,7 +73,6 @@ namespace MoreEvents.Communications
             Pawn p = pawns.RandomElement();
             foreach(var item in ContainedItems)
             {
-                Log.Message($"ITEM --> {item}");
                 p.inventory.innerContainer.TryAdd(item);
             }
 

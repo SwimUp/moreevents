@@ -8,8 +8,8 @@
   <CokeFurnace_CarryItem_NoItem> (not enough in )</CokeFurnace_CarryItem_NoItem>
   <CokeFurnace_StartFire>Set fire</CokeFurnace_StartFire>
   <CokeFurnace_off>Off</CokeFurnace_off>
-  <CokeFurnace_Started>The furnace is active. Disable by right-clicking the selected colonists.</CokeFurnace_Started>
-  <CokeFurnace_Active>Actively. {0} days left.</CokeFurnace_Active>
+  <CokeFurnace_Started>The furnace is active. Disable it by right-clicking the selected colonists.</CokeFurnace_Started>
+  <CokeFurnace_Active>Active. {0} days left.</CokeFurnace_Active>
   <CokeFurnace_Inactive>Inactive.</CokeFurnace_Inactive>
   <CokeFurnace_TakeItem>DONE</CokeFurnace_TakeItem>
   <CokeFurnace_TakeItem2>Get {0}</CokeFurnace_TakeItem2>
@@ -21,9 +21,9 @@
   <MustPlaceOnGasWell>Can only be built on a gas well.</MustPlaceOnGasWell>
   <CompGasWell_GasReserve>Gas reserves: {0}</CompGasWell_GasReserve>
   
-  <GasPlant_ActiveInfo>Actively</GasPlant_ActiveInfo>
+  <GasPlant_ActiveInfo>Active</GasPlant_ActiveInfo>
   <GasPlant_ActiveInfoOFF>Not active. There is no gas coolers or power.</GasPlant_ActiveInfoOFF>
-  <GasPlant_GasWellInfo>\nWell gas reserves: {0}</GasPlant_GasWellInfo>
+  <GasPlant_GasWellInfo>\nGas Well reserves: {0}</GasPlant_GasWellInfo>
   
   <GasCooler_ActiveInfo>Storage: {0} / {1}\nCooling speed: {2}</GasCooler_ActiveInfo>
   <GasCooler_ActiveInfoNoTankers>\nThere are no pipes leading to the gas tankers</GasCooler_ActiveInfoNoTankers>

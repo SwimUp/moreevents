@@ -1,99 +1,99 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <Constellation_Sagittarius.label>Constellation of Sagittarius</Constellation_Sagittarius.label>
-  <Constellation_Sagittarius.description>The constellation of Sagittarius shone in the sky. This event instills courage in your shooters. Every creature feels a surge of strength.</Constellation_Sagittarius.description>
+  <Constellation_Sagittarius.label>Constellation of the Archer</Constellation_Sagittarius.label>
+  <Constellation_Sagittarius.description>The constellation Sagittarius shines in the sky. Everyone feels steadier in their aim.</Constellation_Sagittarius.description>
   
   
-  <Constellation_Hercules.label>Constellation of Hercules</Constellation_Hercules.label>
-  <Constellation_Hercules.description>The constellation of Hercules shone in the sky. This event instills courage and independence in the hearts of your warriors. Every creature feels a surge of strength.</Constellation_Hercules.description>
+  <Constellation_Hercules.label>Constellation of the Strong</Constellation_Hercules.label>
+  <Constellation_Hercules.description>The constellation Hercules shines in the sky. Everyone feels more courage when fighting with melee.</Constellation_Hercules.description>
   
   
-    <Constellation_Build.label>Constellation of Nagonik</Constellation_Build.label>
-  <Constellation_Build.description>The constellation of Nagon shone in the sky. This event instills the spirit of professionalism in your builders. Every creature feels a surge of strength.</Constellation_Build.description>
+    <Constellation_Build.label>Constellation of the Level</Constellation_Build.label>
+  <Constellation_Build.description>The constellation Norma shines in the sky. Everyone feels more adept at building.</Constellation_Build.description>
   
   
-    <Constellation_Art.label>Painter Constellation</Constellation_Art.label>
-  <Constellation_Art.description>In the sky the constellation of the Painter shone. This event inspires the spirit of creativity in your masters. Every creature feels a surge of strength.</Constellation_Art.description>
+    <Constellation_Art.label>Constellation of the Painter</Constellation_Art.label>
+  <Constellation_Art.description>The constellation Pictor shines in the sky. Everyone's creativity blossoms forth.</Constellation_Art.description>
   
   
-    <Constellation_Animals.label>Constellation of Big Dog</Constellation_Animals.label>
-  <Constellation_Animals.description>In the sky the constellation of the Big Dog has shone. This event instills the spirit of confidence in your stockbreeder's. Every creature feels a surge of strength.</Constellation_Animals.description>
+    <Constellation_Animals.label>Constellation of the Oxen-Driver</Constellation_Animals.label>
+  <Constellation_Animals.description>The constellation Boötes shines in the sky. Everyone feels more confident in handling animals.</Constellation_Animals.description>
   
   
-    <Constellation_Plant.label>Constellation of Bootes</Constellation_Plant.label>
-  <Constellation_Plant.description>In the sky, the constellation Bootes shone. This event instills the spirit of peace in your farmers. Every creature feels a surge of strength.</Constellation_Plant.description>
+    <Constellation_Plant.label>Constellation of the River</Constellation_Plant.label>
+  <Constellation_Plant.description>The constellation Eridanus shines in the sky. Everyone feels more in tune with plants and nature.</Constellation_Plant.description>
   
   
-    <Constellation_Social.label>Constellation of Dolphin</Constellation_Social.label>
-  <Constellation_Social.description>The constellation of the Dolphin shone in the sky. This event inspires your merchants. Every creature feels a surge of strength.</Constellation_Social.description>
+    <Constellation_Social.label>Constellation of the Sextant</Constellation_Social.label>
+  <Constellation_Social.description>The constellation Sextans shines in the sky. Everyone feels more inspired like the sailing merchant-kings of ancient times.</Constellation_Social.description>
   
   
-    <Constellation_Craft.label>Constellation of Forge Hephaestus</Constellation_Craft.label>
-  <Constellation_Craft.description>The constellation Forge Hephaestus shone in the sky. This event ignites the excitement in the eyes of your artisans. Every creature feels a surge of strength.</Constellation_Craft.description>
-  
-    
-    <Constellation_Mining.label>Constellation of Table Mountain</Constellation_Mining.label>
-  <Constellation_Mining.description>Constellation Table Mountain shone in the sky.  this event illuminate way your miners. Every creature feels a surge of strength.</Constellation_Mining.description>
+    <Constellation_Craft.label>Constellation of the Furnace</Constellation_Craft.label>
+  <Constellation_Craft.description>The constellation Fornax shines in the sky. Everyone feels a desire to craft ignite within them.</Constellation_Craft.description>
   
     
-    <Constellation_Cooking.label>Constellation of Bowl</Constellation_Cooking.label>
-  <Constellation_Cooking.description>In the sky, the constellation Bowl shone. This event opens the culinary secrets to your cooks. Every creature feels a surge of strength.</Constellation_Cooking.description>
+    <Constellation_Mining.label>Constellation of the Table Mountain</Constellation_Mining.label>
+  <Constellation_Mining.description>The constellation Mensa shines in the sky. Everyone feels as if they could dig through a mountain.</Constellation_Mining.description>
   
     
-    <Constellation_Medicine.label>Constellation of Ophiuchus</Constellation_Medicine.label>
-  <Constellation_Medicine.description>The constellation Ophiuchus shone in the sky. This event reveals the secrets of surgery to your doctors. Every creature feels a surge of strength.</Constellation_Medicine.description>
+    <Constellation_Cooking.label>Constellation of the Cup</Constellation_Cooking.label>
+  <Constellation_Cooking.description>The constellation Crater shines in the sky. Everyone feels as if they could cook a meal fit for a king.</Constellation_Cooking.description>
   
     
-    <Constellation_Intellectual.label>Constellation Eagle</Constellation_Intellectual.label>
-  <Constellation_Intellectual.description>In the sky, the constellation of the Eagle shone. This event inspires a thirst for knowledge to your scientists. Every creature feels a surge of strength.</Constellation_Intellectual.description>
+    <Constellation_Medicine.label>Constellation of the Serpent</Constellation_Medicine.label>
+  <Constellation_Medicine.description>The constellation Serpens shines in the sky. Everyone feels a greater understanding of medicine and anatomy.</Constellation_Medicine.description>
+  
+    
+    <Constellation_Intellectual.label>Constellation of the Microscope</Constellation_Intellectual.label>
+  <Constellation_Intellectual.description>The constellation Microscopium shines in the sky. Everyone feels the scientific secrets of the universe reveal themselves more easily.</Constellation_Intellectual.description>
   
   
-    <Constellation_Shield.label>Constellation of Shield</Constellation_Shield.label>
-  <Constellation_Shield.description>The constellation Shield appeared in the sky. This event hides your gaze from the truth. Every creature feels a breakdown.</Constellation_Shield.description>
+    <Constellation_Shield.label>Constellation of the Shield</Constellation_Shield.label>
+  <Constellation_Shield.description>The constellation Scutum flares in the sky. Everyone feels more reserved in their melee attacks.</Constellation_Shield.description>
   
   
-    <Constellation_Lynx.label>Constellation of Lynx</Constellation_Lynx.label>
-  <Constellation_Lynx.description>Lynx constellation appeared in the sky. Targets elude you. Every creature feels a breakdown.</Constellation_Lynx.description>
+    <Constellation_Lynx.label>Constellation of the Scorpion</Constellation_Lynx.label>
+  <Constellation_Lynx.description>The constellation Scorpius flares in the sky. Everyone finds it difficult to focus on their aim.</Constellation_Lynx.description>
   
   
-    <Constellation_Triangle.label>Constellation of Triangle</Constellation_Triangle.label>
-  <Constellation_Triangle.description>The constellation of the Triangle appeared in the sky. You can not understand your own construction drawings. Every creature feels a breakdown.</Constellation_Triangle.description>
+    <Constellation_Triangle.label>Constellation of the Peacock</Constellation_Triangle.label>
+  <Constellation_Triangle.description>The constellation Pavo flares in the sky. Everyone forgets that form must follow function, construction is sloppier.</Constellation_Triangle.description>
   
   
-    <Constellation_Clock.label>Constellation of Clock</Constellation_Clock.label>
-  <Constellation_Clock.description>You notice the lack of time for creativity. Every creature feels a breakdown.</Constellation_Clock.description>
+    <Constellation_Clock.label>Constellation of the Clock</Constellation_Clock.label>
+  <Constellation_Clock.description>The constellation Horologium flares in the sky. Everyone feels too bound by time to express creativity.</Constellation_Clock.description>
   
   
-    <Constellation_Hydra.label>Constellation of Hydra</Constellation_Hydra.label>
-  <Constellation_Hydra.description>You see your helplessness before the animals. Every creature feels a breakdown.</Constellation_Hydra.description>
+    <Constellation_Hydra.label>Constellation of the Wolf</Constellation_Hydra.label>
+  <Constellation_Hydra.description>The constellation Lupus flares in the sky. Everyone feels hesitant among animals.</Constellation_Hydra.description>
   
   
-    <Constellation_Corvus.label>Constellation of Corvus</Constellation_Corvus.label>
-  <Constellation_Corvus.description>You notice how your crop is destroyed by birds. Every creature feels a breakdown.</Constellation_Corvus.description>
+    <Constellation_Corvus.label>Constellation of the Chamaeleon</Constellation_Corvus.label>
+  <Constellation_Corvus.description>The constellation Chamaeleon flares in the sky. Everyone has trouble determining if crops are ripe .</Constellation_Corvus.description>
   
   
-    <Constellation_Indian.label>Constellation of Indian</Constellation_Indian.label>
-  <Constellation_Indian.description>You are be aloof. Every creature feels a breakdown.</Constellation_Indian.description>
+    <Constellation_Indian.label>Constellation of the Scales</Constellation_Indian.label>
+  <Constellation_Indian.description>The constellation Libra flares in the sky. Everyone is unwilling to try to make a deal, perhaps being too fair.</Constellation_Indian.description>
   
   
-    <Constellation_Eridan.label>Constellation of Eridan</Constellation_Eridan.label>
-  <Constellation_Eridan.description>Thoughts are confused, hands do not obey you. Every creature feels a breakdown.</Constellation_Eridan.description>
+    <Constellation_Eridan.label>Constellation of the Fly</Constellation_Eridan.label>
+  <Constellation_Eridan.description>The constellation Musca flares in the sky. Everyone has trouble focusing on their crafting projects.</Constellation_Eridan.description>
   
   
-    <Constellation_Taurus.label>Constellation of Taurus</Constellation_Taurus.label>
-  <Constellation_Taurus.description>Rocks does not give in to you. You are lost in the mountain tunnels. Every creature feels a breakdown.</Constellation_Taurus.description>
+    <Constellation_Taurus.label>Constellation of the Chisel</Constellation_Taurus.label>
+  <Constellation_Taurus.description>The constellation Caelum flares in the sky. Everyone can barely make more than a chip when mining.</Constellation_Taurus.description>
   
   
-    <Constellation_Coma.label>Constellation of Virgo</Constellation_Coma.label>
-  <Constellation_Coma.description>It seems you have stopped remembering your own recipes. Every creature feels a breakdown.</Constellation_Coma.description>
+    <Constellation_Coma.label>Constellation of the Lynx</Constellation_Coma.label>
+  <Constellation_Coma.description>The constellation Lynx flares in the sky. Everyone has trouble finding the right ingredients when cooking.</Constellation_Coma.description>
   
   
-    <Constellation_Snake.label>Constellation of Snake</Constellation_Snake.label>
-  <Constellation_Snake.description>Your surgery skills leave you. Every creature feels a breakdown.</Constellation_Snake.description>
+    <Constellation_Snake.label>Constellation of the Water Serpent</Constellation_Snake.label>
+  <Constellation_Snake.description>The constellation Hydra flares in the sky. Everyone has trouble curing one medical ailment without causing more to arrise.</Constellation_Snake.description>
   
   
-   <Constellation_Octans.label>Constellation of Octans</Constellation_Octans.label>
-  <Constellation_Octans.description>The Octant illuminates you with its dim light. You can not find the strength to research. Every creature feels a breakdown.</Constellation_Octans.description>
+   <Constellation_Octans.label>Constellation of the Harp</Constellation_Octans.label>
+  <Constellation_Octans.description>The constellation Lyra flares in the sky. Everyone has trouble keeping their mind clear when trying to research.</Constellation_Octans.description>
   
 </LanguageData>
