@@ -3,6 +3,7 @@ using MoreEvents.Communications;
 using MoreEvents.Quests;
 using QuestRim;
 using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -296,8 +297,31 @@ namespace DiaRim
                     Messages.Message("added", MessageTypeDefOf.NeutralEvent, false);
                 }
 
+
+
                 listing.End();
             }
+        }
+
+        private string GetIncidentTargetLabel(IIncidentTarget target)
+        {
+            if (target == null)
+            {
+                return "null target";
+            }
+            if (target is Map)
+            {
+                return "Map";
+            }
+            if (target is World)
+            {
+                return "World";
+            }
+            if (target is Caravan)
+            {
+                return ((Caravan)target).LabelCap;
+            }
+            return target.ToString();
         }
 
         public class CreateMessageWindow : Window

@@ -24,6 +24,8 @@ namespace QuestRim
 
         public bool MessageRead = false;
 
+        public bool Answered = false;
+
         public void ExposeData()
         {
             Scribe_Values.Look(ref From, "From");
@@ -33,6 +35,7 @@ namespace QuestRim
 
             Scribe_Values.Look(ref SendTick, "SendTick");
             Scribe_Values.Look(ref MessageRead, "MessageRead");
+            Scribe_Values.Look(ref Answered, "Answered");
 
             Scribe_References.Look(ref Faction, "Faction");
 

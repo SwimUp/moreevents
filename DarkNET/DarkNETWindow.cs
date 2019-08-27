@@ -26,6 +26,7 @@ namespace DarkNET
         private DarkNetTrader currentTrader;
 
         public static readonly Texture2D Info = ContentFinder<Texture2D>.Get("UI/Buttons/InfoButton", true);
+        private static readonly Texture2D StorytellerHighlightTex = ContentFinder<Texture2D>.Get("UI/HeroArt/Storytellers/Highlight");
 
         public DarkNETWindow(Pawn speaker)
         {
@@ -86,6 +87,11 @@ namespace DarkNET
                 currentTrader = trader;
             }
             Widgets.DrawHighlightIfMouseover(rect);
+
+            if(currentTrader == trader)
+            {
+                GUI.DrawTexture(rect, StorytellerHighlightTex);
+            }
         }
 
         private void DrawTraderInfo(DarkNetTrader trader)

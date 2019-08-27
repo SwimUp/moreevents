@@ -9,8 +9,8 @@ namespace DarkNET
 {
     public static class GUIUtils
     {
-        private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
-        private static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
+        public static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
+        public static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
 
         public static bool DrawCustomButton(Rect rect, string label, Color textColor)
         {

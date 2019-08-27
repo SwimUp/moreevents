@@ -18,10 +18,13 @@ namespace RimOverhaul.Patch
             if(parms.faction != null)
             {
                 FactionInteraction interaction = QuestsManager.Communications.FactionManager.GetInteraction(parms.faction);
-                var option = interaction.GetOption<CommOption_NonAgressionPact>();
-                if(option != null)
+                if (interaction != null)
                 {
-                    __result = !option.Signed;
+                    var option = interaction.GetOption<CommOption_NonAgressionPact>();
+                    if (option != null)
+                    {
+                        __result = !option.Signed;
+                    }
                 }
             }
         }

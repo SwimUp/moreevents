@@ -8,10 +8,8 @@ namespace DarkNET
 {
     public class DarkNetGood
     {
-        public ThingDef ThingDef;
+        public ThingFilter ThingFilter;
 
         public float Commonality;
-
-        public ThingCategoryDef ThingCategoryDef;
     }
 }
