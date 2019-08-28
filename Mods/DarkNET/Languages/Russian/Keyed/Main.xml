@@ -8,5 +8,47 @@
 	
 	<DarkNET_TradersOnline>Онлайн</DarkNET_TradersOnline>
 	
-	<RogerEdmonson_SpecialGoods>Специальные товары</RogerEdmonson_SpecialGoods>
+	<RogerEdmonson_SpecialGoods>Товар недели</RogerEdmonson_SpecialGoods>
+	<TraderWorker_RogerEdmonson_FullDesc>{0}
+------------------------
+{1}
+
+Цена: {2}
+------------------------
+</TraderWorker_RogerEdmonson_FullDesc>
+<TraderWorker_RogerEdmonson_Modificator>{0}: {1}
+  - Модификатор цены: {2}
+	</TraderWorker_RogerEdmonson_Modificator>
+	<TraderWorker_RogerEdmonson_NoSpecialGood>В этот раз без него :(</TraderWorker_RogerEdmonson_NoSpecialGood>
+	<TraderWorker_RogerEdmonson_MakeOrder>Заказать протез</TraderWorker_RogerEdmonson_MakeOrder>
+	<RogerEdmonson_OrderWindow_BodyParts>Протезы</RogerEdmonson_OrderWindow_BodyParts>
+	<RogerEdmonson_OrderWindow_Arts>Статуи</RogerEdmonson_OrderWindow_Arts>
+	<RogerEdmonson_OrderWindow_SelectGroup>Тип протеза: {0}</RogerEdmonson_OrderWindow_SelectGroup>
+	<Natural_group>натуральные</Natural_group>
+	<Simple_group>простые</Simple_group>
+	<Bionic_group>бионика</Bionic_group>
+	<Archotech_group>архотек</Archotech_group>
+	<RogerEdmonson_OrderWindow_Range>Время поиска (кол-во циклов)</RogerEdmonson_OrderWindow_Range>
+	<RogerEdmonson_OrderWindow_Full>Цена: {0}$ (шанс: {1}%) (предоплата: {2}) (наведите для подробностей)</RogerEdmonson_OrderWindow_Full>
+	<RogerEdmonson_OrderWindow_Full2>Вы собираетесь заказать протез из категории {0}
+Базовая цена любого заказа {1}
+Модификатор цены из-за категории - {2}
+Время поиска: {3} циклов (торговец прибывает каждые {4} дней)
+Итоговая цена: {1} * {2} + (100 * {3}) = {5}$
+Предоплата: {6}$
+
+Шанс того, что торговец сможет найти ваш заказ {7}% (Базовый {8}%, +25% за каждое прибытие)</RogerEdmonson_OrderWindow_Full2>
+	<RogerEdmonson_OrderWindow_CreateOrder>Сделать заказ</RogerEdmonson_OrderWindow_CreateOrder>
+	<RogerEdmonson_OrderWindow_Only1Order>Данный торговец может обрабатывать только один заказ за раз</RogerEdmonson_OrderWindow_Only1Order>
+	<TraderWorker_RogerEdmonson_OrderSuccess>Заказ {0}</TraderWorker_RogerEdmonson_OrderSuccess>
+	<DarkNetButtons_CancelOrder>Отменить заказ</DarkNetButtons_CancelOrder>
+	<TraderWorker_RogerEdmonson_CancelOrderTitle>Отмена заказа</TraderWorker_RogerEdmonson_CancelOrderTitle>
+	<TraderWorker_RogerEdmonson_CancelOrderDesc>Очень жаль. Я не люблю тех, кто обманывает меня. Я думаю, это будет вам уроком.</TraderWorker_RogerEdmonson_CancelOrderDesc>
+	<MakeBodyPartOrder_Title>Заказ сделан</MakeBodyPartOrder_Title>
+	<MakeBodyPartOrder_Desc>Заказ на протез типа {0} сделан. Заказ будет доставлен через {1} прибытий торговца. Вы можете отменить заказ, но это повлечет за собой негативную реакцию со стороны торговца, что в свою очередь может вызвать проблемы.</MakeBodyPartOrder_Desc>
+	
+	<DarkNetModificator_Price>Цена: {0}</DarkNetModificator_Price>
+	<DarkNetModificator_Label>{0}</DarkNetModificator_Label>
+	<DarkNetButtons_Buy>Купить</DarkNetButtons_Buy>
+	
 </LanguageData>

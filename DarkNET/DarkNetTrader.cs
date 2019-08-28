@@ -24,11 +24,13 @@ namespace DarkNET
 
         public bool Online;
 
+        public TraderParams Character => def.Character; 
+
         public virtual bool OnlineEveryTime => false;
 
         public virtual void FirstInit()
         {
-            RegenerateStock();
+
         }
 
         public virtual void Arrive()
@@ -48,6 +50,7 @@ namespace DarkNET
                 {
                     Online = false;
                     lastArriveTicks = Find.TickManager.TicksGame;
+                    TraderGone();
                 }
             }
             else
@@ -59,6 +62,11 @@ namespace DarkNET
                     Arrive();
                 }
             }
+        }
+
+        public virtual void TraderGone()
+        {
+
         }
 
         public abstract void DrawTraderShop(Rect rect);

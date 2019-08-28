@@ -9,7 +9,7 @@ namespace DarkNET
 {
     public class DarkNetTraderDef : Def
     {
-        public Type workerClass;
+        public DarkNetTrader workerClass;
 
         public Texture2D IconTexture
         {
@@ -50,5 +50,24 @@ namespace DarkNET
         public string FullTextureInt;
 
         public List<DarkNetGood> AvaliableGoods;
+
+        public TraderParams Character;
+
+        public PriceModificatorFilter AllowedPriceModificatorsFilter;
+
+        public override void ResolveReferences()
+        {
+            base.ResolveReferences();
+
+            foreach(var good in AvaliableGoods)
+            {
+                good.ThingFilter.ResolveReferences();
+            }
+
+            if(AllowedPriceModificatorsFilter != null)
+            {
+                AllowedPriceModificatorsFilter.ResolveReferences();
+            }
+        }
     }
 }

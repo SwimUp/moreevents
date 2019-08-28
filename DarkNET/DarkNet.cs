@@ -62,7 +62,7 @@ namespace DarkNET
 
             foreach(var trader in DefDatabase<DarkNetTraderDef>.AllDefs)
             {
-                DarkNetTrader newTrader = CreateAndInitTrader(trader);
+                DarkNetTrader newTrader = InitTrader(trader);
 
                 Traders.Add(newTrader);
             }
@@ -75,15 +75,12 @@ namespace DarkNET
             Scribe_Collections.Look(ref Traders, "Traders", LookMode.Deep);
         }
 
-        private DarkNetTrader CreateAndInitTrader(DarkNetTraderDef def)
+        private DarkNetTrader InitTrader(DarkNetTraderDef def)
         {
-            DarkNetTrader newTrader = (DarkNetTrader)Activator.CreateInstance(def.workerClass);
+            def.workerClass.def = def;
+            def.workerClass.FirstInit();
 
-            newTrader.def = def;
-
-            newTrader.FirstInit();
-
-            return newTrader;
+            return def.workerClass;
         }
     }
 }
