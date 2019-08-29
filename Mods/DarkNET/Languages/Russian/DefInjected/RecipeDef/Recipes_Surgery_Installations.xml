@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <Install_DarkNet_OldWoodenLeg.label>установить старую деревянную ногу</Install_DarkNet_OldWoodenLeg.label>
+  <Install_DarkNet_OldWoodenLeg.description>Установить старую деревянную ногу.</Install_DarkNet_OldWoodenLeg.description>
+  <Install_DarkNet_OldWoodenLeg.jobString>Устанавливает старую деревянную ногу</Install_DarkNet_OldWoodenLeg.jobString>
+  
+  <Install_DarkNet_PowerFist.label>установить силовой кулак</Install_DarkNet_PowerFist.label>
+  <Install_DarkNet_PowerFist.description>Установить силовой кулак.</Install_DarkNet_PowerFist.description>
+  <Install_DarkNet_PowerFist.jobString>Устанавливает силовой кулак</Install_DarkNet_PowerFist.jobString>
+
+  
+  
+</LanguageData>

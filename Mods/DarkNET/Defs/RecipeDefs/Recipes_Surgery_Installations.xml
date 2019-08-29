@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_OldWoodenLeg</defName>
+		<label>install old wooden leg</label> <!-- надпись рецепта -->
+		<description>Install old wooden leg</description> <!-- описание рецепта -->
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing old wooden leg.</jobString> <!-- надпись при нажатии на пешку, отображающая что он делает. По факту пишите что он ставит такой-то протез -->
+		<workAmount>2300</workAmount> <!-- кол-во работы -->
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance> <!-- шанс неудачи -->
+		<skillRequirements>
+			<Medicine>2</Medicine> <!-- сколько медицины надо -->
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count> <!-- сколько медикоментов надо -->
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_OldWoodenLeg</li> <!-- тут пишите defName части, для которой рецепт -->
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_OldWoodenLeg</li> <!-- тут пишите defName части, для которой рецепт -->
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li> 
+			<!-- часть тела, в которую будет установлен протез, открываете Recipes_Surgery_Installations в Core/Defs/RecipeDef, ищите аналогичный рецепт (например установка глаза и смотртие поле там -->
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_OldWoodenLeg</addsHediff> <!-- defName эффекта HediffDef -->
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_PowerFist</defName>
+		<label>install power fist</label>
+		<description>Install power fist</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing power fist</jobString>
+		<workAmount>3200</workAmount>
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_PowerFist</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_PowerFist</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_PowerFist</addsHediff> 
+	</RecipeDef>
+</Defs>

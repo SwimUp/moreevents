@@ -34,7 +34,7 @@ namespace DarkNET.Traders
 
         private int prepayment;
 
-        private float baseChance => 40f;
+        private float baseChance => 45f;
 
         public RogerEdmonson_OrderWindow(TraderWorker_RogerEdmonson trader)
         {
@@ -105,7 +105,7 @@ namespace DarkNET.Traders
 
             Rect fullLabel = new Rect(rect.x + 10, rect.y + 60, rect.width - 10, 25);
             Widgets.Label(fullLabel, "RogerEdmonson_OrderWindow_Full".Translate(totalValue, chance, prepayment));
-            TooltipHandler.TipRegion(fullLabel, "RogerEdmonson_OrderWindow_Full2".Translate($"{group}_group".Translate(), baseValue, trader.GetPriceMultiplier(group), delay, trader.ArriveTime, totalValue, prepayment, chance, baseChance));
+            TooltipHandler.TipRegion(fullLabel, "RogerEdmonson_OrderWindow_Full2".Translate($"{group}_group".Translate(), baseValue, trader.GetPriceMultiplier(group), delay, trader.ArriveTime, totalValue, prepayment, chance, baseChance, trader.GetChanceMultiplier(group)));
 
             Text.Anchor = TextAnchor.MiddleCenter;
             if (GUIUtils.DrawCustomButton(new Rect(rect.x + 10, rect.height - 40, rect.width - 20, 30), "RogerEdmonson_OrderWindow_CreateOrder".Translate(), trader.Order == null ? Color.white : Color.gray))
@@ -150,7 +150,7 @@ namespace DarkNET.Traders
         private void CalculateValues()
         {
             totalValue = (int)(baseValue * trader.GetPriceMultiplier(group) + (100 * delay));
-            chance = Mathf.Clamp(40f + (25f * delay), 0, 100);
+            chance = Mathf.Clamp((baseChance + (25f * delay)) * trader.GetChanceMultiplier(group), 0, 100);
             prepayment = (int)(totalValue * 0.4f);
         }
 

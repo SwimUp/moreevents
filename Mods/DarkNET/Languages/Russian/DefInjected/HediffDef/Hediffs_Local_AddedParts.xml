@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <DarkNet_OldWoodenLeg.label>старая деревянная нога</DarkNet_OldWoodenLeg.label>
+  <DarkNet_OldWoodenLeg.labelNoun>старая деревянная нога</DarkNet_OldWoodenLeg.labelNoun>
+  
+  <!-- для рук -->
+  <DarkNet_PowerFist.label>силовой кулак</DarkNet_PowerFist.label>
+  <DarkNet_PowerFist.comps.HediffComp_VerbGiver.tools.fist.label>силовой кулак</DarkNet_PowerFist.comps.HediffComp_VerbGiver.tools.fist.label>
+  <DarkNet_PowerFist.labelNoun>силовой кулак</DarkNet_PowerFist.labelNoun>
+  
+</LanguageData>

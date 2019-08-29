@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_OldWoodenLeg</defName>
+		<label>old wooden leg</label> <!-- надпись -->
+		<labelNoun>an old wooden leg, probably found somewhere in the trash or taken from some tramp. As a prosthesis, there is almost no benefit, but it will allow you to lift someone to his feet.</labelNoun> <!-- описание -->
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.3</partEfficiency> <!-- эффективность части тела -->
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>DarkNet_OldWoodenLeg</spawnThingOnRemoved> <!-- указывать ThingDef части тела, к которой относится -->
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_PowerFist</defName>
+		<label>power fist</label>
+		<labelNoun>power fist</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>11</power> <!-- сила (урон, по факту), сверяйте с ванильными значениями в Hediffs_Local_AddedParts -->
+						<cooldownTime>1.5</cooldownTime> <!-- кулдаун между ударами -->
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_PowerFist</spawnThingOnRemoved> <!-- указывать ThingDef части тела, к которой относится -->
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency> <!-- эффективность части -->
+		</addedPartProps>
+	</HediffDef>
+
+</Defs>

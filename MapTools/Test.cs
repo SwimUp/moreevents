@@ -297,7 +297,42 @@ namespace DiaRim
                     Messages.Message("added", MessageTypeDefOf.NeutralEvent, false);
                 }
 
+                if (listing.ButtonText("Generate random darknet bodypart"))
+                {
+                    ThingDef thingDef = new ThingDef();
+                    thingDef.modContentPack = DefDatabase<ThingDef>.AllDefs.First().modContentPack;
+                    thingDef.defName = "supatest";
+                    thingDef.thingClass = typeof(ThingWithComps);
+                    thingDef.category = ThingCategory.Item;
+                    thingDef.useHitPoints = true;
+                    thingDef.selectable = true;
+                    thingDef.statBases = new List<StatModifier>();
+                    thingDef.statBases.Add(new StatModifier
+                    {
+                        stat = StatDefOf.MaxHitPoints,
+                        value = 10000
+                    });
+                    thingDef.statBases.Add(new StatModifier
+                    {
+                        stat = StatDefOf.Flammability,
+                        value = 0.7f
+                    });
+                    thingDef.statBases.Add(new StatModifier
+                    {
+                        stat = StatDefOf.Beauty,
+                        value = 100
+                    });
+                    thingDef.altitudeLayer = AltitudeLayer.Item;
+                    thingDef.tickerType = TickerType.Never;
+                    thingDef.alwaysHaulable = true;
+                    thingDef.isTechHediff = true;
+                    thingDef.graphicData = new GraphicData();
+                    thingDef.graphicData.texPath = "Things/Item/Health/HealthItemNatural";
+                    thingDef.graphicData.graphicClass = typeof(Graphic_Single);
+                    thingDef.graphicData.drawSize = new Vector2(1, 1);
 
+                    DefGenerator.AddImpliedDef<ThingDef>(thingDef);
+                }
 
                 listing.End();
             }

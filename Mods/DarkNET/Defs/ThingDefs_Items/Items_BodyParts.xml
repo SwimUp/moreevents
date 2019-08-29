@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="BodyPartBase_DarkNet" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.7</Flammability>
+			<Beauty>-4</Beauty>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<pathCost>10</pathCost>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef Name="BodyPart_DarkNet" ParentName="BodyPartBase_DarkNet" Abstract="True">
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItemBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_OldWoodenLeg</defName>
+		<label>Old wooden leg</label> <!-- имя -->
+		<description>Strongly dilapidated wooden leg.</description> <!-- описание -->
+		<techLevel>Industrial</techLevel> <!-- Industrial или Spacer -->
+		<statBases>
+			<Mass>0.3</Mass> <!-- вес -->
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li> <!-- Simple для простых, Advanced для продвинутых -->
+		</techHediffsTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_PowerFist</defName>
+		<label>Power fist</label>
+		<description>Power fist with a metal shell. Connected to small batteries that accelerate it at the time of impact. A simple and painful tool to prove to someone who's the boss.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.4</Mass>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+	</ThingDef>
+	
+</Defs>

@@ -18,6 +18,73 @@ namespace DarkNET.Traders
 
     public class TraderWorker_RogerEdmonson : DarkNetTrader
     {
+        private class OrderPage : Page
+        {
+            private Order order;
+            private TraderWorker_RogerEdmonson trader;
+
+            public override Vector2 InitialSize => new Vector2(580, 197);
+
+            public OrderPage(Order order, TraderWorker_RogerEdmonson trader)
+            {
+                this.order = order;
+                this.trader = trader;
+                doCloseX = true;
+            }
+
+            public override void DoWindowContents(Rect inRect)
+            {
+                DrawOrderCard(inRect, order);
+            }
+
+            public void DrawOrderCard(Rect rect, Order item)
+            {
+                trader.bgCardColor.a = 150;
+                Widgets.DrawBoxSolid(rect, trader.bgCardColor);
+
+                GUI.color = GUIUtils.CommBorderColor;
+                Widgets.DrawBox(rect);
+                GUI.color = Color.white;
+
+                Widgets.ThingIcon(new Rect(rect.x + 8, rect.y + 18, 64, 64), item.OrderedItem);
+
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.Label(new Rect(rect.x + 80, rect.y + 8, rect.width - 88, 25), item.OrderedItem.Label);
+                Text.Anchor = TextAnchor.UpperLeft;
+
+                GUIUtils.DrawLineHorizontal(rect.x + 80, rect.y + 34, rect.width - 88, Color.gray);
+                float y = rect.y + 36;
+                Widgets.Label(new Rect(rect.x + 80, y, rect.width - 88, 25), $"DarkNetModificator_Price".Translate(item.Price));
+
+                Text.Anchor = TextAnchor.MiddleCenter;
+                if (GUIUtils.DrawCustomButton(new Rect(rect.x, rect.y + 105, rect.width, 25), "DarkNetButtons_Buy".Translate(), Color.white))
+                {
+                    if (trader.AcceptOrder())
+                    {
+                        Close();
+                        Text.Anchor = TextAnchor.UpperLeft;
+                        return;
+                    }
+                }
+                if (GUIUtils.DrawCustomButton(new Rect(rect.x, rect.y + 132, rect.width, 25), "DarkNetButtons_CancelOrder".Translate(), Color.white))
+                {
+                    trader.DeclineOrder();
+                    Close();
+                    Text.Anchor = TextAnchor.UpperLeft;
+                    return;
+                }
+                Text.Anchor = TextAnchor.UpperLeft;
+
+                if (Mouse.IsOver(rect))
+                {
+                    StringBuilder builder = new StringBuilder();
+                    builder.Append("TraderWorker_RogerEdmonson_FullDesc".Translate(item.OrderedItem.Label, item.OrderedItem.DescriptionFlavor, item.Price));
+
+                    TooltipHandler.TipRegion(rect, builder.ToString());
+                }
+            }
+        }
+
         public override int OnlineTime => 1;
 
         public override int ArriveTime => 2;
@@ -47,7 +114,7 @@ namespace DarkNET.Traders
 
         private Vector2 slider = Vector2.zero;
 
-        private Color bgCardColor = new ColorInt(40, 40, 40).ToColor;
+        protected Color bgCardColor = new ColorInt(40, 40, 40).ToColor;
 
         private ThingFilter specialGoodsFilter;
 
@@ -56,6 +123,16 @@ namespace DarkNET.Traders
         public Order Order;
 
         private float raidMultiplier = 1.5f;
+
+        public override void FirstInit()
+        {
+            base.FirstInit();
+
+            if(specialGoodsFilter != null)
+            {
+                specialGoodsFilter.ResolveReferences();
+            }
+        }
 
         public override void DrawTraderShop(Rect rect)
         {
@@ -99,23 +176,24 @@ namespace DarkNET.Traders
             GUIUtils.DrawLineHorizontal(rect.x, 635, 610, Color.gray);
 
             Text.Anchor = TextAnchor.MiddleCenter;
-            Text.Font = GameFont.Medium;
-            Rect bottomButtonsRect = new Rect(rect.x + 10, 655, 600, 40);
+            Rect bottomButtonsRect = new Rect(rect.x + 10, 645, 600, 25);
             if(GUIUtils.DrawCustomButton(bottomButtonsRect, "TraderWorker_RogerEdmonson_MakeOrder".Translate(), Color.white))
             {
                 Find.WindowStack.Add(new RogerEdmonson_OrderWindow(this));
             }
-            Text.Anchor = TextAnchor.UpperLeft;
-            Text.Font = GameFont.Small;
-
+            bottomButtonsRect.y += 30;
+            Color bColor = Color.gray;
             if (Order != null && Order.Finish)
+                bColor = Color.white;
+
+            if (GUIUtils.DrawCustomButton(bottomButtonsRect, "TraderWorker_RogerEdmonson_GetOrder".Translate(), bColor))
             {
-                if(Order.Success)
+                if (Order != null && Order.Success)
                 {
-                    Rect orderRect = new Rect(rect.x + 10, 210, 400, 400);
-                    DrawOrderCard(orderRect, Order);
+                    Find.WindowStack.Add(new OrderPage(Order, this));
                 }
             }
+            Text.Anchor = TextAnchor.UpperLeft;
         }
         public void DrawCustomItemCard(Rect rect, SellableItemWithModif item)
         {
@@ -166,52 +244,6 @@ namespace DarkNET.Traders
             }
         }
 
-        public void DrawOrderCard(Rect rect, Order item)
-        {
-            bgCardColor.a = 150;
-            Widgets.DrawBoxSolid(rect, bgCardColor);
-
-            GUI.color = GUIUtils.CommBorderColor;
-            Widgets.DrawBox(rect);
-            GUI.color = Color.white;
-
-            Widgets.ThingIcon(new Rect(rect.x + 8, rect.y + 18, 64, 64), item.OrderedItem);
-
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(new Rect(rect.x + 80, rect.y + 8, rect.width - 88, 25), item.OrderedItem.Label);
-            Text.Anchor = TextAnchor.UpperLeft;
-
-            GUIUtils.DrawLineHorizontal(rect.x + 80, rect.y + 34, rect.width - 88, Color.gray);
-            float y = rect.y + 36;
-            Widgets.Label(new Rect(rect.x + 80, y, rect.width - 88, 25), $"DarkNetModificator_Price".Translate(item.Price));
-
-            Text.Anchor = TextAnchor.MiddleCenter;
-            if (GUIUtils.DrawCustomButton(new Rect(rect.x, rect.y + 105, rect.width, 25), "DarkNetButtons_Buy".Translate(), Color.white))
-            {
-                if (DarkNetPriceUtils.BuyAndDropItem(item.OrderedItem, (int)item.Price, Find.AnyPlayerHomeMap))
-                {
-                    Order = null;
-                    Text.Anchor = TextAnchor.UpperLeft;
-                    return;
-                }
-            }
-            if (GUIUtils.DrawCustomButton(new Rect(rect.x, rect.y + 140, rect.width, 25), "DarkNetButtons_CancelOrder".Translate(), Color.white))
-            {
-                DeclineOrder();
-                Text.Anchor = TextAnchor.UpperLeft;
-                return;
-            }
-            Text.Anchor = TextAnchor.UpperLeft;
-
-            if (Mouse.IsOver(rect))
-            {
-                StringBuilder builder = new StringBuilder();
-                builder.Append("TraderWorker_RogerEdmonson_FullDesc".Translate(item.OrderedItem.Label, item.OrderedItem.DescriptionFlavor, item.Price));
-
-                TooltipHandler.TipRegion(rect, builder.ToString());
-            }
-        }
-
         public void DeclineOrder()
         {
             if(Order.OrderedItem != null)
@@ -224,6 +256,17 @@ namespace DarkNET.Traders
             SendCancelOrderRaid();
         }
 
+        public bool AcceptOrder()
+        {
+            if (DarkNetPriceUtils.BuyAndDropItem(Order.OrderedItem, (int)Order.Price, Find.AnyPlayerHomeMap))
+            {
+                Order = null;
+                return true;
+            }
+
+            return false;
+        }
+
         public override void OnDayPassed()
         {
             base.OnDayPassed();
@@ -233,11 +276,6 @@ namespace DarkNET.Traders
                 if (Rand.Chance(0.13f))
                 {
                     RandomBuy();
-                }
-
-                if (Order != null)
-                {
-                    Order.TraderArrive(this);
                 }
             }
         }
@@ -283,6 +321,11 @@ namespace DarkNET.Traders
         public override void Arrive()
         {
             RegenerateStock();
+
+            if (Order != null)
+            {
+                Order.TraderArrive(this);
+            }
         }
 
         public virtual void RegenerateStock()
@@ -407,6 +450,31 @@ namespace DarkNET.Traders
                 case OrderBodypartGroup.Archotech:
                     {
                         return 9f;
+                    }
+            }
+
+            return 1f;
+        }
+
+        public float GetChanceMultiplier(OrderBodypartGroup group)
+        {
+            switch (group)
+            {
+                case OrderBodypartGroup.Natural:
+                    {
+                        return 1.0f;
+                    }
+                case OrderBodypartGroup.Simple:
+                    {
+                        return 0.95f;
+                    }
+                case OrderBodypartGroup.Bionic:
+                    {
+                        return 0.80f;
+                    }
+                case OrderBodypartGroup.Archotech:
+                    {
+                        return 0.70f;
                     }
             }
 

@@ -37,7 +37,7 @@
 Итоговая цена: {1} * {2} + (100 * {3}) = {5}$
 Предоплата: {6}$
 
-Шанс того, что торговец сможет найти ваш заказ {7}% (Базовый {8}%, +25% за каждое прибытие)</RogerEdmonson_OrderWindow_Full2>
+Шанс того, что торговец сможет найти ваш заказ {7}% (Базовый {8}%, +25% за каждое прибытие и умноженное на {9} из-за редкости предмета)</RogerEdmonson_OrderWindow_Full2>
 	<RogerEdmonson_OrderWindow_CreateOrder>Сделать заказ</RogerEdmonson_OrderWindow_CreateOrder>
 	<RogerEdmonson_OrderWindow_Only1Order>Данный торговец может обрабатывать только один заказ за раз</RogerEdmonson_OrderWindow_Only1Order>
 	<TraderWorker_RogerEdmonson_OrderSuccess>Заказ {0}</TraderWorker_RogerEdmonson_OrderSuccess>
@@ -46,6 +46,9 @@
 	<TraderWorker_RogerEdmonson_CancelOrderDesc>Очень жаль. Я не люблю тех, кто обманывает меня. Я думаю, это будет вам уроком.</TraderWorker_RogerEdmonson_CancelOrderDesc>
 	<MakeBodyPartOrder_Title>Заказ сделан</MakeBodyPartOrder_Title>
 	<MakeBodyPartOrder_Desc>Заказ на протез типа {0} сделан. Заказ будет доставлен через {1} прибытий торговца. Вы можете отменить заказ, но это повлечет за собой негативную реакцию со стороны торговца, что в свою очередь может вызвать проблемы.</MakeBodyPartOrder_Desc>
+	<Order_BodyPart_RogerEdmonson_FailTitle>Заказ не выполнен</Order_BodyPart_RogerEdmonson_FailTitle>
+	<Order_BodyPart_RogerEdmonson_FailDesc>Сообщаю, что мне не удалось найти {0} для вас. Надеюсь, в следующий раз вам повезет больше.</Order_BodyPart_RogerEdmonson_FailDesc>
+	<TraderWorker_RogerEdmonson_GetOrder>Забрать заказ</TraderWorker_RogerEdmonson_GetOrder>
 	
 	<DarkNetModificator_Price>Цена: {0}</DarkNetModificator_Price>
 	<DarkNetModificator_Label>{0}</DarkNetModificator_Label>

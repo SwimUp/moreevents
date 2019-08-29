@@ -79,6 +79,8 @@
     <Compile Include="Traders\TraderWorker_RogerEdmonson.cs" />
     <Compile Include="PriceModificatorUtils.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Patches\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
