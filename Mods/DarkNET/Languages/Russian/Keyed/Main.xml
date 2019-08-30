@@ -3,11 +3,11 @@
 
 	<OpenCommsDark>Войти в DarkNET</OpenCommsDark>
 	<OpenCommsDarkNoPower>Войти в DarkNET [Нет питания]</OpenCommsDarkNoPower>
-	
+
 	<DefTraderInfoTip>Подробная информация</DefTraderInfoTip>
-	
+
 	<DarkNET_TradersOnline>Онлайн</DarkNET_TradersOnline>
-	
+
 	<RogerEdmonson_SpecialGoods>Товар недели</RogerEdmonson_SpecialGoods>
 	<TraderWorker_RogerEdmonson_FullDesc>{0}
 ------------------------
@@ -15,8 +15,8 @@
 
 Цена: {2}
 ------------------------
-</TraderWorker_RogerEdmonson_FullDesc>
-<TraderWorker_RogerEdmonson_Modificator>{0}: {1}
+	</TraderWorker_RogerEdmonson_FullDesc>
+	<TraderWorker_RogerEdmonson_Modificator>{0}: {1}
   - Модификатор цены: {2}
 	</TraderWorker_RogerEdmonson_Modificator>
 	<TraderWorker_RogerEdmonson_NoSpecialGood>В этот раз без него :(</TraderWorker_RogerEdmonson_NoSpecialGood>
@@ -28,8 +28,18 @@
 	<Simple_group>простые</Simple_group>
 	<Bionic_group>бионика</Bionic_group>
 	<Archotech_group>архотек</Archotech_group>
+	<Improved_group>продвинутые</Improved_group>
+	<Implant_group>импланты</Implant_group>
+	<Natural_desc>Натуральные органы достать не трудно. Пару выстрелов в голову, поработать ножиком и готово - орган мой.</Natural_desc>
+	<Simple_desc>Простые протезы не пользуются популярностью, но достать их очень легко. Ищем какого-нибудь бродягу, вырубаем его и протез наш.</Simple_desc>
+	<Bionic_desc>Бионические протезы очень ценные. Пользуются популярностью у богачей, поэтому достать их довольно сложно. У подобного рода людей всегда есть охрана, да и сами они, если честно, могут навалять кому угодно или убежать от тебя со скоростью гепарда.</Bionic_desc>
+	<Archotech_desc>Да, я слышал о этих протезах. Невероятно ценная добыча. Найти её невероятно сложно. У обладателей подобных вещиц охрана такая, что можно брать штурмом планеты, из-за этого вытащить их из них не уничтожив очень сложно. Но если клиент предлагает достаточную сумму, я достану.</Archotech_desc>
+	<Improved_desc>Протезы общего назначения, встречаются в галактике абсолютно у всех. Здесь уж как повезет.</Improved_desc>
+	<Implant_desc>Хочешь прокачать мозг? Импланты редкие, а обнаружить их сложно, а вытащить не повредив еще сложнее. Тем не менее, у меня есть опыт работы с ними.</Implant_desc>
 	<RogerEdmonson_OrderWindow_Range>Время поиска (кол-во циклов)</RogerEdmonson_OrderWindow_Range>
-	<RogerEdmonson_OrderWindow_Full>Цена: {0}$ (шанс: {1}%) (предоплата: {2}) (наведите для подробностей)</RogerEdmonson_OrderWindow_Full>
+	<RogerEdmonson_OrderWindow_Full>{0}
+
+Цена: {1}$ (шанс: {2}%) (предоплата: {3}) (наведите для подробностей)</RogerEdmonson_OrderWindow_Full>
 	<RogerEdmonson_OrderWindow_Full2>Вы собираетесь заказать протез из категории {0}
 Базовая цена любого заказа {1}
 Модификатор цены из-за категории - {2}
@@ -49,9 +59,20 @@
 	<Order_BodyPart_RogerEdmonson_FailTitle>Заказ не выполнен</Order_BodyPart_RogerEdmonson_FailTitle>
 	<Order_BodyPart_RogerEdmonson_FailDesc>Сообщаю, что мне не удалось найти {0} для вас. Надеюсь, в следующий раз вам повезет больше.</Order_BodyPart_RogerEdmonson_FailDesc>
 	<TraderWorker_RogerEdmonson_GetOrder>Забрать заказ</TraderWorker_RogerEdmonson_GetOrder>
-	
+	<RogerEdmonson_OrderWindow_SelectStuff>Материал: {0}</RogerEdmonson_OrderWindow_SelectStuff>
+	<RogerEdmonson_OrderWindow_SelectArtType>Тип: {0}</RogerEdmonson_OrderWindow_SelectArtType>
+	<RogerEdmonson_OrderWindow_ArtFull>Цена: {0}$ (шанс: {1}%) (предоплата: {2}) (наведите для подробностей)</RogerEdmonson_OrderWindow_ArtFull>
+	<RogerEdmonson_OrderWindow_ArtFull2>Вы собираетесь заказать {0}
+Базовая цена любого заказа {1}
+Цена одной единицы материала: {2}
+Время поиска: {3} циклов (торговец прибывает каждые {4} дней)
+Итоговая цена: {1} * ({5} * {2}) = {6}$
+Предоплата: {7}$
+
+Шанс того, что торговец сможет найти ваш заказ {8}% (Базовый {9}%)</RogerEdmonson_OrderWindow_ArtFull2>
+
 	<DarkNetModificator_Price>Цена: {0}</DarkNetModificator_Price>
 	<DarkNetModificator_Label>{0}</DarkNetModificator_Label>
 	<DarkNetButtons_Buy>Купить</DarkNetButtons_Buy>
-	
+
 </LanguageData>

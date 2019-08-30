@@ -3,14 +3,20 @@
 
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_OldWoodenLeg</defName>
-		<label>install old wooden leg</label> <!-- надпись рецепта -->
-		<description>Install old wooden leg</description> <!-- описание рецепта -->
+		<label>install old wooden leg</label>
+		<!-- надпись рецепта -->
+		<description>Install old wooden leg</description>
+		<!-- описание рецепта -->
 		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
-		<jobString>Installing old wooden leg.</jobString> <!-- надпись при нажатии на пешку, отображающая что он делает. По факту пишите что он ставит такой-то протез -->
-		<workAmount>2300</workAmount> <!-- кол-во работы -->
-		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance> <!-- шанс неудачи -->
+		<jobString>Installing old wooden leg.</jobString>
+		<!-- надпись при нажатии на пешку, отображающая что он делает. По факту пишите что он ставит такой-то протез -->
+		<workAmount>2300</workAmount>
+		<!-- кол-во работы -->
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<!-- шанс неудачи -->
 		<skillRequirements>
-			<Medicine>2</Medicine> <!-- сколько медицины надо -->
+			<Medicine>2</Medicine>
+			<!-- сколько медицины надо -->
 		</skillRequirements>
 		<ingredients>
 			<li>
@@ -19,12 +25,14 @@
 						<li>Medicine</li>
 					</categories>
 				</filter>
-				<count>1</count> <!-- сколько медикоментов надо -->
+				<count>1</count>
+				<!-- сколько медикоментов надо -->
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>DarkNet_OldWoodenLeg</li> <!-- тут пишите defName части, для которой рецепт -->
+						<li>DarkNet_OldWoodenLeg</li>
+						<!-- тут пишите defName части, для которой рецепт -->
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -35,14 +43,16 @@
 				<li>Medicine</li>
 			</categories>
 			<thingDefs>
-				<li>DarkNet_OldWoodenLeg</li> <!-- тут пишите defName части, для которой рецепт -->
+				<li>DarkNet_OldWoodenLeg</li>
+				<!-- тут пишите defName части, для которой рецепт -->
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
 			<li>Leg</li> 
 			<!-- часть тела, в которую будет установлен протез, открываете Recipes_Surgery_Installations в Core/Defs/RecipeDef, ищите аналогичный рецепт (например установка глаза и смотртие поле там -->
 		</appliedOnFixedBodyParts>
-		<addsHediff>DarkNet_OldWoodenLeg</addsHediff> <!-- defName эффекта HediffDef -->
+		<addsHediff>DarkNet_OldWoodenLeg</addsHediff>
+		<!-- defName эффекта HediffDef -->
 	</RecipeDef>
 
 	<RecipeDef ParentName="SurgeryFlesh">
@@ -86,5 +96,1450 @@
 			<li>Hand</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_PowerFist</addsHediff> 
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Obsolete_Hand_Substitute</defName>
+		<label>Install a Obsolete Hand Substitute</label>
+		<description>Install a Obsolete Hand Substitute</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>3000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Obsolete_Hand_Substitute</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Obsolete_Hand_Substitute</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Obsolete_Hand_Substitute</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Old_Simple_Prosthetic_Arm</defName>
+		<label>Install a old simple prosthetic arm</label>
+		<description>Install a old simple prosthetic arm</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>2500</workAmount>
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>6</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Old_Simple_Prosthetic_Arm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Old_Simple_Prosthetic_Arm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Old_Simple_Prosthetic_Arm</addsHediff> 
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Fragile_Quick_Prosthetic_Arm</defName>
+		<label>Install a fragile quick prosthesis</label>
+		<description>Install a fragile quick prosthesis</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>3800</workAmount>
+		<deathOnFailedSurgeryChance>0.20</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Fragile_Quick_Prosthetic_Arm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Fragile_Quick_Prosthetic_Arm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Fragile_Quick_Prosthetic_Arm</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Active_Mechanical_Forearms</defName>
+		<label>Install a active mechanical forearms</label>
+		<description>Install a active mechanical forearms</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>4500</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>9</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Active_Mechanical_Forearms</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Active_Mechanical_Forearms</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Active_Mechanical_Forearms</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Light_Traction_Forearms</defName>
+		<label>Install a light traction forearms</label>
+		<description>Install a light traction forearms</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>3700</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Light_Traction_Forearms</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Light_Traction_Forearms</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Light_Traction_Forearms</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Magnetic_Brushes_And_Forearms</defName>
+		<label>Install a magnetic hand</label>
+		<description>Install a Install a magnetic hand</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>4500</workAmount>
+		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Magnetic_Brushes_And_Forearms</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Magnetic_Brushes_And_Forearms</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Magnetic_Brushes_And_Forearms</addsHediff> 
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_All_Metal_Pirate_Battle_Claw</defName>
+		<label>Install a all metal pirate battle claw</label>
+		<description>Install a all metal pirate battle claw</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>3700</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_All_Metal_Pirate_Battle_Claw</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_All_Metal_Pirate_Battle_Claw</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_All_Metal_Pirate_Battle_Claw</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Electromagnetic_Prosthesis</defName>
+		<label>Install a electromagnetic prosthesis</label>
+		<description>Install a electromagnetic prosthesis</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>5500</workAmount>
+		<deathOnFailedSurgeryChance>0.27</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Electromagnetic_Prosthesis</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Electromagnetic_Prosthesis</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Electromagnetic_Prosthesis</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Bloodied_Pirate_Blade</defName>
+		<label>Install a bloodied pirate blade</label>
+		<description>Install a bloodied pirate blade</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>2700</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Bloodied_Pirate_Blade</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Bloodied_Pirate_Blade</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Bloodied_Pirate_Blade</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Forearms_With_Sensors</defName>
+		<label>Install a forearms with simple sensors</label>
+		<description>Install a forearms with simple sensors</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>4100</workAmount>
+		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Forearms_With_Sensors</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Forearms_With_Sensors</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Forearms_With_Sensors</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Active_Hands_With_Electric_Shock</defName>
+		<label>Install a active hands with electric shock</label>
+		<description>Install a active hands with electric shock</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>4400</workAmount>
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Active_Hands_With_Electric_Shock</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Active_Hands_With_Electric_Shock</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Active_Hands_With_Electric_Shock</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Advanced_Mechanical_Hand_Prosthesis</defName>
+		<label>Install a advanced mechanical hand prosthesis</label>
+		<description>Install a advanced mechanical hand prosthesis</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>3600</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Advanced_Mechanical_Hand_Prosthesis</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Advanced_Mechanical_Hand_Prosthesis</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Advanced_Mechanical_Hand_Prosthesis</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Advanced_Electromagnetic_Joints</defName>
+		<label>Install a advanced electromagnetic joints</label>
+		<description>Install a advanced electromagnetic joints</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>5800</workAmount>
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Advanced_Electromagnetic_Joints</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Advanced_Electromagnetic_Joints</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Advanced_Electromagnetic_Joints</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Prosthesis_With_Power_Weights</defName>
+		<label>Install a prosthesis with power weights</label>
+		<description>Install a prosthesis with power weights</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing simple prosthetic</jobString>
+		<workAmount>5900</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Prosthesis_With_Power_Weights</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Prosthesis_With_Power_Weights</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Prosthesis_With_Power_Weights</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Scientifically_Hypersensitive_Prosthesis</defName>
+		<label>Install scientifically hypersensitive prosthesis</label>
+		<description>Install scientifically hypersensitive prosthesis</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>7200</workAmount>
+		<deathOnFailedSurgeryChance>0.3</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>6</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Scientifically_Hypersensitive_Prosthesis</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Scientifically_Hypersensitive_Prosthesis</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Scientifically_Hypersensitive_Prosthesis</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Hands_On_Energy_Connections</defName>
+		<label>Install hands on energy connections</label>
+		<description>Install hands on energy connections</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>7300</workAmount>
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+			<Intellectual>7</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Hands_On_Energy_Connections</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Hands_On_Energy_Connections</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Hands_On_Energy_Connections</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Fiber_Optic_Prostheses</defName>
+		<label>Install fiber optic forearms</label>
+		<description>Install fiber optic forearms</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>7500</workAmount>
+		<deathOnFailedSurgeryChance>0.3</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Fiber_Optic_Prostheses</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Fiber_Optic_Prostheses</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Fiber_Optic_Prostheses</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Biomechanical_Joints</defName>
+		<label>Install biomechanical joints</label>
+		<description>Install biomechanical joints</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>7700</workAmount>
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Biomechanical_Joints</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Biomechanical_Joints</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Biomechanical_Joints</addsHediff> 
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Vanometric_Hand_Accelerators</defName>
+		<label>Install vanometric hand accelerators</label>
+		<description>Install vanometric hand accelerators</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>8200</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>12</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Vanometric_Hand_Accelerators</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Vanometric_Hand_Accelerators</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Vanometric_Hand_Accelerators</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Active_Sensory_Arm_Prostheses</defName>
+		<label>Install active sensory arm prosthesis</label>
+		<description>Install active sensory arm prosthesis</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>8900</workAmount>
+		<deathOnFailedSurgeryChance>0.35</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>13</Medicine>
+			<Intellectual>14</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Active_Sensory_Arm_Prostheses</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Active_Sensory_Arm_Prostheses</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Active_Sensory_Arm_Prostheses</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Bionic_Blades</defName>
+		<label>Install bionic blades</label>
+		<description>Install bionic blades</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>8100</workAmount>
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+			<Intellectual>11</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Bionic_Blades</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Bionic_Blades</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Bionic_Blades</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Retractable_Titanium_Blades</defName>
+		<label>Install retractable titanium blades</label>
+		<description>Install retractable titanium blades</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>8500</workAmount>
+		<deathOnFailedSurgeryChance>0.30</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>13</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Retractable_Titanium_Blades</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Retractable_Titanium_Blades</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Retractable_Titanium_Blades</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Cyber_Hand_MK1</defName>
+		<label>Install Cyber Hand MK1</label>
+		<description>Install Cyber Hand MK1</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>9100</workAmount>
+		<deathOnFailedSurgeryChance>0.20</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>15</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Cyber_Hand_1_MK</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Cyber_Hand_1_MK</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Cyber_Hand_MK1</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Cyber_Hand_MK1_Light</defName>
+		<label>Install Cyber Hand MK1 Light</label>
+		<description>Install Cyber Hand MK1 Light</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Install advanced hand prosthesis</jobString>
+		<workAmount>9800</workAmount>
+		<deathOnFailedSurgeryChance>0.30</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>16</Medicine>
+			<Intellectual>16</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Cyber_Hand_MK1_Light</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Cyber_Hand_MK1_Light</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hand</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Cyber_Hand_MK1_Light</addsHediff> 
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberVisionVI</defName>
+		<label>install CyberVision VI</label>
+		<description>Install CyberVision VI</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing CyberVision VI</jobString>
+		<workAmount>7500</workAmount>
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+			<Intellectual>6</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberVisionVI</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberVisionVI</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberVisionVI</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberVisionVII</defName>
+		<label>install CyberVision VII</label>
+		<description>Install CyberVision VII</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing CyberVision VII</jobString>
+		<workAmount>7700</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>9</Medicine>
+			<Intellectual>7</Intellectual>
+
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberVisionVII</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberVisionVII</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberVisionVII</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberVisionVIICombat</defName>
+		<label>install CyberVision VII: Combat Edition</label>
+		<description>Install CyberVision VII: Combat Edition</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing CyberVision VII: Combat Edition.</jobString>
+		<workAmount>8000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>9</Medicine>
+			<Intellectual>7</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberVisionVIICombat</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberVisionVIICombat</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberVisionVIICombat</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberVisionVIIMedical</defName>
+		<label>install CyberVision VII: Medical Edition</label>
+		<description>Install CyberVision VII: Medical Edition</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing CyberVision VII: Medical Edition.</jobString>
+		<workAmount>8000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>9</Medicine>
+			<Intellectual>7</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberVisionVIIMedical</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberVisionVIIMedical</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberVisionVIIMedical</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_SimpleSpeechImplant</defName>
+		<label>install Simple Speech Implant</label>
+		<description>Install Simple Speech Implant</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Simple Speech Implant.</jobString>
+		<workAmount>5500</workAmount>
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_SimpleSpeechImplant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_SimpleSpeechImplant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Neck</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_SimpleSpeechImplant</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_AdvSpeechImplant</defName>
+		<label>install Advanced Speech Implant</label>
+		<description>Install Advanced Speech Implant</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Advanced Speech Implant.</jobString>
+		<workAmount>6000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>6</Medicine>
+			<Intellectual>5</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_AdvSpeechImplant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_AdvSpeechImplant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Neck</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_AdvSpeechImplant</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_SmallResearchAssistant</defName>
+		<label>install Small Research AI Assistant</label>
+		<description>Install Small Research AI Assistant</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Small Research AI Assistant.</jobString>
+		<workAmount>7100</workAmount>
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>9</Medicine>
+			<Intellectual>8</Intellectual>
+
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_SmallResearchAssistant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_SmallResearchAssistant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_SmallResearchAssistant</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_MediumResearchAssistant</defName>
+		<label>install Medium Research AI Assistant</label>
+		<description>Install Medium Research AI Assistant</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Medium Research AI Assistant.</jobString>
+		<workAmount>7300</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>9</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_MediumResearchAssistant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_MediumResearchAssistant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_MediumResearchAssistant</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_BigResearchAssistant</defName>
+		<label>install Big Research AI Assistant</label>
+		<description>Install Big Research AI Assistant</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Big Research AI Assistant.</jobString>
+		<workAmount>7500</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+			<Intellectual>9</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_BigResearchAssistant</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_BigResearchAssistant</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li> 
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_BigResearchAssistant</addsHediff>
 	</RecipeDef>
 </Defs>

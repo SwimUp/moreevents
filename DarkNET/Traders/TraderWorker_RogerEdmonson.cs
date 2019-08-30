@@ -13,7 +13,9 @@ namespace DarkNET.Traders
         Natural,
         Simple,
         Bionic,
-        Archotech
+        Improved,
+        Archotech,
+        Implant
     }
 
     public class TraderWorker_RogerEdmonson : DarkNetTrader
@@ -336,7 +338,7 @@ namespace DarkNET.Traders
             lastRaidsEnemy = raidsCount;
 
             int itemsCount = 35;
-            float valueRange = 35000;
+            float valueRange = 150000;
             //int itemsCount = (int)itemsCountPerRaidCurve.Evaluate(raidsCount);
             //float valueRange = startMarketValue + (marketValueMultiplierPerMapEvent * raidsCount);
 
@@ -366,8 +368,8 @@ namespace DarkNET.Traders
                 stock.Add(new SellableItemWithModif(item, itemValue, modificator));
             }
 
-       //     if (raidsCount >= 10 && Rand.Chance(0.3f))
-       //     {
+            if (raidsCount >= 10 && Rand.Chance(0.3f))
+            {
                 parms.totalMarketValueRange = new FloatRange(specialGoodMarketValue, specialGoodMarketValue);
                 parms.countRange = new IntRange(1, 1);
                 parms.filter = specialGoodsFilter;
@@ -377,7 +379,7 @@ namespace DarkNET.Traders
                 {
                     goodOfTheWeek = new SellableItemWithModif(generalGood, (int)(generalGood.MarketValue * Character.Greed), null);
                 }
-       //     }
+            }
         }
 
         public void TryDestroyStock()
@@ -449,7 +451,15 @@ namespace DarkNET.Traders
                     }
                 case OrderBodypartGroup.Archotech:
                     {
-                        return 9f;
+                        return 14f;
+                    }
+                case OrderBodypartGroup.Improved:
+                    {
+                        return 5f;
+                    }
+                case OrderBodypartGroup.Implant:
+                    {
+                        return 12f;
                     }
             }
 
@@ -474,7 +484,15 @@ namespace DarkNET.Traders
                     }
                 case OrderBodypartGroup.Archotech:
                     {
-                        return 0.70f;
+                        return 0.65f;
+                    }
+                case OrderBodypartGroup.Improved:
+                    {
+                        return 0.85f;
+                    }
+                case OrderBodypartGroup.Implant:
+                    {
+                        return 0.3f;
                     }
             }
 

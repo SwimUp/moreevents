@@ -11,8 +11,6 @@ namespace DarkNET
     [StaticConstructorOnStartup]
     public static class DarkNetPriceUtils
     {
-        public static readonly Texture2D SoldTexture = ContentFinder<Texture2D>.Get("UI/Sold");
-
         public static ThingFilter GetThingFilter(List<DarkNetGood> goods)
         {
             ThingFilter filter = new ThingFilter();

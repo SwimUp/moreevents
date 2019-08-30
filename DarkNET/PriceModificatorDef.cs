@@ -22,5 +22,7 @@ namespace DarkNET
         public FloatRange HealthRange;
 
         public List<string> Categories;
+
+        public List<string> TradeCategories;
     }
 }

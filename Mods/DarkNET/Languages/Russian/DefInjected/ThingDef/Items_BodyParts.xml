@@ -1,10 +1,110 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <DarkNet_OldWoodenLeg.label>старая деревянная нога</DarkNet_OldWoodenLeg.label>
-  <DarkNet_OldWoodenLeg.description>Cтарая деревянная нога, вероятно найденная где-то на мусорке или отобранна у какого-нибудь бродяги. Как от протеза почти пользы нет, но позволит поднять кого-нибудь на ноги.</DarkNet_OldWoodenLeg.description>
-  
-  <DarkNet_PowerFist.label>силовой кулак</DarkNet_PowerFist.label>
-  <DarkNet_PowerFist.description>Силовой кулак с металлической оболочкой. Подключен к небольшим батареям, которые ускоряют его в момент удара. Простое и болезненное средство доказать кому-либо кто тут босс.</DarkNet_PowerFist.description>
-  
+
+	<DarkNet_OldWoodenLeg.label>старая деревянная нога</DarkNet_OldWoodenLeg.label>
+	<DarkNet_OldWoodenLeg.description>Cтарая деревянная нога, вероятно найденная где-то на мусорке или отобранна у какого-нибудь бродяги. Как от протеза почти пользы нет, но позволит поднять кого-нибудь на ноги.</DarkNet_OldWoodenLeg.description>
+
+	<DarkNet_PowerFist.label>силовой кулак</DarkNet_PowerFist.label>
+	<DarkNet_PowerFist.description>Силовой кулак с металлической оболочкой. Подключен к небольшим батареям, которые ускоряют его в момент удара. Простое и болезненное средство доказать кому-либо кто тут босс.</DarkNet_PowerFist.description>
+
+	<DarkNet_Obsolete_Hand_Substitute.label>устаревший протез руки</DarkNet_Obsolete_Hand_Substitute.label>
+	<DarkNet_Obsolete_Hand_Substitute.description>Простейшее устройство, целью которого является сохранение здоровья владельца. Создан с использованием примитивных технологий индустриальной эры.</DarkNet_Obsolete_Hand_Substitute.description>
+
+	<DarkNet_Old_Simple_Prosthetic_Arm.label>старый протез руки</DarkNet_Old_Simple_Prosthetic_Arm.label>
+	<DarkNet_Old_Simple_Prosthetic_Arm.description>Чрезвычайно простое устройство с функциями человеческой руки, но крайне устаревшее для нашей эпохи.</DarkNet_Old_Simple_Prosthetic_Arm.description>
+
+	<DarkNet_Fragile_Quick_Prosthetic_Arm.label>хрупкий быстрый протез руки</DarkNet_Fragile_Quick_Prosthetic_Arm.label>
+	<DarkNet_Fragile_Quick_Prosthetic_Arm.description>Это устройство было сделано для облегчения ручной работы, но, к сожалению, оно слишком хрупкое для боя.</DarkNet_Fragile_Quick_Prosthetic_Arm.description>
+
+	<DarkNet_Active_Mechanical_Forearms.label>активное механическое предплечье</DarkNet_Active_Mechanical_Forearms.label>
+	<DarkNet_Active_Mechanical_Forearms.description>Это механический протез, основным преимуществом которого является контроль над силой сжатия и отсутствие болевого порога.</DarkNet_Active_Mechanical_Forearms.description>
+
+	<DarkNet_Light_Traction_Forearms.label>лёгкое тяговое предплечье</DarkNet_Light_Traction_Forearms.label>
+	<DarkNet_Light_Traction_Forearms.description>Несмотря на усовершенствованные технологии, протез имеет недостатки.</DarkNet_Light_Traction_Forearms.description>
+
+	<DarkNet_Magnetic_Brushes_And_Forearms.label>магнитическая кисть руки</DarkNet_Magnetic_Brushes_And_Forearms.label>
+	<DarkNet_Magnetic_Brushes_And_Forearms.description>Магнитные суставы и предплечья придают боевую эффективность и скорость.</DarkNet_Magnetic_Brushes_And_Forearms.description>
+
+	<DarkNet_All_Metal_Pirate_Battle_Claw.label>цельнометаллическая боевая клешня пирата</DarkNet_All_Metal_Pirate_Battle_Claw.label>
+	<DarkNet_All_Metal_Pirate_Battle_Claw.description>Отсутствие каких-либо инструментов для работы компенсируется смертельной силой.</DarkNet_All_Metal_Pirate_Battle_Claw.description>
+
+	<DarkNet_Electromagnetic_Prosthesis.label>электромагнитный протез руки</DarkNet_Electromagnetic_Prosthesis.label>
+	<DarkNet_Electromagnetic_Prosthesis.description>Электромагнитная сила позволяет протезу поддерживать себя в необходимом состоянии.</DarkNet_Electromagnetic_Prosthesis.description>
+
+	<DarkNet_Bloodied_Pirate_Blade.label>окровавленный пиратский клинок</DarkNet_Bloodied_Pirate_Blade.label>
+	<DarkNet_Bloodied_Pirate_Blade.description>Отсутствие трудностей в производстве делает его дешевым и удачным решением в ближнем бою.</DarkNet_Bloodied_Pirate_Blade.description>
+
+	<DarkNet_Forearms_With_Sensors.label>предплечье с сенсорами</DarkNet_Forearms_With_Sensors.label>
+	<DarkNet_Forearms_With_Sensors.description>Низкая чувствительность приносит как эффективность работы, так и боевую уязвимость.</DarkNet_Forearms_With_Sensors.description>
+
+	<DarkNet_Active_Hands_With_Electric_Shock.label>активная кисть с электрическим шокером</DarkNet_Active_Hands_With_Electric_Shock.label>
+	<DarkNet_Active_Hands_With_Electric_Shock.description>Способность накапливать небольшой заряд дает протезу преимущество в ближнем бою.</DarkNet_Active_Hands_With_Electric_Shock.description>
+
+	<DarkNet_Advanced_Mechanical_Hand_Prosthesis.label>усовершенствованная механическая рука</DarkNet_Advanced_Mechanical_Hand_Prosthesis.label>
+	<DarkNet_Advanced_Mechanical_Hand_Prosthesis.description>Протез получил дополнительные функции при улучшении своего предшественника, увеличив свой вес.</DarkNet_Advanced_Mechanical_Hand_Prosthesis.description>
+
+	<DarkNet_Advanced_Electromagnetic_Joints.label>усовершенствованные электромагнитные суставы для руки</DarkNet_Advanced_Electromagnetic_Joints.label>
+	<DarkNet_Advanced_Electromagnetic_Joints.description>Эта версия протеза извлекает выгоду из собственного дизайна.</DarkNet_Advanced_Electromagnetic_Joints.description>
+
+	<DarkNet_Prosthesis_With_Power_Weights.label>протез руки с силовым весом</DarkNet_Prosthesis_With_Power_Weights.label>
+	<DarkNet_Prosthesis_With_Power_Weights.description>Это устройство сочетает в себе смертельную силу из-за своей конструкции с продвинутой мелкой маторикой.</DarkNet_Prosthesis_With_Power_Weights.description>
+
+	<DarkNet_Scientifically_Hypersensitive_Prosthesis.label>научный гиперчувствительный протез руки</DarkNet_Scientifically_Hypersensitive_Prosthesis.label>
+	<DarkNet_Scientifically_Hypersensitive_Prosthesis.description>Электронные средства связи составляющих протеза, позволили создателю реализовать это устройство.</DarkNet_Scientifically_Hypersensitive_Prosthesis.description>
+
+	<DarkNet_Hands_On_Energy_Connections.label>рука на энергетическом креплении</DarkNet_Hands_On_Energy_Connections.label>
+	<DarkNet_Hands_On_Energy_Connections.description>Использование постоянного напряжения, позволяет облегчить вес конструкции и увеличить боевую мощь.</DarkNet_Hands_On_Energy_Connections.description>
+
+	<DarkNet_Fiber_Optic_Prostheses.label>оптоволоконное предплечье</DarkNet_Fiber_Optic_Prostheses.label>
+	<DarkNet_Fiber_Optic_Prostheses.description>Использование волокна в качестве основного компонента, значительно снижает прочность, отдавая приоритет эффективности.</DarkNet_Fiber_Optic_Prostheses.description>
+
+	<DarkNet_Biomechanical_Joints.label>биомеханические суставы</DarkNet_Biomechanical_Joints.label>
+	<DarkNet_Biomechanical_Joints.description>С применением данной технологии, действия носителя значительно ускоряются.</DarkNet_Biomechanical_Joints.description>
+
+	<DarkNet_Vanometric_Hand_Accelerators.label>предплечье на ванометрических ускорителях</DarkNet_Vanometric_Hand_Accelerators.label>
+	<DarkNet_Vanometric_Hand_Accelerators.description>Несмотря на увеличенный вес, эти протезы могут поддерживать себя, самостоятельно генерируя заряд.</DarkNet_Vanometric_Hand_Accelerators.description>
+
+	<DarkNet_Active_Sensory_Arm_Prostheses.label>рука с активными сенсорами</DarkNet_Active_Sensory_Arm_Prostheses.label>
+	<DarkNet_Active_Sensory_Arm_Prostheses.description>Повышая чувствительность, исследователи смогли получить технологии, близкие к archotech.</DarkNet_Active_Sensory_Arm_Prostheses.description>
+
+	<DarkNet_Bionic_Blades.label>бионические клинки</DarkNet_Bionic_Blades.label>
+	<DarkNet_Bionic_Blades.description>Легкие лезвия устанавливаются вместо пальцев, усложняя работу, но увеличивая повреждения в ближнем бою.</DarkNet_Bionic_Blades.description>
+
+	<DarkNet_Retractable_Titanium_Blades.label>выдвижные титановые клинки</DarkNet_Retractable_Titanium_Blades.label>
+	<DarkNet_Retractable_Titanium_Blades.description>Технологии увеличения урона не стоят на месте, представляя вам компромиссный вариант эффективности и мощности.</DarkNet_Retractable_Titanium_Blades.description>
+
+	<DarkNet_Cyber_Hand_1_MK.label>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_1_MK.label>
+	<DarkNet_Cyber_Hand_1_MK.description>Кибер-протез для костюма МК1, дающий дополнительные преимущества в ближнем бою.</DarkNet_Cyber_Hand_1_MK.description>
+
+	<DarkNet_Cyber_Hand_MK1_Light.label>облегченное кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1_Light.label>
+	<DarkNet_Cyber_Hand_MK1_Light.description>Кибер-протез для костюма МК1, дающий дополнительные преимущества. Теперь еще более совершенный.</DarkNet_Cyber_Hand_MK1_Light.description>
+
+	<DarkNet_CyberVisionVI.label>CyberVision VI</DarkNet_CyberVisionVI.label>
+	<DarkNet_CyberVisionVI.description>Кибернетический глазной имплантат из Галактической компании "LifeTech". Хорошая и дешевая замена для глаз з нарушениями зрения. Обеспечивает возможность видеть до 8192 цветов. Выпущен 25 лет назад, снят с производства.</DarkNet_CyberVisionVI.description>
+
+	<DarkNet_CyberVisionVII.label>CyberVision VII</DarkNet_CyberVisionVII.label>
+	<DarkNet_CyberVisionVII.description>Кибернетический глазной имплантат из Галактической компании "LifeTech". Лучшая эффективность, воспринимает больше цветов до 12288. Выпущен 10 лет назад.</DarkNet_CyberVisionVII.description>
+
+	<DarkNet_CyberVisionVIICombat.label>CyberVision VII: Боевой модуль</DarkNet_CyberVisionVIICombat.label>
+	<DarkNet_CyberVisionVIICombat.description>Кибернетический глазной имплантат из Галактической компании "LifeTech", разработан специально для военных. Лучшая эффективность, улучшает точность стрельбы, воспринимает больше цветов до 12288. Выпущен 10 лет назад.</DarkNet_CyberVisionVIICombat.description>
+
+	<DarkNet_CyberVisionVIIMedical.label>CyberVision VII: Медицинский модуль</DarkNet_CyberVisionVIIMedical.label>
+	<DarkNet_CyberVisionVIIMedical.description>Кибернетический глазной имплантат из Галактической компании "LifeTech", разработан специально для медицинских компаний. Лучшая эффективность, улучшает качество медицинских операций, воспринимает больше цветов до 12288. Выпущен 10 лет назад.</DarkNet_CyberVisionVIIMedical.description>
+
+	<DarkNet_SimpleSpeechImplant.label>Простой речевой имплантат</DarkNet_SimpleSpeechImplant.label>
+	<DarkNet_SimpleSpeechImplant.description>Простой речевой имплантат из корпорации "Amazystems", разработан для улучшения социальных качеств и увеличения качества социальной жизни.</DarkNet_SimpleSpeechImplant.description>
+
+	<DarkNet_AdvSpeechImplant.label>Продвинутый речевой имплантат</DarkNet_AdvSpeechImplant.label>
+	<DarkNet_AdvSpeechImplant.description>Продвинутый речевой имплантат из корпорации "Amazystems", разработан для улучшения социальных качеств и увеличения качества социальной жизни.</DarkNet_AdvSpeechImplant.description>
+
+	<DarkNet_SmallResearchAssistant.label>Малый научный ИИ-помощник</DarkNet_SmallResearchAssistant.label>
+	<DarkNet_SmallResearchAssistant.description>Малый мозговой имплантат из "Blossom Co.", предназначен для повышения скорости исследований.</DarkNet_SmallResearchAssistant.description>
+
+	<DarkNet_MediumResearchAssistant.label>Средний научный ИИ-помощник</DarkNet_MediumResearchAssistant.label>
+	<DarkNet_MediumResearchAssistant.description>Средний мозговой имплантат из "Blossom Co.", предназначен для повышения скорости исследований.</DarkNet_MediumResearchAssistant.description>
+
+	<DarkNet_BigResearchAssistant.label>Большой научный ИИ-помощник</DarkNet_BigResearchAssistant.label>
+	<DarkNet_BigResearchAssistant.description>Большой мозговой имплантат из "Blossom Co.", предназначен для повышения скорости исследований.</DarkNet_BigResearchAssistant.description>
+
+
 </LanguageData>

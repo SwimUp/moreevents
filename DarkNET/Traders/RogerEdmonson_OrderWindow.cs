@@ -34,13 +34,20 @@ namespace DarkNET.Traders
 
         private int prepayment;
 
+        private ThingDef artStuff;
+
         private float baseChance => 45f;
+
+        private ThingDef artType;
 
         public RogerEdmonson_OrderWindow(TraderWorker_RogerEdmonson trader)
         {
             this.trader = trader;
             delay = 0;
             doCloseX = true;
+
+            artStuff = DefDatabase<ThingDef>.AllDefs.Where(x => x.IsStuff).FirstOrDefault();
+            artType = DefDatabase<ThingDef>.AllDefs.Where(x => x.IsArt).FirstOrDefault();
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -79,7 +86,7 @@ namespace DarkNET.Traders
 
         private void DrawBodyPartsOders(Rect rect)
         {
-            CalculateValues();
+            CalculateBodyPartValues();
 
             Text.Anchor = TextAnchor.MiddleCenter;
             Rect buttonRect = new Rect(rect.x + 10, rect.y, rect.width - 20, 25);
@@ -103,8 +110,8 @@ namespace DarkNET.Traders
             intRect.width = rect.width - 275;
             Widgets.TextFieldNumeric(intRect, ref delay, ref delayBuff, 1);
 
-            Rect fullLabel = new Rect(rect.x + 10, rect.y + 60, rect.width - 10, 25);
-            Widgets.Label(fullLabel, "RogerEdmonson_OrderWindow_Full".Translate(totalValue, chance, prepayment));
+            Rect fullLabel = new Rect(rect.x + 10, rect.y + 60, rect.width - 10, 300);
+            Widgets.Label(fullLabel, "RogerEdmonson_OrderWindow_Full".Translate($"{group}_desc".Translate(), totalValue, chance, prepayment));
             TooltipHandler.TipRegion(fullLabel, "RogerEdmonson_OrderWindow_Full2".Translate($"{group}_group".Translate(), baseValue, trader.GetPriceMultiplier(group), delay, trader.ArriveTime, totalValue, prepayment, chance, baseChance, trader.GetChanceMultiplier(group)));
 
             Text.Anchor = TextAnchor.MiddleCenter;
@@ -147,16 +154,95 @@ namespace DarkNET.Traders
             return DarkNetPriceUtils.TakeSilverFromPlayer(prepayment, Find.AnyPlayerHomeMap);
         }
 
-        private void CalculateValues()
+        private void CalculateBodyPartValues()
         {
             totalValue = (int)(baseValue * trader.GetPriceMultiplier(group) + (100 * delay));
             chance = Mathf.Clamp((baseChance + (25f * delay)) * trader.GetChanceMultiplier(group), 0, 100);
             prepayment = (int)(totalValue * 0.4f);
         }
 
+        private void CalculateArtValues()
+        {
+            totalValue = (int)(baseValue * ((artType.costStuffCount * artStuff.BaseMarketValue) * 0.02f));
+            chance = Mathf.Round(Mathf.Clamp(((baseChance / (artType.costStuffCount * 0.006f)) * delay) - (artStuff.BaseMarketValue * 1.2f), 0, 100));
+            prepayment = (int)(totalValue * 0.4f);
+        }
+
         private void DrawArtsOrders(Rect rect)
         {
+            CalculateArtValues();
 
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Rect buttonRect = new Rect(rect.x + 10, rect.y, rect.width - 20, 25);
+            if (GUIUtils.DrawCustomButton(buttonRect, "RogerEdmonson_OrderWindow_SelectStuff".Translate(artStuff.label), Color.white))
+            {
+                List<FloatMenuOption> options = new List<FloatMenuOption>();
+                foreach(var stuff in DefDatabase<ThingDef>.AllDefs)
+                {
+                    if(stuff.IsStuff && stuff.stuffProps.CanMake(artType))
+                    {
+                        options.Add(new FloatMenuOption(stuff.label, delegate
+                        {
+                            artStuff = stuff;
+                        }));
+                    }
+                }
+
+                Find.WindowStack.Add(new FloatMenu(options));
+            }
+            buttonRect.y += 30;
+            if (GUIUtils.DrawCustomButton(buttonRect, "RogerEdmonson_OrderWindow_SelectArtType".Translate(artType.label), Color.white))
+            {
+                List<FloatMenuOption> options = new List<FloatMenuOption>();
+                foreach (var art in DefDatabase<ThingDef>.AllDefs)
+                {
+                    if (art.IsArt)
+                    {
+                        options.Add(new FloatMenuOption(art.label, delegate
+                        {
+                            artType = art;
+                        }));
+                    }
+                }
+
+                Find.WindowStack.Add(new FloatMenu(options));
+            }
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            Rect intRect = new Rect(rect.x + 10, rect.y + 60, 250, 25);
+            Widgets.Label(intRect, "RogerEdmonson_OrderWindow_Range".Translate());
+            intRect.x += 255;
+            intRect.width = rect.width - 275;
+            Widgets.TextFieldNumeric(intRect, ref delay, ref delayBuff, 1);
+
+            Rect fullLabel = new Rect(rect.x + 10, rect.y + 90, rect.width - 10, 300);
+            Widgets.Label(fullLabel, "RogerEdmonson_OrderWindow_ArtFull".Translate(totalValue, chance.ToString("f2"), prepayment));
+            TooltipHandler.TipRegion(fullLabel, "RogerEdmonson_OrderWindow_ArtFull2".Translate(artType.label, baseValue, artStuff.BaseMarketValue, delay, trader.ArriveTime, artType.costStuffCount, totalValue, prepayment
+                , chance.ToString("f2"), baseChance));
+
+            Text.Anchor = TextAnchor.MiddleCenter;
+            if (GUIUtils.DrawCustomButton(new Rect(rect.x + 10, rect.height - 40, rect.width - 20, 30), "RogerEdmonson_OrderWindow_CreateOrder".Translate(), trader.Order == null ? Color.white : Color.gray))
+            {
+                if (trader.Order != null)
+                {
+                    Messages.Message("RogerEdmonson_OrderWindow_Only1Order".Translate(), MessageTypeDefOf.NeutralEvent, false);
+                }
+                else
+                {
+                    if (TakePrePayment(prepayment))
+                    {
+                        MakeBodyPartOrder(group, chance, totalValue, delay);
+                    }
+                }
+            }
+            if (trader.Order != null)
+            {
+                if (GUIUtils.DrawCustomButton(new Rect(rect.x + 10, rect.height, rect.width - 20, 30), "DarkNetButtons_CancelOrder".Translate(), Color.white))
+                {
+                    trader.DeclineOrder();
+                }
+            }
+            Text.Anchor = TextAnchor.UpperLeft;
         }
     }
 }

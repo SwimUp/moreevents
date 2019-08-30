@@ -35,7 +35,7 @@ namespace DarkNET.Traders
 
             Log.Message(roger.OrderBodyparts.Where(item => item.BodypartGroup == Group).Count().ToString());
 
-            if (roger.OrderBodyparts.Where(item => item.BodypartGroup == Group).TryRandomElementByWeight(x => x.Commonality, out OrderItem result))
+            if (roger.OrderBodyparts.First(x => x.BodypartGroup == Group).Items.TryRandomElementByWeight(x2 => x2.Commonality, out OrderThing result))
             {
                 Thing thing = ThingMaker.MakeThing(result.ThingDef);
                 if(PriceModificatorUtils.TryGetPriceModificator(thing, roger.def, out PriceModificatorDef modificator))

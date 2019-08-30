@@ -1,12 +1,136 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <DarkNet_OldWoodenLeg.label>старая деревянная нога</DarkNet_OldWoodenLeg.label>
-  <DarkNet_OldWoodenLeg.labelNoun>старая деревянная нога</DarkNet_OldWoodenLeg.labelNoun>
-  
-  <!-- для рук -->
-  <DarkNet_PowerFist.label>силовой кулак</DarkNet_PowerFist.label>
-  <DarkNet_PowerFist.comps.HediffComp_VerbGiver.tools.fist.label>силовой кулак</DarkNet_PowerFist.comps.HediffComp_VerbGiver.tools.fist.label>
-  <DarkNet_PowerFist.labelNoun>силовой кулак</DarkNet_PowerFist.labelNoun>
-  
+
+	<DarkNet_OldWoodenLeg.label>старая деревянная нога</DarkNet_OldWoodenLeg.label>
+	<DarkNet_OldWoodenLeg.labelNoun>старая деревянная нога</DarkNet_OldWoodenLeg.labelNoun>
+
+	<!-- для рук -->
+	<DarkNet_PowerFist.label>силовой кулак</DarkNet_PowerFist.label>
+	<DarkNet_PowerFist.comps.HediffComp_VerbGiver.tools.power_fist.label>силовой кулак</DarkNet_PowerFist.comps.HediffComp_VerbGiver.tools.power_fist.label>
+	<DarkNet_PowerFist.labelNoun>силовой кулак</DarkNet_PowerFist.labelNoun>
+
+	<DarkNet_Obsolete_Hand_Substitute.label>Обычный заменитель руки</DarkNet_Obsolete_Hand_Substitute.label>
+	<DarkNet_Obsolete_Hand_Substitute.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Obsolete_Hand_Substitute.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Obsolete_Hand_Substitute.labelNoun>устаревший протез руки</DarkNet_Obsolete_Hand_Substitute.labelNoun>
+
+	<DarkNet_Old_Simple_Prosthetic_Arm.label>старый протез руки</DarkNet_Old_Simple_Prosthetic_Arm.label>
+	<DarkNet_Old_Simple_Prosthetic_Arm.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Old_Simple_Prosthetic_Arm.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Old_Simple_Prosthetic_Arm.labelNoun>старый протез руки</DarkNet_Old_Simple_Prosthetic_Arm.labelNoun>
+
+	<DarkNet_Fragile_Quick_Prosthetic_Arm.label>хрупкий протез руки</DarkNet_Fragile_Quick_Prosthetic_Arm.label>
+	<DarkNet_Fragile_Quick_Prosthetic_Arm.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Fragile_Quick_Prosthetic_Arm.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Fragile_Quick_Prosthetic_Arm.labelNoun>хрупкий протез руки</DarkNet_Fragile_Quick_Prosthetic_Arm.labelNoun>
+
+	<DarkNet_Active_Mechanical_Forearms.label>активное механическое предплечье</DarkNet_Active_Mechanical_Forearms.label>
+	<DarkNet_Active_Mechanical_Forearms.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Active_Mechanical_Forearms.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Active_Mechanical_Forearms.labelNoun>активное механическое предплечье</DarkNet_Active_Mechanical_Forearms.labelNoun>
+
+	<DarkNet_Light_Traction_Forearms.label>лёгкое тяговое предплечье</DarkNet_Light_Traction_Forearms.label>
+	<DarkNet_Light_Traction_Forearms.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Light_Traction_Forearms.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Light_Traction_Forearms.labelNoun>лёгкое тяговое предплечье</DarkNet_Light_Traction_Forearms.labelNoun>
+
+	<DarkNet_All_Metal_Pirate_Battle_Claw.label>цельнометаллическая боевая клешня пирата</DarkNet_All_Metal_Pirate_Battle_Claw.label>
+	<DarkNet_All_Metal_Pirate_Battle_Claw.comps.HediffComp_VerbGiver.tools.claw.label>клешня</DarkNet_All_Metal_Pirate_Battle_Claw.comps.HediffComp_VerbGiver.tools.claw.label>
+	<DarkNet_All_Metal_Pirate_Battle_Claw.labelNoun>цельнометаллическая боевая клешня пирата</DarkNet_All_Metal_Pirate_Battle_Claw.labelNoun>
+
+	<DarkNet_Electromagnetic_Prosthesis.label>электромагнитный протез руки</DarkNet_Electromagnetic_Prosthesis.label>
+	<DarkNet_Electromagnetic_Prosthesis.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Electromagnetic_Prosthesis.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Electromagnetic_Prosthesis.labelNoun>электромагнитный протез руки</DarkNet_Electromagnetic_Prosthesis.labelNoun>
+
+	<DarkNet_Bloodied_Pirate_Blade.label>окровавленный пиратский клинок</DarkNet_Bloodied_Pirate_Blade.label>
+	<DarkNet_Bloodied_Pirate_Blade.comps.HediffComp_VerbGiver.tools.blade.label>клинок</DarkNet_Bloodied_Pirate_Blade.comps.HediffComp_VerbGiver.tools.blade.label>
+	<DarkNet_Bloodied_Pirate_Blade.labelNoun>окровавленный пиратский клинок</DarkNet_Bloodied_Pirate_Blade.labelNoun>
+
+	<DarkNet_Forearms_With_Sensors.label>предплечье с сенсорами</DarkNet_Forearms_With_Sensors.label>
+	<DarkNet_Forearms_With_Sensors.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Forearms_With_Sensors.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Forearms_With_Sensors.labelNoun>предплечье с сенсорами</DarkNet_Forearms_With_Sensors.labelNoun>
+
+	<DarkNet_Active_Hands_With_Electric_Shock.label>активная кисть с электрическим шокером</DarkNet_Active_Hands_With_Electric_Shock.label>
+	<DarkNet_Active_Hands_With_Electric_Shock.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Active_Hands_With_Electric_Shock.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Active_Hands_With_Electric_Shock.labelNoun>активная кисть с электрическим шокером</DarkNet_Active_Hands_With_Electric_Shock.labelNoun>
+
+	<DarkNet_Advanced_Mechanical_Hand_Prosthesis.label>усовершенствованная механическая рука</DarkNet_Advanced_Mechanical_Hand_Prosthesis.label>
+	<DarkNet_Advanced_Mechanical_Hand_Prosthesis.comps.HediffComp_VerbGiver.tools.fist.label>кудак</DarkNet_Advanced_Mechanical_Hand_Prosthesis.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Advanced_Mechanical_Hand_Prosthesis.labelNoun>усовершенствованная механическая рука</DarkNet_Advanced_Mechanical_Hand_Prosthesis.labelNoun>
+
+	<DarkNet_Advanced_Electromagnetic_Joints.label>усовершенствованные электромагнитные суставы для руки</DarkNet_Advanced_Electromagnetic_Joints.label>
+	<DarkNet_Advanced_Electromagnetic_Joints.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Advanced_Electromagnetic_Joints.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Advanced_Electromagnetic_Joints.labelNoun>усовершенствованные электромагнитные суставы для руки</DarkNet_Advanced_Electromagnetic_Joints.labelNoun>
+
+	<DarkNet_Prosthesis_With_Power_Weights.label>протез руки с силовым весом</DarkNet_Prosthesis_With_Power_Weights.label>
+	<DarkNet_Prosthesis_With_Power_Weights.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Prosthesis_With_Power_Weights.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Prosthesis_With_Power_Weights.labelNoun>протез руки с силовым весом</DarkNet_Prosthesis_With_Power_Weights.labelNoun>
+
+	<DarkNet_Scientifically_Hypersensitive_Prosthesis.label>научный гиперчувствительный протез руки</DarkNet_Scientifically_Hypersensitive_Prosthesis.label>
+	<DarkNet_Scientifically_Hypersensitive_Prosthesis.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Scientifically_Hypersensitive_Prosthesis.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Scientifically_Hypersensitive_Prosthesis.labelNoun>научный гиперчувствительный протез руки</DarkNet_Scientifically_Hypersensitive_Prosthesis.labelNoun>
+
+	<DarkNet_Hands_On_Energy_Connections.label>рука на энергетическом креплении</DarkNet_Hands_On_Energy_Connections.label>
+	<DarkNet_Hands_On_Energy_Connections.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Hands_On_Energy_Connections.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Hands_On_Energy_Connections.labelNoun>рука на энергетическом креплении</DarkNet_Hands_On_Energy_Connections.labelNoun>
+
+	<DarkNet_Fiber_Optic_Prostheses.label>оптоволоконное предплечье</DarkNet_Fiber_Optic_Prostheses.label>
+	<DarkNet_Fiber_Optic_Prostheses.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Fiber_Optic_Prostheses.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Fiber_Optic_Prostheses.labelNoun>оптоволоконное предплечье</DarkNet_Fiber_Optic_Prostheses.labelNoun>
+
+	<DarkNet_Biomechanical_Joints.label>биомеханические суставы</DarkNet_Biomechanical_Joints.label>
+	<DarkNet_Biomechanical_Joints.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Biomechanical_Joints.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Biomechanical_Joints.labelNoun>биомеханические суставы</DarkNet_Biomechanical_Joints.labelNoun>
+
+	<DarkNet_Active_Sensory_Arm_Prostheses.label>предплечье на ванометрических ускорителях</DarkNet_Active_Sensory_Arm_Prostheses.label>
+	<DarkNet_Active_Sensory_Arm_Prostheses.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Active_Sensory_Arm_Prostheses.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Active_Sensory_Arm_Prostheses.labelNoun>предплечье на ванометрических ускорителях</DarkNet_Active_Sensory_Arm_Prostheses.labelNoun>
+
+	<DarkNet_Bionic_Blades.label>бионические клинки</DarkNet_Bionic_Blades.label>
+	<DarkNet_Bionic_Blades.comps.HediffComp_VerbGiver.tools.blade.label>клинок</DarkNet_Bionic_Blades.comps.HediffComp_VerbGiver.tools.blade.label>
+	<DarkNet_Bionic_Blades.labelNoun>бионические клинки</DarkNet_Bionic_Blades.labelNoun>
+
+	<DarkNet_Biomechanical_Joints.label>биомеханические суставы</DarkNet_Biomechanical_Joints.label>
+	<DarkNet_Biomechanical_Joints.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Biomechanical_Joints.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Biomechanical_Joints.labelNoun>биомеханические суставы</DarkNet_Biomechanical_Joints.labelNoun>
+
+	<DarkNet_Active_Sensory_Arm_Prostheses.label>рука с активными сенсорами</DarkNet_Active_Sensory_Arm_Prostheses.label>
+	<DarkNet_Active_Sensory_Arm_Prostheses.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Active_Sensory_Arm_Prostheses.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Active_Sensory_Arm_Prostheses.labelNoun>рука с активными сенсорами</DarkNet_Active_Sensory_Arm_Prostheses.labelNoun>
+
+	<DarkNet_Retractable_Titanium_Blades.label>выдвижные титановые клинки</DarkNet_Retractable_Titanium_Blades.label>
+	<DarkNet_Retractable_Titanium_Blades.comps.HediffComp_VerbGiver.tools.blade.label>клинок</DarkNet_Retractable_Titanium_Blades.comps.HediffComp_VerbGiver.tools.blade.label>
+	<DarkNet_Retractable_Titanium_Blades.labelNoun>выдвижные титановые клинки</DarkNet_Retractable_Titanium_Blades.labelNoun>
+
+	<DarkNet_Cyber_Hand_MK1.label>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1.label>
+	<DarkNet_Cyber_Hand_MK1.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Cyber_Hand_MK1.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Cyber_Hand_MK1.labelNoun>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1.labelNoun>
+
+	<DarkNet_Cyber_Hand_MK1_Light.label>облегченное кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1_Light.label>
+	<DarkNet_Cyber_Hand_MK1_Light.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Cyber_Hand_MK1_Light.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Cyber_Hand_MK1_Light.labelNoun>облегченное кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1_Light.labelNoun>
+
+	<DarkNet_CyberVisionVI.label>CyberVision VI</DarkNet_CyberVisionVI.label>
+	<DarkNet_CyberVisionVI.labelNoun>Кибернетический глазной имплантат из Галактической компании "LifeTech". Хорошая и дешевая замена для глаз з нарушениями зрения. Обеспечивает возможность видеть до 8192 цветов. Выпущен 25 лет назад, снят с производства.</DarkNet_CyberVisionVI.labelNoun>
+
+	<DarkNet_CyberVisionVII.label>CyberVision VII</DarkNet_CyberVisionVII.label>
+	<DarkNet_CyberVisionVII.labelNoun>Кибернетический глазной имплантат из Галактической компании "LifeTech". Лучшая эффективность, воспринимает больше цветов до 12288. Выпущен 10 лет назад.</DarkNet_CyberVisionVII.labelNoun>
+
+	<DarkNet_CyberVisionVIICombat.label>CyberVision VII: Боевой модуль</DarkNet_CyberVisionVIICombat.label>
+	<DarkNet_CyberVisionVIICombat.labelNoun>Кибернетический глазной имплантат из Галактической компании "LifeTech", разработан специально для военных. Лучшая эффективность, улучшает точность стрельбы, воспринимает больше цветов до 12288. Выпущен 10 лет назад.</DarkNet_CyberVisionVIICombat.labelNoun>
+
+	<DarkNet_CyberVisionVIIMedical.label>CyberVision VII: Медицинский модуль</DarkNet_CyberVisionVIIMedical.label>
+	<DarkNet_CyberVisionVIIMedical.labelNoun>Кибернетический глазной имплантат из Галактической компании "LifeTech", разработан специально для медицинских компаний. Лучшая эффективность, улучшает качество медицинских операций, воспринимает больше цветов до 12288. Выпущен 10 лет назад.</DarkNet_CyberVisionVIIMedical.labelNoun>
+
+	<DarkNet_SimpleSpeechImplant.label>Простой речевой имплантат</DarkNet_SimpleSpeechImplant.label>
+	<DarkNet_SimpleSpeechImplant.labelNoun>Простой речевой имплантат из корпорации "Amazystems", разработан для улучшения социальных качеств и увеличения качества социальной жизни.</DarkNet_SimpleSpeechImplant.labelNoun>
+
+	<DarkNet_AdvSpeechImplant.label>Усовершенствованный речевой имплантат</DarkNet_AdvSpeechImplant.label>
+	<DarkNet_AdvSpeechImplant.labelNoun>Усовершенствованный речевой имплантат из корпорации "Amazystems", разработан для улучшения социальных качеств и увеличения качества социальной жизни.</DarkNet_AdvSpeechImplant.labelNoun>
+
+	<DarkNet_SmallResearchAssistant.label>Малый исследовательский ИИ-помощник</DarkNet_SmallResearchAssistant.label>
+	<DarkNet_SmallResearchAssistant.labelNoun>Малый мозговой имплантат из "Blossom Co.", предназначен для повышения скорости исследований.</DarkNet_SmallResearchAssistant.labelNoun>
+
+	<DarkNet_MediumResearchAssistant.label>Средний исследовательский ИИ-помощник</DarkNet_MediumResearchAssistant.label>
+	<DarkNet_MediumResearchAssistant.labelNoun>Средний мозговой имплантат из "Blossom Co.", предназначен для повышения скорости исследований.</DarkNet_MediumResearchAssistant.labelNoun>
+
+	<DarkNet_BigResearchAssistant.label>Большой исследовательский ИИ-помощник</DarkNet_BigResearchAssistant.label>
+	<DarkNet_BigResearchAssistant.labelNoun>Большой мозговой имплантат из "Blossom Co.", предназначен для повышения скорости исследований.</DarkNet_BigResearchAssistant.labelNoun>
+
+
 </LanguageData>

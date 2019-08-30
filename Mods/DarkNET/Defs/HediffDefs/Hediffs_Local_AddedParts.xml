@@ -3,14 +3,18 @@
 
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_OldWoodenLeg</defName>
-		<label>old wooden leg</label> <!-- надпись -->
-		<labelNoun>an old wooden leg, probably found somewhere in the trash or taken from some tramp. As a prosthesis, there is almost no benefit, but it will allow you to lift someone to his feet.</labelNoun> <!-- описание -->
+		<label>old wooden leg</label>
+		<!-- надпись -->
+		<labelNoun>an old wooden leg, probably found somewhere in the trash or taken from some tramp. As a prosthesis, there is almost no benefit, but it will allow you to lift someone to his feet.</labelNoun>
+		<!-- описание -->
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.3</partEfficiency> <!-- эффективность части тела -->
+			<partEfficiency>0.3</partEfficiency>
+			<!-- эффективность части тела -->
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
-		<spawnThingOnRemoved>DarkNet_OldWoodenLeg</spawnThingOnRemoved> <!-- указывать ThingDef части тела, к которой относится -->
+		<spawnThingOnRemoved>DarkNet_OldWoodenLeg</spawnThingOnRemoved>
+		<!-- указывать ThingDef части тела, к которой относится -->
 	</HediffDef>
 
 	<HediffDef ParentName="AddedBodyPartBase">
@@ -21,21 +25,837 @@
 			<li Class="HediffCompProperties_VerbGiver">
 				<tools>
 					<li>
-						<label>fist</label>
+						<label>power fist</label>
 						<capacities>
 							<li>Blunt</li>
 						</capacities>
-						<power>11</power> <!-- сила (урон, по факту), сверяйте с ванильными значениями в Hediffs_Local_AddedParts -->
-						<cooldownTime>1.5</cooldownTime> <!-- кулдаун между ударами -->
+						<power>11</power>
+						<!-- сила (урон, по факту), сверяйте с ванильными значениями в Hediffs_Local_AddedParts -->
+						<cooldownTime>1.5</cooldownTime>
+						<!-- кулдаун между ударами -->
 					</li>
 				</tools>
 			</li>
 		</comps>
-		<spawnThingOnRemoved>DarkNet_PowerFist</spawnThingOnRemoved> <!-- указывать ThingDef части тела, к которой относится -->
+		<spawnThingOnRemoved>DarkNet_PowerFist</spawnThingOnRemoved>
+		<!-- указывать ThingDef части тела, к которой относится -->
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>1.1</partEfficiency> <!-- эффективность части -->
+			<partEfficiency>1.1</partEfficiency>
+			<!-- эффективность части -->
 		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Obsolete_Hand_Substitute</defName>
+		<label>Obsolete hand substitute</label>
+		<labelNoun>obsolete hand substitute</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>5.0</power>
+						<cooldownTime>2.7</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Obsolete_Hand_Substitute</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Old_Simple_Prosthetic_Arm</defName>
+		<label>Old simple prosthetic arm</label>
+		<labelNoun>Old simple prosthetic arm</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>5.0</power>
+						<cooldownTime>2.7</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Old_Simple_Prosthetic_Arm</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.60</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Fragile_Quick_Prosthetic_Arm</defName>
+		<label>Non combat prosthesis</label>
+		<labelNoun>Non combat prosthesis</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>3.0</power>
+						<cooldownTime>3.0</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Fragile_Quick_Prosthetic_Arm</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.90</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Active_Mechanical_Forearms</defName>
+		<label>Active mechanical forearms</label>
+		<labelNoun>Active mechanical forearms</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>9.0</power>
+						<cooldownTime>2.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Active_Mechanical_Forearms</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.65</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Light_Traction_Forearms</defName>
+		<label>Light traction forearms</label>
+		<labelNoun>Light traction forearms</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>7.0</power>
+						<cooldownTime>2.7</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Active_Mechanical_Forearms</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.75</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Magnetic_Brushes_And_Forearms</defName>
+		<label>magnetic hand</label>
+		<labelNoun>magnetic hand</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>7.0</power>
+						<cooldownTime>2.7</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Magnetic_Brushes_And_Forearms</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.75</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_All_Metal_Pirate_Battle_Claw</defName>
+		<label>all-metal pirate battle claw</label>
+		<labelNoun>all-metal pirate battle claw</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>claw</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>12.5</power>
+						<cooldownTime>2.2</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_All_Metal_Pirate_Battle_Claw</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.25</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Electromagnetic_Prosthesis</defName>
+		<label>electromagnetic prosthesis</label>
+		<labelNoun>electromagnetic prosthesis</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>3.0</power>
+						<cooldownTime>2.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Electromagnetic_Prosthesis</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.9</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Bloodied_Pirate_Blade</defName>
+		<label>bloodied pirate blade</label>
+		<labelNoun>bloodied pirate blade</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>blade</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>12.0</power>
+						<cooldownTime>2.0</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Bloodied_Pirate_Blade</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.15</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Forearms_With_Sensors</defName>
+		<label>forearm with sensors</label>
+		<labelNoun>forearm with sensors</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>4.0</power>
+						<cooldownTime>2.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Forearms_With_Sensors</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.95</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Active_Hands_With_Electric_Shock</defName>
+		<label>active hand with electric shocker</label>
+		<labelNoun>active hand with electric shocker</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>3.0</power>
+						<cooldownTime>1.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Active_Hands_With_Electric_Shock</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.8</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Advanced_Mechanical_Hand_Prosthesis</defName>
+		<label>advanced mechanical arm</label>
+		<labelNoun>advanced mechanical arm</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>9.0</power>
+						<cooldownTime>3.8</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Advanced_Mechanical_Hand_Prosthesis</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.5</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Advanced_Electromagnetic_Joints</defName>
+		<label>advanced electromagnetic joints for the hand</label>
+		<labelNoun>advanced electromagnetic joints for the hand</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>14.0</power>
+						<cooldownTime>3.0</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Advanced_Electromagnetic_Joints</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.95</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Prosthesis_With_Power_Weights</defName>
+		<label>prosthesis with power weight</label>
+		<labelNoun>prosthesis with power weight</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>15.0</power>
+						<cooldownTime>4.0</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Prosthesis_With_Power_Weights</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.85</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Scientifically_Hypersensitive_Prosthesis</defName>
+		<label>scientific hypersensitive prosthesis</label>
+		<labelNoun>scientific hypersensitive prosthesis</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>9.0</power>
+						<cooldownTime>2.0</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Scientifically_Hypersensitive_Prosthesis</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.15</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Hands_On_Energy_Connections</defName>
+		<label>energy-mounted hand</label>
+		<labelNoun>energy-mounted hand</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>8.0</power>
+						<cooldownTime>1.0</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Hands_On_Energy_Connections</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Fiber_Optic_Prostheses</defName>
+		<label>fiber optic forearm</label>
+		<labelNoun>fiber optic forearm</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>2.0</power>
+						<cooldownTime>0.3</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Fiber_Optic_Prostheses</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Biomechanical_Joints</defName>
+		<label>biomechanical joints</label>
+		<labelNoun>biomechanical joints</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>6.5</power>
+						<cooldownTime>0.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Biomechanical_Joints</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.35</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Vanometric_Hand_Accelerators</defName>
+		<label>vanometer accelerator forearm</label>
+		<labelNoun>vanometer accelerator forearm</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>8.5</power>
+						<cooldownTime>1.1</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Vanometric_Hand_Accelerators</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Active_Sensory_Arm_Prostheses</defName>
+		<label>active sensor hand</label>
+		<labelNoun>active sensor hand</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>7.5</power>
+						<cooldownTime>1.2</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Active_Sensory_Arm_Prostheses</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.4</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Bionic_Blades</defName>
+		<label>bionic blades</label>
+		<labelNoun>bionic blades</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>blade</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>15.5</power>
+						<cooldownTime>1.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Bionic_Blades</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.9</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Retractable_Titanium_Blades</defName>
+		<label>titanium blades</label>
+		<labelNoun>titanium blades</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>blade</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>12.5</power>
+						<cooldownTime>1.7</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Retractable_Titanium_Blades</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Cyber_Hand_MK1</defName>
+		<label>cyber hand mk1</label>
+		<labelNoun>cyber hand mk1</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>24.5</power>
+						<cooldownTime>4.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Cyber_Hand_1_MK</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.35</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Cyber_Hand_MK1_Light</defName>
+		<label>lightweight cybernetic forearm MK1</label>
+		<labelNoun>lightweight cybernetic forearm MK1</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>18.5</power>
+						<cooldownTime>3.5</cooldownTime> 
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<spawnThingOnRemoved>DarkNet_Cyber_Hand_MK1_Light</spawnThingOnRemoved> 
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.45</partEfficiency> 
+		</addedPartProps>
+	</HediffDef>
+
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_CyberVisionVI</defName>
+		<label>CyberVision VI</label>
+		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech". A good and cheap replacement for eyes with impaired vision. Provides the ability to see up to 8192 colors. Released 25 years ago, out of production.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberVisionVI</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.15</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_CyberVisionVII</defName>
+		<label>CyberVision VII</label>
+		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech". Better efficiency, perceives more colors up to 12288. Released 10 years ago.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberVisionVII</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_CyberVisionVIICombat</defName>
+		<label>CyberVision VII: Combat Edition</label>
+		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech", designed specifically for the military. Better efficiency, improves shooting accuracy, perceives more colors up to 12288. Released 10 years ago.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberVisionVIICombat</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<RangedWeapon_Cooldown>-0.1</RangedWeapon_Cooldown>
+					<AimingDelayFactor>-0.1</AimingDelayFactor>
+					<ShootingAccuracyPawn>0.50</ShootingAccuracyPawn>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_CyberVisionVIIMedical</defName>
+		<label>CyberVision VII: Medical Edition</label>
+		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech", designed specifically for the healthcare companies. Better efficiency, improves the quality of medical operations, perceives more colors up to 12288. Released 10 years ago.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberVisionVIIMedical</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
+					<MedicalTendSpeed>0.15</MedicalTendSpeed>
+					<SurgerySuccessChanceFactor>0.10</SurgerySuccessChanceFactor>
+					<MedicalSurgerySuccessChance>0.65</MedicalSurgerySuccessChance>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_SimpleSpeechImplant</defName>
+		<label>Simple Speech Implant</label>
+		<labelNoun>Cybernetic simple speech implant from the corporation "Amazystems", designed to improve social qualities and increase the quality of social life.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SimpleSpeechImplant</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<NegotiationAbility>0.10</NegotiationAbility>
+					<SocialImpact>0.10</SocialImpact>
+					<TradePriceImprovement>0.05</TradePriceImprovement>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_AdvSpeechImplant</defName>
+		<label>Advanced Speech Implant</label>
+		<labelNoun>Cybernetic advanced speech implant from the corporation "Amazystems", designed to improve social qualities and increase the quality of social life.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_AdvSpeechImplant</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<NegotiationAbility>0.30</NegotiationAbility>
+					<SocialImpact>0.30</SocialImpact>
+					<TradePriceImprovement>0.20</TradePriceImprovement>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_SmallResearchAssistant</defName>
+		<label>Small Research AI Assistant</label>
+		<labelNoun>Small brain implant from "Blossom Co.", designed to boost research speed.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SmallResearchAssistant</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ResearchSpeed>0.25</ResearchSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_MediumResearchAssistant</defName>
+		<label>Medium Research AI Assistant</label>
+		<labelNoun>Medium brain implant from "Blossom Co.", designed to to boost research speed.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_MediumResearchAssistant</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.15</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ResearchSpeed>0.50</ResearchSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_BigResearchAssistant</defName>
+		<label>Big Research AI Assistant</label>
+		<labelNoun>Big brain implant from "Blossom Co.", to boost research speed.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_BigResearchAssistant</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ResearchSpeed>0.85</ResearchSpeed>
+				</statOffsets>
+			</li> 
+		</stages>
 	</HediffDef>
 
 </Defs>
