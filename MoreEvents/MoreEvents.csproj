@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_CarryItemToFurnace.cs" />
+    <Compile Include="AI\JobDriver_FillUpTheHole.cs" />
     <Compile Include="AI\JobDriver_TakeItemFromCokeFurnace.cs" />
     <Compile Include="AI\JobDriver_SwitchCokeFurnace.cs" />
     <Compile Include="AI\JobDriver_DestroyTribalCrack.cs" />

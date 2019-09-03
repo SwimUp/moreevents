@@ -24,6 +24,8 @@ namespace RimOverhaul.Things
 
         private int blownUp = 90000;
 
+        public float Filled = 0;
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -34,6 +36,11 @@ namespace RimOverhaul.Things
             {
                 Destroy();
             }
+        }
+
+        public override string GetInspectString()
+        {
+            return $"Building_TribalCrack_Info".Translate(Filled.ToString("f2"));
         }
 
         public override void Tick()
@@ -94,6 +101,12 @@ namespace RimOverhaul.Things
                 {
                     yield return new FloatMenuOption("Building_TribalCrack_OptionInactive".Translate(), null);
                 }
+
+                yield return new FloatMenuOption("Building_TribalCrack_DoDestroyAction".Translate(), delegate
+                {
+                    Job job = new Job(JobDefOfLocal.FillUpHole, this);
+                    selPawn.jobs.TryTakeOrderedJob(job);
+                });
             }
         }
 
@@ -160,6 +173,7 @@ namespace RimOverhaul.Things
             Scribe_Collections.Look(ref spawnedMobs, "spawnedMobs", LookMode.Reference);
             Scribe_Values.Look(ref blownUp, "timer");
             Scribe_References.Look(ref bomber, "bomber");
+            Scribe_Values.Look(ref Filled, "filled");
         }
     }
 }

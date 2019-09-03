@@ -53,7 +53,7 @@ namespace DarkNET
             }
         }
 
-        public static bool BuyAndDropItem(SellableItemWithModif tradeItem, Map map)
+        public static bool BuyAndDropItem(SellableItemWithModif tradeItem, Map map, bool receiveLetter = true)
         {
             int playerSilver = map.resourceCounter.Silver;
             if (playerSilver >= tradeItem.MarketValue)
@@ -80,7 +80,12 @@ namespace DarkNET
                 IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
                 DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
 
+                if (receiveLetter)
+                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+
                 tradeItem.Item = null;
+
+                map.resourceCounter.UpdateResourceCounts();
 
                 return true;
             }
@@ -91,7 +96,7 @@ namespace DarkNET
             }
         }
 
-        public static bool BuyAndDropItem(Thing tradeItem, int price, Map map)
+        public static bool BuyAndDropItem(Thing tradeItem, int price, Map map, bool receiveLetter = true)
         {
             int playerSilver = map.resourceCounter.Silver;
             if (playerSilver >= price)
@@ -117,6 +122,11 @@ namespace DarkNET
 
                 IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
                 DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+
+                if(receiveLetter)
+                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+
+                map.resourceCounter.UpdateResourceCounts();
 
                 return true;
             }

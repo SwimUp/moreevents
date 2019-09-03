@@ -16,11 +16,12 @@
 Цена: {2}
 ------------------------
 	</TraderWorker_RogerEdmonson_FullDesc>
-	<TraderWorker_RogerEdmonson_Modificator>{0}: {1}
+	<TraderWorker_RogerEdmonson_Modificator>
+{0}: {1}
   - Модификатор цены: {2}
 	</TraderWorker_RogerEdmonson_Modificator>
 	<TraderWorker_RogerEdmonson_NoSpecialGood>В этот раз без него :(</TraderWorker_RogerEdmonson_NoSpecialGood>
-	<TraderWorker_RogerEdmonson_MakeOrder>Заказать протез</TraderWorker_RogerEdmonson_MakeOrder>
+	<TraderWorker_RogerEdmonson_MakeOrder>Сделать заказ</TraderWorker_RogerEdmonson_MakeOrder>
 	<RogerEdmonson_OrderWindow_BodyParts>Протезы</RogerEdmonson_OrderWindow_BodyParts>
 	<RogerEdmonson_OrderWindow_Arts>Статуи</RogerEdmonson_OrderWindow_Arts>
 	<RogerEdmonson_OrderWindow_SelectGroup>Тип протеза: {0}</RogerEdmonson_OrderWindow_SelectGroup>
@@ -66,7 +67,7 @@
 Базовая цена любого заказа {1}
 Цена одной единицы материала: {2}
 Время поиска: {3} циклов (торговец прибывает каждые {4} дней)
-Итоговая цена: {1} * ({5} * {2}) = {6}$
+Итоговая цена: {1} * (({5} * {2}) * 0.03)  = {6}$
 Предоплата: {7}$
 
 Шанс того, что торговец сможет найти ваш заказ {8}% (Базовый {9}%)</RogerEdmonson_OrderWindow_ArtFull2>
@@ -74,5 +75,8 @@
 	<DarkNetModificator_Price>Цена: {0}</DarkNetModificator_Price>
 	<DarkNetModificator_Label>{0}</DarkNetModificator_Label>
 	<DarkNetButtons_Buy>Купить</DarkNetButtons_Buy>
+	<BuyAndDropItem_NotifyTitle>Доставка</BuyAndDropItem_NotifyTitle>
+	<BuyAndDropItem_NotifyDesc>Приобретенный(-е) предмет(-ы) доставлен(-ы). 
+(нажмите, чтобы перейти)</BuyAndDropItem_NotifyDesc>
 
 </LanguageData>

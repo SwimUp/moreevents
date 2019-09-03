@@ -229,4 +229,7 @@ COMMANDS:
 	<TribalCrack_InfoTitle>Миссия начата</TribalCrack_InfoTitle>
 	<TribalCrack_InfoDesc>Поселенец {0} отправился в туннель. Установка бомбы и взрыв займет примерно {1} дней. В это время поселенец будет недоступен.</TribalCrack_InfoDesc>
 
+    <Building_TribalCrack_DoDestroyAction>Закопать руками</Building_TribalCrack_DoDestroyAction>
+	<Building_TribalCrack_Info>Закопано: {0}</Building_TribalCrack_Info>
+
 </LanguageData>

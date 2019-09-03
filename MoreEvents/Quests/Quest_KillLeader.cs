@@ -53,10 +53,14 @@ namespace MoreEvents.Quests
 
             DefDatabase<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>.AllDefsListForReading.Where(gen => gen.targetTags != null && gen.targetTags.Contains(MapGenerator)).TryRandomElementByWeight(w => w.Commonality, out MapGeneratorBlueprints.MapGenerator.MapGeneratorDef result);
 
-            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction);
+            Lord defendLord = LordMaker.MakeNewLord(TargetPawn.Faction, new LordJob_DefendPawn(TargetPawn), map);
+            defendLord.numPawnsLostViolently = int.MaxValue;
+
+            MapGeneratorHandler.GenerateMap(result, map, out List<Pawn> pawns, true, true, true, false, true, true, true, TargetPawn.Faction, defendLord);
 
             TargetPawn = (Pawn)GenSpawn.Spawn(TargetPawn, pawns.RandomElement().Position, map);
-            pawns[0].GetLord().AddPawn(TargetPawn);
+            Lord leaderLord = LordMaker.MakeNewLord(TargetPawn.Faction, new LordJob_DefendPoint(TargetPawn.Position), map);
+            leaderLord.AddPawn(TargetPawn);
 
             UnlimitedTime = true;
         }

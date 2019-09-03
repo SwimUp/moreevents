@@ -392,6 +392,44 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>SmeltingSteelBig</defName>
+		<label>Smelt steel (x10)</label>
+		<description>Get steel by combining iron ingot and coal (x10)</description>
+		<jobString>Smelting steel</jobString>
+		<workAmount>45000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IronIngot</li>
+					</thingDefs>
+				</filter>
+				<count>350</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Coal</li>
+					</thingDefs>
+				</filter>
+				<count>300</count>
+			</li>
+		</ingredients>
+		<products>
+			<Steel>300</Steel>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IronIngot</li>
+				<li>Coal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
 
 	<RecipeDef>
 		<defName>BurnCoalToCokeCoal</defName>

@@ -23,6 +23,9 @@
 		<alwaysHaulable>true</alwaysHaulable>
 		<isTechHediff>true</isTechHediff>
 		<techLevel>Spacer</techLevel>
+		<thingCategories>
+			<li>DarkNetItems</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
@@ -46,6 +49,9 @@
 			<Beauty>-4</Beauty>
 			<DeteriorationRate>2.0</DeteriorationRate>
 		</statBases>
+		<thingCategories>
+			<li>DarkNetItems</li>
+		</thingCategories>
 		<altitudeLayer>Item</altitudeLayer>
 		<tickerType>Never</tickerType>
 		<alwaysHaulable>true</alwaysHaulable>
@@ -552,7 +558,7 @@
 		<techHediffsTags>
 			<li>Advanced</li>
 		</techHediffsTags>
-				<tradeTags>
+		<tradeTags>
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
@@ -586,7 +592,7 @@
 		<techHediffsTags>
 			<li>Advanced</li>
 		</techHediffsTags>
-				<tradeTags>
+		<tradeTags>
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
@@ -659,5 +665,678 @@
 		</tradeTags>
 	</ThingDef>
 
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Fixed_Leg_Prosthesis</defName>
+		<label>Fixed leg prosthesis</label>
+		<description>Heavy fixed prosthesis replacing the leg.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.7</Mass>
+			<MarketValue>350</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Metal_Joints_For_Legs</defName>
+		<label>Metal joints for legs</label>
+		<description>Lightweight prosthesis with flexion functions.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>400</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Prosthetic_Leg_With_Metal_Plates</defName>
+		<label>Prosthetic leg with metal plates</label>
+		<description>Plates add extra weight to the structure while increasing strength.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.8</Mass>
+			<MarketValue>450</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Prosthetic_Leg_With_Simple_Mechanical_Sensors</defName>
+		<label>Prosthetic leg with simple mechanical sensors</label>
+		<description>Sensors allow the wearer to adapt to the surface.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.7</Mass>
+			<MarketValue>560</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_FootProsthesisWithElectronicMotionSensors</defName>
+		<label>Foot prosthesis with electronic motion sensors</label>
+		<description>Advanced sensors accelerate owner adaptation.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>670</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_ShockAbsorbingJoints</defName>
+		<label>Shock absorbing joints</label>
+		<description>Allow you to increase the overall speed of the owner but still can not compete with natural legs.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.8</Mass>
+			<MarketValue>860</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_MobileProsthesisWithInitialSensitivity</defName>
+		<label>Mobile prosthesis with initial sensitivity</label>
+		<description>The combination of technology has brought prosthetics closer to a new level.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.9</Mass>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_ActiveHydraulicFootProsthesis</defName>
+		<label>Active hydraulic foot prosthesis</label>
+		<description>Sufficiently strong prosthesis provides high mobility.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1.2</Mass>
+			<MarketValue>980</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_HydraulicProsthesisWithSensitiveSensors</defName>
+		<label>Hydraulic foot prosthesis with sensors</label>
+		<description>Additional weight gain due to various sensors gave the prosthesis an average sensitivity.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1.2</Mass>
+			<MarketValue>1100</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SportsMechanicalProsthesis</defName>
+		<label>Sports mechanical prosthesis</label>
+		<description>Professional athletes turn to this prosthesis after limb loss.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1.0</Mass>
+			<MarketValue>1200</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SportsProsthesisSOne</defName>
+		<label>Sports prosthesis S1</label>
+		<description>Updated hip prosthesis system for greater comfort and maximum safety while walking.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1.1</Mass>
+			<MarketValue>1250</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SportsProsthesisSTwo</defName>
+		<label>Sports prosthesis S2</label>
+		<description>Advanced prosthesis S1 increased its mobility.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1.3</Mass>
+			<MarketValue>1300</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_KneeJoint</defName>
+		<label>Knee joint</label>
+		<description>Knee joint with manual locking and hydraulic squat support for balanced and stable movements.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1.1</Mass>
+			<MarketValue>1600</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_FootMeridium</defName>
+		<label>Foot Meridium</label>
+		<description>Foot Meridium an electronically controlled artificial foot, almost completely simulating the anatomical shape of the human foot.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1.3</Mass>
+			<MarketValue>1850</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_MK1CyberneticLegProsthesis</defName>
+		<label>MK1 cybernetic leg prosthesis</label>
+		<description>First version of cybernetic prostheses for the MK1 suit.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>2.0</Mass>
+			<MarketValue>2450</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_MK1CyberneticLegProsthesisTwo</defName>
+		<label>MK1 cybernetic advanced leg prosthesis</label>
+		<description>The second version of the cyber prosthesis from MK1.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>2.5</Mass>
+			<MarketValue>2650</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_MK1CyberneticLegProsthesisThree</defName>
+		<label>MK1 final cybernetic leg prosthesis</label>
+		<description>Latest version of the prosthetic leg from MK1.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>2.5</Mass>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SimpleHeartPump</defName>
+		<label>Simple heart pump</label>
+		<description>Temporary heart substitute.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.2</Mass>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_ImprovedHeartPump</defName>
+		<label>Improved heart pump</label>
+		<description>Acceleration of rhythmic movements alleviated the negative effects of heart loss.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.2</Mass>
+			<MarketValue>450</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CardioprosthesisMOne</defName>
+		<label>Prosthesis for the heart</label>
+		<description>The first prosthesis for the heart, created on a large scale.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>590</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_AdvancedProsthesisMTwo</defName>
+		<label>Advanced prosthesis M2</label>
+		<description>The second prosthesis M2 combines technology from different eras, while at the same time cheap to manufacture.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.25</Mass>
+			<MarketValue>750</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SerialHeartProsthesisMThree</defName>
+		<label>Serial heart prosthesis M3</label>
+		<description>The latest version of the prosthesis increases human capabilities by several percent.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.2</Mass>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SportsPacemakerSOne</defName>
+		<label>Sports pacemaker S1</label>
+		<description>It has simple metabolic acceleration systems.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>1200</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_BiochemistryPacemakerSTwo</defName>
+		<label>Biochemistry pacemaker S2</label>
+		<description>It significantly surpasses its counterpart by accelerating life systems.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_RhythmicCardioprosthesisMKOne</defName>
+		<label>Rhythmic Cardioprosthesis MK1</label>
+		<description>The first MK1 line prosthesis designed to enhance combat quality owners.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_FinalPacemakerMKOne</defName>
+		<label>Final pacemaker MK1</label>
+		<description>The perfect denture in the MK1 range.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.7</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SimpleCatheter</defName>
+		<label>Simple сatheter</label>
+		<description>A catheter that partially simulates the functioning of the kidney.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.2</Mass>
+			<MarketValue>350</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_ImprovedKidneyCatheter</defName>
+		<label>Improved kidney catheter</label>
+		<description>Advanced kidney replacement catheter.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.25</Mass>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_ArtificialKidney</defName>
+		<label>Artificial kidney</label>
+		<description>First artificial kidney.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>750</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticKidney</defName>
+		<label>Synthetic kidney</label>
+		<description>First artificial kidney.</description>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>0.4</Mass>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticBodyFiltrationSystem</defName>
+		<label>Synthetic body filtration system</label>
+		<description>Biochemical filtration system.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>1400</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticFiltrationSystemMKOne</defName>
+		<label>Synthetic filtration system MK1</label>
+		<description>The first MK1 body filtration system.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>1900</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_AdvancedMK1FiltrationSystem</defName>
+		<label>Advanced MK1 Filtration System</label>
+		<description>Better biofilter system MK1.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>2300</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_NanoBotsBasic</defName>
+		<label>NanoBots: Basic Version</label>
+		<description>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. This version has basic functionality, but has less characteristics than advanced versions and gives immunity to only a small set of diseases.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_NanoBotsStandard</defName>
+		<label>NanoBots: Standard Version</label>
+		<description>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The standard version provides reliable protection of health and gives immunity to a larger set of dangerous diseases.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>3200</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_NanoBotsAdv</defName>
+		<label>NanoBots: Advanced Version</label>
+		<description>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The advanced version provides reliable protection of health and gives immunity to the entire set of dangerous diseases.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>3500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticLung</defName>
+		<label>Synthetic lung</label>
+		<description>Synthetic lung is a artifical organ that performs the function of a real lung, but with improved parameters.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>1400</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Simple</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CyberneticLung</defName>
+		<label>Cybernetic lung</label>
+		<description>Cybernetic lung is a artifical organ that performs the function of a real lung, but with better parameters than a synthetic lung and has a long lifespan.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>1700</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_BionicLung</defName>
+		<label>Bionic lung</label>
+		<description>Bionic lung is a artifical organ that performs the function of a real lung and is the most advanced option among similar prosthetics, as it easily adapts to the body, does not cause sepsis and has a number of improved parameters.</description>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>1900</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
 
 </Defs>

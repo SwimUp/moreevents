@@ -19,12 +19,7 @@ namespace RimOverhaul.Things.CokeFurnace
         private Thing result;
 
         public IEnumerable<RecipeDef> Recipes => recipes;
-        private List<RecipeDef> recipes = new List<RecipeDef>()
-        {
-            RecipeDefOfLocal.BurnCoalToCokeCoal,
-            RecipeDefOfLocal.SmeltingSteel,
-            RecipeDefOfLocal.SmeltingTiliumIngot
-        };
+        private List<RecipeDef> recipes = new List<RecipeDef>();
 
         public Dictionary<ThingDef, int> ContainedResources;
 
@@ -106,6 +101,8 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
+            recipes = def.recipes;
+
             base.SpawnSetup(map, respawningAfterLoad);
 
             if(SelectedRecipe == null)

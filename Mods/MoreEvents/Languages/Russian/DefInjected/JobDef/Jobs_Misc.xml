@@ -14,5 +14,6 @@
   <CarryItemToCokeFurnace.reportString>Несет предмет для коксовой печи</CarryItemToCokeFurnace.reportString>
   <SwitchCokeFurnace.reportString>Переключает коксовую печь</SwitchCokeFurnace.reportString>
   <TakeResultFromCokeFurnace.reportString>Достает предмет из коксовой печи</TakeResultFromCokeFurnace.reportString>
+  <FillUpHole.reportString>засыпает яму землей</FillUpHole.reportString>
 
 </LanguageData>

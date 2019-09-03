@@ -39,6 +39,44 @@
 			<li>Install_DarkNet_SmallResearchAssistant</li>
 			<li>Install_DarkNet_MediumResearchAssistant</li>
 			<li>Install_DarkNet_BigResearchAssistant</li>
+			<li>Install_DarkNet_Fixed_Leg_Prosthesis</li>
+			<li>Install_DarkNet_Metal_Joints_For_Legs</li>
+			<li>Install_DarkNet_Prosthetic_Leg_With_Metal_Plates</li>
+			<li>Install_DarkNet_Prosthetic_Leg_With_Simple_Mechanical_Sensors</li>
+			<li>Install_DarkNet_FootProsthesisWithElectronicMotionSensors</li>
+			<li>Install_DarkNet_ShockAbsorbingJoints</li>
+			<li>Install_DarkNet_MobileProsthesisWithInitialSensitivity</li>
+			<li>Install_DarkNet_ActiveHydraulicFootProsthesis</li>
+			<li>Install_DarkNet_HydraulicProsthesisWithSensitiveSensors</li>
+			<li>Install_DarkNet_SportsMechanicalProsthesis</li>
+			<li>Install_DarkNet_SportsProsthesisSOne</li>
+			<li>Install_DarkNet_SportsProsthesisSTwo</li>
+			<li>Install_DarkNet_KneeJoint</li>
+			<li>Install_DarkNet_FootMeridium</li>
+			<li>Install_DarkNet_MK1CyberneticLegProsthesis</li>
+			<li>Install_DarkNet_MK1CyberneticLegProsthesisTwo</li>
+			<li>Install_DarkNet_MK1CyberneticLegProsthesisThree</li>
+			<li>Install_DarkNet_SimpleHeartPump</li>
+			<li>Install_DarkNet_ImprovedHeartPump</li>
+			<li>Install_DarkNet_CardioprosthesisMOne</li>
+			<li>Install_DarkNet_AdvancedProsthesisMTwo</li>
+			<li>Install_DarkNet_SerialHeartProsthesisMThree</li>
+			<li>Install_DarkNet_SportsPacemakerSOne</li>
+			<li>Install_DarkNet_BiochemistryPacemakerSTwo</li>
+			<li>Install_DarkNet_RhythmicCardioprosthesisMKOne</li>
+			<li>Install_DarkNet_FinalPacemakerMKOne</li>
+			<li>Install_DarkNet_ImprovedKidneyCatheter</li>
+			<li>Install_DarkNet_ArtificialKidney</li>
+			<li>Install_DarkNet_SyntheticKidney</li>
+			<li>Install_DarkNet_SyntheticBodyFiltrationSystem</li>
+			<li>Install_DarkNet_SyntheticFiltrationSystemMKOne</li>
+			<li>Install_DarkNet_AdvancedMK1FiltrationSystem</li>
+			<li>Install_DarkNet_NanoBotsBasic</li>
+			<li>Install_DarkNet_NanoBotsStandard</li>
+			<li>Install_DarkNet_NanoBotsAdv</li>
+			<li>Install_DarkNet_SyntheticLung</li>
+			<li>Install_DarkNet_CyberneticLung</li>
+			<li>Install_DarkNet_BionicLung</li>		
 		</value>
 	</Operation>
 

@@ -226,7 +226,10 @@ namespace DarkNET.Traders
             {
                 if (DarkNetPriceUtils.BuyAndDropItem(item, Find.AnyPlayerHomeMap))
                 {
-                    stock.Remove(item);
+                    if (stock.Contains(item))
+                        stock.Remove(item);
+                    else goodOfTheWeek = null;
+
                     Text.Anchor = TextAnchor.UpperLeft;
                     return;
                 }
@@ -260,7 +263,7 @@ namespace DarkNET.Traders
 
         public bool AcceptOrder()
         {
-            if (DarkNetPriceUtils.BuyAndDropItem(Order.OrderedItem, (int)Order.Price, Find.AnyPlayerHomeMap))
+            if (DarkNetPriceUtils.BuyAndDropItem(Order.OrderedItem, (int)Order.Price, Find.AnyPlayerHomeMap, true))
             {
                 Order = null;
                 return true;
@@ -311,6 +314,9 @@ namespace DarkNET.Traders
 
         private void RandomBuy()
         {
+            if (stock.Count == 0)
+                return;
+
             int itemPos = Rand.Range(0, stock.Count);
 
             SellableItemWithModif item = stock[itemPos];
@@ -337,10 +343,8 @@ namespace DarkNET.Traders
             int raidsCount = Find.StoryWatcher.statsRecord.numRaidsEnemy - lastRaidsEnemy;
             lastRaidsEnemy = raidsCount;
 
-            int itemsCount = 35;
-            float valueRange = 150000;
-            //int itemsCount = (int)itemsCountPerRaidCurve.Evaluate(raidsCount);
-            //float valueRange = startMarketValue + (marketValueMultiplierPerMapEvent * raidsCount);
+            int itemsCount = (int)itemsCountPerRaidCurve.Evaluate(raidsCount);
+            float valueRange = startMarketValue + (marketValueMultiplierPerMapEvent * raidsCount);
 
             ThingSetMaker_MarketValue maker = new ThingSetMaker_MarketValue();
 

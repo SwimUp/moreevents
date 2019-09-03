@@ -13,6 +13,11 @@ namespace RimOverhaul.AI
         {
             Pawn target = pawn.mindState.duty.focus.Thing as Pawn;
 
+            if (target == null)
+            {
+                return pawn;
+            }
+
             return target;
         }
     }

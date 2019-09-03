@@ -45,6 +45,22 @@
 					<BodypartGroup>Simple</BodypartGroup>
 					<Items>
 						<li>
+							<ThingDef>DarkNet_KneeJoint</ThingDef>
+							<Commonality>0.35</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SimpleHeartPump</ThingDef>
+							<Commonality>0.6</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_MobileProsthesisWithInitialSensitivity</ThingDef>
+							<Commonality>0.7</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SimpleCatheter</ThingDef>
+							<Commonality>0.65</Commonality>
+						</li>
+						<li>
 							<ThingDef>SimpleProstheticLeg</ThingDef>
 							<Commonality>0.7</Commonality>
 						</li>
@@ -72,11 +88,43 @@
 							<ThingDef>DarkNet_Old_Simple_Prosthetic_Arm</ThingDef>
 							<Commonality>0.55</Commonality>
 						</li>
+						<li>
+							<ThingDef>DarkNet_Fixed_Leg_Prosthesis</ThingDef>
+							<Commonality>0.50</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_Metal_Joints_For_Legs</ThingDef>
+							<Commonality>0.40</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_Prosthetic_Leg_With_Metal_Plates</ThingDef>
+							<Commonality>0.40</Commonality>
+						</li>
 					</Items>
 				</li>
 				<li>
 					<BodypartGroup>Bionic</BodypartGroup>
 					<Items>
+						<li>
+							<ThingDef>DarkNet_BionicLung</ThingDef>
+							<Commonality>0.35</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SyntheticLung</ThingDef>
+							<Commonality>0.25</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SyntheticKidney</ThingDef>
+							<Commonality>0.4</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SyntheticBodyFiltrationSystem</ThingDef>
+							<Commonality>0.35</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SyntheticFiltrationSystemMKOne</ThingDef>
+							<Commonality>0.2</Commonality>
+						</li>
 						<li>
 							<ThingDef>DarkNet_Bionic_Blades</ThingDef>
 							<Commonality>0.2</Commonality>
@@ -122,6 +170,22 @@
 				<li>
 					<BodypartGroup>Archotech</BodypartGroup>
 					<Items>
+						<li>
+							<ThingDef>DarkNet_CyberneticLung</ThingDef>
+							<Commonality>0.45</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_NanoBotsBasic</ThingDef>
+							<Commonality>0.25</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_NanoBotsAdv</ThingDef>
+							<Commonality>0.1</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_NanoBotsStandard</ThingDef>
+							<Commonality>0.15</Commonality>
+						</li>
 						<li>
 							<ThingDef>ArchotechEye</ThingDef>
 							<Commonality>0.25</Commonality>
@@ -184,6 +248,94 @@
 				<li>
 					<BodypartGroup>Improved</BodypartGroup>
 					<Items>
+						<li>
+							<ThingDef>DarkNet_SportsProsthesisSOne</ThingDef>
+							<Commonality>0.55</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SportsProsthesisSTwo</ThingDef>
+							<Commonality>0.45</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_FootMeridium</ThingDef>
+							<Commonality>0.35</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_MK1CyberneticLegProsthesis</ThingDef>
+							<Commonality>0.25</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_MK1CyberneticLegProsthesisTwo</ThingDef>
+							<Commonality>0.15</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_MK1CyberneticLegProsthesisThree</ThingDef>
+							<Commonality>0.15</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_BiochemistryPacemakerSTwo</ThingDef>
+							<Commonality>0.5</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_RhythmicCardioprosthesisMKOne</ThingDef>
+							<Commonality>0.45</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_FinalPacemakerMKOne</ThingDef>
+							<Commonality>0.2</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_FootProsthesisWithElectronicMotionSensors</ThingDef>
+							<Commonality>0.6</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_ShockAbsorbingJoints</ThingDef>
+							<Commonality>0.55</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_ActiveHydraulicFootProsthesis</ThingDef>
+							<Commonality>0.5</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_HydraulicProsthesisWithSensitiveSensors</ThingDef>
+							<Commonality>0.35</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SportsMechanicalProsthesis</ThingDef>
+							<Commonality>0.3</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_AdvancedMK1FiltrationSystem</ThingDef>
+							<Commonality>0.25</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_ImprovedKidneyCatheter</ThingDef>
+							<Commonality>0.4</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_ArtificialKidney</ThingDef>
+							<Commonality>0.5</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_ImprovedHeartPump</ThingDef>
+							<Commonality>0.4</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_CardioprosthesisMOne</ThingDef>
+							<Commonality>0.43</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SerialHeartProsthesisMThree</ThingDef>
+							<Commonality>0.41</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_SportsPacemakerSOne</ThingDef>
+							<Commonality>0.25</Commonality>
+						</li>
+						<li>
+							<ThingDef>DarkNet_Prosthetic_Leg_With_Simple_Mechanical_Sensors</ThingDef>
+							<Commonality>0.45</Commonality>
+						</li>
 						<li>
 							<ThingDef>DarkNet_Cyber_Hand_1_MK</ThingDef>
 							<Commonality>0.35</Commonality>
@@ -355,7 +507,7 @@ He is extremely careful, does not conduct business with unverified people and se
 
 	<DarkNET.DarkNetTraderDef>
 		<defName>Eisenberg</defName>
-		<workerClass Class="DarkNET.Traders.TraderWorker_RogerEdmonson">
+		<workerClass Class="DarkNET.Traders.TraderWorker_Eisenberg">
 
 		</workerClass>
 		<label>Eisenberg</label>
@@ -387,7 +539,7 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 
 	<DarkNET.DarkNetTraderDef>
 		<defName>JohnCarver</defName>
-		<workerClass Class="DarkNET.Traders.TraderWorker_RogerEdmonson">
+		<workerClass Class="DarkNET.Traders.TraderWorker_JohnCarver">
 
 		</workerClass>
 		<label>John Carver</label>

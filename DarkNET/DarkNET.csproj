@@ -78,6 +78,8 @@
     <Compile Include="Traders\Order_Art_RogerEdmonson.cs" />
     <Compile Include="Traders\Order_BodyPart_RogerEdmonson.cs" />
     <Compile Include="Traders\RogerEdmonson_OrderWindow.cs" />
+    <Compile Include="Traders\TraderWorker_Eisenberg.cs" />
+    <Compile Include="Traders\TraderWorker_JohnCarver.cs" />
     <Compile Include="Traders\TraderWorker_RogerEdmonson.cs" />
     <Compile Include="PriceModificatorUtils.cs" />
   </ItemGroup>

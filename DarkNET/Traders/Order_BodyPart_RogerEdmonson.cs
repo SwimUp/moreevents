@@ -33,8 +33,6 @@ namespace DarkNET.Traders
         {
             TraderWorker_RogerEdmonson roger = (TraderWorker_RogerEdmonson)trader;
 
-            Log.Message(roger.OrderBodyparts.Where(item => item.BodypartGroup == Group).Count().ToString());
-
             if (roger.OrderBodyparts.First(x => x.BodypartGroup == Group).Items.TryRandomElementByWeight(x2 => x2.Commonality, out OrderThing result))
             {
                 Thing thing = ThingMaker.MakeThing(result.ThingDef);

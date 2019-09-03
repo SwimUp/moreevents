@@ -148,7 +148,17 @@ namespace DarkNET.Traders
 
             Find.LetterStack.ReceiveLetter("MakeBodyPartOrder_Title".Translate(), "MakeBodyPartOrder_Desc".Translate($"{group}_group".Translate(), delay), LetterDefOf.PositiveEvent);
         }
-        
+
+        private void MakeArtOrder(float chance, float price, int delay, ThingDef artType, ThingDef artStuff)
+        {
+            price -= prepayment;
+
+            Order_Art_RogerEdmonson order = new Order_Art_RogerEdmonson(chance, price, delay, artType, artStuff);
+            trader.Order = order;
+
+            Find.LetterStack.ReceiveLetter("MakeBodyPartOrder_Title".Translate(), "MakeBodyPartOrder_Desc".Translate($"{group}_group".Translate(), delay), LetterDefOf.PositiveEvent);
+        }
+
         private bool TakePrePayment(int prepayment)
         {
             return DarkNetPriceUtils.TakeSilverFromPlayer(prepayment, Find.AnyPlayerHomeMap);
@@ -163,7 +173,7 @@ namespace DarkNET.Traders
 
         private void CalculateArtValues()
         {
-            totalValue = (int)(baseValue * ((artType.costStuffCount * artStuff.BaseMarketValue) * 0.02f));
+            totalValue = (int)(baseValue * ((artType.costStuffCount * artStuff.BaseMarketValue) * 0.03f));
             chance = Mathf.Round(Mathf.Clamp(((baseChance / (artType.costStuffCount * 0.006f)) * delay) - (artStuff.BaseMarketValue * 1.2f), 0, 100));
             prepayment = (int)(totalValue * 0.4f);
         }
@@ -231,7 +241,7 @@ namespace DarkNET.Traders
                 {
                     if (TakePrePayment(prepayment))
                     {
-                        MakeBodyPartOrder(group, chance, totalValue, delay);
+                        MakeArtOrder(chance, totalValue, delay, artType, artStuff);
                     }
                 }
             }

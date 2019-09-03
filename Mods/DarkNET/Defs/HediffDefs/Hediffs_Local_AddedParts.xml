@@ -858,4 +858,1001 @@
 		</stages>
 	</HediffDef>
 
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Fixed_Leg_Prosthesis</defName>
+		<label>Fixed leg prosthesis</label>
+		<labelNoun>this limb can hardly be called comfortable.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.4</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>DarkNet_Fixed_Leg_Prosthesis</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Metal_Joints_For_Legs</defName>
+		<label>metal joints for legs</label>
+		<labelNoun>movable joints increase mobility.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.45</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>DarkNet_Metal_Joints_For_Legs</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Prosthetic_Leg_With_Metal_Plates</defName>
+		<label>prosthesis leg with metal plates</label>
+		<labelNoun>plates on the surface of the prosthesis provide shape retention.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.5</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>DarkNet_Prosthetic_Leg_With_Metal_Plates</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_Prosthetic_Leg_With_Simple_Mechanical_Sensors</defName>
+		<label>prosthesis leg with simple mechanical sensors</label>
+		<labelNoun>Sensors on the surface of the prosthesis increase adaptation.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.55</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<spawnThingOnRemoved>DarkNet_Prosthetic_Leg_With_Simple_Mechanical_Sensors</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_FootProsthesisWithElectronicMotionSensors</defName>
+		<label>prosthesis leg with sensors</label>
+		<labelNoun>advanced sensors accelerate owner adaptation.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.6</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.05</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_FootProsthesisWithElectronicMotionSensors</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_ShockAbsorbingJoints</defName>
+		<label>shock absorbing joints</label>
+		<labelNoun>allow you to increase the overall speed of the owner but still can not compete with natural legs.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.7</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.1</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_ShockAbsorbingJoints</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_MobileProsthesisWithInitialSensitivity</defName>
+		<label>mobile prosthesis with initial sensitivity</label>
+		<labelNoun>the combination of technology has brought prosthetics closer to a new level.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.85</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.1</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_MobileProsthesisWithInitialSensitivity</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_ActiveHydraulicFootProsthesis</defName>
+		<label>Active hydraulic foot prosthesis</label>
+		<labelNoun>sufficiently strong prosthesis provides high mobility.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.9</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.15</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_ActiveHydraulicFootProsthesis</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_HydraulicProsthesisWithSensitiveSensors</defName>
+		<label>Hydraulic foot prosthesis with sensors</label>
+		<labelNoun>additional weight gain due to various sensors gave the prosthesis an average sensitivity.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.15</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_HydraulicProsthesisWithSensitiveSensors</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SportsMechanicalProsthesis</defName>
+		<label>Sports mechanical prosthesis</label>
+		<labelNoun>professional athletes turn to this prosthesis after limb loss.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.2</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SportsMechanicalProsthesis</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SportsProsthesisSOne</defName>
+		<label>Sports prosthesis S1</label>
+		<labelNoun>updated hip prosthesis system for greater comfort and maximum safety while walking.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.15</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.25</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SportsProsthesisSOne</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SportsProsthesisSTwo</defName>
+		<label>Sports prosthesis S2</label>
+		<labelNoun>advanced prosthesis S1 increased its mobility.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.27</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SportsProsthesisSTwo</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_KneeJoint</defName>
+		<label>Knee joint</label>
+		<labelNoun>Knee joint with manual locking and hydraulic squat support for balanced and stable movements.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.3</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_KneeJoint</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_FootMeridium</defName>
+		<label>Foot Meridium</label>
+		<labelNoun>Foot Meridium an electronically controlled artificial foot, almost completely simulating the anatomical shape of the human foot.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.35</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_FootMeridium</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_MK1CyberneticLegProsthesis</defName>
+		<label>MK1 cybernetic leg prosthesis</label>
+		<labelNoun>First version of cybernetic prostheses for the MK1 suit.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.4</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.4</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_MK1CyberneticLegProsthesis</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_MK1CyberneticLegProsthesisTwo</defName>
+		<label>MK1 cybernetic advanced leg prosthesis</label>
+		<labelNoun>The second version of the cyber prosthesis from MK1.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.45</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.45</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_MK1CyberneticLegProsthesisTwo</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_MK1CyberneticLegProsthesisThree</defName>
+		<label>MK1 final cybernetic leg prosthesis</label>
+		<labelNoun>Latest version of the prosthetic leg from MK1.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.55</MoveSpeed>
+				</statOffsets>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_MK1CyberneticLegProsthesisThree</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SimpleHeartPump</defName>
+		<label>Simple heart pump</label>
+		<labelNoun>Prosthesis designed to allow the host to live.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.25</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SimpleHeartPump</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_ImprovedHeartPump</defName>
+		<label>Improved heart pump</label>
+		<labelNoun>Acceleration of rhythmic movements alleviated the negative effects of heart loss.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.4</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_ImprovedHeartPump</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CardioprosthesisMOne</defName>
+		<label>Prosthesis for the heart</label>
+		<labelNoun>The first prosthesis for the heart, created on a large scale.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.7</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_CardioprosthesisMOne</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_AdvancedProsthesisMTwo</defName>
+		<label>Advanced prosthesis M2</label>
+		<labelNoun>The second prosthesis M2 combines technology from different eras, while at the same time cheap to manufacture.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.9</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_AdvancedProsthesisMTwo</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SerialHeartProsthesisMThree</defName>
+		<label>Serial heart prosthesis M3</label>
+		<labelNoun>The latest version of the prosthesis increases human capabilities by several percent.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SerialHeartProsthesisMThree</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SportsPacemakerSOne</defName>
+		<label>Sports pacemaker S1</label>
+		<labelNoun>It has simple metabolic acceleration systems.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SportsPacemakerSOne</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_BiochemistryPacemakerSTwo</defName>
+		<label>Biochemistry pacemaker S2</label>
+		<labelNoun>It significantly surpasses its counterpart by accelerating life systems.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.35</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_BiochemistryPacemakerSTwo</spawnThingOnRemoved>
+	</HediffDef>
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_RhythmicCardioprosthesisMKOne</defName>
+		<label>Rhythmic Cardioprosthesis MK1</label>
+		<labelNoun>The first MK1 line prosthesis designed to enhance combat quality owners.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.4</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.45</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.3</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_RhythmicCardioprosthesisMKOne</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_FinalPacemakerMKOne</defName>
+		<label>Final pacemaker MK1</label>
+		<labelNoun>The perfect denture in the MK1 range.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_FinalPacemakerMKOne</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SimpleCatheter</defName>
+		<label>Simple сatheter</label>
+		<labelNoun>A catheter that partially simulates the functioning of the kidney.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.5</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SimpleCatheter</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_ImprovedKidneyCatheter</defName>
+		<label>Improved kidney catheter</label>
+		<labelNoun>Advanced kidney replacement catheter.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.7</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_ImprovedKidneyCatheter</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_ArtificialKidney</defName>
+		<label>Artificial kidney</label>
+		<labelNoun>First artificial kidney.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.9</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_ArtificialKidney</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticKidney</defName>
+		<label>Synthetic kidney</label>
+		<labelNoun>First artificial kidney.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SyntheticKidney</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticBodyFiltrationSystem</defName>
+		<label>Synthetic body filtration system</label>
+		<labelNoun>Biochemical filtration system.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SyntheticBodyFiltrationSystem</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticFiltrationSystemMKOne</defName>
+		<label>Synthetic filtration system MK1</label>
+		<labelNoun>The first MK1 body filtration system.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_SyntheticFiltrationSystemMKOne</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_AdvancedMK1FiltrationSystem</defName>
+		<label>Advanced MK1 Filtration System</label>
+		<labelNoun>Better biofilter system MK1.</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>  
+		</stages>
+		<spawnThingOnRemoved>DarkNet_AdvancedMK1FiltrationSystem</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_NanoBotsBasic</defName>
+		<label>NanoBots: Basic Version</label>
+		<labelNoun>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. This version has basic functionality, but has less characteristics than advanced versions and gives immunity to only a small set of diseases.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_NanoBotsBasic</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+				<makeImmuneTo>
+					<li>Flu</li>
+					<li>Plague</li>
+					<li>Malaria</li>
+				</makeImmuneTo>
+				<statOffsets>
+					<ImmunityGainSpeed>0.10</ImmunityGainSpeed>
+					<ToxicSensitivity>-0.10</ToxicSensitivity>
+					<FoodPoisonChance>-0.10</FoodPoisonChance>
+				</statOffsets>
+			</li>  
+
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_NanoBotsStandard</defName>
+		<label>Nanobots: Standard Version</label>
+		<labelNoun>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The standard version provides reliable protection of health and gives immunity to a larger set of dangerous diseases.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_NanoBotsStandard</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.10</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.10</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.10</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+				<makeImmuneTo>
+					<li>GutWorms</li>
+					<li>MuscleParasites</li>
+					<li>WoundInfection</li>
+					<li>Flu</li>
+					<li>Plague</li>
+					<li>Malaria</li>
+					<li>SleepingSickness</li>
+				</makeImmuneTo>
+				<statOffsets>
+					<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+					<ToxicSensitivity>-0.20</ToxicSensitivity>
+					<FoodPoisonChance>-0.20</FoodPoisonChance>
+				</statOffsets>
+			</li>  
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_NanoBotsAdv</defName>
+		<label>NanoBots: Advanced Version</label>
+		<labelNoun>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The advanced version provides reliable protection of health and gives immunity to the entire set of dangerous diseases.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_NanoBotsAdv</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+				<makeImmuneTo>
+					<li>GutWorms</li>
+					<li>MuscleParasites</li>
+					<li>FibrousMechanites</li>
+					<li>SensoryMechanites</li>
+					<li>WoundInfection</li>
+					<li>Flu</li>
+					<li>Plague</li>
+					<li>Malaria</li>
+					<li>SleepingSickness</li>
+				</makeImmuneTo>
+				<statOffsets>
+					<ImmunityGainSpeed>0.30</ImmunityGainSpeed>
+					<ToxicSensitivity>-0.25</ToxicSensitivity>
+					<FoodPoisonChance>-0.25</FoodPoisonChance>
+				</statOffsets>
+			</li>  
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticLung</defName>
+		<label>Synthetic lung</label>
+		<labelNoun>Synthetic lung is a artifical organ that performs the function of a real lung, but with improved parameters.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SyntheticLung</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ToxicSensitivity>-0.05</ToxicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CyberneticLung</defName>
+		<label>Cybernetic lung</label>
+		<labelNoun>Cybernetic lung is a artifical organ that performs the function of a real lung, but with better parameters than a synthetic lung and has a long lifespan.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberneticLung</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.15</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ToxicSensitivity>-0.15</ToxicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_BionicLung</defName>
+		<label>Bionic lung</label>
+		<labelNoun>Bionic lung is a artifical organ that performs the function of a real lung and is the most advanced option among similar prosthetics, as it easily adapts to the body, does not cause sepsis and has a number of improved parameters.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_BionicLung</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.30</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ToxicSensitivity>-0.25</ToxicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
 </Defs>
