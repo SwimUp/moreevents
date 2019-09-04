@@ -220,8 +220,14 @@ Redirecting energy to the control shaft --> OK</DoomsdayTerminal_PowerActivating
 	
 	<Building_TribalCrack_OptionInactive>Impossible to destroy, the selected colonist has no grenades.</Building_TribalCrack_OptionInactive>
 	<Building_TribalCrack_Option>Go down the tunnel and blow it up</Building_TribalCrack_Option>
-	
+
+	<TribalCrack_InfoTitle>Mission started</TribalCrack_InfoTitle>
+	<TribalCrack_InfoDesc>The settler {0} went into the tunnel. Planting a bomb and exploding will take about {1} days. At this time, the settler will be unavailable.</TribalCrack_InfoDesc>
+
 	<Building_TribalCrack_Title>Тribal tunnelers</Building_TribalCrack_Title>
 	<Building_TribalCrack_Desc>{0} destroyed the tunnel connecting you with the Tribal settlement.</Building_TribalCrack_Desc>
+	
+	<Building_TribalCrack_DoDestroyAction>Fill up the hole with your hands</Building_TribalCrack_DoDestroyAction>
+	<Building_TribalCrack_Info>Buried: {0}</Building_TribalCrack_Info>
 	
 </LanguageData>

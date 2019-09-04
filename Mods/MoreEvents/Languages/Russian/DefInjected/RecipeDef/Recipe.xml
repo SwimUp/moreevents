@@ -43,4 +43,8 @@
 	<SmeltingSteel.description>Выплавить сталь, используя железо и уголь.</SmeltingSteel.description>
 	<SmeltingSteel.jobString>Выплавляет сталь</SmeltingSteel.jobString>
 	
+	<SmeltingSteelBig.label>Выплавить сталь x10</SmeltingSteelBig.label>
+	<SmeltingSteelBig.description>Выплавить сталь, используя железо и уголь (x10)</SmeltingSteelBig.description>
+	<SmeltingSteelBig.jobString>Выплавляет сталь</SmeltingSteelBig.jobString>
+	
 </LanguageData>

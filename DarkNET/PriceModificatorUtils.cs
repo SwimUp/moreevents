@@ -9,8 +9,10 @@ namespace DarkNET
 {
     public static class PriceModificatorUtils
     {
-        public static bool TryGetPriceModificator(Thing item, DarkNetTraderDef traderDef, out PriceModificatorDef modificator)
+        public static bool TryGetPriceModificator(Thing useItem, DarkNetTraderDef traderDef, out PriceModificatorDef modificator)
         {
+            Thing item = useItem;
+
             modificator = null;
 
             MinifiedThing minifiedThing = item as MinifiedThing;
@@ -32,6 +34,15 @@ namespace DarkNET
                     foreach (var category in x.LinkedCategory)
                     {
                         if (item.def.thingCategories.Contains(category))
+                            return true;
+                    }
+                }
+
+                if(x.TradeCategories != null && item.def.tradeTags != null)
+                {
+                    foreach (var category in x.TradeCategories)
+                    {
+                        if (item.def.tradeTags.Contains(category))
                             return true;
                     }
                 }

@@ -11,8 +11,6 @@ namespace DarkNET
     [StaticConstructorOnStartup]
     public static class DarkNetPriceUtils
     {
-        public static readonly Texture2D SoldTexture = ContentFinder<Texture2D>.Get("UI/Sold");
-
         public static ThingFilter GetThingFilter(List<DarkNetGood> goods)
         {
             ThingFilter filter = new ThingFilter();
@@ -55,7 +53,7 @@ namespace DarkNET
             }
         }
 
-        public static bool BuyAndDropItem(SellableItemWithModif tradeItem, Map map)
+        public static bool BuyAndDropItem(SellableItemWithModif tradeItem, Map map, bool receiveLetter = true)
         {
             int playerSilver = map.resourceCounter.Silver;
             if (playerSilver >= tradeItem.MarketValue)
@@ -82,7 +80,12 @@ namespace DarkNET
                 IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
                 DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
 
+                if (receiveLetter)
+                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+
                 tradeItem.Item = null;
+
+                map.resourceCounter.UpdateResourceCounts();
 
                 return true;
             }
@@ -93,7 +96,58 @@ namespace DarkNET
             }
         }
 
-        public static bool BuyAndDropItem(Thing tradeItem, int price, Map map)
+        public static bool BuyAndDropItem(SellableItemWithModif tradeItem, int count, Map map, bool receiveLetter = true)
+        {
+            if (count == 0)
+                return false;
+
+            int playerSilver = map.resourceCounter.Silver;
+            int marketValue = tradeItem.MarketValue * count;
+            bool removeItem = tradeItem.Item.stackCount <= count;
+
+            if (playerSilver >= marketValue)
+            {
+                int remaining = marketValue;
+                List<Thing> silver = map.listerThings.ThingsOfDef(ThingDefOf.Silver);
+                for (int i = 0; i < silver.Count; i++)
+                {
+                    Thing item = silver[i];
+
+                    int num = Mathf.Min(remaining, item.stackCount);
+                    item.SplitOff(num).Destroy();
+                    remaining -= num;
+
+                    if (remaining == 0)
+                        break;
+                }
+
+                Thing dropItem = tradeItem.Item.SplitOff(count);
+                List<Thing> toTrade = new List<Thing>
+                {
+                    dropItem
+                };
+
+                IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
+                DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+
+                if (receiveLetter)
+                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+
+                if (removeItem)
+                    tradeItem.Item = null;
+
+                map.resourceCounter.UpdateResourceCounts();
+
+                return true;
+            }
+            else
+            {
+                Messages.Message("CommOption_NonAgressionPact_NotEnoughSilver".Translate(marketValue, playerSilver), MessageTypeDefOf.NeutralEvent, false);
+                return false;
+            }
+        }
+
+        public static bool BuyAndDropItem(Thing tradeItem, int price, Map map, bool receiveLetter = true)
         {
             int playerSilver = map.resourceCounter.Silver;
             if (playerSilver >= price)
@@ -119,6 +173,11 @@ namespace DarkNET
 
                 IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
                 DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+
+                if(receiveLetter)
+                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+
+                map.resourceCounter.UpdateResourceCounts();
 
                 return true;
             }

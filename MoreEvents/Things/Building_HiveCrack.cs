@@ -75,9 +75,12 @@ namespace MoreEvents.Things
             builder.Append(base.GetInspectString());
 
             int count = 0;
-            foreach (var p in spawnedMobs)
-                if (p != null && !p.Dead)
-                    count++;
+            if (spawnedMobs != null)
+            {
+                foreach (var p in spawnedMobs)
+                    if (p != null && !p.Dead)
+                        count++;
+            }
 
             builder.AppendLine($"{Translator.Translate("HiveCreaturesCount")}{count} / {totalMobs}");
             builder.Append($"{Translator.Translate("HiveLevel")}{hiveLevel}");

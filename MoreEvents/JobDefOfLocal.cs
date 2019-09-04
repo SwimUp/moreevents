@@ -25,5 +25,7 @@ namespace MoreEvents
         public static JobDef CarryItemToCokeFurnace;
         public static JobDef SwitchCokeFurnace;
         public static JobDef TakeResultFromCokeFurnace;
+
+        public static JobDef FillUpHole;
     }
 }

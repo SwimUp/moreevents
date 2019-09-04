@@ -71,14 +71,26 @@
     <Compile Include="PriceModificatorFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SellableItemWithModif.cs" />
+    <Compile Include="ThingDefOfLocal.cs" />
+    <Compile Include="TraderComp\DarkNetComp.cs" />
+    <Compile Include="TraderComp\DarkNetComp_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetComp_RogerEdmonson.cs" />
+    <Compile Include="TraderComp\DarkNetProperties.cs" />
+    <Compile Include="TraderComp\DarkNetProperties_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetProperties_RogerEdmonson.cs" />
     <Compile Include="TraderParams.cs" />
     <Compile Include="Traders\Order.cs" />
     <Compile Include="Traders\OrderItem.cs" />
+    <Compile Include="Traders\Order_Art_RogerEdmonson.cs" />
     <Compile Include="Traders\Order_BodyPart_RogerEdmonson.cs" />
     <Compile Include="Traders\RogerEdmonson_OrderWindow.cs" />
+    <Compile Include="Traders\TraderWorker_Eisenberg.cs" />
+    <Compile Include="Traders\TraderWorker_JohnCarver.cs" />
     <Compile Include="Traders\TraderWorker_RogerEdmonson.cs" />
     <Compile Include="PriceModificatorUtils.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Patches\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

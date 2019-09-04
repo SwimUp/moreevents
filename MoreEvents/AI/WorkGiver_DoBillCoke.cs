@@ -145,7 +145,7 @@ namespace RimOverhaul.AI
                         }
                         return RefuelWorkGiverUtility.RefuelJob(pawn, thing, forced);
                     }
-                    if (furnace.ProduceCount > 0 || furnace.Infinity)
+                    if (!furnace.IngredientsReady && (furnace.ProduceCount > 0 || furnace.Infinity))
                     {
                         return TryStartJob(pawn, furnace);
                     }

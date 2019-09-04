@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DarkNET.TraderComp;
+using DarkNET.Traders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,7 @@ namespace DarkNET
 {
     public class DarkNetTraderDef : Def
     {
-        public DarkNetTrader workerClass;
+        public Type workerClass;
 
         public Texture2D IconTexture
         {
@@ -55,9 +57,16 @@ namespace DarkNET
 
         public PriceModificatorFilter AllowedPriceModificatorsFilter;
 
+        public List<DarkNetProperties> comps = new List<DarkNetProperties>();
+
         public override void ResolveReferences()
         {
             base.ResolveReferences();
+
+            foreach(var comp in comps)
+            {
+                comp.ResolveReferences();
+            }
 
             foreach(var good in AvaliableGoods)
             {

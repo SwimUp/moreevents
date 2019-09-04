@@ -34,7 +34,16 @@ namespace DarkNET.Traders
                 {
                     OrderedItem = GenerateItem(trader);
                 }
+                else
+                {
+                    Fail(trader);
+                }
             }
+        }
+
+        public virtual void Fail(DarkNetTrader trader)
+        {
+
         }
 
         public abstract Thing GenerateItem(DarkNetTrader trader);

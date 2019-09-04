@@ -310,6 +310,11 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             TicksToAttack = 0;
             if (settlement.HasMap)
             {
+                if(OffensiveFaction.RelationKindWith(Faction.OfPlayer) != FactionRelationKind.Hostile)
+                {
+                    OffensiveFaction.TryAffectGoodwillWith(Faction.OfPlayer, -100);
+                }
+
                 PawnGroupMakerParms pawnGroupMakerParms = new PawnGroupMakerParms
                 {
                     faction = OffensiveFaction,

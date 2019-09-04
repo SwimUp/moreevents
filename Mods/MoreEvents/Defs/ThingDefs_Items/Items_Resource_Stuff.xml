@@ -121,7 +121,7 @@ A freshly exposed surface of pure copper has a pinkish-orange color. Copper is u
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>3.0</MarketValue>
+			<MarketValue>1.0</MarketValue>
 			<Mass>0.5</Mass>
 			<StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.28</StuffPower_Armor_Blunt>

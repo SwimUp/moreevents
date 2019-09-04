@@ -60,5 +60,11 @@
 		<driverClass>RimOverhaul.AI.JobDriver_TakeItemFromCokeFurnace</driverClass>
 		<reportString>takes thing from a coke furnace</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>FillUpHole</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_FillUpTheHole</driverClass>
+		<reportString>fills the hole with earth</reportString>
+	</JobDef>
 
 </Defs>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace DarkNET
@@ -10,6 +11,9 @@ namespace DarkNET
     {
         public Thing Item;
         public int MarketValue;
+
+        public int CountToTransfer;
+        public string EditBuffer;
 
         public PriceModificatorDef Modificator;
         public SellableItemWithModif()
@@ -22,6 +26,15 @@ namespace DarkNET
             Item = item;
             MarketValue = value;
             Modificator = modificator;
+        }
+
+        public void AddToTransfer(int count)
+        {
+            if (count > Item.stackCount)
+                count = Item.stackCount;
+
+            CountToTransfer = Mathf.Clamp(CountToTransfer + count, 0, Item.stackCount);
+            EditBuffer = CountToTransfer.ToString();
         }
 
         public void ExposeData()

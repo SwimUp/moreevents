@@ -35,6 +35,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\MapGeneratorBlueprints\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="DarkNET">
+      <HintPath>..\DarkNET\bin\Release\DarkNET.dll</HintPath>
+    </Reference>
     <Reference Include="DiaRim">
       <HintPath>..\DiaRim\bin\Release\DiaRim.dll</HintPath>
     </Reference>
