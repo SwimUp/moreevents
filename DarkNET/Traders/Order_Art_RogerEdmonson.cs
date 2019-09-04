@@ -38,6 +38,15 @@ namespace DarkNET.Traders
             return newArt;
         }
 
+        public override void Fail(DarkNetTrader trader)
+        {
+            TraderWorker_RogerEdmonson roger = (TraderWorker_RogerEdmonson)trader;
+
+            Find.LetterStack.ReceiveLetter("Order_BodyPart_RogerEdmonson_FailTitle".Translate(), "Order_Art_RogerEdmonson_FailDesc".Translate(Art.label, Stuff.label), LetterDefOf.NegativeEvent);
+
+            roger.Order = null;
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

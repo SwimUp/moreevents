@@ -38,7 +38,9 @@ namespace RimOverhaul.Things.CokeFurnace
         private float consumeWhenActive = 0f;
         private float consumeWhenInactive = 0;
 
-        public bool Ready => refuelableComp.HasFuel && !SelectedRecipe.ingredients.Any(x => x.GetBaseCount() != ContainedResources[x.FixedIngredient]);
+        public bool Ready => refuelableComp.HasFuel && IngredientsReady;
+
+        public bool IngredientsReady => !SelectedRecipe.ingredients.Any(x => x.GetBaseCount() != ContainedResources[x.FixedIngredient]);
 
         public int ProduceCount = 0;
         public bool Infinity = false;
@@ -70,7 +72,8 @@ namespace RimOverhaul.Things.CokeFurnace
             if (result == null)
                 return;
 
-            GenSpawn.Spawn(result, InteractionCell, Map);
+            GenDrop.TryDropSpawn(result, InteractionCell, Map, ThingPlaceMode.Near, out Thing resultingThing);
+            //GenSpawn.Spawn(result, InteractionCell, Map);
             result = null;
 
             if (!Infinity)
@@ -91,7 +94,8 @@ namespace RimOverhaul.Things.CokeFurnace
                         Thing t = ThingMaker.MakeThing(resource.Key);
                         t.stackCount = resource.Value;
 
-                        GenSpawn.Spawn(t, result, Map);
+                        GenDrop.TryDropSpawn(t, result, Map, ThingPlaceMode.Near, out Thing resultingThing);
+                        //GenSpawn.Spawn(t, result, Map);
                     }
                 }
             }

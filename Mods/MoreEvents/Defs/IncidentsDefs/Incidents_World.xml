@@ -432,7 +432,7 @@
 		<category>Misc</category>
 		<minRefireDays>140</minRefireDays>
 		<baseChance>1.2</baseChance>
-		<earliestDay>135</earliestDay>
+		<earliestDay>200</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 

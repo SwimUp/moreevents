@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using DarkNET.TraderComp;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,7 +105,7 @@ namespace DarkNET.Traders
 
         private float startMarketValue => 1200;
 
-        private float specialGoodMarketValue => 4000;
+        private float specialGoodMarketValue => 6000;
 
         private int lastRaidsEnemy = 0;
 
@@ -116,15 +117,30 @@ namespace DarkNET.Traders
 
         private Vector2 slider = Vector2.zero;
 
-        protected Color bgCardColor = new ColorInt(40, 40, 40).ToColor;
+        protected Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
 
-        private ThingFilter specialGoodsFilter;
+        private ThingFilter specialGoodsFilter => RogerComp.Props.specialGoodsFilter;
 
-        public List<OrderItem> OrderBodyparts;
+        public List<OrderItem> OrderBodyparts => RogerComp.Props.OrderBodyparts;
 
         public Order Order;
 
         private float raidMultiplier = 1.5f;
+
+        public DarkNetComp_RogerEdmonson RogerComp
+        {
+            get
+            {
+                if (rogerComp == null)
+                {
+                    rogerComp = TryGetComp<DarkNetComp_RogerEdmonson>();
+                }
+
+                return rogerComp;
+            }
+        }
+
+        private DarkNetComp_RogerEdmonson rogerComp;
 
         public override void FirstInit()
         {
@@ -369,6 +385,26 @@ namespace DarkNET.Traders
                     DarkNetPriceUtils.FinalizeItem(item, modificator);
                 }
 
+                MinifiedThing minifiedThing = item as MinifiedThing;
+                if (minifiedThing != null)
+                {
+                    var quality = minifiedThing.InnerThing.TryGetComp<CompQuality>();
+                    if (quality != null)
+                    {
+                        quality.SetQuality(QualityUtility.GenerateQualityRandomEqualChance(), ArtGenerationContext.Colony);
+                        itemValue = (int)(itemValue * GetPriceMultiplierForQuality(quality.Quality));
+                    }
+                }
+                else
+                {
+                    var quality = item.TryGetComp<CompQuality>();
+                    if(quality != null)
+                    {
+                        quality.SetQuality(QualityUtility.GenerateQualityRandomEqualChance(), ArtGenerationContext.Colony);
+                        itemValue = (int)(itemValue * GetPriceMultiplierForQuality(quality.Quality));
+                    }
+                }
+
                 stock.Add(new SellableItemWithModif(item, itemValue, modificator));
             }
 
@@ -433,10 +469,45 @@ namespace DarkNET.Traders
             Scribe_Values.Look(ref raidMultiplier, "raidMultiplier");
             Scribe_Deep.Look(ref goodOfTheWeek, "goodOfTheWeek");
             Scribe_Deep.Look(ref Order, "Order");
-            Scribe_Deep.Look(ref specialGoodsFilter, "specialGoodsFilter");
-            Scribe_Collections.Look(ref OrderBodyparts, "OrderBodyparts");
         }
 
+
+        public float GetPriceMultiplierForQuality(QualityCategory qualityCategory)
+        {
+            switch (qualityCategory)
+            {
+                case QualityCategory.Awful:
+                    {
+                        return 0.8f;
+                    }
+                case QualityCategory.Poor:
+                    {
+                        return 0.9f;
+                    }
+                case QualityCategory.Normal:
+                    {
+                        return 1f;
+                    }
+                case QualityCategory.Good:
+                    {
+                        return 1.1f;
+                    }
+                case QualityCategory.Excellent:
+                    {
+                        return 1.2f;
+                    }
+                case QualityCategory.Masterwork:
+                    {
+                        return 1.3f;
+                    }
+                case QualityCategory.Legendary:
+                    {
+                        return 1.5f;
+                    }
+            }
+
+            return 1f;
+        }
         public float GetPriceMultiplier(OrderBodypartGroup group)
         {
             switch(group)

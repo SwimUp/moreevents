@@ -72,6 +72,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SellableItemWithModif.cs" />
     <Compile Include="ThingDefOfLocal.cs" />
+    <Compile Include="TraderComp\DarkNetComp.cs" />
+    <Compile Include="TraderComp\DarkNetComp_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetComp_RogerEdmonson.cs" />
+    <Compile Include="TraderComp\DarkNetProperties.cs" />
+    <Compile Include="TraderComp\DarkNetProperties_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetProperties_RogerEdmonson.cs" />
     <Compile Include="TraderParams.cs" />
     <Compile Include="Traders\Order.cs" />
     <Compile Include="Traders\OrderItem.cs" />

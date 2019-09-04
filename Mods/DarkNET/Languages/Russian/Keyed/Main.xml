@@ -79,4 +79,17 @@
 	<BuyAndDropItem_NotifyDesc>Приобретенный(-е) предмет(-ы) доставлен(-ы). 
 (нажмите, чтобы перейти)</BuyAndDropItem_NotifyDesc>
 
+	<Order_Art_RogerEdmonson_FailDesc>Сообщаю, что мне не удалось найти {0} из {1} для вас. Надеюсь, в следующий раз вам повезет больше.</Order_Art_RogerEdmonson_FailDesc>
+
+	<TraderWorker_Eisenberg_Tab_Alcohol>Алкоголь</TraderWorker_Eisenberg_Tab_Alcohol>
+	<TraderWorker_Eisenberg_Tab_EasyDrugs>Легкие препараты</TraderWorker_Eisenberg_Tab_EasyDrugs>
+	<TraderWorker_Eisenberg_Tab_HeavyDrugs>Тяжелые препараты</TraderWorker_Eisenberg_Tab_HeavyDrugs>
+	<TraderWorker_Eisenberg_Tab_Experimental>Экспериментальное</TraderWorker_Eisenberg_Tab_Experimental>
+	<TraderWorker_Eisenberg_ItemLabel>{0} (доступно на продажу: {1}) (цена за штуку: {2})</TraderWorker_Eisenberg_ItemLabel>
+	<TraderWorker_Eisenberg_Description>Описание: {0}</TraderWorker_Eisenberg_Description>
+	<TraderWorker_Eisenberg_Total>К покупке: {0} штук, Итог: {1}$</TraderWorker_Eisenberg_Total>
+	<DarkNetButtons_GoPriceDown>Снизить цену</DarkNetButtons_GoPriceDown>
+	<TraderWorker_Eisenberg_Tab_Reputation>Репутация: {0}</TraderWorker_Eisenberg_Tab_Reputation>
+	<TraderWorker_Eisenberg_Tab_ReputationInfo> </TraderWorker_Eisenberg_Tab_ReputationInfo>
+
 </LanguageData>

@@ -121,7 +121,7 @@
 	<Quest_KillOrderTargetInfo>Цель: {0}\nНаграда:\n {1}</Quest_KillOrderTargetInfo>
 	
 	<CommOption_NonAgressionPact_Label>Пакт о ненападении ({0})</CommOption_NonAgressionPact_Label>
-	<CommOption_NonAgressionPact_NotEnoughSilver>Недостаточно серебра (требуется {0}, доступно {1})</CommOption_NonAgressionPact_NotEnoughSilver>
+	<CommOption_NonAgressionPact_NotEnoughSilver>Недостаточно серебра (требуется {0}, имеется {1})</CommOption_NonAgressionPact_NotEnoughSilver>
 	<CommOption_NonAgressionPact_SuccessTitle>Пакт подписан</CommOption_NonAgressionPact_SuccessTitle>
 	<CommOption_NonAgressionPact_Success>Пакт о ненападении с фракцией {0} подписан. Уровень переговоров {1} позволил подписать его на {2} дней. В течении этого времени фракция {0} не будет устраивать рейды на ваше поселение.</CommOption_NonAgressionPact_Success>
 	<NonAfressionPackCompTitle>Время пакта закончилось</NonAfressionPackCompTitle>

@@ -77,10 +77,12 @@ namespace DarkNET
 
         private DarkNetTrader InitTrader(DarkNetTraderDef def)
         {
-            def.workerClass.def = def;
-            def.workerClass.FirstInit();
+            DarkNetTrader newTrder = (DarkNetTrader)Activator.CreateInstance(def.workerClass);
 
-            return def.workerClass;
+            newTrder.def = def;
+            newTrder.FirstInit();
+
+            return newTrder;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace DarkNET
             MinifiedThing minifiedThing = item as MinifiedThing;
             if (minifiedThing != null)
             {
-                useItem = minifiedThing.InnerThing;
+                item = minifiedThing.InnerThing;
             }
 
             if (traderDef.AllowedPriceModificatorsFilter == null || traderDef.AllowedPriceModificatorsFilter.AllowedPriceModificators == null)

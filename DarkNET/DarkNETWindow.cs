@@ -42,6 +42,7 @@ namespace DarkNET
                 if (trader.OnlineEveryTime || trader.Online)
                 {
                     onlineTraders.Add(trader);
+                    trader.WindowOpen();
                 }
             }
             traderListSlider = onlineTraders.Count * 90;
@@ -69,7 +70,7 @@ namespace DarkNET
             }
             Widgets.EndScrollView();
 
-            Rect mainTraderRect = new Rect(112, 40, 990, 740);
+            Rect mainTraderRect = new Rect(112, 40, 950, 674);
             if (currentTrader != null)
             {
                 DrawTraderInfo(currentTrader);

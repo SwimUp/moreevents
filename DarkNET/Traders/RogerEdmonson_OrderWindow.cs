@@ -143,7 +143,7 @@ namespace DarkNET.Traders
         {
             price -= prepayment;
 
-            Order_BodyPart_RogerEdmonson order = new Order_BodyPart_RogerEdmonson(chance, price, delay, group);
+            Order_BodyPart_RogerEdmonson order = new Order_BodyPart_RogerEdmonson(chance / 100, price, delay, group);
             trader.Order = order;
 
             Find.LetterStack.ReceiveLetter("MakeBodyPartOrder_Title".Translate(), "MakeBodyPartOrder_Desc".Translate($"{group}_group".Translate(), delay), LetterDefOf.PositiveEvent);
@@ -153,7 +153,7 @@ namespace DarkNET.Traders
         {
             price -= prepayment;
 
-            Order_Art_RogerEdmonson order = new Order_Art_RogerEdmonson(chance, price, delay, artType, artStuff);
+            Order_Art_RogerEdmonson order = new Order_Art_RogerEdmonson(chance / 100, price, delay, artType, artStuff);
             trader.Order = order;
 
             Find.LetterStack.ReceiveLetter("MakeBodyPartOrder_Title".Translate(), "MakeBodyPartOrder_Desc".Translate($"{group}_group".Translate(), delay), LetterDefOf.PositiveEvent);
