@@ -183,8 +183,11 @@ namespace DarkNET.Traders
                     Reputation += (item.CountToTransfer * item.MarketValue) * 0.004f;
                     needRecalculate = true;
 
-                    if (item.CountToTransfer > item.Item.stackCount)
-                        item.AddToTransfer(item.Item.stackCount);
+                    if (item.Item != null)
+                    {
+                        if (item.CountToTransfer > item.Item.stackCount)
+                            item.AddToTransfer(item.Item.stackCount);
+                    }
 
                     Text.Anchor = TextAnchor.UpperLeft;
                     return;
