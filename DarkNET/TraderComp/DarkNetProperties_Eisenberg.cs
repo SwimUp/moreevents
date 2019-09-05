@@ -14,6 +14,16 @@ namespace DarkNET.TraderComp
         public IntRange CountRange;
 
         public FloatRange ValueRange;
+
+        public List<DarkNetGood> Goods;
+
+        public void ResolveReferences()
+        {
+            foreach(var good in Goods)
+            {
+                good.ThingFilter.ResolveReferences();
+            }
+        }
     }
 
     public class DarkNetProperties_Eisenberg : DarkNetProperties
@@ -23,6 +33,16 @@ namespace DarkNET.TraderComp
         public DarkNetProperties_Eisenberg()
         {
             compClass = typeof(DarkNetComp_Eisenberg);
+        }
+
+        public override void ResolveReferences()
+        {
+            base.ResolveReferences();
+
+            foreach(var setting in DrugStockSettings)
+            {
+                setting.ResolveReferences();
+            }
         }
     }
 }

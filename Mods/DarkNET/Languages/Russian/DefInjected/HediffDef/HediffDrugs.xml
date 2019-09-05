@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <AmitaHediff.label>необычная бодрость</AmitaHediff.label>
+  <AmitaHediff.labelNoun>необычная бодрость</AmitaHediff.labelNoun>
+  
+  <AmitaAddiction.label>зависимость от амиты</AmitaAddiction.label>
+  <AmitaAddiction.stages.withdrawal.label>ломка</AmitaAddiction.stages.withdrawal.label>
+  
+  <AmitaTolerance.label>толерантность к Амите</AmitaTolerance.label>
+  <AmitaTolerance.stages.small-0.label>небольшая</AmitaTolerance.stages.small-0.label>
+  <AmitaTolerance.stages.small-1.label>небольшая</AmitaTolerance.stages.small-1.label>
+  <AmitaTolerance.stages.large.label>средняя</AmitaTolerance.stages.large.label>
+  <AmitaTolerance.stages.massive.label>сильная</AmitaTolerance.stages.massive.label>
+  
+  
+</LanguageData>

@@ -297,45 +297,20 @@ namespace DiaRim
                     Messages.Message("added", MessageTypeDefOf.NeutralEvent, false);
                 }
 
-                if (listing.ButtonText("Generate random darknet bodypart"))
+                if (listing.ButtonText("Spawn 100k silver"))
                 {
-                    ThingDef thingDef = new ThingDef();
-                    thingDef.modContentPack = DefDatabase<ThingDef>.AllDefs.First().modContentPack;
-                    thingDef.defName = "supatest";
-                    thingDef.thingClass = typeof(ThingWithComps);
-                    thingDef.category = ThingCategory.Item;
-                    thingDef.useHitPoints = true;
-                    thingDef.selectable = true;
-                    thingDef.statBases = new List<StatModifier>();
-                    thingDef.statBases.Add(new StatModifier
+                    DebugTools.curTool = new DebugTool("SUPA SPAWN ZULUL", delegate
                     {
-                        stat = StatDefOf.MaxHitPoints,
-                        value = 10000
-                    });
-                    thingDef.statBases.Add(new StatModifier
-                    {
-                        stat = StatDefOf.Flammability,
-                        value = 0.7f
-                    });
-                    thingDef.statBases.Add(new StatModifier
-                    {
-                        stat = StatDefOf.Beauty,
-                        value = 100
-                    });
-                    thingDef.altitudeLayer = AltitudeLayer.Item;
-                    thingDef.tickerType = TickerType.Never;
-                    thingDef.alwaysHaulable = true;
-                    thingDef.isTechHediff = true;
-                    thingDef.graphicData = new GraphicData();
-                    thingDef.graphicData.texPath = "Things/Item/Health/HealthItemNatural";
-                    thingDef.graphicData.graphicClass = typeof(Graphic_Single);
-                    thingDef.graphicData.drawSize = new Vector2(1, 1);
+                        Thing t = ThingMaker.MakeThing(ThingDefOf.Silver);
+                        t.stackCount = 1000000;
 
-                    DefGenerator.AddImpliedDef<ThingDef>(thingDef);
+                        GenDrop.TryDropSpawn(t, UI.MouseCell(), Find.CurrentMap, ThingPlaceMode.Near, out Thing resultThing);
+                    });
                 }
 
                 listing.End();
             }
+
         }
 
         private string GetIncidentTargetLabel(IIncidentTarget target)

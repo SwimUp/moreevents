@@ -118,9 +118,9 @@ namespace DarkNET.Traders
             DrawItems(tab, rect2);
 
             Text.Font = GameFont.Medium;
-            Rect additionalInfoRect = new Rect(260, 0, 400, 30);
-            Widgets.Label(additionalInfoRect, "TraderWorker_Eisenberg_Tab_Reputation".Translate(Mathf.RoundToInt(Reputation)));
-            TooltipHandler.TipRegion(additionalInfoRect, "TraderWorker_Eisenberg_Tab_ReputationInfo");
+            Rect additionalInfoRect = new Rect(270, 0, 400, 30);
+            Widgets.Label(additionalInfoRect, "TraderWorker_Eisenberg_Tab_Reputation".Translate(Mathf.RoundToInt(Reputation), discount.ToString("f2")));
+            TooltipHandler.TipRegion(additionalInfoRect, "TraderWorker_Eisenberg_Tab_ReputationInfo".Translate());
             Text.Font = GameFont.Small;
         }
 
@@ -180,7 +180,7 @@ namespace DarkNET.Traders
                     if(item.Item == null)
                         itemsList.Remove(item);
 
-                    Reputation += (item.CountToTransfer * item.MarketValue) * 0.004f;
+                    Reputation += (item.CountToTransfer * item.MarketValue) * 0.0015f;
                     needRecalculate = true;
 
                     if (item.Item != null)
@@ -194,8 +194,15 @@ namespace DarkNET.Traders
                 }
             }
             addX += 205;
-            if (GUIUtils.DrawCustomButton(new Rect(rect.x + addX, rect.y + 165, 200, 25), "DarkNetButtons_GoPriceDown".Translate(), item.CountToTransfer > 0 ? Color.white : Color.gray))
+            if (GUIUtils.DrawCustomButton(new Rect(rect.x + addX, rect.y + 165, 200, 25), "DarkNetButtons_GoPriceDown".Translate(), (Reputation > 10 || !item.PriceReduced) ? Color.white : Color.gray, "DarkNetButtons_GoPriceDownInfo".Translate()))
             {
+                if (item.PriceReduced || Reputation < 10)
+                    return;
+
+                Reputation -= 10;
+
+                item.PriceReduced = true;
+                item.MarketValue = (int)(item.MarketValue * 0.7f);
             }
             Text.Anchor = TextAnchor.UpperLeft;
 
@@ -256,7 +263,7 @@ namespace DarkNET.Traders
                 foreach(var item in cat.Items)
                 {
                     item.MarketValue = (int)((item.MarketValue * Character.Greed) * GetPriceModificatorByTechLevel(item.Item.def.techLevel));
-                    item.MarketValue -= (int)(item.MarketValue * tmpDiscount);
+                    item.MarketValue -= (int)(item.MarketValue * tmpDiscount / 100);
                 }
             }
 
@@ -269,19 +276,24 @@ namespace DarkNET.Traders
 
             ThingSetMaker_MarketValue maker = new ThingSetMaker_MarketValue();
             ThingSetMakerParams parms = default;
-            parms.filter = DarkNetPriceUtils.GetThingFilter(def.AvaliableGoods);
 
             float tmpDiscount = discount;
 
             foreach (var cat in drugs)
             {
-                DrugSettings settings = Comp.Props.DrugStockSettings.First(x => x.Tab == Tab.Alcohol);
+                DrugSettings settings = Comp.Props.DrugStockSettings.First(x => x.Tab == cat.Tab);
 
                 int itemsCount = settings.CountRange.RandomInRange;
                 float valueRange = settings.ValueRange.RandomInRange * itemsCount;
 
                 parms.totalMarketValueRange = new FloatRange(valueRange, valueRange);
                 parms.countRange = new IntRange(itemsCount, itemsCount);
+
+                ThingFilter filter = DarkNetPriceUtils.GetThingFilter(settings.Goods);
+                if (filter.AllowedDefCount == 0)
+                    continue;
+
+                parms.filter = filter;
 
                 maker.fixedParams = parms;
 
@@ -292,7 +304,7 @@ namespace DarkNET.Traders
                     if (!TryMerge(item, cat.Items))
                     {
                         int marketValue = (int)((item.MarketValue * Character.Greed) * GetPriceModificatorByTechLevel(item.def.techLevel));
-                        marketValue -= (int)(marketValue * tmpDiscount);
+                        marketValue -= (int)(marketValue * tmpDiscount / 100);
 
                         SellableItemWithModif newItem = new SellableItemWithModif(item, marketValue, null);
 

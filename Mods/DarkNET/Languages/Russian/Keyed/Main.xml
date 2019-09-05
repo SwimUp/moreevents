@@ -88,8 +88,11 @@
 	<TraderWorker_Eisenberg_ItemLabel>{0} (доступно на продажу: {1}) (цена за штуку: {2})</TraderWorker_Eisenberg_ItemLabel>
 	<TraderWorker_Eisenberg_Description>Описание: {0}</TraderWorker_Eisenberg_Description>
 	<TraderWorker_Eisenberg_Total>К покупке: {0} штук, Итог: {1}$</TraderWorker_Eisenberg_Total>
-	<DarkNetButtons_GoPriceDown>Снизить цену</DarkNetButtons_GoPriceDown>
-	<TraderWorker_Eisenberg_Tab_Reputation>Репутация: {0}</TraderWorker_Eisenberg_Tab_Reputation>
-	<TraderWorker_Eisenberg_Tab_ReputationInfo> </TraderWorker_Eisenberg_Tab_ReputationInfo>
+	<DarkNetButtons_GoPriceDown>Поторговаться</DarkNetButtons_GoPriceDown>
+	<TraderWorker_Eisenberg_Tab_Reputation>Репутация: {0}, скидка {1}%</TraderWorker_Eisenberg_Tab_Reputation>
+	<TraderWorker_Eisenberg_Tab_ReputationInfo>Репутация отражает то, как относится торговец к вам. Каждая единица репутации дает скидку на товары (для обновления цен нужно повторно открыть окно даркнета)
+
+Репутацию можно заработать покупая товары у торговца и выполняя его задания.</TraderWorker_Eisenberg_Tab_ReputationInfo>
+	<DarkNetButtons_GoPriceDownInfo>Снижение цены позволит снизить стоимость одной единицы определенного товара в ущерб репутации.</DarkNetButtons_GoPriceDownInfo>
 
 </LanguageData>

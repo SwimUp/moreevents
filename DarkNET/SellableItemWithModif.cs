@@ -15,6 +15,8 @@ namespace DarkNET
         public int CountToTransfer;
         public string EditBuffer;
 
+        public bool PriceReduced;
+
         public PriceModificatorDef Modificator;
         public SellableItemWithModif()
         {
@@ -41,6 +43,7 @@ namespace DarkNET
         {
             Scribe_Deep.Look(ref Item, "Item");
             Scribe_Values.Look(ref MarketValue, "MarketValue");
+            Scribe_Values.Look(ref PriceReduced, "PriceReduced");
             Scribe_Defs.Look(ref Modificator, "Modificator");
         }
     }

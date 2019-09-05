@@ -25,6 +25,25 @@ namespace DarkNET
             return Widgets.ButtonInvisible(rect);
         }
 
+        public static bool DrawCustomButton(Rect rect, string label, Color textColor, string toolTip)
+        {
+            if(Mouse.IsOver(rect))
+            {
+                TooltipHandler.TipRegion(rect, toolTip);
+            }
+
+            GUI.color = textColor;
+            Widgets.Label(rect, label);
+            GUI.color = CommCardBGColor;
+            Widgets.DrawHighlight(rect);
+            GUI.color = CommBorderColor;
+            Widgets.DrawBox(rect);
+            GUI.color = Color.white;
+            Widgets.DrawHighlightIfMouseover(rect);
+            return Widgets.ButtonInvisible(rect);
+        }
+
+
         public static void DrawLineHorizontal(float x, float y, float length, Color color)
         {
             GUI.color = color;

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<Amita.label>Напиток Амита</Amita.label>
+	<Amita.description>В напитке сочетаются известные ягодные стимуляторы, а также некоторые привезенные из далеких миров.
+Это хорошо бодрит, но вызывает мгновенную зависимость</Amita.description>
+  <Amita.ingestible.ingestCommandString>Выпить амиту</Amita.ingestible.ingestCommandString>
+  <Amita.ingestible.ingestReportString>Пьет амиту</Amita.ingestible.ingestReportString>
+
+</LanguageData>

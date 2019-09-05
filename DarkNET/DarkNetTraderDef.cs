@@ -68,9 +68,12 @@ namespace DarkNET
                 comp.ResolveReferences();
             }
 
-            foreach(var good in AvaliableGoods)
+            if (AvaliableGoods != null)
             {
-                good.ThingFilter.ResolveReferences();
+                foreach (var good in AvaliableGoods)
+                {
+                    good.ThingFilter.ResolveReferences();
+                }
             }
 
             if(AllowedPriceModificatorsFilter != null)
