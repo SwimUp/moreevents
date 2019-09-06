@@ -29,10 +29,14 @@ namespace QuestRim
             if (QuestsCount < max)
                 return false;
 
+            Log.Message($"Quest count (total): {QuestsCount}, trying find min: {min} and {max}");
+
             if (min < 0)
                 return false;
 
             int count = Rand.Range(min, max);
+
+            Log.Message($"Quest count (total): {QuestsCount}, quest count {count}");
 
             return TryGiveRandomQuestTo(pawn, count);
         }
@@ -47,19 +51,32 @@ namespace QuestRim
             try
             {
                 if (pawn == null)
+                {
+                    Log.Error($"Error: pawn is null");
                     return false;
+                }
 
                 Dictionary<IncidentDef, int> lastFireTicks = Find.World.StoryState.lastFireTicks;
 
                 if (lastFireTicks == null)
+                {
+                    Log.Warning($"Error: lastFireTicks world is null");
                     return false;
+                }
 
                 int ticksGame = Find.TickManager.TicksGame;
 
+                Log.Message($"Ticks game: {ticksGame}");
+
                 List<QuestDef> allQuests = DefDatabase<QuestDef>.AllDefsListForReading;
 
+                Log.Message($"All QuestDef {allQuests}, giveCount: {giveCount}");
+
                 if (allQuests.Count < giveCount)
+                {
+                    Log.Warning($"All QuestDef < giveCount, exit");
                     return false;
+                }
 
                 List<QuestDef> allQuestsToFire = new List<QuestDef>();
 
@@ -68,6 +85,8 @@ namespace QuestRim
 
                 foreach (var potentialQuest in allQuests)
                 {
+                    Log.Message($"Check --> {potentialQuest.defName}");
+
                     if (potentialQuest.Incident == null)
                     {
                         continue;
@@ -76,32 +95,50 @@ namespace QuestRim
                     if (lastFireTicks.TryGetValue(potentialQuest.Incident, out int value))
                     {
                         float num = (float)(ticksGame - value) / 60000f;
+                        Log.Message($"Last fire days: {num}");
                         if (num < potentialQuest.Incident.minRefireDays)
+                        {
+                            Log.Message($"The minimum number of days has not passed {potentialQuest.Incident.minRefireDays}, skip");
                             continue;
+                        }
                     }
 
                     if (QuestsManager.Communications.Quests.Any(q => q.RelatedQuestDef == potentialQuest && q.Faction == pawn.Faction))
+                    {
+                        Log.Message($"Same quest from same faction already active, skip");
                         continue;
+                    }
 
                     if (questPawn != null)
                     {
                         if (questPawn.Quests.Any(q => q.RelatedQuestDef == potentialQuest))
+                        {
+                            Log.Message($"This questpawn already have this quest, skip");
                             continue;
+                        }
                     }
 
                     allQuestsToFire.Add(potentialQuest);
+                    Log.Message($"Added to random list");
                 }
 
                 if (allQuestsToFire.Count == 0)
+                {
+                    Log.Message($"No quests to choose, end");
                     return false;
+                }
 
                 for (int i = 0; i < giveCount; i++)
                 {
                     if (allQuestsToFire.Count == 0)
+                    {
+                        Log.Message($"No quests to choose, end in count {i}");
                         return true;
+                    }
 
                     if (allQuestsToFire.TryRandomElementByWeight(w => w.Commonality, out QuestDef result))
                     {
+                        Log.Message($"Selected quest: {result.defName}");
                         TryGiveQuestTo(pawn, result);
                         allQuestsToFire.Remove(result);
                     }
@@ -133,6 +170,8 @@ namespace QuestRim
 
                 return true;
             }
+
+            Log.Message($"Conditions for the selected quests are not met");
 
             return false;
         }
