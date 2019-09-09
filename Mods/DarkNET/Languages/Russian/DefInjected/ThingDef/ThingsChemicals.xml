@@ -7,4 +7,9 @@
   <Amita.ingestible.ingestCommandString>Выпить амиту</Amita.ingestible.ingestCommandString>
   <Amita.ingestible.ingestReportString>Пьет амиту</Amita.ingestible.ingestReportString>
 
+	<Ingalin.label>Ингалин</Ingalin.label>
+	<Ingalin.description>Данное лекарственное средство входит в группу комплексных фармацевтических веществ, включая сульфаниламиды, которые призваны воздействовать на отделы респираторной системы, в частности антисептиков для лечения заболеваний горла и носоглотки. Не вызывает зависимости. Его целью является лечение болезней носоглотки. При длительном примемении способен восстановить утеряный слух, обоняние и зрение, благодаря высокой регенерации.</Ingalin.description>
+  <Ingalin.ingestible.ingestCommandString>Употребить ингалин</Ingalin.ingestible.ingestCommandString>
+  <Ingalin.ingestible.ingestReportString>употребляет ингалин</Ingalin.ingestible.ingestReportString>
+
 </LanguageData>

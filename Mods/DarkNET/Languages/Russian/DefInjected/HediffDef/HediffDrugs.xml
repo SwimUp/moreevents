@@ -13,5 +13,7 @@
   <AmitaTolerance.stages.large.label>средняя</AmitaTolerance.stages.large.label>
   <AmitaTolerance.stages.massive.label>сильная</AmitaTolerance.stages.massive.label>
   
+  <IngalinHediff.label>воздействие ингалина</IngalinHediff.label>
+  <IngalinHediff.labelNoun>воздействие ингалина</IngalinHediff.labelNoun>
   
 </LanguageData>

@@ -65,6 +65,10 @@
     <Compile Include="DarkNETWindow.cs" />
     <Compile Include="Dialog_DarkNetTraderCard.cs" />
     <Compile Include="GUIUtils.cs" />
+    <Compile Include="Hediffs\CompOverdose.cs" />
+    <Compile Include="Hediffs\CompProperties_Overdose.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_RestoreBodypart.cs" />
+    <Compile Include="Hediffs\HediffComp_RestoreBodypart.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />
     <Compile Include="Jobs\JobDriver_GoToDarkNet.cs" />
     <Compile Include="PriceModificatorDef.cs" />
