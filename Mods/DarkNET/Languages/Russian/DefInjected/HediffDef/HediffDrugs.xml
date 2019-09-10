@@ -1,19 +1,46 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <AmitaHediff.label>необычная бодрость</AmitaHediff.label>
-  <AmitaHediff.labelNoun>необычная бодрость</AmitaHediff.labelNoun>
-  
-  <AmitaAddiction.label>зависимость от амиты</AmitaAddiction.label>
-  <AmitaAddiction.stages.withdrawal.label>ломка</AmitaAddiction.stages.withdrawal.label>
-  
-  <AmitaTolerance.label>толерантность к Амите</AmitaTolerance.label>
-  <AmitaTolerance.stages.small-0.label>небольшая</AmitaTolerance.stages.small-0.label>
-  <AmitaTolerance.stages.small-1.label>небольшая</AmitaTolerance.stages.small-1.label>
-  <AmitaTolerance.stages.large.label>средняя</AmitaTolerance.stages.large.label>
-  <AmitaTolerance.stages.massive.label>сильная</AmitaTolerance.stages.massive.label>
-  
-  <IngalinHediff.label>воздействие ингалина</IngalinHediff.label>
-  <IngalinHediff.labelNoun>воздействие ингалина</IngalinHediff.labelNoun>
-  
+
+	<AmitaHediff.label>необычная бодрость</AmitaHediff.label>
+	<AmitaHediff.labelNoun>необычная бодрость</AmitaHediff.labelNoun>
+
+	<AmitaAddiction.label>зависимость от амиты</AmitaAddiction.label>
+	<AmitaAddiction.stages.withdrawal.label>ломка</AmitaAddiction.stages.withdrawal.label>
+
+	<AmitaTolerance.label>толерантность к Амите</AmitaTolerance.label>
+	<AmitaTolerance.stages.small-0.label>небольшая</AmitaTolerance.stages.small-0.label>
+	<AmitaTolerance.stages.small-1.label>небольшая</AmitaTolerance.stages.small-1.label>
+	<AmitaTolerance.stages.large.label>средняя</AmitaTolerance.stages.large.label>
+	<AmitaTolerance.stages.massive.label>сильная</AmitaTolerance.stages.massive.label>
+
+	<IngalinHediff.label>воздействие ингалина</IngalinHediff.label>
+	<IngalinHediff.labelNoun>воздействие ингалина</IngalinHediff.labelNoun>
+
+	<IbuprofienHediff.label>Ибупрофиен</IbuprofienHediff.label>
+	<IbuprofienHediff.labelNoun>Ибупрофиен</IbuprofienHediff.labelNoun>
+	<IbuprofienHediff.stages.I.label>Ибупрофиен I</IbuprofienHediff.stages.I.label>
+	<IbuprofienHediff.stages.II.label>Ибупрофиен II</IbuprofienHediff.stages.II.label>
+	<IbuprofienHediff.stages.III.label>Ибупрофиен III</IbuprofienHediff.stages.III.label>
+
+	<MagnitorHediff.label>воздействие магнитора</MagnitorHediff.label>
+	<MagnitorHediff.labelNoun>Постэффект магнитора</MagnitorHediff.labelNoun>
+
+	<MagnitorHealHediff.label>заживляющее воздействие магнитора</MagnitorHealHediff.label>
+	<MagnitorHealHediff.labelNoun>Заживляющий эффект магнитора</MagnitorHealHediff.labelNoun>
+
+	<AbsorbentCarbonHediff.label>Активированный уголь</AbsorbentCarbonHediff.label>
+	<AbsorbentCarbonHediff.labelNoun>Активированный уголь</AbsorbentCarbonHediff.labelNoun>
+
+	<SpasmonitisHediff.label>Расслабление мышц</SpasmonitisHediff.label>
+	<SpasmonitisHediff.labelNoun>Расслабление мышц</SpasmonitisHediff.labelNoun>
+
+	<SpasmonitisAddiction.label>зависимость от спазмонита</SpasmonitisAddiction.label>
+	<SpasmonitisAddiction.stages.withdrawal.label>ломка</SpasmonitisAddiction.stages.withdrawal.label>
+
+	<SpasmonitisTolerance.label>толерантность к спазмониту</SpasmonitisTolerance.label>
+	<SpasmonitisTolerance.stages.small-0.label>небольшая</SpasmonitisTolerance.stages.small-0.label>
+	<SpasmonitisTolerance.stages.small-1.label>небольшая</SpasmonitisTolerance.stages.small-1.label>
+	<SpasmonitisTolerance.stages.large.label>средняя</SpasmonitisTolerance.stages.large.label>
+	<SpasmonitisTolerance.stages.massive.label>сильная</SpasmonitisTolerance.stages.massive.label>
+
 </LanguageData>

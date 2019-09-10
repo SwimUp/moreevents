@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <IngalinThought.stages.exposure_to_inhalin.label>бодриновая ломка</IngalinThought.stages.exposure_to_inhalin.label>
-  <IngalinThought.stages.exposure_to_inhalin.description>Ингалин воздействует на мой организм. Мне дурно.</IngalinThought.stages.exposure_to_inhalin.description>
+  <IngalinHediff.stages.exposure_to_inhalin.label>ингалиновая ломка</IngalinHediff.stages.exposure_to_inhalin.label>
+  <IngalinHediff.stages.exposure_to_inhalin.description>Ингалин воздействует на мой организм. Мне дурно.</IngalinHediff.stages.exposure_to_inhalin.description>
+  
+  <IbuprofienHediff.stages.Easy_ibuprofien_effect.label>Легкий эффект ибупрофиена</IbuprofienHediff.stages.Easy_ibuprofien_effect.label>
+  <IbuprofienHediff.stages.Easy_ibuprofien_effect.description>Ибупрофиен слабо влияет на моё сознание</IbuprofienHediff.stages.Easy_ibuprofien_effect.description>
+  <IbuprofienHediff.stages.Medium_ibuprofien_effect.label>Средний эффект ибупрофиена</IbuprofienHediff.stages.Medium_ibuprofien_effect.label>
+  <IbuprofienHediff.stages.Medium_ibuprofien_effect.description>Ибупрофиен достаточно сильно влияет на моё сознание</IbuprofienHediff.stages.Medium_ibuprofien_effect.description>
+  <IbuprofienHediff.stages.Heavy_ibuprofien_effect.label>Сильный эффект ибупрофиена</IbuprofienHediff.stages.Heavy_ibuprofien_effect.label>
+  <IbuprofienHediff.stages.Heavy_ibuprofien_effect.description>Ибупрофиен сильно влияет на моё сознание</IbuprofienHediff.stages.Heavy_ibuprofien_effect.description>
+
   
 </LanguageData>

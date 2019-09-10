@@ -4,12 +4,33 @@
 	<Amita.label>Напиток Амита</Amita.label>
 	<Amita.description>В напитке сочетаются известные ягодные стимуляторы, а также некоторые привезенные из далеких миров.
 Это хорошо бодрит, но вызывает мгновенную зависимость</Amita.description>
-  <Amita.ingestible.ingestCommandString>Выпить амиту</Amita.ingestible.ingestCommandString>
-  <Amita.ingestible.ingestReportString>Пьет амиту</Amita.ingestible.ingestReportString>
+	<Amita.ingestible.ingestCommandString>Выпить амиту</Amita.ingestible.ingestCommandString>
+	<Amita.ingestible.ingestReportString>Пьет амиту</Amita.ingestible.ingestReportString>
 
 	<Ingalin.label>Ингалин</Ingalin.label>
 	<Ingalin.description>Данное лекарственное средство входит в группу комплексных фармацевтических веществ, включая сульфаниламиды, которые призваны воздействовать на отделы респираторной системы, в частности антисептиков для лечения заболеваний горла и носоглотки. Не вызывает зависимости. Его целью является лечение болезней носоглотки. При длительном примемении способен восстановить утеряный слух, обоняние и зрение, благодаря высокой регенерации.</Ingalin.description>
-  <Ingalin.ingestible.ingestCommandString>Употребить ингалин</Ingalin.ingestible.ingestCommandString>
-  <Ingalin.ingestible.ingestReportString>употребляет ингалин</Ingalin.ingestible.ingestReportString>
+	<Ingalin.ingestible.ingestCommandString>Употребить ингалин</Ingalin.ingestible.ingestCommandString>
+	<Ingalin.ingestible.ingestReportString>употребляет ингалин</Ingalin.ingestible.ingestReportString>
+
+	<Ibuprofien.label>Ибупрофиен</Ibuprofien.label>
+	<Ibuprofien.description>Данный препарат относится к антипсихотической группе лексредств. Его эффективность определена влиянием на различные рецепторы, понижая психочувствительность и маторику. Препарат помогает поддерживать удовлетворительное психическое состояние, не вызывая сильного привыкания, но со временем вызывая деградацию мышечной ткани. При длительном потреблении, Ибупрофиен способен вызвать различные формы заболеваний мозга и глаз.</Ibuprofien.description>	
+	<Ibuprofien.ingestible.ingestCommandString>Употребить ибупрофиен</Ibuprofien.ingestible.ingestCommandString>
+	<Ibuprofien.ingestible.ingestReportString>употребляет ибупрофиен</Ibuprofien.ingestible.ingestReportString>
+
+	<Magnitor.label>Магнитор</Magnitor.label>
+	<Magnitor.description>Комбинированное лекарственное средство, при этом входящие в его состав ацетилсалициловая кислота и гидроксид магния способствуют купированию кровотечения, что используется в медицине для лечения заболеваний сердечно-сосудистой системы. Способен быстро остановить кровотечения при применении, однако это существенно выматывает организм. При применении колонист будет находиться без сознания от 1 до 3 дней, однако препарат не вызывает привыкания и побочных эффектов, помимо уменьшения фильтрации крови пока колонист без сознания. В случае применения на колонисте, у которого установлен протез сердца, качества ниже чем натуральное, вызывает смерть.</Magnitor.description>	
+	<Magnitor.ingestible.ingestCommandString>Употребить магнитор</Magnitor.ingestible.ingestCommandString>
+	<Magnitor.ingestible.ingestReportString>употребляет магнитор</Magnitor.ingestible.ingestReportString>
+
+	<AbsorbentCarbon.label>Активированный уголь</AbsorbentCarbon.label>
+	<AbsorbentCarbon.description>Смесь из природного угля, обработанного в химической лабаратории и преобразованного в таблетки. Благодаря природным очищающим свойствам, способен, при использовании останавливать пищевые отравления.</AbsorbentCarbon.description>	
+
+	<Spasmonitis.label>Спазмонит</Spasmonitis.label>
+	<Spasmonitis.description>Данное лекарственное средство относится к группе спазмалитиков, применяемых для лечения мышечной боли.
+Основной активный компонент – дротаверина гидрохлорид. Обладает сильным действием в качестве спазмалитика. Влияет на сократительную способность гладких мышц, вызывая их расслабление. Вызывает среднюю зависимость, при применении владелец не ощущает боли в течении времени действия препарата. 
+Тем не менее фильтрация крови снижается. Несколько приемов препарата способны остановить воздействие болезней кишечного тракта, таких как механические черви. 
+Для этого нужно принять 5 таблеток лекарства, что может вызвать передозировку и смерть.</Spasmonitis.description>	
+	<Spasmonitis.ingestible.ingestCommandString>Употребить спазмонит</Spasmonitis.ingestible.ingestCommandString>
+	<Spasmonitis.ingestible.ingestReportString>употребляет спазмонит</Spasmonitis.ingestible.ingestReportString>
 
 </LanguageData>
