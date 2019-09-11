@@ -154,9 +154,12 @@ namespace QuestRim
 
         public static bool TryGiveQuestTo(Pawn pawn, QuestDef questDef)
         {
+            Log.Message($"Trying give {questDef.defName} to {pawn}");
             Quest quest = (Quest)Activator.CreateInstance(questDef.Quest);
             if(quest.TryGiveQuestTo(pawn, questDef))
             {
+                Log.Message($"Conditions ok");
+
                 FiringIncident inc = new FiringIncident
                 {
                     def = questDef.Incident,
@@ -167,6 +170,8 @@ namespace QuestRim
                     }
                 };
                 Find.World.StoryState.Notify_IncidentFired(inc);
+
+                Log.Message($"end");
 
                 return true;
             }
