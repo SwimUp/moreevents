@@ -79,11 +79,13 @@ namespace DarkNET.Traders
 
             foreach(Tab cat in Enum.GetValues(typeof(Tab)))
             {
-                drugs.Add(new CategoryDrug
+                CategoryDrug catDrug = new CategoryDrug
                 {
                     Tab = cat,
                     Items = new List<SellableItemWithModif>()
-                });
+                };
+
+                drugs.Add(catDrug);
             }
         }
 
@@ -221,7 +223,7 @@ namespace DarkNET.Traders
             rect.x += 27;
             if (GUIUtils.DrawCustomButton(rect, "-5", Color.white))
             {
-                item.AddToTransfer(-10);
+                item.AddToTransfer(-5);
             }
             rect.x += 28;
             Rect rect2 = rect;
@@ -235,7 +237,7 @@ namespace DarkNET.Traders
             rect.x += 27;
             if (GUIUtils.DrawCustomButton(rect, "+5", Color.white))
             {
-                item.AddToTransfer(10);
+                item.AddToTransfer(5);
             }
         }
 
@@ -282,6 +284,9 @@ namespace DarkNET.Traders
             foreach (var cat in drugs)
             {
                 DrugSettings settings = Comp.Props.DrugStockSettings.First(x => x.Tab == cat.Tab);
+
+                if (cat.Items == null)
+                    cat.Items = new List<SellableItemWithModif>();
 
                 int itemsCount = settings.CountRange.RandomInRange;
                 float valueRange = settings.ValueRange.RandomInRange * itemsCount;

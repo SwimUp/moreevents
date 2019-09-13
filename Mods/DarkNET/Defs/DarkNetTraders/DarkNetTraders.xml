@@ -530,16 +530,16 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 					<li>
 						<Tab>Alcohol</Tab>
 						<CountRange>
-							<min>15</min>
-							<max>15</max>
+							<min>1</min>
+							<max>5</max>
 						</CountRange>
 						<ValueRange> 
-							<min>2000</min>
-							<max>2000</max>
+							<min>300</min>
+							<max>1000</max>
 						</ValueRange>
 						<Goods>
 							<li>
-								<Commonality>1</Commonality>
+								<Commonality>1.0</Commonality>
 								<ThingFilter>
 									<thingDefs>
 										<li>Beer</li>
@@ -551,12 +551,12 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 					<li>
 						<Tab>EasyDrugs</Tab>
 						<CountRange>
-							<min>15</min>
-							<max>15</max>
+							<min>2</min>
+							<max>9</max>
 						</CountRange>
 						<ValueRange> 
-							<min>2000</min>
-							<max>2000</max>
+							<min>500</min>
+							<max>1000</max>
 						</ValueRange>
 						<Goods>
 							<li>
@@ -607,17 +607,49 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 									</thingDefs>
 								</ThingFilter>
 							</li>
+							<li>
+								<Commonality>0.45</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Ingalin</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.5</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Ibuprofien</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Magnitor</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>AbsorbentCarbon</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
 						</Goods>
 					</li>
 					<li>
 						<Tab>HeavyDrugs</Tab>
 						<CountRange>
-							<min>15</min>
-							<max>15</max>
+							<min>3</min>
+							<max>10</max>
 						</CountRange>
 						<ValueRange> 
-							<min>2000</min>
-							<max>2000</max>
+							<min>550</min>
+							<max>1000</max>
 						</ValueRange>
 						<Goods>
 							<li>
@@ -644,17 +676,41 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 									</thingDefs>
 								</ThingFilter>
 							</li>
+							<li>
+								<Commonality>0.45</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Joycstasy</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>MaxBrain</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.15</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>AshesWater</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
 						</Goods>
 					</li>
 					<li>
 						<Tab>Experimental</Tab>
 						<CountRange>
-							<min>15</min>
-							<max>15</max>
+							<min>1</min>
+							<max>4</max>
 						</CountRange>
 						<ValueRange> 
-							<min>2000</min>
-							<max>2000</max>
+							<min>600</min>
+							<max>1200</max>
 						</ValueRange>
 						<Goods>
 							<li>
@@ -662,6 +718,14 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 								<ThingFilter>
 									<thingDefs>
 										<li>Luciferium</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.03</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>MutagenicSerum</li>
 									</thingDefs>
 								</ThingFilter>
 							</li>

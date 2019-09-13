@@ -308,6 +308,30 @@ namespace DiaRim
                     });
                 }
 
+                if (listing.ButtonText("Fast withdrawls"))
+                {
+                    List<FloatMenuOption> list = new List<FloatMenuOption>();
+                    foreach (var pawn in Find.CurrentMap.mapPawns.FreeColonists)
+                    {
+                        list.Add(new FloatMenuOption(pawn.Name.ToStringFull, delegate
+                        {
+                            List<FloatMenuOption> list2 = new List<FloatMenuOption>();
+
+                            foreach(var need in pawn.needs.AllNeeds)
+                            {
+                                list2.Add(new FloatMenuOption(need.def.LabelCap, delegate
+                                {
+                                    need.CurLevelPercentage = 0.15f;
+                                }));
+                            }
+
+                            Find.WindowStack.Add(new FloatMenu(list2));
+                        }));
+                    }
+
+                    Find.WindowStack.Add(new FloatMenu(list));
+                }
+
                 listing.End();
             }
 

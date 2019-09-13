@@ -14,7 +14,7 @@ To do this, take 5 tablets of the drug, which can cause overdose and death.</des
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>30</MarketValue>
+			<MarketValue>150</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Spacer</techLevel>
@@ -103,7 +103,7 @@ To do this, take 5 tablets of the drug, which can cause overdose and death.</des
 		<causesNeed>Chemical_Spasmonitis</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-0.01</severityPerDay>
+				<severityPerDay>-0.03</severityPerDay>
 			</li>
 		</comps>
 		<stages>
@@ -133,7 +133,7 @@ To do this, take 5 tablets of the drug, which can cause overdose and death.</des
 		<defName>Chemical_Spasmonitis</defName>
 		<needClass>Need_Chemical</needClass>
 		<label>Spasmonitis</label>
-		<description>Because of a amita addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+		<description>Because of a spasmonitis addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
 		<listPriority>45</listPriority>
 	</NeedDef>
 
