@@ -97,4 +97,14 @@
 	<Likombinat.ingestible.ingestCommandString>Употребить Ликомбинат</Likombinat.ingestible.ingestCommandString>
 	<Likombinat.ingestible.ingestReportString>употребляет Ликомбинат</Likombinat.ingestible.ingestReportString>
 	
+	<VamitexEasy.label>Вамитекс (легкий)</VamitexEasy.label>
+	<VamitexEasy.description>Таблетки были созданы для ускоренного излечения от болезней.</VamitexEasy.description>	
+	<VamitexEasy.ingestible.ingestCommandString>Употребить Вамитекс (легкий)</VamitexEasy.ingestible.ingestCommandString>
+	<VamitexEasy.ingestible.ingestReportString>употребляет Вамитекс (легкий)</VamitexEasy.ingestible.ingestReportString>
+	
+	<VamitexHeavy.label>Вамитекс (тяжелый)</VamitexHeavy.label>
+	<VamitexHeavy.description>Таблетки были созданы для ускоренного излечения от болезней (тяжелая версия).</VamitexHeavy.description>	
+	<VamitexHeavy.ingestible.ingestCommandString>Употребить Вамитекс (тяжелый)</VamitexHeavy.ingestible.ingestCommandString>
+	<VamitexHeavy.ingestible.ingestReportString>употребляет Вамитекс (тяжелый)</VamitexHeavy.ingestible.ingestReportString>
+	
 </LanguageData>

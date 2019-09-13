@@ -161,5 +161,10 @@ Too fast to live, too fast to die</NarkoataHediff.labelNoun>
 	<LikombinatTolerance.stages.large.label>средняя</LikombinatTolerance.stages.large.label>
 	<LikombinatTolerance.stages.massive.label>сильная</LikombinatTolerance.stages.massive.label>	
 	
+	<VamitexEasyHediff.label>Вамитекс (легкий)</VamitexEasyHediff.label>
+	<VamitexEasyHediff.labelNoun>Вамитекс (легкий)</VamitexEasyHediff.labelNoun>
+	
+	<VamitexHeavyHediff.label>Вамитекс (тяжелый)</VamitexHeavyHediff.label>
+	<VamitexHeavyHediff.labelNoun>Вамитекс (тяжелый)</VamitexHeavyHediff.labelNoun>
 	
 </LanguageData>

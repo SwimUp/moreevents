@@ -6,7 +6,7 @@
 		<label>Likombinat</label>
 		<description>An experimental drug that can cause powerful side effects and dependence. Nevertheless, presumably allows you to bring the reaction to an incredible level. However, the effect cannot last for a long time, requiring constant recharge. If you stop taking the drug, dangerous side effects are possible.</description>
 		<graphicData>
-			<texPath>Things/Medical/Pemotilan</texPath>
+			<texPath>Things/Medical/Likombinat</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<rotatable>false</rotatable>
