@@ -23,7 +23,7 @@
 					<severity>1</severity>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>VamitexHeavy</hediffDef>
+					<hediffDef>VamitexHeavyHediff</hediffDef>
 					<severity>-1</severity>
 				</li>
 			</outcomeDoers>
