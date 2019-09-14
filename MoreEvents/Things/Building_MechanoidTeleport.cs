@@ -72,7 +72,7 @@ namespace MoreEvents.Things
         {
             base.Tick();
 
-            if(parentGenerator == null)
+            if(parentGenerator == null || parentGenerator.Destroyed)
             {
                 destroyed = true;
                 Destroy();
