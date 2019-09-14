@@ -12,7 +12,7 @@ Slightly inhibits the reaction. It does not cause addiction, due to which it gai
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>150</MarketValue>
+			<MarketValue>100</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>

@@ -11,7 +11,7 @@
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>150</MarketValue>
+			<MarketValue>100</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>
@@ -22,9 +22,10 @@
 					<hediffDef>VamitexEasyHediff</hediffDef>
 					<severity>1</severity>
 				</li>
-				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>VamitexHeavyHediff</hediffDef>
-					<severity>-1</severity>
+				<li Class="DarkNET.Hediffs.IngestionOutcomeDoer_ClearHediffs">
+					<Hediffs>
+						<li>VamitexHeavyHediff</li>
+					</Hediffs>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -52,7 +53,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<ImmunityGainSpeedFactor>0.15</ImmunityGainSpeedFactor>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
 				</statOffsets>
 			</li>
 		</stages>

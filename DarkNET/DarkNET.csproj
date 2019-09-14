@@ -75,6 +75,7 @@
     <Compile Include="Hediffs\HediffComp_ClearHediffPerUse.cs" />
     <Compile Include="Hediffs\HediffComp_RestoreBodypart.cs" />
     <Compile Include="Hediffs\HediffComp_UseCooldown.cs" />
+    <Compile Include="Hediffs\IngestionOutcomeDoer_ClearHediffs.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />
     <Compile Include="Jobs\JobDriver_GoToDarkNet.cs" />
     <Compile Include="PriceModificatorDef.cs" />

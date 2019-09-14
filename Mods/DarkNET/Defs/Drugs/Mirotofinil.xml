@@ -11,7 +11,7 @@
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>250</MarketValue>
+			<MarketValue>160</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Spacer</techLevel>
