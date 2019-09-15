@@ -560,6 +560,38 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 						</ValueRange>
 						<Goods>
 							<li>
+								<Commonality>0.25</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>VamitexHeavy</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.65</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>VamitexEasy</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.55</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Metolidocaine</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.75</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Narkoata</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
 								<Commonality>0.75</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -639,6 +671,15 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 									</thingDefs>
 								</ThingFilter>
 							</li>
+							<li>
+								<Commonality>0.65</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Mirotofinil</li>
+										<li>Metocarbine</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
 						</Goods>
 					</li>
 					<li>
@@ -700,6 +741,14 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 									</thingDefs>
 								</ThingFilter>
 							</li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Dextromitaine</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
 						</Goods>
 					</li>
 					<li>
@@ -714,6 +763,22 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 						</ValueRange>
 						<Goods>
 							<li>
+								<Commonality>0.25</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Pemotilan</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Zero</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
 								<Commonality>0.3</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -726,6 +791,14 @@ drugs and drugs, buys neutroamine and other ingredients for drugs, as well as lu
 								<ThingFilter>
 									<thingDefs>
 										<li>MutagenicSerum</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Likombinat</li>
 									</thingDefs>
 								</ThingFilter>
 							</li>
