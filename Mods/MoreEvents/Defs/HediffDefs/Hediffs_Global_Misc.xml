@@ -1,62 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HediffDef ParentName="InfectionBase">
-    <defName>ZeroMechanites</defName>
-    <hediffClass>HediffWithComps</hediffClass>
-    <makesSickThought>true</makesSickThought>
-    <makesAlert>false</makesAlert>
-    <minSeverity>0.001</minSeverity>
-    <maxSeverity>1</maxSeverity>
-    <initialSeverity>0.1</initialSeverity>
-    <tendable>true</tendable>
-    <comps>
-      <li Class="MoreEvents.Hediffs.HediffCompProperties_AutoHeal">
-        <HealModiff>5</HealModiff>
-		<HealTicks>6000</HealTicks>
-      </li>
-      <li Class="MoreEvents.Hediffs.HediffCompProperties_GiveMentalBreak">
-        <MentalBreak>RunWild</MentalBreak>
-		<MinSeverity>0.9</MinSeverity>
-      </li>
-      <li Class="HediffCompProperties_TendDuration">
-        <baseTendDurationHours>38</baseTendDurationHours>
-        <severityPerDayTended>-1.5</severityPerDayTended>
-		<disappearsAtTotalTendQuality>80</disappearsAtTotalTendQuality>
-      </li>
-      <li Class="HediffCompProperties_Immunizable">
-        <severityPerDayNotImmune>0.25</severityPerDayNotImmune> <!-- 0.25 -->
-      </li>
-    </comps>
-    <label>zero mechanites</label>
-    <stages>
-      <li>
-        <painOffset>0.2</painOffset>
-        <label>mild pain</label>
-		<hungerRateFactor>2</hungerRateFactor>
-        <restFallFactorOffset>0.7</restFallFactorOffset>
-        <capMods>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>0.2</offset>
-          </li>
-        </capMods>
-      </li>
-      <li>
-        <minSeverity>0.5</minSeverity>
-        <label>intense pain</label>
-        <painOffset>0.6</painOffset>
-		<hungerRateFactor>2</hungerRateFactor>
-        <restFallFactorOffset>1.0</restFallFactorOffset>
-        <capMods>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>0.3</offset>
-          </li>
-        </capMods>
-      </li>
-    </stages>
-  </HediffDef>
+	<HediffDef ParentName="InfectionBase">
+		<defName>ZeroMechanites</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>true</makesSickThought>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.1</initialSeverity>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="MoreEvents.Hediffs.HediffCompProperties_AutoHeal">
+				<HealModiff>5</HealModiff>
+				<HealTicks>6000</HealTicks>
+			</li>
+			<li Class="MoreEvents.Hediffs.HediffCompProperties_GiveMentalBreak">
+				<MentalBreak>RunWild</MentalBreak>
+				<MinSeverity>0.9</MinSeverity>
+			</li>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>38</baseTendDurationHours>
+				<severityPerDayTended>-1.5</severityPerDayTended>
+				<disappearsAtTotalTendQuality>80</disappearsAtTotalTendQuality>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+				<!-- 0.25 -->
+			</li>
+		</comps>
+		<label>zero mechanites</label>
+		<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<label>mild pain</label>
+				<hungerRateFactor>2</hungerRateFactor>
+				<restFallFactorOffset>0.7</restFallFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>intense pain</label>
+				<painOffset>0.6</painOffset>
+				<hungerRateFactor>2</hungerRateFactor>
+				<restFallFactorOffset>1.0</restFallFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.3</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
 
 	<HediffDef>
 		<defName>Irradiation</defName>
@@ -438,6 +439,96 @@
 						<offset>1.5</offset>
 					</li>
 				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>PoisonBite</defName>
+		<label>Poison bite</label>
+		<lethalSeverity>1.00</lethalSeverity>
+		<initialSeverity>0.05</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2.0</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>early</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.10</minSeverity>
+				<label>poisoning</label>
+				<painFactor>0.1</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>severe poisoning</label>
+				<painFactor>0.2</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>dangerous poisoning</label>
+				<painFactor>0.5</painFactor>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>BioChemicRegeneration</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Biochemical regeneration</label>
+		<labelNoun>Biochemical regeneration</labelNoun>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-14.0</severityPerDay>
+			</li>
+			<li Class="MoreEvents.Hediffs.HediffCompProperties_AutoHeal">
+				<HealTicks>150</HealTicks>
+				<HealModiff>5</HealModiff>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.6</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeWeapon_CooldownMultiplier>-0.6</MeleeWeapon_CooldownMultiplier>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>

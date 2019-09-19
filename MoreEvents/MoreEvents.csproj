@@ -78,6 +78,7 @@
     <Compile Include="AI\LordToil_Arson.cs" />
     <Compile Include="AI\LordToil_DefendPawn.cs" />
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
+    <Compile Include="AI\Verb_MeleeApplyHediff.cs" />
     <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
@@ -300,12 +301,16 @@
     <Compile Include="Things\Building_WorkTable_AnimatedHeatPush.cs" />
     <Compile Include="Things\CokeFurnace\Building_CokeFurnace.cs" />
     <Compile Include="Things\CokeFurnace\ITab_CokeFurnace.cs" />
+    <Compile Include="Things\CompElectricUnbreakable.cs" />
+    <Compile Include="Things\CompProperties_ElectricUnbreakable.cs" />
     <Compile Include="Things\Doomsday\Building_DoomsdayGun.cs" />
     <Compile Include="Things\Building_HiveCrack.cs" />
     <Compile Include="Things\Building_MechanoidTeleport.cs" />
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
     <Compile Include="Things\DropPodIncomingPlus.cs" />
+    <Compile Include="Things\Pawns\Pawn_Goliath.cs" />
+    <Compile Include="Things\Pawns\Pawn_Termitnator.cs" />
     <Compile Include="Things\RecipeDefOfLocal.cs" />
     <Compile Include="Things\SkyfallerPlus.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />

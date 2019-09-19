@@ -11,16 +11,16 @@
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>300</MarketValue>
+			<MarketValue>900</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
-		<techLevel>Spacer</techLevel>
+		<techLevel>Ultra</techLevel>
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>MutagenicSerumDebuffHediff</hediffDef>
-					<severity>0.2</severity>
+					<severity>0.35</severity>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>MutagenicSerumHediff</hediffDef>

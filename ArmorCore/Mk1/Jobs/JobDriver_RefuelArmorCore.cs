@@ -64,6 +64,7 @@ namespace MoreEvents.Things.Mk1
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
+
             yield return finish;
         }
     }

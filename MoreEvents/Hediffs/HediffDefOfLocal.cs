@@ -15,5 +15,7 @@ namespace MoreEvents
 
         public static HediffDef CaveBettleBuff;
         public static HediffDef ThirstHumanMeat;
+
+        public static HediffDef BioChemicRegeneration;
     }
 }

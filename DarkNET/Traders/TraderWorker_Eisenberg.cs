@@ -13,7 +13,7 @@ namespace DarkNET.Traders
     {
         private Vector2 slider = Vector2.zero;
 
-        private class CategoryDrug : IExposable
+        public class CategoryDrug : IExposable
         {
             public Tab Tab;
 
@@ -26,9 +26,9 @@ namespace DarkNET.Traders
             }
         }
 
-        public override int ArriveTime => 2;
+        public override int ArriveTime => 2; //5
 
-        public override int OnlineTime => 1;
+        public override int OnlineTime => 1; //3
 
         public enum Tab
         {
@@ -43,6 +43,7 @@ namespace DarkNET.Traders
         private static List<TabRecord> tabsList = new List<TabRecord>();
 
         private List<CategoryDrug> drugs;
+        public List<CategoryDrug> Drugs => drugs;
 
         protected Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
 
@@ -50,6 +51,8 @@ namespace DarkNET.Traders
         public float discount => 0.25f * Reputation;
 
         private bool needRecalculate = false;
+
+        public Order Order;
 
         public DarkNetComp_Eisenberg Comp
         {
@@ -89,6 +92,20 @@ namespace DarkNET.Traders
             }
         }
 
+        public void DeclineOrder()
+        {
+            if (Order.OrderedItem != null)
+            {
+                Order.OrderedItem.Destroy();
+            }
+
+            Order = null;
+            Find.LetterStack.ReceiveLetter("TraderWorker_Eisenberg_CancelOrder_Title".Translate(), "TraderWorker_Eisenberg_CancelOrder_Desc".Translate(), LetterDefOf.NegativeEvent);
+            Reputation = Mathf.Clamp(Reputation - 20, -100, Reputation);
+
+            RecalculatePrices();
+        }
+
         public override void DrawTraderShop(Rect rect)
         {
             Text.Font = GameFont.Small;
@@ -123,7 +140,44 @@ namespace DarkNET.Traders
             Rect additionalInfoRect = new Rect(270, 0, 400, 30);
             Widgets.Label(additionalInfoRect, "TraderWorker_Eisenberg_Tab_Reputation".Translate(Mathf.RoundToInt(Reputation), discount.ToString("f2")));
             TooltipHandler.TipRegion(additionalInfoRect, "TraderWorker_Eisenberg_Tab_ReputationInfo".Translate());
+
+            Text.Anchor = TextAnchor.MiddleCenter;
+            if (GUIUtils.DrawCustomButton(new Rect(600, 0, 200, 30), "TraderWorker_Eisenberg_Tab_Orders".Translate(), Color.white))
+            {
+                Find.WindowStack.Add(new Eisenberg_OrderWindow(this));
+            }
+            if (GUIUtils.DrawCustomButton(new Rect(810, 0, 200, 30), "TraderWorker_Eisenberg_Tab_Order".Translate(), Order?.OrderedItem != null ? Color.white : Color.gray))
+            {
+                if(Order?.OrderedItem != null)
+                {
+                    if(AcceptOrder())
+                    {
+                        Text.Anchor = TextAnchor.UpperLeft;
+                        return;
+                    }
+                }else if(Order != null)
+                {
+                    Messages.Message("TraderWorker_Eisenberg_Tab_Order_Wait".Translate(), MessageTypeDefOf.NeutralEvent);
+                }
+                else
+                {
+                    Messages.Message("TraderWorker_Eisenberg_Tab_Order_NoOrders".Translate(), MessageTypeDefOf.NeutralEvent);
+                }
+            }
+            Text.Anchor = TextAnchor.UpperLeft;
+
             Text.Font = GameFont.Small;
+        }
+
+        public bool AcceptOrder()
+        {
+            if (DarkNetPriceUtils.BuyAndDropItem(Order.OrderedItem, (int)Order.Price, Find.AnyPlayerHomeMap, true))
+            {
+                Order = null;
+                return true;
+            }
+
+            return false;
         }
 
         private void DrawItems(Tab tab, Rect rect)
@@ -246,6 +300,24 @@ namespace DarkNET.Traders
             base.Arrive();
 
             RegenerateStock();
+
+            if (Order != null)
+            {
+                Order.TraderArrive(this);
+            }
+        }
+
+        public override void TraderGone()
+        {
+            base.TraderGone();
+
+            if (Order != null)
+            {
+                if (Order.Finish && Order.Success)
+                {
+                    DeclineOrder();
+                }
+            }
         }
 
         public override void WindowOpen()
@@ -372,6 +444,7 @@ namespace DarkNET.Traders
 
             Scribe_Collections.Look(ref drugs, "drugs", LookMode.Deep);
             Scribe_Values.Look(ref Reputation, "Reputation");
+            Scribe_Deep.Look(ref Order, "Order");
         }
 
         public float GetPriceModificatorByTechLevel(TechLevel level)

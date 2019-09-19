@@ -143,49 +143,59 @@ namespace MoreEvents.Events.SiegeCamp
         {
             base.CompTick();
 
-            if (enable)
+            try
             {
-                if (siegeCampLevel < maxLevel)
+                if (enable)
                 {
-                    timer--;
-
-                    if (timer <= 0)
+                    if (siegeCampLevel < maxLevel)
                     {
-                        LevelUpCamp();
+                        timer--;
+
+                        if (timer <= 0)
+                        {
+                            LevelUpCamp();
+                        }
+                    }
+
+                    raidTimer--;
+                    if (raidTimer <= 0)
+                    {
+                        SendRaid();
+                    }
+
+                    if (mortarsFiring)
+                    {
+                        if (camp.PlayerSiegeMap == null)
+                            return;
+
+                        if (mortarsBulletCount == 0)
+                            mortarsFiring = false;
+
+                        mortarShellTimer--;
+
+                        if (mortarShellTimer <= 0)
+                        {
+                            IntVec3 cell = camp.PlayerSiegeMap.AllCells.Where(c => !c.Fogged(camp.PlayerSiegeMap) && c.GetRoof(camp.PlayerSiegeMap) != RoofDefOf.RoofRockThick && !c.CloseToEdge(camp.PlayerSiegeMap, 13)).RandomElement();
+                            TryFindSpawnSpot(camp.PlayerSiegeMap, out IntVec3 spawnSpot);
+                            Projectile proj = (Projectile)GenSpawn.Spawn(ThingDefOfLocal.Bullet_Shell_HighExplosive, spawnSpot, camp.PlayerSiegeMap);
+                            proj.Launch(null, proj.DrawPos, cell, cell, hitFlags: ProjectileHitFlags.All);
+                            mortarsBulletCount--;
+                            mortarShellTimer = ticksBetweenShots;
+                        }
+                    }
+                    else
+                    {
+                        mortalShellingTimer--;
+                        if (mortalShellingTimer <= 0)
+                        {
+                            SendMortalShelling();
+                        }
                     }
                 }
+            }
+            catch
+            {
 
-                raidTimer--;
-                if (raidTimer <= 0)
-                {
-                    SendRaid();
-                }
-
-                if (mortarsFiring)
-                {
-                    if (mortarsBulletCount == 0)
-                        mortarsFiring = false;
-
-                    mortarShellTimer--;
-
-                    if(mortarShellTimer <= 0)
-                    {
-                        IntVec3 cell = camp.PlayerSiegeMap.AllCells.Where(c => !c.Fogged(camp.PlayerSiegeMap) && c.GetRoof(camp.PlayerSiegeMap) != RoofDefOf.RoofRockThick && !c.CloseToEdge(camp.PlayerSiegeMap, 13)).RandomElement();
-                        TryFindSpawnSpot(camp.PlayerSiegeMap, out IntVec3 spawnSpot);
-                        Projectile proj = (Projectile)GenSpawn.Spawn(ThingDefOfLocal.Bullet_Shell_HighExplosive, spawnSpot, camp.PlayerSiegeMap);
-                        proj.Launch(null, proj.DrawPos, cell, cell, hitFlags: ProjectileHitFlags.All);
-                        mortarsBulletCount--;
-                        mortarShellTimer = ticksBetweenShots;
-                    }
-                }
-                else
-                {
-                    mortalShellingTimer--;
-                    if (mortalShellingTimer <= 0)
-                    {
-                        SendMortalShelling();
-                    }
-                }
             }
         }
 

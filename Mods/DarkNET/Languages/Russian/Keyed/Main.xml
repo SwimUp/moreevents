@@ -95,4 +95,39 @@
 Репутацию можно заработать покупая товары у торговца и выполняя его задания.</TraderWorker_Eisenberg_Tab_ReputationInfo>
 	<DarkNetButtons_GoPriceDownInfo>Снижение цены позволит снизить стоимость одной единицы определенного товара в ущерб репутации.</DarkNetButtons_GoPriceDownInfo>
 
+	<Eisenberg_OrderWindow_OneTime>Заказ препарата</Eisenberg_OrderWindow_OneTime>
+	<Eisenberg_OrderWindow_Supplies>Поставки</Eisenberg_OrderWindow_Supplies>
+	<Eisenberg_OrderWindow_InfoLabel>Информация</Eisenberg_OrderWindow_InfoLabel>
+	<Eisenberg_OrderWindow_OneTimeInfo>Заказ препарата
+Раздел, в котором можно заказать любой препарат, который производит торговец. Чем больше вы заказываете - тем дольше будет готовиться заказ.</Eisenberg_OrderWindow_OneTimeInfo>
+	<TraderWorker_Eisenberg_Tab_Orders>Заказы и поставки</TraderWorker_Eisenberg_Tab_Orders>
+	<Eisenberg_OrderWindow_OneTimeItem>Препарат:</Eisenberg_OrderWindow_OneTimeItem>
+	<Eisenberg_OrderWindow_OneTimeItemCount>Количество:</Eisenberg_OrderWindow_OneTimeItemCount>
+	<Eisenberg_OrderWindow_OneTimeTotalInfo>Заказ: {0}, количество: {1}
+
+Цена одной единицы: {2}, общая цена: {3} (скидка: {4}%)
+Время производства: {5} циклов (прибытий)
+
+Итоговая цена (с учетом скидки): {6}
+</Eisenberg_OrderWindow_OneTimeTotalInfo>
+	<Eisenberg_OrderWindow_OneTimeDoOrder>Сделать заказ</Eisenberg_OrderWindow_OneTimeDoOrder>
+	<Eisenberg_OrderWindow_Only1Order>Торговец может выполнить только 1 заказ за раз</Eisenberg_OrderWindow_Only1Order>
+	<Eisenberg_OrderWindow_OneTimeDoOrder_Title>Заказ сделан</Eisenberg_OrderWindow_OneTimeDoOrder_Title>
+	<Eisenberg_OrderWindow_OneTimeDoOrder_Desc>Вы сделали заказ на препарат {0} в количестве {1}. Торговец выполнит заказ через {2} циклов (прибытий).</Eisenberg_OrderWindow_OneTimeDoOrder_Desc>
+	<TraderWorker_Eisenberg_CancelOrder_Title>Заказ отменен</TraderWorker_Eisenberg_CancelOrder_Title>
+	<TraderWorker_Eisenberg_CancelOrder_Desc>Что? Я почти закончила! Черт бы тебя подрал!</TraderWorker_Eisenberg_CancelOrder_Desc>
+	<TraderWorker_Eisenberg_Tab_Order>Забрать заказ</TraderWorker_Eisenberg_Tab_Order>
+	<TraderWorker_Eisenberg_Tab_Order_Wait>Заказ еще не готов</TraderWorker_Eisenberg_Tab_Order_Wait>
+	<TraderWorker_Eisenberg_Tab_Order_NoOrders>Нет активных заказов</TraderWorker_Eisenberg_Tab_Order_NoOrders>
+	<Eisenberg_OrderWindow_SuppliesInfo>Поставки
+Поставки позволяют заключить соглашение, при котором каждые N-дней вы будете получать N-ое количество препарата.
+Поставки требуют оплату полностью, но позволяют сэкономить, так как конечная стоимость препарата будет ниже.</Eisenberg_OrderWindow_SuppliesInfo>
+	<Eisenberg_OrderWindow_SuppliesItemCount>Количество предмета:</Eisenberg_OrderWindow_SuppliesItemCount>
+	<Eisenberg_OrderWindow_SuppliesItemCooldown>Задержка между поставками:</Eisenberg_OrderWindow_SuppliesItemCooldown>
+	<Eisenberg_OrderWindowSuppliesTotalInfo>Вы собираетесь заключить договор о поставках "{0}"
+Торговец будет поставлять {1} товара каждые {2} дней в течении {3} дней
+В конечном итоге вы получите {4} товара.
+
+Цена договора: {5}$</Eisenberg_OrderWindowSuppliesTotalInfo>
+	
 </LanguageData>

@@ -96,6 +96,8 @@
     <Compile Include="Traders\OrderItem.cs" />
     <Compile Include="Traders\Order_Art_RogerEdmonson.cs" />
     <Compile Include="Traders\Order_BodyPart_RogerEdmonson.cs" />
+    <Compile Include="Traders\Eisenberg_OrderWindow.cs" />
+    <Compile Include="Traders\Order_SimpleItem.cs" />
     <Compile Include="Traders\RogerEdmonson_OrderWindow.cs" />
     <Compile Include="Traders\TraderWorker_Eisenberg.cs" />
     <Compile Include="Traders\TraderWorker_JohnCarver.cs" />
@@ -104,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Patches\" />
+    <Folder Include="Quests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

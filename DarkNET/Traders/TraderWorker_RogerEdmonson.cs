@@ -88,9 +88,9 @@ namespace DarkNET.Traders
             }
         }
 
-        public override int OnlineTime => 1;
+        public override int OnlineTime => 3;
 
-        public override int ArriveTime => 2;
+        public override int ArriveTime => 14;
 
         private SimpleCurve itemsCountPerRaidCurve = new SimpleCurve
         {

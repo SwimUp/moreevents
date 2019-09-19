@@ -42,4 +42,11 @@
   <ThirstHumanMeat.label>Жажда человеческого мяса</ThirstHumanMeat.label>
   <ThirstHumanMeat.stages.easy.label></ThirstHumanMeat.stages.easy.label>
 
+  <PoisonBite.label>Ядовитый укус</PoisonBite.label>
+  <PoisonBite.stages.poisoning.label>отравление</PoisonBite.stages.poisoning.label>
+  <PoisonBite.stages.severe_poisoning.label>сильное отравление</PoisonBite.stages.severe_poisoning.label>
+  <PoisonBite.stages.dangerous_poisoning.label>опасное отравление</PoisonBite.stages.dangerous_poisoning.label>  
+
+  <BioChemicRegeneration.label>Биохимическая регенерация</BioChemicRegeneration.label>
+
 </LanguageData>
