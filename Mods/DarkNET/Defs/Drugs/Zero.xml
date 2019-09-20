@@ -4,7 +4,11 @@
 	<ThingDef ParentName="DarkNetDrugPillBase">
 		<defName>Zero</defName>
 		<label>Zero</label>
-		<description>Zero - It is one of the most expensive drugs on the black market, due to a sharp increase in the soldier's combat effectiveness and survival. From this drug, a person’s time becomes slow and the mind expands due to which he will be able to predict blows and shots. When a person breaks down, his mood will drop dramatically and time will practically stop if he does not take the drug again, that is, there is a very big chance of getting serious brain damage.</description>
+		<description>It is one of the most expensive drugs on the black market, due to the sharp
+increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits
+ and shots. It causes severe forms of addiction. During withdrawal, a person has a strong
+ the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who
+survived after that, and if they survived, then did not represent further benefit.</description>
 		<graphicData>
 			<texPath>Things/Medical/Zero</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

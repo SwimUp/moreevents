@@ -614,13 +614,13 @@ namespace QuestRim
                 {
                     EmailMessageOption answer = message.Answers[i];
 
-                    if (DrawCustomButton(new Rect(rect2.x, rect2.y, 200, rect2.height), answer.Label, message.MessageRead ? Color.gray : Color.white))
+                    if (DrawCustomButton(new Rect(rect2.x, rect2.y, 200, rect2.height), answer.Label, message.Answered ? Color.gray : Color.white))
                     {
                         if (message.Answered)
                             return;
 
                         message.Answered = true;
-                        answer.DoAction(message, QuestsManager.Communications.PlayerBox, message.Faction.leader);
+                        answer.DoAction(message, QuestsManager.Communications.PlayerBox, message.Faction?.leader);
                     }
                     rect2.x += 220;
                 }

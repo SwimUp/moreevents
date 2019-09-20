@@ -21,6 +21,21 @@ namespace QuestRim
         public Faction Faction;
         public List<CommOption> Options;
 
+        public CommunicationDialog()
+        {
+
+        }
+
+        public CommunicationDialog(int id, string cardLabel, string desc, IncidentDef relatedIncident, Faction faction, List<CommOption> options)
+        {
+            this.id = id;
+            CardLabel = cardLabel;
+            Description = desc;
+            RelatedIncident = relatedIncident;
+            Faction = faction;
+            this.Options = options;
+        }
+
         public virtual void ExposeData()
         {
             Scribe_Values.Look(ref id, "id");

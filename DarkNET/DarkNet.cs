@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuestRim;
+using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,6 +85,23 @@ namespace DarkNET
             newTrder.FirstInit();
 
             return newTrder;
+        }
+
+        public static EmailMessage FormMessageFromDarkNet(string text, string subject, DarkNetTraderDef trader)
+        {
+            Faction darkNetFaction = Find.FactionManager.FirstFactionOfDef(FactionDefOfLocal.DarkNetTraders);
+            EmailBox Owner = QuestsManager.Communications.PlayerBox;
+
+            EmailMessage message = new EmailMessage();
+            message.Faction = darkNetFaction;
+            message.To = Owner.Owner.Name;
+            message.From = $"{darkNetFaction?.Name} ({trader.LabelCap})";
+            message.Subject = subject;
+            message.Message = text;
+            message.SendTick = Find.TickManager.TicksGame;
+            message.MessageRead = false;
+
+            return message;
         }
     }
 }

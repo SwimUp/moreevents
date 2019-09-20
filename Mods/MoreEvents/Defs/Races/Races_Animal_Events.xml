@@ -79,8 +79,13 @@
 		<defName>Goliath</defName>
 		<label>Goliath</label>
 		<thingClass>RimOverhaul.Things.Pawns.Pawn_Goliath</thingClass>
-		<description>He is one of the most dangerous creatures that we can find here. It has a lightning reaction, which makes the object unattainable in close combat. However, this is leveled by his weak armor, which can be easily destroyed with firearms.
-The creature moves at great speed and has good eyesight. Able to stay awake for several months, after which it may fall into suspended animation, which, however, was not noticed due to the death of observers.</description>
+		<description>Is one of the most dangerous creatures
+which we can find here. It has a lightning reaction, which
+makes the object unreachable in close combat. However, this is leveled by its weak
+armor that can easily be destroyed with firearms.
+The creature moves at great speed and has good eyesight. Capable of
+do not sleep until several months, after which it may fall into suspended animation, which however does not
+It was noticed due to the death of observers.</description>
 		<statBases>
 			<Mass>130</Mass>
 			<MoveSpeed>9.5</MoveSpeed>
@@ -163,7 +168,10 @@ The creature moves at great speed and has good eyesight. Able to stay awake for 
 	<ThingDef ParentName="BaseInsect">
 		<defName>Bombardier</defName>
 		<label>Bombardier</label>
-		<description>Outwardly resembles its natural counterpart, but has a huge size. However, thanks to the reinforced sub-armored chitin plates, the creature can hardly move effectively. In combat conditions, he tries to destroy his opponent at a distance, attacking him with shells with sulfuric acid. It does not pose a great danger in close combat, however, it can use the potential of its size.</description>
+		<description>Outwardly resembles its natural counterpart, but has a huge size.
+However, thanks to the reinforced sub-armored chitin plates, the creature is almost not
+can move efficiently. Early objects had the ability to attack from far away,
+which, however, is not seen in modern ones. It is dangerous in close combat.</description>
 		<statBases>
 			<Mass>70</Mass>
 			<MoveSpeed>3.5</MoveSpeed>
@@ -245,7 +253,11 @@ The creature moves at great speed and has good eyesight. Able to stay awake for 
 		<defName>Termitnator</defName>
 		<label>Termitnator</label>
 		<thingClass>RimOverhaul.Things.Pawns.Pawn_Termitnator</thingClass>
-		<description>Not a large, but aggressive insect that leaves deep cuts and chemical burns when hit by a victim. It attacks in close combat, but does not differ in speed and reaction from ordinary arthropods. It is covered with titanium plates, which makes it quite durable. The creature is capable of slow regeneration of its body.</description>
+		<description>Not a large but aggressive insect that leaves deep cuts
+and chemical burns when hit by the victim. Attacks melee but no different
+speed and reaction from ordinary arthropods. Covered with titanium plates,
+which makes it pretty durable. The creature is capable of slow regeneration of its
+organism, concentrating.</description>
 		<statBases>
 			<Mass>50</Mass>
 			<MoveSpeed>6.5</MoveSpeed>

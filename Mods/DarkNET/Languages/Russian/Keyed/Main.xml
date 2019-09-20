@@ -130,4 +130,21 @@
 
 Цена договора: {5}$</Eisenberg_OrderWindowSuppliesTotalInfo>
 	
+	<EmailMessage_Eisenberg_Text>Слушай, я с тобой работаю не так долго, но вижу, что ты парень толковый. На этой планете у меня была лаборатория, в которой я занималась...так скажем, не совсем созданием только препаратов. Вчера мне пришло уведомление от систем безопаности. Один из её главных блоков отключился, что приводит к риску освобождения тем, что там находится. Нужно придти в лабораторию и включить резервные системы защиты. Дело опасное, но все, что там найдешь - твоё, ну и я еще сверху накину серебра.</EmailMessage_Eisenberg_Text>
+	<EmailMessage_Eisenberg_Subj>Лаборатория</EmailMessage_Eisenberg_Subj>
+	<EmailMessageOption_TakeQuest_Laboratory>Согласиться</EmailMessageOption_TakeQuest_Laboratory>
+	<EmailMessageOption_DeclineQuest_Laboratory>Отказаться</EmailMessageOption_DeclineQuest_Laboratory>
+	<EmailMessageOption_DeclineQuest_LaboratoryTitle>Очень жаль</EmailMessageOption_DeclineQuest_LaboratoryTitle>
+	<EmailMessageOption_DeclineQuest_LaboratoryDesc>Что-ж, очень жаль. Тогда я больше не потревожу вас.</EmailMessageOption_DeclineQuest_LaboratoryDesc>
+	<Quest_Laboratory_CardLabel>Лаборатория</Quest_Laboratory_CardLabel>
+	<Quest_Laboratory_Description>Eisenberg хочет, чтобы мы возобновили работу резервной системы безопаности, иначе, как она говорит, образцы, которые там находяться могут вырваться наружу и устроить хаос.</Quest_Laboratory_Description>
+	<Quest_Laboratory_PlaceLabel>Лаборатория</Quest_Laboratory_PlaceLabel>
+	<Quest_Laboratory_CaravanArrivalAction_Option>Войти на территорию лаборатории</Quest_Laboratory_CaravanArrivalAction_Option>
+	<Quest_Laboratory_Info1>Я засекла вас по датчикам движения и похоже, вы нашли лабораторию. Твоя задача проникнуть в самую глубь, найти главную консоль управления и переключить системы защиты. 
+Внутри осталось множество препаратов, возможно, они помогут тебе.
+
+Внутри лаборатории стены, двери защищены электрическим полем, поэтому вам потребуется сначала уничтожить генераторные. Остерегайся живности внутри. 
+
+Удачи!</Quest_Laboratory_Info1>
+	
 </LanguageData>

@@ -7,4 +7,10 @@
       <parent>Root</parent>
     </ThingCategoryDef>
 	
+    <ThingCategoryDef>
+      <defName>DarkNetItems_Drugs</defName>
+      <label>DarkNET Drugs</label>
+      <parent>DarkNetItems</parent>
+    </ThingCategoryDef>
+	
 </Defs>

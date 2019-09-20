@@ -60,6 +60,7 @@
     <Compile Include="CommunicationComponent_Timer.cs" />
     <Compile Include="CommunicationDialogMaker.cs" />
     <Compile Include="CommunicationDialogWindow.cs" />
+    <Compile Include="CommunicationMaker.cs" />
     <Compile Include="Dialog_QuestDialog.cs" />
     <Compile Include="EmailMessageOption.cs" />
     <Compile Include="EmailBox.cs" />

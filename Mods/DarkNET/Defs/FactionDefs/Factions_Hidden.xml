@@ -2,18 +2,17 @@
 <Defs>
 
 	<FactionDef>
-		<defName>Mutants</defName>
-		<label>Mutants</label>
-		<pawnSingular>mutant</pawnSingular>
-		<pawnsPlural>mutants</pawnsPlural>
+		<defName>DarkNetTraders</defName>
+		<label>DarkNET Traders</label>
+		<pawnSingular>DarkNET trader</pawnSingular>
+		<pawnsPlural>DarkNET traders</pawnsPlural>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<fixedName>mutants</fixedName>
+		<fixedName>DarkNET trader</fixedName>
 		<humanlikeFaction>false</humanlikeFaction>
 		<hidden>true</hidden>
 		<autoFlee>false</autoFlee>
 		<canUseAvoidGrid>false</canUseAvoidGrid>
 		<techLevel>Ultra</techLevel>
-		<permanentEnemy>true</permanentEnemy>
 		<homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
 	</FactionDef>
 

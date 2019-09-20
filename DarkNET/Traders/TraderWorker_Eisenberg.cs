@@ -1,4 +1,6 @@
-﻿using DarkNET.TraderComp;
+﻿using DarkNET.Dialogs;
+using DarkNET.TraderComp;
+using QuestRim;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -29,6 +31,10 @@ namespace DarkNET.Traders
         public override int ArriveTime => 2; //5
 
         public override int OnlineTime => 1; //3
+
+        private bool labQuestIssued = false;
+
+        private int questEarlistDay => 1; //70
 
         public enum Tab
         {
@@ -320,6 +326,38 @@ namespace DarkNET.Traders
             }
         }
 
+        public override void OnDayPassed()
+        {
+            base.OnDayPassed();
+
+            if(!labQuestIssued && Reputation >= 10)
+            {
+                int passedDays = Find.TickManager.TicksGame / 60000;
+                if(passedDays > questEarlistDay)
+                {
+                     if(Rand.Chance(1f))
+                    // if(Rand.Chance(0.1f))
+                    {
+                        GiveQuest();
+                    }
+                }
+            }
+        }
+
+        public void GiveQuest()
+        {
+            labQuestIssued = true;
+
+            var message = DarkNet.FormMessageFromDarkNet("EmailMessage_Eisenberg_Text".Translate(), "EmailMessage_Eisenberg_Subj".Translate(), def);
+            message.Answers = new List<EmailMessageOption>
+                {
+                    new EmailMessageOption_TakeQuest_Laboratory(),
+                    new EmailMessageOption_DeclineQuest_Laboratory()
+                };
+
+            QuestsManager.Communications.PlayerBox.SendMessage(message);
+        }
+
         public override void WindowOpen()
         {
             base.WindowOpen();
@@ -445,6 +483,7 @@ namespace DarkNET.Traders
             Scribe_Collections.Look(ref drugs, "drugs", LookMode.Deep);
             Scribe_Values.Look(ref Reputation, "Reputation");
             Scribe_Deep.Look(ref Order, "Order");
+            Scribe_Values.Look(ref labQuestIssued, "labQuestIssued");
         }
 
         public float GetPriceModificatorByTechLevel(TechLevel level)

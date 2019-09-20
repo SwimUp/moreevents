@@ -15,7 +15,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <stackLimit>150</stackLimit>
     <thingCategories>
-      <li>Drugs</li>
+      <li>DarkNetItems_Drugs</li>
     </thingCategories>
     <alwaysHaulable>true</alwaysHaulable>
     <comps>
