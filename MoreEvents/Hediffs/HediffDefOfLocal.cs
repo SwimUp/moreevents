@@ -17,5 +17,12 @@ namespace MoreEvents
         public static HediffDef ThirstHumanMeat;
 
         public static HediffDef BioChemicRegeneration;
+
+        public static HediffDef AdamantiumToxin;
+
+        public static HediffDef PoisonBite;
+        public static HediffDef PoisonHit;
+
+        public static HediffDef ElectromagneticShock;
     }
 }

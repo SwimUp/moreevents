@@ -17,7 +17,7 @@ namespace DarkNET
 
             foreach(var good in goods)
             {
-                if (Rand.Chance(good.Commonality))
+                if (Rand.Chance(good.Commonality)) //good.Commonality
                 {
                     foreach (var thing in good.ThingFilter.AllowedThingDefs)
                     {

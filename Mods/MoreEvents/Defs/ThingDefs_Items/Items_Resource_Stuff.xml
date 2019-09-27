@@ -1,5 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!--
+	<ThingDef ParentName="ResourceBase">
+		<defName>TestStuff</defName>
+		<label>TestStuff</label>
+		<description>TestStuff</description>
+		<graphicData>
+			<texPath>Things/Resources/IronIngot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>3.6</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.34</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>5</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.CompProperties_Test"/>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>1.00</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(130,130,130)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1.8</MaxHitPoints>
+				<Beauty>0.6</Beauty>
+				<Flammability>0.1</Flammability>
+				<WorkToMake>1.2</WorkToMake>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+-->
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>IronOre</defName>
@@ -35,7 +85,7 @@ Iron ingots can be melted in a simple furnace.</description>
 		<defName>IronIngot</defName>
 		<label>Iron</label>
 		<description>Recycled Iron Ore. It can be used in other recipes, or to create things.
-		
+
 It is by mass the most common element on Earth, forming much of Earth's outer and inner core. It is the fourth most common element in the Earth's crust.
 
 Pristine and smooth pure iron surfaces are mirror-like silvery-gray. However, iron reacts readily with oxygen and water to give brown to black hydrated iron oxides, commonly known as rust. Unlike the oxides of some other metals, that form passivating layers, rust occupies more volume than the metal and thus flakes off, exposing fresh surfaces for corrosion.</description>
@@ -84,7 +134,7 @@ Pristine and smooth pure iron surfaces are mirror-like silvery-gray. However, ir
 		<defName>CopperOre</defName>
 		<label>Copper ore</label>
 		<description>A freshly exposed surface of pure copper has a pinkish-orange color. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.
-		
+
 Copper ingots can be melted in a simple furnace.</description>
 		<graphicData>
 			<texPath>Things/Resources/CopperOre</texPath>
@@ -112,7 +162,7 @@ Copper ingots can be melted in a simple furnace.</description>
 		<defName>CopperIngot</defName>
 		<label>Copper</label>
 		<description>Recycled Iron Ore. It can be used in other recipes, or to create things.
-		
+
 A freshly exposed surface of pure copper has a pinkish-orange color. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.</description>
 		<graphicData>
 			<texPath>Things/Resources/CopperIngot</texPath>
@@ -181,7 +231,7 @@ A freshly exposed surface of pure copper has a pinkish-orange color. Copper is u
 		<defName>NickelOre</defName>
 		<label>Nickel ore</label>
 		<description>Nickel belongs to the transition metals and is hard and ductile. Pure nickel, powdered to maximize the reactive surface area, shows a significant chemical activity, but larger pieces are slow to react with air under standard conditions because an oxide layer forms on the surface and prevents further corrosion (passivation).
-		
+
 Nickel can be processed in an arc furnace.</description>
 		<graphicData>
 			<texPath>Things/Resources/NickelOre</texPath>
@@ -209,7 +259,7 @@ Nickel can be processed in an arc furnace.</description>
 		<defName>NickelIngot</defName>
 		<label>Nickel</label>
 		<description>Recycled nickel ore. It can be used in other recipes, or to create things.
-		
+
 Nickel belongs to the transition metals and is hard and ductile. Pure nickel, powdered to maximize the reactive surface area, shows a significant chemical activity, but larger pieces are slow to react with air under standard conditions because an oxide layer forms on the surface and prevents further corrosion (passivation).</description>
 		<graphicData>
 			<texPath>Things/Resources/NickelIngot</texPath>
@@ -226,12 +276,12 @@ Nickel belongs to the transition metals and is hard and ductile. Pure nickel, po
 			<li>ResourcesRaw</li>
 		</thingCategories>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>CobaltIngot</defName>
 		<label>Cobalt</label>
 		<description>Recycled nickel ore. It can be used in other recipes, or to create things.
-		
+
 Like nickel, cobalt is found in the Earth's crust only in chemically combined form, save for small deposits found in alloys of natural meteoric iron. The free element, produced by reductive smelting, is a hard, lustrous, silver-gray metal.</description>
 		<graphicData>
 			<texPath>Things/Resources/CobaltIngot</texPath>
@@ -273,14 +323,14 @@ Like nickel, cobalt is found in the Earth's crust only in chemically combined fo
 			<smeltable>true</smeltable>
 		</stuffProps>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>IlmeniteOre</defName>
 		<label>Ilmenite ore</label>
 		<description>Titanium is resistant to corrosion in sea water, aqua regia, and chlorine. 
-		
+
 The element occurs within a number of mineral deposits, principally rutile and ilmenite, which are widely distributed in the Earth's crust and lithosphere, and it is found in almost all living things, water bodies, rocks, and soils.
-		
+
 Ilmenite ingots can be melted in a simple furnace.</description>
 		<graphicData>
 			<texPath>Things/Resources/IlmeniteOre</texPath>
@@ -348,7 +398,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<smeltable>true</smeltable>
 		</stuffProps>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>PalladiumIngot</defName>
 		<label>Palladium</label>
@@ -368,7 +418,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Chromium</defName>
 		<label>Chromium</label>
@@ -412,7 +462,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<smeltable>true</smeltable>
 		</stuffProps>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Tillium</defName>
 		<label>Tillium</label>
@@ -432,7 +482,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>CokeCoal</defName>
 		<label>Coke coal</label>
@@ -454,12 +504,12 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 			<li>ResourcesRaw</li>
 		</thingCategories>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>TungstenOre</defName>
 		<label>Tungsten ore</label>
 		<description>Ore containing enough tungsten to get tungsten ingots from it.
-		
+
 Tungsten ingots can be melted in a arc furnace.</description>
 		<graphicData>
 			<texPath>Things/Resources/TungstenOre</texPath>
@@ -508,6 +558,724 @@ Tungsten ingots can be melted in a arc furnace.</description>
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Vibranium</defName>
+		<label>Vibranium</label>
+		<description>White material with gray reflections. A special molecular structure absorbs directed kinetic energy, the speed of which is higher than a certain threshold, so objects and buildings made from it are practically irreducible to explosions and bullet shots, but at the same time are vulnerable to close attacks.</description>
+		<graphicData>
+			<texPath>Things/Resources/Vibranium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<Mass>0.15</Mass>
+			<StuffPower_Armor_Sharp>1.35</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.08</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>2.0</SharpDamageMultiplier>
+			<BluntDamageMultiplier>2.0</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_ReplaceThing">
+				<ReplaceThing>VibraniumWall</ReplaceThing>
+				<CompareThing>Wall</CompareThing>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(201, 193, 193)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>10.0</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.02</Flammability>
+				<WorkToMake>1.6</WorkToMake>
+				<WorkToBuild>2.0</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Adamantium</defName>
+		<label>Adamantium</label>
+		<description>In its solid form, it is described as a dark, shiny gray metal, similar to high-grade steel or titanium. The molecular structure is very stable, which is why it is incredibly strong and practically does not melt.</description>
+		<graphicData>
+			<texPath>Things/Resources/Adamantium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>450</MarketValue>
+			<Mass>4</Mass>
+			<StuffPower_Armor_Sharp>1.7</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.3</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>2.0</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>-10</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>30</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>4.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>4.3</BluntDamageMultiplier>
+			<RangedWeapon_DamageMultiplier>0.1</RangedWeapon_DamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompAdamantiumApparel</Comp>
+				<ForApparel>true</ForApparel>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(54, 48, 48)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>13.0</MaxHitPoints>
+				<Beauty>0</Beauty>
+				<Flammability>0</Flammability>
+				<WorkToMake>10.0</WorkToMake>
+				<WorkToBuild>10.0</WorkToBuild>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MetalFB</defName>
+		<label>Metal FB-15</label>
+		<description>This mysterious metal (if, of course, you can call it that at all) does not have a stable shape in the usual state, which is why it is also usually called a liquid metal. In a standard form without electrical processing, it has an unstable structure and looks more like a dense liquid. When several million volts pass through it, it acquires a stable form. The main feature of the material is the ability to regenerate itself over time.</description>
+		<graphicData>
+			<texPath>Things/Resources/MetalFB15</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
+			<MarketValue>500</MarketValue>
+			<Mass>0.15</Mass>
+			<StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.0</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>20</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompMetalFB15</Comp>
+				<ForApparel>true</ForApparel>
+				<ForWeapons>true</ForWeapons>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(204, 183, 163)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1.5</MaxHitPoints>
+				<Beauty>0</Beauty>
+				<Flammability>0</Flammability>
+				<WorkToMake>1.2</WorkToMake>
+				<WorkToBuild>1.2</WorkToBuild>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Computerium</defName>
+		<label>Computerium</label>
+		<description>Material with a very mysterious story. It is not known exactly where it came from, although, judging by its properties, the material is of artificial origin. The main feature is its structure, consisting of unknown nanoparticles that can be programmed to obtain the required parameters.
+
+(Programming takes place on a fabrication bench)</description>
+		<graphicData>
+			<texPath>Things/Resources/Computerium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>650</MarketValue>
+			<Mass>0.5</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Computerium_DenceMolStruct</defName>
+		<label>Computerium (dense molecular structure)</label>
+		<description>Dense molecular structure
+
+Material with a very mysterious story. It is not known exactly where it came from, although, judging by its properties, the material is of artificial origin. The main feature is its structure, consisting of unknown nanoparticles that can be programmed to obtain the required parameters.</description>
+		<graphicData>
+			<texPath>Things/Resources/Computerium_DenceMolStruct</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>700</MarketValue>
+			<Mass>0.7</Mass>
+			<StuffPower_Armor_Sharp>1.5</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.3</BluntDamageMultiplier>
+			<MeleeHitChance>10</MeleeHitChance>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Computerium>1</Computerium>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(184, 217, 213)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>3.0</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Computerium_SupereMolStruct</defName>
+		<label>Computerium (superdense molecular structure)</label>
+		<description>Superdense molecular structure
+
+Material with a very mysterious story. It is not known exactly where it came from, although, judging by its properties, the material is of artificial origin. The main feature is its structure, consisting of unknown nanoparticles that can be programmed to obtain the required parameters.</description>
+		<graphicData>
+			<texPath>Things/Resources/Computerium_SupereMolStruct</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>750</MarketValue>
+			<Mass>2</Mass>
+			<StuffPower_Armor_Sharp>1.6</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.85</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>11</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>2.2</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.8</BluntDamageMultiplier>
+			<WorkToMake>5000</WorkToMake>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Computerium>1</Computerium>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(184, 217, 213)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>4.4</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+				<WorkToMake>2.5</WorkToMake>
+				<WorkToBuild>2.5</WorkToBuild>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Computerium_DynamicMolStruct</defName>
+		<label>Computerium (dynamic molecular structure)</label>
+		<description>Dynamic molecular structure
+
+Material with a very mysterious story. It is not known exactly where it came from, although, judging by its properties, the material is of artificial origin. The main feature is its structure, consisting of unknown nanoparticles that can be programmed to obtain the required parameters.</description>
+		<graphicData>
+			<texPath>Things/Resources/Computerium_DynamicMolStruct</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>850</MarketValue>
+			<Mass>2</Mass>
+			<StuffPower_Armor_Sharp>1.85</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.2</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.4</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>3.0</SharpDamageMultiplier>
+			<BluntDamageMultiplier>2.5</BluntDamageMultiplier>
+			<WorkToMake>8000</WorkToMake>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Computerium>1</Computerium>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(184, 217, 213)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>6.0</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+				<WorkToMake>2.7</WorkToMake>
+				<WorkToBuild>2.7</WorkToBuild>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Transparisteel</defName>
+		<label>Transparisteel</label>
+		<description>Steel-like material, except for its transparency. Gives objects made from it extra beauty.</description>
+		<graphicData>
+			<texPath>Things/Resources/Transparisteel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>2.5</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.72</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(105,105,105, 150)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>5</Beauty>
+				<Flammability>0.4</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Neutronium</defName>
+		<label>Neutronium</label>
+		<description>The substance obtained by the fusion of the matter of a neutron star and some other material, it seems, is at an incredibly huge pressure. Adopting the positive aspects of neutron matter - this material is incredibly valuable.</description>
+		<graphicData>
+			<texPath>Things/Resources/Neutronium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<Mass>30</Mass>
+			<StuffPower_Armor_Sharp>2.5</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>2.5</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>3.0</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>40</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>40</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>7.0</SharpDamageMultiplier>
+			<BluntDamageMultiplier>7.0</BluntDamageMultiplier>
+			<RangedWeapon_DamageMultiplier>0.8</RangedWeapon_DamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(122, 209, 222)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>25.0</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0</Flammability>
+				<WorkToMake>30.0</WorkToMake>
+				<WorkToBuild>30.0</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>2.2</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ShockCrystals</defName>
+		<label>Shock crystals</label>
+		<description>The crystals that generate an electric charge within themselves.
+They can be very effective against electronics.</description>
+		<graphicData>
+			<texPath>Things/Resources/ShockCrystals</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>4.0</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.72</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompShockCrystals</Comp>
+				<ForWeapons>true</ForWeapons>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(94,94,94)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Flammability>0.4</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Ferotium</defName>
+		<label>Ferotium</label>
+		<description>Brittle metal that is capable of generating various forms of vegetation within its radius actions equal to several meters. Although material properties can count beneficial, ferotium has an extremely low durability and susceptibility to self-destruction over time.</description>
+		<graphicData>
+			<texPath>Things/Resources/Ferotium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>40.0</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.72</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompFerotium</Comp>
+				<ForWeapons>true</ForWeapons>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(20, 176, 109)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.4</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.4</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Corrosium</defName>
+		<label>Corrosium</label>
+		<description>Outwardly resembles an iron alloy, but has interesting properties. Over time, the material oxidizes in air, becoming covered with a thick oxide film. Having a small margin of safety, significantly increases it. However, it is impossible to disassemble structures from it at the time of complete transformation without destroying the metal.</description>
+		<graphicData>
+			<texPath>Things/Resources/Corrosium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>40.0</MarketValue>
+			<Mass>0.5</Mass>
+			<StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.65</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>-5</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompCorrosium</Comp>
+				<ForWeapons>true</ForWeapons>
+			</li>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_ReplaceThing">
+				<ReplaceThing>CorrosiumWall</ReplaceThing>
+				<CompareThing>Wall</CompareThing>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(255, 193, 117)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.4</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Pyrotium</defName>
+		<label>Pyrotium</label>
+		<description>Pirotium is a gas compressed under high pressure, which allowed him to get a solid form for a while.</description>
+		<graphicData>
+			<texPath>Things/Resources/Pyrotium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>9.5</MarketValue>
+			<Mass>0.25</Mass>
+			<StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>2.23</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>100</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>-100</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.7</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompPyrotium</Comp>
+				<ForWeapons>true</ForWeapons>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(196, 183, 59)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.6</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Flammability>1</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Cryotium</defName>
+		<label>Cryotium</label>
+		<description>This material is formed by compressing the gas of the same name under high pressure. The substance exudes cold and is quite fragile, and the melting point is 10 degrees.</description>
+		<graphicData>
+			<texPath>Things/Resources/Cryotium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>9.5</MarketValue>
+			<Mass>0.25</Mass>
+			<StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>-0.23</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>-100</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>100</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.7</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<thingCategories>
+			<li>RimOverhaulSpecialMetalls</li>
+		</thingCategories>
+		<comps>
+			<li Class="RimOverhaul.Things.Stuff.CompProperties_AddedThing">
+				<Comp>RimOverhaul.Things.Stuff.CompCryotium</Comp>
+				<ForWeapons>true</ForWeapons>
+			</li>
+		</comps>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(50, 131, 217)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>0.6</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Flammability>0.02</Flammability>
+			</statFactors>
+			<smeltable>true</smeltable>
+		</stuffProps>
 	</ThingDef>
 	
 </Defs>

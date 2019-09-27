@@ -70,6 +70,7 @@
     <Compile Include="DarkNETWindow.cs" />
     <Compile Include="Dialogs\EmailMessageOption_DeclineQuest_Laboratory.cs" />
     <Compile Include="Dialogs\EmailMessageOption_TakeQuest_Laboratory.cs" />
+    <Compile Include="Dialogs\EmailMessageTimeComp_QuestLaboratory.cs" />
     <Compile Include="Dialog_DarkNetTraderCard.cs" />
     <Compile Include="FactionDefOfLocal.cs" />
     <Compile Include="GUIUtils.cs" />
@@ -97,9 +98,11 @@
     <Compile Include="Thoughts\ThoughtWorker_Ibuprofien.cs" />
     <Compile Include="TraderComp\DarkNetComp.cs" />
     <Compile Include="TraderComp\DarkNetComp_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetComp_JohnCarver.cs" />
     <Compile Include="TraderComp\DarkNetComp_RogerEdmonson.cs" />
     <Compile Include="TraderComp\DarkNetProperties.cs" />
     <Compile Include="TraderComp\DarkNetProperties_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetProperties_JohnCarver.cs" />
     <Compile Include="TraderComp\DarkNetProperties_RogerEdmonson.cs" />
     <Compile Include="TraderParams.cs" />
     <Compile Include="Traders\Order.cs" />

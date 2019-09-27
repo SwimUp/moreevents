@@ -171,5 +171,14 @@
 	<canBePermanent>false</canBePermanent>
   </GameConditionDef>
  
+  <GameConditionDef>
+    <defName>HighMutantPopulation</defName>
+    <conditionClass>RimOverhaul.Events.GameCondition_HighMutantPopulation</conditionClass>
+    <label>High mutant population</label>
+    <description>The population of mutants has sharply increased on the planet. They do not need prisoners, they only want one thing - to kill.
+Until the population drops, the risk of mutant attacks is very high.</description>
+    <endMessage>Mutant population declines</endMessage>
+	<canBePermanent>false</canBePermanent>
+  </GameConditionDef>
  
 </Defs>

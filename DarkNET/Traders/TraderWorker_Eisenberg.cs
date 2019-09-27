@@ -28,13 +28,13 @@ namespace DarkNET.Traders
             }
         }
 
-        public override int ArriveTime => 2; //5
+        public override int ArriveTime => 5;
 
-        public override int OnlineTime => 1; //3
+        public override int OnlineTime => 3;
 
         private bool labQuestIssued = false;
 
-        private int questEarlistDay => 1; //70
+        private int questEarlistDay => 70;
 
         public enum Tab
         {
@@ -335,8 +335,7 @@ namespace DarkNET.Traders
                 int passedDays = Find.TickManager.TicksGame / 60000;
                 if(passedDays > questEarlistDay)
                 {
-                     if(Rand.Chance(1f))
-                    // if(Rand.Chance(0.1f))
+                    if(Rand.Chance(0.1f))
                     {
                         GiveQuest();
                     }
@@ -356,6 +355,11 @@ namespace DarkNET.Traders
                 };
 
             QuestsManager.Communications.PlayerBox.SendMessage(message);
+
+            QuestsManager.Communications.RegisterComponent(new EmailMessageTimeComp_QuestLaboratory("EmailMessage_Eisenberg_Subj".Translate())
+            {
+                id = QuestsManager.Communications.UniqueIdManager.GetNextComponentID()
+            });
         }
 
         public override void WindowOpen()

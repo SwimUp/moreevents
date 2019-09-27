@@ -11,5 +11,10 @@ namespace MoreEvents
     public static class PawnKindDefOfLocal
     {
         public static PawnKindDef Tribal_Warrior;
+
+        public static PawnKindDef BattleRam;
+        public static PawnKindDef Goliath;
+        public static PawnKindDef Bombardier;
+        public static PawnKindDef Termitnator;
     }
 }

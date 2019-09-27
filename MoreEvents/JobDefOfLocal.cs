@@ -27,5 +27,7 @@ namespace MoreEvents
         public static JobDef TakeResultFromCokeFurnace;
 
         public static JobDef FillUpHole;
+
+        public static JobDef UseLaboratoryConsole;
     }
 }

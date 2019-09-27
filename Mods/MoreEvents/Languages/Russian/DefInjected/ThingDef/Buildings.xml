@@ -62,5 +62,8 @@
 	
 	<TribalCrack.label>Туннель</TribalCrack.label>
 	<TribalCrack.description>Туннель, ведущий к поселению аборигенов.</TribalCrack.description>
+	
+	<LaboratoryConsole.label>Консоль управления</LaboratoryConsole.label>
+	<LaboratoryConsole.description>Консоль управления различными системами.</LaboratoryConsole.description>
 
 </LanguageData>

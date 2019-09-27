@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>Gun_FEL_Light</defName>
+		<label>FEL Light</label>
+		<description>A free electron laser that was previously used only for scientific purposes. However, due to the need to significantly reduce the size, for the possibility of combat use, it was rebuilt. The resulting as a result, weapons capable of causing severe microtrauma causing numerous bleeding and disturbing heart function.</description>
+		<graphicData>
+			<texPath>Things/Weapons/Gun_FEL_Light</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<weaponTags>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<statBases> 
+			<Mass>0.8</Mass>
+			<MarketValue>400</MarketValue>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_FEL_Light</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>20.0</range>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_FEL_Light</defName>
+		<label>FEL Light bullet</label>
+		<thingClass>RimOverhaul.Things.Bullets.Bullet_FEL_Light</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12</damageAmountBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>Gun_FEL_Heavy</defName>
+		<label>FEL Heavy</label>
+		<description>Free electron laser, significantly increased in size, which significantly increases the damage done. Thanks to overclocked Electrons, FEL Severe ability to generate small charged polar particles. Upon reaching the goal, the field disrupts the heart and causes explosive injuries to the victim.</description>
+		<graphicData>
+			<texPath>Things/Weapons/Gun_FEL_Heavy</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<weaponTags>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<statBases> 
+			<MarketValue>950</MarketValue>
+			<Mass>2.3</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.35</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_FEL_Heavy</defaultProjectile>
+				<warmupTime>0.8</warmupTime>
+				<range>35.0</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>3.5</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_FEL_Heavy</defName>
+		<label>FEL Heavy bullet</label>
+		<thingClass>RimOverhaul.Things.Bullets.Bullet_FEL_Heavy</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<speed>85</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>Gun_AR</defName>
+		<label>AR-31</label>
+		<description>A small pistol whose combat effectiveness is to disperse shells using an energy beam. However, the gun does not require recharging, using ammunition energy. The technology is not remarkable, but thanks limitations of guns, due to the loss of drawings, the gun is valuable a godsend for rarities.</description>
+		<graphicData>
+			<texPath>Things/Weapons/Gun_AR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<weaponTags>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<statBases> 
+			<MarketValue>1500</MarketValue>
+			<Mass>2.3</Mass>
+			<AccuracyTouch>0.6</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.5</AccuracyMedium>
+			<AccuracyLong>0.3</AccuracyLong>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_AR</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>18.0</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>3.5</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_AR</defName>
+		<label>AR-31 bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+</Defs>

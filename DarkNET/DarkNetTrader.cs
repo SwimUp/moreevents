@@ -1,4 +1,5 @@
 ﻿using DarkNET.TraderComp;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,7 +71,7 @@ namespace DarkNET
 
         public virtual void Arrive()
         {
-
+            Find.LetterStack.ReceiveLetter($"DarkNetNotify_TraderArriveTitle".Translate(def.LabelCap), "DarkNetNotify_TraderArriveTitle".Translate(def.LabelCap), LetterDefOf.NeutralEvent);
         }
 
         public virtual void WindowOpen()

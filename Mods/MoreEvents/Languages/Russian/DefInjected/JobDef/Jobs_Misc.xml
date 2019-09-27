@@ -15,5 +15,6 @@
   <SwitchCokeFurnace.reportString>Переключает коксовую печь</SwitchCokeFurnace.reportString>
   <TakeResultFromCokeFurnace.reportString>Достает предмет из коксовой печи</TakeResultFromCokeFurnace.reportString>
   <FillUpHole.reportString>засыпает яму землей</FillUpHole.reportString>
+  <UseLaboratoryConsole.reportString>использует консоль</UseLaboratoryConsole.reportString>
 
 </LanguageData>

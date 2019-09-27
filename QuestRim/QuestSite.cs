@@ -23,6 +23,8 @@ namespace QuestRim
 
         private Quest quest;
 
+        public bool HasExitCells => Quest.HasExitCells;
+
         public override Material Material
         {
             get

@@ -344,6 +344,8 @@ namespace DarkNET.Traders
 
         public override void Arrive()
         {
+            base.Arrive();
+
             RegenerateStock();
 
             if (Order != null)

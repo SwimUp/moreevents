@@ -51,7 +51,7 @@ namespace MoreEvents.Communications
             }
         }
 
-        public void RemoveNow()
+        public virtual void RemoveNow()
         {
             if(Dialog != null)
             {

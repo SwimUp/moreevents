@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <Bullet_FEL_Light.label>Снаряд FEL Light</Bullet_FEL_Light.label>
+  
+  <Bullet_FEL_Heavy.label>Снаряд FEL Heavy</Bullet_FEL_Heavy.label>
+  
+  <Bullet_AR.label>Снаряд AR-31</Bullet_AR.label>
+  
+  <Gun_FEL_Light.label>FEL Light</Gun_FEL_Light.label>
+  <Gun_FEL_Light.description>Лазер на свободных электронах, который ранее использовался только в научных целях. Однако, в связи с необходимостью существенно сократить размер, для возможности боевого применения, он был подвергнут пересборке. Получившееся в результате этого оружие, способно к нанесению тяжелых микротравм, вызывающих многочисленные кровотечения и нарушающие работу сердца.</Gun_FEL_Light.description>
+  <Gun_FEL_Light.tools.barrel.label>FEL Light</Gun_FEL_Light.tools.barrel.label>
+  <Gun_FEL_Light.verbs.Verb_Shoot.label>Заряд FEL Light</Gun_FEL_Light.verbs.Verb_Shoot.label>
+  
+  <Gun_FEL_Heavy.label>FEL Heavy</Gun_FEL_Heavy.label>
+  <Gun_FEL_Heavy.description>Лазер на свободных электронах, существенно увеличенный в размере, что значительно повышает наносимый урон. Благодаря разогнанным электронам, FEL Heavy способен к генерированию небольшого заряженного поля частиц. При достижении цели, поле нарушает работу сердца и наносит разрывные травмы жертве.</Gun_FEL_Heavy.description>
+  <Gun_FEL_Heavy.tools.barrel.label>FEL Heavy</Gun_FEL_Heavy.tools.barrel.label>
+  <Gun_FEL_Heavy.verbs.Verb_Shoot.label>Заряд FEL Heavy</Gun_FEL_Heavy.verbs.Verb_Shoot.label>
+  
+  <Gun_FEL_Heavy.label>AR-31</Gun_FEL_Heavy.label>
+  <Gun_FEL_Heavy.description>Небольшой пистолет, боевая эффективность которого заключается в разгоне снарядов с помощью энергетического пучка. Однако, пистолет не требует подзарядки, используя энергию боекомплекта. Технология не является примечательной, но благодаря ограниченности экземпляров орудия, ввиду утраты чертежей, пистолет является ценной находкой для торговцев редкостями.</Gun_FEL_Heavy.description>
+  <Gun_FEL_Heavy.tools.barrel.label>AR-31</Gun_FEL_Heavy.tools.barrel.label>
+  <Gun_FEL_Heavy.verbs.Verb_Shoot.label>Пуля AR-31</Gun_FEL_Heavy.verbs.Verb_Shoot.label>
+  
+  
+</LanguageData>

@@ -1,5 +1,6 @@
 ﻿using Harmony;
 using MoreEvents.Events;
+using QuestRim;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,13 @@ namespace MoreEvents.Patch
 
             if(map != null)
             {
+                QuestSite site = Find.WorldObjects.WorldObjectAt<QuestSite>(map.Tile);
+                if (site != null)
+                {
+                    __result = site.HasExitCells;
+                    return false;
+                }
+
                 var comp = map.Parent.GetComponent<HasExitCellsComp>();
                 if (comp != null)
                 {

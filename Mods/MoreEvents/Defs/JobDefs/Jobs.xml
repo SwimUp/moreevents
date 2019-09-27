@@ -67,4 +67,10 @@
 		<reportString>fills the hole with earth</reportString>
 	</JobDef>
 
+	<JobDef>
+		<defName>UseLaboratoryConsole</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_UseLaboratoryConsole</driverClass>
+		<reportString>used laboratory console</reportString>
+	</JobDef>
+
 </Defs>

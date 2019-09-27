@@ -74,7 +74,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 46;
+        private static int totalSettings = 47;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -382,6 +382,12 @@ namespace MoreEvents
             {
                     Active = true,
                     UseCustomLabels = true
+            }
+            },
+            {
+            "HighMutantPopulation", new EventSettings("HighMutantPopulation")
+            {
+                    Active = true
             }
             }
         }; 
@@ -760,6 +766,12 @@ namespace MoreEvents
             {
                     Active = true,
                     UseCustomLabels = true
+            }
+            },
+            {
+            "HighMutantPopulation", new EventSettings("HighMutantPopulation")
+            {
+                    Active = true
             }
             }
             };

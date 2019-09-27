@@ -266,7 +266,7 @@ organism, concentrating.</description>
 		</statBases>
 		<tools>
 			<li>
-				<label>claw</label>
+				<label>left claw</label>
 				<capacities>
 					<li>Cut</li>
 				</capacities>
@@ -275,7 +275,7 @@ organism, concentrating.</description>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 			<li>
-				<label>claw</label>
+				<label>right claw</label>
 				<capacities>
 					<li>PoisonBurn</li>
 				</capacities>

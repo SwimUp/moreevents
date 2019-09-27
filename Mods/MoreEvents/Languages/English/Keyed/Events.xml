@@ -230,4 +230,9 @@ Redirecting energy to the control shaft --> OK</DoomsdayTerminal_PowerActivating
 	<Building_TribalCrack_DoDestroyAction>Fill up the hole with your hands</Building_TribalCrack_DoDestroyAction>
 	<Building_TribalCrack_Info>Buried: {0}</Building_TribalCrack_Info>
 	
+	<GameCondition_HighMutantPopulation_AttackTitle>Mutant Attack</GameCondition_HighMutantPopulation_AttackTitle>
+	<GameCondition_HighMutantPopulation_AttackDesc>Mutants attack your settlement</GameCondition_HighMutantPopulation_AttackDesc>
+	
+	<Corrosium_InspectString>Damage Received: {0}%</Corrosium_InspectString>
+	
 </LanguageData>

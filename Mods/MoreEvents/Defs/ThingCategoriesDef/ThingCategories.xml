@@ -13,5 +13,11 @@
 		<label>special</label>
 		<parent>Root</parent>
 	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RimOverhaulSpecialMetalls</defName>
+		<label>Metalls</label>
+		<parent>RimOverhaulSpecial</parent>
+	</ThingCategoryDef>
 
 </Defs>

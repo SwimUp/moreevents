@@ -381,6 +381,44 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 			<li Class="CompProperties_Flickable"/>
 		</comps>
 	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>LaboratoryConsole</defName>
+		<label>Management console</label>
+		<description>Management console for various systems</description>
+		<thingClass>RimOverhaul.Things.Building_LaboratoryConsole</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/LaboratoryConsole/LaboratoryConsole</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3, 1)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<pathCost>100</pathCost>
+		<fillPercent>1</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>false</castEdgeShadows>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<Mass>50</Mass>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(3, 1)</size>
+		<useHitPoints>false</useHitPoints>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>2000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(81,130,176,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
 
 	<ThingDef Abstract="true" Name="MEMTriggerBase">
 		<category>Building</category>

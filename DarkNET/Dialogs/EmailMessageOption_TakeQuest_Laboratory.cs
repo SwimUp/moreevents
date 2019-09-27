@@ -37,6 +37,7 @@ namespace DarkNET.Dialogs
             questPlace.Tile = result;
             questPlace.SetFaction(traderFaction);
             questPlace.Init(quest);
+            questPlace.RemoveAfterLeave = false;
 
             quest.Target = questPlace;
             quest.Site = questPlace;
@@ -45,6 +46,11 @@ namespace DarkNET.Dialogs
 
             QuestsManager.Communications.AddQuest(quest, QuestsManager.Communications.MakeQuestLetter(quest, description: quest.Description, lookTarget: questPlace));
 
+            var component = QuestsManager.Communications.Components.Where(x => x is EmailMessageTimeComp_QuestLaboratory).FirstOrDefault();
+            if(component!= null)
+            {
+                QuestsManager.Communications.RemoveComponent(component);
+            }
         }
     }
 }

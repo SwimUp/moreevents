@@ -146,5 +146,16 @@
 Внутри лаборатории стены, двери защищены электрическим полем, поэтому вам потребуется сначала уничтожить генераторные. Остерегайся живности внутри. 
 
 Удачи!</Quest_Laboratory_Info1>
+	<Building_LaboratoryConsole_NoPower>Похоже, что нет питания. Мы не сможем включить аварийные системы защиты, пока не восстановим источник энергии.</Building_LaboratoryConsole_NoPower>
+	<Building_LaboratoryConsole_AlreadyUsed>Нам удалось восстановить работу систем защиты. Как только мы покинем это место, система превратит лабораторию в саркофаг и уже ничто не сможет покинуть её.</Building_LaboratoryConsole_AlreadyUsed>
+	<Building_LaboratoryConsole_UseAction>Использовать</Building_LaboratoryConsole_UseAction>
+	<Quest_Laboratory_AdditionalRewards>Репутация торговца: 20</Quest_Laboratory_AdditionalRewards>
+	
+	<TraderWorker_JohnCarver_Tab_HardMetals>Основные материалы</TraderWorker_JohnCarver_Tab_HardMetals>
+	<TraderWorker_JohnCarver_Tab_Experimental>Особые материалы</TraderWorker_JohnCarver_Tab_Experimental>
+	<TraderWorker_JohnCarver_Tab_Precious>Драгоценные</TraderWorker_JohnCarver_Tab_Precious>
+	<TraderWorker_JohnCarver_Tab_Weapons>Оружие</TraderWorker_JohnCarver_Tab_Weapons>
+	
+	<DarkNetNotify_TraderArriveTitle>Трейдер {0} на связи</DarkNetNotify_TraderArriveTitle>
 	
 </LanguageData>

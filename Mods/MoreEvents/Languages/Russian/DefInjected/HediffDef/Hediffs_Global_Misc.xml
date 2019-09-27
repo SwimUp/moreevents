@@ -48,5 +48,9 @@
   <PoisonBite.stages.dangerous_poisoning.label>опасное отравление</PoisonBite.stages.dangerous_poisoning.label>  
 
   <BioChemicRegeneration.label>Биохимическая регенерация</BioChemicRegeneration.label>
+  
+  <AdamantiumToxin.label>Отравление адамантием</AdamantiumToxin.label>
+
+  <ElectromagneticShock.label>Электромагнитный удар</ElectromagneticShock.label>
 
 </LanguageData>

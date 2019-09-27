@@ -46,5 +46,7 @@ namespace MoreEvents
 
         public static IncidentDef ConcantrationCamp;
         public static IncidentDef SpaceBattle;
+
+        public static IncidentDef HighMutantPopulation;
     }
 }

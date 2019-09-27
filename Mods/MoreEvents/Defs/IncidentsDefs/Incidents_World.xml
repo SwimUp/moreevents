@@ -938,5 +938,30 @@ You can see event in geocape.
 		<earliestDay>80</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
+	
+	<!-- Событие: Высокая популяция мтуантов -->
+	<IncidentDef>
+		<defName>HighMutantPopulation</defName>
+		<label>High mutant population</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>HighMutantPopulation</gameCondition>
+		<letterLabel>High mutant population</letterLabel>
+		<letterText>The population of mutants has sharply increased on the planet. They do not need prisoners, they only want one thing - to kill.
+Until the population drops, the risk of mutant attacks is very high.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>100</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>10</min>
+			<max>60</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
 
 </Defs>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="BuildingBase" Name="PowerConduit">
+	<ThingDef ParentName="ElectricBuildingBase" Name="PowerConduit">
 		<designationCategory>Structure</designationCategory>
 	
 		<defName>UnbreakablePowerConduit</defName>
@@ -46,16 +46,12 @@
 			<li>PlaceWorker_Conduit</li>
 		</placeWorkers>
 		<rotatable>false</rotatable>
-		<selectable>true</selectable>
 		<neverMultiSelect>true</neverMultiSelect>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<constructEffect>ConstructMetal</constructEffect>
 		<clearBuildingArea>false</clearBuildingArea>
 		<designationHotKey>Misc1</designationHotKey>
-		<researchPrerequisites>
-			<li>Electricity</li>
-		</researchPrerequisites>
 	</ThingDef>
 
 </Defs>

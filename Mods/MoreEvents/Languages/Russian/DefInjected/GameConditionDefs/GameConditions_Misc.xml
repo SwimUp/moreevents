@@ -62,4 +62,8 @@
 могут падать не попавшие в цель снаряды.</SpaceBattle.description>  
   <SpaceBattle.endMessage>Кажется, битва утихла.</SpaceBattle.endMessage>
   
+  <HighMutantPopulation.label>Высокая популяция мутантов</HighMutantPopulation.label>
+  <HighMutantPopulation.description>Популяция мутантов на планете резко увеличилась. Им ненужны пленники - им нужна только кровь. Пока популяция не снизится, шансы на нападение мутантов сильно увеличен.</HighMutantPopulation.description>  
+  <HighMutantPopulation.endMessage>Популяция мутантов снизилась</HighMutantPopulation.endMessage>
+
 </LanguageData>

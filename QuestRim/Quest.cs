@@ -39,6 +39,8 @@ namespace QuestRim
 
         public DialogDef Dialog;
 
+        public virtual bool HasExitCells => false;
+
         public virtual Texture2D ExpandingIcon
         {
             get

@@ -164,10 +164,7 @@ namespace MoreEvents
             {
                 thingDef.placeWorkers = new List<Type>(def.placeWorkers);
             }
-            if (def.BuildableByPlayer)
-            {
-                thingDef.stuffCategories = def.stuffCategories;
-            }
+            thingDef.stuffCategories = def.stuffCategories;
             thingDef.entityDefToBuild = def;
             def.frameDef = thingDef;
             return thingDef;

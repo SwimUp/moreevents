@@ -199,4 +199,8 @@
 
 (чтобы зарыть туннель, снарядите поселенца гранатами, выберите её и нажмите ПКМ на туннель)</TunnelRats.letterText>  
 
+  <HighMutantPopulation.label>Высокая популяция мутантов</HighMutantPopulation.label>
+  <HighMutantPopulation.letterLabel>Высокая популяция мутантов</HighMutantPopulation.letterLabel>
+  <HighMutantPopulation.letterText>Популяция мутантов на планете резко увеличилась. Им ненужны пленники - им нужна только кровь. Пока популяция не снизится, шансы на нападение мутантов сильно увеличен.</HighMutantPopulation.letterText>  
+  
 </LanguageData>
