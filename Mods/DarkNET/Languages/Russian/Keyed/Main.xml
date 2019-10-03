@@ -154,8 +154,16 @@
 	<TraderWorker_JohnCarver_Tab_HardMetals>Основные материалы</TraderWorker_JohnCarver_Tab_HardMetals>
 	<TraderWorker_JohnCarver_Tab_Experimental>Особые материалы</TraderWorker_JohnCarver_Tab_Experimental>
 	<TraderWorker_JohnCarver_Tab_Precious>Драгоценные</TraderWorker_JohnCarver_Tab_Precious>
+	<TraderWorker_JohnCarver_Tab_Artifacts>Артефакты</TraderWorker_JohnCarver_Tab_Artifacts>
 	<TraderWorker_JohnCarver_Tab_Weapons>Оружие</TraderWorker_JohnCarver_Tab_Weapons>
 	
 	<DarkNetNotify_TraderArriveTitle>Трейдер {0} на связи</DarkNetNotify_TraderArriveTitle>
+	
+	<TraderWorker_Archotech_567H_Tab_Items>Предметы</TraderWorker_Archotech_567H_Tab_Items>
+	<TraderWorker_Archotech_567H_Tab_Weapons>Оружие</TraderWorker_Archotech_567H_Tab_Weapons>
+	<TraderWorker_Archotech_567H_Tab_Armors>Броня</TraderWorker_Archotech_567H_Tab_Armors>
+	
+	<TraderWorker_Archotech_567H_Quests>Задания</TraderWorker_Archotech_567H_Quests>
+	<TraderWorker_Archotech_567H_Quests_Info>Список доступных заданий, которые может предложить торговец</TraderWorker_Archotech_567H_Quests_Info>
 	
 </LanguageData>

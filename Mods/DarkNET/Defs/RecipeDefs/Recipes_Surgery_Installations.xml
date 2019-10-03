@@ -3265,4 +3265,844 @@
 		<addsHediff>DarkNet_BionicLung</addsHediff>
 	</RecipeDef>
 
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Bushido</defName>
+		<label>install Fragment of the neural network "Bushido"</label>
+		<description>Install "Bushido"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Bushido"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Bushido</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Bushido</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Bushido</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Sniper</defName>
+		<label>install Fragment of the neural network "Sniper"</label>
+		<description>Install "Sniper"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Sniper"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Sniper</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Sniper</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Sniper</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Psychology</defName>
+		<label>install Fragment of the neural network "Psychology"</label>
+		<description>Install "Psychology"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Psychology"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Psychology</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Psychology</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Psychology</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Wild</defName>
+		<label>install Fragment of the neural network "Wild"</label>
+		<description>Install "Wild"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Wild"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Wild</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Wild</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Wild</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_GreenFields</defName>
+		<label>install Fragment of the neural network "GreenFields"</label>
+		<description>Install "GreenFields"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "GreenFields"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_GreenFields</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_GreenFields</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_GreenFields</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Paladin</defName>
+		<label>install Fragment of the neural network "Paladin"</label>
+		<description>Install "Paladin"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Paladin"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Paladin</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Paladin</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Paladin</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_MiningWays</defName>
+		<label>install Fragment of the neural network "Mining Ways"</label>
+		<description>Install "Mining Ways"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Mining Ways"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_MiningWays</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_MiningWays</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_MiningWays</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_ConnoisseurOfBeauty</defName>
+		<label>install Fragment of the neural network "Connoisseur Of Beauty"</label>
+		<description>Install "Connoisseur Of Beauty"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Connoisseur Of Beauty"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_ConnoisseurOfBeauty</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_ConnoisseurOfBeauty</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_ConnoisseurOfBeauty</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Hephaestus</defName>
+		<label>install Fragment of the neural network "Hephaestus"</label>
+		<description>Install "Hephaestus"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Hephaestus"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Hephaestus</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Hephaestus</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Hephaestus</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Science</defName>
+		<label>install Fragment of the neural network "Science"</label>
+		<description>Install "Science"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Science"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Science</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Science</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Science</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Construction</defName>
+		<label>install Fragment of the neural network "Construction"</label>
+		<description>Install "Construction"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Construction"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Construction</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Construction</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Construction</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Gourmet</defName>
+		<label>install Fragment of the neural network "Gourmet"</label>
+		<description>Install "Gourmet"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Gourmet"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Gourmet</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Gourmet</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Gourmet</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Singular</defName>
+		<label>install Fragment of the neural network "Sacred and wild"</label>
+		<description>Install "Sacred and wild"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Sacred and wild"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>16</Medicine>
+			<Intellectual>12</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Singular</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Singular</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Singular</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Berserker</defName>
+		<label>install Fragment of the neural network "Berserker"</label>
+		<description>Install "Berserker"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Berserker"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Berserker</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Berserker</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Berserker</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Meditation</defName>
+		<label>install Fragment of the neural network "Meditation"</label>
+		<description>Install "Meditation"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Meditation"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Meditation</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Meditation</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Meditation</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_LifeForce</defName>
+		<label>install Fragment of the neural network "Life Force"</label>
+		<description>Install "Life Force"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Life Force"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_LifeForce</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_LifeForce</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_LifeForce</addsHediff>
+	</RecipeDef>
+	
+		<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Consummation</defName>
+		<label>install Fragment of the neural network "Consummation"</label>
+		<description>Install "Consummation"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Consummation"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Consummation</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Consummation</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Consummation</addsHediff>
+	</RecipeDef>
+	
+			<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_YinYang</defName>
+		<label>install Fragment of the neural network "Yin and Yang"</label>
+		<description>Install "Yin and Yang"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Yin and Yang"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_YinYang</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_YinYang</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_YinYang</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_MentalFocus</defName>
+		<label>install Fragment of the neural network "Mental focus"</label>
+		<description>Install "Mental focus"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing "Mental focus"</jobString>
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_MentalFocus</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_MentalFocus</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_MentalFocus</addsHediff>
+	</RecipeDef>
 </Defs>

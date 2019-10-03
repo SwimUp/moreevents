@@ -10,6 +10,19 @@ using static DarkNET.TraderComp.DarkNetProperties_JohnCarver;
 
 namespace DarkNET.Traders
 {
+    public class CategoryItem<T> : IExposable
+    {
+        public T Tab;
+
+        public List<SellableItemWithModif> Items;
+
+        public void ExposeData()
+        {
+            Scribe_Values.Look(ref Tab, "Tab");
+            Scribe_Collections.Look(ref Items, "Items", LookMode.Deep);
+        }
+    }
+
     public class TraderWorker_JohnCarver : DarkNetTrader
     {
         private Vector2 slider = Vector2.zero;
@@ -21,32 +34,20 @@ namespace DarkNET.Traders
             HardMetals,
             Experimental,
             Precious,
-            Weapons
+            Weapons,
+            Artifacts
         }
 
         private static Tab tab;
 
         private static List<TabRecord> tabsList = new List<TabRecord>();
 
-        private List<CategoryItem> stock;
-        public List<CategoryItem> Stock => stock;
+        private List<CategoryItem<Tab>> stock;
+        public List<CategoryItem<Tab>> Stock => stock;
 
-        public override int ArriveTime => 1;
+        public override int ArriveTime => 8;
 
-        public override int OnlineTime => 1;
-
-        public class CategoryItem : IExposable
-        {
-            public Tab Tab;
-
-            public List<SellableItemWithModif> Items;
-
-            public void ExposeData()
-            {
-                Scribe_Values.Look(ref Tab, "Tab");
-                Scribe_Collections.Look(ref Items, "Items", LookMode.Deep);
-            }
-        }
+        public override int OnlineTime => 3;
 
         public DarkNetComp_JohnCarver Comp
         {
@@ -72,11 +73,11 @@ namespace DarkNET.Traders
 
         private void Inititialize()
         {
-            stock = new List<CategoryItem>();
+            stock = new List<CategoryItem<Tab>>();
 
             foreach (Tab cat in Enum.GetValues(typeof(Tab)))
             {
-                CategoryItem catItem = new CategoryItem
+                CategoryItem<Tab> catItem = new CategoryItem<Tab>
                 {
                     Tab = cat,
                     Items = new List<SellableItemWithModif>()
@@ -103,7 +104,7 @@ namespace DarkNET.Traders
 
             foreach (var cat in stock)
             {
-                CategoryItemSetting settings = Comp.Props.CategoryItemSettings.First(x => x.Tab == cat.Tab);
+                CategoryItemSetting<Tab> settings = Comp.Props.CategoryItemSettings.First(x => x.Tab == cat.Tab);
 
                 if (cat.Items == null)
                     cat.Items = new List<SellableItemWithModif>();
@@ -129,6 +130,13 @@ namespace DarkNET.Traders
                     if (!TryMerge(item, cat.Items))
                     {
                         int marketValue = (int)((item.MarketValue * Character.Greed) * settings.PriceMultiplier);
+
+                        var quality = item.TryGetComp<CompQuality>();
+                        if (quality != null)
+                        {
+                            quality.SetQuality(QualityUtility.GenerateQualityRandomEqualChance(), ArtGenerationContext.Colony);
+                            marketValue = (int)(marketValue * GetPriceMultiplierForQuality(quality.Quality));
+                        }
 
                         SellableItemWithModif newItem = new SellableItemWithModif(item, marketValue, null);
 
@@ -218,6 +226,10 @@ namespace DarkNET.Traders
             {
                 tab = Tab.Weapons;
             }, tab == Tab.Weapons));
+            tabsList.Add(new TabRecord("TraderWorker_JohnCarver_Tab_Artifacts".Translate(), delegate
+            {
+                tab = Tab.Artifacts;
+            }, tab == Tab.Artifacts));
             TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 200);
 
             DrawItems(tab, rect2);
@@ -264,7 +276,7 @@ namespace DarkNET.Traders
 
             Text.Anchor = TextAnchor.MiddleCenter;
             Rect arrowRect = new Rect(rect.x + 10, rect.y + 165, 25, 25);
-            DrawSelectArrows(item, arrowRect);
+            GUIUtils.DrawSelectArrows(item, arrowRect);
             float addX = 200;
             if (item.CountToTransfer > 0)
             {
@@ -299,32 +311,41 @@ namespace DarkNET.Traders
             }
         }
 
-
-        private void DrawSelectArrows(SellableItemWithModif item, Rect rect)
+        public float GetPriceMultiplierForQuality(QualityCategory qualityCategory)
         {
-            if (GUIUtils.DrawCustomButton(rect, "-1", Color.white))
+            switch (qualityCategory)
             {
-                item.AddToTransfer(-1);
+                case QualityCategory.Awful:
+                    {
+                        return 0.8f;
+                    }
+                case QualityCategory.Poor:
+                    {
+                        return 0.9f;
+                    }
+                case QualityCategory.Normal:
+                    {
+                        return 1f;
+                    }
+                case QualityCategory.Good:
+                    {
+                        return 1.1f;
+                    }
+                case QualityCategory.Excellent:
+                    {
+                        return 1.2f;
+                    }
+                case QualityCategory.Masterwork:
+                    {
+                        return 1.3f;
+                    }
+                case QualityCategory.Legendary:
+                    {
+                        return 1.5f;
+                    }
             }
-            rect.x += 27;
-            if (GUIUtils.DrawCustomButton(rect, "-5", Color.white))
-            {
-                item.AddToTransfer(-5);
-            }
-            rect.x += 28;
-            Rect rect2 = rect;
-            rect2.width = 70;
-            Widgets.TextFieldNumeric(rect2, ref item.CountToTransfer, ref item.EditBuffer, 0, item.Item.stackCount);
-            rect.x += 77;
-            if (GUIUtils.DrawCustomButton(rect, "+1", Color.white))
-            {
-                item.AddToTransfer(1);
-            }
-            rect.x += 27;
-            if (GUIUtils.DrawCustomButton(rect, "+5", Color.white))
-            {
-                item.AddToTransfer(5);
-            }
+
+            return 1f;
         }
     }
 }

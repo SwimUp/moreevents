@@ -72,5 +72,11 @@
 		<driverClass>RimOverhaul.AI.JobDriver_UseLaboratoryConsole</driverClass>
 		<reportString>used laboratory console</reportString>
 	</JobDef>
+	
+	<JobDef>
+		<defName>UseUsableItem</defName>
+		<driverClass>RimOverhaul.AI.JobDriver_UseUsableItem</driverClass>
+		<reportString>used item</reportString>
+	</JobDef>
 
 </Defs>

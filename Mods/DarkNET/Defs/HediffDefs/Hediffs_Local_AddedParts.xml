@@ -1826,7 +1826,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_BionicLung</defName>
 		<label>Bionic lung</label>
@@ -1854,5 +1854,647 @@
 			</li>
 		</stages>
 	</HediffDef>
+
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Bushido</defName>
+		<label>Fragment of the neural network "Bushido"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Bushido</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.30</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeHitChance>0.5</MeleeHitChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+					<WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Sniper</defName>
+		<label>Fragment of the neural network "Sniper"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Sniper</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>-0.5</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeHitChance>-0.5</MeleeHitChance>
+					<MeleeDodgeChance>-0.3</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
+					<WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Psychology</defName>
+		<label>Fragment of the neural network "Psychology"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to conduct dialogue significantly increases, which negatively affects the speed of work.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Psychology</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>0.6</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<NegotiationAbility>0.5</NegotiationAbility>
+					<SocialImpact>0.5</SocialImpact>
+					<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Wild</defName>
+		<label>Fragment of the neural network "Wild"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to pacify animals increases significantly, which negatively affects field work.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Wild</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity> 
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PlantWorkSpeed>-0.7</PlantWorkSpeed>
+					<PlantHarvestYield>-0.3</PlantHarvestYield>
+					<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+					<TrainAnimalChance>0.3</TrainAnimalChance>
+					<TameAnimalChance>0.3</TameAnimalChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_GreenFields</defName>
+		<label>Fragment of the neural network "Green Fields"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you remember faster life cycle of plants, merging with the nature of the planet, ceasing to reverse attention to the people around you.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_GreenFields</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<PlantWorkSpeed>0.5</PlantWorkSpeed>
+					<PlantHarvestYield>0.2</PlantHarvestYield>
+					<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+					<TrainAnimalChance>-0.8</TrainAnimalChance>
+					<TameAnimalChance>-0.8</TameAnimalChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Paladin</defName>
+		<label>Fragment of the neural network "Paladin"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your abilities in medicine grow at an unprecedented speed, but you understand that you do not want to harm people.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Paladin</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<MedicalQualityMax>0.1</MedicalQualityMax>
+					<MedicalPotency>0.2</MedicalPotency>
+					<MedicalTendSpeed>0.3</MedicalTendSpeed>
+					<MedicalTendQuality>0.1</MedicalTendQuality>
+					<MedicalOperationSpeed>0.3</MedicalOperationSpeed>
+					<MeleeHitChance>-1.0</MeleeHitChance>
+					<MeleeDodgeChance>-1.0</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-1.0</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_MiningWays</defName>
+		<label>Fragment of the neural network "Mining ways"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, your brain is filled with knowledge about the properties of rocks, and the ability to exploration is essentially are rising.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_MiningWays</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity> 
+						<offset>0.2</offset>
+                    </li> 
+					
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.2</offset>
+                    </li> 
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-1.0</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<MiningSpeed>0.6</MiningSpeed>
+					<MiningYield>0.3</MiningYield>
+					<MeleeHitChance>-0.5</MeleeHitChance>
+					<SocialImpact>-0.8</SocialImpact>
+					<NegotiationAbility>-0.5</NegotiationAbility>
+					<ConstructionSpeedFactor>-0.6</ConstructionSpeedFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_ConnoisseurOfBeauty</defName>
+		<label>Fragment of the neural network "Connoisseur of beauty"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your worldview changes. It seems that you are beginning to see the beautiful in what you considered insignificant.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_ConnoisseurOfBeauty</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.2</offset>
+                    </li> 
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-0.5</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<SculptingSpeed>0.6</SculptingSpeed>
+					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+					<MeleeHitChance>-0.3</MeleeHitChance>
+					<SocialImpact>-0.3</SocialImpact>
+					<NegotiationAbility>-0.3</NegotiationAbility>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Hephaestus</defName>
+		<label>Fragment of the neural network "Hephaestus"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Hephaestus</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-0.5</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<SculptingSpeed>-0.8</SculptingSpeed>
+					<TailoringSpeed>0.3</TailoringSpeed>
+					<SmithingSpeed>0.3</SmithingSpeed>
+					<DrugSynthesisSpeed>0.3</DrugSynthesisSpeed>
+					<SmeltingSpeed>0.3</SmeltingSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+		<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Science</defName>
+		<label>Fragment of the neural network "Science"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Science</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-1.0</offset>
+                    </li> 
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>-0.2</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<ResearchSpeed>0.8</ResearchSpeed>
+					<GlobalLearningFactor>0.8</GlobalLearningFactor>
+					<HungerRateMultiplier>1.3</HungerRateMultiplier>
+					<MeleeHitChance>-0.7</MeleeHitChance>
+					<MeleeDodgeChance>-0.7</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-0.7</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Construction</defName>
+		<label>Fragment of the neural network "Construction"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you can easily recognize errors in the drawings and create new, magnificent structures.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Construction</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-0.3</offset>
+                    </li> 
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.2</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<GlobalLearningFactor>0.1</GlobalLearningFactor>
+					<ConstructionSpeedFactor>0.7</ConstructionSpeedFactor>
+					<MeleeHitChance>-0.3</MeleeHitChance>
+					<MiningYield>-0.7</MiningYield>
+					<MiningSpeed>-0.7</MiningSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Gourmet</defName>
+		<label>Fragment of the neural network "Gourmet"</label>
+		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your taste buds aggravated by commensurate newfound culinary abilities.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Gourmet</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Eating</capacity> 
+						<offset>0.4</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<FoodPoisonChance>-0.5</FoodPoisonChance>
+					<DrugCookingSpeed>0.5</DrugCookingSpeed>
+					<CookSpeed>0.5</CookSpeed>
+					<ImmunityGainSpeed>-0.5</ImmunityGainSpeed>
+					<SocialImpact>-0.7</SocialImpact>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+		<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Singular</defName>
+		<label>Fragment of the neural network "Sacred and wild"</label>
+		<labelNoun>A large foreign structure created from twelve fragments. Significantly changes the consciousness of people falling within the radius of impact. It has partial functionality of all parts involved in the creation mechanism.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Singular</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Eating</capacity> 
+						<offset>0.5</offset>
+                    </li> 
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Consciousness</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Hearing</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+					<MeleeHitChance>0.2</MeleeHitChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+					<SocialImpact>0.5</SocialImpact>
+					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+					<ResearchSpeed>0.3</ResearchSpeed>
+					<GlobalLearningFactor>0.5</GlobalLearningFactor>
+					<HungerRateMultiplier>2.0</HungerRateMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Berserker</defName>
+		<label>Fragment of the neural network "Berserker"</label>
+		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Berserker</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.3</offset>
+                    </li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>-0.5</offset>
+                    </li>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-1.0</offset>
+                    </li>
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.5</offset>
+                    </li> 
+					<li>
+						<capacity>Hearing</capacity> 
+						<offset>0.5</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<MeleeHitChance>0.5</MeleeHitChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<WorkSpeedGlobal>-0.8</WorkSpeedGlobal>
+					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+					<GlobalLearningFactor>-0.5</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Meditation</defName>
+		<label>Fragment of the neural network "Meditation"</label>
+		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism you better understand animals and people, spending free time on meditation and ordering of one’s own thoughts, which affects health.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Meditation</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>0.8</offset>
+                    </li>
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<NegotiationAbility>0.6</NegotiationAbility>
+					<SocialImpact>0.6</SocialImpact>
+					<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+					<PlantWorkSpeed>-0.4</PlantWorkSpeed>
+					<PlantHarvestYield>-0.2</PlantHarvestYield>
+					<TrainAnimalChance>0.4</TrainAnimalChance>
+					<TameAnimalChance>0.4</TameAnimalChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_LifeForce</defName>
+		<label>Fragment of the neural network "Life force"</label>
+		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_LifeForce</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>-0.3</offset>
+                    </li> 
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<PlantWorkSpeed>0.5</PlantWorkSpeed>
+					<PlantHarvestYield>0.3</PlantHarvestYield>
+					<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+					<TrainAnimalChance>-0.8</TrainAnimalChance>
+					<TameAnimalChance>-0.5</TameAnimalChance>
+					<MedicalQualityMax>0.2</MedicalQualityMax>
+					<MedicalPotency>0.3</MedicalPotency>
+					<MedicalTendSpeed>0.3</MedicalTendSpeed>
+					<MedicalTendQuality>0.2</MedicalTendQuality>
+					<MedicalOperationSpeed>0.3</MedicalOperationSpeed>
+					<MeleeHitChance>-1.0</MeleeHitChance>
+					<MeleeDodgeChance>-1.0</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-1.0</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Consummation</defName>
+		<label>Fragment of the neural network "Consummation"</label>
+		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Consummation</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity> 
+						<offset>0.1</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<TailoringSpeed>0.4</TailoringSpeed>
+					<SmithingSpeed>0.4</SmithingSpeed>
+					<DrugSynthesisSpeed>0.4</DrugSynthesisSpeed>
+					<SmeltingSpeed>0.4</SmeltingSpeed>
+					<SculptingSpeed>0.6</SculptingSpeed>
+					<MeleeHitChance>-0.7</MeleeHitChance>
+					<SocialImpact>-0.5</SocialImpact>
+					<NegotiationAbility>-0.7</NegotiationAbility>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_YinYang</defName>
+		<label>Fragment of the neural network "Yin and Yang"</label>
+		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_YinYang</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-1.0</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+                    <GlobalLearningFactor>0.05</GlobalLearningFactor>
+					<ConstructionSpeedFactor>0.6</ConstructionSpeedFactor>
+					<MeleeHitChance>-0.8</MeleeHitChance>
+					<MiningYield>0.2</MiningYield>
+					<MiningSpeed>0.6</MiningSpeed>
+					<SocialImpact>-1.0</SocialImpact>
+					<NegotiationAbility>-1.0</NegotiationAbility>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_MentalFocus</defName>
+		<label>Fragment of the neural network "Mental focus"</label>
+		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Lets focus all the efforts of the body to acquire new knowledge and improving intelligence that spends the last body energy reserves.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_MentalFocus</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Talking</capacity> 
+						<offset>-1.0</offset>
+                    </li> 
+				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
+					<SocialImpact>-0.9</SocialImpact>
+					<ResearchSpeed>1.0</ResearchSpeed>
+					<GlobalLearningFactor>1.0</GlobalLearningFactor>
+					<HungerRateMultiplier>2.0</HungerRateMultiplier>
+					<MeleeHitChance>-1.0</MeleeHitChance>
+					<MeleeDodgeChance>-1.0</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-1.0</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>

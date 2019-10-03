@@ -8,20 +8,10 @@ using Verse;
 
 namespace RimOverhaul.Things.Bullets
 {
-    public class Bullet_FEL_Heavy : Bullet
+    public class Bullet_FEL_Heavy : Bullet_Hediff
     {
-        protected override void Impact(Thing hitThing)
-        {
-            base.Impact(hitThing);
+        public override HediffDef HediffDef => HediffDefOfLocal.ElectromagneticShock;
 
-            if(hitThing != null)
-            {
-                Pawn pawn = hitThing as Pawn;
-                if (pawn != null)
-                {
-                    HealthUtility.AdjustSeverity(pawn, HediffDefOfLocal.ElectromagneticShock, 0.1f);
-                }
-            }
-        }
+        public override float SeverityPerShot => 0.1f;
     }
 }

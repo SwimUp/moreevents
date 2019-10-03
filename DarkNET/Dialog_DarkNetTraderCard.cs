@@ -15,18 +15,25 @@ namespace DarkNET
 
         private Vector2 scroll = Vector2.zero;
 
+        private float width;
+
         public Dialog_DarkNetTraderCard(DarkNetTrader trader)
         {
             doCloseX = true;
             this.trader = trader;
+
+            if (trader.def.OverridePortraitWidth == 0)
+                width = 400;
+            else
+                width = trader.def.OverridePortraitWidth;
         }
 
         public override void DoWindowContents(Rect inRect)
         {
-            Rect textureRect = new Rect(400, 0, 400, inRect.height);
+            Rect textureRect = new Rect(400, 0, width, inRect.height);
             GUI.DrawTexture(textureRect, trader.def.FullTexture);
 
-            Rect title = new Rect(0, 0, 400, 30);
+            Rect title = new Rect(0, 0, 500, 30);
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(title, trader.Name);

@@ -29,5 +29,7 @@ namespace MoreEvents
         public static JobDef FillUpHole;
 
         public static JobDef UseLaboratoryConsole;
+
+        public static JobDef UseUsableItem;
     }
 }

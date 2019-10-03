@@ -9,28 +9,7 @@ namespace DarkNET.TraderComp
 {
     public class DarkNetProperties_JohnCarver : DarkNetProperties
     {
-        public class CategoryItemSetting
-        {
-            public TraderWorker_JohnCarver.Tab Tab;
-
-            public IntRange CountRange;
-
-            public FloatRange ValueRange;
-
-            public List<DarkNetGood> Goods;
-
-            public float PriceMultiplier = 1f;
-
-            public void ResolveReferences()
-            {
-                foreach (var good in Goods)
-                {
-                    good.ThingFilter.ResolveReferences();
-                }
-            }
-        }
-
-        public List<CategoryItemSetting> CategoryItemSettings;
+        public List<CategoryItemSetting<TraderWorker_JohnCarver.Tab>> CategoryItemSettings;
 
         public DarkNetProperties_JohnCarver()
         {

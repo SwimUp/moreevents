@@ -63,6 +63,7 @@
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_CarryItemToFurnace.cs" />
     <Compile Include="AI\JobDriver_FillUpTheHole.cs" />
+    <Compile Include="AI\JobDriver_UseUsableItem.cs" />
     <Compile Include="AI\JobDriver_UseLaboratoryConsole.cs" />
     <Compile Include="AI\JobDriver_TakeItemFromCokeFurnace.cs" />
     <Compile Include="AI\JobDriver_SwitchCokeFurnace.cs" />
@@ -299,6 +300,7 @@
     <Compile Include="Quests\Quest_ThingsHelp.cs" />
     <Compile Include="RaidStrategyDefOfLocal.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SoundDefOfLocal.cs" />
     <Compile Include="Sounds\SoundDefOfLocal.cs" />
     <Compile Include="TerminalDefOfLocal.cs" />
     <Compile Include="ThingDefGenerator_BuildingsCustom.cs" />
@@ -309,11 +311,34 @@
     <Compile Include="Things\Building_TribalCrack.cs" />
     <Compile Include="Things\Building_WorkTable_Animated.cs" />
     <Compile Include="Things\Building_WorkTable_AnimatedHeatPush.cs" />
+    <Compile Include="Things\Bullets\Bullet_ArgentRocket.cs" />
+    <Compile Include="Things\Bullets\Bullet_RL_SteelRain.cs" />
+    <Compile Include="Things\Bullets\Bullet_WR_EternalFire.cs" />
+    <Compile Include="Things\Bullets\Bullet_WR_Wisp.cs" />
+    <Compile Include="Things\Bullets\Bullet_ArgentSphere.cs" />
+    <Compile Include="Things\Bullets\Bullet_DeathRay.cs" />
+    <Compile Include="Things\Bullets\Bullet_EMP_Fox.cs" />
+    <Compile Include="Things\Bullets\Bullet_RMP_Guard.cs" />
+    <Compile Include="Things\Bullets\Bullet_EMP_47.cs" />
+    <Compile Include="Things\Bullets\Bullet_RMP_56.cs" />
+    <Compile Include="Things\Bullets\Bullet_RMP_51.cs" />
+    <Compile Include="Things\Bullets\Bullet_RMP_45.cs" />
+    <Compile Include="Things\Bullets\Bullet_EMP_41.cs" />
+    <Compile Include="Things\Bullets\Bullet_PG_26.cs" />
+    <Compile Include="Things\Bullets\Bullet_PG_21.cs" />
+    <Compile Include="Things\Bullets\Bullet_PG_18.cs" />
+    <Compile Include="Things\Bullets\Bullet_Hediff.cs" />
     <Compile Include="Things\Bullets\Bullet_FEL_Heavy.cs" />
     <Compile Include="Things\Bullets\Bullet_FEL_Light.cs" />
+    <Compile Include="Things\Bullets\Bullet_SMP_42.cs" />
+    <Compile Include="Things\Bullets\Bullet_LTB.cs" />
+    <Compile Include="Things\Bullets\Bullet_ThermoFusion.cs" />
+    <Compile Include="Things\Bullets\Grenades\Proj_GrenadeGravity.cs" />
     <Compile Include="Things\CokeFurnace\Building_CokeFurnace.cs" />
     <Compile Include="Things\CokeFurnace\ITab_CokeFurnace.cs" />
+    <Compile Include="Things\CompChargeableWeapon.cs" />
     <Compile Include="Things\CompElectricUnbreakable.cs" />
+    <Compile Include="Things\CompProperties_ChargeableWeapon.cs" />
     <Compile Include="Things\CompProperties_ElectricUnbreakable.cs" />
     <Compile Include="Things\CompProperties_Test.cs" />
     <Compile Include="Things\CompTest.cs" />
@@ -323,10 +348,13 @@
     <Compile Include="Things\Building_MechanoidTeleport_Generator.cs" />
     <Compile Include="Things\Building_SingularReactor.cs" />
     <Compile Include="Things\DropPodIncomingPlus.cs" />
+    <Compile Include="Things\Melee\Verb_Melee_HighFrequency.cs" />
     <Compile Include="Things\Pawns\Pawn_Goliath.cs" />
     <Compile Include="Things\Pawns\Pawn_Termitnator.cs" />
     <Compile Include="Things\RecipeDefOfLocal.cs" />
     <Compile Include="Things\SkyfallerPlus.cs" />
+    <Compile Include="Things\Special\SphereOfResurrection.cs" />
+    <Compile Include="Things\Special\UsableItem.cs" />
     <Compile Include="Things\Stuff\CompAdamantiumApparel.cs" />
     <Compile Include="Things\Stuff\CompCorrosium.cs" />
     <Compile Include="Things\Stuff\CompFerotium.cs" />
@@ -342,6 +370,7 @@
     <Compile Include="Things\Stuff\CompVibranium.cs" />
     <Compile Include="Things\Stuff\Corrosium.cs" />
     <Compile Include="Things\Stuff\Vibranium.cs" />
+    <Compile Include="Things\Weapons\Verb_SMP_42.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />
     <Compile Include="Things\PawnKindDefOfLocal.cs" />
@@ -361,6 +390,8 @@
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Things\Effects\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

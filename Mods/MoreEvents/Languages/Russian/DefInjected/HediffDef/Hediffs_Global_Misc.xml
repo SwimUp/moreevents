@@ -53,4 +53,23 @@
 
   <ElectromagneticShock.label>Электромагнитный удар</ElectromagneticShock.label>
 
+  <ExposureChargedPlasma.label>Воздействие заряженной плазмы</ExposureChargedPlasma.label>
+
+  <EnergyOverload.label>Энергетическая перегрузка</EnergyOverload.label>
+
+  <InternalBleeding.label>Внутреннее кровотечение</InternalBleeding.label>
+
+  <ShortStun.label>Кратковременное оглушение</ShortStun.label>
+  
+  <SphereOfResurrection.label>Временно живой</SphereOfResurrection.label>
+  
+  <ExposurePoison.label>Воздействие яда</ExposurePoison.label>
+  <ExposurePoison_Axe.label>Воздействие яда</ExposurePoison_Axe.label>
+  
+  <DevastatingInjuries.label>Разрушительные травмы</DevastatingInjuries.label>
+  
+  <CryotiumShards.label>Осколки криотиума</CryotiumShards.label>
+  
+  <ExplosiveBullets.label>Разрывные пули</ExplosiveBullets.label>
+  
 </LanguageData>

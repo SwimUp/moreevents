@@ -13,6 +13,8 @@ namespace DarkNET
     {
         public Type workerClass;
 
+        public float OverridePortraitWidth = 0;
+
         public Texture2D IconTexture
         {
             get

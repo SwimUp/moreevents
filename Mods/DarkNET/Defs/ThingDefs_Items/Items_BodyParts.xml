@@ -1339,4 +1339,533 @@
 		</tradeTags>
 	</ThingDef>
 
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Bushido</defName>
+		<label>Fragment of the neural network "Bushido"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Bushido</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Sniper</defName>
+		<label>Fragment of the neural network "Sniper"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, accuracy in ranged combat is essential rises, however, the level of melee falls markedly.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Sniper</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Psychology</defName>
+		<label>Fragment of the neural network "Psychology"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to conduct dialogue significantly increases, which negatively affects the speed of work.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Psychology</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Wild</defName>
+		<label>Fragment of the neural network "Wild"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to pacify animals increases significantly, which negatively affects field work.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Wild</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_GreenFields</defName>
+		<label>Fragment of the neural network "GreenFields"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you remember faster life cycle of plants, merging with the nature of the planet, ceasing to reverse attention to the people around you.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/GreenFields</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Paladin</defName>
+		<label>Fragment of the neural network "Paladin"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your abilities in medicine grow at an unprecedented speed, but you understand that you do not want to harm people.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Paladin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_MiningWays</defName>
+		<label>Fragment of the neural network "Mining Ways"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, your brain is filled with knowledge about the properties of rocks, and the ability to exploration is essentially are rising.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/MiningWays</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_ConnoisseurOfBeauty</defName>
+		<label>Fragment of the neural network "Connoisseur Of Beauty"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your worldview changes. It seems that you are beginning to see the beautiful in what you considered insignificant.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/ConnoisseurOfBeauty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Hephaestus</defName>
+		<label>Fragment of the neural network "Hephaestus"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Hephaestus</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Science</defName>
+		<label>Fragment of the neural network "Science"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Science</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Construction</defName>
+		<label>Fragment of the neural network "Construction"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you can easily recognize errors in the drawings and create new, magnificent structures.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Construction</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Gourmet</defName>
+		<label>Fragment of the neural network "Gourmet"</label>
+		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your taste buds aggravated by commensurate newfound culinary abilities.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Gourmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Singular</defName>
+		<label>Singular neural network "Sacred and wild"</label>
+		<description>SA large foreign structure created from twelve fragments. Significantly changes the consciousness of people falling within the radius of impact. It has partial functionality of all parts involved in the creation mechanism.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Singular</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>200</MaxHitPoints>
+			<MarketValue>18000</MarketValue>
+			<Mass>4</Mass>
+			<WorkToMake>14000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>5</ComponentSpacer>
+			<DarkNet_Network_Bushido>1</DarkNet_Network_Bushido>
+			<DarkNet_Network_Sniper>1</DarkNet_Network_Sniper>
+			<DarkNet_Network_Psychology>1</DarkNet_Network_Psychology>
+			<DarkNet_Network_Wild>1</DarkNet_Network_Wild>
+			<DarkNet_Network_GreenFields>1</DarkNet_Network_GreenFields>
+			<DarkNet_Network_Paladin>1</DarkNet_Network_Paladin>
+			<DarkNet_Network_MiningWays>1</DarkNet_Network_MiningWays>
+			<DarkNet_Network_ConnoisseurOfBeauty>1</DarkNet_Network_ConnoisseurOfBeauty>
+			<DarkNet_Network_Hephaestus>1</DarkNet_Network_Hephaestus>
+			<DarkNet_Network_Science>1</DarkNet_Network_Science>
+			<DarkNet_Network_Construction>1</DarkNet_Network_Construction>
+			<DarkNet_Network_Gourmet>1</DarkNet_Network_Gourmet>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+		<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Berserker</defName>
+		<label>Singular neural network "Berserker"</label>
+		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Berserker</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<DarkNet_Network_Bushido>1</DarkNet_Network_Bushido>
+			<DarkNet_Network_Sniper>1</DarkNet_Network_Sniper>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Meditation</defName>
+		<label>Singular neural network "Meditation"</label>
+		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism you better understand animals and people, spending free time on meditation and ordering of one’s own thoughts, which affects health.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Meditation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<DarkNet_Network_Psychology>1</DarkNet_Network_Psychology>
+			<DarkNet_Network_Wild>1</DarkNet_Network_Wild>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+		<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_LifeForce</defName>
+		<label>Singular neural network "Life Force"</label>
+		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/LifeForce</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<DarkNet_Network_GreenFields>1</DarkNet_Network_GreenFields>
+			<DarkNet_Network_Paladin>1</DarkNet_Network_Paladin>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+			<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Consummation</defName>
+		<label>Singular neural network "Consummation"</label>
+		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Consummation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<DarkNet_Network_ConnoisseurOfBeauty>1</DarkNet_Network_ConnoisseurOfBeauty>
+			<DarkNet_Network_Hephaestus>1</DarkNet_Network_Hephaestus>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+				<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_YinYang</defName>
+		<label>Singular neural network "Yin and Yang"</label>
+		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/YinYang</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<DarkNet_Network_MiningWays>1</DarkNet_Network_MiningWays>
+			<DarkNet_Network_Construction>1</DarkNet_Network_Construction>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_MentalFocus</defName>
+		<label>Singular neural network "Mental focus"</label>
+		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Lets focus all the efforts of the body to acquire new knowledge and improving intelligence that spends the last body energy reserves.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/MentalFocus</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5000</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<DarkNet_Network_Science>1</DarkNet_Network_Science>
+			<DarkNet_Network_Gourmet>1</DarkNet_Network_Gourmet>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
 </Defs>

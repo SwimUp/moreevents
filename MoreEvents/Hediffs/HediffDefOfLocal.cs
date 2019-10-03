@@ -24,5 +24,14 @@ namespace MoreEvents
         public static HediffDef PoisonHit;
 
         public static HediffDef ElectromagneticShock;
+        public static HediffDef ExposureChargedPlasma;
+        public static HediffDef EnergyOverload;
+        public static HediffDef InternalBleeding;
+        public static HediffDef ShortStun;
+
+        public static HediffDef SphereOfResurrection;
+
+        public static HediffDef CryotiumShards;
+        public static HediffDef ExplosiveBullets;
     }
 }

@@ -573,7 +573,7 @@ Tungsten ingots can be melted in a arc furnace.</description>
 		<useHitPoints>false</useHitPoints>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<MarketValue>300</MarketValue>
+			<MarketValue>50</MarketValue>
 			<Mass>0.15</Mass>
 			<StuffPower_Armor_Sharp>1.35</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
@@ -625,7 +625,7 @@ Tungsten ingots can be melted in a arc furnace.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>450</MarketValue>
+			<MarketValue>75</MarketValue>
 			<Mass>4</Mass>
 			<StuffPower_Armor_Sharp>1.7</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>1.3</StuffPower_Armor_Blunt>
@@ -680,7 +680,7 @@ Tungsten ingots can be melted in a arc furnace.</description>
 		<useHitPoints>true</useHitPoints>
 		<statBases>
 			<MaxHitPoints>25</MaxHitPoints>
-			<MarketValue>500</MarketValue>
+			<MarketValue>35</MarketValue>
 			<Mass>0.15</Mass>
 			<StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
@@ -734,7 +734,7 @@ Tungsten ingots can be melted in a arc furnace.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>650</MarketValue>
+			<MarketValue>30</MarketValue>
 			<Mass>0.5</Mass>
 		</statBases>
 		<useHitPoints>false</useHitPoints>
@@ -756,7 +756,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>700</MarketValue>
+			<MarketValue>35</MarketValue>
 			<Mass>0.7</Mass>
 			<StuffPower_Armor_Sharp>1.5</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
@@ -819,7 +819,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>750</MarketValue>
+			<MarketValue>45</MarketValue>
 			<Mass>2</Mass>
 			<StuffPower_Armor_Sharp>1.6</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.85</StuffPower_Armor_Blunt>
@@ -881,7 +881,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>850</MarketValue>
+			<MarketValue>55</MarketValue>
 			<Mass>2</Mass>
 			<StuffPower_Armor_Sharp>1.85</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>1.2</StuffPower_Armor_Blunt>
@@ -934,7 +934,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 	<ThingDef ParentName="ResourceBase">
 		<defName>Transparisteel</defName>
 		<label>Transparisteel</label>
-		<description>Steel-like material, except for its transparency. Gives objects made from it extra beauty.</description>
+		<description>Material similar to steel except its transparency. Externally, transparistal products distinguished by their beauty, which makes the substance quite valuable.</description>
 		<graphicData>
 			<texPath>Things/Resources/Transparisteel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -942,7 +942,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>2.5</MarketValue>
+			<MarketValue>8</MarketValue>
 			<Mass>0.5</Mass>
 			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -986,7 +986,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>2000</MarketValue>
+			<MarketValue>150</MarketValue>
 			<Mass>30</Mass>
 			<StuffPower_Armor_Sharp>2.5</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>2.5</StuffPower_Armor_Blunt>
@@ -1026,8 +1026,7 @@ Material with a very mysterious story. It is not known exactly where it came fro
 	<ThingDef ParentName="ResourceBase">
 		<defName>ShockCrystals</defName>
 		<label>Shock crystals</label>
-		<description>The crystals that generate an electric charge within themselves.
-They can be very effective against electronics.</description>
+		<description>Crystals that generate a charge within themselves. They can be very effective against electronics. When trying to destructively affect structures, substance generates a force wave, electronics in a small radius.</description>
 		<graphicData>
 			<texPath>Things/Resources/ShockCrystals</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1035,7 +1034,7 @@ They can be very effective against electronics.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>4.0</MarketValue>
+			<MarketValue>8.0</MarketValue>
 			<Mass>0.5</Mass>
 			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -1085,7 +1084,7 @@ They can be very effective against electronics.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>40.0</MarketValue>
+			<MarketValue>10.0</MarketValue>
 			<Mass>0.5</Mass>
 			<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
@@ -1135,7 +1134,7 @@ They can be very effective against electronics.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>40.0</MarketValue>
+			<MarketValue>14.0</MarketValue>
 			<Mass>0.5</Mass>
 			<StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.65</StuffPower_Armor_Blunt>
@@ -1181,7 +1180,7 @@ They can be very effective against electronics.</description>
 	<ThingDef ParentName="ResourceBase">
 		<defName>Pyrotium</defName>
 		<label>Pyrotium</label>
-		<description>Pirotium is a gas compressed under high pressure, which allowed him to get a solid form for a while.</description>
+		<description>This is a material that combines fragility and collateral damage. It was obtained from the same gas, by compressing it under high pressure, which allowed the new material to take shape. Substance evaporates on contact with air. Pirotium is extremely explosive, and whole structures from it cause damage all items nearby when damaged.</description>
 		<graphicData>
 			<texPath>Things/Resources/Pyrotium</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1189,7 +1188,7 @@ They can be very effective against electronics.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>9.5</MarketValue>
+			<MarketValue>5</MarketValue>
 			<Mass>0.25</Mass>
 			<StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>
@@ -1231,7 +1230,7 @@ They can be very effective against electronics.</description>
 	<ThingDef ParentName="ResourceBase">
 		<defName>Cryotium</defName>
 		<label>Cryotium</label>
-		<description>This material is formed by compressing the gas of the same name under high pressure. The substance exudes cold and is quite fragile, and the melting point is 10 degrees.</description>
+		<description>This material is formed by compression of the same name gas under high pressure. The substance exudes cold and is quite brittle and the melting point is 10 degrees. In a sealed room, the properties of cryotium reveal in full force. The material is able to bring temperature in its environment to absolute zero, gradually getting damaged.</description>
 		<graphicData>
 			<texPath>Things/Resources/Cryotium</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1239,7 +1238,7 @@ They can be very effective against electronics.</description>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>9.5</MarketValue>
+			<MarketValue>5</MarketValue>
 			<Mass>0.25</Mass>
 			<StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.15</StuffPower_Armor_Blunt>

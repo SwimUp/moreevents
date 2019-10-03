@@ -277,7 +277,7 @@ organism, concentrating.</description>
 			<li>
 				<label>right claw</label>
 				<capacities>
-					<li>PoisonBurn</li>
+					<li>Cut_ApplyHediff</li>
 				</capacities>
 				<hediff>PoisonBite</hediff>
 				<power>19</power>

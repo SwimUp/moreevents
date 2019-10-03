@@ -832,12 +832,12 @@ Screen reader support included.</description>
 					<li>
 						<Tab>HardMetals</Tab>
 						<CountRange>
-							<min>4</min>
-							<max>10</max>
+							<min>2</min>
+							<max>8</max>
 						</CountRange>
 						<ValueRange> 
-							<min>2000</min>
-							<max>4500</max>
+							<min>400</min>
+							<max>700</max>
 						</ValueRange>
 						<PriceMultiplier>2.5</PriceMultiplier>
 						<Goods>
@@ -942,12 +942,12 @@ Screen reader support included.</description>
 					<li>
 						<Tab>Experimental</Tab>
 						<CountRange>
-							<min>1</min>
-							<max>5</max>
+							<min>2</min>
+							<max>7</max>
 						</CountRange>
 						<ValueRange> 
 							<min>950</min>
-							<max>3000</max>
+							<max>2000</max>
 						</ValueRange>
 						<PriceMultiplier>3.5</PriceMultiplier>
 						<Goods>
@@ -984,7 +984,7 @@ Screen reader support included.</description>
 								</ThingFilter>
 							</li>
 							<li>
-								<Commonality>0.03</Commonality>
+								<Commonality>0.05</Commonality>
 								<ThingFilter>
 									<thingDefs>
 										<li>Adamantium</li>
@@ -1024,7 +1024,7 @@ Screen reader support included.</description>
 								</ThingFilter>
 							</li>
 							<li>
-								<Commonality>0.09</Commonality>
+								<Commonality>0.2</Commonality>
 								<ThingFilter>
 									<thingDefs>
 										<li>ShockCrystals</li>
@@ -1061,12 +1061,12 @@ Screen reader support included.</description>
 					<li>
 						<Tab>Precious</Tab>
 						<CountRange>
-							<min>1</min>
-							<max>4</max>
+							<min>2</min>
+							<max>3</max>
 						</CountRange>
 						<ValueRange> 
 							<min>250</min>
-							<max>1500</max>
+							<max>500</max>
 						</ValueRange>
 						<PriceMultiplier>2.5</PriceMultiplier>
 						<Goods>
@@ -1099,19 +1099,160 @@ Screen reader support included.</description>
 					<li>
 						<Tab>Weapons</Tab>
 						<CountRange>
-							<min>1</min>
-							<max>4</max>
+							<min>2</min>
+							<max>6</max>
 						</CountRange>
 						<ValueRange> 
-							<min>250</min>
-							<max>1500</max>
+							<min>300</min>
+							<max>15000</max>
 						</ValueRange>
 						<Goods>
 							<li>
-								<Commonality>0.65</Commonality>
+								<Commonality>0.7</Commonality>
 								<ThingFilter>
 									<thingDefs>
-										<li>Gold</li>
+										<li>Gun_FEL_Light</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.5</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_FEL_Heavy</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_AR</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.6</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_PG</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.5</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_PG_Heavy</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.3</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_PG_Spider</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.4</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_EMP</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.3</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_RMP</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_EMPS</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_SMP</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.3</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_RMP_Enigma</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_RMP_Feral</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+						</Goods>
+					</li>
+					<li>
+						<Tab>Artifacts</Tab>
+						<CountRange>
+							<min>2</min>
+							<max>5</max>
+						</CountRange>
+						<ValueRange> 
+							<min>300</min>
+							<max>5000</max>
+						</ValueRange>
+						<Goods>
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>PsychicInsanityLance</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.05</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>PsychicShockLance</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>PsychicAnimalPulser</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>PsychicSoothePulser</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.02</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>SphereResurrection</li>
 									</thingDefs>
 								</ThingFilter>
 							</li>
@@ -1121,4 +1262,395 @@ Screen reader support included.</description>
 			</li>
 		</comps>
 	</DarkNET.DarkNetTraderDef>
+
+	<DarkNET.DarkNetTraderDef>
+		<defName>Archotech_567H</defName>
+		<workerClass>DarkNET.Traders.TraderWorker_Archotech_567H</workerClass>
+		<label>Artificial Intelligence Archotech H-567</label>
+		<description>Before you is a highly developed artificial intelligence, fully conscious and capable of contact with intelligent life forms. His goals and intentions are unclear, as is his story. It is only known that this is a completely autonomous unit that is capable of creating any object consisting of matter.
+
+Scientists say that for this he uses mechanites controlled by him, but few can say what they really are.
+It is also known that simple things, so familiar to us, are too simple for him, and he prefers to create more technologically advanced things typical of the Archaeological Museum. To many, its “prices” may seem very unprofitable, and you have the right to agree with this - but AI Arhotek has everything you need, and in any quantities you need. And yes, do not try to deceive him - he always senses something was amiss, and if he turns out to be deceived, the reprisal will not take long.</description>
+		<IconTextureInt>Traders/Archotech_567H/face</IconTextureInt>
+		<FullTextureInt>Traders/Archotech_567H/main</FullTextureInt>
+		<OverridePortraitWidth>500</OverridePortraitWidth>
+		<Character>
+			<Cruelty>2.0</Cruelty>
+			<Greed>1.0</Greed>
+		</Character>
+		<comps>
+			<li Class="DarkNET.TraderComp.DarkNetProperties_Archotech_567H"> 
+				<CategoryItemSettings>
+					<li>
+						<Tab>Items</Tab>
+						<CountRange>
+							<min>30</min>
+							<max>30</max>
+						</CountRange>
+						<ValueRange> 
+							<min>6000</min>
+							<max>6000</max>
+						</ValueRange>
+						<Goods>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Bushido</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Sniper</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Psychology</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Wild</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_GreenFields</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Paladin</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_MiningWays</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_ConnoisseurOfBeauty</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Hephaestus</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Science</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Construction</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Gourmet</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Singular</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Berserker</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Meditation</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_LifeForce</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Consummation</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_YinYang</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_MentalFocus</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+						</Goods>
+					</li>
+					<li>
+						<Tab>Weapons</Tab>
+						<CountRange>
+							<min>80</min>
+							<max>80</max>
+						</CountRange>
+						<ValueRange> 
+							<min>40000</min>
+							<max>40000</max>
+						</ValueRange>
+						<Goods>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_ThermoFusion</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_LTB</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_DeathRay</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_ArgentRocketLaucher</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_EMP_Fox</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_RMP_Guard</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_WR_Wisp</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_WR_EternalFire</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Gun_RL_SteelRain</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>MeleeWeapon_Venenum</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>MeleeWeapon_Venenum_Axe</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>MeleeWeapon_Kinetic</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>MeleeWeapon_HighFrequencyBlade</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+						</Goods>
+					</li>
+					<li>
+						<Tab>Armors</Tab>
+						<CountRange>
+							<min>10</min>
+							<max>15</max>
+						</CountRange>
+						<ValueRange> 
+							<min>2500</min>
+							<max>8000</max>
+						</ValueRange>
+						<Goods>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_SimpleHelmet</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_AdvancedHelmet</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_PowerArmorHelmet</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_PsychicFoilHelmet</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_PlateArmor</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_FlakVest</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_FlakPants</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_FlakJacket</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>Apparel_PowerArmor</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+						</Goods>
+					</li>
+				</CategoryItemSettings>
+			</li>
+		</comps>
+	</DarkNET.DarkNetTraderDef>
+
 </Defs>

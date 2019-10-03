@@ -96,12 +96,15 @@
     <Compile Include="ThingDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtDefDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Ibuprofien.cs" />
+    <Compile Include="TraderComp\CategoryItemSetting.cs" />
     <Compile Include="TraderComp\DarkNetComp.cs" />
     <Compile Include="TraderComp\DarkNetComp_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetComp_Archotech_567H.cs" />
     <Compile Include="TraderComp\DarkNetComp_JohnCarver.cs" />
     <Compile Include="TraderComp\DarkNetComp_RogerEdmonson.cs" />
     <Compile Include="TraderComp\DarkNetProperties.cs" />
     <Compile Include="TraderComp\DarkNetProperties_Eisenberg.cs" />
+    <Compile Include="TraderComp\DarkNetProperties_Archotech_567H.cs" />
     <Compile Include="TraderComp\DarkNetProperties_JohnCarver.cs" />
     <Compile Include="TraderComp\DarkNetProperties_RogerEdmonson.cs" />
     <Compile Include="TraderParams.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Traders\Eisenberg_OrderWindow.cs" />
     <Compile Include="Traders\Order_SimpleItem.cs" />
     <Compile Include="Traders\RogerEdmonson_OrderWindow.cs" />
+    <Compile Include="Traders\TraderWorker_Archotech_567H.cs" />
     <Compile Include="Traders\TraderWorker_Eisenberg.cs" />
     <Compile Include="Traders\TraderWorker_JohnCarver.cs" />
     <Compile Include="Traders\TraderWorker_RogerEdmonson.cs" />

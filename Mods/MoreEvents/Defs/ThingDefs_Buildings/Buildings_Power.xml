@@ -2,8 +2,6 @@
 <Defs>
 
 	<ThingDef ParentName="ElectricBuildingBase" Name="PowerConduit">
-		<designationCategory>Structure</designationCategory>
-	
 		<defName>UnbreakablePowerConduit</defName>
 		<label>power conduit</label>
 		<description>A bundle of electrical cables for moving power around. Can be placed under walls and other buildings.</description>

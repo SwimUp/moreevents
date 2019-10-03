@@ -235,4 +235,9 @@ Redirecting energy to the control shaft --> OK</DoomsdayTerminal_PowerActivating
 	
 	<Corrosium_InspectString>Damage Received: {0}%</Corrosium_InspectString>
 	
+	<RimOverhaul_UseCommand>Use</RimOverhaul_UseCommand>
+	
+	<CompChargeableWeapon_ChargeLabel>Charge: {0}%</CompChargeableWeapon_ChargeLabel>
+	<CompChargeableWeapon_ChargeDesc>The charge of the item. When it ends, the item will lose most of its strength.</CompChargeableWeapon_ChargeDesc>
+	
 </LanguageData>

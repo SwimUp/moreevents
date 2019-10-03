@@ -250,5 +250,61 @@
 	<DarkNet_BionicLung.label>Бионическое легкое</DarkNet_BionicLung.label>
 	<DarkNet_BionicLung.labelNoun>Бионическое легкое - это искусственный орган, который выполняет функцию настоящего легкого и является наиболее продвинутым вариантом среди подобных протезов, поскольку он легко приспосабливается к телу, не вызывает сепсиса и имеет ряд улучшенных параметров.</DarkNet_BionicLung.labelNoun>
 
+    <DarkNet_Network_Bushido.label>Фрагмент нейросети "Bushido"</DarkNet_Network_Bushido.label>
+	<DarkNet_Network_Bushido.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, способности в ближнем бою существенно повышаются, однако уровень владения стрелковым оружием заметно падает.</DarkNet_Network_Bushido.labelNoun>
+
+	<DarkNet_Network_Sniper.label>Фрагмент нейросети "Sniper"</DarkNet_Network_Sniper.label>
+	<DarkNet_Network_Sniper.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, меткость в дальнем бою существенно повышается, однако уровень ближнего боя заметно падает.</DarkNet_Network_Sniper.labelNoun>
+
+	<DarkNet_Network_Psychology.label>Фрагмент нейросети "Psychology"</DarkNet_Network_Psychology.label>
+	<DarkNet_Network_Psychology.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, способность к ведению диалога существенно повышается, что негативно сказывается на скорости работы.</DarkNet_Network_Psychology.labelNoun>
+
+	<DarkNet_Network_Wild.label>Фрагмент нейросети "Wild"</DarkNet_Network_Wild.label>
+	<DarkNet_Network_Wild.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, способность к усмирению животных существенно повышается, что негативно сказывается на полевых работах.</DarkNet_Network_Wild.labelNoun>
+
+	<DarkNet_Network_GreenFields.label>Фрагмент нейросети "Green Fields"</DarkNet_Network_GreenFields.label>
+	<DarkNet_Network_GreenFields.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, вы быстрее запоминаете жизненный цикл растений, сливаясь с природой планеты, переставая обращать внимание на окружающих вас людей.</DarkNet_Network_GreenFields.labelNoun>
+
+	<DarkNet_Network_Paladin.label>Фрагмент нейросети "Paladin"</DarkNet_Network_Paladin.label>
+	<DarkNet_Network_Paladin.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, ваши способности в медицине растут с невиданной прежде скоростью, однако вы понимаете, что не хотите причинять вред людям.</DarkNet_Network_Paladin.labelNoun>
+
+	<DarkNet_Network_MiningWays.label>Фрагмент нейросети "Mining ways"</DarkNet_Network_MiningWays.label>
+	<DarkNet_Network_MiningWays.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, ваш мозг наполняется знаниями о свойствах горных пород, а способности к геологоразведке существенно повышаются</DarkNet_Network_MiningWays.labelNoun>
+
+	<DarkNet_Network_ConnoisseurOfBeauty.label>Фрагмент нейросети "Connoisseur of beauty"</DarkNet_Network_ConnoisseurOfBeauty.label>
+	<DarkNet_Network_ConnoisseurOfBeauty.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, ваше мировоззрение меняется. Кажется, вы начинаете видеть прекрасное в том, что считали незначительным.</DarkNet_Network_ConnoisseurOfBeauty.labelNoun>
+
+	<DarkNet_Network_Hephaestus.label>Фрагмент нейросети "Hephaestus"</DarkNet_Network_Hephaestus.label>
+	<DarkNet_Network_Hephaestus.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, мелкая моторика возрастает, а знания о работе с материалами наполняют ваше сознание.</DarkNet_Network_Hephaestus.labelNoun>
+
+	<DarkNet_Network_Science.label>Фрагмент нейросети "Science"</DarkNet_Network_Science.label>
+	<DarkNet_Network_Science.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, ваше критическое познание мира вытесняет прочие мысли, отдаваясь работе.</DarkNet_Network_Science.labelNoun>
+
+	<DarkNet_Network_Construction.label>Фрагмент нейросети "Construction"</DarkNet_Network_Construction.label>
+	<DarkNet_Network_Construction.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, вы с легкостью распознаете ошибки в чертежах и создаете новые, величественные сооружения.</DarkNet_Network_Construction.labelNoun>
+
+	<DarkNet_Network_Gourmet.label>Фрагмент нейросети "Gourmet"</DarkNet_Network_Gourmet.label>
+	<DarkNet_Network_Gourmet.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, ваши вкусовые рецепторы обостряются соизмеримо новоприобретенным кулинарным способностям.</DarkNet_Network_Gourmet.labelNoun>
+
+	<DarkNet_Network_Singular.label>Сингулярная нейросеть "Sacred and wild"</DarkNet_Network_Singular.label>
+	<DarkNet_Network_Singular.labelNoun>Крупная иноземная структура, созданная из двенадцати фрагментов. Существенно изменяет сознание людей, попадающих в радиус воздействия. Обладает частичным функционалом всех частей, задействованных в создании механизма.</DarkNet_Network_Singular.labelNoun>
+
+	<DarkNet_Network_Berserker.label>Комбинированная нейросеть "Berserker"</DarkNet_Network_Berserker.label>
+	<DarkNet_Network_Berserker.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Под действием механизма, ваши атлетические и боевые качества существенно возрастают, что негативно сказывается на скорости повседневной работы.</DarkNet_Network_Berserker.labelNoun>
+
+	<DarkNet_Network_Meditation.label>Комбинированная нейросеть "Meditation"</DarkNet_Network_Meditation.label>
+	<DarkNet_Network_Meditation.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Под действием механизма, вы лучше понимаете животных и людей, тратя свободное время на медитацию и упорядочивание собственных мыслей, что сказывается на работоспособности.</DarkNet_Network_Meditation.labelNoun>
+
+	<DarkNet_Network_LifeForce.label>Комбинированная нейросеть "Life force"</DarkNet_Network_LifeForce.label>
+	<DarkNet_Network_LifeForce.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Под действием механизма, вы ощущаете, как вас наполняет умиротворение и человеколюбие, а знания о растениях становятся частью сознания.</DarkNet_Network_LifeForce.labelNoun>
+
+	<DarkNet_Network_Consummation.label>Комбинированная нейросеть "Consummation"</DarkNet_Network_Consummation.label>
+	<DarkNet_Network_Consummation.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Под действием механизма, вы чувствуете, как взгляд на мир меняется. Стремление сделать мир вокруг вас идеальным и удобным для жизни затмевает разум.</DarkNet_Network_Consummation.labelNoun>
+
+	<DarkNet_Network_YinYang.label>Комбинированная нейросеть "Yin and Yang"</DarkNet_Network_YinYang.label>
+	<DarkNet_Network_YinYang.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Энтропия и созидание гармонично сочитаются в конструкции, придавая сознанию новые свойства.</DarkNet_Network_YinYang.labelNoun>
+	
+	<DarkNet_Network_MentalFocus.label>Комбинированная нейросеть "Mental focus"</DarkNet_Network_MentalFocus.label>
+	<DarkNet_Network_MentalFocus.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Позволяет сосредоточить все усилия организма на получении новых знаний и совершенствование интеллекта, что затрачивает последние энергетические резервы организма.</DarkNet_Network_MentalFocus.labelNoun>
 
 </LanguageData>

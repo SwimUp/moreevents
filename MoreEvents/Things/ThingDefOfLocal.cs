@@ -49,5 +49,7 @@ namespace MoreEvents
         public static ThingDef TribalCrack;
 
         public static ThingDef GasWell;
+
+        public static ThingDef Bullet_ArgentSphere;
     }
 }

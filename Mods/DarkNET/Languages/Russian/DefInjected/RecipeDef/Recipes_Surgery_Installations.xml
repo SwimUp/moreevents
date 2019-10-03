@@ -297,6 +297,84 @@
 	<Install_DarkNet_BionicLung.label>установить Бионическое легкое</Install_DarkNet_BionicLung.label>
 	<Install_DarkNet_BionicLung.description>Установить Бионическое легкое</Install_DarkNet_BionicLung.description>
 	<Install_DarkNet_BionicLung.jobString>Устанавливает Бионическое легкое.</Install_DarkNet_BionicLung.jobString>
+	
+	
+	
+	<Install_DarkNet_Network_Bushido.label>установить Фрагмент нейросети "Bushido"</Install_DarkNet_Network_Bushido.label>
+	<Install_DarkNet_Network_Bushido.description>Установить Фрагмент нейросети "Bushido"</Install_DarkNet_Network_Bushido.description>
+	<Install_DarkNet_Network_Bushido.jobString>Устанавливает Фрагмент нейросети "Bushido"</Install_DarkNet_Network_Bushido.jobString>
+	
+	<Install_DarkNet_Network_Sniper.label>установить Фрагмент нейросети "Sniper"</Install_DarkNet_Network_Sniper.label>
+	<Install_DarkNet_Network_Sniper.description>Установить Фрагмент нейросети "Sniper"</Install_DarkNet_Network_Sniper.description>
+	<Install_DarkNet_Network_Sniper.jobString>Устанавливает Фрагмент нейросети "Sniper"</Install_DarkNet_Network_Sniper.jobString>
+	
+	<Install_DarkNet_Network_Psychology.label>установить Фрагмент нейросети "Psychology"</Install_DarkNet_Network_Psychology.label>
+	<Install_DarkNet_Network_Psychology.description>Установить Фрагмент нейросети "Psychology"</Install_DarkNet_Network_Psychology.description>
+	<Install_DarkNet_Network_Psychology.jobString>Устанавливает Фрагмент нейросети "Psychology"</Install_DarkNet_Network_Psychology.jobString>
+	
+	<Install_DarkNet_Network_Wild.label>установить Фрагмент нейросети "Wild"</Install_DarkNet_Network_Wild.label>
+	<Install_DarkNet_Network_Wild.description>Установить Фрагмент нейросети "Wild"</Install_DarkNet_Network_Wild.description>
+	<Install_DarkNet_Network_Wild.jobString>Устанавливает Фрагмент нейросети "Wild"</Install_DarkNet_Network_Wild.jobString>
+	
+	<Install_DarkNet_Network_GreenFields.label>установить Фрагмент нейросети "Green Fields"</Install_DarkNet_Network_GreenFields.label>
+	<Install_DarkNet_Network_GreenFields.description>Установить Фрагмент нейросети "Green Fields"</Install_DarkNet_Network_GreenFields.description>
+	<Install_DarkNet_Network_GreenFields.jobString>Устанавливает Фрагмент нейросети "Green Fields"</Install_DarkNet_Network_GreenFields.jobString>
+	
+	<Install_DarkNet_Network_Paladin.label>установить Фрагмент нейросети "Paladin"</Install_DarkNet_Network_Paladin.label>
+	<Install_DarkNet_Network_Paladin.description>Установить Фрагмент нейросети "Paladin"</Install_DarkNet_Network_Paladin.description>
+	<Install_DarkNet_Network_Paladin.jobString>Устанавливает Фрагмент нейросети "Paladin"</Install_DarkNet_Network_Paladin.jobString>
+	
+	<Install_DarkNet_Network_MiningWays.label>установить Фрагмент нейросети "Mining ways"</Install_DarkNet_Network_MiningWays.label>
+	<Install_DarkNet_Network_MiningWays.description>Установить Фрагмент нейросети "Mining ways"</Install_DarkNet_Network_MiningWays.description>
+	<Install_DarkNet_Network_MiningWays.jobString>Устанавливает Фрагмент нейросети "Mining ways"</Install_DarkNet_Network_MiningWays.jobString>
+	
+	<Install_DarkNet_Network_ConnoisseurOfBeauty.label>установить Фрагмент нейросети "Connoisseur of beauty"</Install_DarkNet_Network_ConnoisseurOfBeauty.label>
+	<Install_DarkNet_Network_ConnoisseurOfBeauty.description>Установить Фрагмент нейросети "Connoisseur of beauty"</Install_DarkNet_Network_ConnoisseurOfBeauty.description>
+	<Install_DarkNet_Network_ConnoisseurOfBeauty.jobString>Устанавливает Фрагмент нейросети "Connoisseur of beauty"</Install_DarkNet_Network_ConnoisseurOfBeauty.jobString>
+	
+	<Install_DarkNet_Network_Hephaestus.label>установить Фрагмент нейросети "Hephaestus"</Install_DarkNet_Network_Hephaestus.label>
+	<Install_DarkNet_Network_Hephaestus.description>Установить Фрагмент нейросети "Hephaestus"</Install_DarkNet_Network_Hephaestus.description>
+	<Install_DarkNet_Network_Hephaestus.jobString>Устанавливает Фрагмент нейросети "Hephaestus"</Install_DarkNet_Network_Hephaestus.jobString>
+	
+	<Install_DarkNet_Network_Science.label>установить Фрагмент нейросети "Science"</Install_DarkNet_Network_Science.label>
+	<Install_DarkNet_Network_Science.description>Установить Фрагмент нейросети "Science"</Install_DarkNet_Network_Science.description>
+	<Install_DarkNet_Network_Science.jobString>Устанавливает Фрагмент нейросети "Science"</Install_DarkNet_Network_Science.jobString>
+	
+	<Install_DarkNet_Network_Construction.label>установить Фрагмент нейросети "Construction"</Install_DarkNet_Network_Construction.label>
+	<Install_DarkNet_Network_Construction.description>Установить Фрагмент нейросети "Construction"</Install_DarkNet_Network_Construction.description>
+	<Install_DarkNet_Network_Construction.jobString>Устанавливает Фрагмент нейросети "Construction"</Install_DarkNet_Network_Construction.jobString>
+	
+	<Install_DarkNet_Network_Gourmet.label>установить Фрагмент нейросети "Gourmet"</Install_DarkNet_Network_Gourmet.label>
+	<Install_DarkNet_Network_Gourmet.description>Установить Фрагмент нейросети "Gourmet"</Install_DarkNet_Network_Gourmet.description>
+	<Install_DarkNet_Network_Gourmet.jobString>Устанавливает Фрагмент нейросети "Gourmet"</Install_DarkNet_Network_Gourmet.jobString>
+	
+	<Install_DarkNet_Network_Singular.label>установить Сингулярную нейросеть "Sacred and wild"</Install_DarkNet_Network_Singular.label>
+	<Install_DarkNet_Network_Singular.description>Установить Сингулярную нейросеть "Sacred and wild"</Install_DarkNet_Network_Singular.description>
+	<Install_DarkNet_Network_Singular.jobString>Устанавливает Сингулярную нейросеть "Sacred and wild"</Install_DarkNet_Network_Singular.jobString>
+	
+	<Install_DarkNet_Network_Berserker.label>установить Комбинированную нейросеть "Berserker"</Install_DarkNet_Network_Berserker.label>
+	<Install_DarkNet_Network_Berserker.description>Установить Комбинированную нейросеть "Berserker"</Install_DarkNet_Network_Berserker.description>
+	<Install_DarkNet_Network_Berserker.jobString>Устанавливает Комбинированную нейросеть "Berserker"</Install_DarkNet_Network_Berserker.jobString>
+	
+	<Install_DarkNet_Network_Meditation.label>установить Комбинированную нейросеть "Meditation"</Install_DarkNet_Network_Meditation.label>
+	<Install_DarkNet_Network_Meditation.description>Установить Комбинированную нейросеть "Meditation"</Install_DarkNet_Network_Meditation.description>
+	<Install_DarkNet_Network_Meditation.jobString>Устанавливает Комбинированную нейросеть "Meditation"</Install_DarkNet_Network_Meditation.jobString>
+	
+	<Install_DarkNet_Network_LifeForce.label>установить Комбинированную нейросеть "Life force"</Install_DarkNet_Network_LifeForce.label>
+	<Install_DarkNet_Network_LifeForce.description>Установить Комбинированную нейросеть "Life force"</Install_DarkNet_Network_LifeForce.description>
+	<Install_DarkNet_Network_LifeForce.jobString>Устанавливает Комбинированную нейросеть "Life force"</Install_DarkNet_Network_LifeForce.jobString>
+	
+	<Install_DarkNet_Network_Consummation.label>установить Комбинированную нейросеть "Consummation"</Install_DarkNet_Network_Consummation.label>
+	<Install_DarkNet_Network_Consummation.description>Установить Комбинированную нейросеть "Consummation"</Install_DarkNet_Network_Consummation.description>
+	<Install_DarkNet_Network_Consummation.jobString>Устанавливает Комбинированную нейросеть "Consummation"</Install_DarkNet_Network_Consummation.jobString>
+	
+	<Install_DarkNet_Network_YinYang.label>установить Комбинированную нейросеть "Yin and Yang"</Install_DarkNet_Network_YinYang.label>
+	<Install_DarkNet_Network_YinYang.description>Установить Комбинированную нейросеть "Yin and Yang"</Install_DarkNet_Network_YinYang.description>
+	<Install_DarkNet_Network_YinYang.jobString>Устанавливает Комбинированную нейросеть "Yin and Yang"</Install_DarkNet_Network_YinYang.jobString>
+	
+	<Install_DarkNet_Network_MentalFocus.label>установить Комбинированную нейросеть "Mental focus"</Install_DarkNet_Network_MentalFocus.label>
+	<Install_DarkNet_Network_MentalFocus.description>Установить Комбинированную нейросеть "Mental focus"</Install_DarkNet_Network_MentalFocus.description>
+	<Install_DarkNet_Network_MentalFocus.jobString>Устанавливает Комбинированную нейросеть "Mental focus"</Install_DarkNet_Network_MentalFocus.jobString>
 
 
 

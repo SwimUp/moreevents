@@ -3,7 +3,15 @@
 <Defs>
 
   <ToolCapacityDef>
-    <defName>PoisonBurn</defName>
+    <defName>Cut_ApplyHediff</defName>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>Stab_ApplyHediff</defName>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Melee_HighFrequency</defName>
   </ToolCapacityDef>
 
 </Defs>

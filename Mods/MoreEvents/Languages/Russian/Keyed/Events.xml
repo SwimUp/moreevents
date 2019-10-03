@@ -237,4 +237,9 @@ COMMANDS:
 
 	<Corrosium_InspectString>Получаемый урон: {0}%</Corrosium_InspectString>
 
+	<RimOverhaul_UseCommand>Использовать</RimOverhaul_UseCommand>
+	
+	<CompChargeableWeapon_ChargeLabel>Заряд: {0}%</CompChargeableWeapon_ChargeLabel>
+	<CompChargeableWeapon_ChargeDesc>Заряд предмета. Когда он закончится, предмет потеряет большинство своей силы.</CompChargeableWeapon_ChargeDesc>
+	
 </LanguageData>
