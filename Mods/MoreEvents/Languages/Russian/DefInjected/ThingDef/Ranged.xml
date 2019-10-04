@@ -98,6 +98,11 @@
 	<Gun_RMP_Feral.description>Пятизарядная плазменная винтовка. Наибольшая точность достигается на средних расстояниях, а промахи сведены к минимуму. Для подготовке к стрельбе требуется некоторое время, что затрудняет ее применение в лобовых столкновениях с противником. Верхний слой RMP-56 покрыт титаном, что снижает ее перегрев во время использования.</Gun_RMP_Feral.description>
 	<Gun_RMP_Feral.tools.barrel.label>RMP-56 Feral</Gun_RMP_Feral.tools.barrel.label>
 	<Gun_RMP_Feral.verbs.Verb_Shoot.label>RMP-56 Feral</Gun_RMP_Feral.verbs.Verb_Shoot.label>
+	
+	<Gun_ArgentRocketLaucher.label>Argent Ракетница</Gun_ArgentRocketLaucher.label>
+	<Gun_ArgentRocketLaucher.description>Универсальная, одноразовая тяжелая установка, использующая технологию аргент энергии, поражающая все живое в радиусе действия. Ударная волна побуждает сгустки энергии продолжать движение, что увеличивает травмоопасный эффект. Требует длительной подготовки к совершению выстрела.</Gun_ArgentRocketLaucher.description>
+	<Gun_ArgentRocketLaucher.tools.barrel.label>Argent Ракетница</Gun_ArgentRocketLaucher.tools.barrel.label>
+	<Gun_ArgentRocketLaucher.verbs.Verb_Shoot.label>Argent Ракетница</Gun_ArgentRocketLaucher.verbs.Verb_Shoot.label>
 
 	<Gun_ThermoFusion.label>Термобарическая фузионная пушка</Gun_ThermoFusion.label>
 	<Gun_ThermoFusion.description>Формирует мощный энергетический шар, который теряет стабильность со временем, после чего вызывает взрыв огромной силы. Скорость перезарядки и подготовки к стрельбе крайне низка, что компенсируется гигантским радиусом поражения и силой оружия.</Gun_ThermoFusion.description>

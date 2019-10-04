@@ -17,6 +17,8 @@ namespace RimOverhaul.Things
 
         private float chargeSpeed;
 
+        public float ChargePerShot => Props.ChargePerShot;
+
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);

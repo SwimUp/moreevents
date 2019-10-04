@@ -454,4 +454,43 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 		</comps>
 		<tradeability>None</tradeability>
 	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>Singularity</defName>
+		<label>Singularity</label>
+		<description>Singularity</description>
+		<thingClass>RimOverhaul.Things.Building_Singularity</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/Singularity/1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3, 3)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<pathCost>100</pathCost>
+		<fillPercent>1</fillPercent>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<canOverlapZones>false</canOverlapZones>
+		<castEdgeShadows>false</castEdgeShadows>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Mass>500000</Mass>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<size>(3, 3)</size>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(81,130,176,0)</glowColor>
+			</li>
+		</comps>
+		<useHitPoints>false</useHitPoints>
+		<building>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+	
 </Defs>

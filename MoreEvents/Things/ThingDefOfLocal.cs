@@ -51,5 +51,7 @@ namespace MoreEvents
         public static ThingDef GasWell;
 
         public static ThingDef Bullet_ArgentSphere;
+
+        public static ThingDef Singularity;
     }
 }

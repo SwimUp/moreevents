@@ -252,9 +252,14 @@ namespace DarkNET.Traders
             GUI.color = Color.white;
 
             Widgets.ThingIcon(new Rect(rect.x + 8, rect.y + 18, 64, 64), item.Item);
+            if (Widgets.ButtonImage(new Rect(rect.x + 26, rect.y + 86, 24, 24), DarkNETWindow.Info, GUI.color))
+            {
+                Find.WindowStack.Add(new Dialog_InfoCard(item.Item));
+            }
 
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(new Rect(rect.x + 80, rect.y + 8, rect.width - 88, 25), "TraderWorker_Eisenberg_ItemLabel".Translate(item.Item.LabelNoCount, item.Item.stackCount, item.MarketValue));
+
             Text.Anchor = TextAnchor.UpperLeft;
 
             GUIUtils.DrawLineHorizontal(rect.x + 80, rect.y + 34, rect.width - 88, Color.gray);

@@ -308,10 +308,12 @@
     <Compile Include="Things\Building_ClimateBomb.cs" />
     <Compile Include="Things\Building_GasHeater.cs" />
     <Compile Include="Things\Building_LaboratoryConsole.cs" />
+    <Compile Include="Things\Building_Singularity.cs" />
     <Compile Include="Things\Building_TribalCrack.cs" />
     <Compile Include="Things\Building_WorkTable_Animated.cs" />
     <Compile Include="Things\Building_WorkTable_AnimatedHeatPush.cs" />
     <Compile Include="Things\Bullets\Bullet_ArgentRocket.cs" />
+    <Compile Include="Things\Bullets\Bullet_MicrosingularCannon.cs" />
     <Compile Include="Things\Bullets\Bullet_RL_SteelRain.cs" />
     <Compile Include="Things\Bullets\Bullet_WR_EternalFire.cs" />
     <Compile Include="Things\Bullets\Bullet_WR_Wisp.cs" />
@@ -370,6 +372,7 @@
     <Compile Include="Things\Stuff\CompVibranium.cs" />
     <Compile Include="Things\Stuff\Corrosium.cs" />
     <Compile Include="Things\Stuff\Vibranium.cs" />
+    <Compile Include="Things\Weapons\Verb_ChargableWeaponShoot.cs" />
     <Compile Include="Things\Weapons\Verb_SMP_42.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_VaccumPump.cs" />
     <Compile Include="Things\ZeroPointReactor\Building_ZeroPointGenerator.cs" />

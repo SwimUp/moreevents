@@ -781,7 +781,7 @@
 		</graphicData>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases> 
-			<MarketValue>9500</MarketValue>
+			<MarketValue>7500</MarketValue>
 			<Mass>10.5</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.3</AccuracyShort>
@@ -845,7 +845,7 @@
 		</graphicData>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases> 
-			<MarketValue>9500</MarketValue>
+			<MarketValue>7500</MarketValue>
 			<Mass>10.5</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.4</AccuracyShort>
@@ -904,11 +904,11 @@
 		<tickerType>Normal</tickerType>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Things/Weapons/Gun_ThermoFusion</texPath>
+			<texPath>Things/Weapons/Gun_ArgentRocketLaucher</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>6300</MarketValue>
 			<Mass>8</Mass>
 			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
 		</statBases>
@@ -1039,6 +1039,71 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>15</damageAmountBase>
 			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>Gun_LaserBow</defName>
+		<label>Laser Bow</label>
+		<description>The modern era demanded new weapons. The mechanics excelled in intelligence and quick wits. Using bizarre weapons from ancient eras, they created an electric-powered bow that generates laser arrows every time a user pulls a bow. It has a high rate of fire for its damage, but is useless when the battery runs out.</description>
+		<graphicData>
+			<texPath>Things/Weapons/Gun_LaserBow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases> 
+			<MarketValue>1850</MarketValue>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.3</AccuracyTouch>
+			<AccuracyShort>0.7</AccuracyShort>
+			<AccuracyMedium>0.9</AccuracyMedium>
+			<AccuracyLong>0.8</AccuracyLong>
+			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<verbs>
+			<li>
+				<verbClass>RimOverhaul.Things.Weapons.Verb_ChargableWeaponShoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_LaserBow</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>35.0</range>
+				<soundCast>Sounds_FEL_Light</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>25</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="RimOverhaul.Things.CompProperties_ChargeableWeapon">
+				<Capacity>100</Capacity>
+				<ChargePerDay>150</ChargePerDay>
+				<ChargePerShot>3</ChargePerShot>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>4.5</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_LaserBow</defName>
+		<label>Laser Bow bullet</label>
+		<thingClass>RimOverhaul.Things.Bullets.Bullet_RMP_56</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>65</speed>
 		</projectile>
 	</ThingDef>
 
@@ -1239,8 +1304,8 @@
 		</graphicData>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases> 
-			<MarketValue>4350</MarketValue>
-			<Mass>7.5</Mass>
+			<MarketValue>12000</MarketValue>
+			<Mass>10.5</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.4</AccuracyShort>
 			<AccuracyMedium>0.3</AccuracyMedium>
