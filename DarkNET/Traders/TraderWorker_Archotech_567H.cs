@@ -1,4 +1,7 @@
-﻿using DarkNET.TraderComp;
+﻿using DarkNET.Quests;
+using DarkNET.TraderComp;
+using MoreEvents.Quests;
+using QuestRim;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -29,9 +32,9 @@ namespace DarkNET.Traders
         private List<CategoryItem<Tab>> stock;
         public List<CategoryItem<Tab>> Stock => stock;
 
-        public override int ArriveTime => 1;
+        public override int ArriveTime => 8;
 
-        public override int OnlineTime => 1;
+        public override int OnlineTime => 2;
 
         public DarkNetComp_Archotech_567H Comp
         {
@@ -47,6 +50,15 @@ namespace DarkNET.Traders
         }
 
         private DarkNetComp_Archotech_567H сomp;
+
+        public List<Quest> Quests = new List<Quest>();
+
+        private Type[] QuestsList = new Type[]
+        {
+            typeof(Quest_Archotech_567H_KillAll),
+            typeof(Quest_Archotech_567H_KillOponents),
+            typeof(Quest_Archotech_567H_GetResources)
+        };
 
         public override void FirstInit()
         {
@@ -76,8 +88,49 @@ namespace DarkNET.Traders
             base.Arrive();
 
             RegenerateStock();
+
+            TryGenerateQuests();
         }
 
+        public void TryGenerateQuests()
+        {
+            int questCount = Rand.RangeInclusive(1, 2);
+            for (int i = 0; i < questCount; i++)
+            {
+                int questId = Rand.Range(0, QuestsList.Length);
+                Quest quest = (Quest)Activator.CreateInstance(QuestsList[questId]);
+                if (quest.TryGiveQuestTo(null, null))
+                {
+                    Quests.Add(quest);
+                }
+
+            }
+        }
+
+        public override void TraderGone()
+        {
+            if (Quests != null)
+            {
+                for (int i = 0; i < Quests.Count; i++)
+                {
+                    Quest quest = Quests[i];
+                    if (quest != null)
+                    {
+                        if (quest.Site != null)
+                        {
+                            quest.Site.EndQuest(null, EndCondition.None);
+                        }
+                        else
+                        {
+                            quest.EndQuest(null, EndCondition.None);
+                        }
+                    }
+                }
+            }
+            Quests.Clear();
+
+            base.TraderGone();
+        }
 
         public void RegenerateStock()
         {
@@ -111,7 +164,7 @@ namespace DarkNET.Traders
 
                 foreach (var item in items)
                 {
-                    if (!TryMerge(item, cat.Items))
+                    if (!DarkNetPriceUtils.TryMerge(item, cat.Items))
                     {
                         int marketValue = (int)((item.MarketValue * Character.Greed) * settings.PriceMultiplier);
 
@@ -128,24 +181,6 @@ namespace DarkNET.Traders
                     }
                 }
             }
-        }
-
-        private bool TryMerge(Thing item, List<SellableItemWithModif> stock)
-        {
-            for (int i = 0; i < stock.Count; i++)
-            {
-                Thing stockItem = stock[i].Item;
-                if (!stockItem.CanStackWith(item))
-                    continue;
-
-                stockItem.stackCount += item.stackCount;
-
-                item.Destroy();
-
-                return true;
-            }
-
-            return false;
         }
 
         public void TryDestroyStock()
@@ -182,6 +217,7 @@ namespace DarkNET.Traders
             base.ExposeData();
 
             Scribe_Collections.Look(ref stock, "stock", LookMode.Deep);
+            Scribe_Collections.Look(ref Quests, "Quests", LookMode.Reference);
         }
 
         public override void DrawTraderShop(Rect rect)
@@ -216,7 +252,7 @@ namespace DarkNET.Traders
             Rect additionalInfoRect = new Rect(600, 0, 210, 30);
             if(GUIUtils.DrawCustomButton(additionalInfoRect, "TraderWorker_Archotech_567H_Quests".Translate(), Color.white))
             {
-
+                Find.WindowStack.Add(new DarkNETWindow_Quests(Quests));
             }
             TooltipHandler.TipRegion(additionalInfoRect, "TraderWorker_Archotech_567H_Quests_Info".Translate());
             Text.Anchor = TextAnchor.UpperLeft;
@@ -236,71 +272,10 @@ namespace DarkNET.Traders
             {
                 SellableItemWithModif item = items[i];
 
-                DrawItem(item, items, goodRect);
+                GUIUtils.DrawItemCard(item, items, goodRect);
                 goodRect.y += 205;
             }
             Widgets.EndScrollView();
-        }
-
-        private void DrawItem(SellableItemWithModif item, List<SellableItemWithModif> itemsList, Rect rect)
-        {
-            bgCardColor.a = 150;
-            Widgets.DrawBoxSolid(rect, bgCardColor);
-
-            GUI.color = GUIUtils.CommBorderColor;
-            Widgets.DrawBox(rect);
-            GUI.color = Color.white;
-
-            Widgets.ThingIcon(new Rect(rect.x + 8, rect.y + 18, 64, 64), item.Item);
-            if (Widgets.ButtonImage(new Rect(rect.x + 26, rect.y + 86, 24, 24), DarkNETWindow.Info, GUI.color))
-            {
-                Find.WindowStack.Add(new Dialog_InfoCard(item.Item));
-            }
-
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(new Rect(rect.x + 80, rect.y + 8, rect.width - 88, 25), "TraderWorker_Eisenberg_ItemLabel".Translate(item.Item.LabelNoCount, item.Item.stackCount, item.MarketValue));
-
-            Text.Anchor = TextAnchor.UpperLeft;
-
-            GUIUtils.DrawLineHorizontal(rect.x + 80, rect.y + 34, rect.width - 88, Color.gray);
-            float y = rect.y + 36;
-            Widgets.Label(new Rect(rect.x + 80, y, rect.width - 88, 120), $"TraderWorker_Eisenberg_Description".Translate(item.Item.DescriptionDetailed));
-
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Rect arrowRect = new Rect(rect.x + 10, rect.y + 165, 25, 25);
-            GUIUtils.DrawSelectArrows(item, arrowRect);
-            float addX = 200;
-            if (item.CountToTransfer > 0)
-            {
-                Widgets.Label(new Rect(rect.x + 200, rect.y + 165, 250, 25), "TraderWorker_Eisenberg_Total".Translate(item.CountToTransfer, item.CountToTransfer * item.MarketValue));
-                addX = 450;
-            }
-            if (GUIUtils.DrawCustomButton(new Rect(rect.x + addX, rect.y + 165, 200, 25), "DarkNetButtons_Buy".Translate(), item.CountToTransfer > 0 ? Color.white : Color.gray))
-            {
-                if (item.CountToTransfer == 0)
-                    return;
-
-                if (DarkNetPriceUtils.BuyAndDropItem(item, item.CountToTransfer, Find.AnyPlayerHomeMap))
-                {
-                    if (item.Item == null)
-                        itemsList.Remove(item);
-
-                    if (item.Item != null)
-                    {
-                        if (item.CountToTransfer > item.Item.stackCount)
-                            item.AddToTransfer(item.Item.stackCount);
-                    }
-
-                    Text.Anchor = TextAnchor.UpperLeft;
-                    return;
-                }
-            }
-            Text.Anchor = TextAnchor.UpperLeft;
-
-            if (Mouse.IsOver(rect))
-            {
-                TooltipHandler.TipRegion(rect, "TraderWorker_RogerEdmonson_FullDesc".Translate(item.Item.LabelNoCount, item.Item.DescriptionFlavor, item.MarketValue));
-            }
         }
 
         public float GetPriceMultiplierForQuality(QualityCategory qualityCategory)

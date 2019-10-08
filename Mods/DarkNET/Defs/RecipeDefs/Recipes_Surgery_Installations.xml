@@ -4105,4 +4105,137 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_MentalFocus</addsHediff>
 	</RecipeDef>
+	
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Emitter_Light</defName>
+		<label>install Light psychoactive emitter</label>
+		<description>Install Light psychoactive emitter</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Light psychoactive emitter</jobString>
+		<workAmount>1000</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>5</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Emitter_Light</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Emitter_Light</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Emitter_Light</addsHediff>
+	</RecipeDef>
+	
+		<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Emitter_Medium</defName>
+		<label>install Medium psychoactive emitter</label>
+		<description>Install Medium psychoactive emitter</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Medium psychoactive emitter</jobString>
+		<workAmount>1000</workAmount>
+		<deathOnFailedSurgeryChance>0.13</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>11</Medicine>
+			<Intellectual>7</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Emitter_Medium</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Emitter_Medium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Emitter_Medium</addsHediff>
+	</RecipeDef>
+	
+			<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Emitter_Heavy</defName>
+		<label>install Heavy psychoactive emitter</label>
+		<description>Install Heavy psychoactive emitter</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Heavy psychoactive emitter</jobString>
+		<workAmount>1000</workAmount>
+		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Emitter_Heavy</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Emitter_Heavy</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Emitter_Heavy</addsHediff>
+	</RecipeDef>
 </Defs>

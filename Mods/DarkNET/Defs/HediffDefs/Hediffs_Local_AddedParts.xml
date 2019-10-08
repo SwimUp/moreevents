@@ -2497,4 +2497,62 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Emitter_Light</defName>
+		<label>Light psychoactive emitter</label>
+		<labelNoun>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Emitter_Light</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+
+				<statOffsets>
+					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Emitter_Medium</defName>
+		<label>Medium psychoactive emitter</label>
+		<labelNoun>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Emitter_Light</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.05</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+
+				<statOffsets>
+					<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Emitter_Heavy</defName>
+		<label>Heavy psychoactive emitter</label>
+		<labelNoun>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Emitter_Light</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+
+				<statOffsets>
+					<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>

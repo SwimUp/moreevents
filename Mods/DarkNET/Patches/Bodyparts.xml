@@ -95,7 +95,10 @@
 			<li>Install_DarkNet_Network_LifeForce</li>
 			<li>Install_DarkNet_Network_Consummation</li>
 			<li>Install_DarkNet_Network_YinYang</li>	
-            <li>Install_DarkNet_Network_MentalFocus</li>			
+            <li>Install_DarkNet_Network_MentalFocus</li>
+            <li>Install_DarkNet_Emitter_Light</li>
+			<li>Install_DarkNet_Emitter_Medium</li>
+			<li>Install_DarkNet_Emitter_Heavy</li>
 		</value>
 	</Operation>
 

@@ -11,6 +11,24 @@ namespace DarkNET
     [StaticConstructorOnStartup]
     public static class DarkNetPriceUtils
     {
+        public static bool TryMerge(Thing item, List<SellableItemWithModif> stock)
+        {
+            for (int i = 0; i < stock.Count; i++)
+            {
+                Thing stockItem = stock[i].Item;
+                if (!stockItem.CanStackWith(item))
+                    continue;
+
+                stockItem.stackCount += item.stackCount;
+
+                item.Destroy();
+
+                return true;
+            }
+
+            return false;
+        }
+
         public static ThingFilter GetThingFilter(List<DarkNetGood> goods)
         {
             ThingFilter filter = new ThingFilter();

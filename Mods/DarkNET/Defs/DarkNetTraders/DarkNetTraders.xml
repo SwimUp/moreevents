@@ -15,6 +15,7 @@ Paying attention to the outlying worlds, he realized that he could make a fortun
 He is extremely careful, does not conduct business with unverified people and severely punishes those who deceive him or surrender to the authorities. Appears more or less regularly every 2 weeks, usually has an assortment of used things and organs from developed worlds, but it can also bring along some really interesting things. He can also order things for delivery.</description>
 		<IconTextureInt>Traders/RogerEdmonson/face</IconTextureInt>
 		<FullTextureInt>Traders/RogerEdmonson/main</FullTextureInt>
+		<OverridePortraitWidth>380</OverridePortraitWidth>
 		<Character>
 			<Cruelty>1.3</Cruelty>
 			<Greed>1.25</Greed>
@@ -1273,7 +1274,7 @@ Scientists say that for this he uses mechanites controlled by him, but few can s
 It is also known that simple things, so familiar to us, are too simple for him, and he prefers to create more technologically advanced things typical of the Archaeological Museum. To many, its “prices” may seem very unprofitable, and you have the right to agree with this - but AI Arhotek has everything you need, and in any quantities you need. And yes, do not try to deceive him - he always senses something was amiss, and if he turns out to be deceived, the reprisal will not take long.</description>
 		<IconTextureInt>Traders/Archotech_567H/face</IconTextureInt>
 		<FullTextureInt>Traders/Archotech_567H/main</FullTextureInt>
-		<OverridePortraitWidth>500</OverridePortraitWidth>
+		<OverridePortraitWidth>470</OverridePortraitWidth>
 		<Character>
 			<Cruelty>2.0</Cruelty>
 			<Greed>1.0</Greed>
@@ -1292,8 +1293,31 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 							<max>25000</max>
 						</ValueRange>
 						<Goods>
-						
-						    <li>
+							<li>
+								<Commonality>0.2</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Emitter_Light</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>	
+							<li>
+								<Commonality>0.1</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Emitter_Medium</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
+								<Commonality>0.06</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Emitter_Heavy</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>
+							<li>
 								<Commonality>0.2</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -1301,8 +1325,7 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 									</thingDefs>
 								</ThingFilter>
 							</li>
-							
-							 <li>
+							<li>
 								<Commonality>0.15</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -1310,8 +1333,7 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 									</thingDefs>
 								</ThingFilter>
 							</li>
-							
-							 <li>
+							<li>
 								<Commonality>0.3</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -1415,7 +1437,7 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 									</thingDefs>
 								</ThingFilter>
 							</li>
-							
+
 							<li>
 								<Commonality>1.0</Commonality>
 								<ThingFilter>
@@ -1477,8 +1499,8 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 							<max>13000</max>
 						</ValueRange>
 						<Goods>
-						
-						    <li>
+
+							<li>
 								<Commonality>1.0</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -1487,7 +1509,7 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 								</ThingFilter>
 							</li>
 							<li>
-							
+
 								<Commonality>1.0</Commonality>
 								<ThingFilter>
 									<thingDefs>
@@ -1679,6 +1701,56 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 						</Goods>
 					</li>
 				</CategoryItemSettings>
+			</li>
+		</comps>
+	</DarkNET.DarkNetTraderDef>
+
+	<DarkNET.DarkNetTraderDef>
+		<defName>Sly</defName>
+		<workerClass>DarkNET.Traders.TraderWorker_Sly</workerClass>
+		<label>Sly "Pill"</label>
+		<description>No one remembers the real name Sly - there is little that you can remember about a person who went through the horrors of war and lost everything, including his own name. Rumor has it that
+she was still a child when the mechanoids came to their planet - cold, ruthless, insensitive. They killed everyone. Sly saw how those who are dear to her die, saw how the world so beloved by her perishes; she wanted to help somehow, but did not know how. So says one of the beliefs about Sly Pill.
+
+However, no matter what happened to her, by some miracle, she managed to escape. And then, remembering everything that she had to endure, she decided to take on the sacred mission to help all those in need - and almost disinterestedly. On her spaceship, she flies across the galaxy from planet to planet and sells medicines, uncomplicated food and herbs at very attractive prices. Since many worlds need help, purposefully waiting for Sly is not worth it - she rarely turns into a single world. But if your hope is almost exhausted - who knows, maybe the Sly ship just looms over your planet.
+
+Due to pressure from drug manufacturing corporations, Sly is forced to hide in DarkNet.</description>
+		<IconTextureInt>Traders/Sly/face</IconTextureInt>
+		<FullTextureInt>Traders/Sly/main</FullTextureInt>
+		<OverridePortraitWidth>450</OverridePortraitWidth>
+		<AvaliableGoods>
+			<li>		
+				<Commonality>1</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>MedicineHerbal</li>
+						<li>MedicineIndustrial</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.7</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>MedicineUltratech</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+		</AvaliableGoods>
+		<Character>
+			<Cruelty>1.0</Cruelty>
+			<Greed>0.6</Greed>
+		</Character>
+		<comps>
+			<li Class="DarkNET.TraderComp.DarkNetProperties_Sly"> 
+				<ValueRange>
+					<min>1000</min>
+					<max>2000</max>
+				</ValueRange>
+				<CountRange>
+					<min>9</min>
+					<max>15</max>
+				</CountRange>
 			</li>
 		</comps>
 	</DarkNET.DarkNetTraderDef>

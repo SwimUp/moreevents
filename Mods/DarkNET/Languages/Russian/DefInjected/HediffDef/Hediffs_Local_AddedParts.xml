@@ -306,5 +306,14 @@
 	
 	<DarkNet_Network_MentalFocus.label>Комбинированная нейросеть "Mental focus"</DarkNet_Network_MentalFocus.label>
 	<DarkNet_Network_MentalFocus.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Позволяет сосредоточить все усилия организма на получении новых знаний и совершенствование интеллекта, что затрачивает последние энергетические резервы организма.</DarkNet_Network_MentalFocus.labelNoun>
+	
+	<DarkNet_Emitter_Heavy.label>Большой пси излучатель</DarkNet_Emitter_Heavy.label>
+	<DarkNet_Emitter_Heavy.labelNoun>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Heavy.labelNoun>
+
+	<DarkNet_Emitter_Medium.label>Средний пси излучатель</DarkNet_Emitter_Medium.label>
+	<DarkNet_Emitter_Medium.labelNoun>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Medium.labelNoun>
+
+	<DarkNet_Emitter_Light.label>Малый пси излучатель</DarkNet_Emitter_Light.label>
+	<DarkNet_Emitter_Light.labelNoun>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Light.labelNoun>
 
 </LanguageData>

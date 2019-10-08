@@ -376,6 +376,18 @@
 	<Install_DarkNet_Network_MentalFocus.description>Установить Комбинированную нейросеть "Mental focus"</Install_DarkNet_Network_MentalFocus.description>
 	<Install_DarkNet_Network_MentalFocus.jobString>Устанавливает Комбинированную нейросеть "Mental focus"</Install_DarkNet_Network_MentalFocus.jobString>
 
+	<Install_DarkNet_Emitter_Heavy.label>установить Большой пси излучатель</Install_DarkNet_Emitter_Heavy.label>
+	<Install_DarkNet_Emitter_Heavy.description>Установить Большой пси излучатель</Install_DarkNet_Emitter_Heavy.description>
+	<Install_DarkNet_Emitter_Heavy.jobString>Устанавливает Большой пси излучатель</Install_DarkNet_Emitter_Heavy.jobString>
+	
+	<Install_DarkNet_Emitter_Medium.label>установить Средний пси излучатель</Install_DarkNet_Emitter_Medium.label>
+	<Install_DarkNet_Emitter_Medium.description>Установить Средний пси излучатель</Install_DarkNet_Emitter_Medium.description>
+	<Install_DarkNet_Emitter_Medium.jobString>Устанавливает Средний пси излучатель</Install_DarkNet_Emitter_Medium.jobString>
+	
+	<Install_DarkNet_Emitter_Light.label>установить Малый пси излучатель</Install_DarkNet_Emitter_Light.label>
+	<Install_DarkNet_Emitter_Light.description>Установить Малый пси излучатель</Install_DarkNet_Emitter_Light.description>
+	<Install_DarkNet_Emitter_Light.jobString>Устанавливает Малый пси излучатель</Install_DarkNet_Emitter_Light.jobString>
+
 
 
 </LanguageData>

@@ -1,4 +1,6 @@
-﻿using EmailMessages;
+﻿using DarkNET;
+using DarkNET.Traders;
+using EmailMessages;
 using MoreEvents.Communications;
 using MoreEvents.Quests;
 using QuestRim;
@@ -332,9 +334,18 @@ namespace DiaRim
                     Find.WindowStack.Add(new FloatMenu(list));
                 }
 
+                if (listing.ButtonText("Force darknet traders"))
+                {
+                    foreach(var trader in Current.Game.GetComponent<DarkNet>().Traders)
+                    {
+                        trader.Online = true;
+                        trader.Arrive();
+                    }
+                }
+
+
                 listing.End();
             }
-
         }
 
         private string GetIncidentTargetLabel(IIncidentTarget target)

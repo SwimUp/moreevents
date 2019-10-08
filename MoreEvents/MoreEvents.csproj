@@ -254,6 +254,7 @@
     <Compile Include="Events\IncidentWorker_SeaAir.cs" />
     <Compile Include="Events\IncidentWorker_Ambush_TwoEnemyFaction.cs" />
     <Compile Include="Events\InspirationDefOfLocal.cs" />
+    <Compile Include="HostileUtility.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="MapDefOfLocal.cs" />
     <Compile Include="MapGeneratorDefOfLocal.cs" />
@@ -267,6 +268,7 @@
     <Compile Include="Patch\InitializeComps.cs" />
     <Compile Include="Patch\Verb_MeleeAttack.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillOrderMap.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapWithGenerator.cs" />
     <Compile Include="Quests\Quest_KillOrder.cs" />
     <Compile Include="RimOverhaulModule.cs" />
     <Compile Include="ModulesHandler.cs" />

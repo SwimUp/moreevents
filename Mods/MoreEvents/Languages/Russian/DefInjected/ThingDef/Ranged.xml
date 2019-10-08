@@ -153,4 +153,8 @@
 	<Gun_RL_SteelRain.tools.barrel.label>RL Steel rain</Gun_RL_SteelRain.tools.barrel.label>
 	<Gun_RL_SteelRain.verbs.Verb_Shoot.label>RL Steel rain</Gun_RL_SteelRain.verbs.Verb_Shoot.label>
 
+	<Weapon_GravityGrenades.label>Гравитацонная граната</Weapon_GravityGrenades.label>
+	<Weapon_GravityGrenades.description>Создает гравитационную воронку в центре взрыва, притягивая живых существ и после взрываясь.</Weapon_GravityGrenades.description>
+	<Proj_GrenadeGravity.label>Гравитацонная граната</Proj_GrenadeGravity.label>
+
 </LanguageData>

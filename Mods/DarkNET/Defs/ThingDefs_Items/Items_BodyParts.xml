@@ -1867,5 +1867,124 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Emitter_Light</defName>
+		<label>Light psychoactive emitter</label>
+		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Emitter_Light</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>700</MarketValue>
+			<Mass>0.1</Mass>
+			<WorkToMake>1000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>1</ComponentSpacer>
+			<CopperIngot>80</CopperIngot>
+			<NickelIngot>50</NickelIngot>
+			<IlmeniteIngot>15</IlmeniteIngot>
+		</costList>
+		<techHediffsTags>
+			<li>Spacer</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+		<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Emitter_Medium</defName>
+		<label>Medium psychoactive emitter</label>
+		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Emitter_Medium</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>1200</MarketValue>
+			<Mass>0.15</Mass>
+			<WorkToMake>2000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>2</ComponentSpacer>
+			<CopperIngot>120</CopperIngot>
+			<NickelIngot>80</NickelIngot>
+			<IlmeniteIngot>35</IlmeniteIngot>
+			<Chromium>15</Chromium>
+		</costList>
+		<techHediffsTags>
+			<li>Spacer</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Emitter_Heavy</defName>
+		<label>Heavy psychoactive emitter</label>
+		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Emitter_Heavy</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		    <MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>1700</MarketValue>
+			<Mass>0.2</Mass>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+		    <ComponentSpacer>3</ComponentSpacer>
+			<CopperIngot>100</CopperIngot>
+			<NickelIngot>100</NickelIngot>
+			<IlmeniteIngot>45</IlmeniteIngot>
+			<PalladiumIngot>25</PalladiumIngot>
+		</costList>
+		<techHediffsTags>
+			<li>Spacer</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
 
 </Defs>

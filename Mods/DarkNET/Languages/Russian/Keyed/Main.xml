@@ -130,7 +130,7 @@
 
 Цена договора: {5}$</Eisenberg_OrderWindowSuppliesTotalInfo>
 	
-	<EmailMessage_Eisenberg_Text>Слушай, я с тобой работаю не так долго, но вижу, что ты парень толковый. На этой планете у меня была лаборатория, в которой я занималась...так скажем, не совсем созданием только препаратов. Вчера мне пришло уведомление от систем безопаности. Один из её главных блоков отключился, что приводит к риску освобождения тем, что там находится. Нужно придти в лабораторию и включить резервные системы защиты. Дело опасное, но все, что там найдешь - твоё, ну и я еще сверху накину серебра.</EmailMessage_Eisenberg_Text>
+	<EmailMessage_Eisenberg_Text>Слушай, я с тобой работаю не так долго, но вижу, что ты парень толковый. На этой планете у меня была лаборатория, в которой я занималась...так скажем, не совсем созданием только препаратов. Вчера мне пришло уведомление от систем безопаcности. Один из её главных блоков отключился, что приводит к риску освобождения тем, что там находится. Нужно придти в лабораторию и включить резервные системы защиты. Дело опасное, но все, что там найдешь - твоё, ну и я еще сверху накину серебра.</EmailMessage_Eisenberg_Text>
 	<EmailMessage_Eisenberg_Subj>Лаборатория</EmailMessage_Eisenberg_Subj>
 	<EmailMessageOption_TakeQuest_Laboratory>Согласиться</EmailMessageOption_TakeQuest_Laboratory>
 	<EmailMessageOption_DeclineQuest_Laboratory>Отказаться</EmailMessageOption_DeclineQuest_Laboratory>
@@ -165,5 +165,33 @@
 	
 	<TraderWorker_Archotech_567H_Quests>Задания</TraderWorker_Archotech_567H_Quests>
 	<TraderWorker_Archotech_567H_Quests_Info>Список доступных заданий, которые может предложить торговец</TraderWorker_Archotech_567H_Quests_Info>
+	
+	<TraderWorker_Sly_Tab_Items>Медицина</TraderWorker_Sly_Tab_Items>
+	<TraderWorker_Sly_Tab_Weapons>Услуги</TraderWorker_Sly_Tab_Weapons>
+	
+	<DarkNetButtons_TakeQuest>Взять задание</DarkNetButtons_TakeQuest>
+	
+	<DarkNET_QuestsHeaders>Задания (доступно: {0})</DarkNET_QuestsHeaders>
+	
+	<Quest_Archotech_567H_KillAll_CardLabel>Борьба с пиратами</Quest_Archotech_567H_KillAll_CardLabel>
+	<Quest_Archotech_567H_KillAll_Description>Пираты не дают покоя. Несколько грузовых кораблей были разграблены. Нападение было быстрым и небрежным, поэтому я предпологаю, что это были они. Я хочу препадать им уроки и показать, что встреча со мной было самой большой ошибкой в их никчемной жизни. У меня есть координаты одного из лагерей пиратов. Уничтожь его и я заплачу сполна.</Quest_Archotech_567H_KillAll_Description>
+	<Quest_Archotech_567H_KillAll_PlaceLabel>Пираты</Quest_Archotech_567H_KillAll_PlaceLabel>
+	
+	<Quest_Archotech_567H_KillOponents_CardLabel>Конкуренты</Quest_Archotech_567H_KillOponents_CardLabel>
+	<Quest_Archotech_567H_KillOponents_Description>Недавно на рынке появилась одна группировка, которая торгует товарами, похожими на мои, но более низкого качества, что захламляет рынок. Я и еще некоторые персоны хотим их убрать из игры. Координаты их базы есть. Найди её и убей	всех. Без исключений.</Quest_Archotech_567H_KillOponents_Description>
+	<Quest_Archotech_567H_KillOponents_PlaceLabel>Конкуренты</Quest_Archotech_567H_KillOponents_PlaceLabel>
+	
+	<Quest_Archotech_567H_GetResources_CardLabel>Пополнение запасов</Quest_Archotech_567H_GetResources_CardLabel>
+	<Quest_Archotech_567H_GetResources_Description>Создание предметов требует большого количества ресурсов. Добыча полезных ископаемых это не про меня. К счастью, есть множество складов других корпораций, если их так можно назвать, которые готовы поделиться своими запасами. У меня есть координаты одного из складов. Навести его. Убей всех и удерживай склад, пока не прибудут мои автономные корабли.</Quest_Archotech_567H_GetResources_Description>
+	<Quest_Archotech_567H_GetResources_PlaceLabel>Склад</Quest_Archotech_567H_GetResources_PlaceLabel>
+	<Quest_Archotech_567H_GetResources_NeedDefend>Грузовые корабли еще не забрали груз.</Quest_Archotech_567H_GetResources_NeedDefend>
+	<Quest_Archotech_567H_GetResources_Dialog>Когда будете готовы, выберите эту точку на мировой карте и нажмите "Активировать маяк", чтобы дать сигнал кораблям. После этого выживите, пока не прибудут корабли. В случае смерти, задание будет провалено.
+	
+(После активации маяка те, кого вы не убили так-же будут нападать на вас. Убейте их до этого)</Quest_Archotech_567H_GetResources_Dialog>
+	<Quest_Archotech_567H_GetResources_SignalLabel>Активировать маяк</Quest_Archotech_567H_GetResources_SignalLabel>
+	<Quest_Archotech_567H_GetResources_SignalDescription>Дает сигнал грузовым кораблям</Quest_Archotech_567H_GetResources_SignalDescription>
+	<Quest_Archotech_567H_GetResources_SuccessTitle>Корабли прибыли</Quest_Archotech_567H_GetResources_SuccessTitle>
+	<Quest_Archotech_567H_GetResources_SuccessDesc>Грузовые корабли прибыли и начинают погрузку, противник отступает.</Quest_Archotech_567H_GetResources_SuccessDesc>
+	<Quest_Archotech_567H_GetResources_SignalDialog>Сигнал отправлен. Останьтесь в живых 20 игровых часов. В этом время противник попытается отбить склад.</Quest_Archotech_567H_GetResources_SignalDialog>
 	
 </LanguageData>

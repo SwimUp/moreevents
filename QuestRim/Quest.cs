@@ -261,5 +261,42 @@ namespace QuestRim
         {
             return "Quest_" + id;
         }
+
+        public string GetDescriptionWithRewards()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine(Description);
+            float totalPrice = 0;
+            Rewards.ForEach(x => totalPrice += x.MarketValue * x.stackCount);
+
+            builder.AppendLine("QuestRewards".Translate(totalPrice));
+            if (Rewards != null)
+            {
+                foreach (var reward in Rewards)
+                {
+                    builder.AppendLine($"- {reward.Label}");
+                }
+            }
+
+            return builder.ToString();
+        }
+
+        public string GetRewardsString()
+        {
+            StringBuilder builder = new StringBuilder();
+            float totalPrice = 0;
+            Rewards.ForEach(x => totalPrice += x.MarketValue * x.stackCount);
+
+            builder.AppendLine("QuestRewards".Translate(totalPrice));
+            if (Rewards != null)
+            {
+                foreach (var reward in Rewards)
+                {
+                    builder.AppendLine($"- {reward.Label}");
+                }
+            }
+
+            return builder.ToString();
+        }
     }
 }

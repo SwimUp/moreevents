@@ -191,6 +191,9 @@ namespace QuestRim
 
         public override IEnumerable<FloatMenuOption> GetTransportPodsFloatMenuOptions(IEnumerable<IThingHolder> pods, CompLaunchable representative)
         {
+            //not now...
+            yield break;
+
             foreach (var opt in base.GetTransportPodsFloatMenuOptions(pods, representative))
             {
                 yield return opt;
