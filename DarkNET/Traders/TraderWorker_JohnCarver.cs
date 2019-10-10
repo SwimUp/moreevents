@@ -182,7 +182,7 @@ namespace DarkNET.Traders
             Scribe_Collections.Look(ref stock, "stock", LookMode.Deep);
         }
 
-        public override void DrawTraderShop(Rect rect)
+        public override void DrawTraderShop(Rect rect, Pawn speaker)
         {
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
@@ -214,12 +214,12 @@ namespace DarkNET.Traders
             }, tab == Tab.Artifacts));
             TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 200);
 
-            DrawItems(tab, rect2);
+            DrawItems(tab, rect2, speaker);
 
             Text.Font = GameFont.Small;
         }
 
-        private void DrawItems(Tab tab, Rect rect)
+        private void DrawItems(Tab tab, Rect rect, Pawn speaker)
         {
             List<SellableItemWithModif> items = stock.First(x => x.Tab == tab).Items;
 
@@ -231,7 +231,7 @@ namespace DarkNET.Traders
             {
                 SellableItemWithModif item = items[i];
 
-                GUIUtils.DrawItemCard(item, items, goodRect);
+                GUIUtils.DrawItemCard(item, items, goodRect, speaker);
                 goodRect.y += 205;
             }
             Widgets.EndScrollView();

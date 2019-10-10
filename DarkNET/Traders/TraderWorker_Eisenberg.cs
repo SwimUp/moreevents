@@ -112,7 +112,7 @@ namespace DarkNET.Traders
             RecalculatePrices();
         }
 
-        public override void DrawTraderShop(Rect rect)
+        public override void DrawTraderShop(Rect rect, Pawn speaker)
         {
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
@@ -140,7 +140,7 @@ namespace DarkNET.Traders
             }, tab == Tab.Experimental));
             TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 245);
 
-            DrawItems(tab, rect2);
+            DrawItems(tab, rect2, speaker);
 
             Text.Font = GameFont.Medium;
             Rect additionalInfoRect = new Rect(270, 0, 400, 30);
@@ -186,7 +186,7 @@ namespace DarkNET.Traders
             return false;
         }
 
-        private void DrawItems(Tab tab, Rect rect)
+        private void DrawItems(Tab tab, Rect rect, Pawn speaker)
         {
             List<SellableItemWithModif> items = drugs.First(x => x.Tab == tab).Items;
 
@@ -198,13 +198,13 @@ namespace DarkNET.Traders
             {
                 SellableItemWithModif item = items[i];
 
-                DrawItem(item, items, goodRect);
+                DrawItem(item, items, goodRect, speaker);
                 goodRect.y += 205;
             }
             Widgets.EndScrollView();
         }
 
-        private void DrawItem(SellableItemWithModif item, List<SellableItemWithModif> itemsList, Rect rect)
+        private void DrawItem(SellableItemWithModif item, List<SellableItemWithModif> itemsList, Rect rect, Pawn speaker)
         {
             bgCardColor.a = 150;
             Widgets.DrawBoxSolid(rect, bgCardColor);
@@ -237,7 +237,7 @@ namespace DarkNET.Traders
                 if (item.CountToTransfer == 0)
                     return;
 
-                if(DarkNetPriceUtils.BuyAndDropItem(item, item.CountToTransfer, Find.AnyPlayerHomeMap))
+                if(DarkNetPriceUtils.BuyAndDropItem(item, item.CountToTransfer, speaker.Map))
                 {
                     if(item.Item == null)
                         itemsList.Remove(item);

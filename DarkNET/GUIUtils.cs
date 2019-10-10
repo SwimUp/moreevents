@@ -87,7 +87,7 @@ namespace DarkNET
             }
         }
 
-        public static void DrawItemCard(SellableItemWithModif item, List<SellableItemWithModif> itemsList, Rect rect)
+        public static void DrawItemCard(SellableItemWithModif item, List<SellableItemWithModif> itemsList, Rect rect, Pawn speaker)
         {
             bgCardColor.a = 150;
             Widgets.DrawBoxSolid(rect, bgCardColor);
@@ -125,7 +125,7 @@ namespace DarkNET
                 if (item.CountToTransfer == 0)
                     return;
 
-                if (DarkNetPriceUtils.BuyAndDropItem(item, item.CountToTransfer, Find.AnyPlayerHomeMap))
+                if (DarkNetPriceUtils.BuyAndDropItem(item, item.CountToTransfer, speaker.Map))
                 {
                     if (item.Item == null)
                         itemsList.Remove(item);

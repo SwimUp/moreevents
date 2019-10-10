@@ -37,4 +37,16 @@
   <Chemical_Likombinat.label>Ликомбинат</Chemical_Likombinat.label>
   <Chemical_Likombinat.description>Из-за употребления Ликомбината у человека вырабаталась сильная зависимость. Ему нужно употреблять Ликомбинат снова и снова.</Chemical_Likombinat.description>
 
+  <Chemical_Andomorphine.label>Андоморфин</Chemical_Andomorphine.label>
+  <Chemical_Andomorphine.description>Из-за употребления Андоморфина у человека вырабаталась сильная зависимость. Ему нужно употреблять Андоморфин снова и снова. Избавиться от этой зависимости невозможно.</Chemical_Andomorphine.description>
+
+  <Chemical_Tetrodicline.label>Тетродиклин</Chemical_Tetrodicline.label>
+  <Chemical_Tetrodicline.description>Из-за употребления Тетродиклина у человека вырабаталась сильная зависимость. Ему нужно употреблять Тетродиклин снова и снова.</Chemical_Tetrodicline.description>
+
+  <Chemical_Entotizin.label>Энтотизин</Chemical_Entotizin.label>
+  <Chemical_Entotizin.description>Из-за употребления Энтотизин у человека вырабаталась сильная зависимость. Ему нужно употреблять Энтотизин снова и снова.</Chemical_Entotizin.description>
+
+  <Chemical_Extratisinum.label>Экстратизин</Chemical_Extratisinum.label>
+  <Chemical_Extratisinum.description>Из-за употребления Экстратизин у человека вырабаталась сильная зависимость. Ему нужно употреблять Экстратизин снова и снова.</Chemical_Extratisinum.description>
+
 </LanguageData>

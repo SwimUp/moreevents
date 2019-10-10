@@ -167,7 +167,7 @@
 	<TraderWorker_Archotech_567H_Quests_Info>Список доступных заданий, которые может предложить торговец</TraderWorker_Archotech_567H_Quests_Info>
 	
 	<TraderWorker_Sly_Tab_Items>Медицина</TraderWorker_Sly_Tab_Items>
-	<TraderWorker_Sly_Tab_Weapons>Услуги</TraderWorker_Sly_Tab_Weapons>
+	<TraderWorker_Sly_Tab_Service>Услуги</TraderWorker_Sly_Tab_Service>
 	
 	<DarkNetButtons_TakeQuest>Взять задание</DarkNetButtons_TakeQuest>
 	
@@ -193,5 +193,40 @@
 	<Quest_Archotech_567H_GetResources_SuccessTitle>Корабли прибыли</Quest_Archotech_567H_GetResources_SuccessTitle>
 	<Quest_Archotech_567H_GetResources_SuccessDesc>Грузовые корабли прибыли и начинают погрузку, противник отступает.</Quest_Archotech_567H_GetResources_SuccessDesc>
 	<Quest_Archotech_567H_GetResources_SignalDialog>Сигнал отправлен. Останьтесь в живых 20 игровых часов. В этом время противник попытается отбить склад.</Quest_Archotech_567H_GetResources_SignalDialog>
+	
+	<DarkNetLabels_ServiceUnavaliable>Недоступно - {0}</DarkNetLabels_ServiceUnavaliable>
+	<SlyService_RaidHelp_Pacifists>Корпус миротворцев</SlyService_RaidHelp_Pacifists>
+	<SlyService_RaidHelp_Label>Огневая поддержка</SlyService_RaidHelp_Label>
+	<SlyService_RaidHelp_Description>Запрос огневой поддержки. Вызывает выбранную группу на помощь вам.
+- Корпус миротворцев ({0} серебра): отряд пацифистов, обладающих в основном высокими навыками медицины.
+- Поддержка ({1} серебра): отряд регулярных бойцов, обладающих средними навыками ведения боя.
+- Усиленная гвардия ({2} серебра): отряд закаленных бойцов с высокими навыками ведения боя.</SlyService_RaidHelp_Description>
+	<SlyService_RaidHelp_NormalHelp>Поддержка</SlyService_RaidHelp_NormalHelp>
+	<SlyService_RaidHelp_Guardians>Усиленная гвардия</SlyService_RaidHelp_Guardians>
+	<SlyService_AlreadyUsed>уже использовано, дождитесь следующего прибытия</SlyService_AlreadyUsed>
+	<SlyService_RaidHelp_HelpSendedTitle>Помощь в пути!</SlyService_RaidHelp_HelpSendedTitle>
+	<SlyService_RaidHelp_HelpSendedDesc>Эй, ты! Я надеюсь, ты там еще живой, потому что помощь уже в пути!</SlyService_RaidHelp_HelpSendedDesc>
+	<SlyService_RaidHelp_NonAvaliable_ver1>В этот раз все бойцы заняты.</SlyService_RaidHelp_NonAvaliable_ver1>
+	<SlyService_RaidHelp_NonAvaliable_ver2>В прошлую вылазку я потеряла много человек, не в этот раз.</SlyService_RaidHelp_NonAvaliable_ver2>
+	<SlyService_HumanitarianHelp_Label>Гуманитарная помощь</SlyService_HumanitarianHelp_Label>
+	<SlyService_HumanitarianHelp_Description>Запрос гуманитарной помощи.
+- Базовая гуманитарная помощь ({0} серебра): несколько простых блюд и трав для лечения.
+- Полевая гуманитарная помощь ({1} серебра): набор сухпайков и аптечек.
+- Полная гуманитарная поддержка ({2} серебра): продвинутая медицина и набор сухпайков</SlyService_HumanitarianHelp_Description>
+	<SlyService_HumanitarianHelp_TooManyUses>Прости, но я уже помогла слишком много раз. Может, в другой раз.</SlyService_HumanitarianHelp_TooManyUses>
+	<SlyService_HumanitarianHelp_Base>Базовая</SlyService_HumanitarianHelp_Base>
+	<SlyService_HumanitarianHelp_Advanced>Полевая</SlyService_HumanitarianHelp_Advanced>
+	<SlyService_HumanitarianHelp_Ultra>Полная</SlyService_HumanitarianHelp_Ultra>
+	<SlyService_HumanitarianHelp_TooDangerous>Прости, но на твою территорию было слишком много налетов. Слишком опасно для меня.</SlyService_HumanitarianHelp_TooDangerous>
+	<SlyService_ResoucesHelp_Label>Поддержка ресурсами</SlyService_ResoucesHelp_Label>
+	<SlyService_ResoucesHelp_Description>Запрос ресурсов общего плана.
+- Строительные материалы ({0} серебра): запрос базовых материалов, таких как каменные блоки и дерево в умеренном количестве.
+- Сырье ({1} серебра): запрос серья, таких как уголь, медная, железная руды.
+- Редкие материалы ({2} серебра): запрос редких материалов, таких как титан, хром, никель</SlyService_ResoucesHelp_Description>
+	<SlyService_ResoucesHelp_Base>Строй. материалы</SlyService_ResoucesHelp_Base>
+	<SlyService_ItemsHelp_Letter_Title>Ресурсы отправлены</SlyService_ItemsHelp_Letter_Title>
+	<SlyService_ItemsHelp_Letter_Description>Ресурсы направлены на вашу базу, удачи!</SlyService_ItemsHelp_Letter_Description>
+	<SlyService_ResoucesHelp_Advanced>Сырьё</SlyService_ResoucesHelp_Advanced>
+	<SlyService_ResoucesHelp_Ultra>Редкие материалы</SlyService_ResoucesHelp_Ultra>
 	
 </LanguageData>

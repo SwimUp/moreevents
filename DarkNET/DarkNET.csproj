@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Building_DarkNetConsole.cs" />
     <Compile Include="Caravans\CaravanArrivalAction_EnterToLaboratoryMap.cs" />
+    <Compile Include="CommunicationComps\CommunicationComponent_SlyHelp.cs" />
     <Compile Include="DarkNet.cs" />
     <Compile Include="DarkNetGood.cs" />
     <Compile Include="DarkNetModule.cs" />
@@ -75,17 +76,6 @@
     <Compile Include="Dialog_DarkNetTraderCard.cs" />
     <Compile Include="FactionDefOfLocal.cs" />
     <Compile Include="GUIUtils.cs" />
-    <Compile Include="Hediffs\CompOverdose.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_ApplyHediffAfter.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_ClearHediffPerUse.cs" />
-    <Compile Include="Hediffs\CompProperties_Overdose.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_RestoreBodypart.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_UseCooldown.cs" />
-    <Compile Include="Hediffs\HediffComp_ApplyHediffAfter.cs" />
-    <Compile Include="Hediffs\HediffComp_ClearHediffPerUse.cs" />
-    <Compile Include="Hediffs\HediffComp_RestoreBodypart.cs" />
-    <Compile Include="Hediffs\HediffComp_UseCooldown.cs" />
-    <Compile Include="Hediffs\IngestionOutcomeDoer_ClearHediffs.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />
     <Compile Include="Jobs\JobDriver_GoToDarkNet.cs" />
     <Compile Include="PriceModificatorDef.cs" />
@@ -97,6 +87,12 @@
     <Compile Include="Quests\Quest_Archotech_567H_KillAll.cs" />
     <Compile Include="Quests\Quest_Laboratory.cs" />
     <Compile Include="SellableItemWithModif.cs" />
+    <Compile Include="Sly\SlyHelp_OneUse.cs" />
+    <Compile Include="Sly\SlyService.cs" />
+    <Compile Include="Sly\SlyService_ItemsHelp.cs" />
+    <Compile Include="Sly\SlyService_HumanitarianHelp.cs" />
+    <Compile Include="Sly\SlyService_RaidHelp.cs" />
+    <Compile Include="Sly\SlyService_ResoucesHelp.cs" />
     <Compile Include="ThingCategoryDefOfLocal.cs" />
     <Compile Include="ThingDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtDefDefOfLocal.cs" />

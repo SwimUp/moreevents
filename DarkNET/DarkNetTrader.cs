@@ -71,7 +71,8 @@ namespace DarkNET
 
         public virtual void Arrive()
         {
-            Find.LetterStack.ReceiveLetter($"DarkNetNotify_TraderArriveTitle".Translate(def.LabelCap), "DarkNetNotify_TraderArriveTitle".Translate(def.LabelCap), LetterDefOf.NeutralEvent);
+            if(DarkNet.PlayerHasDarkNetConsole)
+                Find.LetterStack.ReceiveLetter($"DarkNetNotify_TraderArriveTitle".Translate(def.LabelCap), "DarkNetNotify_TraderArriveTitle".Translate(def.LabelCap), LetterDefOf.NeutralEvent);
         }
 
         public virtual void WindowOpen()
@@ -110,7 +111,7 @@ namespace DarkNET
 
         }
 
-        public abstract void DrawTraderShop(Rect rect);
+        public abstract void DrawTraderShop(Rect rect, Pawn speaker);
 
         public virtual void ExposeData()
         {

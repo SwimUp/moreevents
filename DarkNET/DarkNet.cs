@@ -12,6 +12,8 @@ namespace DarkNET
     {
         public List<DarkNetTrader> Traders;
 
+        public static bool PlayerHasDarkNetConsole;
+
         public DarkNet()
         {
 
@@ -19,7 +21,24 @@ namespace DarkNET
 
         public DarkNet(Game game)
         {
+            PlayerHasDarkNetConsole = false;
+        }
 
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+
+            foreach (var map in Find.Maps)
+            {
+                if (map.IsPlayerHome)
+                {
+                    if (map.listerBuildings.allBuildingsColonist.Any(b => b is Building_DarkNetConsole))
+                    {
+                        PlayerHasDarkNetConsole = true;
+                        break;
+                    }
+                }
+            }
         }
 
         public override void StartedNewGame()

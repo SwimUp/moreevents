@@ -225,6 +225,8 @@ namespace DarkNET
                         break;
                 }
 
+                map.resourceCounter.UpdateResourceCounts();
+
                 return true;
             }
             else

@@ -13,5 +13,11 @@ namespace DarkNET
         public static ThingDef SculptureSmall;
         public static ThingDef SculptureLarge;
         public static ThingDef SculptureGrand;
+
+        public static ThingDef BlocksSandstone;
+        public static ThingDef BlocksGranite;
+        public static ThingDef BlocksLimestone;
+        public static ThingDef BlocksSlate;
+        public static ThingDef BlocksMarble;
     }
 }

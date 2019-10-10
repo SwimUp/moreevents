@@ -1736,6 +1736,62 @@ Due to pressure from drug manufacturing corporations, Sly is forced to hide in D
 					</thingDefs>
 				</ThingFilter>
 			</li>
+			<li>		
+				<Commonality>0.3</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>LastDyingBreath</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.4</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>Andomorphine</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.6</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>Cordianian</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.5</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>Entotizin</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.7</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>Extratisinum</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.6</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>Piroten</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
+			<li>		
+				<Commonality>0.4</Commonality>
+				<ThingFilter>
+					<thingDefs>
+						<li>Tetrodicline</li>
+					</thingDefs>
+				</ThingFilter>
+			</li>
 		</AvaliableGoods>
 		<Character>
 			<Cruelty>1.0</Cruelty>
@@ -1744,12 +1800,12 @@ Due to pressure from drug manufacturing corporations, Sly is forced to hide in D
 		<comps>
 			<li Class="DarkNET.TraderComp.DarkNetProperties_Sly"> 
 				<ValueRange>
-					<min>1000</min>
-					<max>2000</max>
+					<min>100</min>
+					<max>3000</max>
 				</ValueRange>
 				<CountRange>
-					<min>9</min>
-					<max>15</max>
+					<min>5</min>
+					<max>25</max>
 				</CountRange>
 			</li>
 		</comps>

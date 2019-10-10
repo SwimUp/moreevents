@@ -152,7 +152,7 @@ namespace DarkNET.Traders
             }
         }
 
-        public override void DrawTraderShop(Rect rect)
+        public override void DrawTraderShop(Rect rect, Pawn speaker)
         {
             Rect imageRect = new Rect(700, rect.y, 400, rect.height);
             GUI.DrawTexture(imageRect, def.FullTexture);
@@ -165,7 +165,7 @@ namespace DarkNET.Traders
             specialGoodsRect.height = 130;
             if (goodOfTheWeek != null)
             {
-                DrawCustomItemCard(specialGoodsRect, goodOfTheWeek);
+                DrawCustomItemCard(specialGoodsRect, goodOfTheWeek, speaker);
             }
             else
             {
@@ -185,7 +185,7 @@ namespace DarkNET.Traders
             {
                 var item = stock[i];
 
-                DrawCustomItemCard(goodRect, item);
+                DrawCustomItemCard(goodRect, item, speaker);
 
                 goodRect.y += 140;
             }
@@ -213,7 +213,7 @@ namespace DarkNET.Traders
             }
             Text.Anchor = TextAnchor.UpperLeft;
         }
-        public void DrawCustomItemCard(Rect rect, SellableItemWithModif item)
+        public void DrawCustomItemCard(Rect rect, SellableItemWithModif item, Pawn speaker)
         {
             bgCardColor.a = 150;
             Widgets.DrawBoxSolid(rect, bgCardColor);
@@ -240,7 +240,7 @@ namespace DarkNET.Traders
             Text.Anchor = TextAnchor.MiddleCenter;
             if (GUIUtils.DrawCustomButton(new Rect(rect.x, rect.y + 105, rect.width, 25), "DarkNetButtons_Buy".Translate(), Color.white))
             {
-                if (DarkNetPriceUtils.BuyAndDropItem(item, Find.AnyPlayerHomeMap))
+                if (DarkNetPriceUtils.BuyAndDropItem(item, speaker.Map))
                 {
                     if (stock.Contains(item))
                         stock.Remove(item);

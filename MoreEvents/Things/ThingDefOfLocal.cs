@@ -53,5 +53,13 @@ namespace MoreEvents
         public static ThingDef Bullet_ArgentSphere;
 
         public static ThingDef Singularity;
+
+        public static ThingDef IronOre;
+        public static ThingDef CopperOre;
+        public static ThingDef Coal;
+        public static ThingDef NickelOre;
+        public static ThingDef IlmeniteOre;
+        public static ThingDef Chromium;
+
     }
 }

@@ -74,7 +74,7 @@ namespace DarkNET
             if (currentTrader != null)
             {
                 DrawTraderInfo(currentTrader);
-                currentTrader.DrawTraderShop(mainTraderRect);
+                currentTrader.DrawTraderShop(mainTraderRect, speaker);
 
             }
 

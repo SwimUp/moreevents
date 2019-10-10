@@ -42,8 +42,8 @@
 
 	<Joycstasy.label>Джойстази</Joycstasy.label>
 	<Joycstasy.description>Самодельный препарат торговца, изготовленный из экстрактов амброзии и гриба дьявлонитника. Повышает настроение и психическую устойчивость, но вызывает привыкание и негативные эффекты при ломке.</Joycstasy.description>	
-	<Joycstasy.ingestible.ingestCommandString>Употребить Джойстази</Joycstasy.ingestible.ingestCommandString>
-	<Joycstasy.ingestible.ingestReportString>употребляет Джойстази</Joycstasy.ingestible.ingestReportString>
+	<Joycstasy.ingestible.ingestCommandString>Употребить джойстази</Joycstasy.ingestible.ingestCommandString>
+	<Joycstasy.ingestible.ingestReportString>употребляет джойстази</Joycstasy.ingestible.ingestReportString>
 
 	<MutagenicSerum.label>Мутагенная инъекция</MutagenicSerum.label>
 	<MutagenicSerum.description>Раствор из особых вирусов, слаборадиактивных жидкостей, а также сложных химических реагентов. При вкалывании в кровь, начинает заменять цепи ДНК носителя на более продвинутые, часто полученные искусственным образом. Процесс сопровождается очень сильными неприятными ощущениями, а введение большой дозы может окончиться летальным исходом.
@@ -53,13 +53,13 @@
 
 	<MaxBrain.label>Наркотик "прокачай свой мозг'</MaxBrain.label>
 	<MaxBrain.description>Самодельный препарат торговца, изготовленный из экстрактов психолистья и гриба дьявлонитника, расчитан на кратковременное улучшение работы мозга и повышения сознания. При приеме, препарат на два-три дня значительно повышает скорость умственной работы, концентрацию и психическую устойчивость. Если употребляется больше чем 1 раз в месяц, может произойти привыкание к препарату, которое опасно тяжелыми последствиями.</MaxBrain.description>	
-	<MaxBrain.ingestible.ingestCommandString>Употребить Наркотик "прокачай свой мозг'</MaxBrain.ingestible.ingestCommandString>
-	<MaxBrain.ingestible.ingestReportString>употребляет Наркотик "прокачай свой мозг'</MaxBrain.ingestible.ingestReportString>
+	<MaxBrain.ingestible.ingestCommandString>Употребить наркотик "прокачай свой мозг'</MaxBrain.ingestible.ingestCommandString>
+	<MaxBrain.ingestible.ingestReportString>употребляет наркотик "прокачай свой мозг'</MaxBrain.ingestible.ingestReportString>
 
 	<AshesWater.label>Пепел-вода</AshesWater.label>
 	<AshesWater.description>Растворенные в Go-соке особые травы и пепел из джунглей, подвергшихся ядерной бомбардировке, вызывают кратковременный  эффект сверхвысокой регенерации с мощными побочными эффектами, но если ваш колонист вот вот умрет через пару часов, то это единственный способ.</AshesWater.description>	
-	<AshesWater.ingestible.ingestCommandString>Употребить Пепел воду</AshesWater.ingestible.ingestCommandString>
-	<AshesWater.ingestible.ingestReportString>употребляет Пепел воду</AshesWater.ingestible.ingestReportString>
+	<AshesWater.ingestible.ingestCommandString>Употребить пепел воду</AshesWater.ingestible.ingestCommandString>
+	<AshesWater.ingestible.ingestReportString>употребляет пепел воду</AshesWater.ingestible.ingestReportString>
 
 	<Narkoata.label>Наркоата</Narkoata.label>
 	<Narkoata.description>Этот наркотик был создан в тропиках из чайных листьев, которые вызывают галлюцинации при поджигании. Были найдены космическими ученными на планете Zeme 1444-B, где были обнаружены племена, использующие данный наркотик. Жители рассказывали, что при поджигании норкоаты, духи леса наделяют его скоростью, ловкостью, бесстрашием и способность видеть в темноте. Во время начала производства препарата, управляющему понравился дизайн и он решил его оставить. Если наркотик принять единожды, у человека наблюдается хорошая видимость в темноте, поднятие настроения и повышенная бодрость. Единственным побочным эффектом является постоянный запах свежих растений, который приятен и расслабляет. Если злоупотреблять веществом, то появиться сильное наркотическое опьянение. Наблюдается повышение настроения, склонность общаться. Высокий шанс получить зависимость, возможность потери сознания от передозировки.</Narkoata.description>	
@@ -77,43 +77,78 @@
 
 	<Dextromitaine.label>Декстромитаин</Dextromitaine.label>
 	<Dextromitaine.description>Психостимулятор, применяемый для повышения концентрации внимания. Благодаря своему составу, способен многократно повышать скорость манипуляций. Тем не менее, имеет ряд недостатков. Так, после окончания действия препарата у испытуемых наблюдается психическая вялость и повышенная сонливость. Прекрасно подходит для молниеносных атак, но действует не долго. Быстро вызывает привыкание и болезненную ломку.</Dextromitaine.description>	
-	<Dextromitaine.ingestible.ingestCommandString>Употребить Декстромитаин</Dextromitaine.ingestible.ingestCommandString>
-	<Dextromitaine.ingestible.ingestReportString>употребляет Декстромитаин</Dextromitaine.ingestible.ingestReportString>
+	<Dextromitaine.ingestible.ingestCommandString>Употребить декстромитаин</Dextromitaine.ingestible.ingestCommandString>
+	<Dextromitaine.ingestible.ingestReportString>употребляет декстромитаин</Dextromitaine.ingestible.ingestReportString>
 
 	<Mirotofinil.label>Миротофинил</Mirotofinil.label>
 	<Mirotofinil.description>Аналептик, применяется для лечения сонливости, связанной с нарколепсией. Долгое время применяется в медицине. Существенно сокращает время сна, что однако, не обходится без последствий. Вызывает сильную зависимость.</Mirotofinil.description>	
-	<Mirotofinil.ingestible.ingestCommandString>Употребить Миротофинил</Mirotofinil.ingestible.ingestCommandString>
-	<Mirotofinil.ingestible.ingestReportString>употребляет Миротофинил</Mirotofinil.ingestible.ingestReportString>
+	<Mirotofinil.ingestible.ingestCommandString>Употребить миротофинил</Mirotofinil.ingestible.ingestCommandString>
+	<Mirotofinil.ingestible.ingestReportString>употребляет миротофинил</Mirotofinil.ingestible.ingestReportString>
 
 	<Pemotilan.label>Пемотилан</Pemotilan.label>
 	<Pemotilan.description>Эксперементальная смесь препаратов, созданная для повышения боевых параметров испытуемых. Препарат не прошел должных исследований, но была выявлена серьезная зависимость после потребления. Существенно повышает стойкость и скорость атаки на непродолжительное время, истощая организм.</Pemotilan.description>	
-	<Pemotilan.ingestible.ingestCommandString>Употребить Пемотилан</Pemotilan.ingestible.ingestCommandString>
-	<Pemotilan.ingestible.ingestReportString>употребляет Пемотилан</Pemotilan.ingestible.ingestReportString>
+	<Pemotilan.ingestible.ingestCommandString>Употребить пемотилан</Pemotilan.ingestible.ingestCommandString>
+	<Pemotilan.ingestible.ingestReportString>употребляет пемотилан</Pemotilan.ingestible.ingestReportString>
 
 	<Metocarbine.label>Метокарбинат</Metocarbine.label>
 	<Metocarbine.description>Легкий боевой стимулятор, почти не вызывающий привыкания. Незначительно увеличивает боевые показатели, но не имеет серьезных побочных эффектов. В течении нескольких часов у испытуемых наблюдается повышенная реакция и скорость принятия решений.</Metocarbine.description>	
-	<Metocarbine.ingestible.ingestCommandString>Употребить Метокарбинат</Metocarbine.ingestible.ingestCommandString>
-	<Metocarbine.ingestible.ingestReportString>употребляет Метокарбинат</Metocarbine.ingestible.ingestReportString>
+	<Metocarbine.ingestible.ingestCommandString>Употребить метокарбинат</Metocarbine.ingestible.ingestCommandString>
+	<Metocarbine.ingestible.ingestReportString>употребляет метокарбинат</Metocarbine.ingestible.ingestReportString>
 
 	<Metolidocaine.label>Метолидокаин</Metolidocaine.label>
 	<Metolidocaine.description>Относится к группе стимуляторов, хотя и вызывает успокаивающий эффект. После применения вызывает небольшой подъем настроения и легкую сонливость. 
 Незначительно затормаживает реакцию. Не вызывает зависимости, благодаря чему обрел широкую популярность в фармокологии.</Metolidocaine.description>	
-	<Metolidocaine.ingestible.ingestCommandString>Употребить Метолидокаин</Metolidocaine.ingestible.ingestCommandString>
-	<Metolidocaine.ingestible.ingestReportString>употребляет Метолидокаин</Metolidocaine.ingestible.ingestReportString>
+	<Metolidocaine.ingestible.ingestCommandString>Употребить метолидокаин</Metolidocaine.ingestible.ingestCommandString>
+	<Metolidocaine.ingestible.ingestReportString>употребляет метолидокаин</Metolidocaine.ingestible.ingestReportString>
 
 	<Likombinat.label>Ликомбинат</Likombinat.label>
 	<Likombinat.description>Эксперементальное средство, способное вызвать мощные побочные эффекты и зависимость. Тем не менее, предположительно позволяет довести реакцию до невероятного уровня. Однако эффект не может держаться продолжительное время, требуя постоянной подпитки. В случае окончания приёма препарата, возможны опасные побочные эффекты.</Likombinat.description>	
-	<Likombinat.ingestible.ingestCommandString>Употребить Ликомбинат</Likombinat.ingestible.ingestCommandString>
-	<Likombinat.ingestible.ingestReportString>употребляет Ликомбинат</Likombinat.ingestible.ingestReportString>
+	<Likombinat.ingestible.ingestCommandString>Употребить ликомбинат</Likombinat.ingestible.ingestCommandString>
+	<Likombinat.ingestible.ingestReportString>употребляет ликомбинат</Likombinat.ingestible.ingestReportString>
 	
 	<VamitexEasy.label>Вамитекс (легкий)</VamitexEasy.label>
 	<VamitexEasy.description>Таблетки были созданы для ускоренного излечения от болезней.</VamitexEasy.description>	
-	<VamitexEasy.ingestible.ingestCommandString>Употребить Вамитекс (легкий)</VamitexEasy.ingestible.ingestCommandString>
-	<VamitexEasy.ingestible.ingestReportString>употребляет Вамитекс (легкий)</VamitexEasy.ingestible.ingestReportString>
+	<VamitexEasy.ingestible.ingestCommandString>Употребить вамитекс (легкий)</VamitexEasy.ingestible.ingestCommandString>
+	<VamitexEasy.ingestible.ingestReportString>употребляет вамитекс (легкий)</VamitexEasy.ingestible.ingestReportString>
 	
 	<VamitexHeavy.label>Вамитекс (тяжелый)</VamitexHeavy.label>
 	<VamitexHeavy.description>Таблетки были созданы для ускоренного излечения от болезней (тяжелая версия).</VamitexHeavy.description>	
-	<VamitexHeavy.ingestible.ingestCommandString>Употребить Вамитекс (тяжелый)</VamitexHeavy.ingestible.ingestCommandString>
-	<VamitexHeavy.ingestible.ingestReportString>употребляет Вамитекс (тяжелый)</VamitexHeavy.ingestible.ingestReportString>
+	<VamitexHeavy.ingestible.ingestCommandString>Употребить вамитекс (тяжелый)</VamitexHeavy.ingestible.ingestCommandString>
+	<VamitexHeavy.ingestible.ingestReportString>употребляет вамитекс (тяжелый)</VamitexHeavy.ingestible.ingestReportString>
+	
+	<LastDyingBreath.label>Last dying breath</LastDyingBreath.label>
+	<LastDyingBreath.description>Сильнодействующие механиты, помещенные в компактную упаковку, которые блокируют боль и не дают человеку получить ранения после  применения, покрывая собой все тело и образуя подвижный экзоскелет. Тем не менее, как только действие механитов прекратится, человек  погибнет, не сумев восстановиться после скоротечных перестроек организма.</LastDyingBreath.description>	
+	<LastDyingBreath.ingestible.ingestCommandString>Употребить last dying breath</LastDyingBreath.ingestible.ingestCommandString>
+	<LastDyingBreath.ingestible.ingestReportString>употребляет last dying breath</LastDyingBreath.ingestible.ingestReportString>
+	
+	<Andomorphine.label>Андоморфин</Andomorphine.label>
+	<Andomorphine.description>Сильнодействующий препарат из опиумной группы,  получаемый синтетическим путем, вызывая маштабные изменения мозговых функций у потребителя. При использовании, блокирует болевые рецепторы и покрывает тело ели заметным слоем механитов, которые служат для защиты  от ранений и быстрой регенерации. Препарат невозможно вывести из организма и он должен быть использован на протяжении дальнейшей жизни, чтобы препятствовать необратимым изменениям в организме.</Andomorphine.description>	
+	<Andomorphine.ingestible.ingestCommandString>Употребить андоморфин</Andomorphine.ingestible.ingestCommandString>
+	<Andomorphine.ingestible.ingestReportString>употребляет андоморфин</Andomorphine.ingestible.ingestReportString>
+	
+	<Tetrodicline.label>Тетродиклин</Tetrodicline.label>
+	<Tetrodicline.description>Препарат, влияющий на мозговую активность нейронов, позволяя двукратно увеличить скорость обучения и запоминания новых знаний. Стоит помнить, что потребление ресурсов организма сопоставимо с его работой, что также отражено в действии препарата. Вызывает сильную зависимость.</Tetrodicline.description>	
+	<Tetrodicline.ingestible.ingestCommandString>Употребить тетродиклин</Tetrodicline.ingestible.ingestCommandString>
+	<Tetrodicline.ingestible.ingestReportString>употребляет тетродиклин</Tetrodicline.ingestible.ingestReportString>
+	
+	<Entotizin.label>Энтотизин</Entotizin.label>
+	<Entotizin.description>Вязкое вещество, напоминающее смолу, применяемое в основном снайперами. Препарат значительно повышает потенциал стрелка, увеличивая остроту зрения и бодрость. Существует шанс привыкания, что компенсируется  его полезными свойствами.</Entotizin.description>	
+	<Entotizin.ingestible.ingestCommandString>Употребить энтотизин</Entotizin.ingestible.ingestCommandString>
+	<Entotizin.ingestible.ingestReportString>употребляет энтотизин</Entotizin.ingestible.ingestReportString>
+	
+	<Extratisinum.label>Экстратизин</Extratisinum.label>
+	<Extratisinum.description>Вязкое вещество, напоминающее смолу. После применения многократно увеличивает остроту зрения и слуха, придавая бодрость. Вызывает сильную зависимость, требуя постоянного потребления для поддержания эффекта.</Extratisinum.description>	
+	<Extratisinum.ingestible.ingestCommandString>Употребить экстратизин</Extratisinum.ingestible.ingestCommandString>
+	<Extratisinum.ingestible.ingestReportString>употребляет экстратизин</Extratisinum.ingestible.ingestReportString>
+	
+	<Cordianian.label>Кордианин</Cordianian.label>
+	<Cordianian.description>Многоцелевой препарат, применяемый для поддержания дыхания при потери легкого. При применении нескольких доз, препарат способен запустить процесс регенерации и восстановить утерянное легкое. Лекарственное средство не вызывает зависимости и активно применяется в специализированных операциях.</Cordianian.description>	
+	<Cordianian.ingestible.ingestCommandString>Употребить кордианин</Cordianian.ingestible.ingestCommandString>
+	<Cordianian.ingestible.ingestReportString>употребляет кордианин</Cordianian.ingestible.ingestReportString>
+	
+	<Piroten.label>Пиротен</Piroten.label>
+	<Piroten.description>Многоцелевой препарат, применяемый для поддержания  фильтрации крови. При прохождении курса приема, способен восстановить утерянную почку. Лекарственное средство не вызывает зависимости и  активно используется при продвинутых операциях на органах фильтрации.</Piroten.description>	
+	<Piroten.ingestible.ingestCommandString>Употребить пиротен</Piroten.ingestible.ingestCommandString>
+	<Piroten.ingestible.ingestReportString>употребляет пиротен</Piroten.ingestible.ingestReportString>
 	
 </LanguageData>

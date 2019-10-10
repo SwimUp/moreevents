@@ -1,4 +1,5 @@
-﻿using DarkNET.TraderComp;
+﻿using DarkNET.Sly;
+using DarkNET.TraderComp;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,9 @@ namespace DarkNET.Traders
 
         private List<SellableItemWithModif> stock;
 
-        public override int ArriveTime => 5;
+        public override int ArriveTime => 7;
 
-        public override int OnlineTime => 5;
+        public override int OnlineTime => 2;
 
         public DarkNetComp_Sly Comp
         {
@@ -48,6 +49,28 @@ namespace DarkNET.Traders
 
         private DarkNetComp_Sly сomp;
 
+        public List<SlyService> Services
+        {
+            get
+            {
+                if (services == null)
+                {
+                    InitServices();
+                }
+
+                return services;
+            }
+        }
+
+        private List<SlyService> services;
+
+        private Type[] slyServices = new Type[]
+        {
+            typeof(SlyService_RaidHelp),
+            typeof(SlyService_HumanitarianHelp),
+            typeof(SlyService_ResoucesHelp)
+        };
+
         public override void FirstInit()
         {
             base.FirstInit();
@@ -55,9 +78,49 @@ namespace DarkNET.Traders
             Inititialize();
         }
 
+        public override void OnDayPassed()
+        {
+            base.OnDayPassed();
+
+            if (Services != null)
+            {
+                foreach (var service in Services)
+                {
+                    service.SlyDayPassed(this);
+                }
+            }
+        }
+
+        public override void TraderGone()
+        {
+            base.TraderGone();
+
+            if (Services != null)
+            {
+                foreach (var service in Services)
+                {
+                    service.SlyGone(this);
+                }
+            }
+        }
+
+        private void InitServices()
+        {
+            services = new List<SlyService>();
+
+            foreach(var service in slyServices)
+            {
+                SlyService slyService = (SlyService)Activator.CreateInstance(service);
+
+                services.Add(slyService);
+            }
+        }
+
         private void Inititialize()
         {
             stock = new List<SellableItemWithModif>();
+
+            InitServices();
         }
 
         public override void Arrive()
@@ -65,6 +128,14 @@ namespace DarkNET.Traders
             base.Arrive();
 
             RegenerateStock();
+
+            if(Services != null)
+            {
+                foreach(var service in Services)
+                {
+                    service.SlyArrival(this);
+                }
+            }
         }
 
 
@@ -129,9 +200,10 @@ namespace DarkNET.Traders
             base.ExposeData();
 
             Scribe_Collections.Look(ref stock, "stock", LookMode.Deep);
+            Scribe_Collections.Look(ref services, "services", LookMode.Deep);
         }
 
-        public override void DrawTraderShop(Rect rect)
+        public override void DrawTraderShop(Rect rect, Pawn speaker)
         {
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
@@ -145,21 +217,22 @@ namespace DarkNET.Traders
             {
                 tab = Tab.Items;
             }, tab == Tab.Items));
-            tabsList.Add(new TabRecord("TraderWorker_Sly_Tab_Weapons".Translate(), delegate
+            tabsList.Add(new TabRecord("TraderWorker_Sly_Tab_Service".Translate(), delegate
             {
                 tab = Tab.Service;
             }, tab == Tab.Service));
-            TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 450);
+            TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 490);
 
             switch (tab)
             {
                 case Tab.Items:
                     {
-                        DrawItems(tab, rect2);
+                        DrawItems(rect2, speaker);
                         break;
                     }
                 case Tab.Service:
                     {
+                        DrawServices(rect2, speaker.Map);
                         break;
                     }
             }
@@ -167,7 +240,64 @@ namespace DarkNET.Traders
             Text.Font = GameFont.Small;
         }
 
-        private void DrawItems(Tab tab, Rect rect)
+        private void DrawServices(Rect rect, Map map)
+        {
+            List<SellableItemWithModif> items = stock;
+
+            Rect goodsRect = new Rect(rect.x + 10, rect.y + 5, rect.width - 15, rect.height - 25);
+            Rect goodRect = new Rect(0, 0, goodsRect.width - 25, 200);
+            Rect scrollVertRectFact = new Rect(0, 0, rect.x, Services.Count * 225);
+            Widgets.BeginScrollView(goodsRect, ref slider, scrollVertRectFact, true);
+            for (int i = 0; i < Services.Count; i++)
+            {
+                SlyService item = Services[i];
+
+                DrawService(item, goodRect, map);
+                goodRect.y += 205;
+            }
+            Widgets.EndScrollView();
+        }
+
+        private void DrawService(SlyService service, Rect rect, Map map)
+        {
+            bgCardColor.a = 150;
+            Widgets.DrawBoxSolid(rect, bgCardColor);
+
+            GUI.color = GUIUtils.CommBorderColor;
+            Widgets.DrawBox(rect);
+            GUI.color = Color.white;
+
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(new Rect(rect.x + 130, rect.y + 8, rect.width - 88, 25), service.Label);
+
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            GUIUtils.DrawLineHorizontal(rect.x + 205, rect.y + 34, rect.width - 213, Color.gray);
+            float y = rect.y + 36;
+            Widgets.Label(new Rect(rect.x + 205, y, rect.width - 213, 140), service.Description);
+
+            Text.Anchor = TextAnchor.MiddleCenter;
+
+            bool serviceStatus = service.AvaliableRightNow(out string reason);
+            Rect bRect = new Rect(rect.x + 8, rect.y + 36, 190, 25);
+            foreach (var option in service.Options(map))
+            {
+                if (GUIUtils.DrawCustomButton(bRect, option.Label, serviceStatus ? Color.white : Color.gray))
+                {
+                    if(serviceStatus)
+                        option.action.Invoke();
+                }
+
+                bRect.y += 32;
+            }
+
+            if(!serviceStatus)
+                Widgets.Label(new Rect(rect.x + 8, rect.y + 175, rect.width - 8, 25), "DarkNetLabels_ServiceUnavaliable".Translate(reason));
+
+            Text.Anchor = TextAnchor.UpperLeft;
+        }
+
+        private void DrawItems(Rect rect, Pawn speaker)
         {
             List<SellableItemWithModif> items = stock;
 
@@ -179,7 +309,7 @@ namespace DarkNET.Traders
             {
                 SellableItemWithModif item = items[i];
 
-                GUIUtils.DrawItemCard(item, items, goodRect);
+                GUIUtils.DrawItemCard(item, items, goodRect, speaker);
                 goodRect.y += 205;
             }
             Widgets.EndScrollView();

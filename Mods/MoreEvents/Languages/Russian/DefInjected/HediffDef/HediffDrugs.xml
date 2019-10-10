@@ -167,4 +167,48 @@ Too fast to live, too fast to die</NarkoataHediff.labelNoun>
 	<VamitexHeavyHediff.label>Вамитекс (тяжелый)</VamitexHeavyHediff.label>
 	<VamitexHeavyHediff.labelNoun>Вамитекс (тяжелый)</VamitexHeavyHediff.labelNoun>
 	
+	<AndomorphineHigh.label>Андоморфин</AndomorphineHigh.label>
+	<AndomorphineHigh.labelNoun>Андоморфин</AndomorphineHigh.labelNoun>
+	<AndomorphineAddiction.label>зависимость от андоморфина</AndomorphineAddiction.label>
+	<AndomorphineAddiction.stages.withdrawal.label>ломка</AndomorphineAddiction.stages.withdrawal.label>
+	
+	<TetrodiclineHediff.label>Тетродиклин</TetrodiclineHediff.label>
+	<TetrodiclineHediff.labelNoun>Тетродиклин</TetrodiclineHediff.labelNoun>
+	<TetrodiclineHediff.stages.Easy.label>слабое воздействие</TetrodiclineHediff.stages.Easy.label>
+	<TetrodiclineHediff.stages.Hard.label>сильное воздействие</TetrodiclineHediff.stages.Hard.label>
+	<TetrodiclineHediff.stages.Extreme.label>очень сильное воздействие</TetrodiclineHediff.stages.Extreme.label>
+	<TetrodiclineAddiction.label>зависимость от тетродиклина</TetrodiclineAddiction.label>
+	<TetrodiclineAddiction.stages.withdrawal.label>ломка</TetrodiclineAddiction.stages.withdrawal.label>
+	<TetrodiclineTolerance.label>толерантность к тетродиклину</TetrodiclineTolerance.label>
+	<TetrodiclineTolerance.stages.small-0.label>небольшая</TetrodiclineTolerance.stages.small-0.label>
+	<TetrodiclineTolerance.stages.small-1.label>небольшая</TetrodiclineTolerance.stages.small-1.label>
+	<TetrodiclineTolerance.stages.large.label>средняя</TetrodiclineTolerance.stages.large.label>
+	<TetrodiclineTolerance.stages.massive.label>сильная</TetrodiclineTolerance.stages.massive.label>	
+	
+	<EntotizinHediff.label>Энтотизин</EntotizinHediff.label>
+	<EntotizinHediff.labelNoun>Энтотизин</EntotizinHediff.labelNoun>
+	<EntotizinAddiction.label>зависимость от энтотизина</EntotizinAddiction.label>
+	<EntotizinAddiction.stages.withdrawal.label>ломка</EntotizinAddiction.stages.withdrawal.label>
+	<EntotizinTolerance.label>толерантность к энтотизину</EntotizinTolerance.label>
+	<EntotizinTolerance.stages.small-0.label>небольшая</EntotizinTolerance.stages.small-0.label>
+	<EntotizinTolerance.stages.small-1.label>небольшая</EntotizinTolerance.stages.small-1.label>
+	<EntotizinTolerance.stages.large.label>средняя</EntotizinTolerance.stages.large.label>
+	<EntotizinTolerance.stages.massive.label>сильная</EntotizinTolerance.stages.massive.label>	
+	
+	<ExtratisinumHediff.label>Экстратизин</ExtratisinumHediff.label>
+	<ExtratisinumHediff.labelNoun>Экстратизин</ExtratisinumHediff.labelNoun>
+	<ExtratisinumAddiction.label>зависимость от экстратизина</ExtratisinumAddiction.label>
+	<ExtratisinumAddiction.stages.withdrawal.label>ломка</ExtratisinumAddiction.stages.withdrawal.label>
+	<ExtratisinumTolerance.label>толерантность к экстратизину</ExtratisinumTolerance.label>
+	<ExtratisinumTolerance.stages.small-0.label>небольшая</ExtratisinumTolerance.stages.small-0.label>
+	<ExtratisinumTolerance.stages.small-1.label>небольшая</ExtratisinumTolerance.stages.small-1.label>
+	<ExtratisinumTolerance.stages.large.label>средняя</ExtratisinumTolerance.stages.large.label>
+	<ExtratisinumTolerance.stages.massive.label>сильная</ExtratisinumTolerance.stages.massive.label>	
+	
+	<CordianianHediff.label>Кордианин</CordianianHediff.label>
+	<CordianianHediff.labelNoun>Кордианин</CordianianHediff.labelNoun>
+	
+	<PirotenHediff.label>Пиротен</PirotenHediff.label>
+	<PirotenHediff.labelNoun>Пиротен</PirotenHediff.labelNoun>
+	
 </LanguageData>
