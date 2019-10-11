@@ -82,7 +82,7 @@ namespace DarkNET.CommunicationComps
             {
                 target = map,
                 spawnCenter = CellFinderLoose.RandomCellWith((IntVec3 c) => c.Walkable(map), map)
-        };
+            };
 
             PawnsArrivalModeDefOf.CenterDrop.Worker.Arrive(pawns, parms);
         }

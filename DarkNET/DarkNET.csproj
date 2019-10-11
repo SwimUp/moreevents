@@ -74,6 +74,9 @@
     <Compile Include="Dialogs\EmailMessageOption_TakeQuest_Laboratory.cs" />
     <Compile Include="Dialogs\EmailMessageTimeComp_QuestLaboratory.cs" />
     <Compile Include="Dialog_DarkNetTraderCard.cs" />
+    <Compile Include="Events\DarkNetSupplyAttack\CaravanArrivalAction_EnterToRaidMap.cs" />
+    <Compile Include="Events\DarkNetSupplyAttack\IncidentWorker_DarkNetSupplyAttack.cs" />
+    <Compile Include="Events\DarkNetSupplyAttack\Quest_DarkNetSupplyAttack.cs" />
     <Compile Include="FactionDefOfLocal.cs" />
     <Compile Include="GUIUtils.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />

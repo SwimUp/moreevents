@@ -111,6 +111,11 @@ namespace DarkNET
 
         }
 
+        public virtual bool TryGetGoods(List<Thing> goods)
+        {
+            return false;
+        }
+
         public abstract void DrawTraderShop(Rect rect, Pawn speaker);
 
         public virtual void ExposeData()

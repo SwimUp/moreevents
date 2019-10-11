@@ -229,4 +229,9 @@
 	<SlyService_ResoucesHelp_Advanced>Сырьё</SlyService_ResoucesHelp_Advanced>
 	<SlyService_ResoucesHelp_Ultra>Редкие материалы</SlyService_ResoucesHelp_Ultra>
 	
+	<Quest_DarkNetSupplyAttack_CardLabel>Нападение на товары {0}</Quest_DarkNetSupplyAttack_CardLabel>
+	<Quest_DarkNetSupplyAttack_Description>На товары торговца {0} было совершенно нападение. Вы можете защитить его и получить часть товара себе, но при этом неизвестно, что там есть.
+
+Бездействие не вызовет никакой реакции со стороны владельца товара.</Quest_DarkNetSupplyAttack_Description>
+	
 </LanguageData>

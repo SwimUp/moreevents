@@ -98,6 +98,28 @@ namespace DarkNET.Traders
             }
         }
 
+        public override bool TryGetGoods(List<Thing> goods)
+        {
+            if (drugs == null || !drugs.Any(x => x.Items.Any()))
+                return false;
+
+            foreach (var cat in drugs)
+            {
+                if (cat.Items != null)
+                {
+                    foreach (var item in cat.Items)
+                    {
+                        if (item != null && item.Item != null)
+                        {
+                            goods.Add(item.Item);
+                        }
+                    }
+                }
+            }
+
+            return true;
+        }
+
         public void DeclineOrder()
         {
             if (Order.OrderedItem != null)

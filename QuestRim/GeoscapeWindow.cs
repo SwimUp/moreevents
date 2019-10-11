@@ -311,12 +311,13 @@ namespace QuestRim
         {
             Rect r = new Rect(10, y, rect.width - 20, 60);
             Rect titleRect = new Rect(15, y, rect.width - 20, 60);
-            Widgets.Label(titleRect, dialog.CardLabel);
+            string title = dialog.CardLabel.Length > 36 ? dialog.CardLabel.Substring(0, 36) : dialog.CardLabel;
+            Widgets.Label(titleRect, title);
             Text.Font = GameFont.Tiny;
             Rect rect2 = new Rect(15, y + 22, rect.width - 20, 20);
             Widgets.Label(rect2, dialog.RelatedIncident != null ? "RelatedEventCom".Translate(dialog.RelatedIncident.LabelCap) : "NoEventComm".Translate());
             rect2.y += 20;
-            Widgets.Label(rect2, dialog.Faction != null ? "FactionComm".Translate(dialog.Faction.Name) : "NoFactionComm".Translate());
+            Widgets.Label(rect2, dialog.Faction != null ? "FactionComm".Translate(dialog.Faction.Name) : dialog.KnownFaction ? "NoFactionComm".Translate() : "NoFactionComm_D".Translate());
             Text.Font = GameFont.Small;
             Widgets.DrawHighlightIfMouseover(r);
 
@@ -364,7 +365,8 @@ namespace QuestRim
         {
             Rect r = new Rect(10, y, rect.width - 20, 90);
             Rect titleRect = new Rect(15, y, rect.width - 20, 90);
-            Widgets.Label(titleRect, quest.CardLabel);
+            string questLabel = quest.CardLabel.Length > 36 ? quest.CardLabel.Substring(0, 36) : quest.CardLabel;
+            Widgets.Label(titleRect, questLabel);
             Text.Font = GameFont.Tiny;
             Rect rect2 = new Rect(15, y + 22, rect.width - 20, 20);
             Widgets.Label(rect2, quest.Faction != null ? "FactionComm".Translate(quest.Faction.Name) : "NoFactionComm".Translate());

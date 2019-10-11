@@ -83,6 +83,26 @@ namespace DarkNET.Traders
             }
         }
 
+        public override bool TryGetGoods(List<Thing> goods)
+        {
+            if (stock == null || !stock.Any(x => x.Items.Any()))
+                return false;
+
+            foreach(var cat in stock)
+            {
+                if (cat.Items != null)
+                {
+                    foreach (var item in cat.Items)
+                    {
+                        if(item != null && item.Item != null)
+                            goods.Add(item.Item);
+                    }
+                }
+            }
+
+            return true;
+        }
+
         public override void Arrive()
         {
             base.Arrive();

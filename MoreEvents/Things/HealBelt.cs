@@ -26,7 +26,7 @@ namespace RimOverhaul.Things
             if (Wearer == null)
                 return;
 
-            if (!Wearer.RaceProps.Humanlike)
+            if (!Wearer.RaceProps.Humanlike || Wearer.Dead)
                 return;
 
             IEnumerable<Hediff_Injury> injuries = Wearer.health.hediffSet.GetInjuriesTendable();

@@ -78,6 +78,22 @@ namespace DarkNET.Traders
             Inititialize();
         }
 
+        public override bool TryGetGoods(List<Thing> goods)
+        {
+            if (stock == null)
+                return false;
+
+            foreach(var item in stock)
+            {
+                if(item.Item != null)
+                {
+                    goods.Add(item.Item);
+                }
+            }
+
+            return true;
+        }
+
         public override void OnDayPassed()
         {
             base.OnDayPassed();

@@ -129,4 +129,6 @@
 
 	<CommunicationComponent_CommunicationDialogTimer>Уведомление</CommunicationComponent_CommunicationDialogTimer>
 
+	<NoFactionComm_D>Фракция: неизвестно</NoFactionComm_D>
+
 </LanguageData>

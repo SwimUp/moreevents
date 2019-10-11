@@ -20,6 +20,7 @@ namespace QuestRim
         public IncidentDef RelatedIncident;
         public Faction Faction;
         public List<CommOption> Options;
+        public bool KnownFaction = true;
 
         public CommunicationDialog()
         {
@@ -48,6 +49,8 @@ namespace QuestRim
             Scribe_Collections.Look(ref Options, "Options", LookMode.Deep);
 
             Scribe_Values.Look(ref ShowInConsole, "ShowInConsole");
+
+            Scribe_Values.Look(ref KnownFaction, "KnownFaction");
         }
 
         public virtual void Destroy()

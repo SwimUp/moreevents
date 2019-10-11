@@ -1,5 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
+	<!-- Событие: Нападение на товар торговца -->
+	<IncidentDef>
+		<defName>DarkNetSupplyAttack</defName>
+		<label>Assault on good</label>
+		<letterLabel>Assault on good {0}</letterLabel>
+		<letterText>Merchant's goods {0} were completely attacked. You can protect it and get some of the goods for yourself, but it is not known what is there.</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>DarkNET.Events.DarkNetSupplyAttack.IncidentWorker_DarkNetSupplyAttack</workerClass>
+		<category>Misc</category>
+		<minRefireDays>50</minRefireDays>
+		<baseChance>1.5</baseChance>
+		<earliestDay>45</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
 
 </Defs>

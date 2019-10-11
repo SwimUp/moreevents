@@ -152,6 +152,22 @@ namespace DarkNET.Traders
             }
         }
 
+        public override bool TryGetGoods(List<Thing> goods)
+        {
+            if (stock == null)
+                return false;
+
+            foreach(var item in stock)
+            {
+                if(item.Item != null)
+                {
+                    goods.Add(item.Item);
+                }
+            }
+
+            return true;
+        }
+
         public override void DrawTraderShop(Rect rect, Pawn speaker)
         {
             Rect imageRect = new Rect(700, rect.y, 400, rect.height);

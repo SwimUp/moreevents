@@ -521,6 +521,7 @@ Always available, has almost the entire range of assortment
 drugs and drugs, buys neutroamine and other ingredients for drugs, as well as luxury goods and everything necessary for a comfortable life.</description>
 		<IconTextureInt>Traders/Eisenberg/face</IconTextureInt>
 		<FullTextureInt>Traders/Eisenberg/main</FullTextureInt>
+		<OverridePortraitWidth>450</OverridePortraitWidth>
 		<Character>
 			<Cruelty>1.05</Cruelty>
 			<Greed>1.1</Greed>
