@@ -11,6 +11,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>GSS_Melee_One</li>
+		</weaponTags>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<statBases>
 			<Mass>1</Mass>
@@ -54,6 +57,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>GSS_Melee_One</li>
+		</weaponTags>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<statBases>
 			<Mass>8</Mass>
@@ -98,6 +104,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>GSS_Melee_One</li>
+		</weaponTags>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<statBases>
 			<Mass>2</Mass>
@@ -141,6 +150,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Ultra</techLevel>
+		<weaponTags>
+			<li>GSS_Melee_Elite</li>
+		</weaponTags>
 		<equippedAngleOffset>-65</equippedAngleOffset>
 		<tickerType>Normal</tickerType>
 		<statBases>

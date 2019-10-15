@@ -11,7 +11,7 @@
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>550</MarketValue>
+			<MarketValue>450</MarketValue>
 			<Mass>0.01</Mass>
 		</statBases>
 		<techLevel>Ultra</techLevel>

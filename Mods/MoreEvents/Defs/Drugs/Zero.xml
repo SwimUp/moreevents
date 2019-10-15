@@ -4,11 +4,7 @@
 	<ThingDef ParentName="DarkNetDrugPillBase">
 		<defName>Zero</defName>
 		<label>Zero</label>
-		<description>It is one of the most expensive drugs on the black market, due to the sharp
-increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits
- and shots. It causes severe forms of addiction. During withdrawal, a person has a strong
- the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who
-survived after that, and if they survived, then did not represent further benefit.</description>
+		<description>It is one of the most expensive drugs on the black market, due to the sharp increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits and shots. It causes severe forms of addiction. During withdrawal, a person has a strong the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who survived after that, and if they survived, then did not represent further benefit.</description>
 		<graphicData>
 			<texPath>Things/Medical/Zero</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -16,7 +12,7 @@ survived after that, and if they survived, then did not represent further benefi
 		<rotatable>false</rotatable>
 		<statBases>
 			<DeteriorationRate>6</DeteriorationRate>
-			<MarketValue>600</MarketValue>
+			<MarketValue>700</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Ultra</techLevel>

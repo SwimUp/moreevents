@@ -85,6 +85,7 @@
     <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
+    <Compile Include="Communications\CommunicationComponent_GssRaidTimer.cs" />
     <Compile Include="Communications\CommunicationDialog_Pocahontas.cs" />
     <Compile Include="Communications\EmailOption_ChangeGoodWill.cs" />
     <Compile Include="Communications\CommOption_ChangeGoodWill.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Gas\SectionLayer_LiquidGasPipeOverlay.cs" />
     <Compile Include="Gas\SectionLayer_NaturalGasPipeOverlay.cs" />
     <Compile Include="Gas\WorkGiver_DoBillGas.cs" />
+    <Compile Include="Gss\GssRaids.cs" />
     <Compile Include="Hediffs\CompOverdose.cs" />
     <Compile Include="Hediffs\CompProperties_Overdose.cs" />
     <Compile Include="Hediffs\HediffCompProperties_ApplyHediffAfter.cs" />
@@ -283,6 +285,7 @@
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillOrderMap.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapWithGenerator.cs" />
     <Compile Include="Quests\Quest_KillOrder.cs" />
+    <Compile Include="RaidUtils.cs" />
     <Compile Include="RimOverhaulModule.cs" />
     <Compile Include="ModulesHandler.cs" />
     <Compile Include="MoreEventsMod.cs" />

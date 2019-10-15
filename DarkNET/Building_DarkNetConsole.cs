@@ -16,6 +16,21 @@ namespace DarkNET
 
         public static bool PlayerHasGeoscape = false;
 
+        public DarkNet DarkNet
+        {
+            get
+            {
+                if(darkNet == null)
+                {
+                    darkNet = Current.Game.GetComponent<DarkNet>();
+                }
+
+                return darkNet;
+            }
+        }
+
+        private DarkNet darkNet;
+
         public bool HasPower
         {
             get
@@ -33,6 +48,8 @@ namespace DarkNET
             base.SpawnSetup(map, respawningAfterLoad);
 
             power = GetComp<CompPowerTrader>();
+
+            PlayerHasGeoscape = true;
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -53,9 +70,25 @@ namespace DarkNET
                 yield return new FloatMenuOption("OpenCommsDarkNoPower".Translate(), null );
             }
         }
-        
+
+        public override string GetInspectString()
+        {
+            return $"Building_DarkNetConsole_GetInspectString".Translate(DarkNet == null ? DarkNet.BaseDangerous : DarkNet.Dangerous);
+        }
+
         public void OpenConsole(Pawn pawn)
         {
+            float chance = (DarkNet == null ? DarkNet.BaseDangerous : DarkNet.Dangerous) / 100;
+            if (Rand.Chance(chance))
+            {
+                if(DarkNet.GssFaction.RelationKindWith(Faction.OfPlayer) != FactionRelationKind.Hostile)
+                {
+                    DarkNet.GssFaction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile, true, "DarKNet_WhyAffect".Translate());
+                }
+
+                DarkNet.SendGssRaid(pawn.Map);
+            }
+
             Find.WindowStack.Add(new DarkNETWindow(pawn));
         }
     }

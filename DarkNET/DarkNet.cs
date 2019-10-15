@@ -1,9 +1,12 @@
 ﻿using QuestRim;
+using RimOverhaul;
+using RimOverhaul.Gss;
 using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace DarkNET
@@ -13,6 +16,18 @@ namespace DarkNET
         public List<DarkNetTrader> Traders;
 
         public static bool PlayerHasDarkNetConsole;
+
+        private int nextChangeDangerousTicks;
+
+        public static float BaseDangerous => 2;
+
+        public float Dangerous => dangerous;
+
+        private float dangerous;
+
+        public static Faction GssFaction => Find.FactionManager.FirstFactionOfDef(MoreEvents.FactionDefOfLocal.GalacticSecurityService);
+
+        private int lastRaidTicks = 0;
 
         public DarkNet()
         {
@@ -62,9 +77,39 @@ namespace DarkNET
             {
                 foreach(var trader in Traders)
                 {
+                    OnDayPassed();
+
                     trader.OnDayPassed();
                 }
             }
+        }
+
+        public void OnDayPassed()
+        {
+            int passedDays = Find.TickManager.TicksGame - nextChangeDangerousTicks;
+            if(passedDays >= 0)
+            {
+                ChangeDangerous();
+
+                nextChangeDangerousTicks = (int)(Find.TickManager.TicksGame + (Rand.Range(0.4f, 4f) * Rand.Range(35000, 60000)));
+            }
+        }
+
+        public void ChangeDangerous()
+        {
+            int onlineTraders = 0;
+            if(Traders != null)
+            {
+                Traders.ForEach(x =>
+                {
+                    if (x.Online)
+                    {
+                        onlineTraders++;
+                    }
+                });
+            }
+
+            dangerous = Mathf.Round(BaseDangerous + (onlineTraders * 1.2f) + Rand.Range(1, 10));
         }
 
         public override void LoadedGame()
@@ -74,6 +119,18 @@ namespace DarkNET
             if (Traders == null)
             {
                 InitDarkNet();
+            }
+        }
+
+        public void SendGssRaid(Map map)
+        {
+            float passedDays = (lastRaidTicks - Find.TickManager.TicksGame) / 60000f;
+
+            if (passedDays <= 0)
+            {
+                lastRaidTicks = Find.TickManager.TicksGame + 60000;
+
+                GssRaids.SendRaid(map, Mathf.Max(300, StorytellerUtility.DefaultThreatPointsNow(map)));
             }
         }
 
@@ -94,6 +151,10 @@ namespace DarkNET
             base.ExposeData();
 
             Scribe_Collections.Look(ref Traders, "Traders", LookMode.Deep);
+
+            Scribe_Values.Look(ref nextChangeDangerousTicks, "nextChangeDangerousTicks");
+            Scribe_Values.Look(ref dangerous, "dangerous");
+            Scribe_Values.Look(ref lastRaidTicks, "lastRaidTicks");
         }
 
         private DarkNetTrader InitTrader(DarkNetTraderDef def)

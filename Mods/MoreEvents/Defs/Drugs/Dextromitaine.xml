@@ -4,8 +4,7 @@
 	<ThingDef ParentName="DarkNetDrugPillBase">
 		<defName>Dextromitaine</defName>
 		<label>Dextromitaine</label>
-		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug
-Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
+		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug, Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
 		<graphicData>
 			<texPath>Things/Medical/Dextromitaine</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

@@ -233,5 +233,11 @@
 	<Quest_DarkNetSupplyAttack_Description>На товары торговца {0} было совершенно нападение. Вы можете защитить его и получить часть товара себе, но при этом неизвестно, что там есть.
 
 Бездействие не вызовет никакой реакции со стороны владельца товара.</Quest_DarkNetSupplyAttack_Description>
+	<Building_DarkNetConsole_GetInspectString>Шанс быть раскрытым: {0}%</Building_DarkNetConsole_GetInspectString>
+	<DarkNet_RaidSendedTitle>Вас обнаружили</DarkNet_RaidSendedTitle>
+	<DarkNet_RaidSendedDesc>{0} обнаружила ваше местоположение и направила к вам отряд. Они будут в течении нескольких часов или дней.</DarkNet_RaidSendedDesc>
+	<DarKNet_WhyAffect>использование DarkNet</DarKNet_WhyAffect>
+	<DarkNet_RaidArriveTitle>Отряд прибыл</DarkNet_RaidArriveTitle>
+	<DarkNet_RaidArriveDesc>Отряд {0} прибыл, они нападают немедленно!</DarkNet_RaidArriveDesc>
 	
 </LanguageData>

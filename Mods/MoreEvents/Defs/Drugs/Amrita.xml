@@ -4,8 +4,7 @@
 	<ThingDef ParentName="DarkNetDrugPillBase">
 		<defName>Amita</defName>
 		<label>amita</label>
-		<description>The drink combines the famous berries stimulants, as well as some brought from their distant worlds.
-It invigorates well, but causes instant dependence.</description>
+		<description>The drink combines the famous berries stimulants, as well as some brought from their distant worlds. It invigorates well, but causes instant dependence.</description>
 		<graphicData>
 			<texPath>Things/Medical/Amita</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

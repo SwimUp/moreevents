@@ -4,17 +4,14 @@
 	<ThingDef ParentName="DarkNetDrugPillBase">
 		<defName>Spasmonitis</defName>
 		<label>Spasmonitis</label>
-		<description>This drug belongs to the group of spasmolytics used to treat muscle pain.
-The main active ingredient is drotaverine hydrochloride. It has a strong effect as an antispasmodic. It affects the contractility of smooth muscles, causing them to relax. It causes an average dependence, when applied, the owner does not feel pain during the duration of the drug.
-However, blood filtration is reduced. Several doses of the drug can stop the effects of intestinal diseases, such as mechanical worms.
-To do this, take 5 tablets of the drug, which can cause overdose and death.</description>
+		<description>This drug belongs to the group of spasmolytics used to treat muscle pain. The main active ingredient is drotaverine hydrochloride. It has a strong effect as an antispasmodic. It affects the contractility of smooth muscles, causing them to relax. It causes an average dependence, when applied, the owner does not feel pain during the duration of the drug. However, blood filtration is reduced. Several doses of the drug can stop the effects of intestinal diseases, such as mechanical worms. To do this, take 5 tablets of the drug, which can cause overdose and death.</description>
 		<graphicData>
 			<texPath>Things/Medical/Spasmonitis</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>150</MarketValue>
+			<MarketValue>160</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Spacer</techLevel>

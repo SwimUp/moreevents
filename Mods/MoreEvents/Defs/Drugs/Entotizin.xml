@@ -11,7 +11,7 @@
 		</graphicData>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>120</MarketValue>
+			<MarketValue>90</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>

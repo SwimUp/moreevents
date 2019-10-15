@@ -4,8 +4,7 @@
 	<ThingDef ParentName="DarkNetDrugPillBase">
 		<defName>Metolidocaine</defName>
 		<label>Metolidocaine</label>
-		<description>It belongs to the group of stimulants, although it causes a calming effect. After use, it causes a slight mood lift and slight drowsiness.
-Slightly inhibits the reaction. It does not cause addiction, due to which it gained wide popularity in pharmacology.</description>
+		<description>It belongs to the group of stimulants, although it causes a calming effect. After use, it causes a slight mood lift and slight drowsiness. Slightly inhibits the reaction. It does not cause addiction, due to which it gained wide popularity in pharmacology.</description>
 		<graphicData>
 			<texPath>Things/Medical/Metolidocaine</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

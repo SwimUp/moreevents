@@ -12,5 +12,7 @@ namespace MoreEvents
         public static FactionDef TribeRough;
         public static FactionDef Pirate;
         public static FactionDef Mutants;
+
+        public static FactionDef GalacticSecurityService;
     }
 }

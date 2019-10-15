@@ -12,7 +12,7 @@
 		<rotatable>false</rotatable>
 		<statBases>
 			<DeteriorationRate>6</DeteriorationRate>
-			<MarketValue>30</MarketValue>
+			<MarketValue>20</MarketValue>
 			<Mass>0.1</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>

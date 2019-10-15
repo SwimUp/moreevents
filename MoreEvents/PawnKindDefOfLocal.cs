@@ -16,5 +16,14 @@ namespace MoreEvents
         public static PawnKindDef Goliath;
         public static PawnKindDef Bombardier;
         public static PawnKindDef Termitnator;
+
+        public static PawnKindDef Pawn_Infantryman;
+        public static PawnKindDef Pawn_Infantryman_Elite;
+        public static PawnKindDef Pawn_FrontGrenadier;
+        public static PawnKindDef Pawn_EliteGrenadier;
+        public static PawnKindDef Pawn_EliteShotgun;
+        public static PawnKindDef Pawn_LightShooter;
+        public static PawnKindDef Pawn_HeavyShooter;
+        public static PawnKindDef Pawn_HeavyArcher;
     }
 }
