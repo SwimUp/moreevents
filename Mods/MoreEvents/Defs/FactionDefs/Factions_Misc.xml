@@ -8,6 +8,7 @@
 		<pawnSingular>GSS</pawnSingular>
 		<pawnsPlural>GSS</pawnsPlural>
 		<listOrderPriority>10</listOrderPriority>
+		<hidden>true</hidden>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<maxCountAtGameStart>1</maxCountAtGameStart>

@@ -62,6 +62,19 @@ namespace RimOverhaul.Gss
             Find.LetterStack.ReceiveLetter("DarkNet_RaidSendedTitle".Translate(), "DarkNet_RaidSendedDesc".Translate(GssFaction.Name), LetterDefOf.ThreatBig);
         }
 
+        public static IEnumerable<PawnKindDef> GetKinds(float points)
+        {
+            float totalPower = points;
+
+            while (totalPower > 0)
+            {
+                PawnKindDef selected = PawnKinds.RandomElementByWeight(x => x.Value).Key;
+                totalPower -= selected.combatPower;
+
+                yield return selected;
+            }
+        }
+
         public static void SendRaidImmediately(Map map, float points, bool notify = true)
         {
             float totalPower = points;

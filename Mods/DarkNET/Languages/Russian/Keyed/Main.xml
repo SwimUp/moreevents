@@ -247,7 +247,7 @@
 	<Quest_DarkNetCaptureMaterials_AdditionalContent>Награда расчитывается из суммы груза пиратов.</Quest_DarkNetCaptureMaterials_AdditionalContent>
 	<Quest_DarkNetCaptureMaterials_SignalDialog>Пираты уничтожены и вы подали сигнал. 
 
-{1}
+{0}
 
 Награда будет отправлена на вашу базу.</Quest_DarkNetCaptureMaterials_SignalDialog>
 	<Quest_DarkNetCaptureMaterials_EndQuest_NoneTitle>Провал</Quest_DarkNetCaptureMaterials_EndQuest_NoneTitle>

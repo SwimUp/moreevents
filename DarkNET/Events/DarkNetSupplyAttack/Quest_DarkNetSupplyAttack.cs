@@ -102,13 +102,13 @@ namespace DarkNET.Events.DarkNetSupplyAttack
 
             var pawns = PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms).ToList();
 
-            IncidentParms parms = new IncidentParms
+            foreach (var pawn in pawns)
             {
-                target = map,
-                spawnCenter = CellFinder.RandomClosewalkCellNear(map.Center, map, 15, x => x.Walkable(map) && !x.Fogged(map))
-            };
-
-            PawnsArrivalModeDefOf.CenterDrop.Worker.Arrive(pawns, parms);
+                if (CellFinder.TryFindRandomCellNear(map.Center, map, 15, (IntVec3 x) => x.Standable(map) && !x.Fogged(map), out IntVec3 loc))
+                {
+                    GenSpawn.Spawn(pawn, loc, map, Rot4.Random);
+                }
+            }
 
             LordJob_AssaultColony lordJob_AssaultColony = new LordJob_AssaultColony(Faction);
             Lord lord = LordMaker.MakeNewLord(Faction, lordJob_AssaultColony, map, pawns);
