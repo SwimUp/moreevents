@@ -32,9 +32,6 @@ namespace DarkNET.Traders
         private int count;
         private string countBuff;
 
-        private int supplyDelay;
-        private string supplyDelayBuff;
-
         private float discount;
 
         private int delay => (int)Mathf.Clamp(count * GetDelayMultiplier(selectedItem.techLevel) / trader.ArriveTime, 1, 100000);
@@ -42,15 +39,7 @@ namespace DarkNET.Traders
         private float totalPrice => ((int)((selectedItem.BaseMarketValue * trader.Character.Greed) * trader.GetPriceModificatorByTechLevel(selectedItem.techLevel)) * count + (delay * 50)) * 1.1f;
         private int totalPriceFinalizaed => (int)(totalPrice - (totalPrice * discount / 100));
 
-        private float supplyPriceMultiplier => 0.5f;
-
         private int prepayment => (int)(totalPriceFinalizaed * 0.4f);
-
-        private int minSupplyDelay => Mathf.RoundToInt(Mathf.Max(1, count * GetDelayMultiplierForSupply(selectedItem.techLevel)));
-
-        private int totalSupplyPrice => (int)(selectedItem.BaseMarketValue * trader.Character.Greed * trader.GetPriceModificatorByTechLevel(selectedItem.techLevel) * supplyPriceMultiplier * count * supplyTime);
-
-        private int supplyTime => 15;
 
         public Eisenberg_OrderWindow(TraderWorker_Eisenberg trader)
         {
@@ -91,7 +80,7 @@ namespace DarkNET.Traders
             }, tab == Tab.Supplies));
 
             Widgets.DrawMenuSection(rect2);
-            TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 300);
+            TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 550);
             tabsList.Clear();
 
             rect2.y += 65;
@@ -100,9 +89,6 @@ namespace DarkNET.Traders
             {
                 case Tab.OneTime:
                     DrawOneTimeWindow(rect2);
-                    break;
-                case Tab.Supplies:
-                    DrawSuppliesWindow(rect2);
                     break;
             }
         }
@@ -114,52 +100,6 @@ namespace DarkNET.Traders
             Rect textureRect = new Rect(530, 37, 24, 24);
             GUI.DrawTexture(textureRect, Info);
             TooltipHandler.TipRegion(new Rect(440, 37, 170, 24), info);
-        }
-
-        private void DrawSuppliesWindow(Rect rect)
-        {
-            rect.x += 10;
-
-            DrawHeader("Eisenberg_OrderWindow_SuppliesInfo".Translate());
-
-            Rect labelRect = new Rect(rect.x, rect.y, 120, 25);
-            Widgets.Label(labelRect, "Eisenberg_OrderWindow_SuppliesInfo".Translate());
-            Rect itemButtonRect = new Rect(rect.x + 125, rect.y, 390, 25);
-            Text.Anchor = TextAnchor.MiddleCenter;
-            if (GUIUtils.DrawCustomButton(itemButtonRect, selectedItem.LabelCap, Color.white))
-            {
-                List<FloatMenuOption> options = new List<FloatMenuOption>();
-                foreach (var item in itemsToOrder)
-                {
-                    options.Add(new FloatMenuOption($"{item.LabelCap} - {(int)((item.BaseMarketValue * trader.Character.Greed) * trader.GetPriceModificatorByTechLevel(item.techLevel) * supplyPriceMultiplier)}$ за штуку", delegate
-                    {
-                        selectedItem = item;
-
-                        supplyDelayBuff = minSupplyDelay.ToString();
-                    }));
-                }
-
-                Find.WindowStack.Add(new FloatMenu(options));
-            }
-            Text.Anchor = TextAnchor.UpperLeft;
-
-            rect.y += 30;
-            Rect countLabelRect = new Rect(rect.x, rect.y, 200, 25);
-            Widgets.Label(countLabelRect, "Eisenberg_OrderWindow_SuppliesItemCount".Translate());
-            Rect countnRect = new Rect(rect.x + 220, rect.y, 295, 25);
-            Widgets.TextFieldNumeric(countnRect, ref count, ref countBuff, 1, 100000);
-
-            rect.y += 30;
-            Rect countLabelRect2 = new Rect(rect.x, rect.y, 200, 25);
-            Widgets.Label(countLabelRect2, "Eisenberg_OrderWindow_SuppliesItemCooldown".Translate());
-            Rect countnRect2 = new Rect(rect.x + 220, rect.y, 295, 25);
-            Widgets.TextFieldNumeric(countnRect2, ref supplyDelay, ref supplyDelayBuff, minSupplyDelay, 100000);
-
-            rect.y += 32;
-
-            Rect totalRect = new Rect(rect.x, rect.y, 564, 290);
-            Widgets.Label(totalRect, "Eisenberg_OrderWindowSuppliesTotalInfo".Translate(selectedItem.LabelCap, count, supplyDelay, supplyTime * supplyDelay ,count * supplyTime, totalSupplyPrice));
-
         }
 
         private void DrawOneTimeWindow(Rect rect)

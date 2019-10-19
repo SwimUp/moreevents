@@ -29,7 +29,7 @@ namespace DarkNET.Dialogs
             IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
             parms.forced = true;
 
-            var incident = new FiringIncident(IncidentDefOfLocal.HighMutantPopulation, null, parms);
+            var incident = new FiringIncident(MoreEvents.IncidentDefOfLocal.HighMutantPopulation, null, parms);
             Find.Storyteller.TryFire(incident);
 
             base.RemoveNow();

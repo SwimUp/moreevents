@@ -31,6 +31,13 @@ namespace DarkNET.CommunicationComps
             if (Pawns == null || Map == null)
                 return;
 
+            for(int i = 0; i < Pawns.Count; i++)
+            {
+                Pawn p = Pawns[i];
+                if (p == null)
+                    Pawns.RemoveAt(i);
+            }
+
             IncidentParms parms = new IncidentParms
             {
                 target = Map,

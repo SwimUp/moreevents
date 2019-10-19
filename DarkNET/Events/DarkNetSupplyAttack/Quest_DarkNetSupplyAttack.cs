@@ -16,9 +16,9 @@ namespace DarkNET.Events.DarkNetSupplyAttack
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 
-        public override string CardLabel => "Quest_DarkNetSupplyAttack_CardLabel".Translate(TraderDef.LabelCap);
+        public override string CardLabel => string.Format(IncidentDefOfLocal.DarkNetSupplyAttack.letterLabel, TraderDef.LabelCap);
 
-        public override string Description => "Quest_DarkNetSupplyAttack_Description".Translate(TraderDef.LabelCap);
+        public override string Description => string.Format(IncidentDefOfLocal.DarkNetSupplyAttack.letterText, TraderDef.LabelCap);
 
         public override string PlaceLabel => "Quest_DarkNetSupplyAttack_CardLabel".Translate(TraderDef.LabelCap);
 
@@ -61,15 +61,21 @@ namespace DarkNET.Events.DarkNetSupplyAttack
         {
             base.PostMapGenerate(map);
 
+            float points = GenerateItems(map);
+            GeneratePawns(map, points);
+        }
+        private float GenerateItems(Map map)
+        {
+            float points = 200;
+
             if (Rewards != null)
             {
-                float points = 0;
                 foreach (var item in Rewards)
                 {
                     points += item.MarketValue * item.stackCount;
 
                     var pos = CellFinder.RandomClosewalkCellNear(map.Center, map, 5, x => x.Walkable(map) && !x.Fogged(map));
-                    if(pos != IntVec3.Invalid)
+                    if (pos != IntVec3.Invalid)
                     {
                         GenDrop.TryDropSpawn(item, pos, map, ThingPlaceMode.Near, out Thing result);
                     }
@@ -77,12 +83,11 @@ namespace DarkNET.Events.DarkNetSupplyAttack
 
                 points *= 0.6f;
 
-                GeneratePawns(map, points);
-
                 Rewards.Clear();
             }
-        }
 
+            return points;
+        }
         private void GeneratePawns(Map map, float points)
         {
             PawnGroupMakerParms pawnGroupMakerParms = new PawnGroupMakerParms

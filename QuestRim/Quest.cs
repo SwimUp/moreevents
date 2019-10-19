@@ -164,7 +164,7 @@ namespace QuestRim
 
         public virtual void PostMapGenerate(Map map)
         {
-
+            UnlimitedTime = true;
         }
 
         public virtual IEnumerable<Gizmo> GetGizmos(QuestSite site)

@@ -19,6 +19,8 @@ namespace DarkNET
 
         public Texture2D IconMenu => def.IconTexture;
 
+        public Texture2D IconOfflineMenu => def.IconOfflineTexture;
+
         public virtual int OnlineTime => 2;
         public virtual int ArriveTime => 10;
 
@@ -26,6 +28,11 @@ namespace DarkNET
 
         public bool Online;
 
+        public bool OnlineRightNow => (Online || OnlineEveryTime) && !Blocked;
+
+        public bool Blocked;
+
+        private int blockedTicks;
         public TraderParams Character => def.Character; 
 
         public virtual bool OnlineEveryTime => false;
@@ -104,6 +111,8 @@ namespace DarkNET
                     Arrive();
                 }
             }
+            if(Blocked)
+                Blocked = (blockedTicks - Find.TickManager.TicksGame) <= 0;
         }
 
         public virtual void TraderGone()
@@ -116,6 +125,20 @@ namespace DarkNET
             return false;
         }
 
+        public void Block(int blockDays, bool sendMessage = true)
+        {
+            if (Blocked)
+                return;
+
+            blockedTicks = Find.TickManager.TicksGame + (blockDays * 60000);
+            Blocked = true;
+
+            if(sendMessage)
+            {
+                Find.LetterStack.ReceiveLetter("DarkNetTrader_BlockTitle".Translate(), "DarkNetTrader_BlockDesc".Translate(def.LabelCap, blockDays), LetterDefOf.NegativeEvent);
+            }
+        }
+
         public abstract void DrawTraderShop(Rect rect, Pawn speaker);
 
         public virtual void ExposeData()
@@ -123,8 +146,10 @@ namespace DarkNET
             Scribe_Defs.Look(ref def, "def");
             Scribe_Values.Look(ref lastArriveTicks, "lastArriveTicks");
             Scribe_Values.Look(ref Online, "Online");
+            Scribe_Values.Look(ref Blocked, "Blocked");
+            Scribe_Values.Look(ref blockedTicks, "blockedTicks");
 
-            if(Scribe.mode == LoadSaveMode.LoadingVars)
+            if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
                 InitializeComps();
             }

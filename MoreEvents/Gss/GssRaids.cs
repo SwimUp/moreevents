@@ -62,6 +62,51 @@ namespace RimOverhaul.Gss
             Find.LetterStack.ReceiveLetter("DarkNet_RaidSendedTitle".Translate(), "DarkNet_RaidSendedDesc".Translate(GssFaction.Name), LetterDefOf.ThreatBig);
         }
 
+        public static void SendRaidImmediately(Map map, float points, bool notify = true)
+        {
+            float totalPower = points;
+            List<PawnKindDef> selectedKinds = new List<PawnKindDef>();
+
+            while (totalPower > 0)
+            {
+                PawnKindDef selected = PawnKinds.RandomElementByWeight(x => x.Value).Key;
+
+                selectedKinds.Add(selected);
+                totalPower -= selected.combatPower;
+            }
+
+            if (selectedKinds.Count == 0)
+                return;
+
+            List<Pawn> outPawns = new List<Pawn>();
+            foreach (PawnKindDef kind in selectedKinds)
+            {
+                PawnGenerationRequest request = new PawnGenerationRequest(kind, GssFaction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, true, false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, null);
+                Pawn pawn = PawnGenerator.GeneratePawn(request);
+                outPawns.Add(pawn);
+
+                Find.WorldPawns.PassToWorld(pawn);
+            }
+
+            if (outPawns.Count == 0)
+                return;
+
+            IncidentParms parms = new IncidentParms
+            {
+                target = map,
+                faction = GssFaction
+            };
+
+            PawnsArrivalModeDef pawnsArrivalMode = ResolveRaidArriveMode(parms);
+            pawnsArrivalMode.Worker.Arrive(outPawns, parms);
+
+            RaidStrategyDef raidStrategy = ResolveRaidStrategy();
+            raidStrategy.Worker.MakeLords(parms, outPawns);
+
+            if (notify)
+                Find.LetterStack.ReceiveLetter("DarkNet_RaidSendedTitle".Translate(), "DarkNet_RaidSendedDesc".Translate(GssFaction.Name), LetterDefOf.ThreatBig);
+        }
+
         public static PawnsArrivalModeDef ResolveRaidArriveMode(IncidentParms parms)
         {
             Map map = (Map)parms.target;

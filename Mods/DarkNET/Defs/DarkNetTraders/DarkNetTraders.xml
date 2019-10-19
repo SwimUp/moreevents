@@ -15,6 +15,7 @@ Paying attention to the outlying worlds, he realized that he could make a fortun
 He is extremely careful, does not conduct business with unverified people and severely punishes those who deceive him or surrender to the authorities. Appears more or less regularly every 2 weeks, usually has an assortment of used things and organs from developed worlds, but it can also bring along some really interesting things. He can also order things for delivery.</description>
 		<IconTextureInt>Traders/RogerEdmonson/face</IconTextureInt>
 		<FullTextureInt>Traders/RogerEdmonson/main</FullTextureInt>
+		<IconOfflineTextureInt>Traders/RogerEdmonson/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>380</OverridePortraitWidth>
 		<Character>
 			<Cruelty>1.3</Cruelty>
@@ -521,6 +522,7 @@ Always available, has almost the entire range of assortment
 drugs and drugs, buys neutroamine and other ingredients for drugs, as well as luxury goods and everything necessary for a comfortable life.</description>
 		<IconTextureInt>Traders/Eisenberg/face</IconTextureInt>
 		<FullTextureInt>Traders/Eisenberg/main</FullTextureInt>
+		<IconOfflineTextureInt>Traders/Eisenberg/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>450</OverridePortraitWidth>
 		<Character>
 			<Cruelty>1.05</Cruelty>
@@ -824,6 +826,7 @@ Calm, balanced, peaceful person. Always keeps his word and it is unlikely to exp
 Screen reader support included.</description>
 		<IconTextureInt>Traders/JohnCarver/face</IconTextureInt>
 		<FullTextureInt>Traders/JohnCarver/main</FullTextureInt>
+		<IconOfflineTextureInt>Traders/JohnCarver/face_offline</IconOfflineTextureInt>
 		<Character>
 			<Cruelty>0.9</Cruelty>
 			<Greed>1.05</Greed>
@@ -1275,6 +1278,7 @@ Scientists say that for this he uses mechanites controlled by him, but few can s
 It is also known that simple things, so familiar to us, are too simple for him, and he prefers to create more technologically advanced things typical of the Archaeological Museum. To many, its “prices” may seem very unprofitable, and you have the right to agree with this - but AI Arhotek has everything you need, and in any quantities you need. And yes, do not try to deceive him - he always senses something was amiss, and if he turns out to be deceived, the reprisal will not take long.</description>
 		<IconTextureInt>Traders/Archotech_567H/face</IconTextureInt>
 		<FullTextureInt>Traders/Archotech_567H/main</FullTextureInt>
+		<IconOfflineTextureInt>Traders/Archotech_567H/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>470</OverridePortraitWidth>
 		<Character>
 			<Cruelty>2.0</Cruelty>
@@ -1718,6 +1722,7 @@ However, no matter what happened to her, by some miracle, she managed to escape.
 Due to pressure from drug manufacturing corporations, Sly is forced to hide in DarkNet.</description>
 		<IconTextureInt>Traders/Sly/face</IconTextureInt>
 		<FullTextureInt>Traders/Sly/main</FullTextureInt>
+		<IconOfflineTextureInt>Traders/Sly/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>450</OverridePortraitWidth>
 		<AvaliableGoods>
 			<li>		

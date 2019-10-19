@@ -239,5 +239,32 @@
 	<DarKNet_WhyAffect>использование DarkNet</DarKNet_WhyAffect>
 	<DarkNet_RaidArriveTitle>Отряд прибыл</DarkNet_RaidArriveTitle>
 	<DarkNet_RaidArriveDesc>Отряд {0} прибыл, они нападают немедленно!</DarkNet_RaidArriveDesc>
+
+	<Quest_DarkNetCaptureMaterials_CardLabel>Караван пиратов</Quest_DarkNetCaptureMaterials_CardLabel>
+	<Quest_DarkNetCaptureMaterials_Info>Уничтожьте всех пиратов и их животных. После этого подайте сигнал грузовым кораблям торговца выбрав это место на глобальной карте и нажав "Активировать маяк".
+	
+Награда задания зависит от того, сколько предметов вы передадите торговцу.</Quest_DarkNetCaptureMaterials_Info>
+	<Quest_DarkNetCaptureMaterials_AdditionalContent>Награда расчитывается из суммы груза пиратов.</Quest_DarkNetCaptureMaterials_AdditionalContent>
+	<Quest_DarkNetCaptureMaterials_SignalDialog>Пираты уничтожены и вы подали сигнал. 
+
+{1}
+
+Награда будет отправлена на вашу базу.</Quest_DarkNetCaptureMaterials_SignalDialog>
+	<Quest_DarkNetCaptureMaterials_EndQuest_NoneTitle>Провал</Quest_DarkNetCaptureMaterials_EndQuest_NoneTitle>
+	<Quest_DarkNetCaptureMaterials_EndQuest_NoneDesc>Пираты и их караван скрылись в неизвестности, торговец ничего вам не заплатил.</Quest_DarkNetCaptureMaterials_EndQuest_NoneDesc>
+	<DarkNETWindow_ToStartInfo>Выберите торговца из списка слева</DarkNETWindow_ToStartInfo>
+	<Quest_DarkNetKillInformator_InformatorDeadTitle>Информатор раскололся</Quest_DarkNetKillInformator_InformatorDeadTitle>
+	<Quest_DarkNetKillInformator_InformatorDeadDesc>Информатор раскололся. К счастью, GSS не смогли выйти на вас.</Quest_DarkNetKillInformator_InformatorDeadDesc>
+	<Quest_DarkNetKillInformator_PlaceLabel>Информатор</Quest_DarkNetKillInformator_PlaceLabel>
+	<Quest_DarkNetKillInformator_Info>Вам требуется убить {0}. Он находится где-то на базе. 
+
+Он, вероятно, будет находится в закрытом помещении (без дверей). Найдите его и убейте.
+Будьте осторожны, GSS убьет любого, кто нападет на них.</Quest_DarkNetKillInformator_Info>
+	<DarkNetTrader_BlockTitle>Прекращение деятельности</DarkNetTrader_BlockTitle>
+	<DarkNetTrader_BlockDesc>Трейдер {0} прекращает с вами работу на следующие {1} дней. Вы не сможете торговать с ним.</DarkNetTrader_BlockDesc>
+	<Quest_DarkNetTraderSupply_CardLabel>Место передачи товара</Quest_DarkNetTraderSupply_CardLabel>
+	<Quest_DarkNetTraderSupply_GetDescription>Место передачи товара {0}.
+Покупатель: {1}
+Гарант: {2}</Quest_DarkNetTraderSupply_GetDescription>
 	
 </LanguageData>

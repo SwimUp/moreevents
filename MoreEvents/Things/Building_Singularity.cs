@@ -8,6 +8,7 @@ using Verse;
 
 namespace RimOverhaul.Things
 {
+    [StaticConstructorOnStartup]
     public class Building_Singularity : Building
     {
         private int animTime = 20;

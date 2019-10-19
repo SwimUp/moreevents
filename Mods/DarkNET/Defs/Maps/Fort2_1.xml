@@ -3,6 +3,7 @@
 	<MapGeneratorBlueprints.MapGenerator.MapGeneratorDef>
 		<defName>Fort2_1</defName>
 		<size>(125, 125)</size>
+		<Commonality>0.5</Commonality>
 		<targetTags>
 			<li>Quest_Archotech_567H_KillOponents</li>
 		</targetTags>

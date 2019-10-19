@@ -10,6 +10,9 @@ namespace MoreEvents
     [DefOf]
     public static class PawnKindDefOfLocal
     {
+        public static PawnKindDef Alpaca;
+        public static PawnKindDef Dromedary;
+
         public static PawnKindDef Tribal_Warrior;
 
         public static PawnKindDef BattleRam;

@@ -81,11 +81,6 @@ namespace DarkNET
             float chance = (DarkNet == null ? DarkNet.BaseDangerous : DarkNet.Dangerous) / 100;
             if (Rand.Chance(chance))
             {
-                if(DarkNet.GssFaction.RelationKindWith(Faction.OfPlayer) != FactionRelationKind.Hostile)
-                {
-                    DarkNet.GssFaction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile, true, "DarKNet_WhyAffect".Translate());
-                }
-
                 DarkNet.SendGssRaid(pawn.Map);
             }
 

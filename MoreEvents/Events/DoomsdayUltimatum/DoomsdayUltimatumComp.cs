@@ -45,10 +45,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
         public bool SupportFormed => HelpingFactions.Count == MaxFactions;
         private string helpFactionList = string.Empty;
-
-
         public void SetTimer(int days) => Timer = days * 60000;
-
         public void AddFaction(Faction f)
         {
             if (HelpingFactions.Count == MaxFactions)

@@ -48,6 +48,8 @@ namespace DarkNET.Quests
             base.PostMapGenerate(map);
 
             MapGeneratorHandler.GenerateMap(MapGenerator, map, out List<Pawn> pawns, false, true, true, false, true, true, true, Faction);
+
+            UnlimitedTime = true;
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
