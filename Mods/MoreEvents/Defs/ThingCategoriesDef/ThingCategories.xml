@@ -19,5 +19,17 @@
 		<label>Metalls</label>
 		<parent>RimOverhaulSpecial</parent>
 	</ThingCategoryDef>
+	
+    <ThingCategoryDef>
+      <defName>DarkNetItems</defName>
+      <label>DarkNET</label>
+      <parent>Root</parent>
+    </ThingCategoryDef>
+	
+    <ThingCategoryDef>
+      <defName>DarkNetItems_Drugs</defName>
+      <label>DarkNET Drugs</label>
+      <parent>DarkNetItems</parent>
+    </ThingCategoryDef>
 
 </Defs>

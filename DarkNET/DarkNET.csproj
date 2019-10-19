@@ -89,6 +89,7 @@
     <Compile Include="IncidentDefOfLocal.cs" />
     <Compile Include="Jobs\JobDefOfLocal.cs" />
     <Compile Include="Jobs\JobDriver_GoToDarkNet.cs" />
+    <Compile Include="MapDefOfLocal.cs" />
     <Compile Include="PriceModificatorDef.cs" />
     <Compile Include="PriceModificatorFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

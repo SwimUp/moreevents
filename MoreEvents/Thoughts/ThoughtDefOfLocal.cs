@@ -10,5 +10,6 @@ namespace MoreEvents
         public static ThoughtDef MentalImpact;
         public static ThoughtDef SeaAir;
         public static ThoughtDef MountainAir;
+        public static ThoughtDef IbuprofienHediff;
     }
 }

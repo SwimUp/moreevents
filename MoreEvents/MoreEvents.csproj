@@ -403,6 +403,7 @@
     <Compile Include="Things\SoundsDefOfLocal.cs" />
     <Compile Include="Things\ThingDefOfLocal.cs" />
     <Compile Include="Thoughts\ThoughtDefOfLocal.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_Ibuprofien.cs" />
     <Compile Include="Thoughts\ThoughtWorker_SupernovaSight.cs" />
     <Compile Include="Utility\DropPodUtilityPlus.cs" />
     <Compile Include="Utility\SkyfallerPlusMaker.cs" />
