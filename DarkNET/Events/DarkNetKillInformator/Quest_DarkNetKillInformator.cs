@@ -1,6 +1,7 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using MoreEvents;
 using QuestRim;
+using RimOverhaul.Gss;
 using RimOverhaul.Quests;
 using RimWorld;
 using RimWorld.Planet;
@@ -61,15 +62,7 @@ namespace DarkNET.Events.DarkNetKillInformator
         {
             base.PostMapGenerate(map);
 
-            if (DarkNet.GssFaction != null)
-            {
-                if (DarkNet.GssFaction.RelationKindWith(Faction.OfPlayer) != FactionRelationKind.Hostile)
-                {
-                    DarkNet.GssFaction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile, true, "DarKNet_WhyAffect".Translate());
-                }
-            }
-
-            MapGeneratorHandler.GenerateMap(mapGeneratorDef, map, out List<Pawn> pawns, false, true, true, false, true, true, true, Faction);
+            MapGeneratorHandler.GenerateMap(mapGeneratorDef, map, out List<Pawn> pawns, false, true, true, false, true, true, true, GssRaids.GssFaction);
 
             Informator = PawnGenerator.GeneratePawn(PawnKindDefOf.AncientSoldier);
             GenSpawn.Spawn(Informator, mapGeneratorDef.PawnsSpawnPos, map);
