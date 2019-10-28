@@ -72,4 +72,10 @@
   
   <ExplosiveBullets.label>Разрывные пули</ExplosiveBullets.label>
   
+  <BlastingBlisters.label>Взрывные волдыри</BlastingBlisters.label>
+  <BlastingBlisters.stages.swelling.label>набухание</BlastingBlisters.stages.swelling.label>
+  <BlastingBlisters.stages.fermentation.label>ферментирование</BlastingBlisters.stages.fermentation.label>
+  <BlastingBlisters.stages.destabilization.label>дестабилизация</BlastingBlisters.stages.destabilization.label>  
+
+  
 </LanguageData>

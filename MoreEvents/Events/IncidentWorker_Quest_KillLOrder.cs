@@ -38,7 +38,7 @@ namespace MoreEvents.Events
             if (!TryResolveTwoFaction(out Faction faction1, out Faction faction2))
                 return false;
 
-            if (!TileFinder.TryFindPassableTileWithTraversalDistance(Find.AnyPlayerHomeMap.Tile, 8, 24, out int result))
+            if (!TileFinder.TryFindPassableTileWithTraversalDistance(Find.AnyPlayerHomeMap.Tile, 7, 15, out int result))
                 return false;
 
             Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.AncientSoldier, faction2);

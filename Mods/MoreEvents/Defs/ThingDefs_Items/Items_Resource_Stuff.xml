@@ -331,7 +331,7 @@ Like nickel, cobalt is found in the Earth's crust only in chemically combined fo
 
 The element occurs within a number of mineral deposits, principally rutile and ilmenite, which are widely distributed in the Earth's crust and lithosphere, and it is found in almost all living things, water bodies, rocks, and soils.
 
-Ilmenite ingots can be melted in a simple furnace.</description>
+Ilmenite ingots can be melted in a arc furnace.</description>
 		<graphicData>
 			<texPath>Things/Resources/IlmeniteOre</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -356,7 +356,7 @@ Ilmenite ingots can be melted in a simple furnace.</description>
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>IlmeniteIngot</defName>
-		<label>Ilmenite</label>
+		<label>Titanium Ingot</label>
 		<description>Recycled Ilmenite Ore. It can be used in other recipes, or to create things.</description>
 		<graphicData>
 			<texPath>Things/Resources/IlmeniteIngot</texPath>

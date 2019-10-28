@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_FEL_Light</defName>
 		<label>FEL Light</label>
 		<description>A free electron laser that was previously used only for scientific purposes. However, due to the need to significantly reduce the size, for the possibility of combat use, it was rebuilt. The resulting as a result, weapons capable of causing severe microtrauma causing numerous bleeding and disturbing heart function.</description>
@@ -60,7 +60,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_FEL_Heavy</defName>
 		<label>FEL Heavy</label>
 		<description>Free electron laser, significantly increased in size, which significantly increases the damage done. Thanks to overclocked Electrons, FEL Severe ability to generate small charged polar particles. Upon reaching the goal, the field disrupts the heart and causes explosive injuries to the victim.</description>
@@ -122,7 +122,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_AR</defName>
 		<label>AR-31</label>
 		<description>A small pistol whose combat effectiveness is to disperse shells using an energy beam. However, the gun does not require recharging, using ammunition energy. The technology is not remarkable, but thanks limitations of guns, due to the loss of drawings, the gun is valuable a godsend for rarities.</description>
@@ -183,7 +183,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_PG</defName>
 		<label>PG-18</label>
 		<description>Compact blaster with energy ammunition. Possesses high accuracy thanks to the guidance system. However, weapons take time for ionization of plasma charges, which significantly reduces the rate of recharge. PG-18 shells have high speed and temperature, causing severe burns when hit.</description>
@@ -243,7 +243,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_PG_Heavy</defName>
 		<label>PG-21 Heavy</label>
 		<description>Heavy blaster with energy ammunition. Due to increase the size, the weapon received an additional place for ammunition. Plasma, which is the main shock force, upsets the body’s heat balance, which entails serious consequences.</description>
@@ -306,7 +306,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_PG_Spider</defName>
 		<label>PG-26 Spider</label>
 		<description>Heavy blaster with energy ammunition causing rupture of body tissues. With prolonged exposure, the weapon is substantially poisons the body and alters the well-being of the victim, which entails dangerous consequences.</description>
@@ -370,7 +370,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_EMP</defName>
 		<label>EMP-41</label>
 		<description>A heavy submachine gun with a large supply of shells using electromagnetic acceleration. Long preparation and Recharge and well suited for short distances. When hit by targets, EMP-41 shells burst, leading to internal bleeding.</description>
@@ -433,7 +433,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_RMP</defName>
 		<label>RMP-45</label>
 		<description>Large-caliber double-charged energy rifle. Requires lengthy preparation for firing and reloading, but is much more more accurate than analogues. Most effective at long and medium distances, which is provided by the specifics of shells aimed at the target after some time.</description>
@@ -496,7 +496,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_EMPS</defName>
 		<label>EMP-47</label>
 		<description>Large-caliber medium-range submachine gun shells and precision. Differs in high speed of reloading and preparation to the fire. The greatest combat effectiveness is achieved at medium distances, due to the time required to increase the speed of the bullet. EMP-47 has a destructive acoustic effect, causing short-term damage to the target’s hearing when hit.</description>
@@ -559,7 +559,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_SMP</defName>
 		<label>SMP-42 FireStorm</label>
 		<description>Explosive projectile shotgun which explode on contact with anything. Has a small combat radius and low accuracy. Effective mainly at short distances, causing maximum damage.</description>
@@ -620,7 +620,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_RMP_Enigma</defName>
 		<label>RMP-51 Enigma</label>
 		<description>Single-shot energy rifle with a telescopic sight. Deals average damage, and the maximum effect is achieved at small and medium distances. Due to the lack of stock of shells, reloading and preparation for fire occurs faster. RMP-51 drawings were found on a network of abandoned military bases, and the rifle itself consists of foreign materials.</description>
@@ -681,7 +681,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_RMP_Feral</defName>
 		<label>RMP-56 Feral</label>
 		<description>Five-shot plasma rifle. The greatest accuracy is achieved at average distances, and misses are minimized. To prepare for shooting some time, which complicates its use in head-on collisions with the enemy. The top layer of RMP-56 is coated with titanium, which reduces its overheating during use.</description>
@@ -743,7 +743,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_ThermoFusion</defName>
 		<label>Thermobaric fusion gun</label>
 		<description>It forms a powerful energy ball, which loses stability over time, after which it causes an explosion.</description>
@@ -807,7 +807,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_LTB</defName>
 		<label>LTB-4000</label>
 		<description>Massive heavy weapon with a long barrel, in which the formation of an electric ball similar to ball lightning occurs. When fired, the ball ionizes the air, causing multiple lightning bolts.</description>
@@ -871,7 +871,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_DeathRay</defName>
 		<label>Energy weapon 'Death Ray'</label>
 		<description>Energy-based weapons. The design is similar to the energy spear of mechanoids. The mechanism has been changed, so that a long-term supply of high-power energy is possible to obtain a stable beam of destructive power.</description>
@@ -1019,7 +1019,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_EMP_Fox</defName>
 		<label>EMP-59 Desert fox</label>
 		<description>Five-shot pistol machine gun with a high rate of fire, which however is limited to modest radius of defeat and damage. When hit on target, the EMP-49 shell explodes inside the victim, inflicting numerous wounds.</description>
@@ -1081,7 +1081,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_LaserBow</defName>
 		<label>Laser Bow</label>
 		<description>The modern era demanded new weapons. The mechanics excelled in intelligence and quick wits. Using bizarre weapons from ancient eras, they created an electric-powered bow that generates laser arrows every time a user pulls a bow. It has a high rate of fire for its damage, but is useless when the battery runs out.</description>
@@ -1149,7 +1149,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_RMP_Guard</defName>
 		<label>RMP-48 Night guard</label>
 		<description>A power rifle with a large stock of shells and, probably created from drawings left over from mechanoids. Low accuracy and damage, which compensates for the rate of fire. Covered with cryotium used as an additional means of dealing damage.</description>
@@ -1211,7 +1211,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_WR_Wisp</defName>
 		<label>WR Wisp</label>
 		<description>Heavy gun designed for climate change in small area on a world map. When used, causes climatic anomalies affecting air temperature. Shards ice occur in the surrounding area, forming a dangerous tornado.</description>
@@ -1275,7 +1275,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGunWithQuality">
+	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_WR_EternalFire</defName>
 		<label>WR Eternal Fire</label>
 		<description>A heavy tool designed for climate change in small area on a world map. When used, causes climatic anomalies affecting air temperature. The smell of napalm and carbon monoxide fills your lungs, and the smoke screen obscures for a long time heaven itself.</description>
@@ -1339,7 +1339,7 @@
 		</projectile>
 	</ThingDef>
 	
-		<ThingDef ParentName="BaseGunWithQuality">
+		<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_RL_SteelRain</defName>
 		<label>RL Steel rain</label>
 		<description>Reactive installation of tremendous power, capable of pointing shells at the target, chasing it for a while. Killer the effect is achieved thanks to the explosive pyrotium placed inside. Requires a long recharge and preparation for firing, which is offset high damage.</description>

@@ -215,6 +215,12 @@ namespace QuestRim
         {
             base.Tick();
 
+            if (quest == null)
+            {
+                Find.WorldObjects.Remove(this);
+                return;
+            }
+
             quest.SiteTick();
         }
 

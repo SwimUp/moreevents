@@ -28,5 +28,7 @@ namespace MoreEvents
         public static PawnKindDef Pawn_LightShooter;
         public static PawnKindDef Pawn_HeavyShooter;
         public static PawnKindDef Pawn_HeavyArcher;
+
+        public static PawnKindDef Boomalope;
     }
 }

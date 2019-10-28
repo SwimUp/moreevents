@@ -21,7 +21,7 @@ namespace MoreEvents.Quests
 
         public override string Description => "Quest_MissingPeople_Description".Translate(Faction.Name, minDays, passedDays, TicksToPass.TicksToDays().ToString("f2"));
 
-        public override string PlaceLabel => "Quest_MissingPeople_PlaceLabel".Translate();
+        public override string PlaceLabel => saved? "Quest_MissingPeople_PlaceLabelSaved".Translate() : "Quest_MissingPeople_PlaceLabel".Translate();
 
         public override string ExpandingIconPath => saved ? expandingIconPath2 : "Quests/Quest_MissingPeople";
 
@@ -111,8 +111,11 @@ namespace MoreEvents.Quests
             saved = true;
             ResetIcon();
 
-            Settlement settlement = null;
-            if (Find.WorldObjects.Settlements.Where(s => s.Faction == Faction).TryRandomElement(out settlement))
+            Settlement settlement = Find.WorldObjects.Settlements.Where(delegate (Settlement settl)
+            {
+                return settl.Faction == Faction && Find.WorldReachability.CanReach(site.Tile, settl.Tile);
+            }).OrderBy(x => Find.WorldGrid.ApproxDistanceInTiles(site.Tile, x.Tile)).FirstOrDefault();
+            if (settlement != null)
             {
                 int arrivalTime = CaravanArrivalTimeEstimator.EstimatedTicksToArrive(site.Tile, settlement.Tile, caravan);
                 TicksToPass = arrivalTime  + (3 * 60000);
@@ -257,7 +260,8 @@ namespace MoreEvents.Quests
                     {
                         foreach (var pawn in savedPawns)
                         {
-                            pawn.SetFaction(Faction);
+                            if(pawn != null && pawn.Faction != Faction)
+                                pawn.SetFaction(Faction);
                         }
 
                         Faction.TryAffectGoodwillWith(Faction.OfPlayer, -50);
@@ -288,7 +292,7 @@ namespace MoreEvents.Quests
 
         public override string GetInspectString()
         {
-            return "Quest_MissingPeople_InspectString".Translate(TicksToPass.TicksToDays().ToString("f2"));
+            return saved ? "Quest_MissingPeople_InspectString2".Translate(TicksToPass.TicksToDays().ToString("f2")) : "Quest_MissingPeople_InspectString".Translate(TicksToPass.TicksToDays().ToString("f2"));
         }
 
         public override void ExposeData()

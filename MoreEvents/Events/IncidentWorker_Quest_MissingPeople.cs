@@ -54,8 +54,8 @@ namespace MoreEvents.Events
             quest.id = QuestsManager.Communications.UniqueIdManager.GetNextQuestID();
             quest.Faction = faction;
 
-            int additionalValue = passedDays * 15;
-            quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(700 + additionalValue, 1400 + additionalValue), new IntRange(3, 8), null, null);
+            int additionalValue = passedDays * 25;
+            quest.GenerateRewards(quest.GetQuestThingFilter(), new FloatRange(1200 + additionalValue, 1800 + additionalValue), new IntRange(2, 8), null, null);
 
             LookTargets target = new LookTargets(newTile);
             quest.Target = target;

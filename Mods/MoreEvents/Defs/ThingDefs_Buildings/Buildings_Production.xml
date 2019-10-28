@@ -106,7 +106,6 @@
 		</graphicData>
 		<recipes>
 			<li>SmeltingSteel</li>
-			<li>SmeltingSteelBig</li>
 			<li>SmeltingTiliumIngot</li>
 			<li>BurnCoalToCokeCoal</li>
 		</recipes>

@@ -1467,4 +1467,41 @@
 		</stages>
 	</HediffDef>
 
+	<HediffDef ParentName="DiseaseBase">
+		<defName>BlastingBlisters</defName>
+		<label>Blasting blisters</label>
+		<tendable>true</tendable>
+		<initialSeverity>0.07</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.12</severityPerDay>
+			</li>
+			<li Class="MoreEvents.Hediffs.HediffCompProperties_Explode">
+				<ExplodeSeverity>1</ExplodeSeverity>
+				<RemoveHediff>true</RemoveHediff>
+			</li>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>12</baseTendDurationHours>
+				<severityPerDayTended>-1.5</severityPerDayTended>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>swelling</label>
+				<minSeverity>0.01</minSeverity>
+				<painOffset>0.2</painOffset>
+			</li>
+			<li>
+				<label>fermentation</label>
+				<minSeverity>0.4</minSeverity>
+				<painOffset>0.3</painOffset>
+			</li>
+			<li>
+				<label>destabilization</label>
+				<minSeverity>0.8</minSeverity>
+				<painOffset>0.5</painOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
 </Defs>

@@ -131,5 +131,6 @@
 	<CommunicationComponent_CommunicationDialogTimer>Notification</CommunicationComponent_CommunicationDialogTimer>
 
 	<NoFactionComm_D>Faction: unknown</NoFactionComm_D>
+	<CokeFurnace_MultiplierLabel>Multiplier: </CokeFurnace_MultiplierLabel>
 
 </LanguageData>

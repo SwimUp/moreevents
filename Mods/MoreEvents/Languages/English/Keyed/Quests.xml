@@ -44,7 +44,9 @@ List of required resources:</HelpResourcesDescriptionTitle>
 	<Quest_MissingPeople_CardLabel>Missing settlers</Quest_MissingPeople_CardLabel>
 	<Quest_MissingPeople_Description>The leader of the faction {0} contacted us and reported that a small group of their settlers went on a journey to gather resources but has not returned. Their journey was estimated to take {1} days, but more than {2} days have already passed. Attempts to get in touch have failed and they are worried that the settlers might have gotten lost or been attacked. \nThey should enough food for about {3} days, after which they will starve. He asks us to find the missing settlers and return them home.</Quest_MissingPeople_Description>
 	<Quest_MissingPeople_PlaceLabel>Potential Settlers Place</Quest_MissingPeople_PlaceLabel>
+	<Quest_MissingPeople_PlaceLabelSaved>People destination</Quest_MissingPeople_PlaceLabelSaved>
 	<Quest_MissingPeople_InspectString>Potential place for lost settlers. \nFood will run out in: {0} (days)</Quest_MissingPeople_InspectString>
+	<Quest_MissingPeople_InspectString2>House of missing settlers. \nTime to deliver settlers: {0} (days)</Quest_MissingPeople_InspectString2>
 	<Quest_CheckMissingPeople_Action>Inspect the place</Quest_CheckMissingPeople_Action>
 	<Quest_MissingPeople_CheckFailTitle>Nothing found</Quest_MissingPeople_CheckFailTitle>
 	<Quest_MissingPeople_CheckFail>We've find signs of the missing settlers, but nobody is here. There are fresh tracks leading away from the site, we should follow them. (A new destination is marked on the map)</Quest_MissingPeople_CheckFail>

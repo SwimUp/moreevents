@@ -33,5 +33,7 @@ namespace MoreEvents
 
         public static HediffDef CryotiumShards;
         public static HediffDef ExplosiveBullets;
+
+        public static HediffDef BlastingBlisters;
     }
 }

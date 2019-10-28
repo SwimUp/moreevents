@@ -15,6 +15,7 @@ namespace MoreEvents.Patch
     [HarmonyPatch("AddHumanlikeOrders")]
     public class AddHumanlikeOrdersPatch
     {
+        [HarmonyAfter(new string[] { "rimoverhaul.addhumanlikeafterorders.postfix.patch" })]
         static void Postfix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
         {
             foreach (var localTargetInfo in GenUI.TargetsAt(clickPos, TargetParms(), true))

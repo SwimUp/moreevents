@@ -42,7 +42,6 @@
 		<building>
 			<canPlaceOverWall>true</canPlaceOverWall>
 		</building>
-		<designationCategory>Temperature</designationCategory>
 		<designationHotKey>Misc5</designationHotKey>
 		<comps>
 			<li Class="CompProperties_Flickable">

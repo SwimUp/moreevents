@@ -74,7 +74,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 47;
+        private static int totalSettings = 52;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -386,6 +386,36 @@ namespace MoreEvents
             },
             {
             "HighMutantPopulation", new EventSettings("HighMutantPopulation")
+            {
+                    Active = true
+            }
+            },
+            {
+            "Fair", new EventSettings("Fair")
+            {
+                    Active = true
+            }
+            },
+            {
+            "ExplosiveFever", new EventSettings("ExplosiveFever")
+            {
+                    Active = true
+            }
+            },
+            {
+            "GlacialPeriod", new EventSettings("GlacialPeriod")
+            {
+                    Active = true
+            }
+            },
+            {
+            "ActiveStar", new EventSettings("ActiveStar")
+            {
+                    Active = true
+            }
+            },
+            {
+            "Competitions", new EventSettings("Competitions")
             {
                     Active = true
             }
@@ -770,6 +800,36 @@ namespace MoreEvents
             },
             {
             "HighMutantPopulation", new EventSettings("HighMutantPopulation")
+            {
+                    Active = true
+            }
+            },
+            {
+            "Fair", new EventSettings("Fair")
+            {
+                    Active = true
+            }
+            },
+            {
+            "ExplosiveFever", new EventSettings("ExplosiveFever")
+            {
+                    Active = true
+            }
+            },
+            {
+            "GlacialPeriod", new EventSettings("GlacialPeriod")
+            {
+                    Active = true
+            }
+            },
+            {
+            "ActiveStar", new EventSettings("ActiveStar")
+            {
+                    Active = true
+            }
+            },
+            {
+            "Competitions", new EventSettings("Competitions")
             {
                     Active = true
             }

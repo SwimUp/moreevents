@@ -359,6 +359,18 @@ namespace QuestRim
             CommunicationDialogs.Add(dialog);
         }
 
+        public CommunicationDialog MakeDialogFromIncident(IncidentDef incident, List<CommOption> options = null)
+        {
+            return new CommunicationDialog
+            {
+                id = UniqueIdManager.GetNextDialogID(),
+                CardLabel = incident.LabelCap,
+                Description = string.IsNullOrEmpty(incident.description) ? incident.letterText : incident.description,
+                RelatedIncident = incident,
+                Options = options
+            };
+        }
+
         public void ExposeData()
         {
             Scribe_Deep.Look(ref uniqueIdManager, "UniqueIdManager");

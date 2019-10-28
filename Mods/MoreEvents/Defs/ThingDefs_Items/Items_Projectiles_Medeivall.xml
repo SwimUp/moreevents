@@ -80,7 +80,7 @@
 		<projectile>
 			<damageDef>Blunt</damageDef>
 			<speed>40</speed>
-			<damageAmountBase>23</damageAmountBase>
+			<damageAmountBase>40</damageAmountBase>
 			<explosionRadius>1.5</explosionRadius>
 			<flyOverhead>true</flyOverhead>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
@@ -113,8 +113,8 @@
 			<drawSize>2</drawSize>
 		</graphicData>
 		<projectile>
-			<damageDef>Cut</damageDef>
-			<damageAmountBase>35</damageAmountBase>
+			<damageDef>Crush</damageDef>
+			<damageAmountBase>40</damageAmountBase>
 			<speed>85</speed>
 		</projectile>
 	</ThingDef>

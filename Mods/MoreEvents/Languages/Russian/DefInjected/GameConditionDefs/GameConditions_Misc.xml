@@ -66,4 +66,10 @@
   <HighMutantPopulation.description>Популяция мутантов на планете резко увеличилась. Им ненужны пленники - им нужна только кровь. Пока популяция не снизится, шансы на нападение мутантов сильно увеличен.</HighMutantPopulation.description>  
   <HighMutantPopulation.endMessage>Популяция мутантов снизилась</HighMutantPopulation.endMessage>
 
+  <GlacialPeriod.label>Ледниковый период</GlacialPeriod.label>
+  <GlacialPeriod.description>На планете начинается ледниковый период. Каждые несколько дней температура будет опускаться и вся планета будет превращена в ледник</GlacialPeriod.description>  
+  
+  <ActiveStar.label>Активная звезда</ActiveStar.label>
+  <ActiveStar.description>Основная звезда в вашей системе очень активная, оно выкидывает мощные всплески энергии которые вызывают повышение температуры и ожоги всем, кто находится на открытой местности во время всплеска</ActiveStar.description>  
+
 </LanguageData>

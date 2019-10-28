@@ -24,13 +24,13 @@ namespace MoreEvents.Events.ClimateBomb
 
         private int[] threatsMap = new int[]
         {
+            400,
+            500,
             700,
-            1200,
-            1700,
-            2000,
-            2400,
-            3300,
-            3900
+            700,
+            800,
+            1000,
+            1000
         };
         private float[] reqDefuse = new float[]
         {

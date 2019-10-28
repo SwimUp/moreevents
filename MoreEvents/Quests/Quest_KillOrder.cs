@@ -1,5 +1,6 @@
 ﻿using MapGeneratorBlueprints.MapGenerator;
 using QuestRim;
+using RimOverhaul;
 using RimOverhaul.AI;
 using RimWorld;
 using RimWorld.Planet;
@@ -82,21 +83,11 @@ namespace MoreEvents.Quests
                 return false;
             }
 
-            if (TargetPawn != null && AnyHostileOnMap(site.Map, TargetPawn.Faction))
+            if (TargetPawn != null && HostileUtility.AnyNonDownedHostileOnMap(site.Map, TargetPawn.Faction))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
             }
-
-            return true;
-        }
-
-        private bool AnyHostileOnMap(Map map, Faction enemyFaction)
-        {
-            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && !p.Dead && p.RaceProps.Humanlike).ToList();
-
-            if (enemyPawns == null || enemyPawns.Count == 0)
-                return false;
 
             return true;
         }

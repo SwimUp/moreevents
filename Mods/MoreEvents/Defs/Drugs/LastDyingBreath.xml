@@ -40,9 +40,10 @@
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
+		<lethalSeverity>1.0</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-1.0</severityPerDay>
+				<severityPerDay>5.0</severityPerDay>
 			</li>
 			<li Class="MoreEvents.Hediffs.HediffCompProperties_AutoHeal">
 				<HealTicks>50</HealTicks>

@@ -40,11 +40,15 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public bool Ready => refuelableComp.HasFuel && IngredientsReady;
 
-        public bool IngredientsReady => !SelectedRecipe.ingredients.Any(x => x.GetBaseCount() != ContainedResources[x.FixedIngredient]);
+        public bool IngredientsReady => !SelectedRecipe.ingredients.Any(x => x.GetBaseCount() * Multiplier != ContainedResources[x.FixedIngredient]);
 
         public int ProduceCount = 0;
         public bool Infinity = false;
         public string buffer;
+
+        public int Multiplier = 1;
+        public string multiplierBuffer;
+        public int MaxMultiplier => 25;
 
         static Building_CokeFurnace()
         {
@@ -58,6 +62,7 @@ namespace RimOverhaul.Things.CokeFurnace
                 ContainedResources = new Dictionary<ThingDef, int>();
 
             SelectedRecipe = recipe;
+            ContainedResources.Clear();
 
             DropContainedResources();
 
@@ -73,7 +78,6 @@ namespace RimOverhaul.Things.CokeFurnace
                 return;
 
             GenDrop.TryDropSpawn(result, InteractionCell, Map, ThingPlaceMode.Near, out Thing resultingThing);
-            //GenSpawn.Spawn(result, InteractionCell, Map);
             result = null;
 
             if (!Infinity)
@@ -85,8 +89,10 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public void DropContainedResources()
         {
-            foreach (var resource in ContainedResources)
+            for(int i = 0; i < ContainedResources.Count; i++)
             {
+                var resource = ContainedResources.ElementAt(i);
+
                 if (resource.Value > 0)
                 {
                     if (CellFinder.TryFindRandomCellNear(Position, Map, 4, null, out IntVec3 result))
@@ -95,12 +101,11 @@ namespace RimOverhaul.Things.CokeFurnace
                         t.stackCount = resource.Value;
 
                         GenDrop.TryDropSpawn(t, result, Map, ThingPlaceMode.Near, out Thing resultingThing);
-                        //GenSpawn.Spawn(t, result, Map);
+
+                        ContainedResources[resource.Key] = 0;
                     }
                 }
             }
-
-            ContainedResources.Clear();
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -133,7 +138,7 @@ namespace RimOverhaul.Things.CokeFurnace
             {
                 IngredientCount ingr = SelectedRecipe.ingredients.Where(x => x.FixedIngredient == item.def).FirstOrDefault();
 
-                int remaining = (int)ingr.GetBaseCount() - ContainedResources[item.def];
+                int remaining = (int)(ingr.GetBaseCount() * Multiplier) - ContainedResources[item.def];
                 int toSplit = Mathf.Min(item.stackCount, remaining);
                 item.SplitOff(toSplit).Destroy();
 
@@ -150,6 +155,7 @@ namespace RimOverhaul.Things.CokeFurnace
             Scribe_Values.Look(ref ticksRemaining, "ticks");
             Scribe_Values.Look(ref started, "started");
             Scribe_Deep.Look(ref result, "result");
+            Scribe_Values.Look(ref Multiplier, "Multiplier");
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -178,12 +184,12 @@ namespace RimOverhaul.Things.CokeFurnace
                 {
                     yield return new FloatMenuOption($"{"CokeFurnace_StartFire".Translate()}{reason}", null);
                 }
-
+                /*
                 if (ProduceCount > 0)
                 {
                     foreach (var item in ContainedResources)
                     {
-                        int baseCount = (int)SelectedRecipe.ingredients.Where(x => x.FixedIngredient == item.Key).FirstOrDefault().GetBaseCount();
+                        int baseCount = (int)SelectedRecipe.ingredients.Where(x => x.FixedIngredient == item.Key).FirstOrDefault().GetBaseCount() * Multiplier;
                         if (item.Value < baseCount)
                         {
                             int count = baseCount - item.Value;
@@ -213,6 +219,7 @@ namespace RimOverhaul.Things.CokeFurnace
                         }
                     }
                 }
+                */
             }
             else
             {
@@ -226,7 +233,7 @@ namespace RimOverhaul.Things.CokeFurnace
 
         public void StartCoke()
         {
-            ticksRemaining = SelectedRecipe.workAmount;
+            ticksRemaining = SelectedRecipe.workAmount * Multiplier;
 
             started = true;
         }
@@ -341,12 +348,12 @@ namespace RimOverhaul.Things.CokeFurnace
         {
             if (result != null && result.def == SelectedRecipe.products[0].thingDef)
             {
-                result.stackCount += SelectedRecipe.products[0].count;
+                result.stackCount += SelectedRecipe.products[0].count * Multiplier;
             }
             else
             {
                 result = ThingMaker.MakeThing(SelectedRecipe.products[0].thingDef);
-                result.stackCount = SelectedRecipe.products[0].count;
+                result.stackCount = SelectedRecipe.products[0].count * Multiplier;
             }
 
             StopCoke();

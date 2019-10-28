@@ -76,7 +76,7 @@ namespace MoreEvents.Events
                 Tile tile = RemainingTiles[i];
                 tile.biome = BiomeDefOf.Desert;
 
-                RemainingTiles.RemoveLast();
+                RemainingTiles.RemoveAt(i);
             }
         }
 

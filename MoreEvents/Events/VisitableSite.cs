@@ -14,6 +14,8 @@ namespace MoreEvents.Events
     {
         public bool RemoveAfterLeave = true;
 
+        public virtual bool ShowButton => true;
+
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
         {
             foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(caravan))
@@ -48,7 +50,7 @@ namespace MoreEvents.Events
                 yield return gizmo;
             }
 
-            if (base.HasMap)
+            if (ShowButton && base.HasMap)
             {
                 yield return LeaveCommand(base.Map);
             }

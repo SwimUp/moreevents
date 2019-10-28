@@ -1,6 +1,7 @@
 ﻿using DarkNET;
 using DarkNET.Traders;
 using EmailMessages;
+using MoreEvents;
 using MoreEvents.Communications;
 using MoreEvents.Quests;
 using QuestRim;
@@ -215,6 +216,11 @@ namespace DiaRim
                                     quest.ShowInConsole = false;
                                     QuestsManager.Communications.AddQuestPawn(pawn, quest);
                                     QuestsManager.Communications.AddQuest(quest);
+                                }));
+                                list2.Add(new FloatMenuOption("Kill order", delegate
+                                {
+                                    Quest_KillOrder quest_KillOrder = new Quest_KillOrder();
+                                    quest_KillOrder.TryGiveQuestTo(pawn, QuestDefOfLocal.Quest_KillOrder);
                                 }));
 
                                 Find.WindowStack.Add(new FloatMenu(list2));

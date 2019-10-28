@@ -41,7 +41,7 @@ namespace MoreEvents.Events
             if (enemyFaction.leader == null)
                 return false;
 
-            if (!TileFinder.TryFindPassableTileWithTraversalDistance(Find.AnyPlayerHomeMap.Tile, 8, 20, out int result))
+            if (!TileFinder.TryFindPassableTileWithTraversalDistance(Find.AnyPlayerHomeMap.Tile, 7, 16, out int result))
                 return false;
 
             Quest_KillLeader quest = new Quest_KillLeader(enemyFaction.leader, Rand.Range(11, 17));

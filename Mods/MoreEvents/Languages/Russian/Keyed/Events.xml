@@ -5,10 +5,10 @@
 	<DS_InstallCommand_Desc>Установить объект</DS_InstallCommand_Desc>
 
 	<Supernova_label>Взрыв сверхновой</Supernova_label>
-	<SupernovaExp_low>На расстоянии нескольких сотен тысяч световых лет произошел взрыв сверхновой. Это не причинит вреда, но позволит наблюдать красивое зрелище.</SupernovaExp_low>
+	<SupernovaExp_low>На расстоянии нескольких сотен тысяч световых лет произошел взрыв сверхновой. Он не причинит никакого вреда и будет виден со всех уголков планеты, что позволит наблюдать красивое зрелище</SupernovaExp_low>
 	<SupernovaExp_medium>На расстоянии нескольких десятков тысяч световых лет произошел взрыв сверхновой. Ожидается небольшой метеоритный дождь и повышение температуры.</SupernovaExp_medium>
 	<SupernovaExp_high>На расстоянии нескольких тычяч световых лет произошел взрыв сверхновой. Ожидайте мощные метеоритные дожди, очень сильное повышение температуры и продолжительный день.</SupernovaExp_high>
-	<SupernovaExp_ultra>На расстоянии нескольких сотен световых лет произошел взрыв сверхновой. Отличный шанс попасть в ад не умирая.</SupernovaExp_ultra>
+	<SupernovaExp_ultra>На расстоянии нескольких сотен световых лет произошел взрыв сверхновой. Ожидайте мощные метеоритные дожди, продолжительные дни, очень сильное повышение температуры. Так же взрыв, вероятно, уничтожит часть атмосферы.</SupernovaExp_ultra>
 
 	<HiveCreaturesCount>Особей: </HiveCreaturesCount>
 	<HiveLevel>Уровень: </HiveLevel>
@@ -241,5 +241,31 @@ COMMANDS:
 	
 	<CompChargeableWeapon_ChargeLabel>Заряд: {0}%</CompChargeableWeapon_ChargeLabel>
 	<CompChargeableWeapon_ChargeDesc>Заряд предмета. Когда он закончится, предмет потеряет большинство своей силы.</CompChargeableWeapon_ChargeDesc>
+	
+	<FairPlace_GetInspectString>Осталось: {0} дней</FairPlace_GetInspectString>
+	<EnterToMap_Option>Войти в {0}</EnterToMap_Option>
+	
+	<Fair_EndTitle>Ярмарка окончена</Fair_EndTitle>
+	<Fair_EndDesc>Ярмарка была завершена, спасибо за участие!</Fair_EndDesc>
+	
+	<Competitions_Label>Начать соревнование</Competitions_Label>
+	<Competitions_ReportString>Начать соревнование</Competitions_ReportString>
+	<NotEnoughtSkillForComp>В караване нет поселенцев с достаточным уровнем навыка</NotEnoughtSkillForComp>
+	<Competitions_DayResultTitle>Результаты {0} дня
+Лидерство держит {1} (фракция {2})\n</Competitions_DayResultTitle>
+	<Competitions_DayResultTitle2>Результаты {0} дня</Competitions_DayResultTitle2>
+	<Competitions_WinnerDesc>В соревновании по {0} победила фракция {1}, которую представлял {2}. Он победил, имея количество очков - {3}. 
+	
+Награда составила {4} серебра и полезный опыт к навыку.</Competitions_WinnerDesc>
+	<Competitions_WinnerTitle>Результаты соревнований</Competitions_WinnerTitle>
+	<Competitions_JustEndTitle>Соревнование окончено</Competitions_JustEndTitle>
+	<Competitions_JustEndDesc>Соревнование по {0} окончено. Вы не приняли участие.</Competitions_JustEndDesc>
+	<EnterToCompetitions>Участвовать</EnterToCompetitions>
+	<Competitions_EnterToCompetitionsTitle>Соревнования начинаются!</Competitions_EnterToCompetitionsTitle>
+	<Competitions_EnterToCompetitionsDesc>Соревнования начинаются!
+	
+Соревнование длиться 3 дня, каждый день вы будете получать статистику, где сможете отслеживать место вашего представителя в таблице счета</Competitions_EnterToCompetitionsDesc>
+	<WorldObject_Competitions_ScorePlaceHolder>(очков)</WorldObject_Competitions_ScorePlaceHolder>
+	<WorldObject_Competitions_YouPlaceHolder>ваш представитель</WorldObject_Competitions_YouPlaceHolder>
 	
 </LanguageData>

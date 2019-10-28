@@ -320,8 +320,8 @@
 		<baseChance>3.5</baseChance>
 		<minRefireDays>10</minRefireDays>
 		<durationDays>
-			<min>4.0</min>
-			<max>10.0</max>
+			<min>1.0</min>
+			<max>3.0</max>
 		</durationDays>
 		<allowedBiomes>
 			<li>Desert</li>
@@ -961,6 +961,113 @@ Until the population drops, the risk of mutant attacks is very high.</letterText
 			<min>10</min>
 			<max>60</max>
 		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+
+	<!-- Событие: Ярмарка -->
+	<IncidentDef>
+		<defName>Fair</defName>
+		<label>Fair!</label>
+		<letterLabel>Fair!</letterLabel>
+		<letterText>You were invited to a fair where there will be a lot of traders (from factions whose relations are either neutral or friendly).
+
+You can see event in geocape.
+		</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.IncidentWorker_Fair</workerClass>
+		<category>Misc</category>
+		<minRefireDays>60</minRefireDays>
+		<baseChance>2.0</baseChance>
+		<earliestDay>50</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Взрывная лихорадка -->
+	<IncidentDef>
+		<defName>ExplosiveFever</defName>
+		<label>Explosive fever!</label>
+		<letterLabel>Fair!</letterLabel>
+		<letterText>The Boomalops in these places spread explosive fever. If it cannot be cured in time, then the infected part may explode!</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MoreEvents.Events.IncidentWorker_Disease_ExplosiveFever</workerClass>
+		<category>Misc</category>
+		<minRefireDays>60</minRefireDays>
+		<baseChance>0.6</baseChance>
+		<earliestDay>80</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Ледниковый период -->
+	<IncidentDef>
+		<defName>GlacialPeriod</defName>
+		<label>Glacial period</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>GlacialPeriod</gameCondition>
+		<letterLabel>Glacial period</letterLabel>
+		<letterText>The glacial period begins on the planet. Every few days the temperature will drop and the whole planet will turn into a glacier.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>120</min>
+			<max>200</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Активная звезда -->
+	<IncidentDef>
+		<defName>ActiveStar</defName>
+		<label>Active star</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>ActiveStar</gameCondition>
+		<letterLabel>Active star</letterLabel>
+		<letterText>The main star in your system is very active, it throws out powerful bursts of energy that cause fever and burns to everyone who is in the open during a burst.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>0</baseChance>
+		<earliestDay>30</earliestDay>
+		<minRefireDays>140</minRefireDays>
+		<minDifficulty>2</minDifficulty>
+		<durationDays>
+			<min>120</min>
+			<max>200</max>
+		</durationDays>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Состязания -->
+	<IncidentDef>
+		<defName>Competitions</defName>
+		<label>Competitions</label>
+		<letterLabel>Competitions</letterLabel>
+		<letterText>Competitions on {0} have begun. The winner will receive a reward in the amount of {1}.
+
+To participate in the competition you need a settler with skill {0} not lower than {2} level. Form a caravan and send it to the competitions mark.</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.Competitions.IncidentWorker_Competitions</workerClass>
+		<category>Misc</category>
+		<minRefireDays>65</minRefireDays>
+		<baseChance>1.4</baseChance>
+		<earliestDay>15</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 

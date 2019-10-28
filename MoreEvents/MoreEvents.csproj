@@ -123,6 +123,10 @@
     <Compile Include="Events\ClimateBomb\IncidentWorker_ClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\JobDriver_DisableClimateBomb.cs" />
     <Compile Include="Events\ClimateBomb\LightingDestroyEffect_ClimateBombComp.cs" />
+    <Compile Include="Events\Competitions\CaravanArrivalAction_StartCompetitions.cs" />
+    <Compile Include="Events\Competitions\CommOption_CompetitionsPaid.cs" />
+    <Compile Include="Events\Competitions\IncidentWorker_Competitions.cs" />
+    <Compile Include="Events\Competitions\WorldObject_Competitions.cs" />
     <Compile Include="Events\ConcantrationCamp\ConcantrationCamp.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_Doomsday.cs" />
     <Compile Include="Events\DoomsdayUltimatum\CaravanArrivalAction_GiveRansom.cs" />
@@ -138,6 +142,9 @@
     <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Logout.cs" />
     <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Security.cs" />
     <Compile Include="Events\DoomsdayUltimatum\TerminalCommand_Users.cs" />
+    <Compile Include="Events\Fair\FairPlace.cs" />
+    <Compile Include="Events\GameCondition_ActiveStar.cs" />
+    <Compile Include="Events\GameCondition_GlacialPeriod.cs" />
     <Compile Include="Events\GameCondition_Earthquake.cs" />
     <Compile Include="Events\GameCondition_HighMutantPopulation.cs" />
     <Compile Include="Events\GameCondition_IonizedAtmosphere.cs" />
@@ -147,8 +154,10 @@
     <Compile Include="Events\DoesntHasExitCells_Comp.cs" />
     <Compile Include="Events\IncidentWorker_Arsonists.cs" />
     <Compile Include="Events\ConcantrationCamp\IncidentWorker_ConcantrationCamp.cs" />
+    <Compile Include="Events\IncidentWorker_Disease_ExplosiveFever.cs" />
     <Compile Include="Events\IncidentWorker_DropInsaneAnimals.cs" />
     <Compile Include="Events\IncidentWorker_Earthquake.cs" />
+    <Compile Include="Events\IncidentWorker_Fair.cs" />
     <Compile Include="Events\IncidentWorker_HungryCannibalsRaid.cs" />
     <Compile Include="Events\IncidentWorker_MineralMeteorite.cs" />
     <Compile Include="Events\IncidentWorker_Quest_BuildNewBase.cs" />
@@ -245,6 +254,7 @@
     <Compile Include="Hediffs\HediffCompProperties_AutoHeal.cs" />
     <Compile Include="Hediffs\HediffCompProperties_ClearHediffChance.cs" />
     <Compile Include="Hediffs\HediffCompProperties_ClearHediffPerUse.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_Explode.cs" />
     <Compile Include="Hediffs\HediffCompProperties_GiveMentalBreak.cs" />
     <Compile Include="Hediffs\HediffCompProperties_NeuroWormsTick.cs" />
     <Compile Include="Hediffs\HediffCompProperties_FibroTick.cs" />
@@ -252,6 +262,7 @@
     <Compile Include="Hediffs\HediffCompProperties_SeverityPerDayManaged.cs" />
     <Compile Include="Hediffs\HediffCompProperties_UseCooldown.cs" />
     <Compile Include="Hediffs\HediffComp_ApplyHediffAfter.cs" />
+    <Compile Include="Hediffs\HediffComp_Explode.cs" />
     <Compile Include="Hediffs\HediffComp_AutoHeal.cs" />
     <Compile Include="Hediffs\HediffComp_ClearHediffChance.cs" />
     <Compile Include="Hediffs\HediffComp_ClearHediffPerUse.cs" />
@@ -283,6 +294,7 @@
     <Compile Include="Patch\InitializeComps.cs" />
     <Compile Include="Patch\Verb_MeleeAttack.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillOrderMap.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_EnterToMapWithGenerator.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapWithGenerator.cs" />
     <Compile Include="Quests\Quest_KillOrder.cs" />
     <Compile Include="RaidUtils.cs" />

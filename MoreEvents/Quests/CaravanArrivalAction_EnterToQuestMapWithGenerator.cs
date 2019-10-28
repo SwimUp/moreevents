@@ -38,7 +38,6 @@ namespace RimOverhaul.Quests
             Map map = Current.Game.FindMap(tile);
             if (map == null)
             {
-                Log.Message("GEN: " + mapSize);
                 map = Verse.MapGenerator.GenerateMap(mapSize, MapParent, MapGeneratorDefOfLocal.EmptyMap);
             }
             return map;

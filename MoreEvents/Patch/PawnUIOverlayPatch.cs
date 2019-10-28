@@ -17,6 +17,7 @@ namespace MoreEvents.Patch
     {
         private static readonly Material ExclamationPointMat = MaterialPool.MatFrom("UI/Overlays/QuestPoint", ShaderDatabase.MetaOverlay);
 
+        [HarmonyAfter(new string[] { "rimoverhaul.pawnui.postfix.patch" })]
         static void Postfix(PawnRenderer __instance)
         {
             var pawn = Traverse.Create(__instance).Field("pawn").GetValue<Pawn>();

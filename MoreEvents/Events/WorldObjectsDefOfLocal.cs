@@ -14,5 +14,7 @@ namespace MoreEvents.Events
         public static WorldObjectDef FriendlySettlementHelp;
         public static WorldObjectDef DoomsdayUltimatumCamp;
         public static WorldObjectDef ConcantrationCamp;
+        public static WorldObjectDef FairPlace;
+        public static WorldObjectDef CompetitionsPlace;
     }
 }

@@ -74,10 +74,6 @@ namespace DarkNET.Traders
             {
                 tab = Tab.OneTime;
             }, tab == Tab.OneTime));
-            tabsList.Add(new TabRecord("Eisenberg_OrderWindow_Supplies".Translate(), delegate
-            {
-                tab = Tab.Supplies;
-            }, tab == Tab.Supplies));
 
             Widgets.DrawMenuSection(rect2);
             TabDrawer.DrawTabs(rect2, tabsList, maxTabWidth: 550);

@@ -1,4 +1,5 @@
 ﻿using QuestRim;
+using RimOverhaul;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -108,21 +109,11 @@ namespace MoreEvents.Quests
 
         public override bool CanLeaveFromSite(QuestSite site)
         {
-            if (AnyHostileOnMap(site.Map, Faction.OfAncientsHostile))
+            if (HostileUtility.AnyNonDownedHostileOnMap(site.Map, Faction.OfAncientsHostile))
             {
                 Messages.Message(Translator.Translate("EnemyOnTheMap"), MessageTypeDefOf.NeutralEvent, false);
                 return false;
             }
-
-            return true;
-        }
-
-        private bool AnyHostileOnMap(Map map, Faction enemyFaction)
-        {
-            List<Pawn> enemyPawns = map.mapPawns.AllPawnsSpawned.Where(p => p.Faction == enemyFaction && !p.Downed && p.RaceProps.Humanlike).ToList();
-
-            if (enemyPawns == null || enemyPawns.Count == 0)
-                return false;
 
             return true;
         }

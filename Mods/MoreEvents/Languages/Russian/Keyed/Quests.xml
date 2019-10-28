@@ -39,7 +39,9 @@
 	<Quest_MissingPeople_CardLabel>Пропавшие без вести</Quest_MissingPeople_CardLabel>
 	<Quest_MissingPeople_Description>С нами связался лидер фракции {0} и сообщил, что пару дней назад небольшая группа их поселенцев отправилась в поход за ресурсами. Предположительное время их пути было оцененно в {1} дней. Прошло более {2} дней, но поселенцы так и не вернулись. Попытки выйти на связь не увенчались успехом. \nЗапасов еды, которым они располагали, хватит еще примерно на {3} дней, после чего они начнут голодать. Он просит нас разыскать пропавших поселенцев и вернуть их обратно.</Quest_MissingPeople_Description>
 	<Quest_MissingPeople_PlaceLabel>Потенциальное место поселенцев</Quest_MissingPeople_PlaceLabel>
+	<Quest_MissingPeople_PlaceLabelSaved>Место назначения</Quest_MissingPeople_PlaceLabelSaved>
 	<Quest_MissingPeople_InspectString>Потенциальное место затерявшихся поселенцев. \nЕда закончится через: {0} (дней)</Quest_MissingPeople_InspectString>
+	<Quest_MissingPeople_InspectString2>Дом пропавших поселенцев. \nВремя, чтобы доставить поселенцев: {0} (дней)</Quest_MissingPeople_InspectString2>
 	<Quest_CheckMissingPeople_Action>Обследовать место</Quest_CheckMissingPeople_Action>
 	<Quest_MissingPeople_CheckFailTitle>Ничего не обнаружено</Quest_MissingPeople_CheckFailTitle>
 	<Quest_MissingPeople_CheckFail>Мы прибыли на место. Бродив по окрестностям, мы заглядывали в каждый уголок, но не нашли никаких следов поселенцев. Вероятно, нам следует проверить другое место (новое место отмечено на карте).</Quest_MissingPeople_CheckFail>

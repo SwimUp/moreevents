@@ -51,6 +51,7 @@ namespace MoreEvents.Communications
 
                     if (optionGetHelp.HelpCount < 0)
                         optionGetHelp.HelpCount = 0;
+
                     return;
                 }
             }

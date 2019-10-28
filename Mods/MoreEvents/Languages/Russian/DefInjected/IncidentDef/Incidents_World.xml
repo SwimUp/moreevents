@@ -203,4 +203,29 @@
   <HighMutantPopulation.letterLabel>Высокая популяция мутантов</HighMutantPopulation.letterLabel>
   <HighMutantPopulation.letterText>Популяция мутантов на планете резко увеличилась. Им ненужны пленники - им нужна только кровь. Пока популяция не снизится, шансы на нападение мутантов сильно увеличен.</HighMutantPopulation.letterText>  
   
+  <Fair.label>Ярмарка!</Fair.label>
+  <Fair.letterLabel>Ярмарка!</Fair.letterLabel>
+  <Fair.letterText>Вас пригласили на ярмарку, на которой будет множество торговцев (от фракций, отношения с которыми либо нейтральны, либо дружеские)
+  
+Событие можно найти в планетарной консоли связи</Fair.letterText>  
+  
+  <ExplosiveFever.label>Взрывная лихорадка</ExplosiveFever.label>
+  <ExplosiveFever.letterLabel>Взрывная лихорадка</ExplosiveFever.letterLabel>
+  <ExplosiveFever.letterText>Бумалупы, находящиеся в этих местах распространили взрывную лихорадку. Если её вовремя не вылечить, то зараженная часть может взорваться!</ExplosiveFever.letterText> 
+
+  <GlacialPeriod.label>Ледниковый период</GlacialPeriod.label>
+  <GlacialPeriod.letterLabel>Ледниковый период</GlacialPeriod.letterLabel>
+  <GlacialPeriod.letterText>На планете начинается ледниковый период. Каждые несколько дней температура будет опускаться и вся планета будет превращена в ледник</GlacialPeriod.letterText> 
+
+  <ActiveStar.label>Активная звезда</ActiveStar.label>
+  <ActiveStar.letterLabel>Активная звезда</ActiveStar.letterLabel>
+  <ActiveStar.letterText>Основная звезда в вашей системе очень активная, оно выкидывает мощные всплески энергии которые вызывают повышение температуры и ожоги всем, кто находится на открытой местности во время всплеска</ActiveStar.letterText> 
+
+  <Competitions.label>Соревнование</Competitions.label>
+  <Competitions.letterLabel>Соревнование</Competitions.letterLabel>
+  <Competitions.letterText>Начались соревнования по {0}. Победитель получит награду на сумму {1}.
+
+Чтобы поучаствовать в соревновании вам требуется поселенец с навыком {0} не ниже {2} уровня. Сформируйте караван и отправьте его на место соревнований.</Competitions.letterText> 
+
+
 </LanguageData>

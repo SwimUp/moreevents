@@ -120,6 +120,17 @@ namespace MoreEvents.Events.ShipCrash
             return command;
         }
 
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
+        {
+            if (!base.Map.mapPawns.AnyPawnBlockingMapRemoval)
+            {
+                alsoRemoveWorldObject = true;
+                return true;
+            }
+
+            alsoRemoveWorldObject = false;
+            return false;
+        }
         public static void ForceReform(MapParent mapParent)
         {
             if (GenHostility.AnyHostileActiveThreatToPlayer(mapParent.Map))
