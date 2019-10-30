@@ -265,5 +265,15 @@ The reward was {4} silver and a rewarding experience to skill.</Competitions_Win
 The competition lasts 3 days, every day you will receive statistics where you can track the place of your representative in the score table</Competitions_EnterToCompetitionsDesc>
 	<WorldObject_Competitions_ScorePlaceHolder>(points)</WorldObject_Competitions_ScorePlaceHolder>
 	<WorldObject_Competitions_YouPlaceHolder>your representative</WorldObject_Competitions_YouPlaceHolder>
+	<CommOption_CompetitionsPaid>To bribe judges (600 silver)</CommOption_CompetitionsPaid>
+	<Competitions_AlreadyPaid>You have already bribed the judges</Competitions_AlreadyPaid>
+	<Competitions_JudgPaidTitle>Judges successfully bribed</Competitions_JudgPaidTitle>
+	<Competitions_JudgPaidDesc>You have successfully bribed the judges. This will give you an extra 7 points.</Competitions_JudgPaidDesc>
+	<Competitions_NeedToStartForPaid>First you need to come to the competition</Competitions_NeedToStartForPaid>
+	<Competitions_JudgePaidFailTitle>Judge inspection</Competitions_JudgePaidFailTitle>
+	<Competitions_JudgePaidFailDesc>As a result of the inspection of the judges, it turned out that you bribed them. This will worsen relations with participating factions..</Competitions_JudgePaidFailDesc>
+	<Competitions_JudgePaidReason>judging</Competitions_JudgePaidReason>
+	
+	<MassBurialPlace_WhyAffect>plunder of graves</MassBurialPlace_WhyAffect>
 	
 </LanguageData>

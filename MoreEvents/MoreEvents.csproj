@@ -105,6 +105,12 @@
     <Compile Include="Constellations\ConstellationsDef.cs" />
     <Compile Include="Constellations\GameCondition_Contellations.cs" />
     <Compile Include="Constellations\IncidentWorker_Constellations.cs" />
+    <Compile Include="Events\CaravanArrivalAction_EnterToRaidMap.cs" />
+    <Compile Include="Events\MassBurial\IncidentWorker_MassBurial.cs" />
+    <Compile Include="Events\MassBurial\MassBurialPlace.cs" />
+    <Compile Include="Events\PlaceBattle\IncidentWorker_PlaceBattle.cs" />
+    <Compile Include="Events\PlaceBattle\PlaceBattle.cs" />
+    <Compile Include="PriceUtils.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
     <Compile Include="DialogDefOfLocal.cs" />
     <Compile Include="Events\AttackFriendlySettlement\CaravanArrivalAction_HelpFriendlySettlement.cs" />

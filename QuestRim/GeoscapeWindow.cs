@@ -194,7 +194,7 @@ namespace QuestRim
             {
                 CommOption option = currentDialog.Options[i];
 
-                if(DrawCustomButton(startRect, option.Label, Color.white))
+                if(DrawCustomButton(startRect, option.Label, option.TextColor))
                 {
                     option.DoAction(currentDialog, speaker, defendant);
                 }

@@ -11,8 +11,13 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_Ambush_TwoEnemyFaction : IncidentWorker_Ambush_EnemyFaction
     {
+        private EventSettings settings => Settings.EventsSettings["AmbushTwoFactions"];
+
         protected override bool CanFireNowSub(IncidentParms parms)
         {
+            if (!settings.Active)
+                return false;
+
             Map map = parms.target as Map;
 
             List<Pair<Faction, Faction>> factions = new List<Pair<Faction, Faction>>();

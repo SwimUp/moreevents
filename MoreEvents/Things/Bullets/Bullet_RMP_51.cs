@@ -13,5 +13,7 @@ namespace RimOverhaul.Things.Bullets
         public override HediffDef HediffDef => HediffDefOfLocal.InternalBleeding;
 
         public override float SeverityPerShot => 0.09f;
+
+        public override bool FleshOnly => true;
     }
 }

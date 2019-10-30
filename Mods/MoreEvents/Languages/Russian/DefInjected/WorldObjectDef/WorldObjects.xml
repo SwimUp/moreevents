@@ -28,4 +28,10 @@
   <CompetitionsPlace.label>Соревнование</CompetitionsPlace.label>
   <CompetitionsPlace.description>Место проведения соревнований по {0} (требуемый уровень {1})</CompetitionsPlace.description>
 
+  <MassBurialPlace.label>Массовое захоронение</MassBurialPlace.label>
+  <MassBurialPlace.description>Массовое захоронение {0}</MassBurialPlace.description>
+
+  <PlaceBattle.label>Место битвы</PlaceBattle.label>
+  <PlaceBattle.description>Место битвы</PlaceBattle.description>
+
 </LanguageData>

@@ -10,6 +10,7 @@ namespace RimOverhaul.Things.Bullets
 {
     public class Bullet_RMP_56 : Bullet_Hediff
     {
+        public override bool FleshOnly => true;
         public override HediffDef HediffDef => HediffDefOfLocal.InternalBleeding;
 
         public override float SeverityPerShot => 0.03f;

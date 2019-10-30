@@ -16,5 +16,7 @@ namespace MoreEvents.Events
         public static WorldObjectDef ConcantrationCamp;
         public static WorldObjectDef FairPlace;
         public static WorldObjectDef CompetitionsPlace;
+        public static WorldObjectDef MassBurialPlace;
+        public static WorldObjectDef PlaceBattle;
     }
 }

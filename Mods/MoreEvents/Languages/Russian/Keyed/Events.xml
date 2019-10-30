@@ -267,5 +267,15 @@ COMMANDS:
 Соревнование длиться 3 дня, каждый день вы будете получать статистику, где сможете отслеживать место вашего представителя в таблице счета</Competitions_EnterToCompetitionsDesc>
 	<WorldObject_Competitions_ScorePlaceHolder>(очков)</WorldObject_Competitions_ScorePlaceHolder>
 	<WorldObject_Competitions_YouPlaceHolder>ваш представитель</WorldObject_Competitions_YouPlaceHolder>
+	<CommOption_CompetitionsPaid>Подкупить судей (600 серебра)</CommOption_CompetitionsPaid>
+	<Competitions_AlreadyPaid>Вы уже подкупили судей</Competitions_AlreadyPaid>
+	<Competitions_JudgPaidTitle>Судьи успешно подкуплены</Competitions_JudgPaidTitle>
+	<Competitions_JudgPaidDesc>Вы успешно подкупили судей. Это даст вам дополнительно 7 очков.</Competitions_JudgPaidDesc>
+	<Competitions_NeedToStartForPaid>Сначала нужно прийти на соревнования</Competitions_NeedToStartForPaid>
+	<Competitions_JudgePaidFailTitle>Проверка судей </Competitions_JudgePaidFailTitle>
+	<Competitions_JudgePaidFailDesc>В результате проверки судей выяснилось, что вы подкупали их. Это ухудшит отношения с фракциями-участниками.</Competitions_JudgePaidFailDesc>
+	<Competitions_JudgePaidReason>подкупка судей</Competitions_JudgePaidReason>
+	
+	<MassBurialPlace_WhyAffect>разграбление могил</MassBurialPlace_WhyAffect>
 	
 </LanguageData>

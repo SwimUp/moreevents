@@ -129,6 +129,9 @@
 		<expandingIcon>true</expandingIcon>
 		<texture>Map/Fair</texture>
 		<expandingIconPriority>100</expandingIconPriority>
+		<IncidentTargetTags>
+			<li>Map_Misc</li>
+		</IncidentTargetTags>
 	</WorldObjectDef>
 	
 	<WorldObjectDef>
@@ -139,6 +142,35 @@
 		<expandingIcon>true</expandingIcon>
 		<texture>Map/CompetitionsPlace</texture>
 		<expandingIconPriority>100</expandingIconPriority>
+		<IncidentTargetTags>
+			<li>Map_Misc</li>
+		</IncidentTargetTags>
+	</WorldObjectDef>
+
+	<WorldObjectDef>
+		<defName>MassBurialPlace</defName>
+		<label>Mass burial</label>
+		<description>Mass burial {0}</description>
+		<worldObjectClass>RimOverhaul.Events.MassBurial.MassBurialPlace</worldObjectClass>
+		<expandingIcon>true</expandingIcon>
+		<texture>Map/MassBurialPlace</texture>
+		<expandingIconPriority>100</expandingIconPriority>
+		<IncidentTargetTags>
+			<li>Map_Misc</li>
+		</IncidentTargetTags>
+	</WorldObjectDef>
+
+	<WorldObjectDef>
+		<defName>PlaceBattle</defName>
+		<label>Place of battle</label>
+		<description>Place of battle</description>
+		<worldObjectClass>RimOverhaul.Events.PlaceBattle.PlaceBattle</worldObjectClass>
+		<expandingIcon>true</expandingIcon>
+		<texture>Map/PlaceBattle</texture>
+		<expandingIconPriority>100</expandingIconPriority>
+		<IncidentTargetTags>
+			<li>Map_Misc</li>
+		</IncidentTargetTags>
 	</WorldObjectDef>
 
 </Defs>

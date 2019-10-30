@@ -1058,7 +1058,9 @@ You can see event in geocape.
 		<letterLabel>Competitions</letterLabel>
 		<letterText>Competitions on {0} have begun. The winner will receive a reward in the amount of {1}.
 
-To participate in the competition you need a settler with skill {0} not lower than {2} level. Form a caravan and send it to the competitions mark.</letterText>
+To participate in the competition you need a settler with skill {0} not lower than {2} level. Form a caravan and send it to the competitions mark.
+
+You can also bribe the judges, which will give you extra points (use the geoscape). However, the fact that you bribed judges can be revealed and then relations with other factions will be reduced.</letterText>
 		<letterDef>PositiveEvent</letterDef>
 		<targetTags>
 			<li>World</li>
@@ -1068,6 +1070,45 @@ To participate in the competition you need a settler with skill {0} not lower th
 		<minRefireDays>65</minRefireDays>
 		<baseChance>1.4</baseChance>
 		<earliestDay>15</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Массовое захоронение -->
+	<IncidentDef>
+		<defName>MassBurial</defName>
+		<label>Mass burial</label>
+		<letterLabel>Mass burial</letterLabel>
+		<letterText>Your caravan has discovered an mass grave. According to the patch of one of the corpses, it is clear that this is the burial of the fraction {0}.
+
+If you enter it, then your relationship with the faction will be reduced, and they will most likely send a group.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.MassBurial.IncidentWorker_MassBurial</workerClass>
+		<category>Misc</category>
+		<minRefireDays>45</minRefireDays>
+		<baseChance>1.0</baseChance>
+		<earliestDay>15</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
+	
+	<!-- Событие: Место битвы -->
+	<IncidentDef>
+		<defName>PlaceBattle</defName>
+		<label>Place of battle</label>
+		<letterLabel>Place of battle</letterLabel>
+		<letterText>Not far from the settlement is visible black, thick smoke. This seems to be the site of a recent battle.
+You can see what is there and rob the remaining corpses, but you need to be careful, because there can be enemies.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.PlaceBattle.IncidentWorker_PlaceBattle</workerClass>
+		<category>Misc</category>
+		<minRefireDays>70</minRefireDays>
+		<baseChance>0.6</baseChance>
+		<earliestDay>55</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
 

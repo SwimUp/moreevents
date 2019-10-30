@@ -928,7 +928,7 @@
 		</stages>
 	</HediffDef>
 
-	<HediffDef ParentName="DiseaseBase">
+	<HediffDef ParentName="InjuryBase">
 		<defName>InternalBleeding</defName>
 		<label>Internal bleeding</label>
 		<initialSeverity>0.05</initialSeverity>
@@ -938,10 +938,13 @@
 				<severityPerDay>-2.0</severityPerDay>
 			</li>
 		</comps>
+		<injuryProps>
+			<painPerSeverity>0.023</painPerSeverity>
+			<canMerge>true</canMerge>
+		</injuryProps>
 		<stages>
 			<li>
 				<minSeverity>0.01</minSeverity>
-				<painFactor>0.05</painFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -955,7 +958,6 @@
 			</li>
 			<li>
 				<minSeverity>0.3</minSeverity>
-				<painFactor>0.15</painFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -969,7 +971,6 @@
 			</li>
 			<li>
 				<minSeverity>0.6</minSeverity>
-				<painFactor>0.3</painFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -983,7 +984,6 @@
 			</li>
 			<li>
 				<minSeverity>0.9</minSeverity>
-				<painFactor>0.5</painFactor>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -1414,7 +1414,7 @@
 		</stages>
 	</HediffDef>
 
-	<HediffDef ParentName="DiseaseBase">
+	<HediffDef ParentName="InjuryBase">
 		<defName>ExplosiveBullets</defName>
 		<label>Explosive bullets</label>
 		<initialSeverity>0.07</initialSeverity>
@@ -1423,10 +1423,13 @@
 				<severityPerDay>-2.0</severityPerDay>
 			</li>
 		</comps>
+		<injuryProps>
+			<painPerSeverity>0.02</painPerSeverity>
+			<canMerge>true</canMerge>
+		</injuryProps>
 		<stages>
 			<li>
 				<minSeverity>0.01</minSeverity>
-				<painOffset>0.1</painOffset>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -1436,7 +1439,6 @@
 			</li>
 			<li>
 				<minSeverity>0.3</minSeverity>
-				<painOffset>0.2</painOffset>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -1446,7 +1448,6 @@
 			</li>
 			<li>
 				<minSeverity>0.66</minSeverity>
-				<painOffset>0.4</painOffset>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -1456,7 +1457,6 @@
 			</li>
 			<li>
 				<minSeverity>0.9</minSeverity>
-				<painOffset>0.7</painOffset>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>

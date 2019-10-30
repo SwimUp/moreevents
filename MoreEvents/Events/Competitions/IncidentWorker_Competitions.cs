@@ -50,11 +50,16 @@ namespace RimOverhaul.Events.Competitions
 
             var dialog = QuestsManager.Communications.MakeDialogFromIncident(def, new List<CommOption>
             {
-
+                new CommOption_CompetitionsPaid()
+                {
+                    WorldObject_Competitions = place
+                }
             });
             dialog.Description = description;
 
             QuestsManager.Communications.AddCommunication(dialog);
+
+            place.Dialog = dialog;
 
             return true;
         }

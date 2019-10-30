@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MineableSteel"]/building</xpath>
+		<value>
+			<building>
+				<isResourceRock>true</isResourceRock>
+				<mineableThing>Steel</mineableThing>
+				<mineableYield>60</mineableYield>
+				<mineableScatterCommonality>1.4</mineableScatterCommonality>
+				<mineableScatterLumpSizeRange>
+					<min>45</min>
+					<max>70</max>
+				</mineableScatterLumpSizeRange>
+			</building>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ThingDef[defName="Steel"]/stuffProps</xpath>
 		<value>
 			<stuffProps>

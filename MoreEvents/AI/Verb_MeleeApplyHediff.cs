@@ -91,7 +91,8 @@ namespace RimOverhaul.AI
                     return result;
                 }
 
-                result.AddHediff(pawn.health.AddHediff(tool.hediff, item.HitPart));
+                if(pawn.RaceProps.IsFlesh)
+                    result.AddHediff(pawn.health.AddHediff(tool.hediff, item.HitPart));
 
                 result = target.Thing.TakeDamage(item);
             }

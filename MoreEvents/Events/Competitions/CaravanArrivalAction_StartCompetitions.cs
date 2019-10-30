@@ -63,6 +63,9 @@ namespace MoreEvents.Quests
 
         public FloatMenuAcceptanceReport CanVisit(Caravan caravan)
         {
+            if (WorldObject_Competitions.CompStarted)
+                return false;
+
             if (!caravan.pawns.InnerListForReading.Any(x => x.skills.GetSkill(WorldObject_Competitions.CompetitionSkill).Level >= WorldObject_Competitions.CompetitionSkillLevelRequired))
                 return FloatMenuAcceptanceReport.WithFailReason("NotEnoughtSkillForComp".Translate());
 

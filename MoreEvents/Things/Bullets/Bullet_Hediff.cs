@@ -14,6 +14,8 @@ namespace RimOverhaul.Things.Bullets
 
         public virtual float SeverityPerShot { get; }
 
+        public virtual bool FleshOnly => false;
+
         protected override void Impact(Thing hitThing)
         {
             base.Impact(hitThing);
@@ -23,6 +25,9 @@ namespace RimOverhaul.Things.Bullets
                 Pawn pawn = hitThing as Pawn;
                 if (pawn != null)
                 {
+                    if (FleshOnly && pawn.RaceProps.IsMechanoid)
+                        return;
+
                     HealthUtility.AdjustSeverity(pawn, HediffDef, SeverityPerShot);
                 }
             }

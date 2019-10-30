@@ -1,4 +1,5 @@
 ﻿using MoreEvents.Quests;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -55,6 +56,7 @@ namespace RimOverhaul.Events.Competitions
         private int day;
         private int nextDayCheck;
 
+        public CommunicationDialog Dialog;
         public override void Tick()
         {
             base.Tick();
@@ -80,9 +82,32 @@ namespace RimOverhaul.Events.Competitions
             }
         }
 
-        public void Paid()
+        public bool Paid(Map map)
         {
-           CompetitionTableRecord playerRecord = competitionTableRecords.FirstOrDefault(x => )
+            CompetitionTableRecord playerRecord = competitionTableRecords?.FirstOrDefault(x => x.Faction == Faction.OfPlayer);
+
+            if (playerRecord == null)
+            {
+                Messages.Message("Competitions_NeedToStartForPaid".Translate(), MessageTypeDefOf.NeutralEvent);
+                return false;
+            }
+
+            if (playerRecord.Paid)
+            {
+                Messages.Message("Competitions_AlreadyPaid".Translate(), MessageTypeDefOf.NeutralEvent);
+                return false;
+            }
+
+            if (PriceUtils.TakeSilverFromPlayer(600, map))
+            {
+                playerRecord.Paid = true;
+
+                Find.LetterStack.ReceiveLetter("Competitions_JudgPaidTitle".Translate(), "Competitions_JudgPaidDesc".Translate(), LetterDefOf.PositiveEvent);
+
+                return true;
+            }
+
+            return false;
         }
 
         public void EndCompetitions()
@@ -97,13 +122,24 @@ namespace RimOverhaul.Events.Competitions
 
                 if (winner.Faction == Faction.OfPlayer)
                 {
-                    winner.Pawn.skills.GetSkill(CompetitionSkill).Learn(45000);
                     Thing reward = ThingMaker.MakeThing(ThingDefOf.Silver);
                     reward.stackCount = RewardCount;
 
                     Map map = Find.AnyPlayerHomeMap;
                     IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
                     DropPodUtility.DropThingsNear(intVec, map, new List<Thing> { reward }, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+
+                    if(winner.Paid && Rand.Chance(0.15f))
+                    {
+                        Find.LetterStack.ReceiveLetter("Competitions_JudgePaidFailTitle".Translate(), "Competitions_JudgePaidFailDesc".Translate(), LetterDefOf.NegativeEvent);
+                        competitionTableRecords.ForEach(x =>
+                        {
+                            if (x.Faction != Faction.OfPlayer)
+                            {
+                                x.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -15, reason: "Competitions_JudgePaidReason".Translate());
+                            }
+                        });
+                    }
                 }
 
                 foreach (var comp in competitionTableRecords)
@@ -111,7 +147,7 @@ namespace RimOverhaul.Events.Competitions
 
                 if(PlayerPawn != null)
                 {
-                    PlayerPawn.skills.GetSkill(CompetitionSkill).Learn(14000);
+                    PlayerPawn.skills.GetSkill(CompetitionSkill).Learn(35000);
 
                     Find.WorldPawns.PassToWorld(PlayerPawn);
                     PlayerPawn.SetFaction(Faction.OfPlayer);
@@ -124,13 +160,24 @@ namespace RimOverhaul.Events.Competitions
                 Find.LetterStack.ReceiveLetter("Competitions_JustEndTitle".Translate(), "Competitions_JustEndDesc".Translate(CompetitionSkill.LabelCap), LetterDefOf.PositiveEvent);
             }
 
+            if (Dialog != null)
+                QuestsManager.Communications.RemoveCommunication(Dialog);
+
             Find.WorldObjects.Remove(this);
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
         {
-            CaravanArrivalAction_StartCompetitions caravanArrivalAction = new CaravanArrivalAction_StartCompetitions(this);
-            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanArrivalAction.CanVisit(caravan), () => caravanArrivalAction, "EnterToCompetitions".Translate(), caravan, Tile, this);
+            if (!CompStarted)
+            {
+                CaravanArrivalAction_StartCompetitions caravanArrivalAction = new CaravanArrivalAction_StartCompetitions(this);
+                foreach(var p in CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanArrivalAction.CanVisit(caravan), () => caravanArrivalAction, "EnterToCompetitions".Translate(), caravan, Tile, this))
+                {
+                    yield return p;
+                }
+            }
+
+            yield break;
         }
 
         public void DayPassed()
@@ -172,6 +219,9 @@ namespace RimOverhaul.Events.Competitions
             competitionTableRecords = new List<CompetitionTableRecord>();
             foreach (var faction in Find.FactionManager.AllFactionsVisible)
             {
+                if (faction == Faction.OfPlayer)
+                    continue;
+
                 Pawn p = PawnGenerator.GeneratePawn(faction.RandomPawnKind());
 
                 Find.WorldPawns.PassToWorld(p);
@@ -222,6 +272,7 @@ namespace RimOverhaul.Events.Competitions
             Scribe_Values.Look(ref day, "day");
             Scribe_Collections.Look(ref competitionTableRecords, "competitionTableRecords", LookMode.Deep);
             Scribe_Values.Look(ref nextDayCheck, "nextDayCheck");
+            Scribe_References.Look(ref Dialog, "Dialog");
         }
     }
 }

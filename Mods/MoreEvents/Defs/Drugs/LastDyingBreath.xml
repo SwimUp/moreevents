@@ -20,7 +20,7 @@
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>LastDyingBreathHediff</hediffDef>
-					<severity>1</severity>
+					<severity>0.01</severity>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -43,7 +43,7 @@
 		<lethalSeverity>1.0</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>5.0</severityPerDay>
+				<severityPerDay>2.0</severityPerDay>
 			</li>
 			<li Class="MoreEvents.Hediffs.HediffCompProperties_AutoHeal">
 				<HealTicks>50</HealTicks>

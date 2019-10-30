@@ -79,7 +79,7 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
             for (int i = 0; i < itemsCount; i++)
             {
                 IntVec3 pos = map.AllCells.Where(vec => !vec.Fogged(map)).RandomElement();
-                if (pos == null)
+                if (pos.IsValid)
                     continue;
 
                 int count = Rand.Range(3, 7);
