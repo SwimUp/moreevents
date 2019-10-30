@@ -40,7 +40,6 @@
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
-		<lethalSeverity>1.0</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>2.0</severityPerDay>
@@ -52,6 +51,7 @@
 		</comps>
 		<stages>
 			<li>
+				<deathMtbDays>0.6</deathMtbDays>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>

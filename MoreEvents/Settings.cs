@@ -74,7 +74,7 @@ namespace MoreEvents
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 55;
+        private static int totalSettings = 56;
 
         public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
@@ -434,6 +434,12 @@ namespace MoreEvents
             },
             {
             "AmbushTwoFactions", new EventSettings("AmbushTwoFactions")
+            {
+                    Active = true
+            }
+            },
+            {
+            "PrisonShipAccident", new EventSettings("PrisonShipAccident")
             {
                     Active = true
             }
@@ -866,6 +872,12 @@ namespace MoreEvents
             },
             {
             "AmbushTwoFactions", new EventSettings("AmbushTwoFactions")
+            {
+                    Active = true
+            }
+            },
+            {
+            "PrisonShipAccident", new EventSettings("PrisonShipAccident")
             {
                     Active = true
             }

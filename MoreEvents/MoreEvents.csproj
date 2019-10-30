@@ -106,6 +106,7 @@
     <Compile Include="Constellations\GameCondition_Contellations.cs" />
     <Compile Include="Constellations\IncidentWorker_Constellations.cs" />
     <Compile Include="Events\CaravanArrivalAction_EnterToRaidMap.cs" />
+    <Compile Include="Events\IncidentWorker_PrisonShipAccident.cs" />
     <Compile Include="Events\MassBurial\IncidentWorker_MassBurial.cs" />
     <Compile Include="Events\MassBurial\MassBurialPlace.cs" />
     <Compile Include="Events\PlaceBattle\IncidentWorker_PlaceBattle.cs" />
@@ -301,8 +302,10 @@
     <Compile Include="Patch\Verb_MeleeAttack.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillOrderMap.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToMapWithGenerator.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapBasic.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapWithGenerator.cs" />
     <Compile Include="Quests\Quest_KillOrder.cs" />
+    <Compile Include="Quests\Quest_PrisonShipAccident.cs" />
     <Compile Include="RaidUtils.cs" />
     <Compile Include="RimOverhaulModule.cs" />
     <Compile Include="ModulesHandler.cs" />

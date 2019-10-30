@@ -696,7 +696,7 @@
 		<defName>ElectromagneticShock</defName>
 		<label>Electromagnetic shock</label>
 		<lethalSeverity>1.00</lethalSeverity>
-		<initialSeverity>0.05</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-5.0</severityPerDay>
@@ -712,59 +712,11 @@
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.07</offset>
 					</li>
 				</capMods>
 				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.2</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.2</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.3</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.5</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>-0.3</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.5</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.8</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0.10</setMax>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>-0.5</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.8</MeleeWeapon_CooldownMultiplier>
+					<MeleeWeapon_CooldownMultiplier>-0.05</MeleeWeapon_CooldownMultiplier>
 				</statOffsets>
 			</li>
 		</stages>
@@ -773,7 +725,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ExposureChargedPlasma</defName>
 		<label>Exposure to charged plasma</label>
-		<initialSeverity>0.05</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-2.0</severityPerDay>
@@ -785,66 +737,15 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
+						<offset>-0.05</offset>
 					</li>
 					<li>
 						<capacity>Sight</capacity>
-						<offset>-0.1</offset>
+						<offset>-0.07</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>-0.2</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.3</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.2</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.25</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>-0.3</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.55</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.35</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>-0.4</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.75</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.5</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.5</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>-0.6</offset>
+						<offset>-0.07</offset>
 					</li>
 				</capMods>
 			</li>
@@ -854,7 +755,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>EnergyOverload</defName>
 		<label>Energy overload</label>
-		<initialSeverity>0.05</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-5.0</severityPerDay>
@@ -866,63 +767,15 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
+						<offset>-0.04</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.07</offset>
 					</li>
 				</capMods>
 				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.3</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.2</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.1</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.2</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.5</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.3</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.8</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.5</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.2</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.4</MeleeWeapon_CooldownMultiplier>
+					<MeleeWeapon_CooldownMultiplier>-0.03</MeleeWeapon_CooldownMultiplier>
 				</statOffsets>
 			</li>
 		</stages>
@@ -931,7 +784,7 @@
 	<HediffDef ParentName="InjuryBase">
 		<defName>InternalBleeding</defName>
 		<label>Internal bleeding</label>
-		<initialSeverity>0.05</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<lethalSeverity>1.00</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -944,54 +797,15 @@
 		</injuryProps>
 		<stages>
 			<li>
-				<minSeverity>0.01</minSeverity>
+				<minSeverity>0.03</minSeverity>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.02</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>-0.05</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.3</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.6</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.25</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.9</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.25</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.60</offset>
+						<offset>-0.03</offset>
 					</li>
 				</capMods>
 			</li>
@@ -1014,7 +828,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.04</offset>
 					</li>
 					<li>
 						<capacity>Hearing</capacity>
@@ -1022,55 +836,7 @@
 					</li>
 				</capMods>
 				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.05</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.1</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<offset>-0.3</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.3</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<offset>-0.4</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.15</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.6</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.25</offset>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<offset>-0.7</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.25</MeleeWeapon_CooldownMultiplier>
+					<MeleeWeapon_CooldownMultiplier>-0.04</MeleeWeapon_CooldownMultiplier>
 				</statOffsets>
 			</li>
 		</stages>
@@ -1101,7 +867,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ExposurePoison</defName>
 		<label>Exposure to poison</label>
-		<initialSeverity>0.05</initialSeverity>
+		<initialSeverity>0.1</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-4.0</severityPerDay>
@@ -1113,51 +879,12 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
 					<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
 					<MeleeDodgeChance>-10</MeleeDodgeChance>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.2</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.2</MeleeWeapon_CooldownMultiplier>
-					<MeleeDodgeChance>-2</MeleeDodgeChance>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.4</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.3</MeleeWeapon_CooldownMultiplier>
-					<MeleeDodgeChance>-30</MeleeDodgeChance>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.7</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.25</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.5</MeleeWeapon_CooldownMultiplier>
-					<MeleeDodgeChance>-5</MeleeDodgeChance>
 				</statOffsets>
 			</li>
 		</stages>
@@ -1166,7 +893,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ExposurePoison_Axe</defName>
 		<label>Exposure to poison</label>
-		<initialSeverity>0.25</initialSeverity>
+		<initialSeverity>0.1</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-4.0</severityPerDay>
@@ -1178,51 +905,12 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
 					<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
 					<MeleeDodgeChance>-10</MeleeDodgeChance>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.2</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.2</MeleeWeapon_CooldownMultiplier>
-					<MeleeDodgeChance>-2</MeleeDodgeChance>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.4</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.3</MeleeWeapon_CooldownMultiplier>
-					<MeleeDodgeChance>-30</MeleeDodgeChance>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.7</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.25</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.5</MeleeWeapon_CooldownMultiplier>
-					<MeleeDodgeChance>-5</MeleeDodgeChance>
 				</statOffsets>
 			</li>
 		</stages>
@@ -1231,7 +919,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>DevastatingInjuries</defName>
 		<label>Devastating injuries</label>
-		<initialSeverity>0.05</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-2.0</severityPerDay>
@@ -1243,79 +931,19 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.05</offset>
+						<offset>-0.01</offset>
 					</li>
 					<li>
 						<capacity>Sight</capacity>
-						<offset>-0.25</offset>
+						<offset>-0.02</offset>
 					</li>
 					<li>
 						<capacity>Hearing</capacity>
-						<offset>-0.25</offset>
+						<offset>-0.02</offset>
 					</li>
 				</capMods>
 				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.3</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<offset>-0.3</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.5</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.4</offset>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<offset>-0.4</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.15</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.8</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.8</offset>
-					</li>
-					<li>
-						<capacity>Hearing</capacity>
-						<offset>-0.8</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.3</MeleeWeapon_CooldownMultiplier>
+					<MeleeWeapon_CooldownMultiplier>-0.02</MeleeWeapon_CooldownMultiplier>
 				</statOffsets>
 			</li>
 		</stages>
@@ -1324,7 +952,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>CryotiumShards</defName>
 		<label>Cryotium Shards</label>
-		<initialSeverity>0.08</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-4.0</severityPerDay>
@@ -1336,79 +964,19 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
+						<offset>-0.02</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.02</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
 						<offset>-0.05</offset>
 					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.05</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.15</offset>
-					</li>
 				</capMods>
 				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.15</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.2</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.25</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.25</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.4</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.20</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.25</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.35</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.35</MeleeWeapon_CooldownMultiplier>
-				</statOffsets>
-			</li>
-			<li>
-				<minSeverity>0.7</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Sight</capacity>
-						<offset>-0.35</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.55</offset>
-					</li>
-				</capMods>
-				<statOffsets>
-					<MeleeWeapon_CooldownMultiplier>-0.55</MeleeWeapon_CooldownMultiplier>
+					<MeleeWeapon_CooldownMultiplier>-0.03</MeleeWeapon_CooldownMultiplier>
 				</statOffsets>
 			</li>
 		</stages>
@@ -1417,7 +985,7 @@
 	<HediffDef ParentName="InjuryBase">
 		<defName>ExplosiveBullets</defName>
 		<label>Explosive bullets</label>
-		<initialSeverity>0.07</initialSeverity>
+		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-2.0</severityPerDay>
@@ -1425,7 +993,7 @@
 		</comps>
 		<injuryProps>
 			<painPerSeverity>0.02</painPerSeverity>
-			<canMerge>true</canMerge>
+			<canMerge>false</canMerge>
 		</injuryProps>
 		<stages>
 			<li>
@@ -1433,34 +1001,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.1</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.3</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.66</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.25</offset>
-					</li>
-				</capMods>
-			</li>
-			<li>
-				<minSeverity>0.9</minSeverity>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.5</offset>
+						<offset>-0.02</offset>
 					</li>
 				</capMods>
 			</li>

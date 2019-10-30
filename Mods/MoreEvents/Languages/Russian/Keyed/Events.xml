@@ -278,4 +278,7 @@ COMMANDS:
 	
 	<MassBurialPlace_WhyAffect>разграбление могил</MassBurialPlace_WhyAffect>
 	
+	<Quest_PrisonShipAccident_PlaceLabel>Сбежавшие заключенные</Quest_PrisonShipAccident_PlaceLabel>
+	<Quest_PrisonShipAccident_PlaceLabel2>Место передачи заключенных</Quest_PrisonShipAccident_PlaceLabel2>
+	
 </LanguageData>

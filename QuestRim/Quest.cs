@@ -39,6 +39,8 @@ namespace QuestRim
 
         public DialogDef Dialog;
 
+        public IncidentDef IncidentDef;
+
         public virtual bool HasExitCells => false;
 
         public virtual Texture2D ExpandingIcon
@@ -250,6 +252,7 @@ namespace QuestRim
             Scribe_References.Look(ref Site, "Site");
             Scribe_Defs.Look(ref Dialog, "Dialog");
             Scribe_Values.Look(ref ShowInConsole, "ShowInConsole");
+            Scribe_Defs.Look(ref IncidentDef, "IncidentDef");
         }
 
         public virtual string GetDescription()

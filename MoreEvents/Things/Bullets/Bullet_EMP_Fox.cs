@@ -12,7 +12,7 @@ namespace RimOverhaul.Things.Bullets
     {
         public override HediffDef HediffDef => HediffDefOfLocal.ExplosiveBullets;
 
-        public override float SeverityPerShot => 0.07f;
+        public override float SeverityPerShot => 0.11f;
 
         public override bool FleshOnly => true;
     }

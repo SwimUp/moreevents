@@ -1018,7 +1018,6 @@
 		</projectile>
 	</ThingDef>
 
-
 	<ThingDef ParentName="DarkNetBaseGunWithQuality">
 		<defName>Gun_EMP_Fox</defName>
 		<label>EMP-59 Desert fox</label>

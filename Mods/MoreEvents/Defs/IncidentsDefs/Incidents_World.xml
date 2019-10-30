@@ -1112,4 +1112,24 @@ You can see what is there and rob the remaining corpses, but you need to be care
 	</IncidentDef>
 	<!-- s=======================s -->
 
+	<!-- Событие: Авария на тюремном корабле -->
+	<IncidentDef>
+		<defName>Quest_PrisonShipAccident</defName>
+		<label>Prison ship accident</label>
+		<letterLabel>Prison ship accident</letterLabel>
+		<letterText>An accident occurred on a galactic security prison ship, as a result of which several capsules with prisoners fell onto the planet.
+You can find and catch them, then return them to the ship and get a reward, or try to recruit them. But, probably, they will have many bad traits, such as cannibalism, psychopath and others.
+
+You can contact them via geocape.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.IncidentWorker_PrisonShipAccident</workerClass>
+		<category>Misc</category>
+		<minRefireDays>100</minRefireDays>
+		<baseChance>1.4</baseChance>
+		<earliestDay>90</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
 </Defs>
