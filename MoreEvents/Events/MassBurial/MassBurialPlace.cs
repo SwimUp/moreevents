@@ -1,5 +1,6 @@
 ﻿using MoreEvents;
 using MoreEvents.Events;
+using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -23,6 +24,10 @@ namespace RimOverhaul.Events.MassBurial
             GenerateBurial();
 
             Faction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile, reason: "MassBurialPlace_WhyAffect".Translate());
+
+            var interaction = QuestsManager.Communications.FactionManager.GetInteraction(Faction);
+            if (interaction != null)
+                interaction.Trust -= 15;
 
             raidTimer = (int)(Rand.Range(0.2f, 0.5f) * 60000);
             raidSended = false; 

@@ -31,6 +31,8 @@ namespace DiaRim
         public Vector2 Size = new Vector2(500, 500);
         public override Vector2 InitialSize => Size;
 
+        private string answer;
+
         public Dialog(DialogDef dialogDef, Pawn speaker)
         {
             DialogDef = dialogDef;
@@ -68,9 +70,16 @@ namespace DiaRim
 
         public void Close(string signal, bool doCloseSound = true)
         {
-            CloseAction?.Invoke(signal);
+            answer = signal;
 
             Close(doCloseSound);
+        }
+
+        public override void Close(bool doCloseSound = true)
+        {
+            CloseAction?.Invoke(answer);
+
+            base.Close(doCloseSound);
         }
 
         protected void DrawNode(Rect rect)

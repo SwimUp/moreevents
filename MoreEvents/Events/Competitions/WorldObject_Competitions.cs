@@ -140,6 +140,12 @@ namespace RimOverhaul.Events.Competitions
                             }
                         });
                     }
+
+                    var playerAlliance = QuestsManager.Communications.FactionManager.PlayerAlliance;
+                    if(playerAlliance != null)
+                    {
+                        playerAlliance.GiveTrustToAllFactions(5);
+                    }
                 }
 
                 foreach (var comp in competitionTableRecords)

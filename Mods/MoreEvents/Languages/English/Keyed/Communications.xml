@@ -34,8 +34,9 @@
 
 	<InteractionInterTab>Communication</InteractionInterTab>
 	<MessagesInterTab>Mail</MessagesInterTab>
-	<AllianceInterTab>Alliance</AllianceInterTab>
-	<RelationsWithPlayer>Relation with player: {0} ({1})</RelationsWithPlayer>
+	<AllianceInterTab>Alliances and Coalitions</AllianceInterTab>
+	<RelationsWithPlayer>Relation with player: {0} ({1})
+Trust in the player: {2}</RelationsWithPlayer>
 	<FactionInteractionDef>Faction: {0}</FactionInteractionDef>
 	<AdditionalContent>Additional Information</AdditionalContent>
 

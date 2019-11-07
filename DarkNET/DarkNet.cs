@@ -130,11 +130,6 @@ namespace DarkNET
             {
                 lastRaidTicks = Find.TickManager.TicksGame + 60000;
 
-                if (GssFaction.RelationKindWith(Faction.OfPlayer) != FactionRelationKind.Hostile)
-                {
-                    GssFaction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile, true, "DarKNet_WhyAffect".Translate());
-                }
-
                 GssRaids.SendRaid(map, Mathf.Max(300, StorytellerUtility.DefaultThreatPointsNow(map)));
             }
         }

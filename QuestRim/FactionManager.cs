@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace QuestRim
@@ -23,6 +24,35 @@ namespace QuestRim
             }
         }
         private List<FactionInteraction> factions;
+
+        public List<Alliance> Alliances
+        {
+            get
+            {
+                if (alliances == null)
+                {
+                    alliances = new List<Alliance>();
+                }
+
+                return alliances;
+            }
+        }
+
+        private List<Alliance> alliances;
+        public Alliance PlayerAlliance => Alliances.FirstOrDefault(x => x.PlayerOwner);
+
+        public int PlayerAggressiveLevel
+        {
+            get
+            {
+                return playerAggresiveLevel;
+            }
+            set
+            {
+                playerAggresiveLevel = Mathf.Clamp(value, 0, 100);
+            }
+        }
+        private int playerAggresiveLevel;
 
         public FactionManager()
         {
@@ -46,6 +76,19 @@ namespace QuestRim
             }
 
             return interaction;
+        }
+
+        public void AddAlliance(Alliance alliance, bool sendMessage = true)
+        {
+            if (alliance.FactionOwner == Faction.OfPlayer)
+                alliance.PlayerOwner = true;
+
+            Alliances.Add(alliance);
+
+            if (sendMessage)
+            {
+                Find.LetterStack.ReceiveLetter("GlobalFactionManager_NewAllianceTitle".Translate(), "GlobalFactionManager_NewAllianceDesc".Translate(alliance.FactionOwner.Name, alliance.AllianceGoalDef.LabelCap), LetterDefOf.NeutralEvent);
+            }
         }
 
         public void Add(Faction faction)
@@ -83,6 +126,7 @@ namespace QuestRim
         {
             FactionInteraction interaction = new FactionInteraction();
             interaction.Faction = faction;
+            interaction.id = QuestsManager.Communications.UniqueIdManager.GetNextFactionInteractionId();
 
             interaction.Options = options;
 
@@ -101,6 +145,9 @@ namespace QuestRim
             {
                 list.Add(new CommOption_SubscribeScout());
             }
+
+            if(!forFaction.def.permanentEnemy)
+                list.Add(new CommOption_InviteToAlliance());
 
             return list;
         }
@@ -142,6 +189,8 @@ namespace QuestRim
             }
 
             Scribe_Collections.Look(ref factions, "Factions", LookMode.Deep);
+            Scribe_Collections.Look(ref alliances, "alliances", LookMode.Deep);
+            Scribe_Values.Look(ref playerAggresiveLevel, "PlayerAggressiveLevel");
         }
     }
 }

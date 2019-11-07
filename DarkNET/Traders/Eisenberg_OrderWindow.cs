@@ -113,7 +113,7 @@ namespace DarkNET.Traders
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
                 foreach(var item in itemsToOrder)
                 {
-                    options.Add(new FloatMenuOption($"{item.LabelCap} - {(int)((item.BaseMarketValue * trader.Character.Greed) * trader.GetPriceModificatorByTechLevel(item.techLevel))}$ за штуку", delegate
+                    options.Add(new FloatMenuOption($"{item.LabelCap} - {"UnitPriceDarkNet".Translate((int)((item.BaseMarketValue * trader.Character.Greed) * trader.GetPriceModificatorByTechLevel(item.techLevel)))}", delegate
                     {
                         selectedItem = item;
                     }));

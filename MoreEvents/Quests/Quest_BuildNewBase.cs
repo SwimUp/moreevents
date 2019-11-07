@@ -23,6 +23,12 @@ namespace MoreEvents.Quests
 
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 
+        public override int SuccessTrustAffect => 15;
+
+        public override int TimeoutTrustAffect => -10;
+
+        public override int FailTrustAffect => -10;
+
         public int PawnsRequired;
         public int TicksToEnd;
         public bool Entered = false;

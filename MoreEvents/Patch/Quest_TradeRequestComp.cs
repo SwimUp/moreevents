@@ -18,6 +18,8 @@ namespace MoreEvents.Patch
         public int Tile;
 
         public WorldObject SettlementBase;
+
+        public override int SuccessTrustAffect => 10;
         public TradeRequestComp Component
         {
             get

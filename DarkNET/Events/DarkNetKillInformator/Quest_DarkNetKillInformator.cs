@@ -125,6 +125,11 @@ namespace DarkNET.Events.DarkNetKillInformator
             base.EndQuest(caravan, condition);
         }
 
+        public override string GetInspectString()
+        {
+            return "InspectString_Timer".Translate(TicksToPass.TicksToDays().ToString("f2"));
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

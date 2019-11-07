@@ -28,6 +28,12 @@ namespace MoreEvents.Quests
 
         public Dictionary<ThingDef, int> RequestItems = new Dictionary<ThingDef, int>();
 
+        public override int SuccessTrustAffect => 15;
+
+        public override int FailTrustAffect => -10;
+
+        public override int TimeoutTrustAffect => -10;
+
         public Quest_ThingsHelp()
         {
 

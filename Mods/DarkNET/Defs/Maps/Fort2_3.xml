@@ -7,6 +7,7 @@
 		<targetTags>
 			<li>Quest_Archotech_567H_KillOponents</li>
 		</targetTags>
+		<PawnsSpawnPos>(5, 0, 5)</PawnsSpawnPos>
 		<MapData>
 			<li>
 				<key>

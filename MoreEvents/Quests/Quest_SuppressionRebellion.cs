@@ -24,6 +24,12 @@ namespace MoreEvents.Quests
 
         public override string PlaceLabel => "Quest_SuppressionRebellion_PlaceLabel".Translate();
 
+        public override int SuccessTrustAffect => 25;
+
+        public override int FailTrustAffect => -20;
+
+        public override int TimeoutTrustAffect => -20;
+
         public Settlement RebelSettlement;
 
         public bool AttackFail = false;

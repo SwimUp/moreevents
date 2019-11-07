@@ -124,7 +124,6 @@ namespace MoreEvents.Things
 
             int count = Rand.Range(minSpawn, maxSpawn);
 
-
             lord = LordMaker.MakeNewLord(Faction.OfInsects, new LordJob_DefendBase(Faction.OfInsects, this.Position), Map);
 
             PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveSpelopede, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
@@ -160,10 +159,10 @@ namespace MoreEvents.Things
             giveBuff = true;
             foreach(var p in spawnedMobs)
             {
-                if(!p.health.hediffSet.HasHediff(HediffDefOfLocal.CaveBettleBuff))
-                {
-                    p.health.AddHediff(HediffDefOfLocal.CaveBettleBuff, p.health.hediffSet.GetBrain());
-                }
+                if (p == null || p.Dead)
+                    continue;
+
+                GiveBuff(p);
             }
         }
         private void GiveBuff(Pawn p)
@@ -215,7 +214,7 @@ namespace MoreEvents.Things
 
             foreach(var pawn in spawnedMobs)
             {
-                if(!pawn.Dead)
+                if(pawn != null && !pawn.Dead)
                 {
                     if (pawn.CurJob == currentJob)
                         continue;

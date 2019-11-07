@@ -304,6 +304,7 @@
     <Compile Include="Quests\CaravanArrivalAction_EnterToMapWithGenerator.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapBasic.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapWithGenerator.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_TransferPrisoners.cs" />
     <Compile Include="Quests\Quest_KillOrder.cs" />
     <Compile Include="Quests\Quest_PrisonShipAccident.cs" />
     <Compile Include="RaidUtils.cs" />

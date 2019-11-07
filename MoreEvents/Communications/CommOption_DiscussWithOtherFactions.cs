@@ -87,14 +87,26 @@ namespace MoreEvents.Communications
 
         private void CheckAnswer(string answer)
         {
+            var interaction = QuestsManager.Communications.FactionManager.GetInteraction(currentFaction);
+
             if (answer == "удача")
             {
                 SetAnswer(currentFaction, Answer.Yes);
                 site.comp.AddFaction(currentFaction);
+
+                if(interaction != null)
+                {
+                    interaction.Trust += 10;
+                }
             }
             if (answer == "неудача")
             {
                 SetAnswer(currentFaction, Answer.No);
+
+                if (interaction != null)
+                {
+                    interaction.Trust -= 5;
+                }
             }
         }
 

@@ -11,6 +11,8 @@ namespace QuestRim
         private int nextDialogid;
         private int nextQuestId;
         private int nextComponentId;
+        private int nextAllianceId;
+        private int nextFactionInteractionId;
 
         private static int GetNextID(ref int nextID)
         {
@@ -42,11 +44,23 @@ namespace QuestRim
             return GetNextID(ref nextComponentId);
         }
 
+        public int GetNextAllianceID()
+        {
+            return GetNextID(ref nextAllianceId);
+        }
+
+        public int GetNextFactionInteractionId()
+        {
+            return GetNextID(ref nextFactionInteractionId);
+        }
+
         public void ExposeData()
         {
             Scribe_Values.Look(ref nextDialogid, "nextDialogid", 0);
             Scribe_Values.Look(ref nextQuestId, "nextQuestId", 0);
             Scribe_Values.Look(ref nextComponentId, "nextComponentId", 0);
+            Scribe_Values.Look(ref nextAllianceId, "nextAllianceId", 0);
+            Scribe_Values.Look(ref nextFactionInteractionId, "nextFactionInteractionId");
         }
     }
 }

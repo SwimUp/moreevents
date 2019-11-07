@@ -26,6 +26,20 @@ namespace QuestRim
 
         public int id;
 
+        public virtual int SuccessTrustAffect => 0;
+
+        public virtual int FailTrustAffect => 0;
+
+        public virtual int TimeoutTrustAffect => 0;
+
+        public virtual int SuccessAggressiveLevelAffect => 0;
+
+        public virtual int FailAggressiveLevelAffect => 0;
+
+        public virtual int TimeoutAggressiveLevelAffect => 0;
+
+        public virtual bool AffectOnWorld => true;
+
         public virtual string AdditionalQuestContentString => "AdditionalContent".Translate();
 
         public abstract string CardLabel { get; }
@@ -204,10 +218,50 @@ namespace QuestRim
 
         public virtual void EndQuest(Caravan caravan = null, EndCondition condition = EndCondition.None)
         {
-            if(condition == EndCondition.Success)
+            if (condition == EndCondition.Success)
+            {
                 GiveRewards(caravan);
+            }
+
+            if (AffectOnWorld && Faction != null && Faction != Faction.OfPlayer)
+            {
+                var globalFactionManager = QuestsManager.Communications.FactionManager;
+                var interaction = QuestsManager.Communications.FactionManager.GetInteraction(Faction);
+
+                switch (condition)
+                {
+                    case EndCondition.Success:
+                        {
+                            TryAffectOnWorld(globalFactionManager, interaction, SuccessAggressiveLevelAffect, SuccessTrustAffect);
+                            break;
+                        }
+                    case EndCondition.Fail:
+                        {
+                            TryAffectOnWorld(globalFactionManager, interaction, FailAggressiveLevelAffect, FailTrustAffect);
+                            break;
+                        }
+                    case EndCondition.Timeout:
+                        {
+                            TryAffectOnWorld(globalFactionManager, interaction, TimeoutAggressiveLevelAffect, TimeoutTrustAffect);
+                            break;
+                        }
+                }
+            }
 
             QuestsManager.Communications.RemoveQuest(this, condition);
+        }
+
+        protected virtual void TryAffectOnWorld(FactionManager globalFactionManager, FactionInteraction interaction, int aggressiveLevel, int trustLevel)
+        {
+            if (globalFactionManager != null)
+            {
+                globalFactionManager.PlayerAggressiveLevel += aggressiveLevel;
+            }
+
+            if (interaction != null)
+            {
+                interaction.Trust += trustLevel;
+            }
         }
 
         public virtual void GiveRewards(Caravan caravan)

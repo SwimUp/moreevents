@@ -252,6 +252,8 @@ namespace MoreEvents.Quests
         {
             base.EndQuest(caravan, condition);
 
+            var interaction = QuestsManager.Communications.FactionManager.GetInteraction(Faction);
+
             if(condition == EndCondition.Timeout)
             {
                 if (savedPawns != null)
@@ -278,15 +280,26 @@ namespace MoreEvents.Quests
 
                         CommOption_GetHelp.AddComponentWithStack(Faction, -999);
                     }
+
+                    if (interaction != null)
+                        interaction.Trust -= 5;
                 }
             }
             if(condition == EndCondition.Fail)
             {
                 Faction.TryAffectGoodwillWith(Faction.OfPlayer, -25);
+                if (interaction != null)
+                    interaction.Trust -= 15;
             }
             if(condition == EndCondition.Success)
             {
                 Faction.TryAffectGoodwillWith(Faction.OfPlayer, 20);
+
+                if(savedPawns != null)
+                {
+                    if (interaction != null)
+                        interaction.Trust += savedPawns.Count * 5;
+                }
             }
         }
 

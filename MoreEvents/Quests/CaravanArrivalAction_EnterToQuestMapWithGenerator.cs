@@ -16,14 +16,17 @@ namespace RimOverhaul.Quests
 
         public MapGeneratorBlueprints.MapGenerator.MapGeneratorDef MapGeneratorDef;
 
+        public bool UseMapSpawnPos;
+
         public CaravanArrivalAction_EnterToQuestMapWithGenerator() : base()
         {
 
         }
 
-        public CaravanArrivalAction_EnterToQuestMapWithGenerator(MapParent mapParent, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef mapGeneratorDef) : base(mapParent)
+        public CaravanArrivalAction_EnterToQuestMapWithGenerator(MapParent mapParent, MapGeneratorBlueprints.MapGenerator.MapGeneratorDef mapGeneratorDef, bool useMapSpawnPos = false) : base(mapParent)
         {
             MapGeneratorDef = mapGeneratorDef;
+            UseMapSpawnPos = useMapSpawnPos;
         }
 
         public override void ExposeData()
@@ -31,6 +34,20 @@ namespace RimOverhaul.Quests
             base.ExposeData();
 
             Scribe_Defs.Look(ref MapGeneratorDef, "MapGeneratorDef");
+            Scribe_Values.Look(ref UseMapSpawnPos, "UseMapSpawnPos");
+        }
+
+        public override void CaravanEnter(Caravan caravan, Map map)
+        {
+            if (UseMapSpawnPos)
+            {
+                CaravanEnterMapUtility.Enter(caravan, map, x => MapGeneratorDef.PawnsSpawnPos, CaravanDropInventoryMode.DoNotDrop);
+            }
+            else
+            {
+                CaravanEnterMode enterMode = CaravanEnterMode.Edge;
+                CaravanEnterMapUtility.Enter(caravan, map, enterMode, CaravanDropInventoryMode.DoNotDrop);
+            }
         }
 
         public override Map GetOrGenerateMap(int tile, IntVec3 mapSize, WorldObjectDef suggestedMapParentDef)

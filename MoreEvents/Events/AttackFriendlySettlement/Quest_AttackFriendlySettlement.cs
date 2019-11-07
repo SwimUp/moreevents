@@ -14,6 +14,10 @@ namespace MoreEvents.Events.AttackFriendlySettlement
     {
         public override string CardLabel => "Quest_AttackFriendlySettlement_CardLabel".Translate();
 
+        public override int SuccessTrustAffect => 15;
+
+        public override int FailTrustAffect => -15;
+
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
         public override string Description => "Quest_AttackFriendlySettlement_Description".Translate(Faction.leader.Name.ToStringFull, Faction.Name);
 

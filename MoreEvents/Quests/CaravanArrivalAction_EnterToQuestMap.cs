@@ -104,6 +104,12 @@ namespace MoreEvents.Events
                 Find.LetterStack.ReceiveLetter($"{Translator.Translate("CaravanEnteredMassiveFire")} {questSite.Label}", "LetterCaravanEnteredMap".Translate(caravan.Label, questSite.Label).CapitalizeFirst(), LetterDefOf.NeutralEvent, t);
             }
             Verse.Map map = orGenerateMap;
+
+            CaravanEnter(caravan, map);
+        }
+
+        public virtual void CaravanEnter(Caravan caravan, Map map)
+        {
             CaravanEnterMode enterMode = CaravanEnterMode.Edge;
             CaravanEnterMapUtility.Enter(caravan, map, enterMode, CaravanDropInventoryMode.DoNotDrop);
         }

@@ -276,4 +276,12 @@ The competition lasts 3 days, every day you will receive statistics where you ca
 	
 	<MassBurialPlace_WhyAffect>plunder of graves</MassBurialPlace_WhyAffect>
 	
+	<Quest_PrisonShipAccident_PlaceLabel>Escaped prisoners</Quest_PrisonShipAccident_PlaceLabel>
+	<Quest_PrisonShipAccident_PlaceLabel2>Prison place of transfer</Quest_PrisonShipAccident_PlaceLabel2>
+	<TransferPrisoners>Hand prisoners</TransferPrisoners>
+	<CaravanArrivalAction_TransferPrisoners_SuccessTitle>Prisoner transferred</CaravanArrivalAction_TransferPrisoners_SuccessTitle>
+	<CaravanArrivalAction_TransferPrisoners_SuccessDesc>ЗPrisoner {0} successfully transferred. {1} paid you {2} (sent to your base)</CaravanArrivalAction_TransferPrisoners_SuccessDesc>
+	<Quest_PrisonShipAccident_NCTitle>Prisoners are gone</Quest_PrisonShipAccident_NCTitle>
+	<Quest_PrisonShipAccident_NCDesc>You did not capture a single prisoner, they most likely have already scattered across the planet.</Quest_PrisonShipAccident_NCDesc>
+	
 </LanguageData>

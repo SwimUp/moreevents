@@ -43,6 +43,8 @@ namespace DarkNET.Quests
 
         public virtual IntRange DaysRange => new IntRange(6, 12);
 
+        public virtual bool UseMapSpawnPos => false;
+
         public override void PostMapGenerate(Map map)
         {
             base.PostMapGenerate(map);
@@ -54,7 +56,7 @@ namespace DarkNET.Quests
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan, MapParent mapParent)
         {
-            CaravanArrivalAction_EnterToQuestMapWithGenerator caravanAction = new CaravanArrivalAction_EnterToQuestMapWithGenerator(mapParent, MapGenerator);
+            CaravanArrivalAction_EnterToQuestMapWithGenerator caravanAction = new CaravanArrivalAction_EnterToQuestMapWithGenerator(mapParent, MapGenerator, UseMapSpawnPos);
             return CaravanArrivalActionUtility.GetFloatMenuOptions(() => true, () => caravanAction, "EnterToMapQuest_Option".Translate(), caravan, mapParent.Tile, mapParent);
         }
 

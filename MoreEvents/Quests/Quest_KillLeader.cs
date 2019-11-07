@@ -25,6 +25,16 @@ namespace MoreEvents.Quests
 
         public override string PlaceLabel => "Quest_KillLeader_PlaceLabel".Translate();
 
+        public override int SuccessTrustAffect => 25;
+
+        public override int FailTrustAffect => -5;
+
+        public override int TimeoutTrustAffect => -10;
+
+        public override int SuccessAggressiveLevelAffect => 10;
+
+        public override int FailAggressiveLevelAffect => 10;
+
         public Pawn TargetPawn;
 
         public string MapGenerator => "Quest_KillLeader";

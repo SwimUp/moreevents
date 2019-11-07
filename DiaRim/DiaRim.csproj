@@ -50,6 +50,7 @@
     <Compile Include="Actions\OptionAction.cs" />
     <Compile Include="Conditions\Condition_Backstory.cs" />
     <Compile Include="Conditions\Condition_Gender.cs" />
+    <Compile Include="Conditions\Condition_Item.cs" />
     <Compile Include="Conditions\Condition_SkillReq.cs" />
     <Compile Include="Conditions\Condition_Trait.cs" />
     <Compile Include="Conditions\OptionCondition.cs" />

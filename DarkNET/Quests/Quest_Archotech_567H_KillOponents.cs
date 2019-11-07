@@ -34,6 +34,8 @@ namespace DarkNET.Quests
 
         public override IntRange CountRange => new IntRange(1, 3);
 
+        public override bool UseMapSpawnPos => true;
+
         public override bool CanLeaveFromSite(QuestSite site)
         {
             if (HostileUtility.AnyNonDeadHostileOnMap(site.Map, Faction))

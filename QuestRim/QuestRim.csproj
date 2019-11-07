@@ -53,7 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
+    <Compile Include="AllianceExtensions.cs" />
+    <Compile Include="AllianceGoalDef.cs" />
+    <Compile Include="AllianceGoalDefOfLocal.cs" />
+    <Compile Include="AllianceManager.cs" />
     <Compile Include="Building_Geoscape.cs" />
+    <Compile Include="Actions\CommOption_InviteToAlliance.cs" />
     <Compile Include="CommOption_NonAgressionPact.cs" />
     <Compile Include="CommOption_SubscribeScout.cs" />
     <Compile Include="CommunicationComponent_CommunicationDialogTimer.cs" />
@@ -61,10 +66,14 @@
     <Compile Include="CommunicationDialogMaker.cs" />
     <Compile Include="CommunicationDialogWindow.cs" />
     <Compile Include="CommunicationMaker.cs" />
+    <Compile Include="DialogDefOfLocal.cs" />
     <Compile Include="Dialog_QuestDialog.cs" />
+    <Compile Include="Dialog_RenameAlliance.cs" />
     <Compile Include="EmailMessageOption.cs" />
     <Compile Include="EmailBox.cs" />
     <Compile Include="EmailMessage.cs" />
+    <Compile Include="Alliance.cs" />
+    <Compile Include="GUIUtils.cs" />
     <Compile Include="InteractionOption.cs" />
     <Compile Include="CommunicationComponent.cs" />
     <Compile Include="Extensions.cs" />
@@ -86,6 +95,7 @@
     <Compile Include="QuestRim.cs" />
     <Compile Include="QuestSite.cs" />
     <Compile Include="QuestsManager.cs" />
+    <Compile Include="RulePackDefOfLocal.cs" />
     <Compile Include="ScoutingComp.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="TerminalCommand.cs" />

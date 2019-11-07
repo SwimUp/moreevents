@@ -34,8 +34,9 @@
 
 	<InteractionInterTab>Связь</InteractionInterTab>
 	<MessagesInterTab>Почта</MessagesInterTab>
-	<AllianceInterTab>Альянс</AllianceInterTab>
-	<RelationsWithPlayer>Отношения с игроком: {0} ({1})</RelationsWithPlayer>
+	<AllianceInterTab>Альянсы и коалиции</AllianceInterTab>
+	<RelationsWithPlayer>Отношения с игроком: {0} ({1})
+Доверие к игроку: {2}</RelationsWithPlayer>
 	<FactionInteractionDef>Фракция: {0}</FactionInteractionDef>
 	<AdditionalContent>Дополнительная информация</AdditionalContent>
 
@@ -131,5 +132,29 @@
 
 	<NoFactionComm_D>Фракция: неизвестно</NoFactionComm_D>
 	<CokeFurnace_MultiplierLabel>Модификатор: </CokeFurnace_MultiplierLabel>
+
+	<DrawAllianceMainPage_AllianceTitle>Альянсы</DrawAllianceMainPage_AllianceTitle>
+	<DrawAllianceMainPage_CoalitionTitle>Коалиции</DrawAllianceMainPage_CoalitionTitle>
+	<DrawAllianceMainPage_AllianceCreateButton>Создать альянс</DrawAllianceMainPage_AllianceCreateButton>
+	<DrawAllianceMainPage_CoalitioneCreateButton>Создать коалицию</DrawAllianceMainPage_CoalitioneCreateButton>
+	<DrawAllianceCard_OwnerInfo>Основатель: {0}
+Цель: {1}
+Фракций: {2}</DrawAllianceCard_OwnerInfo>
+	<Alliance_PlayerAlreadyHaveOne>У вас уже есть альянс, нельзя основать несколько.</Alliance_PlayerAlreadyHaveOne>
+	<DrawAllianceCard_Manage>управление</DrawAllianceCard_Manage>
+	<GlobalFactionManager_NewAllianceTitle>Основан новый альянс</GlobalFactionManager_NewAllianceTitle>
+	<GlobalFactionManager_NewAllianceDesc>Фракция {0} основала альянс, цель которого {1}</GlobalFactionManager_NewAllianceDesc>
+	<AllianceNameAllias>Альянс: {0}</AllianceNameAllias>
+	<AllianceManager_KickButton>исключить</AllianceManager_KickButton>
+	<AllianceManager_TrustFactionLevel>Доверие: {0}</AllianceManager_TrustFactionLevel>
+	<CommOption_InviteToAlliance_Label>Пригласить в альянс</CommOption_InviteToAlliance_Label>
+	<CommOption_InviteToAlliance_NoAlliance>У вас нет активного альянса</CommOption_InviteToAlliance_NoAlliance>
+	<CommOption_InviteToAlliance_AlreadyInAlliance>Уже состоит в альянсе</CommOption_InviteToAlliance_AlreadyInAlliance>
+	<AllianceManager_DrawRightBlock_Title>Информация</AllianceManager_DrawRightBlock_Title>
+	<AllianceManager_Goal>{0} - {1}</AllianceManager_Goal>
+	<CommOption_InviteToAlliance_Wait>Фракция не готова к переговорам. Подождите еще {0} дней</CommOption_InviteToAlliance_Wait>
+	<CommOption_InviteToAlliance_NeedAAlly>Чтобы пригласить фракцию в альянс требуются дружеские или нейтральные отношения</CommOption_InviteToAlliance_NeedAAlly>
+	<CommOption_InviteToAlliance_NeedTrust>Уровень доверия фракции слишком мал, чтобы они могли вступить в ваш альянс (требуется минимум {0})</CommOption_InviteToAlliance_NeedTrust>
+	<TrustFactionInformation>Уровень доверия отображает, насколько вам доверяет фракция. Доверие можно повысить успешно выполняя задания фракций.</TrustFactionInformation>
 
 </LanguageData>

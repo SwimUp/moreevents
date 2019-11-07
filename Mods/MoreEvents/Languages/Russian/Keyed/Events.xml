@@ -280,5 +280,10 @@ COMMANDS:
 	
 	<Quest_PrisonShipAccident_PlaceLabel>Сбежавшие заключенные</Quest_PrisonShipAccident_PlaceLabel>
 	<Quest_PrisonShipAccident_PlaceLabel2>Место передачи заключенных</Quest_PrisonShipAccident_PlaceLabel2>
+	<TransferPrisoners>Передать заключенных</TransferPrisoners>
+	<CaravanArrivalAction_TransferPrisoners_SuccessTitle>Заключенный передан</CaravanArrivalAction_TransferPrisoners_SuccessTitle>
+	<CaravanArrivalAction_TransferPrisoners_SuccessDesc>Заключенный {0} успешно передан. {1} выплатила вам {2} (отправлено на вашу базу)</CaravanArrivalAction_TransferPrisoners_SuccessDesc>
+	<Quest_PrisonShipAccident_NCTitle>Заключенные пропали</Quest_PrisonShipAccident_NCTitle>
+	<Quest_PrisonShipAccident_NCDesc>Вы не захватили ни одного заключенного, они, скорее всего уже разбежались по всей планете.</Quest_PrisonShipAccident_NCDesc>
 	
 </LanguageData>

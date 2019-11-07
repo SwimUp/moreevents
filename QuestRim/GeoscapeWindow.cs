@@ -46,6 +46,7 @@ namespace QuestRim
         private readonly List<Quest> quests;
         private readonly List<FactionInteraction> factions;
         private readonly List<EmailMessage> emailMessages;
+        private readonly List<Alliance> alliances;
 
         private Communications communications;
 
@@ -54,12 +55,14 @@ namespace QuestRim
         private int commDialogSliderLength = 0;
         private int commQuestsSliderLength = 0;
         private int commFactionSliderLength = 0;
+        private int commAllianceSliderLength = 0;
         private int commEmailsSliderLength = 0;
 
         private CommunicationDialog currentDialog;
         private Quest currentQuest;
         private FactionInteraction currentFaction;
         private EmailMessage currentMessage;
+        private FactionManager globalFactionManager;
 
         private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
         private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
@@ -74,18 +77,23 @@ namespace QuestRim
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
         {
+            globalFactionManager = QuestsManager.Communications.FactionManager;
+
             communicationsDialogs = communications.CommunicationDialogs;
             quests = communications.Quests;
             factions = communications.FactionManager.Factions;
             emailMessages = communications.PlayerBox.Messages;
+            alliances = globalFactionManager.Alliances;
+            globalFactionManager.Alliances.SortByDescending(x => x.PlayerOwner);
 
             this.communications = communications;
             this.speaker = speaker;
 
             commDialogSliderLength = communicationsDialogs.Count * 78;
             commQuestsSliderLength = quests.Count * 108;
-            commFactionSliderLength = factions.Count * 65;
+            commFactionSliderLength = factions.Count * 75;
             commEmailsSliderLength = emailMessages.Count * 130;
+            commAllianceSliderLength = alliances.Count * 95;
 
             forcePause = true;
             doCloseX = true;
@@ -528,7 +536,7 @@ namespace QuestRim
                     DrawEmailBox(inRect);
                     break;
                 case InterTab.Alliance:
-
+                    DrawAllianceMainPage(inRect);
                     break;
             }
 
@@ -781,43 +789,47 @@ namespace QuestRim
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
 
-            Rect r = new Rect(10, y, rect.width - 20, 50);
+            Rect r = new Rect(10, y, rect.width - 20, 60);
             Rect titleRect = new Rect(15, y, rect.width - 20, 50);
             Widgets.Label(titleRect, faction.Faction.Name);
             Text.Font = GameFont.Tiny;
-            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 20);
+            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 40);
             FactionRelationKind kindWithPlayer = faction.Faction.PlayerRelationKind;
-            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign()));
+            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign(), faction.Trust));
 
             Text.Font = GameFont.Small;
             Widgets.DrawHighlightIfMouseover(r);
 
-            string str2 = "CurrentGoodwillTip".Translate();
-            if (faction.Faction.def.permanentEnemy)
+            if (Mouse.IsOver(r))
             {
-                str2 = str2 + "\n\n" + "CurrentGoodwillTip_PermanentEnemy".Translate();
-            }
-            else
-            {
-                str2 += "\n\n";
-                switch (faction.Faction.PlayerRelationKind)
+                string str2 = "CurrentGoodwillTip".Translate();
+                if (faction.Faction.def.permanentEnemy)
                 {
-                    case FactionRelationKind.Ally:
-                        str2 += "CurrentGoodwillTip_Ally".Translate(0.ToString("F0"));
-                        break;
-                    case FactionRelationKind.Neutral:
-                        str2 += "CurrentGoodwillTip_Neutral".Translate(0.ToString("F0"), 75.ToString("F0"));
-                        break;
-                    case FactionRelationKind.Hostile:
-                        str2 += "CurrentGoodwillTip_Hostile".Translate(0.ToString("F0"));
-                        break;
+                    str2 = str2 + "\n\n" + "CurrentGoodwillTip_PermanentEnemy".Translate();
                 }
-                if (faction.Faction.def.goodwillDailyGain > 0f || faction.Faction.def.goodwillDailyFall > 0f)
+                else
                 {
-                    str2 = str2 + "\n\n" + "CurrentGoodwillTip_NaturalGoodwill".Translate(faction.Faction.def.naturalColonyGoodwill.min.ToString("F0"), faction.Faction.def.naturalColonyGoodwill.max.ToString("F0"), faction.Faction.def.goodwillDailyGain.ToString("0.#"), faction.Faction.def.goodwillDailyFall.ToString("0.#"));
+                    str2 += "\n\n";
+                    switch (faction.Faction.PlayerRelationKind)
+                    {
+                        case FactionRelationKind.Ally:
+                            str2 += "CurrentGoodwillTip_Ally".Translate(0.ToString("F0"));
+                            break;
+                        case FactionRelationKind.Neutral:
+                            str2 += "CurrentGoodwillTip_Neutral".Translate(0.ToString("F0"), 75.ToString("F0"));
+                            break;
+                        case FactionRelationKind.Hostile:
+                            str2 += "CurrentGoodwillTip_Hostile".Translate(0.ToString("F0"));
+                            break;
+                    }
+                    if (faction.Faction.def.goodwillDailyGain > 0f || faction.Faction.def.goodwillDailyFall > 0f)
+                    {
+                        str2 = str2 + "\n\n" + "CurrentGoodwillTip_NaturalGoodwill".Translate(faction.Faction.def.naturalColonyGoodwill.min.ToString("F0"), faction.Faction.def.naturalColonyGoodwill.max.ToString("F0"), faction.Faction.def.goodwillDailyGain.ToString("0.#"), faction.Faction.def.goodwillDailyFall.ToString("0.#"));
+                    }
                 }
+                str2 += "TrustFactionInformation".Translate();
+                TooltipHandler.TipRegion(r, str2);
             }
-            TooltipHandler.TipRegion(r, str2);
 
             GUI.color = faction.Faction.Color;
             Widgets.DrawHighlight(r);
@@ -827,7 +839,90 @@ namespace QuestRim
             {
                 currentFaction = faction;
             }
-            y += 60;
+            y += 70;
+        }
+        private void DrawAllianceMainPage(Rect inRect)
+        {
+            Rect rect1 = inRect;
+            rect1.width = 500;
+            rect1.height = 530;
+            Rect rect2 = rect1;
+            rect2.x += 500;
+
+            Text.Anchor = TextAnchor.UpperCenter;
+            Widgets.Label(rect1, "DrawAllianceMainPage_AllianceTitle".Translate());
+            Widgets.Label(rect2, "DrawAllianceMainPage_CoalitionTitle".Translate());
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            Rect scrollVertRectFact = new Rect(0, 30, rect1.x, commAllianceSliderLength);
+            int y = 60;
+            Widgets.BeginScrollView(rect1, ref factionListSlider, scrollVertRectFact, false);
+            for (int i = 0; i < alliances.Count; i++)
+            {
+                Alliance alliance = alliances[i];
+
+                DrawAllianceCard(rect1, ref y, alliance);
+            }
+            Widgets.EndScrollView();
+
+            Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Rect bottomButton = new Rect(inRect.x + 125, 530, 250, 40);
+            if(DrawCustomButton(bottomButton, "DrawAllianceMainPage_AllianceCreateButton".Translate(), Color.white))
+            {
+                if(globalFactionManager.PlayerAlliance == null)
+                {
+                    Alliance alliance = Alliance.MakeAlliance(NameGenerator.GenerateName(RulePackDefOfLocal.NamerSettlementOutlander), Faction.OfPlayer, AllianceGoalDefOfLocal.CommonGoal);
+
+                    globalFactionManager.AddAlliance(alliance);
+                }
+                else
+                {
+                    Messages.Message("Alliance_PlayerAlreadyHaveOne".Translate(), MessageTypeDefOf.NeutralEvent);
+                }
+            }
+            bottomButton.x += 500;
+            if (DrawCustomButton(bottomButton, "DrawAllianceMainPage_CoalitioneCreateButton".Translate(), Color.white))
+            {
+
+            }
+            Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Small;
+
+            GUI.color = MenuSectionBGBorderColor;
+            rect1.height = 556;
+            Widgets.DrawBox(rect1);
+            GUI.color = Color.white;
+        }
+
+        private void DrawAllianceCard(Rect rect, ref int y, Alliance alliance)
+        {
+            Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Small;
+
+            Rect r = new Rect(10, y, rect.width - 20, 90);
+            Rect titleRect = new Rect(15, y, rect.width - 20, 50);
+            Widgets.Label(titleRect, "AllianceNameAllias".Translate(alliance.Name));
+
+            Rect infoRect = new Rect(15, y + 22, rect.width - 20, 55);
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(infoRect, "DrawAllianceCard_OwnerInfo".Translate(alliance.FactionOwner.Name, alliance.AllianceGoalDef.LabelCap, alliance.Factions.Count));
+
+            if (alliance.PlayerOwner)
+            {
+                if (Widgets.ButtonInvisible(r))
+                {
+                    Find.WindowStack.Add(new AllianceManager(alliance));
+                }
+
+                GUI.color = MenuSectionBGBorderColor;
+                Widgets.DrawBox(r);
+                GUI.color = Color.white;
+            }
+
+            Widgets.DrawHighlightIfMouseover(r);
+
+            y += 90;
         }
     }
 }

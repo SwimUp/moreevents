@@ -1,4 +1,5 @@
 ﻿using MoreEvents.Events.ClimateBomb;
+using QuestRim;
 using RimWorld;
 using System;
 using System.Collections;
@@ -71,6 +72,13 @@ namespace MoreEvents.Things
 
             if(Site != null)
                 Site.DisarmBomb();
+
+            var factionManager = QuestsManager.Communications.FactionManager;
+            factionManager.PlayerAggressiveLevel -= 10;
+            if(factionManager.PlayerAlliance != null)
+            {
+                factionManager.PlayerAlliance.GiveTrustToAllFactions(10);
+            }
         }
 
         public void Detonate()
