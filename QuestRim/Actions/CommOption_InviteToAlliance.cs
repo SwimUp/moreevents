@@ -82,6 +82,12 @@ namespace QuestRim
                 return;
             }
 
+            if(Alliance.Factions.Any(x => x.Faction.HostileTo(interaction.Faction)))
+            {
+                Messages.Message("CommOption_InviteToAlliance_AnyHostileInAlliance".Translate(), MessageTypeDefOf.NeutralEvent);
+                return;
+            }
+
             defendantFaction = interaction;
             Dialog dia = new Dialog(DialogDef, speaker, defendantFaction.Faction.leader);
             dia.Init();

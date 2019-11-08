@@ -43,6 +43,8 @@ namespace QuestRim
         public void AddFaction(FactionInteraction faction)
         {
             Factions.Add(faction);
+
+            SynchonizeRelation(faction, FactionRelationKind.Hostile);
         }
 
         public void GiveTrustToAllFactions(int trust)
@@ -55,10 +57,33 @@ namespace QuestRim
 
         public void RemoveFaction(FactionInteraction faction, AllianceRemoveReason reason)
         {
-            if(reason == AllianceRemoveReason.Kick)
-                faction.Faction.TrySetRelationKind(FactionOwner, FactionRelationKind.Hostile);
-
             Factions.Remove(faction);
+
+            if (reason == AllianceRemoveReason.Kick)
+            {
+                faction.Faction.TrySetRelationKind(FactionOwner, FactionRelationKind.Hostile);
+                faction.Trust -= 100;
+
+                foreach (var allianceFaction in Factions)
+                    allianceFaction.Faction.TrySetRelationKind(faction.Faction, FactionRelationKind.Hostile);
+            }
+        }
+
+        private void SynchonizeRelation(FactionInteraction faction, FactionRelationKind syncRelation)
+        {
+            foreach (var worldFaction in Find.FactionManager.AllFactionsVisible)
+            {
+                if (worldFaction == FactionOwner)
+                    continue;
+
+                if (Factions.Contains(faction))
+                    continue;
+
+                if (worldFaction.RelationKindWith(FactionOwner) == syncRelation)
+                {
+                    faction.Faction.TrySetRelationKind(worldFaction, syncRelation);
+                }
+            }
         }
 
         public void ExposeData()
