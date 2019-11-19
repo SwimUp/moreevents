@@ -6,6 +6,16 @@
 		<label>common interests</label>
 		<description>founding an alliance for common interests. It can be coexistence, mutual assistance or military superiority</description>
 		<PlayerOnly>true</PlayerOnly>
+		<comps>
+			<li Class="StorytellerCompProperties_CategoryMTB">
+				<category>Alliance_CommonGoal</category>
+				<allowedTargetTags>
+					<li>Alliance</li>
+				</allowedTargetTags>
+				<minDaysPassed>0</minDaysPassed>
+				<mtbDays>1</mtbDays>
+			</li>
+		</comps>
 	</QuestRim.AllianceGoalDef>
 	
 </Defs>

@@ -16,6 +16,10 @@ namespace MoreEvents.AI
 
         private Trigger_TicksPassed timeoutTrigger;
 
+        public LordJob_Arson()
+        {
+        }
+
         public LordJob_Arson(IntVec3 spot, Faction faction)
         {
             FireSpot = spot;

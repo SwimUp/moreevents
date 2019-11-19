@@ -36,7 +36,8 @@
 	<MessagesInterTab>Почта</MessagesInterTab>
 	<AllianceInterTab>Альянсы и коалиции</AllianceInterTab>
 	<RelationsWithPlayer>Отношения с игроком: {0} ({1})
-Доверие к игроку: {2}</RelationsWithPlayer>
+Доверие к игроку: {2}
+{3}</RelationsWithPlayer>
 	<FactionInteractionDef>Фракция: {0}</FactionInteractionDef>
 	<AdditionalContent>Дополнительная информация</AdditionalContent>
 
@@ -157,5 +158,26 @@
 	<CommOption_InviteToAlliance_NeedTrust>Уровень доверия фракции слишком мал, чтобы они могли вступить в ваш альянс (требуется минимум {0})</CommOption_InviteToAlliance_NeedTrust>
 	<TrustFactionInformation>Уровень доверия отображает, насколько вам доверяет фракция. Доверие можно повысить успешно выполняя задания фракций.</TrustFactionInformation>
 	<CommOption_InviteToAlliance_AnyHostileInAlliance>В вашем альянсе есть фракция (фракции), которые враждуют с этой.</CommOption_InviteToAlliance_AnyHostileInAlliance>
+	<Alliance_AddFactionTitle>{0} вступает в альянс</Alliance_AddFactionTitle>
+	<Alliance_AddFactionDesc>После переговоров, фракция {0} вступает в ваш альянс.</Alliance_AddFactionDesc>
+	<AllianceRemoveFactionTitle>{0} покидает альянс</AllianceRemoveFactionTitle>
+	<Alliance_RemoveFactionDesc>Фракция {0} покидает альянс по причине: {1}</Alliance_RemoveFactionDesc>
+	<AllianceRemoveReason_Kick>разрыв соглашения</AllianceRemoveReason_Kick>
+	<AllianceRemoveReason_LowTrust>низкий уровень доверия</AllianceRemoveReason_LowTrust>
+	<AllianceRemoveReason_None>не указано</AllianceRemoveReason_None>
+	<AllianceManager_AvaliableQuests>Задания от членов альянса</AllianceManager_AvaliableQuests>
+	<AllianceManager_QuestLabel>{0} ({1})</AllianceManager_QuestLabel>
+	<AllianceInformation>Альянс: {0}</AllianceInformation>
+	<NoAllianceAlias>нет</NoAllianceAlias>
+	
+	<Alliance_Quest_ResearchSharing_StartedTitle>Вы прибыли на место</Alliance_Quest_ResearchSharing_StartedTitle>
+	<Alliance_Quest_ResearchSharing_StartedDesc>Вы прибыли к месту назначения. Обмен опытом займет 2 дня, после чего вы получите очки исследований и вашего колониста.</Alliance_Quest_ResearchSharing_StartedDesc>
+	<CaravanArrivalAction_StartResearchSharing_Already>уже начато</CaravanArrivalAction_StartResearchSharing_Already>
+	<AllianceManager_ActiveAgreements>Соглашения</AllianceManager_ActiveAgreements>
+
+	<TradeSchedulingAgreementWindow_SelectFactionLabel>Выберите фракцию, с которой будет заключенно соглашение</TradeSchedulingAgreementWindow_SelectFactionLabel>
+	<TradeSchedulingAgreementWindow_SelectSettlementLabel>Выберите поселения для поставок</TradeSchedulingAgreementWindow_SelectSettlementLabel>
+	<TradeSchedulingAgreementWindow_SelectedSettlement>Поселение: {0}, время пути {1} (дней)</TradeSchedulingAgreementWindow_SelectedSettlement>
+	<TradeSchedulingAgreementWindow_DaysLabelHolder>дней в пути</TradeSchedulingAgreementWindow_DaysLabelHolder>
 
 </LanguageData>

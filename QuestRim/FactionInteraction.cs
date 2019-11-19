@@ -14,6 +14,9 @@ namespace QuestRim
 
         public Faction Faction;
         public List<InteractionOption> Options;
+
+        public Alliance Alliance => QuestsManager.Communications.FactionManager.Alliances.FirstOrDefault(x => x.Factions.Contains(this));
+
         public int Trust
         {
             get

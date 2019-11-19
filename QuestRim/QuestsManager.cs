@@ -46,31 +46,34 @@ namespace QuestRim
                     }
                 }
 
-                List<Quest> quests = communications.Quests;
-                for (int i = 0; i < quests.Count; i++)
+                for (int i = 0; i < communications.Quests.Count; i++)
                 {
+                    Quest quest = communications.Quests[i];
                     try
                     {
-                        quests[i].Tick();
+                        quest.Tick();
                     }
                     catch (Exception ex)
                     {
-                        Log.Error($"Exception ticking {quests[i].id} --> {ex}");
+                        Log.Error($"Exception ticking quest {quest.id} --> {ex}");
                     }
                 }
 
-                List<CommunicationComponent> components = communications.Components;
-                for (int i = 0; i < components.Count; i++)
+                for (int i = 0; i < communications.Components.Count; i++)
                 {
+                    var component = communications.Components[i];
+
                     try
                     {
-                        components[i].Tick();
+                        component.Tick();
                     }
                     catch (Exception ex)
                     {
-                        Log.Error($"Exception ticking {components[i].id} --> {ex}");
+                        Log.Error($"Exception ticking component {component.id} --> {ex}");
                     }
                 }
+
+                Communications.FactionManager.Tick();
             }
         }
 

@@ -36,7 +36,6 @@ namespace RimOverhaul.Things.CokeFurnace
         private CompRefuelable refuelableComp;
 
         private float consumeWhenActive = 0f;
-        private float consumeWhenInactive = 0;
 
         public bool Ready => refuelableComp.HasFuel && IngredientsReady;
 
@@ -120,7 +119,6 @@ namespace RimOverhaul.Things.CokeFurnace
             refuelableComp = GetComp<CompRefuelable>();
 
             consumeWhenActive = refuelableComp.Props.fuelConsumptionRate / 60000f;
-            consumeWhenInactive = consumeWhenActive / 3;
 
             LongEventHandler.ExecuteWhenFinished((Action)FindTexture);
         }
@@ -328,10 +326,7 @@ namespace RimOverhaul.Things.CokeFurnace
                 return;
 
             if (!started)
-            {
-                refuelableComp.ConsumeFuel(consumeWhenInactive);
                 return;
-            }
 
             base.Tick();
 

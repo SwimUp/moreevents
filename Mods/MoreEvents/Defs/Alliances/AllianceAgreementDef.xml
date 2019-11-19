@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<QuestRim.AllianceAgreementDef>
+		<defName>TestMilitaryOne</defName>
+		<label>TTestMilitary 1</label>
+		<PlayerOnly>true</PlayerOnly>
+		<AgreementCategory>Millitary</AgreementCategory>
+		<TargetGoals>
+			<li>CommonGoal</li>
+		</TargetGoals>
+		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
+		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
+		<Comp Class="QuestRim.AllianceAgreementCompProperties">
+		
+		</Comp>
+	</QuestRim.AllianceAgreementDef>
+
+	<QuestRim.AllianceAgreementDef>
+		<defName>TestMilitaryTwo</defName>
+		<label>TTestMilitary 2</label>
+		<PlayerOnly>true</PlayerOnly>
+		<AgreementCategory>Millitary</AgreementCategory>
+		<TargetGoals>
+			<li>CommonGoal</li>
+		</TargetGoals>
+		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
+		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
+		<Comp Class="QuestRim.AllianceAgreementCompProperties">
+		
+		</Comp>
+	</QuestRim.AllianceAgreementDef>
+
+	<QuestRim.AllianceAgreementDef>
+		<defName>TradeSchedulingAgreement</defName>
+		<label>Trade Scheduling Agreement</label>
+		<description>Trade agreement - an agreement on the supply of goods to your settlement at a bargain price</description>
+		<PlayerOnly>true</PlayerOnly>
+		<AgreementCategory>Economy</AgreementCategory>
+		<TargetGoals>
+			<li>CommonGoal</li>
+		</TargetGoals>
+		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
+		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
+		<Comp Class="RimOverhaul.Alliances.TradeSchedulingAgreementCompProperties">
+		
+		</Comp>
+	</QuestRim.AllianceAgreementDef>
+	
+	<QuestRim.AllianceAgreementDef>
+		<defName>TestGeneralOne</defName>
+		<label>Trade general</label>
+		<PlayerOnly>true</PlayerOnly>
+		<TargetGoals>
+			<li>CommonGoal</li>
+		</TargetGoals>
+		<AgreementCategory>General</AgreementCategory>
+		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
+		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
+		<Comp Class="QuestRim.AllianceAgreementCompProperties">
+		
+		</Comp>
+	</QuestRim.AllianceAgreementDef>
+
+
+</Defs>

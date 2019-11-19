@@ -101,10 +101,6 @@ namespace QuestRim
             {
                 Alliance.AddFaction(defendantFaction);
             }
-            if (answer == "неудача")
-            {
-                defendantFaction.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -15);
-            }
 
             lastUseTicks = Find.TickManager.TicksGame + BlockTime;
         }

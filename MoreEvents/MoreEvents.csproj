@@ -83,6 +83,9 @@
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
     <Compile Include="AI\Verb_MeleeApplyHediff.cs" />
     <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
+    <Compile Include="Alliances\TradeSchedulingAgreementComp.cs" />
+    <Compile Include="Alliances\TradeSchedulingAgreementCompProperties.cs" />
+    <Compile Include="Alliances\TradeSchedulingAgreementWindow.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
     <Compile Include="Communications\AssistCaravanWithFixedInventoryComp.cs" />
     <Compile Include="Communications\CommunicationComponent_GssRaidTimer.cs" />
@@ -106,11 +109,13 @@
     <Compile Include="Constellations\GameCondition_Contellations.cs" />
     <Compile Include="Constellations\IncidentWorker_Constellations.cs" />
     <Compile Include="Events\CaravanArrivalAction_EnterToRaidMap.cs" />
+    <Compile Include="Events\IncidentWorker_Alliance_Quest_ResearchSharing.cs" />
     <Compile Include="Events\IncidentWorker_PrisonShipAccident.cs" />
     <Compile Include="Events\MassBurial\IncidentWorker_MassBurial.cs" />
     <Compile Include="Events\MassBurial\MassBurialPlace.cs" />
     <Compile Include="Events\PlaceBattle\IncidentWorker_PlaceBattle.cs" />
     <Compile Include="Events\PlaceBattle\PlaceBattle.cs" />
+    <Compile Include="Patch\Faction_ Notify_RelationKindChanged.cs" />
     <Compile Include="PriceUtils.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
     <Compile Include="DialogDefOfLocal.cs" />
@@ -300,6 +305,8 @@
     <Compile Include="Patch\IncidentWorker_RaidEnemyNonAgressivePact.cs" />
     <Compile Include="Patch\InitializeComps.cs" />
     <Compile Include="Patch\Verb_MeleeAttack.cs" />
+    <Compile Include="Quests\Alliance_Quest_ResearchSharing.cs" />
+    <Compile Include="Quests\CaravanArrivalAction_StartResearchSharing.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToKillOrderMap.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToMapWithGenerator.cs" />
     <Compile Include="Quests\CaravanArrivalAction_EnterToQuestMapBasic.cs" />
@@ -308,6 +315,7 @@
     <Compile Include="Quests\Quest_KillOrder.cs" />
     <Compile Include="Quests\Quest_PrisonShipAccident.cs" />
     <Compile Include="RaidUtils.cs" />
+    <Compile Include="ReserachUtility.cs" />
     <Compile Include="RimOverhaulModule.cs" />
     <Compile Include="ModulesHandler.cs" />
     <Compile Include="MoreEventsMod.cs" />

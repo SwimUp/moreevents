@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,7 @@ namespace QuestRim
         public bool PlayerOnly;
 
         public Type workerClass;
+
+        public List<StorytellerCompProperties> comps = new List<StorytellerCompProperties>();
     }
 }

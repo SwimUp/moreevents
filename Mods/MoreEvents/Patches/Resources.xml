@@ -15,7 +15,7 @@
 			</building>
 		</value>
 	</Operation>
-
+	
 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ThingDef[defName="Steel"]/stuffProps</xpath>
 		<value>
@@ -30,7 +30,7 @@
 				<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
 				<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
 				<statFactors>
-					<MaxHitPoints>1</MaxHitPoints>
+					<MaxHitPoints>1.8</MaxHitPoints>
 					<Beauty>1</Beauty>
 					<Flammability>0.25</Flammability>
 				</statFactors>

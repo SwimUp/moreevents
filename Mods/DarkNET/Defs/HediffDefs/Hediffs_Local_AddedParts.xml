@@ -1165,26 +1165,10 @@
 		<labelNoun>Prosthesis designed to allow the host to live.</labelNoun>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.25</partEfficiency>
+			<partEfficiency>0.4</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
 		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>-0.4</offset>
-					</li>
-				</capMods>
-			</li>  
 		</stages>
 		<spawnThingOnRemoved>DarkNet_SimpleHeartPump</spawnThingOnRemoved>
 	</HediffDef>
@@ -1196,26 +1180,10 @@
 		<labelNoun>Acceleration of rhythmic movements alleviated the negative effects of heart loss.</labelNoun>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.4</partEfficiency>
+			<partEfficiency>0.5</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
 		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>-0.15</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>-0.15</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-			</li>  
 		</stages>
 		<spawnThingOnRemoved>DarkNet_ImprovedHeartPump</spawnThingOnRemoved>
 	</HediffDef>
@@ -1226,7 +1194,7 @@
 		<labelNoun>The first prosthesis for the heart, created on a large scale.</labelNoun>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.7</partEfficiency>
+			<partEfficiency>0.8</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
 		<stages>
@@ -1329,7 +1297,7 @@
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.3</offset>
+						<offset>0.1</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -1360,7 +1328,7 @@
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.4</offset>
+						<offset>0.2</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -1391,7 +1359,7 @@
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.45</offset>
+						<offset>0.3</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -1421,7 +1389,7 @@
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.5</offset>
+						<offset>0.4</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -1439,7 +1407,7 @@
 		<labelNoun>A catheter that partially simulates the functioning of the kidney.</labelNoun>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.5</partEfficiency>
+			<partEfficiency>0.7</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
 		<stages>
@@ -1447,7 +1415,7 @@
 				<capMods>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>-0.3</offset>
+						<offset>-0.1</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
@@ -1469,7 +1437,7 @@
 		<labelNoun>Advanced kidney replacement catheter.</labelNoun>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.7</partEfficiency>
+			<partEfficiency>0.8</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
 		<stages>

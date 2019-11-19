@@ -21,7 +21,7 @@ namespace QuestRim
         private Vector2 questRewardSlider = Vector2.zero;
         private Vector2 factionListSlider = Vector2.zero;
 
-        private enum Tab
+        public enum Tab
         {
             Quests,
             Events,
@@ -37,7 +37,7 @@ namespace QuestRim
 
         public override Vector2 InitialSize => new Vector2(1000, 700);
 
-        private Tab tab;
+        public Tab tab;
         private InterTab interTab;
 
         private static List<TabRecord> tabsList = new List<TabRecord>();
@@ -58,20 +58,20 @@ namespace QuestRim
         private int commAllianceSliderLength = 0;
         private int commEmailsSliderLength = 0;
 
-        private CommunicationDialog currentDialog;
-        private Quest currentQuest;
-        private FactionInteraction currentFaction;
-        private EmailMessage currentMessage;
-        private FactionManager globalFactionManager;
+        public CommunicationDialog currentDialog;
+        public Quest currentQuest;
+        public FactionInteraction currentFaction;
+        public EmailMessage currentMessage;
+        public FactionManager globalFactionManager;
 
-        private static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
-        private static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
-        private static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
-        private static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
-        private static readonly Color CommCardBGColorNotRead = new ColorInt(166, 80, 80).ToColor;
-        private static readonly Color JumpToLocationColor = new ColorInt(101, 172, 247).ToColor;
-        private static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
-        private static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
+        public static readonly Color DisabledSkillColor = new Color(1f, 1f, 1f, 0.5f);
+        public static Texture2D SkillBarFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(1f, 1f, 1f, 0.1f));
+        public static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
+        public static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
+        public static readonly Color CommCardBGColorNotRead = new ColorInt(166, 80, 80).ToColor;
+        public static readonly Color JumpToLocationColor = new ColorInt(101, 172, 247).ToColor;
+        public static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
+        public static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
 
         private float rewardCost = 0;
 
@@ -91,12 +91,26 @@ namespace QuestRim
 
             commDialogSliderLength = communicationsDialogs.Count * 78;
             commQuestsSliderLength = quests.Count * 108;
-            commFactionSliderLength = factions.Count * 75;
+            commFactionSliderLength = factions.Count * 85;
             commEmailsSliderLength = emailMessages.Count * 130;
             commAllianceSliderLength = alliances.Count * 95;
 
             forcePause = true;
             doCloseX = true;
+        }
+
+        public void ForceSelectQuest(Quest quest)
+        {
+            tab = Tab.Quests;
+            currentQuest = quest;
+
+            rewardCost = 0;
+
+            if (currentQuest.Rewards != null)
+            {
+                foreach (var k in currentQuest.Rewards)
+                    rewardCost += k.def.BaseMarketValue * k.stackCount;
+            }
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -397,7 +411,17 @@ namespace QuestRim
                 Text.Anchor = TextAnchor.UpperLeft;
             }
             Text.Font = GameFont.Small;
-            Widgets.DrawHighlightIfMouseover(r);
+            if (currentQuest == quest)
+            {
+                Widgets.DrawHighlight(r);
+                GUI.color = quest.Faction.Color;
+                Widgets.DrawBox(r);
+                GUI.color = Color.white;
+            }
+            else
+            {
+                Widgets.DrawHighlightIfMouseover(r);
+            }
 
             GUI.color = CommCardBGColor;
             Widgets.DrawHighlight(r);
@@ -789,13 +813,14 @@ namespace QuestRim
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
 
-            Rect r = new Rect(10, y, rect.width - 20, 60);
+            Rect r = new Rect(10, y, rect.width - 20, 75);
             Rect titleRect = new Rect(15, y, rect.width - 20, 50);
             Widgets.Label(titleRect, faction.Faction.Name);
             Text.Font = GameFont.Tiny;
-            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 40);
+            Rect rect2 = new Rect(15, y + 22, rect.width - 20, 50);
             FactionRelationKind kindWithPlayer = faction.Faction.PlayerRelationKind;
-            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign(), faction.Trust));
+            Alliance alliance = faction.Alliance;
+            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign(), faction.Trust, "AllianceInformation".Translate(alliance == null ? "NoAllianceAlias".Translate() : alliance.Name)));
 
             Text.Font = GameFont.Small;
             Widgets.DrawHighlightIfMouseover(r);
@@ -839,7 +864,7 @@ namespace QuestRim
             {
                 currentFaction = faction;
             }
-            y += 70;
+            y += 85;
         }
         private void DrawAllianceMainPage(Rect inRect)
         {
@@ -900,7 +925,7 @@ namespace QuestRim
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
 
-            Rect r = new Rect(10, y, rect.width - 20, 90);
+            Rect r = new Rect(10, y, rect.width - 20, 77);
             Rect titleRect = new Rect(15, y, rect.width - 20, 50);
             Widgets.Label(titleRect, "AllianceNameAllias".Translate(alliance.Name));
 
@@ -912,7 +937,7 @@ namespace QuestRim
             {
                 if (Widgets.ButtonInvisible(r))
                 {
-                    Find.WindowStack.Add(new AllianceManager(alliance));
+                    Find.WindowStack.Add(new AllianceManager(alliance, this));
                 }
 
                 GUI.color = MenuSectionBGBorderColor;

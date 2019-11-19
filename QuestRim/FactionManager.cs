@@ -58,6 +58,44 @@ namespace QuestRim
         {
         }
 
+        public void Tick()
+        {
+            for (int i = 0; i < Alliances.Count; i++)
+            {
+                var alliance = Alliances[i];
+
+                try
+                {
+                    alliance.Tick();
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"Exception ticking alliance {alliance.id} --> {ex}");
+                }
+            }
+
+            if (Find.TickManager.TicksGame % 5000 == 0)
+            {
+                foreach(var alliance in Alliances)
+                {
+                    foreach(FiringIncident item in alliance.MakeIncidentsForInterval())
+                    {
+                        TryFire(item);
+                    }
+                }
+            }
+        }
+
+        public bool TryFire(FiringIncident fi)
+        {
+            if (fi.def.Worker.CanFireNow(fi.parms) && fi.def.Worker.TryExecute(fi.parms))
+            {
+                fi.parms.target.StoryState.Notify_IncidentFired(fi);
+                return true;
+            }
+            return false;
+        }
+
         public FactionInteraction GetInteraction(Faction faction)
         {
             FactionInteraction interaction = null;
