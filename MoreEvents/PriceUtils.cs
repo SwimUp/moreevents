@@ -18,7 +18,7 @@ namespace RimOverhaul
             {
                 int remaining = count;
                 List<Thing> silver = map.listerThings.ThingsOfDef(ThingDefOf.Silver);
-                for (int i = 0; i < silver.Count; i++)
+                for (int i = silver.Count - 1; i >= 0; i--)
                 {
                     Thing item = silver[i];
 

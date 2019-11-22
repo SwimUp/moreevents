@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+  <CaravanAI.label>караван</CaravanAI.label>
+  <CaravanAI.description>Группа путешествующих людей.</CaravanAI.description>
+ 
  
   <MassiveFireSite.label>Очаг огня</MassiveFireSite.label>
   <MassiveFireSite.description>Очаг огня</MassiveFireSite.description>

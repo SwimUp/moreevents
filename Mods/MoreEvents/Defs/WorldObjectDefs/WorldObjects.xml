@@ -2,6 +2,25 @@
 <Defs>
 
 	<WorldObjectDef>
+		<defName>CaravanAI</defName>
+		<label>caravan</label>
+		<description>A group of traveling people.</description>
+		<worldObjectClass>RimOverhaul.AI.CaravanAI</worldObjectClass>
+		<texture>World/WorldObjects/Caravan</texture>
+		<useDynamicDrawer>true</useDynamicDrawer>
+		<expandingIcon>true</expandingIcon>
+		<expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
+		<expandingIconPriority>100</expandingIconPriority>
+		<expandMore>true</expandMore>
+		<allowCaravanIncidentsWhichGenerateMap>false</allowCaravanIncidentsWhichGenerateMap>
+		<inspectorTabs>
+			<li>WITab_Caravan_Items</li>
+			<li>WITab_Caravan_Needs</li>
+			<li>WITab_Caravan_Social</li>
+		</inspectorTabs>
+	</WorldObjectDef>
+
+	<WorldObjectDef>
 		<defName>ShipCrashSite</defName>
 		<worldObjectClass>MoreEvents.Events.ShipCrash.ShipSite</worldObjectClass>
 		<expandingIcon>true</expandingIcon>
@@ -133,7 +152,7 @@
 			<li>Map_Misc</li>
 		</IncidentTargetTags>
 	</WorldObjectDef>
-	
+
 	<WorldObjectDef>
 		<defName>CompetitionsPlace</defName>
 		<label>Competitions</label>

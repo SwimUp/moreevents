@@ -60,6 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\CaravanAI.cs" />
+    <Compile Include="AI\CaravanAIMaker.cs" />
+    <Compile Include="AI\CaravanArrivalAction_AIEnterCaravan.cs" />
+    <Compile Include="AI\CaravanAI_NeedsTracker.cs" />
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_CarryItemToFurnace.cs" />
     <Compile Include="AI\JobDriver_FillUpTheHole.cs" />
@@ -83,6 +87,7 @@
     <Compile Include="AI\PawnsArrivalModeWorker_Surroundings.cs" />
     <Compile Include="AI\Verb_MeleeApplyHediff.cs" />
     <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
+    <Compile Include="AllianceAgreementDefOfLocal.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementComp.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementCompProperties.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementWindow.cs" />

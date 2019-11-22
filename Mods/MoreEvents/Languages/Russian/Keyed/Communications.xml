@@ -161,7 +161,8 @@
 	<Alliance_AddFactionTitle>{0} вступает в альянс</Alliance_AddFactionTitle>
 	<Alliance_AddFactionDesc>После переговоров, фракция {0} вступает в ваш альянс.</Alliance_AddFactionDesc>
 	<AllianceRemoveFactionTitle>{0} покидает альянс</AllianceRemoveFactionTitle>
-	<Alliance_RemoveFactionDesc>Фракция {0} покидает альянс по причине: {1}</Alliance_RemoveFactionDesc>
+	<Alliance_RemoveFactionDesc>Фракция {0} покидает альянс по причине: {1}
+Все текущеие соглашения были разорваны.</Alliance_RemoveFactionDesc>
 	<AllianceRemoveReason_Kick>разрыв соглашения</AllianceRemoveReason_Kick>
 	<AllianceRemoveReason_LowTrust>низкий уровень доверия</AllianceRemoveReason_LowTrust>
 	<AllianceRemoveReason_None>не указано</AllianceRemoveReason_None>
@@ -179,5 +180,41 @@
 	<TradeSchedulingAgreementWindow_SelectSettlementLabel>Выберите поселения для поставок</TradeSchedulingAgreementWindow_SelectSettlementLabel>
 	<TradeSchedulingAgreementWindow_SelectedSettlement>Поселение: {0}, время пути {1} (дней)</TradeSchedulingAgreementWindow_SelectedSettlement>
 	<TradeSchedulingAgreementWindow_DaysLabelHolder>дней в пути</TradeSchedulingAgreementWindow_DaysLabelHolder>
+
+	<Alliance_CanSignAgreement_NoTargetGoal>Невозможно заключить с текущей целью альянса</Alliance_CanSignAgreement_NoTargetGoal>
+	<Alliance_CanSignAgreement_NoSlots>Достигнут лимит активных соглашений ({0})</Alliance_CanSignAgreement_NoSlots>
+	<Alliance_AddAgreement_False>Невозможно подписать соглашение, причина: {0}</Alliance_AddAgreement_False>
+	<Alliance_CanSignAgreement_AlreadyActive>Данное соглашение уже активно.</Alliance_CanSignAgreement_AlreadyActive>
+
+	<TradeSchedulingAgreementWindow_SelectItems>Выберите предметы для соглашения. При заключении соглашения используется стандартная скидка 20% (цена уже сформатированна). 
+	Вы можете увеличить скидку до 50%, вкладывая доверие.</TradeSchedulingAgreementWindow_SelectItems>
+	<TradeSchedulingAgreementWindow_DrawGood_Good>{0} ({1}$ за штуку)</TradeSchedulingAgreementWindow_DrawGood_Good>
+	<TradeSchedulingAgreementWindow_TrustAdditionalLabel>Дополнительное доверие (максимум {0}): </TradeSchedulingAgreementWindow_TrustAdditionalLabel>
+	<TradeSchedulingAgreementWindow_TrustAdditionaRecalculate>Перерасчет цен</TradeSchedulingAgreementWindow_TrustAdditionaRecalculate>
+	<TradeSchedulingAgreementWindow_ResultInfo>Итоговая цена сделки: {0}$
+{1}
+	
+Сбор предметов потребует времени, и в итоге они будут доставлены через {2} дней.
+
+Стоимость соглашения (в доверии): {3} (дополнительно {4} за скидку)</TradeSchedulingAgreementWindow_ResultInfo>
+	<TradeSchedulingAgreementWindow_CaravanDelivery>Способ доставки: караван. Время пути каравана от поселения до вас занимает {0} дней.</TradeSchedulingAgreementWindow_CaravanDelivery>
+	<TradeSchedulingAgreementWindow_CapsuleDelivery>Способ доставки: капсулы. Дополнительное время не требуется.</TradeSchedulingAgreementWindow_CapsuleDelivery>
+
+	<TradeSchedulingAgreementWindow_CreateAgreement>Подписать соглашение</TradeSchedulingAgreementWindow_CreateAgreement>
+	<TradeSchedulingAgreementWindow_NotEnoughSilver>недостаточно серебра ({0})</TradeSchedulingAgreementWindow_NotEnoughSilver>
+	<TradeSchedulingAgreementWindow_NotEnoughTrust>недостаточно доверия (имеется {0}, требуется {1})</TradeSchedulingAgreementWindow_NotEnoughTrust>
+	<TradeSchedulingAgreementWindow_CantSignRightNow>Невозможно подписать соглашение. Причина: {0}</TradeSchedulingAgreementWindow_CantSignRightNow>
+	<TradeSchedulingAgreementWindow_ZeroCost>не выбрано ни одного товара</TradeSchedulingAgreementWindow_ZeroCost>
+	
+	<TradeSchedulingAgreement_CreateSucessTitle>Соглашение подписано</TradeSchedulingAgreement_CreateSucessTitle>
+	<TradeSchedulingAgreement_CreateSucessDesc>Вы подписали соглашение с фракцией {0}. Товары, стоимостью {1} серебра будут доставлены из поселения {2} через {3} дней.</TradeSchedulingAgreement_CreateSucessDesc>
+	<DeliveryItems_Title>Предметы доставлены</DeliveryItems_Title>
+	<DeliveryItems_Desc>Предметы по торговому соглашению доставлены</DeliveryItems_Desc>
+
+	<Alliance_CanSignAgreement_MinMembersRequired>недостаточно членов в альянсе (требуется {0})</Alliance_CanSignAgreement_MinMembersRequired>
+	<TradeSchedulingAgreementCompProperties_SkilLDisabled>текущий переговорщик не может заключить соглашение, выберите другого</TradeSchedulingAgreementCompProperties_SkilLDisabled>
+	
+	<TradeSchedulingAgreementComp_CaravanFormedTitle>Союзный караван сформирован</TradeSchedulingAgreementComp_CaravanFormedTitle>
+	<TradeSchedulingAgreementComp_CaravanFormedDesc>Союзный караван сформирован и отправлен к вам.</TradeSchedulingAgreementComp_CaravanFormedDesc>
 
 </LanguageData>

@@ -5,11 +5,10 @@ using System.Text;
 
 namespace QuestRim
 {
-    public class AllianceAgreementCondition
+    public abstract class AllianceAgreementCondition
     {
-        public virtual bool Avaliable(Alliance alliance)
-        {
-            return true;
-        }
+        public abstract string Reason { get; }
+
+        public abstract bool Avaliable(Alliance alliance);
     }
 }

@@ -123,8 +123,11 @@ namespace QuestRim
 
         public bool AddAgreement(AllianceAgreementDef allianceAgreementDef, FactionInteraction signedFaction, int endTicks)
         {
-            if (!CanSignAgreement(allianceAgreementDef))
+            if (!CanSignAgreement(allianceAgreementDef, out string reason))
+            {
+                Messages.Message("Alliance_AddAgreement_False".Translate(reason), MessageTypeDefOf.NeutralEvent);
                 return false;
+            }
 
             AllianceAgreementComp allianceAgreementComp = (AllianceAgreementComp)Activator.CreateInstance(allianceAgreementDef.Comp.compClass);
             allianceAgreementComp.AllianceAgreementDef = allianceAgreementDef;
@@ -146,20 +149,37 @@ namespace QuestRim
             return true;
         }
 
-        public bool CanSignAgreement(AllianceAgreementDef allianceAgreementDef)
+        public bool CanSignAgreement(AllianceAgreementDef allianceAgreementDef, out string reason)
         {
-            if (!allianceAgreementDef.TargetGoals.Contains(AllianceGoalDef))
+            reason = string.Empty;
+
+            if (AgreementActive(allianceAgreementDef))
+            {
+                reason = "Alliance_CanSignAgreement_AlreadyActive".Translate();
                 return false;
+            }
+
+            if (!allianceAgreementDef.TargetGoals.Contains(AllianceGoalDef))
+            {
+                reason = "Alliance_CanSignAgreement_NoTargetGoal".Translate();
+                return false;
+            }
 
             if (allianceAgreementDef.UseAgreementsSlot && allianceAgreements.Count == AgreementsSlots)
+            {
+                reason = "Alliance_CanSignAgreement_NoSlots".Translate(AgreementsSlots);
                 return false;
+            }
 
             if(allianceAgreementDef.Conditions != null)
             {
                 foreach(var condition in allianceAgreementDef.Conditions)
                 {
                     if (!condition.Avaliable(this))
+                    {
+                        reason = condition.Reason;
                         return false;
+                    }
                 }
             }
 
@@ -171,11 +191,11 @@ namespace QuestRim
             return AllianceAgreements.Any(x => x.AllianceAgreementDef == allianceAgreementDef);
         }
 
-        public void EndAgreement(AllianceAgreementComp allianceAgreementComp)
+        public void EndAgreement(AllianceAgreementComp allianceAgreementComp, AgreementEndReason agreementEndReason)
         {
             if(AllianceAgreements.Contains(allianceAgreementComp))
             {
-                allianceAgreementComp.End();
+                allianceAgreementComp.End(agreementEndReason);
 
                 AllianceAgreements.Remove(allianceAgreementComp);
             }
@@ -246,6 +266,19 @@ namespace QuestRim
 
                 foreach (var allianceFaction in Factions)
                     allianceFaction.Faction.TrySetRelationKind(faction.Faction, FactionRelationKind.Hostile);
+            }
+
+            if(AllianceAgreements != null)
+            {
+                for(int i = 0; i < AllianceAgreements.Count; i++)
+                {
+                    AllianceAgreementComp agreement = AllianceAgreements[i];
+
+                    if(agreement.SignedFaction == faction)
+                    {
+                        EndAgreement(agreement, AgreementEndReason.FactionLeave);
+                    }
+                }
             }
 
             Find.LetterStack.ReceiveLetter("AllianceRemoveFactionTitle".Translate(faction.Faction.Name), "Alliance_RemoveFactionDesc".Translate(faction.Faction.Name, reason.Translate()), LetterDefOf.NeutralEvent);

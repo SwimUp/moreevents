@@ -20,13 +20,27 @@ namespace QuestRim
             this.compClass = compClass;
         }
 
-        public virtual bool CanSign(Alliance alliance, AllianceAgreementDef allianceAgreementDef)
+        public virtual bool CanSign(Alliance alliance, AllianceAgreementDef allianceAgreementDef, Pawn speaker, out string reason)
         {
-            if (!allianceAgreementDef.TargetGoals.Contains(alliance.AllianceGoalDef))
-                return false;
+            reason = string.Empty;
 
             if (alliance.AgreementActive(allianceAgreementDef))
+            {
+                reason = "Alliance_CanSignAgreement_AlreadyActive".Translate();
                 return false;
+            }
+
+            if (!allianceAgreementDef.TargetGoals.Contains(alliance.AllianceGoalDef))
+            {
+                reason = "Alliance_CanSignAgreement_NoTargetGoal".Translate();
+                return false;
+            }
+
+            if (allianceAgreementDef.UseAgreementsSlot && alliance.AllianceAgreements.Count == alliance.AgreementsSlots)
+            {
+                reason = "Alliance_CanSignAgreement_NoSlots".Translate(alliance.AgreementsSlots);
+                return false;
+            }
 
             var conditions = allianceAgreementDef.Conditions;
             if (conditions != null)
@@ -34,14 +48,23 @@ namespace QuestRim
                 foreach(var condition in conditions)
                 {
                     if (!condition.Avaliable(alliance))
+                    {
+                        reason = condition.Reason;
                         return false;
+                    }
                 }
+            }
+
+            if(alliance.Factions.Count < allianceAgreementDef.MinMembersRequired)
+            {
+                reason = "Alliance_CanSignAgreement_MinMembersRequired".Translate(allianceAgreementDef.MinMembersRequired);
+                return false;
             }
 
             return true;
         }
 
-        public virtual void MenuSelect(Alliance alliance, AllianceAgreementDef allianceAgreementDef)
+        public virtual void MenuSelect(Alliance alliance, AllianceAgreementDef allianceAgreementDef, Pawn negotiator)
         {
 
         }

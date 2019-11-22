@@ -92,10 +92,7 @@ namespace RimOverhaul.Things.CokeFurnace
                 furnace.Infinity = !furnace.Infinity;
             }
 
-            //Text.Anchor = TextAnchor.MiddleCenter;
             Rect titleRect = new Rect(22, 90, 380, 25);
-            //Widgets.Label(titleRect, "CockeFurnace_Ingedients".Translate());
-            //Text.Anchor = TextAnchor.UpperLeft;
 
             Rect leftRect = new Rect(50, titleRect.y + 35, 80, 80);
             foreach (var ingredient in furnace.SelectedRecipe.ingredients)

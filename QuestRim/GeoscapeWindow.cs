@@ -937,7 +937,7 @@ namespace QuestRim
             {
                 if (Widgets.ButtonInvisible(r))
                 {
-                    Find.WindowStack.Add(new AllianceManager(alliance, this));
+                    Find.WindowStack.Add(new AllianceManager(alliance, this, speaker));
                 }
 
                 GUI.color = MenuSectionBGBorderColor;

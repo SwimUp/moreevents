@@ -14,7 +14,7 @@ namespace MoreEvents.AI
     public class LordJob_CaravanBringItems : LordJob
     {
         private IntVec3 spot;
-        private Pawn gifter;
+        private List<Pawn> gifters = new List<Pawn>();
 
         public LordJob_CaravanBringItems()
         {
@@ -24,7 +24,13 @@ namespace MoreEvents.AI
         public LordJob_CaravanBringItems(IntVec3 spot, Pawn gifter)
         {
             this.spot = spot;
-            this.gifter = gifter;
+            gifters.Add(gifter); 
+        }
+
+        public LordJob_CaravanBringItems(IntVec3 spot, List<Pawn> gifters)
+        {
+            this.spot = spot;
+            this.gifters = gifters;
         }
 
         public override StateGraph CreateGraph()
@@ -39,9 +45,11 @@ namespace MoreEvents.AI
             transition.AddTrigger(new Trigger_Memo("TravelArrived"));
             transition.AddPreAction(new TransitionAction_Custom(delegate (Transition t)
             {
-                Thing targetItem = gifter.inventory.innerContainer.RandomElement();
-                gifter.inventory.innerContainer.TryDropAll(gifter.Position, gifter.Map, ThingPlaceMode.Near);
-                Find.LetterStack.ReceiveLetter("GiftHasBeenDroppedTitle".Translate(), "GiftHasBeenDropped".Translate(), LetterDefOf.PositiveEvent, new LookTargets(targetItem));
+                IntVec3 seekPos = gifters.First().Position;
+                foreach (var p in gifters)
+                    p.inventory.innerContainer.TryDropAll(p.Position, p.Map, ThingPlaceMode.Near);
+
+                Find.LetterStack.ReceiveLetter("GiftHasBeenDroppedTitle".Translate(), "GiftHasBeenDropped".Translate(), LetterDefOf.PositiveEvent, new LookTargets(seekPos, Map));
             }));
             stateGraph.AddTransition(transition);
 
@@ -50,7 +58,7 @@ namespace MoreEvents.AI
 
         public override void ExposeData()
         {
-            Scribe_References.Look(ref gifter, "gifter");
+            Scribe_Collections.Look(ref gifters, "gifters");
             Scribe_Values.Look(ref spot, "spot");
         }
     }

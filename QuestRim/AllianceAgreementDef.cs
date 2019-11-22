@@ -24,6 +24,8 @@ namespace QuestRim
 
         public AgreementCategory AgreementCategory;
 
+        public int MinMembersRequired = 1;
+
         public bool UseAgreementsSlot;
 
         [NoTranslate]

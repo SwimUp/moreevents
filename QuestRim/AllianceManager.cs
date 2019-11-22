@@ -30,20 +30,24 @@ namespace QuestRim
 
         private List<AllianceAgreementDef> sortedAllianceAgreementsDef;
 
+        public Pawn Negotiator;
+
         static AllianceManager()
         {
             ChangeNameTexture = ContentFinder<Texture2D>.Get("UI/ChangeAllianceName");
         }
 
-        public AllianceManager(Alliance alliance, GeoscapeWindow window)
+        public AllianceManager(Alliance alliance, GeoscapeWindow window, Pawn negotiator)
         {
+            Negotiator = negotiator;
+
             doCloseX = true;
             forcePause = true;
 
             this.alliance = alliance;
             GeoscapeWindow = window;
 
-            sortedAllianceAgreementsDef = (from def in DefDatabase<AllianceAgreementDef>.AllDefsListForReading orderby def.AgreementCategory, alliance.AgreementActive(def) select def).ToList();
+          //  sortedAllianceAgreementsDef = (from def in DefDatabase<AllianceAgreementDef>.AllDefsListForReading orderby def.AgreementCategory, alliance.AgreementActive(def) select def).ToList();
         }
         public override void DoWindowContents(Rect inRect)
         {
@@ -55,6 +59,7 @@ namespace QuestRim
             {
                 Find.WindowStack.Add(new Dialog_RenameAlliance(alliance));
             }
+            Widgets.DrawHighlightIfMouseover(titleRect);
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
 
@@ -140,7 +145,7 @@ namespace QuestRim
             Rect scrollVertRectFact = new Rect(0, 0, DefDatabase<AllianceAgreementDef>.DefCount * 140, 135);
             Rect agreementRect = new Rect(0, 0, 130, 145);
             Widgets.BeginScrollView(agreementListRect, ref agreementsSlider, scrollVertRectFact, true);
-            foreach (var agreement in sortedAllianceAgreementsDef)
+            foreach (var agreement in from def in DefDatabase<AllianceAgreementDef>.AllDefsListForReading orderby def.AgreementCategory, alliance.AgreementActive(def) select def)
             {
                 DrawAgreement(agreementRect, ref x, agreement);
             }
@@ -163,14 +168,22 @@ namespace QuestRim
             if (Widgets.ButtonInvisible(buttonRect))
             {
                 var comp = allianceAgreementDef.Comp;
-                if(comp.CanSign(alliance, allianceAgreementDef))
+                if(comp.CanSign(alliance, allianceAgreementDef, Negotiator, out string reason))
                 {
-                    comp.MenuSelect(alliance, allianceAgreementDef);
+                    comp.MenuSelect(alliance, allianceAgreementDef, Negotiator);
                 }
             }
             GUI.color = Color.white;
             Widgets.DrawHighlightIfMouseover(buttonRect);
-            TooltipHandler.TipRegion(buttonRect, allianceAgreementDef.description);
+            if (Mouse.IsOver(buttonRect))
+            {
+                string info = allianceAgreementDef.description;
+                if (!allianceAgreementDef.Comp.CanSign(alliance, allianceAgreementDef, Negotiator, out string reason))
+                {
+                    info += "\n" + reason;
+                }
+                TooltipHandler.TipRegion(buttonRect, info);
+            }
 
             x += 140;
 

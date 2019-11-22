@@ -9,6 +9,8 @@ namespace MoreEvents.Events
     [DefOf]
     public static class WorldObjectsDefOfLocal
     {
+        public static WorldObjectDef CaravanAI;
+
         public static WorldObjectDef ClimateBombSite;
         public static WorldObjectDef SiegeCampSite;
         public static WorldObjectDef FriendlySettlementHelp;

@@ -43,7 +43,13 @@
 		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
 		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
 		<Comp Class="RimOverhaul.Alliances.TradeSchedulingAgreementCompProperties">
-		
+			<multiplierPerItemMass>0.007</multiplierPerItemMass>
+			<prepareMultiplierPerItem>0.04</prepareMultiplierPerItem>
+			<trustCost>30</trustCost>
+			<baseDiscount>0.8</baseDiscount>
+			<maxAdditionalTrust>20</maxAdditionalTrust>
+			<maxDiscount>0.5</maxDiscount>
+			<discountPerAdditionalTrust>0.015</discountPerAdditionalTrust>
 		</Comp>
 	</QuestRim.AllianceAgreementDef>
 	
