@@ -73,6 +73,8 @@ namespace QuestRim
 
         public int AgreementsSlots => 3;
 
+        public IEnumerable<War> Wars => QuestsManager.Communications.FactionManager.Wars.Where(x => x.AttackedAlliance == this || x.DefendAlliance == this);
+
         public Alliance()
         {
 
@@ -244,7 +246,85 @@ namespace QuestRim
 
             SynchonizeAllOwnerRelations();
 
+            AddIntoWars(faction);
+
             Find.LetterStack.ReceiveLetter("Alliance_AddFactionTitle".Translate(faction.Faction.Name), "Alliance_AddFactionDesc".Translate(faction.Faction.Name), LetterDefOf.PositiveEvent);
+        }
+        
+        public void AddIntoWars(FactionInteraction faction)
+        {
+            FactionInteraction owner = QuestsManager.Communications.FactionManager.GetInteraction(FactionOwner);
+            foreach (var war in faction.InWars)
+            {
+                if (war.DeclaredWarFaction == faction)
+                {
+                    Factions.ForEach(fac =>
+                    {
+                        war.AddAssaultFaction(fac);
+                    });
+
+                    war.AddAssaultFaction(owner);
+                }
+                else if (war.DefendingFaction == faction)
+                {
+                    Factions.ForEach(fac =>
+                    {
+                        war.AddDefendFaction(fac);
+                    });
+
+                    war.AddDefendFaction(owner);
+                }
+            }
+
+            foreach (var war in owner.InWars)
+            {
+                if (war.DeclaredWarFaction == owner)
+                {
+                    war.AddAssaultFaction(faction);
+                }
+                else if (war.DefendingFaction == owner)
+                {
+                    war.AddDefendFaction(faction);
+                }
+            }
+        }
+
+        public void RemoveIntoWars(FactionInteraction faction)
+        {
+            FactionInteraction owner = QuestsManager.Communications.FactionManager.GetInteraction(FactionOwner);
+            foreach (var war in faction.InWars)
+            {
+                if (war.DeclaredWarFaction == faction)
+                {
+                    Factions.ForEach(fac =>
+                    {
+                        war.RemoveAssaultFaction(fac);
+                    });
+
+                    war.RemoveAssaultFaction(owner);
+                }
+                else if(war.DefendingFaction == faction)
+                {
+                    Factions.ForEach(fac =>
+                    {
+                        war.RemoveDefendFaction(fac);
+                    });
+
+                    war.RemoveDefendFaction(owner);
+                }
+            }
+
+            foreach (var war in owner.InWars)
+            {
+                if (war.DeclaredWarFaction == owner)
+                {
+                    war.RemoveAssaultFaction(faction);
+                }
+                else if (war.DefendingFaction == owner)
+                {
+                    war.RemoveDefendFaction(faction);
+                }
+            }
         }
 
         public void GiveTrustToAllFactions(int trust)
@@ -280,6 +360,8 @@ namespace QuestRim
                     }
                 }
             }
+
+            RemoveIntoWars(faction);
 
             Find.LetterStack.ReceiveLetter("AllianceRemoveFactionTitle".Translate(faction.Faction.Name), "Alliance_RemoveFactionDesc".Translate(faction.Faction.Name, reason.Translate()), LetterDefOf.NeutralEvent);
         }

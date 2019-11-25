@@ -28,8 +28,6 @@ namespace QuestRim
 
         private static readonly Texture2D StorytellerHighlightTex = ContentFinder<Texture2D>.Get("UI/HeroArt/Storytellers/Highlight");
 
-        private List<AllianceAgreementDef> sortedAllianceAgreementsDef;
-
         public Pawn Negotiator;
 
         static AllianceManager()
@@ -46,8 +44,6 @@ namespace QuestRim
 
             this.alliance = alliance;
             GeoscapeWindow = window;
-
-          //  sortedAllianceAgreementsDef = (from def in DefDatabase<AllianceAgreementDef>.AllDefsListForReading orderby def.AgreementCategory, alliance.AgreementActive(def) select def).ToList();
         }
         public override void DoWindowContents(Rect inRect)
         {
@@ -101,6 +97,14 @@ namespace QuestRim
 
             Rect agreementsInfoRect = new Rect(rect.x, rect.y, rect.width, 200);
             DrawAgreements(agreementsInfoRect);
+
+            rect.y += 210;
+
+            Rect warRect = new Rect(rect.x, rect.y, rect.width, 30);
+            if(GUIUtils.DrawCustomButton(warRect, "AllianceManager_WarManagerButton".Translate(), Color.white))
+            {
+                Find.WindowStack.Add(new WarManager(alliance));
+            }
         }
 
         private void DrawFactionCard(Rect rect, ref int y, FactionInteraction faction)

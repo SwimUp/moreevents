@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<UnitPriceDarkNet>{0}$ за штуку</UnitPriceDarkNet>
-
 	<OpenCommsDark>Войти в DarkNET</OpenCommsDark>
 	<OpenCommsDarkNoPower>Войти в DarkNET [Нет питания]</OpenCommsDarkNoPower>
 

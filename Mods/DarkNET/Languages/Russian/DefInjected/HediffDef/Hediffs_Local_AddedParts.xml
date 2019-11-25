@@ -97,9 +97,9 @@
 	<DarkNet_Retractable_Titanium_Blades.comps.HediffComp_VerbGiver.tools.blade.label>клинок</DarkNet_Retractable_Titanium_Blades.comps.HediffComp_VerbGiver.tools.blade.label>
 	<DarkNet_Retractable_Titanium_Blades.labelNoun>выдвижные титановые клинки</DarkNet_Retractable_Titanium_Blades.labelNoun>
 
-	<DarkNet_Cyber_Hand_MK1.label>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1.label>
-	<DarkNet_Cyber_Hand_MK1.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Cyber_Hand_MK1.comps.HediffComp_VerbGiver.tools.fist.label>
-	<DarkNet_Cyber_Hand_MK1.labelNoun>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1.labelNoun>
+	<DarkNet_Cyber_Hand_MK.label>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK.label>
+	<DarkNet_Cyber_Hand_MK.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Cyber_Hand_MK.comps.HediffComp_VerbGiver.tools.fist.label>
+	<DarkNet_Cyber_Hand_MK.labelNoun>кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK.labelNoun>
 
 	<DarkNet_Cyber_Hand_MK1_Light.label>облегченное кибернетическое предплечье MK1</DarkNet_Cyber_Hand_MK1_Light.label>
 	<DarkNet_Cyber_Hand_MK1_Light.comps.HediffComp_VerbGiver.tools.fist.label>кулак</DarkNet_Cyber_Hand_MK1_Light.comps.HediffComp_VerbGiver.tools.fist.label>

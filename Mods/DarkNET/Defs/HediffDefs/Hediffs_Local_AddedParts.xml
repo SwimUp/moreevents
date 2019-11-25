@@ -41,7 +41,7 @@
 		<!-- указывать ThingDef части тела, к которой относится -->
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>1.1</partEfficiency>
+			<partEfficiency>0.8</partEfficiency>
 			<!-- эффективность части -->
 		</addedPartProps>
 	</HediffDef>
@@ -67,7 +67,7 @@
 		<spawnThingOnRemoved>DarkNet_Obsolete_Hand_Substitute</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.60</partEfficiency> 
+			<partEfficiency>0.3</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -92,7 +92,7 @@
 		<spawnThingOnRemoved>DarkNet_Old_Simple_Prosthetic_Arm</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.60</partEfficiency> 
+			<partEfficiency>0.35</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -118,7 +118,7 @@
 		<spawnThingOnRemoved>DarkNet_Fragile_Quick_Prosthetic_Arm</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.90</partEfficiency> 
+			<partEfficiency>0.4</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -143,7 +143,7 @@
 		<spawnThingOnRemoved>DarkNet_Active_Mechanical_Forearms</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.65</partEfficiency> 
+			<partEfficiency>0.45</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -165,10 +165,10 @@
 				</tools>
 			</li>
 		</comps>
-		<spawnThingOnRemoved>DarkNet_Active_Mechanical_Forearms</spawnThingOnRemoved> 
+		<spawnThingOnRemoved>DarkNet_Light_Traction_Forearms</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.75</partEfficiency> 
+			<partEfficiency>0.5</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -193,7 +193,7 @@
 		<spawnThingOnRemoved>DarkNet_Magnetic_Brushes_And_Forearms</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.75</partEfficiency> 
+			<partEfficiency>0.55</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -243,7 +243,7 @@
 		<spawnThingOnRemoved>DarkNet_Electromagnetic_Prosthesis</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.9</partEfficiency> 
+			<partEfficiency>0.6</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -293,7 +293,7 @@
 		<spawnThingOnRemoved>DarkNet_Forearms_With_Sensors</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.95</partEfficiency> 
+			<partEfficiency>0.7</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -343,7 +343,7 @@
 		<spawnThingOnRemoved>DarkNet_Advanced_Mechanical_Hand_Prosthesis</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.5</partEfficiency> 
+			<partEfficiency>0.9</partEfficiency> 
 		</addedPartProps>
 	</HediffDef>
 
@@ -600,7 +600,7 @@
 	</HediffDef>
 
 	<HediffDef ParentName="AddedBodyPartBase">
-		<defName>DarkNet_Cyber_Hand_MK1</defName>
+		<defName>DarkNet_Cyber_Hand_MK</defName>
 		<label>cyber hand mk1</label>
 		<labelNoun>cyber hand mk1</labelNoun>
 		<comps>
@@ -617,7 +617,7 @@
 				</tools>
 			</li>
 		</comps>
-		<spawnThingOnRemoved>DarkNet_Cyber_Hand_1_MK</spawnThingOnRemoved> 
+		<spawnThingOnRemoved>DarkNet_Cyber_Hand_MK</spawnThingOnRemoved> 
 		<addedPartProps>
 			<solid>true</solid>
 			<partEfficiency>1.35</partEfficiency> 
@@ -816,6 +816,7 @@
 			<li>
 				<statOffsets>
 					<ResearchSpeed>0.25</ResearchSpeed>
+					<HungerRateMultiplier>1.25</HungerRateMultiplier>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -834,6 +835,7 @@
 			<li>
 				<statOffsets>
 					<ResearchSpeed>0.50</ResearchSpeed>
+					<HungerRateMultiplier>1.5</HungerRateMultiplier>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -852,7 +854,8 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<ResearchSpeed>0.85</ResearchSpeed>
+					<ResearchSpeed>0.75</ResearchSpeed>
+					<HungerRateMultiplier>1.75</HungerRateMultiplier>
 				</statOffsets>
 			</li> 
 		</stages>

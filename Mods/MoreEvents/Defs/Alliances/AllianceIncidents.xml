@@ -22,5 +22,24 @@ The exchange of research will take about two days, at which time your colonist w
 		<earliestDay>0</earliestDay>
 	</IncidentDef>
 	<!-- s=======================s -->
+	
+	<!-- Событие: Нападение на поселение -->
+	<IncidentDef ParentName="BaseAllianceEvent_CommonGoal">
+		<defName>AttackAlliedSettlement</defName>
+		<label>Attack on an Allied Settlement</label>
+		<letterLabel>Assault on a settlement</letterLabel>
+		<letterText>The union settlement {0} of the faction {1} was attacked by {2}.
+{0} asks you for help.
+Inaction can undermine your alliance relationship.</letterText>
+		<letterDef>PositiveEvent</letterDef>
+		<targetTags>
+			<li>Alliance</li>
+		</targetTags>
+		<workerClass>RimOverhaul.Events.IncidentWorker_Alliance_Quest_ResearchSharing</workerClass>
+		<minRefireDays>20</minRefireDays>
+		<baseChance>0.8</baseChance>
+		<earliestDay>0</earliestDay>
+	</IncidentDef>
+	<!-- s=======================s -->
 
 </Defs>

@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<UnitPriceDarkNet>unit price {0}$</UnitPriceDarkNet>
-
 	<OpenCommsDark>Enter to DarkNET</OpenCommsDark>
 	<OpenCommsDarkNoPower>Enter to DarkNET [No power]</OpenCommsDarkNoPower>
 

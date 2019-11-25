@@ -54,6 +54,21 @@ namespace QuestRim
         }
         private int playerAggresiveLevel;
 
+        public List<War> Wars
+        {
+            get
+            {
+                if (wars == null)
+                {
+                    wars = new List<War>();
+                }
+
+                return wars;
+            }
+        }
+
+        private List<War> wars;
+
         public FactionManager()
         {
         }
@@ -94,6 +109,14 @@ namespace QuestRim
                 return true;
             }
             return false;
+        }
+
+        public void AddWar(War war)
+        {
+            if (Wars.Contains(war))
+                return;
+
+            Wars.Add(war);
         }
 
         public FactionInteraction GetInteraction(Faction faction)
@@ -187,6 +210,8 @@ namespace QuestRim
             if(!forFaction.def.permanentEnemy)
                 list.Add(new CommOption_InviteToAlliance());
 
+            list.Add(new CommOption_MakeWar());
+
             return list;
         }
 
@@ -199,9 +224,6 @@ namespace QuestRim
 
             foreach(var faction in Find.FactionManager.AllFactionsVisible)
             {
-                if (faction.def.hidden || faction.def.isPlayer)
-                    continue;
-
                 if (!Factions.Contains(faction))
                 {
                     InitNewFaction(faction, StandartOptions(faction));
@@ -229,6 +251,7 @@ namespace QuestRim
             Scribe_Collections.Look(ref factions, "Factions", LookMode.Deep);
             Scribe_Collections.Look(ref alliances, "alliances", LookMode.Deep);
             Scribe_Values.Look(ref playerAggresiveLevel, "PlayerAggressiveLevel");
+            Scribe_Collections.Look(ref wars, "wars", LookMode.Deep);
         }
     }
 }

@@ -1057,7 +1057,7 @@
 	</RecipeDef>
 
 	<RecipeDef ParentName="SurgeryFlesh">
-		<defName>Install_DarkNet_Cyber_Hand_MK1</defName>
+		<defName>Install_DarkNet_Cyber_Hand_MK</defName>
 		<label>Install Cyber Hand MK1</label>
 		<description>Install Cyber Hand MK1</description>
 		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
@@ -1080,7 +1080,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>DarkNet_Cyber_Hand_1_MK</li>
+						<li>DarkNet_Cyber_Hand_MK</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -1091,13 +1091,13 @@
 				<li>Medicine</li>
 			</categories>
 			<thingDefs>
-				<li>DarkNet_Cyber_Hand_1_MK</li>
+				<li>DarkNet_Cyber_Hand_MK</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
 			<li>Hand</li> 
 		</appliedOnFixedBodyParts>
-		<addsHediff>DarkNet_Cyber_Hand_MK1</addsHediff> 
+		<addsHediff>DarkNet_Cyber_Hand_MK</addsHediff> 
 	</RecipeDef>
 
 	<RecipeDef ParentName="SurgeryFlesh">

@@ -15,7 +15,9 @@ namespace QuestRim
         public Faction Faction;
         public List<InteractionOption> Options;
 
-        public Alliance Alliance => QuestsManager.Communications.FactionManager.Alliances.FirstOrDefault(x => x.Factions.Contains(this));
+        public Alliance Alliance => QuestsManager.Communications.FactionManager.Alliances.FirstOrDefault(x => x.Factions.Contains(this) || x.FactionOwner == Faction);
+
+        public List<War> InWars = new List<War>();
 
         public int Trust
         {
@@ -52,6 +54,22 @@ namespace QuestRim
             return null;
         }
 
+        public void Notify_WarIsOver(War war)
+        {
+            if(InWars.Contains(war))
+            {
+                InWars.Remove(war);
+            }
+        }
+
+        public void Notify_WarIsStarted(War war)
+        {
+            if(!InWars.Contains(war))
+            {
+                InWars.Add(war);
+            }
+        }
+
         public void ExposeData()
         {
             Scribe_Values.Look(ref id, "id");
@@ -59,6 +77,7 @@ namespace QuestRim
             Scribe_References.Look(ref Faction, "Faction");
             Scribe_Collections.Look(ref Options, "Options", LookMode.Deep);
             Scribe_Values.Look(ref trust, "Trust");
+            Scribe_Collections.Look(ref InWars, "InWars", LookMode.Reference);
         }
 
         public string GetUniqueLoadID()

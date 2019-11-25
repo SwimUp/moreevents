@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\CommAction_OpenDialogWithFaction.cs" />
+    <Compile Include="Actions\CommOption_MakeWar.cs" />
     <Compile Include="AllianceAgreementComp.cs" />
     <Compile Include="AllianceAgreementCompProperties.cs" />
     <Compile Include="AllianceAgreementCondition.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="FactionInteraction.cs" />
     <Compile Include="FactionManager.cs" />
+    <Compile Include="MakeWarWindow.cs" />
     <Compile Include="NonAfressionPackComp.cs" />
     <Compile Include="QuestsHandler.cs" />
     <Compile Include="QuestDef.cs" />
@@ -107,6 +109,13 @@
     <Compile Include="TerminalDef.cs" />
     <Compile Include="ThingSetMaker_ResourcePod.cs" />
     <Compile Include="UniqueIdManager.cs" />
+    <Compile Include="War.cs" />
+    <Compile Include="WarGoalDef.cs" />
+    <Compile Include="WarGoalWorker.cs" />
+    <Compile Include="WarMaker.cs" />
+    <Compile Include="WarManager.cs" />
+    <Compile Include="Wars\WarGoalWorker_Destruction.cs" />
+    <Compile Include="WarUtility.cs" />
     <Compile Include="WorldObjectDefOfLocal.cs" />
   </ItemGroup>
   <ItemGroup />

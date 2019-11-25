@@ -39,6 +39,7 @@ namespace RimOverhaul.Alliances
             AllianceAgreementDef = AllianceAgreementDefOfLocal.TradeSchedulingAgreement;
 
             PlayerOwner = true;
+            OwnerFaction = QuestsManager.Communications.FactionManager.GetInteraction(Faction.OfPlayer);
             SignedFaction = signer;
             Items = items;
             SignTicks = Find.TickManager.TicksGame;

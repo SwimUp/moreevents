@@ -12,8 +12,8 @@
 				<allowedTargetTags>
 					<li>Alliance</li>
 				</allowedTargetTags>
-				<minDaysPassed>0</minDaysPassed>
-				<mtbDays>1</mtbDays>
+				<minDaysPassed>2</minDaysPassed>
+				<mtbDays>3</mtbDays>
 			</li>
 		</comps>
 	</QuestRim.AllianceGoalDef>

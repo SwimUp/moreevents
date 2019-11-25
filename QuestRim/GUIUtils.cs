@@ -13,6 +13,7 @@ namespace QuestRim
         public static readonly Color CommCardBGColor = new ColorInt(150, 150, 150).ToColor;
         public static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
         public static Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
+        public static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
 
         [TweakValue("Input", 0f, 100f)]
         private static int IntEntryButtonWidth;

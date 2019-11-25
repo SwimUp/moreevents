@@ -216,5 +216,22 @@
 	
 	<TradeSchedulingAgreementComp_CaravanFormedTitle>Союзный караван сформирован</TradeSchedulingAgreementComp_CaravanFormedTitle>
 	<TradeSchedulingAgreementComp_CaravanFormedDesc>Союзный караван сформирован и отправлен к вам.</TradeSchedulingAgreementComp_CaravanFormedDesc>
+	
+	<AllianceManager_WarManagerButton>Управление войнами</AllianceManager_WarManagerButton>
+	<WarManager_Factions>Цель: {0}
+Атакуют: {1} ({2})
+Защищаются: {3} ({4})</WarManager_Factions>
+	<WarManager_NoAlliance>альянс отсутствует</WarManager_NoAlliance>
+	<CommOption_MakeWar_Label>Объявить войну или перемирие</CommOption_MakeWar_Label>
+	<MakeWarWindow_DrawWarModeTitle>Объявить войну фракции {0}</MakeWarWindow_DrawWarModeTitle>
+	<MakeWarWindow_DrawWarMode_SelectWarGoal>Цель: {0}</MakeWarWindow_DrawWarMode_SelectWarGoal>
+	<MakeWarWindow_DrawWarMode_MakeWar>Объявить войну {0}</MakeWarWindow_DrawWarMode_MakeWar>
+	<MakeWarWindow_WarNameLabel>Название войны</MakeWarWindow_WarNameLabel>
+	<MakeWarWindow_EmptyName>Требуется ввести имя войны</MakeWarWindow_EmptyName>
+	
+	<War_WarIsStartedTitle>Начата война: {0}</War_WarIsStartedTitle>
+	<War_WarIsStartedDesc>Фракция {0} ({1}) начала войну с {2} ({3}) под названием {4}. Её цель - {5}</War_WarIsStartedDesc>
+	
+	<CommOption_InviteToAlliance_InWar>Вы находитесь в состоянии войны с этой фракцией</CommOption_InviteToAlliance_InWar>
 
 </LanguageData>
