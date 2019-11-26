@@ -1947,7 +1947,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_GreenFields</defName>
 		<label>Fragment of the neural network "Green Fields"</label>
@@ -1969,7 +1969,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Paladin</defName>
 		<label>Fragment of the neural network "Paladin"</label>
@@ -1982,11 +1982,11 @@
 		<stages>
 			<li>
 				<capMods>
-					
+
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<MedicalQualityMax>0.1</MedicalQualityMax>
@@ -2001,7 +2001,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_MiningWays</defName>
 		<label>Fragment of the neural network "Mining ways"</label>
@@ -2017,16 +2017,16 @@
 					<li>
 						<capacity>Hearing</capacity> 
 						<offset>0.2</offset>
-                    </li> 
-					
+					</li> 
+
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.2</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-1.0</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<MiningSpeed>0.6</MiningSpeed>
@@ -2039,7 +2039,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_ConnoisseurOfBeauty</defName>
 		<label>Fragment of the neural network "Connoisseur of beauty"</label>
@@ -2056,11 +2056,11 @@
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.2</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-0.5</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<SculptingSpeed>0.6</SculptingSpeed>
@@ -2072,7 +2072,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Hephaestus</defName>
 		<label>Fragment of the neural network "Hephaestus"</label>
@@ -2088,7 +2088,7 @@
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-0.5</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<SculptingSpeed>-0.8</SculptingSpeed>
@@ -2100,8 +2100,8 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
-		<HediffDef ParentName="ImplantHediffBase">
+
+	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Science</defName>
 		<label>Fragment of the neural network "Science"</label>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</labelNoun>
@@ -2116,11 +2116,11 @@
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-1.0</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>-0.2</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<ResearchSpeed>0.8</ResearchSpeed>
@@ -2133,7 +2133,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Construction</defName>
 		<label>Fragment of the neural network "Construction"</label>
@@ -2149,11 +2149,11 @@
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-0.3</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.2</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<GlobalLearningFactor>0.1</GlobalLearningFactor>
@@ -2165,7 +2165,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Gourmet</defName>
 		<label>Fragment of the neural network "Gourmet"</label>
@@ -2181,11 +2181,11 @@
 					<li>
 						<capacity>BloodFiltration</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Eating</capacity> 
 						<offset>0.4</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<FoodPoisonChance>-0.5</FoodPoisonChance>
@@ -2197,8 +2197,8 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
-		<HediffDef ParentName="ImplantHediffBase">
+
+	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Singular</defName>
 		<label>Fragment of the neural network "Sacred and wild"</label>
 		<labelNoun>A large foreign structure created from twelve fragments. Significantly changes the consciousness of people falling within the radius of impact. It has partial functionality of all parts involved in the creation mechanism.</labelNoun>
@@ -2213,31 +2213,31 @@
 					<li>
 						<capacity>BloodFiltration</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Eating</capacity> 
 						<offset>0.5</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Moving</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Consciousness</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Hearing</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<ImmunityGainSpeed>0.2</ImmunityGainSpeed>
@@ -2253,8 +2253,8 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
-	
+
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Berserker</defName>
 		<label>Fragment of the neural network "Berserker"</label>
@@ -2270,23 +2270,23 @@
 					<li>
 						<capacity>Moving</capacity> 
 						<offset>0.3</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
 						<offset>-0.5</offset>
-                    </li>
+					</li>
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-1.0</offset>
-                    </li>
+					</li>
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.5</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Hearing</capacity> 
 						<offset>0.5</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<MeleeHitChance>0.5</MeleeHitChance>
@@ -2298,7 +2298,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Meditation</defName>
 		<label>Fragment of the neural network "Meditation"</label>
@@ -2314,15 +2314,15 @@
 					<li>
 						<capacity>Moving</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>0.8</offset>
-                    </li>
+					</li>
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<NegotiationAbility>0.6</NegotiationAbility>
@@ -2336,7 +2336,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_LifeForce</defName>
 		<label>Fragment of the neural network "Life force"</label>
@@ -2352,11 +2352,11 @@
 					<li>
 						<capacity>Moving</capacity> 
 						<offset>-0.3</offset>
-                    </li> 
+					</li> 
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<PlantWorkSpeed>0.5</PlantWorkSpeed>
@@ -2376,7 +2376,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Consummation</defName>
 		<label>Fragment of the neural network "Consummation"</label>
@@ -2392,7 +2392,7 @@
 					<li>
 						<capacity>Sight</capacity> 
 						<offset>0.1</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<TailoringSpeed>0.4</TailoringSpeed>
@@ -2407,7 +2407,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_YinYang</defName>
 		<label>Fragment of the neural network "Yin and Yang"</label>
@@ -2423,10 +2423,10 @@
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-1.0</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
-                    <GlobalLearningFactor>0.05</GlobalLearningFactor>
+					<GlobalLearningFactor>0.05</GlobalLearningFactor>
 					<ConstructionSpeedFactor>0.6</ConstructionSpeedFactor>
 					<MeleeHitChance>-0.8</MeleeHitChance>
 					<MiningYield>0.2</MiningYield>
@@ -2437,7 +2437,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_MentalFocus</defName>
 		<label>Fragment of the neural network "Mental focus"</label>
@@ -2453,7 +2453,7 @@
 					<li>
 						<capacity>Talking</capacity> 
 						<offset>-1.0</offset>
-                    </li> 
+					</li> 
 				</capMods>
 				<statOffsets>
 					<ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
@@ -2468,8 +2468,8 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
-	
+
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Emitter_Light</defName>
 		<label>Light psychoactive emitter</label>
@@ -2488,7 +2488,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Emitter_Medium</defName>
 		<label>Medium psychoactive emitter</label>
@@ -2507,7 +2507,7 @@
 			</li>
 		</stages>
 	</HediffDef>
-	
+
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Emitter_Heavy</defName>
 		<label>Heavy psychoactive emitter</label>
@@ -2526,4 +2526,319 @@
 			</li>
 		</stages>
 	</HediffDef>
+
+
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_AdrenalineRibs</defName>
+		<label>Cybernetic lung</label>
+		<labelNoun>Many injectors located on artificial ribs produce adrenaline, accelerating the reaction.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_AdrenalineRibs</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_TitaniumRibs</defName>
+		<label>Titanium ribs</label>
+		<labelNoun>Strong chest formed from titanium coated ribs.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_TitaniumRibs</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticRibs</defName>
+		<label>Synthetic ribs</label>
+		<labelNoun>Chest consists of complex artificial ribs.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SyntheticRibs</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CyberneticBreastFrame</defName>
+		<label>Cybernetic breast frame</label>
+		<labelNoun>Cybernetic pairs of ribs composed in the form of a strong frame.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberneticBreastFrame</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticStomach</defName>
+		<label>Synthetic stomach</label>
+		<labelNoun>Advanced artificial organ composed of inorganic materials.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SyntheticStomach</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.25</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CyberneticStomachMK</defName>
+		<label>Cybernetic stomach MK1</label>
+		<labelNoun>MK1 advanced cybernetic prosthesis accelerating carrier metabolism.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberneticStomachMK</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CyberneticStomachMKLight</defName>
+		<label>Cybernetic stomach MK1 Light</label>
+		<labelNoun>Lightweight cybernetic prosthesis that speeds up metabolism.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberneticStomachMKLight</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.35</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>DarkNet_ModularArrayOfLiver</defName>
+	<label>Modular array of liver</label>
+	<labelNoun>Microscopic copies of robotic organisms form an organic liver.</labelNoun>
+	<spawnThingOnRemoved>DarkNet_ModularArrayOfLiver</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1.1</partEfficiency>
+	</addedPartProps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+			</capMods>
+		</li> 
+	</stages>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>DarkNet_SyntheticLiverMK</defName>
+	<label>Synthetic liver MK1</label>
+	<labelNoun>An array of artificial mechanisms that mimic the liver.</labelNoun>
+	<spawnThingOnRemoved>DarkNet_SyntheticLiverMK</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1.15</partEfficiency>
+	</addedPartProps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.15</offset>
+				</li>
+			</capMods>
+		</li> 
+	</stages>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>DarkNet_CyberneticLiver</defName>
+	<label>Cybernetic liver MK1</label>
+	<labelNoun>Large robotic structure imitating the functioning of the natural liver.</labelNoun>
+	<spawnThingOnRemoved>DarkNet_CyberneticLiver</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1.25</partEfficiency>
+	</addedPartProps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.25</offset>
+				</li>
+			</capMods>
+		</li> 
+	</stages>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>DarkNet_CochlearReceiver</defName>
+	<label>Cochlear receiver</label>
+	<labelNoun>Small radio transmits sound vibrations to the brain.</labelNoun>
+	<spawnThingOnRemoved>DarkNet_CochlearReceiver</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>0.75</partEfficiency>
+	</addedPartProps>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>DarkNet_SoundWaveGenerator</defName>
+	<label>Sound wave generator</label>
+	<labelNoun>Advanced electromagnetic generator of sound waves transmitted to the brain.</labelNoun>
+	<spawnThingOnRemoved>DarkNet_SoundWaveGenerator</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1.25</partEfficiency>
+	</addedPartProps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Hearing</capacity>
+					<offset>0.15</offset>
+				</li>
+			</capMods>
+		</li> 
+	</stages>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>DarkNet_CyberneticEarMK</defName>
+	<label>Cybernetic ear MK1</label>
+	<labelNoun>Advanced cybernetic sound wave transducer.</labelNoun>
+	<spawnThingOnRemoved>DarkNet_CyberneticEarMK</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1.45</partEfficiency>
+	</addedPartProps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Hearing</capacity>
+					<offset>0.35</offset>
+				</li>
+			</capMods>
+		</li> 
+	</stages>
+</HediffDef>
+
+
 </Defs>

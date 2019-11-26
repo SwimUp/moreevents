@@ -222,9 +222,9 @@
 
 	<DarkNet_BionicLung.label>Бионическое легкое</DarkNet_BionicLung.label>
 	<DarkNet_BionicLung.description>Бионическое легкое - это искусственный орган, который выполняет функцию настоящего легкого и является наиболее продвинутым вариантом среди подобных протезов, поскольку он легко приспосабливается к телу, не вызывает сепсиса и имеет ряд улучшенных параметров.</DarkNet_BionicLung.description>
-	
-	
-	
+
+
+
 	<DarkNet_Network_Bushido.label>Фрагмент нейросети "Bushido"</DarkNet_Network_Bushido.label>
 	<DarkNet_Network_Bushido.description>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, способности в ближнем бою существенно повышаются, однако уровень владения стрелковым оружием заметно падает.</DarkNet_Network_Bushido.description>
 
@@ -278,11 +278,11 @@
 
 	<DarkNet_Network_YinYang.label>Комбинированная нейросеть "Yin and Yang"</DarkNet_Network_YinYang.label>
 	<DarkNet_Network_YinYang.description>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Энтропия и созидание гармонично сочитаются в конструкции, придавая сознанию новые свойства.</DarkNet_Network_YinYang.description>
-	
+
 	<DarkNet_Network_MentalFocus.label>Комбинированная нейросеть "Mental focus"</DarkNet_Network_MentalFocus.label>
 	<DarkNet_Network_MentalFocus.description>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Позволяет сосредоточить все усилия организма на получении новых знаний и совершенствование интеллекта, что затрачивает последние энергетические резервы организма.</DarkNet_Network_MentalFocus.description>
 
-    <DarkNet_Emitter_Heavy.label>Большой пси излучатель</DarkNet_Emitter_Heavy.label>
+	<DarkNet_Emitter_Heavy.label>Большой пси излучатель</DarkNet_Emitter_Heavy.label>
 	<DarkNet_Emitter_Heavy.description>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Heavy.description>
 
 	<DarkNet_Emitter_Medium.label>Средний пси излучатель</DarkNet_Emitter_Medium.label>
@@ -290,7 +290,46 @@
 
 	<DarkNet_Emitter_Light.label>Малый пси излучатель</DarkNet_Emitter_Light.label>
 	<DarkNet_Emitter_Light.description>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Light.description>
-	
-	
-	
+
+	<DarkNet_AdrenalineRibs.label>Адреналиновые ребра</DarkNet_AdrenalineRibs.label>
+	<DarkNet_AdrenalineRibs.description>Множество инъекторов, расположенных на искусственных ребрах, производят адреналин, ускоряя реакции.</DarkNet_AdrenalineRibs.description>
+
+	<DarkNet_TitaniumRibs.label>Титановые ребра</DarkNet_TitaniumRibs.label>
+	<DarkNet_TitaniumRibs.description>Прочная грудная клетка, образованная ребрами с титановым покрытием.</DarkNet_TitaniumRibs.description>
+
+	<DarkNet_SyntheticRibs.label>Синтетические ребра</DarkNet_SyntheticRibs.label>
+	<DarkNet_SyntheticRibs.description>Грудная клетка, состоящая из сложных искусственных ребер</DarkNet_SyntheticRibs.description>
+
+	<DarkNet_CyberneticBreastFrame.label>Кибернетическая грудная клетка</DarkNet_CyberneticBreastFrame.label>
+	<DarkNet_CyberneticBreastFrame.description>Кибернетические пары ребер, сложеные в виде прочного каркаса.</DarkNet_CyberneticBreastFrame.description>
+
+	<DarkNet_SyntheticStomach.label>Синтетический желудок</DarkNet_SyntheticStomach.label>
+	<DarkNet_SyntheticStomach.description>Усовершенствованный искусственный орган, состоящий из неорганических материалов.</DarkNet_SyntheticStomach.description>
+
+	<DarkNet_CyberneticStomachMK.label>Кибернетический желудок MK1</DarkNet_CyberneticStomachMK.label>
+	<DarkNet_CyberneticStomachMK.description>МК1 продвинутый кибернетический протез, ускоряющий метаболизм носителя.</DarkNet_CyberneticStomachMK.description>
+
+	<DarkNet_CyberneticStomachMKLight.label>Кибернетический желудок MK1 Light</DarkNet_CyberneticStomachMKLight.label>
+	<DarkNet_CyberneticStomachMKLight.description>Облегченный кибернетический протез, ускоряющий обмен веществ.</DarkNet_CyberneticStomachMKLight.description>
+
+	<DarkNet_ModularArrayOfLiver.label>Модульный массив печени</DarkNet_ModularArrayOfLiver.label> 
+	<DarkNet_ModularArrayOfLiver.description>Микроскопические копии роботизированных организмов образуют органическую печень.</DarkNet_ModularArrayOfLiver.description>
+
+	<DarkNet_SyntheticLiverMK.label>Синтетическая печень</DarkNet_SyntheticLiverMK.label>
+	<DarkNet_SyntheticLiverMK.description>Множество искусственных механизмов, иммитирующих печень.</DarkNet_SyntheticLiverMK.description>
+
+	<DarkNet_CyberneticLiver.label>Кибернетическая печень</DarkNet_CyberneticLiver.label>
+	<DarkNet_CyberneticLiver.description>Большая роботизированная структура, имитирующая функционирование естественной печени.</DarkNet_CyberneticLiver.description>
+
+	<DarkNet_CochlearReceiver.label>Кохлеарный ретранслятор</DarkNet_CochlearReceiver.label>
+	<DarkNet_CochlearReceiver.description>Небольшой радиоприемник передает звуковые колебания в мозг.</DarkNet_CochlearReceiver.description>
+
+	<DarkNet_SoundWaveGenerator.label>Генератор звуковых волн</DarkNet_SoundWaveGenerator.label>
+	<DarkNet_SoundWaveGenerator.description>Усовершенствованный электромагнитный генератор звуковых волн, передаваемых в мозг.</DarkNet_SoundWaveGenerator.description>
+
+	<DarkNet_CyberneticEarMK.label>Кибернетическое ухо MK1</DarkNet_CyberneticEarMK.label>
+	<DarkNet_CyberneticEarMK.description>Усовершенствованный кибернетический преобразователь звуковых волн.</DarkNet_CyberneticEarMK.description>
+
+
+
 </LanguageData>

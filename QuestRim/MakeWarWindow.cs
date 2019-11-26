@@ -24,6 +24,8 @@ namespace QuestRim
 
         private string editBufferName;
 
+        private War war;
+
         public MakeWarWindow()
         {
 
@@ -41,6 +43,11 @@ namespace QuestRim
 
             defendMode = faction.InWars.Any(x => x.DefendingFactions.Contains(faction) && x.DeclaredWarFaction.Faction == speaker.Faction);
 
+            if(defendMode)
+            {
+                war = faction.InWars.First(x => x.DeclaredWarFaction.Faction == speaker.Faction);
+            }
+
             warGoalDef = DefDatabase<WarGoalDef>.AllDefs.First();
         }
 
@@ -48,12 +55,32 @@ namespace QuestRim
         {
             if (defendMode)
             {
-
+                DrawDefendMode(inRect);
             }
             else
             {
                 DrawWarMode(inRect);
             }
+        }
+
+        private void DrawDefendMode(Rect inRect)
+        {
+            Text.Anchor = TextAnchor.MiddleCenter;
+
+            float y = inRect.y;
+
+            Rect titleRect = new Rect(inRect.x, y, inRect.width, 25);
+            Widgets.Label(titleRect, "MakeWarWindow_DrawDefendModeTitle".Translate(war.WarName, interactFaction.Faction.Name));
+
+            y += 30;
+
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            float height = inRect.height - y - 200;
+            Rect fullInfoRect = new Rect(inRect.x, y, inRect.width, height);
+            Widgets.Label(fullInfoRect, "MakeWarWindow_DrawDefendModeDesc".Translate(war.WarGoalDef.LabelCap, (Find.TickManager.TicksGame - war.StartTicks).TicksToDays().ToString("f2")));
+
+            y += height;
         }
 
         private void DrawWarMode(Rect inRect)

@@ -89,16 +89,28 @@
 			<li>Install_DarkNet_Network_Science</li>
 			<li>Install_DarkNet_Network_Construction</li>
 			<li>Install_DarkNet_Network_Gourmet</li>	
-            <li>Install_DarkNet_Network_Singular</li>		
+			<li>Install_DarkNet_Network_Singular</li>		
 			<li>Install_DarkNet_Network_Berserker</li>
 			<li>Install_DarkNet_Network_Meditation</li>
 			<li>Install_DarkNet_Network_LifeForce</li>
 			<li>Install_DarkNet_Network_Consummation</li>
 			<li>Install_DarkNet_Network_YinYang</li>	
-            <li>Install_DarkNet_Network_MentalFocus</li>
-            <li>Install_DarkNet_Emitter_Light</li>
-			<li>Install_DarkNet_Emitter_Medium</li>
-			<li>Install_DarkNet_Emitter_Heavy</li>
+			<li>Install_DarkNet_Network_MentalFocus</li>
+			<li>Install_DarkNet_AdrenalineRibs</li>
+			<li>Install_DarkNet_TitaniumRibs</li>
+			<li>Install_DarkNet_SyntheticRibs</li>
+			<li>Install_DarkNet_CyberneticBreastFrame</li>
+			<li>Install_DarkNet_SyntheticStomach</li>
+			<li>Install_DarkNet_CyberneticStomachMK</li>
+			<li>Install_DarkNet_CyberneticStomachMKLight</li>
+			<li>Install_DarkNet_ModularArrayOfLiver</li>
+			<li>Install_DarkNet_SyntheticLiverMK</li>
+			<li>Install_DarkNet_CyberneticLiver</li>
+			<li>Install_DarkNet_CochlearReceiver</li>
+			<li>Install_DarkNet_SoundWaveGenerator</li>
+			<li>Install_DarkNet_CyberneticEarMK</li>
+
+
 		</value>
 	</Operation>
 

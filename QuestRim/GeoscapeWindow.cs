@@ -73,6 +73,8 @@ namespace QuestRim
         public static readonly Color InterBottomColor = new ColorInt(163, 130, 95).ToColor;
         public static readonly Color CommBorderColor = new ColorInt(120, 120, 120).ToColor;
 
+        private Dictionary<FactionInteraction, War> hasWarsWithPlayer = new Dictionary<FactionInteraction, War>();
+
         private float rewardCost = 0;
 
         public GeoscapeWindow(Communications communications, Pawn speaker)
@@ -85,6 +87,11 @@ namespace QuestRim
             emailMessages = communications.PlayerBox.Messages;
             alliances = globalFactionManager.Alliances;
             globalFactionManager.Alliances.SortByDescending(x => x.PlayerOwner);
+
+            foreach (var fac in factions)
+            {
+                hasWarsWithPlayer.Add(fac, fac.InWars.FirstOrDefault(x => x.DeclaredWarFaction.Faction == speaker.Faction && x.DefendingFaction == fac || x.DefendingFaction.Faction == speaker.Faction && x.DeclaredWarFaction == fac));
+            }
 
             this.communications = communications;
             this.speaker = speaker;
@@ -748,7 +755,6 @@ namespace QuestRim
 
                 Widgets.LabelScrollable(new Rect(rect.x, rect.y, rect.width, 180), currentFaction.Faction.def.description, ref commInfoSlider, false, false);
 
-                //430
                 Rect rect2 = new Rect(rect.x, rect.y + 200, rect.width / 2, 20);
                 Widgets.Label(rect2, "FactionInteractionDef".Translate(currentFaction.Faction.def.LabelCap));
                 rect2.y += 22;
@@ -859,6 +865,14 @@ namespace QuestRim
             GUI.color = faction.Faction.Color;
             Widgets.DrawHighlight(r);
             GUI.color = Color.white;
+
+            var war = hasWarsWithPlayer[faction];
+            if (war != null)
+            {
+                GUI.color = war.WarGoalDef.MenuColor;
+                Widgets.DrawBox(r);
+                GUI.color = Color.white;
+            }
 
             if (Widgets.ButtonInvisible(r))
             {

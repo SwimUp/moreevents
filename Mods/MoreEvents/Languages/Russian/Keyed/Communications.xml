@@ -233,5 +233,13 @@
 	<War_WarIsStartedDesc>Фракция {0} ({1}) начала войну с {2} ({3}) под названием {4}. Её цель - {5}</War_WarIsStartedDesc>
 	
 	<CommOption_InviteToAlliance_InWar>Вы находитесь в состоянии войны с этой фракцией</CommOption_InviteToAlliance_InWar>
+	
+	<MakeWarWindow_DrawDefendModeTitle>{0} с фракцией {1}</MakeWarWindow_DrawDefendModeTitle>
+	<MakeWarWindow_DrawDefendModeDesc>Цель: {0}
+-------------------
+Длительность: {1} дней
+</MakeWarWindow_DrawDefendModeDesc>
+	<WarManager_DrawWarInfo_WarMembers>Обороняющиеся ({0})
+----------------</WarManager_DrawWarInfo_WarMembers>
 
 </LanguageData>

@@ -315,5 +315,44 @@
 
 	<DarkNet_Emitter_Light.label>Малый пси излучатель</DarkNet_Emitter_Light.label>
 	<DarkNet_Emitter_Light.labelNoun>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Light.labelNoun>
+	
+	<DarkNet_AdrenalineRibs.label>Адреналиновые ребра</DarkNet_AdrenalineRibs.label>
+	<DarkNet_AdrenalineRibs.labelNoun>Множество инъекторов, расположенных на искусственных ребрах, производят адреналин, ускоряя реакции.</DarkNet_AdrenalineRibs.labelNoun>
+
+	<DarkNet_TitaniumRibs.label>Титановые ребра</DarkNet_TitaniumRibs.label>
+	<DarkNet_TitaniumRibs.labelNoun>Прочная грудная клетка, образованная ребрами с титановым покрытием.</DarkNet_TitaniumRibs.labelNoun>
+
+	<DarkNet_SyntheticRibs.label>Синтетические ребра</DarkNet_SyntheticRibs.label>
+	<DarkNet_SyntheticRibs.labelNoun>Грудная клетка, состоящая из сложных искусственных ребер</DarkNet_SyntheticRibs.labelNoun>
+
+	<DarkNet_CyberneticBreastFrame.label>Кибернетическая грудная клетка</DarkNet_CyberneticBreastFrame.label>
+	<DarkNet_CyberneticBreastFrame.labelNoun>Кибернетические пары ребер, сложеные в виде прочного каркаса.</DarkNet_CyberneticBreastFrame.labelNoun>
+
+	<DarkNet_SyntheticStomach.label>Синтетический желудок</DarkNet_SyntheticStomach.label>
+	<DarkNet_SyntheticStomach.labelNoun>Усовершенствованный искусственный орган, состоящий из неорганических материалов.</DarkNet_SyntheticStomach.labelNoun>
+
+	<DarkNet_CyberneticStomachMK.label>Кибернетический желудок MK1</DarkNet_CyberneticStomachMK.label>
+	<DarkNet_CyberneticStomachMK.labelNoun>МК1 продвинутый кибернетический протез, ускоряющий метаболизм носителя.</DarkNet_CyberneticStomachMK.labelNoun>
+
+	<DarkNet_CyberneticStomachMKLight.label>Кибернетический желудок MK1 Light</DarkNet_CyberneticStomachMKLight.label>
+	<DarkNet_CyberneticStomachMKLight.labelNoun>Облегченный кибернетический протез, ускоряющий обмен веществ.</DarkNet_CyberneticStomachMKLight.labelNoun>
+
+	<DarkNet_ModularArrayOfLiver.label>Модульный массив печени</DarkNet_ModularArrayOfLiver.label>
+	<DarkNet_ModularArrayOfLiver.labelNoun>Микроскопические копии роботизированных организмов образуют органическую печень.</DarkNet_ModularArrayOfLiver.labelNoun>
+
+	<DarkNet_SyntheticLiverMK.label>Синтетическая печень</DarkNet_SyntheticLiverMK.label>
+	<DarkNet_SyntheticLiverMK.labelNoun>Множество искусственных механизмов, иммитирующих печень.</DarkNet_SyntheticLiverMK.labelNoun>
+
+	<DarkNet_CyberneticLiver.label>Кибернетическая печень</DarkNet_CyberneticLiver.label>
+	<DarkNet_CyberneticLiver.labelNoun>Большая роботизированная структура, имитирующая функционирование естественной печени.</DarkNet_CyberneticLiver.labelNoun>
+
+	<DarkNet_CochlearReceiver.label>Кохлеарный ретранслятор</DarkNet_CochlearReceiver.label>
+	<DarkNet_CochlearReceiver.labelNoun>Небольшой радиоприемник передает звуковые колебания в мозг.</DarkNet_CochlearReceiver.labelNoun>
+
+	<DarkNet_SoundWaveGenerator.label>Генератор звуковых волн</DarkNet_SoundWaveGenerator.label>
+	<DarkNet_SoundWaveGenerator.labelNoun>Усовершенствованный электромагнитный генератор звуковых волн, передаваемых в мозг.</DarkNet_SoundWaveGenerator.labelNoun>
+
+	<DarkNet_CyberneticEarMK.label>Кибернетическое ухо MK1</DarkNet_CyberneticEarMK.label>
+	<DarkNet_CyberneticEarMK.labelNoun>Усовершенствованный кибернетический преобразователь звуковых волн.</DarkNet_CyberneticEarMK.labelNoun>
 
 </LanguageData>

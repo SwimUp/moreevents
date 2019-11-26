@@ -26,8 +26,6 @@ namespace QuestRim
 
         public GeoscapeWindow GeoscapeWindow;
 
-        private static readonly Texture2D StorytellerHighlightTex = ContentFinder<Texture2D>.Get("UI/HeroArt/Storytellers/Highlight");
-
         public Pawn Negotiator;
 
         static AllianceManager()
@@ -100,11 +98,13 @@ namespace QuestRim
 
             rect.y += 210;
 
+            Text.Anchor = TextAnchor.MiddleCenter;
             Rect warRect = new Rect(rect.x, rect.y, rect.width, 30);
             if(GUIUtils.DrawCustomButton(warRect, "AllianceManager_WarManagerButton".Translate(), Color.white))
             {
                 Find.WindowStack.Add(new WarManager(alliance));
             }
+            Text.Anchor = TextAnchor.UpperLeft;
         }
 
         private void DrawFactionCard(Rect rect, ref int y, FactionInteraction faction)

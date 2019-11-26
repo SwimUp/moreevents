@@ -14,6 +14,7 @@ namespace QuestRim
         private Alliance alliance;
 
         private Vector2 warsSlider = Vector2.zero;
+        private Vector2 defendersSlider = Vector2.zero;
 
         private List<War> wars;
         private War currentWar;
@@ -52,6 +53,58 @@ namespace QuestRim
             Widgets.DrawBox(warRect);
             Widgets.DrawLineHorizontal(0, 0, inRect.width);
             GUI.color = Color.white;
+
+            if (currentWar != null)
+            {
+                Rect mainInfoWarRect = new Rect(inRect.x + 410, inRect.y, inRect.width - 420, inRect.height);
+
+                DrawWarInfo(mainInfoWarRect);
+            }
+        }
+
+        private void DrawWarInfo(Rect rect)
+        {
+            float y = rect.y;
+
+            Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Rect labelRect = new Rect(rect.x, y, rect.width, 35);
+            Widgets.Label(labelRect, $"{currentWar.WarName} ({currentWar.WarGoalDef.LabelCap})");
+            Text.Font = GameFont.Small;
+            GUIUtils.DrawLineHorizontal(rect.x, y + 30, rect.width, GUIUtils.CommBorderColor);
+
+            labelRect.y += 50;
+            y += 50;
+            Widgets.Label(labelRect, "WarManager_DrawWarInfo_WarMembers".Translate(currentWar.DefendAlliance == null ? "WarManager_NoAlliance".Translate() : currentWar.DefendAlliance.Name));
+            y += 30;
+            Rect defenderRect = new Rect(rect.x, y, rect.width, 250);
+            Rect scrollVertRectFact = new Rect(0, 0, rect.x, currentWar.DefendingFactions.Count * 35);
+            Widgets.BeginScrollView(defenderRect, ref defendersSlider, scrollVertRectFact, true);
+            Rect factionRect = new Rect(0, 10, rect.width - 10, 30);
+            for (int i = 0; i < currentWar.DefendingFactions.Count; i++)
+            {
+                FactionInteraction faction = currentWar.DefendingFactions[i];
+
+                GUI.color = faction.Faction.Color;
+                Widgets.DrawHighlight(factionRect);
+                GUI.color = Color.white;
+
+                Widgets.Label(factionRect, faction.Faction.Name);
+
+                factionRect.y += 35;
+                
+            }
+            Widgets.EndScrollView();
+
+            y += 255;
+
+            GUIUtils.DrawLineHorizontal(rect.x, y, rect.width, GUIUtils.CommBorderColor);
+
+            y += 5;
+
+            GUIUtils.DrawLineVertical(rect.width / 2, y, rect.height, GUIUtils.CommBorderColor);
+
+            Text.Anchor = TextAnchor.UpperLeft;
         }
 
         private void DrawWarRect(Rect rect, ref int y, War war)
@@ -79,6 +132,8 @@ namespace QuestRim
             GUI.color = war.WarGoalDef.MenuColor;
             Widgets.DrawHighlight(r);
             GUI.color = Color.white;
+
+            Widgets.DrawHighlightIfMouseover(r);
 
             y += 85;
         }

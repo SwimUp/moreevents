@@ -1718,7 +1718,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_GreenFields</defName>
 		<label>Fragment of the neural network "GreenFields"</label>
@@ -1802,7 +1802,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_Hephaestus</defName>
 		<label>Fragment of the neural network "Hephaestus"</label>
@@ -1886,7 +1886,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_Singular</defName>
 		<label>Singular neural network "Sacred and wild"</label>
@@ -1896,7 +1896,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>200</MaxHitPoints>
+			<MaxHitPoints>200</MaxHitPoints>
 			<MarketValue>18000</MarketValue>
 			<Mass>4</Mass>
 			<WorkToMake>14000</WorkToMake>
@@ -1912,7 +1912,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>5</ComponentSpacer>
+			<ComponentSpacer>5</ComponentSpacer>
 			<DarkNet_Network_Bushido>1</DarkNet_Network_Bushido>
 			<DarkNet_Network_Sniper>1</DarkNet_Network_Sniper>
 			<DarkNet_Network_Psychology>1</DarkNet_Network_Psychology>
@@ -1934,9 +1934,9 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
-	
-		<ThingDef ParentName="BodyPart_DarkNet">
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_Berserker</defName>
 		<label>Singular neural network "Berserker"</label>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</description>
@@ -1945,7 +1945,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>5000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
@@ -1961,7 +1961,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<DarkNet_Network_Bushido>1</DarkNet_Network_Bushido>
 			<DarkNet_Network_Sniper>1</DarkNet_Network_Sniper>
 		</costList>
@@ -1973,7 +1973,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_Meditation</defName>
 		<label>Singular neural network "Meditation"</label>
@@ -1983,7 +1983,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>5000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
@@ -1999,7 +1999,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<DarkNet_Network_Psychology>1</DarkNet_Network_Psychology>
 			<DarkNet_Network_Wild>1</DarkNet_Network_Wild>
 		</costList>
@@ -2011,8 +2011,8 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
-		<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_LifeForce</defName>
 		<label>Singular neural network "Life Force"</label>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</description>
@@ -2021,7 +2021,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>5000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
@@ -2037,7 +2037,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<DarkNet_Network_GreenFields>1</DarkNet_Network_GreenFields>
 			<DarkNet_Network_Paladin>1</DarkNet_Network_Paladin>
 		</costList>
@@ -2049,8 +2049,8 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
-			<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_Consummation</defName>
 		<label>Singular neural network "Consummation"</label>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</description>
@@ -2059,7 +2059,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>5000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
@@ -2075,7 +2075,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<DarkNet_Network_ConnoisseurOfBeauty>1</DarkNet_Network_ConnoisseurOfBeauty>
 			<DarkNet_Network_Hephaestus>1</DarkNet_Network_Hephaestus>
 		</costList>
@@ -2087,8 +2087,8 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
-				<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_YinYang</defName>
 		<label>Singular neural network "Yin and Yang"</label>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</description>
@@ -2097,7 +2097,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>5000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
@@ -2113,7 +2113,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<DarkNet_Network_MiningWays>1</DarkNet_Network_MiningWays>
 			<DarkNet_Network_Construction>1</DarkNet_Network_Construction>
 		</costList>
@@ -2125,7 +2125,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Network_MentalFocus</defName>
 		<label>Singular neural network "Mental focus"</label>
@@ -2135,7 +2135,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>100</MaxHitPoints>
 			<MarketValue>5000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
@@ -2151,7 +2151,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<DarkNet_Network_Science>1</DarkNet_Network_Science>
 			<DarkNet_Network_Gourmet>1</DarkNet_Network_Gourmet>
 		</costList>
@@ -2163,7 +2163,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Emitter_Light</defName>
 		<label>Light psychoactive emitter</label>
@@ -2174,7 +2174,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>50</MaxHitPoints>
+			<MaxHitPoints>50</MaxHitPoints>
 			<MarketValue>700</MarketValue>
 			<Mass>0.1</Mass>
 			<WorkToMake>1000</WorkToMake>
@@ -2190,7 +2190,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>1</ComponentSpacer>
+			<ComponentSpacer>1</ComponentSpacer>
 			<CopperIngot>80</CopperIngot>
 			<NickelIngot>50</NickelIngot>
 			<IlmeniteIngot>15</IlmeniteIngot>
@@ -2202,8 +2202,8 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
-		<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Emitter_Medium</defName>
 		<label>Medium psychoactive emitter</label>
 		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
@@ -2213,7 +2213,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>50</MaxHitPoints>
+			<MaxHitPoints>50</MaxHitPoints>
 			<MarketValue>1200</MarketValue>
 			<Mass>0.15</Mass>
 			<WorkToMake>2000</WorkToMake>
@@ -2229,7 +2229,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<CopperIngot>120</CopperIngot>
 			<NickelIngot>80</NickelIngot>
 			<IlmeniteIngot>35</IlmeniteIngot>
@@ -2242,7 +2242,7 @@
 			<li>RogerEdmonson_Ultra</li>
 		</tradeTags>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_Emitter_Heavy</defName>
 		<label>Heavy psychoactive emitter</label>
@@ -2253,7 +2253,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-		    <MaxHitPoints>50</MaxHitPoints>
+			<MaxHitPoints>50</MaxHitPoints>
 			<MarketValue>1700</MarketValue>
 			<Mass>0.2</Mass>
 			<WorkToMake>3000</WorkToMake>
@@ -2269,7 +2269,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-		    <ComponentSpacer>3</ComponentSpacer>
+			<ComponentSpacer>3</ComponentSpacer>
 			<CopperIngot>100</CopperIngot>
 			<NickelIngot>100</NickelIngot>
 			<IlmeniteIngot>45</IlmeniteIngot>
@@ -2280,6 +2280,280 @@
 		</techHediffsTags>
 		<tradeTags>
 			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_AdrenalineRibs</defName>
+		<label>Adrenaline ribs</label>
+		<description>Many injectors located on artificial ribs produce adrenaline, accelerating the reaction.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_AdrenalineRibs</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.7</Mass>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_TitaniumRibs</defName>
+		<label>Titanium ribs</label>
+		<description>Strong chest formed from titanium coated ribs.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_TitaniumRibs</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.9</Mass>
+			<MarketValue>1100</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticRibs</defName>
+		<label>Synthetic ribs</label>
+		<description>Chest consists of complex artificial ribs.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_SyntheticRibs</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.8</Mass>
+			<MarketValue>1300</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CyberneticBreastFrame</defName>
+		<label>Cybernetic breast frame</label>
+		<description>Cybernetic pairs of ribs composed in the form of a strong frame.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_CyberneticBreastFrame</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>1.5</Mass>
+			<MarketValue>1700</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticStomach</defName>
+		<label>Synthetic stomach</label>
+		<description>Advanced artificial organ composed of inorganic materials.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_SyntheticStomach</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+			<MarketValue>1100</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CyberneticStomachMK</defName>
+		<label>Cybernetic stomach MK1</label>
+		<description>MK1 advanced cybernetic prosthesis accelerating carrier metabolism.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_CyberneticStomachMK</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>1.5</Mass>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CyberneticStomachMKLight</defName>
+		<label>Cybernetic stomach MK1 Light</label>
+		<description>Lightweight cybernetic prosthesis that speeds up metabolism.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_CyberneticStomachMKLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.6</Mass>
+			<MarketValue>1900</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+	
+		<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_ModularArrayOfLiver</defName>
+		<label>Modular array of liver</label>
+		<description>Microscopic copies of robotic organisms form an organic liver.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_ModularArrayOfLiver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>1100</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+	
+			<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SyntheticLiverMK</defName>
+		<label>Synthetic liver MK1</label>
+		<description>An array of artificial mechanisms that mimic the liver.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_SyntheticLiverMK</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>1400</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+	
+				<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CyberneticLiver</defName>
+		<label>Cybernetic liver MK1</label>
+		<description>Large robotic structure imitating the functioning of the natural liver.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_CyberneticLiver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.8</Mass>
+			<MarketValue>1700</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+	
+					<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CochlearReceiver</defName>
+		<label>Cochlear receiver</label>
+		<description>Small radio transmits sound vibrations to the brain.</description>
+		<techLevel>Industrial</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_CochlearReceiver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+	
+						<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_SoundWaveGenerator</defName>
+		<label>Sound wave generator</label>
+		<description>Advanced electromagnetic generator of sound waves transmitted to the brain.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_SoundWaveGenerator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.1</Mass>
+			<MarketValue>600</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Spacer</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
+		</tradeTags>
+	</ThingDef>
+	
+							<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_CyberneticEarMK</defName>
+		<label>Cybernetic ear MK1</label>
+		<description>Advanced cybernetic sound wave transducer.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_CyberneticEarMK</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MarketValue>1200</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Spacer</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
 

@@ -179,6 +179,14 @@ He is extremely careful, does not conduct business with unverified people and se
 								<ThingDef>DarkNet_Prosthetic_Leg_With_Metal_Plates</ThingDef>
 								<Commonality>0.40</Commonality>
 							</li>
+							<li>
+								<ThingDef>DarkNet_ModularArrayOfLiver</ThingDef>
+								<Commonality>0.30</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_CochlearReceiver</ThingDef>
+								<Commonality>0.35</Commonality>
+							</li>
 						</Items>
 					</li>
 					<li>
@@ -243,6 +251,30 @@ He is extremely careful, does not conduct business with unverified people and se
 							<li>
 								<ThingDef>PowerClaw</ThingDef>
 								<Commonality>0.07</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_AdrenalineRibs</ThingDef>
+								<Commonality>0.55</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_TitaniumRibs</ThingDef>
+								<Commonality>0.4</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_SyntheticRibs</ThingDef>
+								<Commonality>0.3</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_SyntheticStomach</ThingDef>
+								<Commonality>0.34</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_SyntheticLiverMK</ThingDef>
+								<Commonality>0.3</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_SoundWaveGenerator</ThingDef>
+								<Commonality>0.25</Commonality>
 							</li>
 						</Items>
 					</li>
@@ -502,6 +534,26 @@ He is extremely careful, does not conduct business with unverified people and se
 							<li>
 								<ThingDef>DarkNet_Cyber_Hand_MK1_Light</ThingDef>
 								<Commonality>0.45</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_CyberneticEarMK</ThingDef>
+								<Commonality>0.35</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_CyberneticLiver</ThingDef>
+								<Commonality>0.25</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_CyberneticStomachMKLight</ThingDef>
+								<Commonality>0.25</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_CyberneticStomachMK</ThingDef>
+								<Commonality>0.45</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_CyberneticBreastFrame</ThingDef>
+								<Commonality>0.35</Commonality>
 							</li>
 						</Items>
 					</li>

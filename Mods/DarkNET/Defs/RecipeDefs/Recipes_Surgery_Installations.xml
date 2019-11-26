@@ -3797,7 +3797,7 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_Gourmet</addsHediff>
 	</RecipeDef>
-	
+
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_Singular</defName>
 		<label>install Fragment of the neural network "Sacred and wild"</label>
@@ -3841,7 +3841,7 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_Singular</addsHediff>
 	</RecipeDef>
-	
+
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_Berserker</defName>
 		<label>install Fragment of the neural network "Berserker"</label>
@@ -3885,7 +3885,7 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_Berserker</addsHediff>
 	</RecipeDef>
-	
+
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_Meditation</defName>
 		<label>install Fragment of the neural network "Meditation"</label>
@@ -3929,7 +3929,7 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_Meditation</addsHediff>
 	</RecipeDef>
-	
+
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_LifeForce</defName>
 		<label>install Fragment of the neural network "Life Force"</label>
@@ -3973,8 +3973,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_LifeForce</addsHediff>
 	</RecipeDef>
-	
-		<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_Consummation</defName>
 		<label>install Fragment of the neural network "Consummation"</label>
 		<description>Install "Consummation"</description>
@@ -4017,8 +4017,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_Consummation</addsHediff>
 	</RecipeDef>
-	
-			<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_YinYang</defName>
 		<label>install Fragment of the neural network "Yin and Yang"</label>
 		<description>Install "Yin and Yang"</description>
@@ -4061,7 +4061,7 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_YinYang</addsHediff>
 	</RecipeDef>
-	
+
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Network_MentalFocus</defName>
 		<label>install Fragment of the neural network "Mental focus"</label>
@@ -4105,8 +4105,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Network_MentalFocus</addsHediff>
 	</RecipeDef>
-	
-	
+
+
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Emitter_Light</defName>
 		<label>install Light psychoactive emitter</label>
@@ -4150,8 +4150,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Emitter_Light</addsHediff>
 	</RecipeDef>
-	
-		<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Emitter_Medium</defName>
 		<label>install Medium psychoactive emitter</label>
 		<description>Install Medium psychoactive emitter</description>
@@ -4194,8 +4194,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Emitter_Medium</addsHediff>
 	</RecipeDef>
-	
-			<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_Emitter_Heavy</defName>
 		<label>install Heavy psychoactive emitter</label>
 		<description>Install Heavy psychoactive emitter</description>
@@ -4237,5 +4237,576 @@
 			<li>Brain</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Emitter_Heavy</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_AdrenalineRibs</defName>
+		<label>install Adrenaline ribs</label>
+		<description>Install Adrenaline ribs</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Adrenaline ribs</jobString>
+		<workAmount>3000</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_AdrenalineRibs</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_AdrenalineRibs</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ribcage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_AdrenalineRibs</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_TitaniumRibs</defName>
+		<label>install Titanium ribs</label>
+		<description>Install Titanium ribs</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Titanium ribs</jobString>
+		<workAmount>3200</workAmount>
+		<deathOnFailedSurgeryChance>0.12</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>5</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_TitaniumRibs</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_TitaniumRibs</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ribcage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_TitaniumRibs</addsHediff>
+	</RecipeDef>
+
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_SyntheticRibs</defName>
+		<label>install Synthetic ribs</label>
+		<description>Install Synthetic ribs</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Synthetic ribs</jobString>
+		<workAmount>3500</workAmount>
+		<deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>6</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_SyntheticRibs</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_SyntheticRibs</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ribcage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_SyntheticRibs</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberneticBreastFrame</defName>
+		<label>install Cybernetic breast frame</label>
+		<description>Install Cybernetic breast frame</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic breast frame</jobString>
+		<workAmount>4300</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberneticBreastFrame</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberneticBreastFrame</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ribcage</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberneticBreastFrame</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_SyntheticStomach</defName>
+		<label>install Synthetic stomach</label>
+		<description>Install Synthetic stomach</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Synthetic stomach</jobString>
+		<workAmount>2300</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+			<Intellectual>5</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_SyntheticStomach</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_SyntheticStomach</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_SyntheticStomach</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberneticStomachMK</defName>
+		<label>install Cybernetic stomach MK1</label>
+		<description>Install Cybernetic stomach MK1</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic stomach MK1</jobString>
+		<workAmount>2800</workAmount>
+		<deathOnFailedSurgeryChance>0.14</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberneticStomachMK</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberneticStomachMK</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberneticStomachMK</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberneticStomachMKLight</defName>
+		<label>install Cybernetic stomach MK1 Light</label>
+		<description>Install Cybernetic stomach MK1 Light</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic stomach MK1 Light</jobString>
+		<workAmount>3500</workAmount>
+		<deathOnFailedSurgeryChance>0.12</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberneticStomachMKLight</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberneticStomachMKLight</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberneticStomachMKLight</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_ModularArrayOfLiver</defName>
+		<label>install Modular array of liver</label>
+		<description>Install Modular array of liver</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Modular array of liver</jobString>
+		<workAmount>2200</workAmount>
+		<deathOnFailedSurgeryChance>0.12</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+			<Intellectual>2</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_ModularArrayOfLiver</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_ModularArrayOfLiver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_ModularArrayOfLiver</addsHediff>
+	</RecipeDef>
+	
+		<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_SyntheticLiverMK</defName>
+		<label>install Synthetic liver MK1</label>
+		<description>Install Synthetic liver MK1</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Synthetic liver MK1</jobString>
+		<workAmount>2500</workAmount>
+		<deathOnFailedSurgeryChance>0.13</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+			<Intellectual>3</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_SyntheticLiverMK</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_SyntheticLiverMK</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_SyntheticLiverMK</addsHediff>
+	</RecipeDef>
+	
+			<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberneticLiver</defName>
+		<label>install Cybernetic liver MK1</label>
+		<description>Install Cybernetic liver MK1</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic liver MK1</jobString>
+		<workAmount>3900</workAmount>
+		<deathOnFailedSurgeryChance>0.17</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberneticLiver</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberneticLiver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberneticLiver</addsHediff>
+	</RecipeDef>
+	
+				<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CochlearReceiver</defName>
+		<label>install Cochlear receiver</label>
+		<description>Install Cochlear receiver</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cochlear receiver</jobString>
+		<workAmount>1200</workAmount>
+		<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CochlearReceiver</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CochlearReceiver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ear</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CochlearReceiver</addsHediff>
+	</RecipeDef>
+	
+					<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_SoundWaveGenerator</defName>
+		<label>install Sound wave generator</label>
+		<description>Install Sound wave generator</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Sound wave generator</jobString>
+		<workAmount>1600</workAmount>
+		<deathOnFailedSurgeryChance>0.08</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_SoundWaveGenerator</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_SoundWaveGenerator</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ear</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_SoundWaveGenerator</addsHediff>
+	</RecipeDef>
+	
+						<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_CyberneticEarMK</defName>
+		<label>install Cybernetic ear MK1</label>
+		<description>Install Cybernetic ear MK1</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic ear MK1</jobString>
+		<workAmount>2800</workAmount>
+		<deathOnFailedSurgeryChance>0.12</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_CyberneticEarMK</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_CyberneticEarMK</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Ear</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_CyberneticEarMK</addsHediff>
 	</RecipeDef>
 </Defs>

@@ -289,7 +289,7 @@ namespace QuestRim
             }
         }
 
-        public void RemoveIntoWars(FactionInteraction faction)
+        public void RemoveFromWars(FactionInteraction faction)
         {
             FactionInteraction owner = QuestsManager.Communications.FactionManager.GetInteraction(FactionOwner);
             foreach (var war in faction.InWars)
@@ -361,7 +361,7 @@ namespace QuestRim
                 }
             }
 
-            RemoveIntoWars(faction);
+            RemoveFromWars(faction);
 
             Find.LetterStack.ReceiveLetter("AllianceRemoveFactionTitle".Translate(faction.Faction.Name), "Alliance_RemoveFactionDesc".Translate(faction.Faction.Name, reason.Translate()), LetterDefOf.NeutralEvent);
         }
