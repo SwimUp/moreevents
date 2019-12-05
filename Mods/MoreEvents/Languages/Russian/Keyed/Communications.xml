@@ -237,9 +237,28 @@
 	<MakeWarWindow_DrawDefendModeTitle>{0} с фракцией {1}</MakeWarWindow_DrawDefendModeTitle>
 	<MakeWarWindow_DrawDefendModeDesc>Цель: {0}
 -------------------
-Длительность: {1} дней
+{1}
 </MakeWarWindow_DrawDefendModeDesc>
 	<WarManager_DrawWarInfo_WarMembers>Обороняющиеся ({0})
 ----------------</WarManager_DrawWarInfo_WarMembers>
+	<MakeWarWindow_DrawDefendModeTruce>Заключить перемирие</MakeWarWindow_DrawDefendModeTruce>
+	<MakeWarWindow_DrawDefendModeCantTruce>Невозможно заключить мирный договор сейчас. Подождите некоторое время.</MakeWarWindow_DrawDefendModeCantTruce>
+	<War_EndWarTitle>{0} окончена</War_EndWarTitle>
+	<War_EndWarDesc>{0}, которую {1} объявили {2} - окончена.</War_EndWarDesc>
+	<CommOption_MakeWar_InAlliance>Вы не можете объявить войну члену вашего альянса</CommOption_MakeWar_InAlliance>
+	<CommOption_SubscribeScout_CantSub>Вы не можете подписать соглашение, т.к находитесь с фракцией в состоянии войны</CommOption_SubscribeScout_CantSub>
+	<CommOption_NonAgressionPact_CantSign>Вы не можете подписать соглашение, т.к находитесь с фракцией в состоянии войны</CommOption_NonAgressionPact_CantSign>
+
+	<Winner_Assaulters>атакующие</Winner_Assaulters>
+	<Winner_Defenders>защищающиеся</Winner_Defenders>
+	<Winner_Draw>ничья</Winner_Draw>
+	<Winner_None>неизвестно</Winner_None>
+
+	<WarGoalWorker_Destruction_YouWinTitle>Победа в войне</WarGoalWorker_Destruction_YouWinTitle>
+	<WarGoalWorker_Destruction_YouWinDesc>Вы победили в войне {0}, уничтожив все поселения противника, чем смогли заслужить дополнительное доверие в глазах ваших союзников.</WarGoalWorker_Destruction_YouWinDesc>
+	<WarGoalWorker_Destruction_YouLoseTitle>Поражение в войне</WarGoalWorker_Destruction_YouLoseTitle>
+	<WarGoalWorker_Destruction_YouLoseDesc>Вы проиграли в войне {0}, так как потеряли абсолютно все свои поселения. Игре конец.</WarGoalWorker_Destruction_YouLoseDesc>
+
+	<War_LongEventStarting>Начинаем войну...</War_LongEventStarting>
 
 </LanguageData>

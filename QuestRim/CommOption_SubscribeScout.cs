@@ -17,6 +17,13 @@ namespace QuestRim
 
         public override void DoAction(FactionInteraction interaction, Pawn speaker, Pawn defendant)
         {
+            var war = interaction.FirstWarWithPlayer();
+            if(war != null)
+            {
+                Messages.Message("CommOption_SubscribeScout_CantSub".Translate(), MessageTypeDefOf.NeutralEvent);
+                return;
+            }
+
             bool subAlready = ScoutingComp.ScoutAlready(interaction.Faction, out ScoutingComp outComp);
 
             StringBuilder builder = new StringBuilder();

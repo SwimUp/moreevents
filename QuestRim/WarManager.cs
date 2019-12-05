@@ -16,8 +16,12 @@ namespace QuestRim
         private Vector2 warsSlider = Vector2.zero;
         private Vector2 defendersSlider = Vector2.zero;
 
+        private Vector2 statWorkerSlider = Vector2.zero;
+
         private List<War> wars;
         private War currentWar;
+
+        private string stat;
 
         public WarManager()
         {
@@ -102,7 +106,11 @@ namespace QuestRim
 
             y += 5;
 
-            GUIUtils.DrawLineVertical(rect.width / 2, y, rect.height, GUIUtils.CommBorderColor);
+            Rect statRect = new Rect(rect.x, y, rect.width, 200);
+            Widgets.LabelScrollable(statRect, stat, ref statWorkerSlider);
+
+            y += 205;
+            GUIUtils.DrawLineHorizontal(rect.x, y, rect.width, GUIUtils.CommBorderColor);
 
             Text.Anchor = TextAnchor.UpperLeft;
         }
@@ -125,8 +133,11 @@ namespace QuestRim
 
             if(Widgets.ButtonInvisible(r))
             {
-                if(war != currentWar)
+                if (war != currentWar)
+                {
                     currentWar = war;
+                    stat = currentWar.StatWorker.GetStat();
+                }
             }
 
             GUI.color = war.WarGoalDef.MenuColor;

@@ -15,6 +15,13 @@ namespace QuestRim
 
         public override void DoAction(FactionInteraction interaction, Pawn speaker, Pawn defendant)
         {
+            var alliance = interaction.Alliance;
+            if (alliance != null && alliance.FactionOwner == speaker.Faction)
+            {
+                Messages.Message("CommOption_MakeWar_InAlliance".Translate(), MessageTypeDefOf.NeutralEvent);
+                return;
+            }
+
             Find.WindowStack.Add(new MakeWarWindow(interaction, speaker, defendant));
         }
 

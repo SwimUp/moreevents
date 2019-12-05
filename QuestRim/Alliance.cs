@@ -335,6 +335,16 @@ namespace QuestRim
             }
         }
 
+        public void AffectGoodwillWith(int goodwill)
+        {
+            List<FactionInteraction> interactions = new List<FactionInteraction>(Factions);
+
+            foreach(var faction in interactions)
+            {
+                faction.Faction.TryAffectGoodwillWith(FactionOwner, goodwill);
+            }
+        }
+
         public void RemoveFaction(FactionInteraction faction, AllianceRemoveReason reason)
         {
             Factions.Remove(faction);

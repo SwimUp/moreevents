@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using DiaRim;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace QuestRim
     public class MakeWarWindow : Window
     {
         public override Vector2 InitialSize => new Vector2(800, 600);
+
+        private DialogDef dialog => DialogDefOfLocal.PeaceTalk;
 
         private FactionInteraction interactFaction;
 
@@ -25,6 +28,10 @@ namespace QuestRim
         private string editBufferName;
 
         private War war;
+
+        private string stat;
+
+        public int BlockTime => 5 * 60000;
 
         public MakeWarWindow()
         {
@@ -46,6 +53,7 @@ namespace QuestRim
             if(defendMode)
             {
                 war = faction.InWars.First(x => x.DeclaredWarFaction.Faction == speaker.Faction);
+                stat = war.StatWorker.GetStat();
             }
 
             warGoalDef = DefDatabase<WarGoalDef>.AllDefs.First();
@@ -76,11 +84,42 @@ namespace QuestRim
 
             Text.Anchor = TextAnchor.UpperLeft;
 
-            float height = inRect.height - y - 200;
+            float height = inRect.height - y - 35;
             Rect fullInfoRect = new Rect(inRect.x, y, inRect.width, height);
-            Widgets.Label(fullInfoRect, "MakeWarWindow_DrawDefendModeDesc".Translate(war.WarGoalDef.LabelCap, (Find.TickManager.TicksGame - war.StartTicks).TicksToDays().ToString("f2")));
+            Widgets.Label(fullInfoRect, "MakeWarWindow_DrawDefendModeDesc".Translate(war.WarGoalDef.LabelCap, stat));
 
             y += height;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Rect buttonRect = new Rect(inRect.x, y, inRect.width, 25);
+            bool canTruce = war.CanTruceRightNow();
+            if(GUIUtils.DrawCustomButton(buttonRect, "MakeWarWindow_DrawDefendModeTruce".Translate(), canTruce ? Color.white : Color.gray))
+            {
+                if(canTruce)
+                {
+                    Dialog dia = new Dialog(dialog, speaker, defendant);
+                    dia.Init();
+                    dia.CloseAction = CheckAnswer;
+                    Find.WindowStack.Add(dia);
+                }
+                else
+                {
+                    Messages.Message("MakeWarWindow_DrawDefendModeCantTruce".Translate(), MessageTypeDefOf.NeutralEvent);
+                }
+            }
+
+            Text.Anchor = TextAnchor.UpperLeft;
+        }
+
+        private void CheckAnswer(string answer)
+        {
+            if (answer == "удача")
+            {
+                Close();
+
+                war.EndWar(Winner.Draw);
+            }
+
+            war.LastTruceTicks = Find.TickManager.TicksGame + BlockTime;
         }
 
         private void DrawWarMode(Rect inRect)

@@ -11,5 +11,6 @@ namespace QuestRim
     public static class DialogDefOfLocal
     {
         public static DialogDef InvitationAlliance;
+        public static DialogDef PeaceTalk;
     }
 }

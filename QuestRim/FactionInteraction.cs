@@ -59,6 +59,8 @@ namespace QuestRim
             if(InWars.Contains(war))
             {
                 InWars.Remove(war);
+
+                QuestsManager.Communications.Components.ForEach(x => x.Notify_WarIsOver(war));
             }
         }
 
@@ -67,6 +69,17 @@ namespace QuestRim
             if(!InWars.Contains(war))
             {
                 InWars.Add(war);
+
+                QuestsManager.Communications.Components.ForEach(x => x.Notify_WarIsStarted(war));
+
+                if (WarUtility.WarWithPlayer(war))
+                {
+                    var nonAgressive = GetOption<CommOption_NonAgressionPact>();
+                    if (nonAgressive != null)
+                    {
+                        nonAgressive.Signed = false;
+                    }
+                }
             }
         }
 

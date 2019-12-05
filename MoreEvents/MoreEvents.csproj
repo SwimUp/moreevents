@@ -58,6 +58,12 @@
     <Reference Include="UnityEngine">
       <HintPath>Libs\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>..\..\..\Downloads\RimWorld_v1.0.2231\RimWorld v1.0.2231\RimWorldWin64_Data\Managed\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\Downloads\RimWorld_v1.0.2231\RimWorld v1.0.2231\RimWorldWin64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\CaravanAI.cs" />
@@ -88,6 +94,7 @@
     <Compile Include="AI\Verb_MeleeApplyHediff.cs" />
     <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
     <Compile Include="AllianceAgreementDefOfLocal.cs" />
+    <Compile Include="Alliances\Condition_AllianceMembersCount.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementComp.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementCompProperties.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementWindow.cs" />
@@ -120,6 +127,7 @@
     <Compile Include="Events\MassBurial\MassBurialPlace.cs" />
     <Compile Include="Events\PlaceBattle\IncidentWorker_PlaceBattle.cs" />
     <Compile Include="Events\PlaceBattle\PlaceBattle.cs" />
+    <Compile Include="Patch\Faction_TryAffectGoodwillWith.cs" />
     <Compile Include="Patch\Faction_ Notify_RelationKindChanged.cs" />
     <Compile Include="PriceUtils.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
@@ -443,6 +451,8 @@
     <Compile Include="Utility\DropPodUtilityPlus.cs" />
     <Compile Include="Utility\SkyfallerPlusMaker.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Wars\ArmyOrderWorker_SendArmyToEnemySettlement.cs" />
+    <Compile Include="Wars\CaravanArrivalAction_AIAttackSettlement.cs" />
     <Compile Include="Weathers\WeatherDefOfLocal.cs" />
     <Compile Include="Weathers\WeatherOverlay_PsychoGas.cs" />
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />

@@ -20,10 +20,18 @@ namespace RimOverhaul.Patch
                 FactionInteraction interaction = QuestsManager.Communications.FactionManager.GetInteraction(parms.faction);
                 if (interaction != null)
                 {
-                    var option = interaction.GetOption<CommOption_NonAgressionPact>();
-                    if (option != null)
+                    var war = interaction.FirstWarWithPlayer();
+                    if (war != null)
                     {
-                        __result = !option.Signed;
+                        __result = true;
+                    }
+                    else
+                    {
+                        var option = interaction.GetOption<CommOption_NonAgressionPact>();
+                        if (option != null)
+                        {
+                            __result = !option.Signed;
+                        }
                     }
                 }
             }

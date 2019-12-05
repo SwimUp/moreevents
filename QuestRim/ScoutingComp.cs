@@ -39,6 +39,16 @@ namespace QuestRim
             return maxScoutTicks.TicksToDays().ToString("f2");
         }
 
+        public override void Notify_WarIsStarted(War war)
+        {
+            base.Notify_WarIsStarted(war);
+
+            if(WarUtility.WarWithPlayer(war))
+            {
+                EndComp();
+            }
+        }
+
         public static bool ScoutAlready(Faction scoutFaction, out ScoutingComp outComp)
         {
             outComp = null;

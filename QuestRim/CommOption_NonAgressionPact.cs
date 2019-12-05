@@ -20,6 +20,13 @@ namespace QuestRim
 
         public override void DoAction(FactionInteraction interaction, Pawn speaker, Pawn defendant)
         {
+            var war = interaction.FirstWarWithPlayer();
+            if(war != null)
+            {
+                Messages.Message("CommOption_NonAgressionPact_CantSign".Translate(), MessageTypeDefOf.NeutralEvent);
+                return;
+            }
+
             if (Signed)
                 return;
 

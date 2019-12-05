@@ -13,6 +13,8 @@ namespace QuestRim
 
         public Type workerClass;
 
+        public Type statClass;
+
         public Color MenuColor;
 
         [NoTranslate]

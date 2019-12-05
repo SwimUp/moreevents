@@ -106,6 +106,14 @@ namespace QuestRim
             doCloseX = true;
         }
 
+        public void UpdateWarsStatus()
+        {
+            foreach (var fac in factions)
+            {
+                hasWarsWithPlayer[fac] = fac.InWars.FirstOrDefault(x => x.DeclaredWarFaction.Faction == speaker.Faction && x.DefendingFaction == fac || x.DefendingFaction.Faction == speaker.Faction && x.DeclaredWarFaction == fac);
+            }
+        }
+
         public void ForceSelectQuest(Quest quest)
         {
             tab = Tab.Quests;
@@ -872,11 +880,15 @@ namespace QuestRim
                 GUI.color = war.WarGoalDef.MenuColor;
                 Widgets.DrawBox(r);
                 GUI.color = Color.white;
+
+                if (war.Started == false)
+                    hasWarsWithPlayer[faction] = null;
             }
 
             if (Widgets.ButtonInvisible(r))
             {
                 currentFaction = faction;
+                defendant = currentFaction.Faction.leader;
             }
             y += 85;
         }

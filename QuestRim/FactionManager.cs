@@ -41,6 +41,20 @@ namespace QuestRim
         private List<Alliance> alliances;
         public Alliance PlayerAlliance => Alliances.FirstOrDefault(x => x.PlayerOwner);
 
+        public FactionInteraction PlayerInteraction
+        {
+            get
+            {
+                if(playerInteraction == null)
+                {
+                    playerInteraction = GetInteraction(Faction.OfPlayer);
+                }
+
+                return playerInteraction;
+            }
+        }
+        private FactionInteraction playerInteraction;
+
         public int PlayerAggressiveLevel
         {
             get
@@ -99,6 +113,20 @@ namespace QuestRim
                     }
                 }
             }
+
+            for (int i = 0; i < Wars.Count; i++)
+            {
+                var war = Wars[i];
+
+                try
+                {
+                    war.Tick();
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"Exception ticking war {war.id} --> {ex}");
+                }
+            }
         }
 
         public bool TryFire(FiringIncident fi)
@@ -133,7 +161,9 @@ namespace QuestRim
             if(interaction == null)
             {
                 Log.Warning("[FactionManager] Null interaction, create new");
-                Add(faction);
+                interaction = InitNewFaction(faction, StandartOptions(faction));
+
+                Add(interaction);
             }
 
             return interaction;
@@ -152,11 +182,19 @@ namespace QuestRim
             }
         }
 
+        public void Add(FactionInteraction faction)
+        {
+            if (!Factions.Contains(faction))
+            {
+                factions.Add(faction);
+            }
+        }
+
         public void Add(Faction faction)
         {
             if(!Factions.Contains(faction))
             {
-                InitNewFaction(faction, StandartOptions(faction));
+                factions.Add(InitNewFaction(faction, StandartOptions(faction)));
             }
         }
 
@@ -164,7 +202,7 @@ namespace QuestRim
         {
             if (!Factions.Contains(faction))
             {
-                InitNewFaction(faction, options);
+                factions.Add(InitNewFaction(faction, options));
             }
         }
 
@@ -183,7 +221,15 @@ namespace QuestRim
             }
         }
 
-        private void InitNewFaction(Faction faction, List<InteractionOption> options)
+        public void Remove(War war)
+        {
+            if (Wars.Contains(war))
+            {
+                Wars.Remove(war);
+            }
+        }
+
+        private FactionInteraction InitNewFaction(Faction faction, List<InteractionOption> options)
         {
             FactionInteraction interaction = new FactionInteraction();
             interaction.Faction = faction;
@@ -191,7 +237,7 @@ namespace QuestRim
 
             interaction.Options = options;
 
-            factions.Add(interaction);
+            return interaction;
         }
 
         public List<InteractionOption> StandartOptions(Faction forFaction)

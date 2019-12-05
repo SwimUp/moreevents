@@ -10,9 +10,34 @@ namespace QuestRim
     {
         protected War war;
 
+        public virtual void Tick()
+        {
+
+        }
+
+        public virtual void NewFactionEntered(FactionInteraction factionInteraction)
+        {
+
+        }
+
+        public virtual void FactionLeft(FactionInteraction factionInteraction)
+        {
+
+        }
+
+        public virtual bool CanTruceRightNow()
+        {
+            return true;
+        }
+
         public virtual void StartWar(War war)
         {
             this.war = war;
+        }
+
+        public virtual void EndWar(Winner winner)
+        {
+
         }
 
         public virtual void ExposeData()

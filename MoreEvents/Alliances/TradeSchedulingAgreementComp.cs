@@ -127,7 +127,7 @@ namespace RimOverhaul.Alliances
                 tile = Settlement.Tile
             };
 
-            Caravan = CaravanAIMaker.MakeCaravan(PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms), SignedFaction.Faction, Settlement.Tile, true, true, true);
+            Caravan = CaravanAIMaker.MakeCaravan(PawnGroupMakerUtility.GeneratePawns(pawnGroupMakerParms), SignedFaction.Faction, Settlement.Tile, true, CaravanAIMaker.GetCaravanColor(SignedFaction.Faction, Faction.OfPlayer), true, true);
             TryGetRandomPawnGroupMaker(pawnGroupMakerParms, out PawnGroupMaker maker);
 
             foreach (var p in Caravan.PawnsListForReading)

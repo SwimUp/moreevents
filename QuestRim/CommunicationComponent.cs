@@ -15,6 +15,16 @@ namespace QuestRim
 
         }
 
+        public virtual void Notify_WarIsStarted(War war)
+        {
+
+        }
+
+        public virtual void Notify_WarIsOver(War war)
+        {
+
+        }
+
         public virtual void ExposeData()
         {
             Scribe_Values.Look(ref id, "id");

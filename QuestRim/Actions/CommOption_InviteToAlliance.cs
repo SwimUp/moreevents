@@ -51,7 +51,7 @@ namespace QuestRim
         private Alliance playerAlliance;
         public override void DoAction(FactionInteraction interaction, Pawn speaker, Pawn defendant)
         {
-            if(interaction.InWars.Any(x => x.DefendingFaction.Faction == speaker.Faction || x.DeclaredWarFaction.Faction == speaker.Faction))
+            if(WarUtility.FirstWarWithPlayer(interaction) != null)
             {
                 Messages.Message("CommOption_InviteToAlliance_InWar".Translate(), MessageTypeDefOf.NeutralEvent);
                 return;
