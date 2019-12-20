@@ -286,4 +286,7 @@
 	<DefenseContractComp_HelpTitle>Подмога!</DefenseContractComp_HelpTitle>
 	<DefenseContractComp_HelpDesc>{0} высылают подмогу! Они уйдут через 1 день</DefenseContractComp_HelpDesc>
 
+	<DefenseContractComp_EndTitle>Оборонительный контракт завершён</DefenseContractComp_EndTitle>
+	<DefenseContractComp_EndDesc>Время действия оборонительного контракта с {0} подошло к концу. Больше они не будут присылать подмогу в случае нападения на вас</DefenseContractComp_EndDesc>
+
 </LanguageData>

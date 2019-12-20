@@ -42,7 +42,7 @@ namespace RimOverhaul.Alliances
 
             if(alreadyHelped)
             {
-                if(leaveTicks > Find.TickManager.TicksGame)
+                if(leaveTicks < Find.TickManager.TicksGame)
                 {
                     alreadyHelped = false;
                     HelpEnd();
@@ -54,7 +54,7 @@ namespace RimOverhaul.Alliances
         {
             foreach(var pawnData in pawnsData)
             {
-                if(pawnData != null)
+                if(pawnData != null && !pawnData.Dead)
                 {
                     pawnData.SetFaction(SignedFaction.Faction);
                 }
@@ -70,6 +70,13 @@ namespace RimOverhaul.Alliances
             Scribe_Values.Look(ref leaveTicks, "leaveTicks");
 
             Scribe_Collections.Look(ref pawnsData, "pawnsData", LookMode.Reference);
+        }
+
+        public override void End(AgreementEndReason agreementEndReason)
+        {
+            Find.LetterStack.ReceiveLetter("DefenseContractComp_EndTitle".Translate(), "DefenseContractComp_EndDesc".Translate(SignedFaction.Faction.Name), LetterDefOf.NeutralEvent);
+
+            base.End(agreementEndReason);
         }
 
         public void SendHelp(IncidentParms parms)
