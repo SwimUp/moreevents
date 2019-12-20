@@ -2,32 +2,35 @@
 <Defs>
 
 	<QuestRim.AllianceAgreementDef>
-		<defName>TestMilitaryOne</defName>
-		<label>TTestMilitary 1</label>
-		<PlayerOnly>true</PlayerOnly>
-		<AgreementCategory>Millitary</AgreementCategory>
-		<TargetGoals>
-			<li>CommonGoal</li>
-		</TargetGoals>
-		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
-		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
-		<Comp Class="QuestRim.AllianceAgreementCompProperties">
-		
-		</Comp>
-	</QuestRim.AllianceAgreementDef>
+		<defName>DefenseContractAgreement</defName>
+		<label>Defense contract</label>
+		<description>A defense contract is a contract in which, in the event of an attack on your settlements, immediate fire support will be sent from the settlement of the signatory.
 
-	<QuestRim.AllianceAgreementDef>
-		<defName>TestMilitaryTwo</defName>
-		<label>TTestMilitary 2</label>
-		<PlayerOnly>true</PlayerOnly>
+The strength of support is based on the technological level of the faction and usually is 3-5 well-armed fighters who will be transferred to your submission for 1 day.</description>
+		<PlayerOnly>false</PlayerOnly>
 		<AgreementCategory>Millitary</AgreementCategory>
 		<TargetGoals>
 			<li>CommonGoal</li>
 		</TargetGoals>
 		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
 		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
-		<Comp Class="QuestRim.AllianceAgreementCompProperties">
-		
+		<Comp Class="RimOverhaul.Alliances.DefenseContractCompProperties">
+			<MinFactionTechLevel>Industrial</MinFactionTechLevel>
+			<TrustCostPerDay>2</TrustCostPerDay>
+			<FightersCost>
+				<li>
+					<key>RegularFighers</key>
+					<value>5</value>
+				</li>
+				<li>
+					<key>EliteFighters</key>
+					<value>10</value>
+				</li>
+				<li>
+					<key>Officiers</key>
+					<value>15</value>
+				</li>
+			</FightersCost>
 		</Comp>
 	</QuestRim.AllianceAgreementDef>
 
@@ -53,20 +56,5 @@
 		</Comp>
 	</QuestRim.AllianceAgreementDef>
 	
-	<QuestRim.AllianceAgreementDef>
-		<defName>TestGeneralOne</defName>
-		<label>Trade general</label>
-		<PlayerOnly>true</PlayerOnly>
-		<TargetGoals>
-			<li>CommonGoal</li>
-		</TargetGoals>
-		<AgreementCategory>General</AgreementCategory>
-		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
-		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
-		<Comp Class="QuestRim.AllianceAgreementCompProperties">
-		
-		</Comp>
-	</QuestRim.AllianceAgreementDef>
-
 
 </Defs>

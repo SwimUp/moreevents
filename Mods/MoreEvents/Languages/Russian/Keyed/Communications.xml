@@ -261,4 +261,29 @@
 
 	<War_LongEventStarting>Начинаем войну...</War_LongEventStarting>
 
+	<CaravanArrivalAction_AIBackToHome_Label>Возвращается домой</CaravanArrivalAction_AIBackToHome_Label>
+	<CaravanArrivalAction_AIAttackSettlement_EnemyArmyTitle>Враг наступает</CaravanArrivalAction_AIAttackSettlement_EnemyArmyTitle>
+	<CaravanArrivalAction_AIAttackSettlement_EnemyArmyDesc>Вражеская армия {0} наступает, занять позиции!</CaravanArrivalAction_AIAttackSettlement_EnemyArmyDesc>
+
+	<DefenseContractCompProperties_FactionTechLevelLack>Уровень фракции {0} слишком низок ({1}), чтобы использовать транпортные капсулы. (требуется минимум {2})</DefenseContractCompProperties_FactionTechLevelLack>
+	<DefenseContractCompWindow_ContractDuration>Длительность контракта (дней)</DefenseContractCompWindow_ContractDuration>
+	<DefenseContractCompWindow_CostRangeSlider>Тип поддержки</DefenseContractCompWindow_CostRangeSlider>
+	<DefenseContractCompWindow_ShowExamplePawns>Показать примерных бойцов</DefenseContractCompWindow_ShowExamplePawns>
+
+	<FightersLevel_RegularFighers>Регулярные бойцы</FightersLevel_RegularFighers>
+	<FightersLevel_EliteFighters>Элитные бойцы</FightersLevel_EliteFighters>
+	<FightersLevel_Officiers>Офицеры</FightersLevel_Officiers>
+
+	<DefenseContractCompWindow_SelectFaction>Фракция: {0}</DefenseContractCompWindow_SelectFaction>
+	<DefenseContractCompWindow_LowTechLevel>(уровень развития фракции недостаточен)</DefenseContractCompWindow_LowTechLevel>
+	<DefenseContractCompWindow_ResultInfo>Стоимость доверия за {0} дней: {1}
+Тип поддержки {2}: {3}
+Итог: {4} доверия</DefenseContractCompWindow_ResultInfo>
+	<DefenseContractCompWindow_CreateAgreement_NoTrust>Недостаточный уровень доверия</DefenseContractCompWindow_CreateAgreement_NoTrust>
+	<DefenseContractCompWindow_CreateAgreement>Подписать соглашение</DefenseContractCompWindow_CreateAgreement>
+	<DefenseContractCompWindow_CreatedTitle>Оборонительный контракт подписан</DefenseContractCompWindow_CreatedTitle>
+	<DefenseContractCompWindow_CreatedDesc>В течении {0} дней, в случае, если на вас нападут, фракция {1} будет направлять к вам подкрепление.</DefenseContractCompWindow_CreatedDesc>
+	<DefenseContractComp_HelpTitle>Подмога!</DefenseContractComp_HelpTitle>
+	<DefenseContractComp_HelpDesc>{0} высылают подмогу! Они уйдут через 1 день</DefenseContractComp_HelpDesc>
+
 </LanguageData>

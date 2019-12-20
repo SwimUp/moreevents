@@ -329,7 +329,9 @@ namespace QuestRim
 
         public void GiveTrustToAllFactions(int trust)
         {
-            foreach(var faction in Factions)
+            List<FactionInteraction> factions = new List<FactionInteraction>(Factions);
+
+            foreach(var faction in factions)
             {
                 faction.Trust += trust;
             }

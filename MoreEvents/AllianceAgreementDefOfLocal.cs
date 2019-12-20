@@ -11,5 +11,6 @@ namespace RimOverhaul
     public class AllianceAgreementDefOfLocal
     {
         public static AllianceAgreementDef TradeSchedulingAgreement;
+        public static AllianceAgreementDef DefenseContractAgreement;
     }
 }

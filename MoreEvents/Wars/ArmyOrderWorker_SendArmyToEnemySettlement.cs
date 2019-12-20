@@ -1,4 +1,5 @@
 ﻿using RimOverhaul.AI;
+using RimOverhaul.Wars;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -13,8 +14,6 @@ namespace QuestRim.Wars
 {
     public class ArmyOrderWorker_SendArmyToEnemySettlement : ArmyOrderWorker
     {
-        public float DepletionMultiplier => 0.00008f;
-
         protected override bool GiveWorkerTo(FactionArmy army, War war)
         {
             List<FactionInteraction> enemyis = war.GetEnemyList(army.Faction);
@@ -23,35 +22,38 @@ namespace QuestRim.Wars
             {
                 if (Find.WorldObjects.Settlements.Where(x => x.Faction == army.Faction.Faction).TryRandomElement(out Settlement yourSettlement))
                 {
-                    Settlement target = null;
-                    Observable.Start(() => TryFindEnemySettlement(yourSettlement, enemyis, out target)).ObserveOnMainThread().Subscribe(hasSettlement =>
-                    {
-                        if (hasSettlement)
-                        {
-                            bool showCaravanInfo = (war.DeclaredWarFaction == war.PlayerInteraction && war.AssaultFactions.Contains(army.Faction))
-                            || (war.DefendingFaction == war.PlayerInteraction && war.DefendingFactions.Contains(army.Faction));
-
-                            float points = army.Faction.Faction.def.techLevel.ThreatRangeFor().RandomInRange * (1 - army.DepletionFromWar);
-
-                            CaravanAI caravanAI = CaravanAIMaker.MakeCaravan(GeneratePawns(army, points), army.Faction.Faction, yourSettlement.Tile, true, CaravanAIMaker.GetCaravanColor(yourSettlement.Faction, target.Faction), showCaravanInfo, showCaravanInfo, false);
-                            caravanAI.Threat = points;
-
-                            caravanAI.AddQueueAction(new CaravanArrivalAction_AttackSettlement(target), target.Tile);
-
-                            army.DepletionFromWar += points * DepletionMultiplier;
-                        }
-                    });
-
-                    //if (TryFindEnemySettlement(yourSettlement, enemyis, out Settlement target))
+                    //Settlement target = null;
+                    //Observable.Start(() => TryFindEnemySettlement(yourSettlement, enemyis, out target)).ObserveOnMainThread().Subscribe(hasSettlement =>
                     //{
-                    //    float points = army.Faction.Faction.def.techLevel.ThreatRangeFor().RandomInRange * (1 - army.DepletionFromWar);
+                    //    if (hasSettlement)
+                    //    {
+                    //        bool showCaravanInfo = (war.DeclaredWarFaction == war.PlayerInteraction && war.AssaultFactions.Contains(army.Faction))
+                    //        || (war.DefendingFaction == war.PlayerInteraction && war.DefendingFactions.Contains(army.Faction));
 
-                    //    CaravanAI caravanAI = CaravanAIMaker.MakeCaravan(GeneratePawns(army, points), army.Faction.Faction, yourSettlement.Tile, true, CaravanAIMaker.GetCaravanColor(yourSettlement.Faction, target.Faction), true, true, false);
+                    //        float points = army.Faction.Faction.def.techLevel.ThreatRangeFor().RandomInRange * (1 - army.DepletionFromWar);
 
-                    //    caravanAI.AddQueueAction(new CaravanArrivalAction_AttackSettlement(target), target.Tile);
+                    //        CaravanAI caravanAI = CaravanAIMaker.MakeCaravan(GeneratePawns(army, points), army.Faction.Faction, yourSettlement.Tile, true, CaravanAIMaker.GetCaravanColor(yourSettlement.Faction, target.Faction), showCaravanInfo, showCaravanInfo, false);
+                    //        caravanAI.Threat = points;
+                    //        caravanAI.Home = yourSettlement;
 
-                    //    Find.LetterStack.ReceiveLetter("TARGET " + target.Name, "TARGET", LetterDefOf.Death, target);
-                    //}
+                    //        caravanAI.AddQueueAction(new CaravanArrivalAction_AIAttackSettlement(target, war), target.Tile);
+                    //    }
+                    //});
+
+                    if (TryFindEnemySettlement(yourSettlement, enemyis, out Settlement target))
+                    {
+                        bool showCaravanInfo = (war.DeclaredWarFaction == war.PlayerInteraction && war.AssaultFactions.Contains(army.Faction))
+                        || (war.DefendingFaction == war.PlayerInteraction && war.DefendingFactions.Contains(army.Faction));
+
+                        float points = army.Faction.Faction.def.techLevel.ThreatRangeFor().RandomInRange * (1 - army.DepletionFromWar);
+
+                        CaravanAI caravanAI = CaravanAIMaker.MakeCaravan(GeneratePawns(army, points), army.Faction.Faction, yourSettlement.Tile, true, CaravanAIMaker.GetCaravanColor(yourSettlement.Faction, target.Faction), showCaravanInfo, showCaravanInfo, false);
+                        caravanAI.Threat = points;
+                        caravanAI.Home = yourSettlement;
+                        caravanAI.ShowGizmos = false;
+
+                        caravanAI.AddQueueAction(new CaravanArrivalAction_AIAttackSettlement(target, war), target.Tile);
+                    }
                 }
             }
 

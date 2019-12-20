@@ -29,7 +29,7 @@ namespace RimOverhaul.AI
             }
         }
 
-        public static CaravanAI MakeCaravan(IEnumerable<Pawn> pawns, Faction faction, int startingTile, bool addToWorldPawnsIfNotAlready, Color color, bool showNeeds = false, bool showSocial = false, bool useFood = false)
+        public static CaravanAI MakeCaravan(IEnumerable<Pawn> pawns, Faction faction, int startingTile, bool addToWorldPawnsIfNotAlready, Color color, bool showNeeds = false, bool showSocial = false, bool useFood = false, bool showItems = false)
         {
             if (startingTile < 0 && addToWorldPawnsIfNotAlready)
             {
@@ -69,6 +69,7 @@ namespace RimOverhaul.AI
             caravan.ShowSocial = showSocial;
             caravan.ShowNeeds = showNeeds;
             caravan.UseFood = useFood;
+            caravan.ShowItems = showItems;
 
             caravan.CaravanColor = color;
 

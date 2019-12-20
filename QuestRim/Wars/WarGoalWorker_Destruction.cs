@@ -74,7 +74,8 @@ namespace QuestRim.Wars
         {
             base.StartWar(war);
 
-            war.AttackedAlliance.GiveTrustToAllFactions(-15);
+            if(war.AttackedAlliance != null)
+                war.AttackedAlliance.GiveTrustToAllFactions(-15);
         }
 
         public override void ExposeData()

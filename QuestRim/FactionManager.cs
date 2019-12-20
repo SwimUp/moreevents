@@ -268,7 +268,7 @@ namespace QuestRim
                 factions = new List<FactionInteraction>();
             }
 
-            foreach(var faction in Find.FactionManager.AllFactionsVisible)
+            foreach(var faction in Find.FactionManager.AllFactions)
             {
                 if (!Factions.Contains(faction))
                 {
@@ -279,7 +279,7 @@ namespace QuestRim
             for (int i = 0; i < Factions.Count; i++)
             {
                 Faction faction = Factions[i].Faction;
-                if (!Find.FactionManager.AllFactionsVisible.Contains(faction))
+                if (!Find.FactionManager.AllFactions.Contains(faction))
                 {
                     Remove(faction);
                 }

@@ -39,6 +39,10 @@ namespace RimOverhaul.AI
 
         public bool ShowSocial = false;
 
+        public bool ShowItems = false;
+
+        public bool ShowGizmos = false;
+
         public bool UseFood = false;
 
         public CaravanAI_NeedsTracker aiNeeds;
@@ -46,6 +50,8 @@ namespace RimOverhaul.AI
         private Material cachedMat;
 
         public float Threat;
+
+        public MapParent Home;
 
         public override Material Material
         {
@@ -100,6 +106,21 @@ namespace RimOverhaul.AI
             }
         }
 
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            if (ShowGizmos)
+            {
+                foreach (var gizmo in base.GetGizmos())
+                {
+                    yield return gizmo;
+                }
+            }
+            else
+            {
+                yield break;
+            }
+        }
+
         public override IEnumerable<InspectTabBase> GetInspectTabs()
         {
             if (def.inspectorTabsResolved != null)
@@ -110,6 +131,9 @@ namespace RimOverhaul.AI
                         continue;
 
                     if (!ShowSocial && tab is WITab_Caravan_Social)
+                        continue;
+
+                    if (!ShowItems && tab is WITab_Caravan_Items)
                         continue;
 
                     yield return tab;
@@ -125,11 +149,14 @@ namespace RimOverhaul.AI
 
             Scribe_Values.Look(ref ShowNeeds, "ShowPawns");
             Scribe_Values.Look(ref ShowSocial, "ShowSocial");
+            Scribe_Values.Look(ref ShowItems, "ShowItems");
             Scribe_Values.Look(ref UseFood, "UseFood");
             Scribe_Deep.Look(ref aiNeeds, "aiNeeds", this);
             Scribe_Values.Look(ref CaravanColor, "CaravanColor");
             Scribe_Collections.Look(ref queueActions, "queueActions", LookMode.Deep);
             Scribe_Values.Look(ref Threat, "Threat");
+            Scribe_References.Look(ref Home, "Home");
+            Scribe_Values.Look(ref ShowGizmos, "ShowGizmos");
         }
 
         private void CheckAnyNonWorldPawns()

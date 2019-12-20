@@ -70,6 +70,7 @@
     <Compile Include="AI\CaravanAIMaker.cs" />
     <Compile Include="AI\CaravanArrivalAction_AIEnterCaravan.cs" />
     <Compile Include="AI\CaravanAI_NeedsTracker.cs" />
+    <Compile Include="AI\CaravanUtility.cs" />
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_CarryItemToFurnace.cs" />
     <Compile Include="AI\JobDriver_FillUpTheHole.cs" />
@@ -95,7 +96,10 @@
     <Compile Include="AI\WorkGiver_DoBillCoke.cs" />
     <Compile Include="AllianceAgreementDefOfLocal.cs" />
     <Compile Include="Alliances\Condition_AllianceMembersCount.cs" />
+    <Compile Include="Alliances\DefenseContractComp.cs" />
+    <Compile Include="Alliances\DefenseContractCompWindow.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementComp.cs" />
+    <Compile Include="Alliances\DefenseContractCompProperties.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementCompProperties.cs" />
     <Compile Include="Alliances\TradeSchedulingAgreementWindow.cs" />
     <Compile Include="Biomes\BiomesDefOfLocal.cs" />
@@ -129,6 +133,7 @@
     <Compile Include="Events\PlaceBattle\PlaceBattle.cs" />
     <Compile Include="Patch\Faction_TryAffectGoodwillWith.cs" />
     <Compile Include="Patch\Faction_ Notify_RelationKindChanged.cs" />
+    <Compile Include="Patch\IncidentWorker_RaidEnemyAllianceDefenseContract.cs" />
     <Compile Include="PriceUtils.cs" />
     <Compile Include="Designator_BuildWithoutDef.cs" />
     <Compile Include="DialogDefOfLocal.cs" />
@@ -452,6 +457,7 @@
     <Compile Include="Utility\SkyfallerPlusMaker.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="Wars\ArmyOrderWorker_SendArmyToEnemySettlement.cs" />
+    <Compile Include="Wars\CaravanArrivalAction_AIBackToHome.cs" />
     <Compile Include="Wars\CaravanArrivalAction_AIAttackSettlement.cs" />
     <Compile Include="Weathers\WeatherDefOfLocal.cs" />
     <Compile Include="Weathers\WeatherOverlay_PsychoGas.cs" />
