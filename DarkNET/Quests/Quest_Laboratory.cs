@@ -138,21 +138,24 @@ namespace DarkNET.Quests
             }
         }
 
-        public override bool PreForceReform(QuestSite mapParent)
+        public override void Tick()
         {
-            if (Console == null)
-                FindConsole();
+            base.Tick();
 
-            if(Console != null)
+            if (Site != null && Site.HasMap)
             {
-                if (Console.Used)
+                if (Console == null)
+                    FindConsole();
+
+                if (Console != null)
                 {
-                    EndQuest(null, EndCondition.Success);
-                    Site.RemoveAfterLeave = true;
+                    if (Console.Used)
+                    {
+                        EndQuest(null, EndCondition.Success);
+                        Site.RemoveAfterLeave = true;
+                    }
                 }
             }
-
-            return base.PreForceReform(mapParent);
         }
 
         public override void DrawAdditionalOptions(Rect rect)
