@@ -27,6 +27,7 @@ namespace DarkNET
 
         public static readonly Texture2D Info = ContentFinder<Texture2D>.Get("UI/Buttons/InfoButton", true);
         private static readonly Texture2D StorytellerHighlightTex = ContentFinder<Texture2D>.Get("UI/HeroArt/Storytellers/Highlight");
+        private static readonly Texture2D FirstPageTexture = ContentFinder<Texture2D>.Get("Traders/main");
 
         public DarkNETWindow(Pawn speaker)
         {
@@ -80,7 +81,8 @@ namespace DarkNET
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Text.Font = GameFont.Medium;
 
-                Widgets.Label(mainTraderRect, "DarkNETWindow_ToStartInfo".Translate());
+                //Widgets.Label(mainTraderRect, "DarkNETWindow_ToStartInfo".Translate());
+                GUI.DrawTexture(mainTraderRect, FirstPageTexture);
 
                 Text.Anchor = TextAnchor.UpperLeft;
                 Text.Font = GameFont.Small;
@@ -91,13 +93,14 @@ namespace DarkNET
 
         private void DrawOfflinePage(Rect rect)
         {
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Text.Font = GameFont.Medium;
+            GUI.DrawTexture(rect, currentTrader.def.OfflineBackground);
+            //Text.Anchor = TextAnchor.MiddleCenter;
+            //Text.Font = GameFont.Medium;
 
-            Widgets.Label(rect, "OFFLINE");
+            //Widgets.Label(rect, "OFFLINE");
 
-            Text.Anchor = TextAnchor.UpperLeft;
-            Text.Font = GameFont.Small;
+            //Text.Anchor = TextAnchor.UpperLeft;
+            //Text.Font = GameFont.Small;
         }
 
         private void DrawTraderIcon(Rect rect, DarkNetTrader trader)

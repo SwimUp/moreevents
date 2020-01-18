@@ -53,32 +53,38 @@ namespace MoreEvents.Communications
 
         public virtual void RemoveNow()
         {
-            if(Dialog != null)
+            try
             {
-                Dialog.Destroy();
-            }
-
-            if(!string.IsNullOrEmpty(EmailMessageSubject) && EmailBoxOwner != null)
-            {
-                EmailBox box = QuestsManager.Communications.EmailBoxes.Where(b => b.Owner == EmailBoxOwner).FirstOrDefault();
-                if(box != null)
+                if (Dialog != null)
                 {
-                    EmailMessage message = box.Messages.Where(m => m.Subject == EmailMessageSubject).FirstOrDefault();
-                    if(message != null)
+                    Dialog.Destroy();
+                }
+
+                if (!string.IsNullOrEmpty(EmailMessageSubject) && EmailBoxOwner != null)
+                {
+                    EmailBox box = QuestsManager.Communications.EmailBoxes.Where(b => b.Owner == EmailBoxOwner).FirstOrDefault();
+                    if (box != null)
                     {
-                        box.Messages.Remove(message);
+                        EmailMessage message = box.Messages.Where(m => m.Subject == EmailMessageSubject).FirstOrDefault();
+                        if (message != null)
+                        {
+                            box.Messages.Remove(message);
+                        }
                     }
                 }
-            }
 
-            if(EndLetter != null)
-            {
-                Find.LetterStack.ReceiveLetter(EndLetter);
-            }
+                if (EndLetter != null)
+                {
+                    Find.LetterStack.ReceiveLetter(EndLetter);
+                }
 
-            if(Action != null)
+                if (Action != null)
+                {
+                    Action.DoAction(null, Speaker, Defendant);
+                }
+            }catch(Exception ex)
             {
-                Action.DoAction(null, Speaker, Defendant);
+                Log.Error($"Error while removing component {id} --> TimeComp: {ex}");
             }
 
             QuestsManager.Communications.RemoveComponent(this);

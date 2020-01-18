@@ -25,7 +25,10 @@ namespace MoreEvents.Communications
 
         public override void DoAction(CommunicationDialog dialog, Pawn speaker, Pawn defendant)
         {
-            defendant.Faction.TryAffectGoodwillWith(speaker.Faction, GoodWill);
+            if (defendant != null && defendant.Faction != null && speaker != null && speaker.Faction != null)
+            {
+                defendant.Faction.TryAffectGoodwillWith(speaker.Faction, GoodWill);
+            }
         }
 
         public override void ExposeData()

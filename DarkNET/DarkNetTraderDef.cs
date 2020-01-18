@@ -54,6 +54,19 @@ namespace DarkNET
             }
         }
 
+        public Texture2D OfflineBackground
+        {
+            get
+            {
+                if (offlineBackground == null)
+                {
+                    offlineBackground = ContentFinder<Texture2D>.Get(OfflineBackgroundInt);
+                }
+
+                return offlineBackground;
+            }
+        }
+
         [Unsaved]
         private Texture2D iconTexture;
 
@@ -66,11 +79,17 @@ namespace DarkNET
         [Unsaved]
         private Texture2D fullTexture;
 
+        [Unsaved]
+        private Texture2D offlineBackground;
+
         [NoTranslate]
         public string FullTextureInt;
 
         [NoTranslate]
         public string IconOfflineTextureInt;
+
+        [NoTranslate]
+        public string OfflineBackgroundInt;
 
         public List<DarkNetGood> AvaliableGoods;
 

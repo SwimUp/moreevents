@@ -51,10 +51,10 @@
       <HintPath>Libs\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\..\Downloads\RimWorld_v1.0.2231\RimWorld v1.0.2231\RimWorldWin64_Data\Managed\UnityEngine.Networking.dll</HintPath>
+      <HintPath>..\UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\Downloads\RimWorld_v1.0.2231\RimWorld v1.0.2231\RimWorldWin64_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
