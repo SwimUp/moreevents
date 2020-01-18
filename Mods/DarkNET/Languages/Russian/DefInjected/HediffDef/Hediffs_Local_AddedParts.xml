@@ -250,7 +250,7 @@
 	<DarkNet_BionicLung.label>Бионическое легкое</DarkNet_BionicLung.label>
 	<DarkNet_BionicLung.labelNoun>Бионическое легкое - это искусственный орган, который выполняет функцию настоящего легкого и является наиболее продвинутым вариантом среди подобных протезов, поскольку он легко приспосабливается к телу, не вызывает сепсиса и имеет ряд улучшенных параметров.</DarkNet_BionicLung.labelNoun>
 
-    <DarkNet_Network_Bushido.label>Фрагмент нейросети "Bushido"</DarkNet_Network_Bushido.label>
+	<DarkNet_Network_Bushido.label>Фрагмент нейросети "Bushido"</DarkNet_Network_Bushido.label>
 	<DarkNet_Network_Bushido.labelNoun>Сложная иноземная конструкция, когда-то являющаяся частью продвинутой нейросети. Судя по всему, обладает некоторым функционалом, влияющим на мозговые функции. Под действием механизма, способности в ближнем бою существенно повышаются, однако уровень владения стрелковым оружием заметно падает.</DarkNet_Network_Bushido.labelNoun>
 
 	<DarkNet_Network_Sniper.label>Фрагмент нейросети "Sniper"</DarkNet_Network_Sniper.label>
@@ -303,10 +303,10 @@
 
 	<DarkNet_Network_YinYang.label>Комбинированная нейросеть "Yin and Yang"</DarkNet_Network_YinYang.label>
 	<DarkNet_Network_YinYang.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Энтропия и созидание гармонично сочитаются в конструкции, придавая сознанию новые свойства.</DarkNet_Network_YinYang.labelNoun>
-	
+
 	<DarkNet_Network_MentalFocus.label>Комбинированная нейросеть "Mental focus"</DarkNet_Network_MentalFocus.label>
 	<DarkNet_Network_MentalFocus.labelNoun>Комбинированная иноземная конструкция, которая, судя по всему, смогла совместить в себе достоинства сразу двух фрагментов нейросети. Позволяет сосредоточить все усилия организма на получении новых знаний и совершенствование интеллекта, что затрачивает последние энергетические резервы организма.</DarkNet_Network_MentalFocus.labelNoun>
-	
+
 	<DarkNet_Emitter_Heavy.label>Большой пси излучатель</DarkNet_Emitter_Heavy.label>
 	<DarkNet_Emitter_Heavy.labelNoun>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Heavy.labelNoun>
 
@@ -315,7 +315,7 @@
 
 	<DarkNet_Emitter_Light.label>Малый пси излучатель</DarkNet_Emitter_Light.label>
 	<DarkNet_Emitter_Light.labelNoun>Механизм, воздействующий на эмоциональное сознание, угнетая чувства в угоду продуктивности.</DarkNet_Emitter_Light.labelNoun>
-	
+
 	<DarkNet_AdrenalineRibs.label>Адреналиновые ребра</DarkNet_AdrenalineRibs.label>
 	<DarkNet_AdrenalineRibs.labelNoun>Множество инъекторов, расположенных на искусственных ребрах, производят адреналин, ускоряя реакции.</DarkNet_AdrenalineRibs.labelNoun>
 
@@ -354,5 +354,22 @@
 
 	<DarkNet_CyberneticEarMK.label>Кибернетическое ухо MK1</DarkNet_CyberneticEarMK.label>
 	<DarkNet_CyberneticEarMK.labelNoun>Усовершенствованный кибернетический преобразователь звуковых волн.</DarkNet_CyberneticEarMK.labelNoun>
+
+	<DarkNet_Network_Sin.label>Дестабилизированная нейронная сеть "Unlimited Sin"</DarkNet_Network_Sin.label>
+	<DarkNet_Network_Sin.labelNoun>Заряженная и нестабильная инопланетная конструкция, многократно увеличивающая потенциал человека. Состоит из множества фрагментов, создавая замысловатый узор, переливающийся в темноте.</DarkNet_Network_Sin.labelNoun>
+
+	<DarkNet_Cybernetic_Exoskeleton.label>Кибернетический экзоскелет "Adrenaline shock"</DarkNet_Cybernetic_Exoskeleton.label>
+	<DarkNet_Cybernetic_Exoskeleton.labelNoun>Подвижный и прочный позвоночник перераспределяет нагрузку и помогает владельцу двигаться.</DarkNet_Cybernetic_Exoskeleton.labelNoun>
+
+	<DarkNet_Cybernetic_Exoskeleton_Colossus.label>Кибернетический экзоскелет "Colossus"</DarkNet_Cybernetic_Exoskeleton_Colossus.label>
+	<DarkNet_Cybernetic_Exoskeleton_Colossus.labelNoun>Усиленный кибернетический позвоночник из титанового сплава и марганца.</DarkNet_Cybernetic_Exoskeleton_Colossus.labelNoun>
+	
+	<DarkNet_Cybernetic_Exoskeleton_Eagles.label>Кибернетический экзоскелет "Screaming Eagles"</DarkNet_Cybernetic_Exoskeleton_Eagles.label>
+	<DarkNet_Cybernetic_Exoskeleton_Eagles.labelNoun>Прочный и легкий полиметаллический экзоскелет.</DarkNet_Cybernetic_Exoskeleton_Eagles.labelNoun>
+	
+	<DarkNet_Cybernetic_Exoskeleton_Determitanion.label>Кибернетический экзоскелет "Determitanion"</DarkNet_Cybernetic_Exoskeleton_Determitanion.label>
+	<DarkNet_Cybernetic_Exoskeleton_Determitanion.labelNoun>Кибернетический экзоскелет, наполненный множеством опорных систем. Компьютериум, запрограммированный на самовосстановление, также добавляет чувство безопасности.</DarkNet_Cybernetic_Exoskeleton_Determitanion.labelNoun>
+	
+
 
 </LanguageData>

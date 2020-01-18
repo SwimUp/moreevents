@@ -330,6 +330,20 @@
 	<DarkNet_CyberneticEarMK.label>Кибернетическое ухо MK1</DarkNet_CyberneticEarMK.label>
 	<DarkNet_CyberneticEarMK.description>Усовершенствованный кибернетический преобразователь звуковых волн.</DarkNet_CyberneticEarMK.description>
 
+	<DarkNet_Network_Sin.label>Нестабильная нейросеть "Unlimited Sin"</DarkNet_Network_Sin.label>
+	<DarkNet_Network_Sin.description>Заряженная и нестабильная инопланетная конструкция, многократно увеличивающая потенциал человека. Состоит из множества фрагментов, создавая замысловатый узор на поверхности, переливающийся в темноте.</DarkNet_Network_Sin.description>
+
+	<DarkNet_Cybernetic_Exoskeleton.label>Кибернетический экзоскелет "Adrenaline shock"</DarkNet_Cybernetic_Exoskeleton.label>
+	<DarkNet_Cybernetic_Exoskeleton.description>Подвижный и прочный позвоночник перераспределяет нагрузку и помогает владельцу двигаться.</DarkNet_Cybernetic_Exoskeleton.description>
+
+	<DarkNet_Cybernetic_Exoskeleton_Colossus.label>Кибернетический экзоскелет "Colossus"</DarkNet_Cybernetic_Exoskeleton_Colossus.label>
+	<DarkNet_Cybernetic_Exoskeleton_Colossus.description>Усиленный кибернетический позвоночник из титанового сплава и марганца.</DarkNet_Cybernetic_Exoskeleton_Colossus.description>
+
+	<DarkNet_Cybernetic_Exoskeleton_Eagles.label>Кибернетический экзоскелет "Screaming Eagles"</DarkNet_Cybernetic_Exoskeleton_Eagles.label>
+	<DarkNet_Cybernetic_Exoskeleton_Eagles.description>Прочный и легкий полиметаллический экзоскелет.</DarkNet_Cybernetic_Exoskeleton_Eagles.description>
+
+	<DarkNet_Cybernetic_Exoskeleton_Determitanion.label>Кибернетический экзоскелет "Determitanion"</DarkNet_Cybernetic_Exoskeleton_Determitanion.label>
+	<DarkNet_Cybernetic_Exoskeleton_Determitanion.description>Кибернетический экзоскелет, наполненный множеством опорных систем. Компьютериум, запрограммированный на самовосстановление, также добавляет чувство безопасности.</DarkNet_Cybernetic_Exoskeleton_Determitanion.description>
 
 
 </LanguageData>

@@ -137,7 +137,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Obsolete_Hand_Substitute</addsHediff> 
 	</RecipeDef>
@@ -397,7 +397,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_All_Metal_Pirate_Battle_Claw</addsHediff> 
 	</RecipeDef>
@@ -483,7 +483,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Bloodied_Pirate_Blade</addsHediff> 
 	</RecipeDef>
@@ -569,7 +569,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Active_Hands_With_Electric_Shock</addsHediff> 
 	</RecipeDef>
@@ -1007,7 +1007,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Bionic_Blades</addsHediff> 
 	</RecipeDef>
@@ -1051,7 +1051,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Retractable_Titanium_Blades</addsHediff> 
 	</RecipeDef>
@@ -1095,7 +1095,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Cyber_Hand_MK</addsHediff> 
 	</RecipeDef>
@@ -1139,7 +1139,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-			<li>Hand</li> 
+			<li>Shoulder</li> 
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_Cyber_Hand_MK1_Light</addsHediff> 
 	</RecipeDef>
@@ -4592,8 +4592,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_ModularArrayOfLiver</addsHediff>
 	</RecipeDef>
-	
-		<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_SyntheticLiverMK</defName>
 		<label>install Synthetic liver MK1</label>
 		<description>Install Synthetic liver MK1</description>
@@ -4636,8 +4636,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_SyntheticLiverMK</addsHediff>
 	</RecipeDef>
-	
-			<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_CyberneticLiver</defName>
 		<label>install Cybernetic liver MK1</label>
 		<description>Install Cybernetic liver MK1</description>
@@ -4680,8 +4680,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_CyberneticLiver</addsHediff>
 	</RecipeDef>
-	
-				<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_CochlearReceiver</defName>
 		<label>install Cochlear receiver</label>
 		<description>Install Cochlear receiver</description>
@@ -4723,8 +4723,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_CochlearReceiver</addsHediff>
 	</RecipeDef>
-	
-					<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_SoundWaveGenerator</defName>
 		<label>install Sound wave generator</label>
 		<description>Install Sound wave generator</description>
@@ -4766,8 +4766,8 @@
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_SoundWaveGenerator</addsHediff>
 	</RecipeDef>
-	
-						<RecipeDef ParentName="SurgeryFlesh">
+
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Install_DarkNet_CyberneticEarMK</defName>
 		<label>install Cybernetic ear MK1</label>
 		<description>Install Cybernetic ear MK1</description>
@@ -4808,5 +4808,230 @@
 			<li>Ear</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>DarkNet_CyberneticEarMK</addsHediff>
+		</RecipeDef>
+
+		
+			<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Network_Sin</defName>
+		<label>install Destabilized Neural Network "Unlimited Sin"</label>
+		<description>Install Destabilized Neural Network "Unlimited Sin"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Destabilized Neural Network "Unlimited Sin"</jobString>
+		<workAmount>15000</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>18</Medicine>
+			<Intellectual>15</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Network_Sin</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Network_Sin</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Network_Sin</addsHediff>
 	</RecipeDef>
+	
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Cybernetic_Exoskeleton</defName>
+		<label>install Cybernetic exoskeleton "Adrenaline shock"</label>
+		<description>Install Cybernetic exoskeleton "Adrenaline shock"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic exoskeleton "Adrenaline shock"</jobString>
+		<workAmount>15000</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Cybernetic_Exoskeleton</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Cybernetic_Exoskeleton</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Cybernetic_Exoskeleton</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Cybernetic_Exoskeleton_Colossus</defName>
+		<label>install Cybernetic exoskeleton "Colossus"</label>
+		<description>Install Cybernetic exoskeleton "Colossus"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic exoskeleton "Colossus"</jobString>
+		<workAmount>18000</workAmount>
+		<deathOnFailedSurgeryChance>0.12</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Cybernetic_Exoskeleton_Colossus</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Cybernetic_Exoskeleton_Colossus</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Cybernetic_Exoskeleton_Colossus</addsHediff>
+	</RecipeDef>
+	
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Cybernetic_Exoskeleton_Eagles</defName>
+		<label>install Cybernetic exoskeleton "Screaming Eagles"</label>
+		<description>Install Cybernetic exoskeleton "Screaming Eagles"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic exoskeleton "Screaming Eagles"</jobString>
+		<workAmount>21000</workAmount>
+		<deathOnFailedSurgeryChance>0.13</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>16</Medicine>
+			<Intellectual>12</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Cybernetic_Exoskeleton_Eagles</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Cybernetic_Exoskeleton_Eagles</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Cybernetic_Exoskeleton_Eagles</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Install_DarkNet_Cybernetic_Exoskeleton_Determitanion</defName>
+		<label>install Cybernetic exoskeleton "Determitanion"</label>
+		<description>Install Cybernetic exoskeleton "Determitanion"</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing Cybernetic exoskeleton "Determitanion"</jobString>
+		<workAmount>25000</workAmount>
+		<deathOnFailedSurgeryChance>0.14</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>17</Medicine>
+			<Intellectual>14</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DarkNet_Cybernetic_Exoskeleton_Determitanion</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>DarkNet_Cybernetic_Exoskeleton_Determitanion</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>DarkNet_Cybernetic_Exoskeleton_Determitanion</addsHediff>
+	</RecipeDef>
+	
+	
 </Defs>

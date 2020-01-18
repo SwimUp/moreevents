@@ -2200,7 +2200,7 @@
 
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Singular</defName>
-		<label>Fragment of the neural network "Sacred and wild"</label>
+		<label>Singular network "Sacred and wild"</label>
 		<labelNoun>A large foreign structure created from twelve fragments. Significantly changes the consciousness of people falling within the radius of impact. It has partial functionality of all parts involved in the creation mechanism.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Singular</spawnThingOnRemoved>
 		<addedPartProps>
@@ -2712,133 +2712,295 @@
 	</HediffDef>
 
 
-<HediffDef ParentName="AddedBodyPartBase">
-	<defName>DarkNet_ModularArrayOfLiver</defName>
-	<label>Modular array of liver</label>
-	<labelNoun>Microscopic copies of robotic organisms form an organic liver.</labelNoun>
-	<spawnThingOnRemoved>DarkNet_ModularArrayOfLiver</spawnThingOnRemoved>
-	<addedPartProps>
-		<solid>true</solid>
-		<partEfficiency>1.1</partEfficiency>
-	</addedPartProps>
-	<stages>
-		<li>
-			<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<offset>0.05</offset>
-				</li>
-				<li>
-					<capacity>BloodFiltration</capacity>
-					<offset>0.1</offset>
-				</li>
-			</capMods>
-		</li> 
-	</stages>
-</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_ModularArrayOfLiver</defName>
+		<label>Modular array of liver</label>
+		<labelNoun>Microscopic copies of robotic organisms form an organic liver.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_ModularArrayOfLiver</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.1</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li> 
+		</stages>
+	</HediffDef>
 
-<HediffDef ParentName="AddedBodyPartBase">
-	<defName>DarkNet_SyntheticLiverMK</defName>
-	<label>Synthetic liver MK1</label>
-	<labelNoun>An array of artificial mechanisms that mimic the liver.</labelNoun>
-	<spawnThingOnRemoved>DarkNet_SyntheticLiverMK</spawnThingOnRemoved>
-	<addedPartProps>
-		<solid>true</solid>
-		<partEfficiency>1.15</partEfficiency>
-	</addedPartProps>
-	<stages>
-		<li>
-			<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<offset>0.1</offset>
-				</li>
-				<li>
-					<capacity>BloodFiltration</capacity>
-					<offset>0.15</offset>
-				</li>
-			</capMods>
-		</li> 
-	</stages>
-</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SyntheticLiverMK</defName>
+		<label>Synthetic liver MK1</label>
+		<labelNoun>An array of artificial mechanisms that mimic the liver.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SyntheticLiverMK</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.15</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li> 
+		</stages>
+	</HediffDef>
 
-<HediffDef ParentName="AddedBodyPartBase">
-	<defName>DarkNet_CyberneticLiver</defName>
-	<label>Cybernetic liver MK1</label>
-	<labelNoun>Large robotic structure imitating the functioning of the natural liver.</labelNoun>
-	<spawnThingOnRemoved>DarkNet_CyberneticLiver</spawnThingOnRemoved>
-	<addedPartProps>
-		<solid>true</solid>
-		<partEfficiency>1.25</partEfficiency>
-	</addedPartProps>
-	<stages>
-		<li>
-			<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<offset>0.15</offset>
-				</li>
-				<li>
-					<capacity>BloodFiltration</capacity>
-					<offset>0.25</offset>
-				</li>
-			</capMods>
-		</li> 
-	</stages>
-</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CyberneticLiver</defName>
+		<label>Cybernetic liver MK1</label>
+		<labelNoun>Large robotic structure imitating the functioning of the natural liver.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberneticLiver</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li> 
+		</stages>
+	</HediffDef>
 
-<HediffDef ParentName="AddedBodyPartBase">
-	<defName>DarkNet_CochlearReceiver</defName>
-	<label>Cochlear receiver</label>
-	<labelNoun>Small radio transmits sound vibrations to the brain.</labelNoun>
-	<spawnThingOnRemoved>DarkNet_CochlearReceiver</spawnThingOnRemoved>
-	<addedPartProps>
-		<solid>true</solid>
-		<partEfficiency>0.75</partEfficiency>
-	</addedPartProps>
-</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CochlearReceiver</defName>
+		<label>Cochlear receiver</label>
+		<labelNoun>Small radio transmits sound vibrations to the brain.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CochlearReceiver</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.75</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
 
-<HediffDef ParentName="AddedBodyPartBase">
-	<defName>DarkNet_SoundWaveGenerator</defName>
-	<label>Sound wave generator</label>
-	<labelNoun>Advanced electromagnetic generator of sound waves transmitted to the brain.</labelNoun>
-	<spawnThingOnRemoved>DarkNet_SoundWaveGenerator</spawnThingOnRemoved>
-	<addedPartProps>
-		<solid>true</solid>
-		<partEfficiency>1.25</partEfficiency>
-	</addedPartProps>
-	<stages>
-		<li>
-			<capMods>
-				<li>
-					<capacity>Hearing</capacity>
-					<offset>0.15</offset>
-				</li>
-			</capMods>
-		</li> 
-	</stages>
-</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_SoundWaveGenerator</defName>
+		<label>Sound wave generator</label>
+		<labelNoun>Advanced electromagnetic generator of sound waves transmitted to the brain.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_SoundWaveGenerator</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li> 
+		</stages>
+	</HediffDef>
 
-<HediffDef ParentName="AddedBodyPartBase">
-	<defName>DarkNet_CyberneticEarMK</defName>
-	<label>Cybernetic ear MK1</label>
-	<labelNoun>Advanced cybernetic sound wave transducer.</labelNoun>
-	<spawnThingOnRemoved>DarkNet_CyberneticEarMK</spawnThingOnRemoved>
-	<addedPartProps>
-		<solid>true</solid>
-		<partEfficiency>1.45</partEfficiency>
-	</addedPartProps>
-	<stages>
-		<li>
-			<capMods>
-				<li>
-					<capacity>Hearing</capacity>
-					<offset>0.35</offset>
-				</li>
-			</capMods>
-		</li> 
-	</stages>
-</HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>DarkNet_CyberneticEarMK</defName>
+		<label>Cybernetic ear MK1</label>
+		<labelNoun>Advanced cybernetic sound wave transducer.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_CyberneticEarMK</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.45</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.35</offset>
+					</li>
+				</capMods>
+			</li> 
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Network_Sin</defName>
+		<label>Destabilized Neural Network "Unlimited Sin"</label>
+		<labelNoun>Charged and unstable alien structure, repeatedly increasing human potential. It consists of many fragments, creating an intricate pattern that shimmers in the dark.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Network_Singular</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity> 
+						<offset>-0.3</offset>
+					</li> 
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.3</offset>
+					</li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>0.2</offset>
+					</li> 
+					<li>
+						<capacity>Consciousness</capacity> 
+						<offset>0.1</offset>
+					</li> 
+					<li>
+						<capacity>Hearing</capacity> 
+						<offset>-0.3</offset>
+					</li> 
+				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+					<MeleeHitChance>0.5</MeleeHitChance>
+					<MeleeDodgeChance>0.7</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+					<SocialImpact>0.7</SocialImpact>
+					<WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+					<ResearchSpeed>0.4</ResearchSpeed>
+					<GlobalLearningFactor>0.7</GlobalLearningFactor>
+					<HungerRateMultiplier>4.0</HungerRateMultiplier>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Cybernetic_Exoskeleton</defName>
+		<label>Cybernetic exoskeleton "Adrenaline shock"</label>
+		<labelNoun>A mobile and strong spine redistributes the load and helps the wearer move.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.2</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.3</offset>
+					</li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>0.1</offset>
+					</li> 
+				</capMods>
+				<statOffsets>
+					<MeleeDodgeChance>0.2</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Cybernetic_Exoskeleton_Colossus</defName>
+		<label>Cybernetic exoskeleton "Colossus"</label>
+		<labelNoun>Reinforced cybernetic spine made of titanium alloy and manganese.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton_Colossus</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.3</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.05</offset>
+					</li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>0.2</offset>
+					</li> 
+				</capMods>
+				<statOffsets>
+					<MeleeDodgeChance>0.3</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Cybernetic_Exoskeleton_Eagles</defName>
+		<label>Cybernetic exoskeleton "Screaming Eagles"</label>
+		<labelNoun>Durable and lightweight polymetallic exoskeleton.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton_Eagles</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.4</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.25</offset>
+					</li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>0.25</offset>
+					</li> 
+				</capMods>
+				<statOffsets>
+					<MeleeDodgeChance>0.3</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>DarkNet_Cybernetic_Exoskeleton_Determitanion</defName>
+		<label>Cybernetic exoskeleton "Determitanion"</label>
+		<labelNoun>A cybernetic exoskeleton filled with many supporting systems. The Computerium programmed for self-healing also instills a sense of security.</labelNoun>
+		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton_Determitanion</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity> 
+						<offset>0.5</offset>
+					</li> 
+				</capMods>
+				<statOffsets>
+					<MeleeDodgeChance>0.8</MeleeDodgeChance>
+					<MeleeHitChance>0.5</MeleeHitChance>
+					<ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 
 
 </Defs>

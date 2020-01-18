@@ -440,6 +440,26 @@
 	<Install_DarkNet_CyberneticEarMK.description>Установить Кибернетическое ухо MK1</Install_DarkNet_CyberneticEarMK.description>
 	<Install_DarkNet_CyberneticEarMK.jobString>Устанавливает Кибернетическое ухо MK1</Install_DarkNet_CyberneticEarMK.jobString>
 
+	<Install_DarkNet_Network_Sin.label>установить дестабилизированную нейронную сеть "Unlimited Sin"</Install_DarkNet_Network_Sin.label>
+	<Install_DarkNet_Network_Sin.description>Установить дестабилизированную нейронную сеть "Unlimited Sin"</Install_DarkNet_Network_Sin.description>
+	<Install_DarkNet_Network_Sin.jobString>Устанавливает дестабилизированную нейронную сеть "Unlimited Sin"</Install_DarkNet_Network_Sin.jobString>
+
+	<Install_DarkNet_Cybernetic_Exoskeleton.label>установить Кибернетический экзоскелет "Adrenaline shock"</Install_DarkNet_Cybernetic_Exoskeleton.label>
+	<Install_DarkNet_Cybernetic_Exoskeleton.description>Установить Кибернетический экзоскелет "Adrenaline shock"</Install_DarkNet_Cybernetic_Exoskeleton.description>
+	<Install_DarkNet_Cybernetic_Exoskeleton.jobString>Устанавливает Кибернетический экзоскелет "Adrenaline shock"</Install_DarkNet_Cybernetic_Exoskeleton.jobString>
+	
+	<Install_DarkNet_Cybernetic_Exoskeleton_Colossus.label>установить Кибернетический экзоскелет "Colossus"</Install_DarkNet_Cybernetic_Exoskeleton_Colossus.label>
+	<Install_DarkNet_Cybernetic_Exoskeleton_Colossus.description>Установить Кибернетический экзоскелет "Colossus"</Install_DarkNet_Cybernetic_Exoskeleton_Colossus.description>
+	<Install_DarkNet_Cybernetic_Exoskeleton_Colossus.jobString>Устанавливает Кибернетический экзоскелет "Colossus"</Install_DarkNet_Cybernetic_Exoskeleton_Colossus.jobString>
+	
+	<Install_DarkNet_Cybernetic_Exoskeleton_Eagles.label>установить Кибернетический экзоскелет "Screaming Eagles"</Install_DarkNet_Cybernetic_Exoskeleton_Eagles.label>
+	<Install_DarkNet_Cybernetic_Exoskeleton_Eagles.description>Установить Кибернетический экзоскелет "Screaming Eagles"</Install_DarkNet_Cybernetic_Exoskeleton_Eagles.description>
+	<Install_DarkNet_Cybernetic_Exoskeleton_Eagles.jobString>Устанавливает Кибернетический экзоскелет "Screaming Eagles"</Install_DarkNet_Cybernetic_Exoskeleton_Eagles.jobString>
+	
+	<Install_DarkNet_Cybernetic_Exoskeleton_Determitanion.label>установить Кибернетический экзоскелет "Determitanion"</Install_DarkNet_Cybernetic_Exoskeleton_Determitanion.label>
+	<Install_DarkNet_Cybernetic_Exoskeleton_Determitanion.description>Установить Кибернетический экзоскелет "Determitanion"</Install_DarkNet_Cybernetic_Exoskeleton_Determitanion.description>
+	<Install_DarkNet_Cybernetic_Exoskeleton_Determitanion.jobString>Устанавливает Кибернетический экзоскелет "Determitanion"</Install_DarkNet_Cybernetic_Exoskeleton_Determitanion.jobString>
+
 
 
 

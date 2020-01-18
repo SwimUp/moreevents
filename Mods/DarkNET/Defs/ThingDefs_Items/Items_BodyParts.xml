@@ -76,6 +76,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.3</Mass>
 			<MarketValue>250</MarketValue>
 			<!-- вес -->
@@ -99,6 +100,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.4</Mass>
 			<MarketValue>1000</MarketValue>
 		</statBases>
@@ -121,6 +123,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.3</Mass>
 			<MarketValue>350</MarketValue>
 		</statBases>
@@ -142,6 +145,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.4</Mass>
 			<MarketValue>370</MarketValue>
 		</statBases>
@@ -163,6 +167,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.4</Mass>
 			<MarketValue>400</MarketValue>
 		</statBases>
@@ -184,6 +189,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.5</Mass>
 			<MarketValue>420</MarketValue>
 		</statBases>
@@ -205,6 +211,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>550</MarketValue>
 		</statBases>
@@ -226,6 +233,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.55</Mass>
 			<MarketValue>680</MarketValue>
 		</statBases>
@@ -247,6 +255,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>1.2</Mass>
 			<MarketValue>900</MarketValue>
 		</statBases>
@@ -268,6 +277,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>650</MarketValue>
 		</statBases>
@@ -289,6 +299,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.5</Mass>
 			<MarketValue>950</MarketValue>
 		</statBases>
@@ -310,6 +321,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.6</Mass>
 			<MarketValue>850</MarketValue>
 		</statBases>
@@ -331,6 +343,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>750</MarketValue>
 		</statBases>
@@ -352,6 +365,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.9</Mass>
 			<MarketValue>1050</MarketValue>
 		</statBases>
@@ -373,6 +387,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>1.1</Mass>
 			<MarketValue>850</MarketValue>
 		</statBases>
@@ -394,6 +409,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.0</Mass>
 			<MarketValue>850</MarketValue>
 		</statBases>
@@ -416,6 +432,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.2</Mass>
 			<MarketValue>1500</MarketValue>
 		</statBases>
@@ -437,6 +454,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.0</Mass>
 			<MarketValue>1600</MarketValue>
 		</statBases>
@@ -458,6 +476,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.5</Mass>
 			<MarketValue>1500</MarketValue>
 		</statBases>
@@ -479,6 +498,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>1750</MarketValue>
 		</statBases>
@@ -500,6 +520,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.4</Mass>
 			<MarketValue>1650</MarketValue>
 		</statBases>
@@ -521,6 +542,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>1.2</Mass>
 			<MarketValue>1880</MarketValue>
 		</statBases>
@@ -542,6 +564,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.5</Mass>
 			<MarketValue>1900</MarketValue>
 		</statBases>
@@ -563,6 +586,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>2300</MarketValue>
 		</statBases>
@@ -584,6 +608,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
 			<Mass>1.7</Mass>
 			<MarketValue>2400</MarketValue>
 		</statBases>
@@ -605,6 +630,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>65</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2700</MarketValue>
 		</statBases>
@@ -626,6 +652,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>1700</MarketValue>
 		</statBases>
@@ -647,6 +674,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2200</MarketValue>
 		</statBases>
@@ -668,6 +696,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2500</MarketValue>
 		</statBases>
@@ -689,6 +718,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2500</MarketValue>
 		</statBases>
@@ -710,6 +740,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>1500</MarketValue>
 		</statBases>
@@ -731,6 +762,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2000</MarketValue>
 		</statBases>
@@ -752,6 +784,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>1750</MarketValue>
 		</statBases>
@@ -773,6 +806,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2000</MarketValue>
 		</statBases>
@@ -794,6 +828,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>65</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>2500</MarketValue>
 		</statBases>
@@ -816,6 +851,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>350</MarketValue>
 		</statBases>
@@ -838,6 +874,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.3</Mass>
 			<MarketValue>400</MarketValue>
 		</statBases>
@@ -859,7 +896,8 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<Mass>0.8</Mass>
+			<MaxHitPoints>45</MaxHitPoints>
+			<Mass>2.8</Mass>
 			<MarketValue>450</MarketValue>
 		</statBases>
 		<techHediffsTags>
@@ -880,6 +918,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.7</Mass>
 			<MarketValue>560</MarketValue>
 		</statBases>
@@ -901,6 +940,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.5</Mass>
 			<MarketValue>670</MarketValue>
 		</statBases>
@@ -922,6 +962,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.8</Mass>
 			<MarketValue>860</MarketValue>
 		</statBases>
@@ -943,6 +984,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.9</Mass>
 			<MarketValue>900</MarketValue>
 		</statBases>
@@ -964,6 +1006,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>1.2</Mass>
 			<MarketValue>980</MarketValue>
 		</statBases>
@@ -985,6 +1028,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>1.2</Mass>
 			<MarketValue>1100</MarketValue>
 		</statBases>
@@ -1006,6 +1050,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>1.0</Mass>
 			<MarketValue>1200</MarketValue>
 		</statBases>
@@ -1028,6 +1073,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>1.1</Mass>
 			<MarketValue>1250</MarketValue>
 		</statBases>
@@ -1049,6 +1095,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.3</Mass>
 			<MarketValue>1300</MarketValue>
 		</statBases>
@@ -1070,6 +1117,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.1</Mass>
 			<MarketValue>1600</MarketValue>
 		</statBases>
@@ -1092,6 +1140,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>1.3</Mass>
 			<MarketValue>1850</MarketValue>
 		</statBases>
@@ -1114,6 +1163,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>2.0</Mass>
 			<MarketValue>2450</MarketValue>
 		</statBases>
@@ -1135,6 +1185,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>65</MaxHitPoints>
 			<Mass>2.5</Mass>
 			<MarketValue>2650</MarketValue>
 		</statBases>
@@ -1156,6 +1207,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
 			<Mass>2.5</Mass>
 			<MarketValue>3000</MarketValue>
 		</statBases>
@@ -1177,6 +1229,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.2</Mass>
 			<MarketValue>300</MarketValue>
 		</statBases>
@@ -1199,6 +1252,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.2</Mass>
 			<MarketValue>450</MarketValue>
 		</statBases>
@@ -1220,6 +1274,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.3</Mass>
 			<MarketValue>590</MarketValue>
 		</statBases>
@@ -1241,8 +1296,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.25</Mass>
-			<MarketValue>750</MarketValue>
+			<MarketValue>650</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1262,8 +1318,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.2</Mass>
-			<MarketValue>900</MarketValue>
+			<MarketValue>700</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Simple</li>
@@ -1284,8 +1341,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.3</Mass>
-			<MarketValue>1200</MarketValue>
+			<MarketValue>900</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1305,8 +1363,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.3</Mass>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1200</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1326,8 +1385,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>2000</MarketValue>
+			<MarketValue>1800</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1347,8 +1407,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.7</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>2200</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1369,6 +1430,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.2</Mass>
 			<MarketValue>350</MarketValue>
 		</statBases>
@@ -1391,6 +1453,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.25</Mass>
 			<MarketValue>500</MarketValue>
 		</statBases>
@@ -1413,8 +1476,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.3</Mass>
-			<MarketValue>750</MarketValue>
+			<MarketValue>700</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Simple</li>
@@ -1434,8 +1498,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.4</Mass>
-			<MarketValue>1000</MarketValue>
+			<MarketValue>800</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1455,8 +1520,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1400</MarketValue>
+			<MarketValue>1100</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Simple</li>
@@ -1476,8 +1542,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1900</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1497,6 +1564,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.5</Mass>
 			<MarketValue>1300</MarketValue>
 		</statBases>
@@ -1519,8 +1587,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
 			<Mass>0.1</Mass>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1540,8 +1609,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.1</Mass>
-			<MarketValue>3500</MarketValue>
+			<MarketValue>1900</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1561,8 +1631,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.1</Mass>
-			<MarketValue>3500</MarketValue>
+			<MarketValue>2500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1582,8 +1653,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1</Mass>
-			<MarketValue>1400</MarketValue>
+			<MarketValue>800</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1603,8 +1675,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
 			<Mass>1</Mass>
-			<MarketValue>1700</MarketValue>
+			<MarketValue>1100</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1624,8 +1697,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>65</MaxHitPoints>
 			<Mass>1</Mass>
-			<MarketValue>1900</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2174,7 +2248,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
+			<MaxHitPoints>30</MaxHitPoints>
 			<MarketValue>700</MarketValue>
 			<Mass>0.1</Mass>
 			<WorkToMake>1000</WorkToMake>
@@ -2213,7 +2287,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
+			<MaxHitPoints>40</MaxHitPoints>
 			<MarketValue>1200</MarketValue>
 			<Mass>0.15</Mass>
 			<WorkToMake>2000</WorkToMake>
@@ -2254,7 +2328,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
-			<MarketValue>1700</MarketValue>
+			<MarketValue>1500</MarketValue>
 			<Mass>0.2</Mass>
 			<WorkToMake>3000</WorkToMake>
 		</statBases>
@@ -2293,8 +2367,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.7</Mass>
-			<MarketValue>900</MarketValue>
+			<MarketValue>500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2314,8 +2389,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.9</Mass>
-			<MarketValue>1100</MarketValue>
+			<MarketValue>800</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2335,8 +2411,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
 			<Mass>0.8</Mass>
-			<MarketValue>1300</MarketValue>
+			<MarketValue>1100</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2356,8 +2433,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>1.5</Mass>
-			<MarketValue>1700</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2377,8 +2455,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>1.0</Mass>
-			<MarketValue>1100</MarketValue>
+			<MarketValue>600</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2399,8 +2478,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>1.5</Mass>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>900</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2420,8 +2500,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.6</Mass>
-			<MarketValue>1900</MarketValue>
+			<MarketValue>1300</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2430,8 +2511,8 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
-	
-		<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_ModularArrayOfLiver</defName>
 		<label>Modular array of liver</label>
 		<description>Microscopic copies of robotic organisms form an organic liver.</description>
@@ -2441,8 +2522,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.3</Mass>
-			<MarketValue>1100</MarketValue>
+			<MarketValue>700</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2451,8 +2533,8 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
-	
-			<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_SyntheticLiverMK</defName>
 		<label>Synthetic liver MK1</label>
 		<description>An array of artificial mechanisms that mimic the liver.</description>
@@ -2462,8 +2544,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1400</MarketValue>
+			<MarketValue>900</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2472,8 +2555,8 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
-	
-				<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_CyberneticLiver</defName>
 		<label>Cybernetic liver MK1</label>
 		<description>Large robotic structure imitating the functioning of the natural liver.</description>
@@ -2483,8 +2566,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.8</Mass>
-			<MarketValue>1700</MarketValue>
+			<MarketValue>1400</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2493,8 +2577,8 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
-	
-					<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_CochlearReceiver</defName>
 		<label>Cochlear receiver</label>
 		<description>Small radio transmits sound vibrations to the brain.</description>
@@ -2504,6 +2588,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.1</Mass>
 			<MarketValue>300</MarketValue>
 		</statBases>
@@ -2514,8 +2599,8 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
-	
-						<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_SoundWaveGenerator</defName>
 		<label>Sound wave generator</label>
 		<description>Advanced electromagnetic generator of sound waves transmitted to the brain.</description>
@@ -2525,6 +2610,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
 			<Mass>0.1</Mass>
 			<MarketValue>600</MarketValue>
 		</statBases>
@@ -2535,8 +2621,8 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
-	
-							<ThingDef ParentName="BodyPart_DarkNet">
+
+	<ThingDef ParentName="BodyPart_DarkNet">
 		<defName>DarkNet_CyberneticEarMK</defName>
 		<label>Cybernetic ear MK1</label>
 		<description>Advanced cybernetic sound wave transducer.</description>
@@ -2546,6 +2632,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.3</Mass>
 			<MarketValue>1200</MarketValue>
 		</statBases>
@@ -2556,5 +2643,204 @@
 			<li>RogerEdmonson_Advanced</li>
 		</tradeTags>
 	</ThingDef>
+
+
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Network_Sin</defName>
+		<label>Destabilized Neural Network "Unlimited Sin"</label>
+		<description>Charged and unstable alien structure, repeatedly increasing human potential. It consists of many fragments, creating an intricate pattern that shimmers in the dark.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/Sin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<MarketValue>20000</MarketValue>
+			<Mass>5</Mass>
+			<WorkToMake>23000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<DarkNet_Network_Singular>1</DarkNet_Network_Singular>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Computerium>20</Computerium>
+			<Neutronium>15</Neutronium>
+			<Cryotium>25</Cryotium>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Cybernetic_Exoskeleton</defName>
+		<label>Cybernetic exoskeleton "Adrenaline shock"</label>
+		<description>A mobile and strong spine redistributes the load and helps the wearer move.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Cybernetic_Exoskeleton</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>1700</MarketValue>
+			<Mass>5</Mass>
+			<WorkToMake>15000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<BionicSpine>1</BionicSpine>
+			<DarkNet_AdrenalineRibs>1</DarkNet_AdrenalineRibs>
+			<NickelIngot>20</NickelIngot>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Cybernetic_Exoskeleton_Colossus</defName>
+		<label>Cybernetic exoskeleton "Colossus"</label>
+		<description>Reinforced cybernetic spine made of titanium alloy and manganese.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Cybernetic_Exoskeleton_Colossus</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<MarketValue>2000</MarketValue>
+			<Mass>8</Mass>
+			<WorkToMake>18000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<BionicSpine>1</BionicSpine>
+			<DarkNet_TitaniumRibs>1</DarkNet_TitaniumRibs>
+			<IlmeniteIngot>30</IlmeniteIngot>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Cybernetic_Exoskeleton_Eagles</defName>
+		<label>Cybernetic exoskeleton "Screaming Eagles"</label>
+		<description>Durable and lightweight polymetallic exoskeleton.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Cybernetic_Exoskeleton_Eagles</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<MarketValue>2600</MarketValue>
+			<Mass>3</Mass>
+			<WorkToMake>22000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<BionicSpine>1</BionicSpine>
+			<DarkNet_SyntheticRibs>1</DarkNet_SyntheticRibs>
+			<TungstenIngot>35</TungstenIngot>
+			<ComponentSpacer>5</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BodyPart_DarkNet">
+		<defName>DarkNet_Cybernetic_Exoskeleton_Determitanion</defName>
+		<label>Cybernetic exoskeleton "Determitanion"</label>
+		<description>A cybernetic exoskeleton filled with many supporting systems. The Computerium programmed for self-healing also instills a sense of security.</description>
+		<graphicData>
+			<texPath>Things/Artifacts/DarkNet_Cybernetic_Exoskeleton_Determitanion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<MarketValue>3000</MarketValue>
+			<Mass>5</Mass>
+			<WorkToMake>25000</WorkToMake>
+		</statBases>
+		<useHitPoints>true</useHitPoints>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<BionicSpine>1</BionicSpine>
+			<DarkNet_CyberneticBreastFrame>1</DarkNet_CyberneticBreastFrame>
+			<Computerium_SupereMolStruct>5</Computerium_SupereMolStruct>
+			<ComponentSpacer>5</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>RogerEdmonson_Ultra</li>
+		</tradeTags>
+	</ThingDef>
+
 
 </Defs>

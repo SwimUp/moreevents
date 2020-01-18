@@ -15,6 +15,7 @@ Paying attention to the outlying worlds, he realized that he could make a fortun
 He is extremely careful, does not conduct business with unverified people and severely punishes those who deceive him or surrender to the authorities. Appears more or less regularly every 2 weeks, usually has an assortment of used things and organs from developed worlds, but it can also bring along some really interesting things. He can also order things for delivery.</description>
 		<IconTextureInt>Traders/RogerEdmonson/face</IconTextureInt>
 		<FullTextureInt>Traders/RogerEdmonson/main</FullTextureInt>
+		<OfflineBackgroundInt>Traders/RogerEdmonson/RogerEdmonson_OfflineBack</OfflineBackgroundInt>
 		<IconOfflineTextureInt>Traders/RogerEdmonson/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>380</OverridePortraitWidth>
 		<Character>
@@ -555,6 +556,22 @@ He is extremely careful, does not conduct business with unverified people and se
 								<ThingDef>DarkNet_CyberneticBreastFrame</ThingDef>
 								<Commonality>0.35</Commonality>
 							</li>
+							<li>
+								<ThingDef>DarkNet_Cybernetic_Exoskeleton</ThingDef>
+								<Commonality>0.7</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_Cybernetic_Exoskeleton_Colossus</ThingDef>
+								<Commonality>0.6</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_Cybernetic_Exoskeleton_Eagles</ThingDef>
+								<Commonality>0.5</Commonality>
+							</li>
+							<li>
+								<ThingDef>DarkNet_Cybernetic_Exoskeleton_Determitanion</ThingDef>
+								<Commonality>0.35</Commonality>
+							</li>
 						</Items>
 					</li>
 				</OrderBodyparts>
@@ -574,6 +591,7 @@ Always available, has almost the entire range of assortment
 drugs and drugs, buys neutroamine and other ingredients for drugs, as well as luxury goods and everything necessary for a comfortable life.</description>
 		<IconTextureInt>Traders/Eisenberg/face</IconTextureInt>
 		<FullTextureInt>Traders/Eisenberg/main</FullTextureInt>
+		<OfflineBackgroundInt>Traders/Eisenberg/Eisenberg_OfflineBack</OfflineBackgroundInt>
 		<IconOfflineTextureInt>Traders/Eisenberg/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>450</OverridePortraitWidth>
 		<Character>
@@ -878,6 +896,7 @@ Calm, balanced, peaceful person. Always keeps his word and it is unlikely to exp
 Screen reader support included.</description>
 		<IconTextureInt>Traders/JohnCarver/face</IconTextureInt>
 		<FullTextureInt>Traders/JohnCarver/main</FullTextureInt>
+		<OfflineBackgroundInt>Traders/JohnCarver/JohnCarver_OfflineBack</OfflineBackgroundInt>
 		<IconOfflineTextureInt>Traders/JohnCarver/face_offline</IconOfflineTextureInt>
 		<Character>
 			<Cruelty>0.9</Cruelty>
@@ -1330,6 +1349,7 @@ Scientists say that for this he uses mechanites controlled by him, but few can s
 It is also known that simple things, so familiar to us, are too simple for him, and he prefers to create more technologically advanced things typical of the Archaeological Museum. To many, its “prices” may seem very unprofitable, and you have the right to agree with this - but AI Arhotek has everything you need, and in any quantities you need. And yes, do not try to deceive him - he always senses something was amiss, and if he turns out to be deceived, the reprisal will not take long.</description>
 		<IconTextureInt>Traders/Archotech_567H/face</IconTextureInt>
 		<FullTextureInt>Traders/Archotech_567H/main</FullTextureInt>
+		<OfflineBackgroundInt>Traders/Archotech_567H/Archotech_567H_OfflineBack</OfflineBackgroundInt>
 		<IconOfflineTextureInt>Traders/Archotech_567H/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>470</OverridePortraitWidth>
 		<Character>
@@ -1350,6 +1370,15 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 							<max>25000</max>
 						</ValueRange>
 						<Goods>
+
+							<li>
+								<Commonality>0.02</Commonality>
+								<ThingFilter>
+									<thingDefs>
+										<li>DarkNet_Network_Sin</li>
+									</thingDefs>
+								</ThingFilter>
+							</li>	
 							<li>
 								<Commonality>0.2</Commonality>
 								<ThingFilter>
@@ -1774,6 +1803,7 @@ However, no matter what happened to her, by some miracle, she managed to escape.
 Due to pressure from drug manufacturing corporations, Sly is forced to hide in DarkNet.</description>
 		<IconTextureInt>Traders/Sly/face</IconTextureInt>
 		<FullTextureInt>Traders/Sly/main</FullTextureInt>
+		<OfflineBackgroundInt>Traders/Sly/Sly_OfflineBack</OfflineBackgroundInt>
 		<IconOfflineTextureInt>Traders/Sly/face_offline</IconOfflineTextureInt>
 		<OverridePortraitWidth>450</OverridePortraitWidth>
 		<AvaliableGoods>

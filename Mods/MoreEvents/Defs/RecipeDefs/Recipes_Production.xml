@@ -464,7 +464,7 @@
 		<defName>SmeltingTungsten</defName>
 		<label>Get tungsten</label>
 		<description>Get tungsten ingots</description>
-		<jobString>Making coke coal</jobString>
+		<jobString>Making tungsten ingots</jobString>
 		<workAmount>15000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
