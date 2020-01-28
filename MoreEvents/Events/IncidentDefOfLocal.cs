@@ -38,14 +38,14 @@ namespace MoreEvents
         public static IncidentDef ClimateChaos;
 
         public static IncidentDef IonizedAtmosphere;
-        public static IncidentDef Earthquake;
+        public static IncidentDef RimOverhaul_Earthquake;
         public static IncidentDef SiegeCamp;
 
         public static IncidentDef AttackFriendlySettlement;
         public static IncidentDef Constellations;
 
         public static IncidentDef ConcantrationCamp;
-        public static IncidentDef SpaceBattle;
+        public static IncidentDef RimOverhaul_SpaceBattle;
 
         public static IncidentDef HighMutantPopulation;
     }

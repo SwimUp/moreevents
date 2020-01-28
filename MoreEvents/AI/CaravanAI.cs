@@ -80,6 +80,11 @@ namespace RimOverhaul.AI
             queueActions.Add(new CaravanAI_QueueAction(action, destinationTile));
         }
 
+        public override string GetInspectString()
+        {
+            return Faction.Name;
+        }
+
         public override void Tick()
         {
             for (int i = 0; i < AllComps.Count; i++)

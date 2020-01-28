@@ -73,45 +73,26 @@ namespace DarkNET
 
         public static bool BuyAndDropItem(SellableItemWithModif tradeItem, Map map, bool receiveLetter = true)
         {
-            int playerSilver = map.resourceCounter.Silver;
-            if (playerSilver >= tradeItem.MarketValue)
-            {
-                int remaining = tradeItem.MarketValue;
-                List<Thing> silver = map.listerThings.ThingsOfDef(ThingDefOf.Silver);
-                for (int i = silver.Count - 1; i >= 0; i--)
-                {
-                    Thing item = silver[i];
+            if (!TakeSilverFromPlayer(tradeItem.MarketValue, map))
+                return false;
 
-                    int num = Mathf.Min(remaining, item.stackCount);
-                    item.SplitOff(num).Destroy();
-                    remaining -= num;
-
-                    if (remaining == 0)
-                        break;
-                }
-
-                List<Thing> toTrade = new List<Thing>
+            List<Thing> toTrade = new List<Thing>
                 {
                     tradeItem.Item
                 };
 
-                IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
-                DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+            IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
+            DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
 
-                if (receiveLetter)
-                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+            if (receiveLetter)
+                Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
 
-                tradeItem.Item = null;
+            tradeItem.Item = null;
 
-                map.resourceCounter.UpdateResourceCounts();
+            map.resourceCounter.UpdateResourceCounts();
 
-                return true;
-            }
-            else
-            {
-                Messages.Message("CommOption_NonAgressionPact_NotEnoughSilver".Translate(tradeItem.MarketValue, playerSilver), MessageTypeDefOf.NeutralEvent, false);
-                return false;
-            }
+            return true;
+
         }
 
         public static bool BuyAndDropItem(SellableItemWithModif tradeItem, int count, Map map, bool receiveLetter = true)
@@ -121,89 +102,51 @@ namespace DarkNET
 
             int playerSilver = map.resourceCounter.Silver;
             int marketValue = tradeItem.MarketValue * count;
+
+            if (!TakeSilverFromPlayer(marketValue, map))
+                return false;
+
             bool removeItem = tradeItem.Item.stackCount <= count;
 
-            if (playerSilver >= marketValue)
-            {
-                int remaining = marketValue;
-                List<Thing> silver = map.listerThings.ThingsOfDef(ThingDefOf.Silver);
-                for (int i = silver.Count - 1; i >= 0; i--)
-                {
-                    Thing item = silver[i];
-
-                    int num = Mathf.Min(remaining, item.stackCount);
-                    item.SplitOff(num).Destroy();
-                    remaining -= num;
-
-                    if (remaining == 0)
-                        break;
-                }
-
-                Thing dropItem = tradeItem.Item.SplitOff(count);
-                List<Thing> toTrade = new List<Thing>
+            Thing dropItem = tradeItem.Item.SplitOff(count);
+            List<Thing> toTrade = new List<Thing>
                 {
                     dropItem
                 };
 
-                IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
-                DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+            IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
+            DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
 
-                if (receiveLetter)
-                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+            if (receiveLetter)
+                Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
 
-                if (removeItem)
-                    tradeItem.Item = null;
+            if (removeItem)
+                tradeItem.Item = null;
 
-                map.resourceCounter.UpdateResourceCounts();
+            map.resourceCounter.UpdateResourceCounts();
 
-                return true;
-            }
-            else
-            {
-                Messages.Message("CommOption_NonAgressionPact_NotEnoughSilver".Translate(marketValue, playerSilver), MessageTypeDefOf.NeutralEvent, false);
-                return false;
-            }
+            return true;
         }
 
         public static bool BuyAndDropItem(Thing tradeItem, int price, Map map, bool receiveLetter = true)
         {
-            int playerSilver = map.resourceCounter.Silver;
-            if (playerSilver >= price)
-            {
-                int remaining = price;
-                List<Thing> silver = map.listerThings.ThingsOfDef(ThingDefOf.Silver);
-                for (int i = silver.Count - 1; i >= 0; i--)
-                {
-                    Thing item = silver[i];
+            if (!TakeSilverFromPlayer(price, map))
+                return false;
 
-                    int num = Mathf.Min(remaining, item.stackCount);
-                    item.SplitOff(num).Destroy();
-                    remaining -= num;
-
-                    if (remaining == 0)
-                        break;
-                }
-
-                List<Thing> toTrade = new List<Thing>
+            List<Thing> toTrade = new List<Thing>
                 {
                     tradeItem
                 };
 
-                IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
-                DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
+            IntVec3 intVec = DropCellFinder.TradeDropSpot(map);
+            DropPodUtility.DropThingsNear(intVec, map, toTrade, 110, canInstaDropDuringInit: false, leaveSlag: false, canRoofPunch: false);
 
-                if(receiveLetter)
-                    Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
+            if (receiveLetter)
+                Find.LetterStack.ReceiveLetter("BuyAndDropItem_NotifyTitle".Translate(), "BuyAndDropItem_NotifyDesc".Translate(), LetterDefOf.PositiveEvent, toTrade);
 
-                map.resourceCounter.UpdateResourceCounts();
+            map.resourceCounter.UpdateResourceCounts();
 
-                return true;
-            }
-            else
-            {
-                Messages.Message("CommOption_NonAgressionPact_NotEnoughSilver".Translate(tradeItem.MarketValue, playerSilver), MessageTypeDefOf.NeutralEvent, false);
-                return false;
-            }
+            return true;
         }
 
         public static bool TakeSilverFromPlayer(int count, Map map)

@@ -32,7 +32,7 @@ namespace MoreEvents.Events
             {
                 var faller = SkyfallerPlusMaker.SpawnSkyfaller(ThingDefOfLocal.MeteoriteIncomingPlus, pos, map, () => MeteorImpact(pos, map));
 
-                SendStandardLetter(faller);
+                SendStandardLetter(new LookTargets(pos, map));
 
                 return true;
             }

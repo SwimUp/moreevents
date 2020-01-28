@@ -62,10 +62,7 @@ namespace MoreEvents.Events.SiegeCamp
 
         private Faction GetEnemyFaction()
         {
-            Faction f = Find.FactionManager.RandomEnemyFaction();
-
-            if (f == null)
-                return null;
+            Faction f = Find.FactionManager.RandomEnemyFaction(minTechLevel: TechLevel.Industrial);
 
             return f;
         }

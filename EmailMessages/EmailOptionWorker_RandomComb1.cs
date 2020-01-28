@@ -39,7 +39,8 @@ namespace EmailMessages
 
         public override void DoAction(EmailMessage message, EmailBox box, Pawn speaker)
         {
-            switch(action)
+            IncidentDef def = null;
+            switch (action)
             {
                 case 0:
                     {
@@ -48,19 +49,19 @@ namespace EmailMessages
                     }
                 case 1:
                     {
-                        IncidentDef def = IncidentDefOfLocal.PsychicEmanatorShipPartCrash;
+                        def = IncidentDefOfLocal.PsychicEmanatorShipPartCrash;
                         def.Worker.TryExecute(StorytellerUtility.DefaultParmsNow(def.category, Find.AnyPlayerHomeMap));
                         break;
                     }
                 case 2:
                     {
-                        IncidentDef def = IncidentDefOfLocal.Quest_ItemStash;
+                        def = IncidentDefOfLocal.Quest_ItemStash;
                         def.Worker.TryExecute(StorytellerUtility.DefaultParmsNow(def.category, Find.World));
                         break;
                     }
                 case 3:
                     {
-                        IncidentDef def = IncidentDefOfLocal.ResourcePodCrash;
+                        def = IncidentDefOfLocal.ResourcePodCrash;
                         def.Worker.TryExecute(StorytellerUtility.DefaultParmsNow(def.category, Find.AnyPlayerHomeMap));
                         break;
                     }

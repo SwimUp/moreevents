@@ -36,11 +36,21 @@ namespace QuestRim.Wars
 
             if(!objects.MapParents.Any(x => war.AssaultFactions.Contains(x.Faction)))
             {
+                foreach(var attacker in war.AssaultFactions)
+                {
+                    WarUtility.DeleteCaravansAI(attacker.Faction);
+                }
+
                 war.EndWar(Winner.Defenders);
                 return;
             }
             if (!objects.MapParents.Any(x => war.DefendingFactions.Contains(x.Faction)))
             {
+                foreach (var defender in war.DefendingFactions)
+                {
+                    WarUtility.DeleteCaravansAI(defender.Faction);
+                }
+
                 war.EndWar(Winner.Assaulters);
                 return;
             }
@@ -48,6 +58,8 @@ namespace QuestRim.Wars
 
         public override void EndWar(Winner winner)
         {
+            
+
             base.EndWar(winner);
 
             if (WarUtility.WarWithPlayer(war))

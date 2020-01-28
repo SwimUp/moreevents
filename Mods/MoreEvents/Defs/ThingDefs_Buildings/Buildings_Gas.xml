@@ -108,7 +108,7 @@
 		</graphicData>
 		<altitudeLayer>Floor</altitudeLayer>
 		<rotatable>false</rotatable>
-		<destroyable>false</destroyable>
+		<destroyable>true</destroyable>
 		<useHitPoints>false</useHitPoints>
 		<tickerType>Normal</tickerType>
 		<selectable>true</selectable>

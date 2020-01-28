@@ -17,6 +17,8 @@ namespace MoreEvents.Events.SiegeCamp
 
         private SiegeCampSiteComp comp;
 
+        private FactionRelation relation;
+
         public Map PlayerSiegeMap
         {
             get
@@ -43,6 +45,18 @@ namespace MoreEvents.Events.SiegeCamp
             comp = this.GetComponent<SiegeCampSiteComp>();
 
             caravanAction = new CaravanVisitAction_SiegeCamp(this);
+
+            relation = Faction.RelationWith(Faction.OfPlayer);
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+
+            if(relation != null && relation.kind != FactionRelationKind.Hostile)
+            {
+                Find.WorldObjects.Remove(this);
+            }
         }
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)

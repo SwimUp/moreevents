@@ -35,6 +35,15 @@ namespace QuestRim
             (x.AttackedAlliance != null && x.AttackedAlliance == alliance) || (x.DefendAlliance != null && x.DefendAlliance == alliance));
         }
 
+        public static void DeleteCaravansAI(Faction forFaction)
+        {
+            List<Caravan> caravans = Find.WorldObjects.Caravans.Where(x => x.Faction == forFaction).ToList();
+            foreach(var caravan in caravans)
+            {
+                Find.WorldObjects.Remove(caravan);
+            }
+        }
+
         public static War FirstWarWith(this FactionInteraction interaction, FactionInteraction other)
         {
             var otherAlliance = other.Alliance;

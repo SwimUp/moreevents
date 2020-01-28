@@ -1,4 +1,5 @@
-﻿using RimWorld.Planet;
+﻿using RimOverhaul.AI;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,10 +31,13 @@ namespace RandomPlaces
             {
                 foreach (var caravan in Find.WorldObjects.Caravans)
                 {
-                    if(handler.Triggers.ContainsKey(caravan.Tile))
+                    if (!(caravan is CaravanAI))
                     {
-                        handler.Triggers[caravan.Tile].DoAction(caravan);
-                        handler.Triggers.Remove(caravan.Tile);
+                        if (handler.Triggers.ContainsKey(caravan.Tile))
+                        {
+                            handler.Triggers[caravan.Tile].DoAction(caravan);
+                            handler.Triggers.Remove(caravan.Tile);
+                        }
                     }
                 }
             }
