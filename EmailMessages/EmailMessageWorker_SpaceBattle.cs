@@ -9,6 +9,6 @@ namespace EmailMessages
 {
     public class EmailMessageWorker_SpaceBattle : EmailMessageWorker_CheckIncident
     {
-        public override IncidentDef IncidentDef => IncidentDefOfLocal.SpaceBattle;
+        public override IncidentDef IncidentDef => IncidentDefOfLocal.RimOverhaul_SpaceBattle;
     }
 }
