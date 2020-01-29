@@ -463,6 +463,7 @@
     <Compile Include="Weathers\WeatherOverlay_PsychoGas.cs" />
     <Compile Include="Weathers\WeatherOverlay_Sandstorm.cs" />
     <Compile Include="Weathers\WeatherOverlay_HardFog.cs" />
+    <Compile Include="XmlUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Things\Effects\" />

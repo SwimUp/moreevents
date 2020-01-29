@@ -25,6 +25,8 @@ namespace QuestRim
 
         public QuestsManager()
         {
+            communications = null;
+            Building_Geoscape.PlayerHasGeoscape = false;
         }
 
         public override void GameComponentTick()

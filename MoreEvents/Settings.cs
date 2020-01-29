@@ -1,10 +1,13 @@
 ﻿using MoreEvents.Events.ShipCrash;
+using RimOverhaul;
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Xml.Serialization;
 using UnityEngine;
 using Verse;
 
@@ -37,19 +40,29 @@ namespace MoreEvents
         }
     }
 
+    [XmlRoot("EventSettings")]
     public class EventSettings : IExposable
     {
-        public Dictionary<string, Parameter> Parameters = new Dictionary<string, Parameter>();
-
+        [XmlElement("key")]
         public string Key;
 
+        [XmlElement("parameters")]
+        public Parameter[] Params;
+
+        [XmlIgnore]
+        public Dictionary<string, Parameter> Parameters = new Dictionary<string, Parameter>();
+
+        [XmlIgnore]
         public string Name => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).LabelCap : $"{Key}_Title".Translate();
 
+        [XmlIgnore]
         public string Description => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).letterText : $"{Key}_Desc".Translate();
 
-        public bool Active = true;
-
+        [XmlElement("useCustomLabels")]
         public bool UseCustomLabels = false;
+
+        [XmlIgnore]
+        public bool Active = true;
 
         public EventSettings()
         {
@@ -68,15 +81,24 @@ namespace MoreEvents
             Scribe_Values.Look(ref UseCustomLabels, "UseCustomLabels");
             Scribe_Collections.Look(ref Parameters, "Parameters", LookMode.Value, LookMode.Deep);
         }
+
+        public void FinalizeSettings()
+        {
+            if (Params != null)
+            {
+                Parameters = Params.ToDictionary(k => k.Param);
+            }
+        }
     }
 
     public class Settings : ModSettings
     {
         private static Vector2 scroll = Vector2.zero;
 
-        private static int totalSettings = 56;
+        public static string SettingsFileName => "settings.xml";
 
-        public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
+        #region 1
+        /*public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
           {
                 "General", new EventSettings("General")
@@ -444,21 +466,15 @@ namespace MoreEvents
                     Active = true
             }
             }
-        }; 
+        };
+        */
+        #endregion
+        public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>();
 
         private static int length = 0;
 
-        static Settings()
-        {
-            length = EventsSettings.Count * 60;
-            foreach (var setting in EventsSettings)
-            {
-                foreach(var param in setting.Value.Parameters)
-                {
-                    length += 30;
-                }
-            }
-        }
+        public string SettingsPath => Path.Combine(Path.Combine(GenFilePaths.CoreModsFolderPath, "RimOverhaul"), SettingsFileName);
+
 
         public static void DoSettingsWindowContents(Rect inRect)
         {
@@ -504,385 +520,44 @@ namespace MoreEvents
 
             Scribe_Collections.Look(ref EventsSettings, "EventsSettings", LookMode.Value, LookMode.Deep);
 
-            if (EventsSettings.Count != totalSettings)
-            {
-                ReloadSettings();
-            }
+            CheckSettings();
         }
 
-        private void ReloadSettings()
+        private void CheckSettings()
         {
-            Log.Message($"New settings found, reload");
+            List<EventSettings> fileSettings = XmlUtility.Deserialize<List<EventSettings>>(SettingsPath);
 
-            EventsSettings = new Dictionary<string, EventSettings>()
-          {
-          {
-                "General", new EventSettings("General")
-                {
-                    UseCustomLabels = true,
-                    Active = true,
-                    Parameters = new Dictionary<string, Parameter>()
-                    {
-                        {"UseNewMapSizes", new Parameter("UseNewMapSizes", "1") },
-                    }
-                }
-            },
+            if (fileSettings == null)
             {
-                "ShipCrash", new EventSettings("ShipCrash")
-                {
-                    Active = true,
-                    Parameters = new Dictionary<string, Parameter>()
-                    {
-                        {"MinParts", new Parameter("MinParts", "4") },
-                        {"MaxParts", new Parameter("MaxParts", "10") },
-                        {"ShipCargo_Mining_MinSupply", new Parameter("ShipCargo_Mining_MinSupply", "5") },
-                        {"ShipCargo_Mining_MaxSupply", new Parameter("ShipCargo_Mining_MaxSupply", "19") },
-                        {"ShipCargo_Food_MinSupply", new Parameter("ShipCargo_Food_MinSupply", "5") },
-                        {"ShipCargo_Food_MaxSupply", new Parameter("ShipCargo_Food_MaxSupply", "19") },
-                        {"ShipCargo_Complex_MinSupply", new Parameter("ShipCargo_Complex_MinSupply", "5") },
-                        {"ShipCargo_Complex_MaxSupply", new Parameter("ShipCargo_Complex_MaxSupply", "19") },
-                        {"ShipCargo_Armory_MinSupply", new Parameter("ShipCargo_Armory_MinSupply", "5") },
-                        {"ShipCargo_Armory_MaxSupply", new Parameter("ShipCargo_Armory_MaxSupply", "12") },
-                        {"ShipCargo_Living_MinSupply", new Parameter("ShipCargo_Living_MinSupply", "1") },
-                        {"ShipCargo_Living_MaxSupply", new Parameter("ShipCargo_Living_MaxSupply", "5") }
-                    }
-                }
-            },
-            {
-                "Supernova", new EventSettings("Supernova")
-                {
-                    Active = true
-                }
-            },
-            {
-                "SuperHeatWave", new EventSettings("SuperHeatWave")
-                {
-                    Active = true
-                }
-            },
-            {
-                "MechanoidPortal", new EventSettings("MechanoidPortal")
-                {
-                    Active = true
-                }
-            },
-            {
-                "Disease_NeurofibromatousWorms", new EventSettings("Disease_NeurofibromatousWorms")
-                {
-                    Active = true
-                }
-            },
-            {
-                "Disease_Fibrodysplasia", new EventSettings("Disease_Fibrodysplasia")
-                {
-                    Active = true
-                }
-            },
-            {
-                "DestroyRoad", new EventSettings("DestroyRoad")
-                {
-                    Active = true
-                }
-            },
-            {
-                "BoulderMassHit", new EventSettings("BoulderMassHit")
-                {
-                    Active = true
-                }
-            },
-            {
-                "BeetleRush", new EventSettings("BeetleRush")
-                {
-                    Active = true
-                }
-            },
-            {
-                "RadiationFon", new EventSettings("RadiationFon")
-                {
-                    Active = true
-                }
-            },
-            {
-                "IceStorm", new EventSettings("IceStorm")
-                {
-                    Active = true
-                }
-            },
-            {
-                "HeavyAir", new EventSettings("HeavyAir")
-                {
-                    Active = true
-                }
-            },
-            {
-            "LeanAtmosphere", new EventSettings("LeanAtmosphere")
-                {
-                    Active = true
-                }
-            },
-            {
-            "NoSun", new EventSettings("NoSun")
-                {
-                    Active = true
-                }
-            },
-            {
-            "SandStorm", new EventSettings("SandStorm")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Endlessday", new EventSettings("Endlessday")
-                {
-                    Active = true
-                }
-            },
-            {
-            "DenseAtmosphere", new EventSettings("DenseAtmosphere")
-                {
-                    Active = true,
-                    Parameters = new Dictionary<string, Parameter>()
-                    {
-                        {"DoMapChange", new Parameter("DoMapChange", "1") },
-                    }
-                }
-            },
-            {
-            "ClimateBomb", new EventSettings("ClimateBomb")
-                {
-                    Active = true
-                }
-            },
-            {
-            "IonizedAtmosphere", new EventSettings("IonizedAtmosphere")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Earthquake", new EventSettings("Earthquake")
-                {
-                    Active = true
-                }
-            },
-            {
-            "SiegeCamp", new EventSettings("SiegeCamp")
-                {
-                    Active = true
-                }
-            },
-            {
-            "AttackFriendlySettlement", new EventSettings("AttackFriendlySettlement")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Constellations", new EventSettings("Constellations")
-                {
-                    Active = true,
-                    Parameters = new Dictionary<string, Parameter>()
-                    {
-                        {"EnablePositive", new Parameter("EnablePositive", "1") },
-                        {"EnableNegative", new Parameter("EnableNegative", "1") }
-                    }
-                }
-            },
-            {
-            "MineralMeteorite", new EventSettings("MineralMeteorite")
-                {
-                    Active = true
-                }
-            },
-            {
-            "DropAnimalInsanity", new EventSettings("DropAnimalInsanity")
-                {
-                    Active = true
-                }
-            },
-            {
-            "HungryCannibalRaid", new EventSettings("HungryCannibalRaid")
-                {
-                    Active = true
-                }
-            },
-            {
-            "DoomsdayUltimatum", new EventSettings("DoomsdayUltimatum")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Arsonists", new EventSettings("Arsonists")
-                {
-                    Active = true
-                }
-            },
-            {
-            "UnifiedRaid", new EventSettings("UnifiedRaid")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Quest_ResourceHelp", new EventSettings("Quest_ResourceHelp")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Quest_BuildNewBase", new EventSettings("Quest_BuildNewBase")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Quest_MissingPeople", new EventSettings("Quest_MissingPeople")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Psychogas", new EventSettings("Psychogas")
-                {
-                    Active = true
-                }
-            },
-            {
-            "Disease_ZeroMechanites", new EventSettings("Disease_ZeroMechanites")
-                {
-                    Active = true
-                }
-            },
-            {
-            "SummerSolstice", new EventSettings("SummerSolstice")
-                {
-                    Active = true
+                Log.Error($"Settings file not found. Reinstall mod. Path: {SettingsPath}");
+                return;
             }
-            },
+
+            if (EventsSettings == null)
             {
-            "Pocahontas", new EventSettings("Pocahontas")
+                EventsSettings = new Dictionary<string, EventSettings>();
+            }
+
+            foreach (var fSetting in fileSettings)
+            {
+                if (!EventsSettings.ContainsKey(fSetting.Key))
                 {
-                    Active = true
+                    Log.Message($"New settings {fSetting.Key} found, added");
+
+                    fSetting.FinalizeSettings();
+
+                    EventsSettings.Add(fSetting.Key, fSetting);
+                }
             }
-            },
+
+            length = EventsSettings.Count * 60;
+            foreach (var setting in EventsSettings)
             {
-            "SeaAir", new EventSettings("SeaAir")
+                foreach (var param in setting.Value.Parameters)
                 {
-                    Active = true
+                    length += 30;
+                }
             }
-            },
-            {
-            "MountainAir", new EventSettings("MountainAir")
-                {
-                    Active = true
-            }
-            },
-            {
-            "Quest_KillLeader", new EventSettings("Quest_KillLeader")
-            {
-                    Active = true
-            }
-            },
-            {
-            "Quest_SuppressionRebellion", new EventSettings("Quest_SuppressionRebellion")
-            {
-                    Active = true
-            }
-            },
-            {
-            "SpaceBattle", new EventSettings("SpaceBattle")
-            {
-                    Active = true
-            }
-            },
-            {
-            "Quest_KillOrder", new EventSettings("Quest_KillOrder")
-            {
-                    Active = true
-            }
-            },
-            {
-            "ConcantrationCamp", new EventSettings("ConcantrationCamp")
-            {
-                    Active = true
-            }
-            },
-            {
-            "TunnelRats", new EventSettings("TunnelRats")
-            {
-                    Active = true
-            }
-            },
-            {
-            "RaidEnemyWithAnimals", new EventSettings("RaidEnemyWithAnimals")
-            {
-                    Active = true,
-                    UseCustomLabels = true
-            }
-            },
-            {
-            "HighMutantPopulation", new EventSettings("HighMutantPopulation")
-            {
-                    Active = true
-            }
-            },
-            {
-            "Fair", new EventSettings("Fair")
-            {
-                    Active = true
-            }
-            },
-            {
-            "ExplosiveFever", new EventSettings("ExplosiveFever")
-            {
-                    Active = true
-            }
-            },
-            {
-            "GlacialPeriod", new EventSettings("GlacialPeriod")
-            {
-                    Active = true
-            }
-            },
-            {
-            "ActiveStar", new EventSettings("ActiveStar")
-            {
-                    Active = true
-            }
-            },
-            {
-            "Competitions", new EventSettings("Competitions")
-            {
-                    Active = true
-            }
-            },
-            {
-            "MassBurial", new EventSettings("MassBurial")
-            {
-                    Active = true
-            }
-            },
-            {
-            "PlaceBattle", new EventSettings("PlaceBattle")
-            {
-                    Active = true
-            }
-            },
-            {
-            "AmbushTwoFactions", new EventSettings("AmbushTwoFactions")
-            {
-                    Active = true
-            }
-            },
-            {
-            "PrisonShipAccident", new EventSettings("PrisonShipAccident")
-            {
-                    Active = true
-            }
-            }
-            };
         }
     }
 }

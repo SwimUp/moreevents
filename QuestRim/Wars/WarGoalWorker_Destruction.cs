@@ -58,8 +58,6 @@ namespace QuestRim.Wars
 
         public override void EndWar(Winner winner)
         {
-            
-
             base.EndWar(winner);
 
             if (WarUtility.WarWithPlayer(war))
