@@ -64,6 +64,9 @@ namespace MoreEvents
         [XmlIgnore]
         public bool Active = true;
 
+        [XmlElement("requiredModule")]
+        public string RequiredModule;
+
         public EventSettings()
         {
 
@@ -473,8 +476,11 @@ namespace MoreEvents
 
         private static int length = 0;
 
-        public string SettingsPath => Path.Combine(Path.Combine(GenFilePaths.CoreModsFolderPath, "RimOverhaul"), SettingsFileName);
+        public string SettingsPath => Path.Combine(RootDir, SettingsFileName);
 
+        public static string RootDir;
+
+        private List<EventSettings> fileSettings;
 
         public static void DoSettingsWindowContents(Rect inRect)
         {
@@ -504,7 +510,7 @@ namespace MoreEvents
                     }
 
                     listing_Standard.GapLine();
-                }catch(Exception ex)
+                }catch
                 {
                     Log.Message($"Error --> {setting.Key}");
                 }
@@ -523,39 +529,62 @@ namespace MoreEvents
             CheckSettings();
         }
 
-        private void CheckSettings()
+        public void CheckSettings()
         {
-            List<EventSettings> fileSettings = XmlUtility.Deserialize<List<EventSettings>>(SettingsPath);
-
             if (fileSettings == null)
             {
-                Log.Error($"Settings file not found. Reinstall mod. Path: {SettingsPath}");
-                return;
-            }
-
-            if (EventsSettings == null)
-            {
-                EventsSettings = new Dictionary<string, EventSettings>();
-            }
-
-            foreach (var fSetting in fileSettings)
-            {
-                if (!EventsSettings.ContainsKey(fSetting.Key))
+                try
                 {
-                    Log.Message($"New settings {fSetting.Key} found, added");
-
-                    fSetting.FinalizeSettings();
-
-                    EventsSettings.Add(fSetting.Key, fSetting);
+                    fileSettings = XmlUtility.Deserialize<List<EventSettings>>(SettingsPath);
+                }catch(Exception ex)
+                {
+                    Log.Error("Error while deserialize settings file " + ex);
                 }
             }
 
-            length = EventsSettings.Count * 60;
-            foreach (var setting in EventsSettings)
+            bool CanHoldSetting(EventSettings fSetting)
             {
-                foreach (var param in setting.Value.Parameters)
+                return !(!string.IsNullOrEmpty(fSetting.RequiredModule) && ModulesHandler.GetModule(fSetting.RequiredModule) == null);
+            }
+
+            if (fileSettings != null)
+            {
+                if (EventsSettings == null)
                 {
-                    length += 30;
+                    EventsSettings = new Dictionary<string, EventSettings>();
+                }
+
+                foreach (var fSetting in fileSettings)
+                {
+                    bool canHoldSetting = CanHoldSetting(fSetting);
+                    if (!EventsSettings.ContainsKey(fSetting.Key))
+                    {
+                        if (!canHoldSetting)
+                            continue;
+
+                        Log.Message($"New settings {fSetting.Key} found, added");
+
+                        fSetting.FinalizeSettings();
+
+                        EventsSettings.Add(fSetting.Key, fSetting);
+                    }
+                    else
+                    {
+                        if (!canHoldSetting)
+                        {
+                            EventsSettings.Remove(fSetting.Key);
+                            Log.Message($"Settings {fSetting.Key} will be deleted (the required module is missing)");
+                        }
+                    }
+                }
+
+                length = EventsSettings.Count * 60;
+                foreach (var setting in EventsSettings)
+                {
+                    foreach (var param in setting.Value.Parameters)
+                    {
+                        length += 30;
+                    }
                 }
             }
         }

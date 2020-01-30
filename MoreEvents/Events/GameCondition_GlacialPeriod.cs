@@ -62,8 +62,6 @@ namespace MoreEvents.Events
                 return;
             }
 
-            Log.Message("CHANGE");
-
             int upBorder = Mathf.Min((int)curveTilesCountForPlanetCoverage.Evaluate(Find.World.PlanetCoverage), RemainingTiles.Count);
             int toChange = Rand.Range(1, upBorder);
             for (int i = RemainingTiles.Count - 1, j = 0; j < toChange; j++, i--)

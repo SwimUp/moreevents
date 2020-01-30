@@ -11,7 +11,7 @@ namespace MoreEvents
     public static class ModulesHandler
     {
         public static Dictionary<Type, RimOverhaulModule> Modules;
-        public static List<RimOverhaulModule> ModulesList => Modules.Values.ToList();
+        public static List<RimOverhaulModule> ModulesList => Modules?.Values.ToList();
 
         public static void TryInjectModules()
         {
@@ -42,9 +42,12 @@ namespace MoreEvents
 
         public static RimOverhaulModule GetModule(string moduleName)
         {
+            if (ModulesList == null)
+                return null;
+
             foreach(var module in ModulesList)
             {
-                if (module.ModuleName == "moduleName")
+                if (module.ModuleName == moduleName)
                     return module;
             }
 

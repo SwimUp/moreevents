@@ -9,7 +9,7 @@
 		<letterText>Super nova explosion</letterText>
 		<letterDef>PositiveEvent</letterDef>
 		<targetTags>
-			<li>Map_PlayerHome</li>
+			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_SuperNova</workerClass>
 		<category>Misc</category>
@@ -26,7 +26,7 @@
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<workerClass>MoreEvents.Events.IncidentWorker_SuperHeatWave</workerClass>
 		<gameCondition>SuperHeatWave</gameCondition>
 		<letterLabel>Super hot</letterLabel>
@@ -53,7 +53,7 @@
 		<letterText>Meteor shower, all in the shelter!</letterText>
 		<letterDef>NegativeEvent</letterDef>
 		<baseChance>1.8</baseChance>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<minRefireDays>40</minRefireDays>
 		<earliestDay>60</earliestDay>
 	</IncidentDef>
@@ -109,7 +109,7 @@
 	<IncidentDef>
 		<defName>RadiationFon</defName>
 		<label>Increased radiation background</label>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<targetTags>
 			<li>World</li>
 		</targetTags>
@@ -234,14 +234,14 @@
 	<IncidentDef>
 		<defName>MechanoidPortal</defName>
 		<label>Mechanoid portal</label>
-		<category>Misc</category>
+		<category>ThreatBig</category>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_MechanoidPortalStart</workerClass>
 		<letterLabel>Mechanoid portal!</letterLabel>
 		<letterText>A mysterious fragment has fallen from the sky, which generates a teleport from this appearance of a mechano-weapon. The portal itself is not destroyed, but if you break the generator, then the portal will disappear.</letterText>
-		<letterDef>NegativeEvent</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<baseChance>1.5</baseChance>
 		<earliestDay>170</earliestDay>
 		<minRefireDays>150</minRefireDays>
@@ -341,7 +341,7 @@
 			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.ClimateBomb.IncidentWorker_ClimateBomb</workerClass>
-		<category>Misc</category>
+		<category>ThreatBig</category>
 		<minRefireDays>370</minRefireDays>
 		<baseChance>1.0</baseChance>
 		<earliestDay>100</earliestDay>
@@ -429,7 +429,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.SiegeCamp.IncidentWorker_SiegeCamp</workerClass>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<minRefireDays>140</minRefireDays>
 		<baseChance>1.2</baseChance>
 		<earliestDay>200</earliestDay>
@@ -501,7 +501,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_DropInsaneAnimals</workerClass>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<minRefireDays>90</minRefireDays>
 		<baseChance>1.0</baseChance>
 		<earliestDay>70</earliestDay>
@@ -519,7 +519,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_HungryCannibalsRaid</workerClass>
-		<category>Misc</category>
+		<category>RaidBeacon</category>
 		<minRefireDays>55</minRefireDays>
 		<baseChance>4</baseChance>
 		<earliestDay>55</earliestDay>
@@ -538,7 +538,7 @@ You can start collecting silver together with other factions or organize an assa
 			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.DoomsdayUltimatum.IncidentWorker_DoomsdayUltimatum</workerClass>
-		<category>Misc</category>
+		<category>ThreatBig</category>
 		<minRefireDays>400</minRefireDays>
 		<baseChance>0.8</baseChance>
 		<earliestDay>250</earliestDay>
@@ -556,7 +556,7 @@ You can start collecting silver together with other factions or organize an assa
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_Arsonists</workerClass>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<minRefireDays>50</minRefireDays>
 		<baseChance>2.3</baseChance>
 		<earliestDay>60</earliestDay>
@@ -580,7 +580,7 @@ You can start collecting silver together with other factions or organize an assa
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_UnifiedRaid</workerClass>
-		<category>Misc</category>
+		<category>RaidBeacon</category>
 		<minRefireDays>35</minRefireDays>
 		<baseChance>1.7</baseChance>
 		<earliestDay>80</earliestDay>
@@ -932,7 +932,7 @@ You can see event in geocape.
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>RimOverhaul.Events.IncidentWorker_TunnelRats</workerClass>
-		<category>Misc</category>
+		<category>ThreatSmall</category>
 		<minRefireDays>99</minRefireDays>
 		<baseChance>2.8</baseChance>
 		<earliestDay>80</earliestDay>

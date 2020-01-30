@@ -21,12 +21,16 @@ namespace MoreEvents
 
         public MoreEventsMod(ModContentPack content) : base(content)
         {
+            Settings.RootDir = content.RootDir;
+            ModulesHandler.TryInjectModules();
+
             Settings = GetSettings<Settings>();
 
             harmonyInstance = HarmonyInstance.Create("net.funkyshit.moreeventsmod");
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
-            ModulesHandler.TryInjectModules();
+            if(!Settings.EventsSettings.ContainsKey("General"))
+                Settings.CheckSettings();
 
             int useNewMapSizes = int.Parse(GeneralSettings.Parameters["UseNewMapSizes"].Value);
             if (useNewMapSizes == 1)

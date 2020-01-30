@@ -16,12 +16,12 @@ namespace MoreEvents.Events
             0.08f,
             0.03f
         };
-        private Action<Map>[] _events = new Action<Map>[4]
+        private Action<IncidentParms>[] _events = new Action<IncidentParms>[4]
         {
-            new Action<Map>(x => SupernovaLow(x)),
-            new Action<Map>(x =>  SupernovaMedium(x)),
-            new Action<Map>(x =>  SupernovaHigh(x)),
-            new Action<Map>(x =>  SupernovaUltra(x))
+            new Action<IncidentParms>(x => SupernovaLow(x)),
+            new Action<IncidentParms>(x => SupernovaMedium(x)),
+            new Action<IncidentParms>(x => SupernovaHigh(x)),
+            new Action<IncidentParms>(x => SupernovaUltra(x))
         };
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -29,32 +29,33 @@ namespace MoreEvents.Events
             if (!settings.Active)
                 return false;
 
-            Map map = (Map)parms.target;
-
             while(true)
             {
                 int num = Rand.Range(0, 4);
 
                 if(Rand.Chance(_eventChance[num]))
                 {
-                    _events[num].Invoke(map);
+                    _events[num].Invoke(parms);
                     break;
                 }
             }
 
             return true;
         }
-        private static void SupernovaLow(Map map)
+        private static void SupernovaLow(IncidentParms parms)
         {
-            IEnumerable<Pawn> pawns = map.mapPawns.FreeColonists;
-
-            foreach (Pawn p in pawns)
+            foreach (var map in Find.Maps)
             {
-                p.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfLocal.AwesomeSight, p);
+                IEnumerable<Pawn> pawns = map.mapPawns.FreeColonists;
+
+                foreach (Pawn p in pawns)
+                {
+                    p.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfLocal.AwesomeSight, p);
+                }
             }
             Find.LetterStack.ReceiveLetter(Translator.Translate("Supernova_label"), Translator.Translate("SupernovaExp_low"), LetterDefOf.NeutralEvent);
         }
-        private static void SupernovaMedium(Map map)
+        private static void SupernovaMedium(IncidentParms parms)
         {
             GameConditionDef[] conditions = new GameConditionDef[2]
             {
@@ -69,12 +70,12 @@ namespace MoreEvents.Events
 
             for(int i = 0; i < conditions.Length; i++)
             {
-                map.gameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(conditions[i], durations[i]));
+                parms.target.GameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(conditions[i], durations[i]));
             }
 
             Find.LetterStack.ReceiveLetter(Translator.Translate("Supernova_label"), Translator.Translate("SupernovaExp_medium"), LetterDefOf.NeutralEvent);
         }
-        private static void SupernovaHigh(Map map)
+        private static void SupernovaHigh(IncidentParms parms)
         {
             GameConditionDef[] conditions = new GameConditionDef[4]
             {
@@ -94,11 +95,11 @@ namespace MoreEvents.Events
 
             for (int i = 0; i < conditions.Length; i++)
             {
-                map.gameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(conditions[i], durations[i]));
+                parms.target.GameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(conditions[i], durations[i]));
             }
             Find.LetterStack.ReceiveLetter(Translator.Translate("Supernova_label"), Translator.Translate("SupernovaExp_high"), LetterDefOf.NegativeEvent);
         }
-        private static void SupernovaUltra(Map map)
+        private static void SupernovaUltra(IncidentParms parms)
         {
             GameConditionDef[] conditions = new GameConditionDef[5]
             {
@@ -120,7 +121,7 @@ namespace MoreEvents.Events
 
             for (int i = 0; i < conditions.Length; i++)
             {
-                map.gameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(conditions[i], durations[i]));
+                parms.target.GameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(conditions[i], durations[i]));
             }
             Find.LetterStack.ReceiveLetter(Translator.Translate("Supernova_label"), Translator.Translate("SupernovaExp_ultra"), LetterDefOf.NegativeEvent);
         }
