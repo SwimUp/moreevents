@@ -401,7 +401,7 @@
 		<letterLabel>Earthquake!</letterLabel>
 		<letterText>An earthquake began, everyone in the shelter!</letterText>
 		<letterDef>NegativeEvent</letterDef>
-		<gameCondition>Earthquake</gameCondition>
+		<gameCondition>RimOverhaul_Earthquake</gameCondition>
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
@@ -861,7 +861,7 @@ You can contact them via geocape.
 			<li>World</li>
 		</targetTags>
 		<workerClass>MoreEvents.IncidentWorker_MakeGameCondition</workerClass>
-		<gameCondition>SpaceBattle</gameCondition>
+		<gameCondition>RimOverhaul_SpaceBattle</gameCondition>
 		<letterLabel>Space battle</letterLabel>
 		<letterText>Two unknown factions staged a space battle near your planet. During this time, the spaceships will fall on the planet, in which there may be something interesting, as well as
 overshoot shells may fall.</letterText>

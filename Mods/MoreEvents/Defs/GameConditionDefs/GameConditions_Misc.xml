@@ -136,7 +136,7 @@
 	</GameConditionDef>
 
 	<GameConditionDef>
-		<defName>Earthquake</defName>
+		<defName>RimOverhaul_Earthquake</defName>
 		<conditionClass>MoreEvents.Events.GameCondition_Earthquake</conditionClass>
 		<label>Earthquake</label>
 		<description>An earthquake began, everyone in the shelter!</description>
@@ -163,7 +163,7 @@
 	</GameConditionDef>
 
 	<GameConditionDef>
-		<defName>SpaceBattle</defName>
+		<defName>RimOverhaul_SpaceBattle</defName>
 		<conditionClass>RimOverhaul.Events.GameCondition_SpaceBattle</conditionClass>
 		<label>Space battle</label>
 		<description>Not far from your planet, two unknown factions staged a space battle. During this time, spaceships and projectiles may collapse on the planet.</description>

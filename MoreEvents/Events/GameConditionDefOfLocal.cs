@@ -20,7 +20,7 @@ namespace MoreEvents
         public static GameConditionDef SandStorm;
         public static GameConditionDef ClimateChaos;
         public static GameConditionDef IonizedAtmosphere;
-        public static GameConditionDef Earthquake;
+        public static GameConditionDef RimOverhaul_Earthquake;
 
         //Game events
         public static GameConditionDef Flashstorm;
