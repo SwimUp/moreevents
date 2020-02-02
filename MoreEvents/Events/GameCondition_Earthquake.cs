@@ -45,7 +45,7 @@ namespace MoreEvents.Events
         private int cycle => 400;
         private int tremors = 0;
 
-        private EventSettings settings => Settings.EventsSettings["Earthquake"];
+        private EventSettings settings => Settings.EventsSettings["RimOverhaul_Earthquake"];
 
         public override void Init()
         {

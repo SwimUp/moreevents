@@ -10,7 +10,7 @@ namespace MoreEvents.Events
 {
     public class IncidentWorker_Earthquake : IncidentWorker_MakeGameCondition
     {
-        private EventSettings settings => Settings.EventsSettings["Earthquake"];
+        private EventSettings settings => Settings.EventsSettings["RimOverhaul_Earthquake"];
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {

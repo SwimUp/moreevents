@@ -11,7 +11,7 @@ namespace MoreEvents.Events.ClimateBomb
 {
     public class IncidentWorker_ClimateBomb : IncidentWorker
     {
-        private EventSettings settings => Settings.EventsSettings["MechanoidPortal"];
+        private EventSettings settings => Settings.EventsSettings["ClimateBomb"];
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
