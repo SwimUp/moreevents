@@ -77,9 +77,9 @@
 	<IonizedAtmosphere.letterLabel>Ионизированная атмосфера</IonizedAtmosphere.letterLabel>
 	<IonizedAtmosphere.letterText>Слой ионосферы уплотнился, ожидаются грозы.</IonizedAtmosphere.letterText>  
 
-	<Earthquake.label>Землетрясение</Earthquake.label>
-	<Earthquake.letterLabel>Землетрясение</Earthquake.letterLabel>
-	<Earthquake.letterText>Началось землетрясение, всем на улицу!</Earthquake.letterText>  
+	<RimOverhaul_Earthquake.label>Землетрясение</RimOverhaul_Earthquake.label>
+	<RimOverhaul_Earthquake.letterLabel>Землетрясение</RimOverhaul_Earthquake.letterLabel>
+	<RimOverhaul_Earthquake.letterText>Началось землетрясение, всем на улицу!</RimOverhaul_Earthquake.letterText>  
 
 	<SiegeCamp.label>Осадный лагерь</SiegeCamp.label>
 	<SiegeCamp.letterLabel>Осадный лагерь</SiegeCamp.letterLabel>
@@ -176,10 +176,10 @@
 	<Quest_SuppressionRebellion.letterText>{0} сообщает, что в поселении {1} фракции {2} начался мятеж. Мятежники требуют независимости. Они устроили множественные погромы, убили несколько мирных жителей. Воины поселения {1} смогли оттеснить их от поселения, но они набирают силы и будут нападать снова.
 {0} просит вас помочь подавить мятеж.</Quest_SuppressionRebellion.letterText>  
 
-	<SpaceBattle.label>Космическая битва</SpaceBattle.label>
-	<SpaceBattle.letterLabel>Космическая битва</SpaceBattle.letterLabel>
-	<SpaceBattle.letterText>Две неизвестные фракции устроили космическую битву прямо на орбите вашей планеты. В течении этого времени на планету будут падать обломки кораблей, в которых может быть что-нибудь интересное, а также 
-могут падать не попавшие в цель снаряды.</SpaceBattle.letterText>  
+	<RimOverhaul_SpaceBattle.label>Космическая битва</RimOverhaul_SpaceBattle.label>
+	<RimOverhaul_SpaceBattle.letterLabel>Космическая битва</RimOverhaul_SpaceBattle.letterLabel>
+	<RimOverhaul_SpaceBattle.letterText>Две неизвестные фракции устроили космическую битву прямо на орбите вашей планеты. В течении этого времени на планету будут падать обломки кораблей, в которых может быть что-нибудь интересное, а также 
+могут падать не попавшие в цель снаряды.</RimOverhaul_SpaceBattle.letterText>  
 
 	<Quest_KillOrder.label>Заказ на убийство</Quest_KillOrder.label>
 	<Quest_KillOrder.letterLabel>Заказ на убийство</Quest_KillOrder.letterLabel>

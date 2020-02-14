@@ -41,7 +41,7 @@ namespace QuestRim
                     {
                         QuestPawn questPawn = communications.QuestPawns[i];
 
-                        if (questPawn.Pawn == null || (WorldPawnsUtility.IsWorldPawn(questPawn.Pawn) && !questPawn.WorldQuester) || questPawn.Pawn.Dead || questPawn.Pawn.Destroyed)
+                        if (questPawn.Pawn == null || questPawn.Pawn.IsPrisoner || questPawn.Pawn.Faction.PlayerRelationKind == RimWorld.FactionRelationKind.Hostile || (WorldPawnsUtility.IsWorldPawn(questPawn.Pawn) && !questPawn.WorldQuester) || questPawn.Pawn.Dead || questPawn.Pawn.Destroyed)
                         {
                             questPawn.Destroy();
                         }

@@ -30,6 +30,7 @@ namespace MoreEvents.Things.ZeroPointReactor
             }
 
             Room room = this.GetRoom(RegionType.Set_All);
+
             if (room != cachedRoom)
             {
                 Notify_RoomChange();

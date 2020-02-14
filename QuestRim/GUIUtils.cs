@@ -15,9 +15,6 @@ namespace QuestRim
         public static Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
         public static readonly Color MenuSectionBGBorderColor = new ColorInt(135, 135, 135).ToColor;
 
-        [TweakValue("Input", 0f, 100f)]
-        private static int IntEntryButtonWidth;
-
         public static bool DrawCustomButton(Rect rect, string label, Color textColor)
         {
             GUI.color = textColor;

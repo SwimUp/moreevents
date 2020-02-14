@@ -1,5 +1,6 @@
 ﻿using DarkNET.Sly;
 using DarkNET.TraderComp;
+using MoreEvents;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace DarkNET.Traders
     public class TraderWorker_Sly : DarkNetTrader
     {
         private Vector2 slider = Vector2.zero;
+
+        private EventSettings settings => Settings.EventsSettings["TraderWorker_Sly"];
 
         protected Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
 
@@ -30,9 +33,11 @@ namespace DarkNET.Traders
 
         private List<SellableItemWithModif> stock;
 
-        public override int ArriveTime => 7;
+        public override int ArriveTime => arrivaTime;
+        private int arrivaTime;
 
-        public override int OnlineTime => 2;
+        public override int OnlineTime => onlineTime;
+        private int onlineTime;
 
         public DarkNetComp_Sly Comp
         {
@@ -70,6 +75,12 @@ namespace DarkNET.Traders
             typeof(SlyService_HumanitarianHelp),
             typeof(SlyService_ResoucesHelp)
         };
+
+        public TraderWorker_Sly() : base()
+        {
+            onlineTime = int.Parse(settings.Parameters["onlineTime"].Value);
+            arrivaTime = int.Parse(settings.Parameters["arrivaTime"].Value);
+        }
 
         public override void FirstInit()
         {

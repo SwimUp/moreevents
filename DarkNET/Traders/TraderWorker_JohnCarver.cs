@@ -1,4 +1,5 @@
 ﻿using DarkNET.TraderComp;
+using MoreEvents;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,8 @@ namespace DarkNET.Traders
 
         protected Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
 
+        private EventSettings settings => Settings.EventsSettings["TraderWorker_JohnCarver"];
+
         public enum Tab
         {
             HardMetals,
@@ -45,9 +48,11 @@ namespace DarkNET.Traders
         private List<CategoryItem<Tab>> stock;
         public List<CategoryItem<Tab>> Stock => stock;
 
-        public override int ArriveTime => 8;
+        public override int ArriveTime => arrivaTime;
+        private int arrivaTime;
 
-        public override int OnlineTime => 3;
+        public override int OnlineTime => onlineTime;
+        private int onlineTime;
 
         public DarkNetComp_JohnCarver Comp
         {
@@ -63,6 +68,12 @@ namespace DarkNET.Traders
         }
 
         private DarkNetComp_JohnCarver сomp;
+
+        public TraderWorker_JohnCarver() : base()
+        {
+            onlineTime = int.Parse(settings.Parameters["onlineTime"].Value);
+            arrivaTime = int.Parse(settings.Parameters["arrivaTime"].Value);
+        }
 
         public override void FirstInit()
         {

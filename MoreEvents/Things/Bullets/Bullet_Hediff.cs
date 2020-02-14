@@ -42,7 +42,7 @@ namespace RimOverhaul.Things.Bullets
                     pawn.stances.StaggerFor(95);
                 }
 
-                if (FleshOnly && pawn.RaceProps.IsMechanoid)
+                if (FleshOnly && pawn != null && pawn.RaceProps != null && pawn.RaceProps.IsMechanoid)
                     return;
 
                 var bodyPart = damageWorker.LastHitPart;

@@ -1,5 +1,6 @@
 ﻿using DarkNET.Quests;
 using DarkNET.TraderComp;
+using MoreEvents;
 using MoreEvents.Quests;
 using QuestRim;
 using RimWorld;
@@ -18,6 +19,8 @@ namespace DarkNET.Traders
 
         protected Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
 
+        private EventSettings settings => Settings.EventsSettings["TraderWorker_Archotech_567H"];
+
         public enum Tab
         {
             Items,
@@ -32,9 +35,11 @@ namespace DarkNET.Traders
         private List<CategoryItem<Tab>> stock;
         public List<CategoryItem<Tab>> Stock => stock;
 
-        public override int ArriveTime => 8;
+        public override int ArriveTime => arrivaTime;
+        private int arrivaTime;
 
-        public override int OnlineTime => 2;
+        public override int OnlineTime => onlineTime;
+        private int onlineTime;
 
         public DarkNetComp_Archotech_567H Comp
         {
@@ -59,6 +64,12 @@ namespace DarkNET.Traders
             typeof(Quest_Archotech_567H_KillOponents),
             typeof(Quest_Archotech_567H_GetResources)
         };
+
+        public TraderWorker_Archotech_567H() : base()
+        {
+            onlineTime = int.Parse(settings.Parameters["onlineTime"].Value);
+            arrivaTime = int.Parse(settings.Parameters["arrivaTime"].Value);
+        }
 
         public override void FirstInit()
         {

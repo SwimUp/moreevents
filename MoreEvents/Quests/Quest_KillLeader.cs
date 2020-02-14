@@ -41,6 +41,10 @@ namespace MoreEvents.Quests
 
         private bool Won = false;
 
+        public override bool UseLeaveCommand => false;
+
+        public override bool HasExitCells => true;
+
         public Quest_KillLeader()
         {
 
@@ -74,6 +78,9 @@ namespace MoreEvents.Quests
             leaderLord.AddPawn(TargetPawn);
 
             UnlimitedTime = true;
+
+            Site.RemoveAfterLeave = false;
+            Site.RemoveIfAllDie = true;
         }
 
         public override string GetDescription()
@@ -121,6 +128,7 @@ namespace MoreEvents.Quests
             {
                 UnlimitedTime = true;
                 Won = true;
+                Site.RemoveAfterLeave = true;
                 Find.LetterStack.ReceiveLetter("Quest_KillLeaderTitle".Translate(), "Quest_KillLeaderDesc".Translate(), LetterDefOf.PositiveEvent);
             }
 

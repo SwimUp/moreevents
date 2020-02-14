@@ -70,6 +70,8 @@
     <Compile Include="AI\CaravanAIMaker.cs" />
     <Compile Include="AI\CaravanArrivalAction_AIEnterCaravan.cs" />
     <Compile Include="AI\CaravanAI_NeedsTracker.cs" />
+    <Compile Include="AI\CaravanArrivalAction_AttackCaravanAI.cs" />
+    <Compile Include="AI\CaravanBattlePlacePlace.cs" />
     <Compile Include="AI\CaravanUtility.cs" />
     <Compile Include="AI\DutyDefOfLocal.cs" />
     <Compile Include="AI\JobDriver_CarryItemToFurnace.cs" />

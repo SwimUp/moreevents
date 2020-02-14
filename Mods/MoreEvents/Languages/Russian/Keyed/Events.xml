@@ -286,4 +286,12 @@ COMMANDS:
 	<Quest_PrisonShipAccident_NCTitle>Заключенные пропали</Quest_PrisonShipAccident_NCTitle>
 	<Quest_PrisonShipAccident_NCDesc>Вы не захватили ни одного заключенного, они, скорее всего уже разбежались по всей планете.</Quest_PrisonShipAccident_NCDesc>
 	
+	<CaravanBattlePlacePlace_BattleStarted>Битва началась</CaravanBattlePlacePlace_BattleStarted>
+	<CaravanBattlePlacePlace_BattleDescription>Ваш караван {0} вступил в схватку с {1}. Если вы уйдете с карты, то будете считаться проигравшими и часть ваших поселенцев может быть убита при попытке бегства. Победой будет считаться полное уничтожение сил противника.</CaravanBattlePlacePlace_BattleDescription>
+	<CaravanBattlePlacePlace_Battle_WinnerAITitle>Вы проиграли</CaravanBattlePlacePlace_Battle_WinnerAITitle>
+	<CaravanBattlePlacePlace_Battle_WinnerAIDesc>Противник выйграл в этом сражении.</CaravanBattlePlacePlace_Battle_WinnerAIDesc>
+	<CaravanBattlePlacePlace_Battle_WinnerPlayerTitle>Вы победили</CaravanBattlePlacePlace_Battle_WinnerPlayerTitle>
+	<CaravanBattlePlacePlace_Battle_WinnerPlayerDesc>Вы смогли одолеть противника и одержать победу в сражении!</CaravanBattlePlacePlace_Battle_WinnerPlayerDesc>
+	<CaravanBattlePlacePlace_Deserting>{0} был убит при побеге с поля боя</CaravanBattlePlacePlace_Deserting>
+	
 </LanguageData>

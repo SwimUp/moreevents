@@ -284,4 +284,12 @@ The competition lasts 3 days, every day you will receive statistics where you ca
 	<Quest_PrisonShipAccident_NCTitle>Prisoners are gone</Quest_PrisonShipAccident_NCTitle>
 	<Quest_PrisonShipAccident_NCDesc>You did not capture a single prisoner, they most likely have already scattered across the planet.</Quest_PrisonShipAccident_NCDesc>
 	
+	<CaravanBattlePlacePlace_BattleStarted>The battle has begun</CaravanBattlePlacePlace_BattleStarted>
+	<CaravanBattlePlacePlace_BattleDescription>Your caravan {0} has fought with {1}. If you leave the map, you will be considered losers and some of your settlers may be killed when trying to escape. The victory will be considered the complete destruction of the enemy forces.</CaravanBattlePlacePlace_BattleDescription>
+	<CaravanBattlePlacePlace_Battle_WinnerAITitle>You lose</CaravanBattlePlacePlace_Battle_WinnerAITitle>
+	<CaravanBattlePlacePlace_Battle_WinnerAIDesc>The enemy won in this battle</CaravanBattlePlacePlace_Battle_WinnerAIDesc>
+	<CaravanBattlePlacePlace_Battle_WinnerPlayerTitle>You won</CaravanBattlePlacePlace_Battle_WinnerPlayerTitle>
+	<CaravanBattlePlacePlace_Battle_WinnerPlayerDesc>You were able to defeat the enemy and win the battle!</CaravanBattlePlacePlace_Battle_WinnerPlayerDesc>
+	<CaravanBattlePlacePlace_Deserting>{0} was killed while escaping from the battlefield</CaravanBattlePlacePlace_Deserting>
+	
 </LanguageData>

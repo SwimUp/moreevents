@@ -190,7 +190,6 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<defName>Apparel_MK2Aquille</defName>
 		<thingClass>MoreEvents.Things.Mk1.Apparel_Mk2</thingClass>
 		<label>Power Armor Mk.2 "Aquille"</label>
-		<!-- Основным улучшением Мк.2 по сравнению с Мк.1 стал новый нагрудник, закрывающий грудную клетку и кабели, ведущие к рукам. "Аквилле" отказались от усиленных штифтами наплечников и изменили строение шлема. В остальном же, Мк.2 остался очень похожим на своего предшественника, Мк.1, а потому их составные части полностью взаимозаменяемы.  -->
 		<description>The main improvement of MK.2 compared to MK.1 was a new bib covering the chest and cables leading to the arms. “Aquille” abandoned the pins reinforced with pins and changed the structure of the helmet. Otherwise, Mk.2 remained very similar to its predecessor, Mk.1, and therefore their components are completely interchangeable.</description>
 		<techLevel>Spacer</techLevel>
 		<tickerType>Normal</tickerType>
@@ -279,6 +278,147 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Apparels/Mk2/Helmet/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<ComponentSpacer>15</ComponentSpacer>
+			<Plasteel>150</Plasteel>
+			<Hyperweave>80</Hyperweave>
+			<TungstenIngot>30</TungstenIngot>
+			<PalladiumIngot>20</PalladiumIngot>
+			<NickelIngot>60</NickelIngot>
+			<CobaltIngot>30</CobaltIngot>
+		</costList>
+		<recipeMaker>
+		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		  <researchPrerequisite>MK2Aquilla</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>15</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>5</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.9</ArmorRating_Heat>
+			<Insulation_Cold>5</Insulation_Cold>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.10</PainShockThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Mk2/Helmet/helmet</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Mk1Armor</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMKBase">
+		<defName>Apparel_MK3Aquille</defName>
+		<thingClass>MoreEvents.Things.Mk1.Apparel_Mk2</thingClass>
+		<label>Power Armor Mk.3 "Aquille"</label>
+		<description>The main improvement of MK.2 compared to MK.1 was a new bib covering the chest and cables leading to the arms. “Aquille” abandoned the pins reinforced with pins and changed the structure of the helmet. Otherwise, Mk.2 remained very similar to its predecessor, Mk.1, and therefore their components are completely interchangeable.</description>
+		<techLevel>Spacer</techLevel>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Apparels/MK3/MK3</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<recipeMaker>
+		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		  <researchPrerequisite>MK2Aquilla</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>15</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>100000</WorkToMake>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Mass>18</Mass>
+			<Flammability>0.4</Flammability>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.15</MoveSpeed>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<Plasteel>250</Plasteel>
+			<Hyperweave>100</Hyperweave>
+			<TungstenIngot>50</TungstenIngot>
+			<PalladiumIngot>40</PalladiumIngot>
+			<NickelIngot>80</NickelIngot>
+			<CobaltIngot>70</CobaltIngot>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Mk2/Mk2</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>Mk1Armor</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Mk1Armor</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeability>Sellable</tradeability>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="RimArmorCore.Mk1.CompPropertiesIncompatibleModules">
+				<ModuleList>
+					<li>MotorizedJoints</li>
+					<li>EnergyBoots</li>
+				</ModuleList>
+			</li>
+		</comps>
+	</ThingDef>
+	
+<ThingDef ParentName="ArmorMKBase">
+		<defName>Apparel_MK3AquilleHead</defName>
+		<label>Power Helmet Mk.3 "Aquille"</label>
+		<description>The main improvement of MK.2 compared to MK.1 was a new bib covering the chest and cables leading to the arms. “Aquille” abandoned the pins reinforced with pins and changed the structure of the helmet. Otherwise, Mk.2 remained very similar to its predecessor, Mk.1, and therefore their components are completely interchangeable.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Apparels/MK3/Helmet/helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costList>

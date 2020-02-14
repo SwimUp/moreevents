@@ -188,36 +188,48 @@ namespace RimOverhaul.Events.Competitions
 
         public void DayPassed()
         {
-            foreach(var competition in competitionTableRecords)
+            if (competitionTableRecords != null)
             {
-                int factor = Rand.Range(10, 20) + competition.SkillLevel;
-                if (Rand.Chance(0.12f))
-                    factor += Rand.Range(4, 8);
-                if (competition.Paid)
-                    factor += 7;
+                foreach (var competition in competitionTableRecords)
+                {
+                    int factor = Rand.Range(10, 20) + competition.SkillLevel;
+                    if (Rand.Chance(0.12f))
+                        factor += Rand.Range(4, 8);
+                    if (competition.Paid)
+                        factor += 7;
 
-                competition.Score += factor;
+                    competition.Score += factor;
+                }
+
+                competitionTableRecords.ForEach(x =>
+                {
+                    if(x.Pawn == null)
+                    {
+                        Pawn p = PawnGenerator.GeneratePawn(x.Faction.RandomPawnKind());
+                        Find.WorldPawns.PassToWorld(p);
+                    }
+                });
+
+                competitionTableRecords.SortByDescending(x => x.Score);
+                CompetitionTableRecord dayLeader = competitionTableRecords.FirstOrDefault();
+
+                StringBuilder builder = new StringBuilder();
+                string dayTitle = "Competitions_DayResultTitle".Translate(day, dayLeader.Pawn.Name.ToStringFull, dayLeader.Faction.Name);
+                builder.AppendLine(dayTitle);
+                for (int i = 0; i < competitionTableRecords.Count; i++)
+                {
+                    CompetitionTableRecord competitionTableRecord = competitionTableRecords[i];
+
+                    if (competitionTableRecord.Faction == Faction.OfPlayer)
+                        builder.Append($"{i + 1}. {competitionTableRecord.Pawn.Name.ToStringFull} - {competitionTableRecord.Score} {ScorePlaceholder} [{YouPlaceholder}]\n");
+                    else
+                        builder.Append($"{i + 1}. {competitionTableRecord.Pawn.Name.ToStringFull} - {competitionTableRecord.Score} {ScorePlaceholder}\n");
+                }
+
+                Find.LetterStack.ReceiveLetter("Competitions_DayResultTitle2".Translate(day), builder.ToString(), LetterDefOf.PositiveEvent);
+
+                day++;
             }
-
-            competitionTableRecords.SortByDescending(x => x.Score);
-            CompetitionTableRecord dayLeader = competitionTableRecords.FirstOrDefault();
-
-            StringBuilder builder = new StringBuilder();
-            string dayTitle = "Competitions_DayResultTitle".Translate(day, dayLeader.Pawn.Name.ToStringFull, dayLeader.Faction.Name);
-            builder.AppendLine(dayTitle);
-            for(int i = 0; i < competitionTableRecords.Count; i++)
-            {
-                CompetitionTableRecord competitionTableRecord = competitionTableRecords[i];
-
-                if(competitionTableRecord.Faction == Faction.OfPlayer)
-                    builder.Append($"{i + 1}. {competitionTableRecord.Pawn.Name.ToStringFull} - {competitionTableRecord.Score} {ScorePlaceholder} [{YouPlaceholder}]\n");
-                else
-                    builder.Append($"{i + 1}. {competitionTableRecord.Pawn.Name.ToStringFull} - {competitionTableRecord.Score} {ScorePlaceholder}\n");
-            }
-
-            Find.LetterStack.ReceiveLetter("Competitions_DayResultTitle2".Translate(day), builder.ToString(), LetterDefOf.PositiveEvent);
-
-            day++;
         }
 
         public void StartCompetitions()

@@ -36,4 +36,7 @@
   <CokeFurnace_infinity>Бесконечно</CokeFurnace_infinity>
   <CokeFurnace_Notinfinity>Кол-во</CokeFurnace_Notinfinity>
   
+  <CaravanArrivalAction_AttackCaravanAI_Label>Напасть</CaravanArrivalAction_AttackCaravanAI_Label>
+  <CaravanArrivalAction_AttackCaravanAI_ReportString>Нападает на {0}</CaravanArrivalAction_AttackCaravanAI_ReportString>
+  
 </LanguageData>

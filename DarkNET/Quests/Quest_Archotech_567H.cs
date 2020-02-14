@@ -15,6 +15,8 @@ namespace DarkNET.Quests
 {
     public class Quest_Archotech_567H : Quest
     {
+        private EventSettings settings => Settings.EventsSettings["TraderWorker_Archotech_567H"];
+
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 
         public override string CardLabel => "";

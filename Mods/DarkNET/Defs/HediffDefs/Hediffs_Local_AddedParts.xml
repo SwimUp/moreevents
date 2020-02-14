@@ -29,9 +29,9 @@
 						<capacities>
 							<li>Blunt</li>
 						</capacities>
-						<power>11</power>
+						<power>15</power>
 						<!-- сила (урон, по факту), сверяйте с ванильными значениями в Hediffs_Local_AddedParts -->
-						<cooldownTime>1.5</cooldownTime>
+						<cooldownTime>3.5</cooldownTime>
 						<!-- кулдаун между ударами -->
 					</li>
 				</tools>
@@ -41,7 +41,7 @@
 		<!-- указывать ThingDef части тела, к которой относится -->
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>0.8</partEfficiency>
+			<partEfficiency>0.5</partEfficiency>
 			<!-- эффективность части -->
 		</addedPartProps>
 	</HediffDef>
@@ -586,8 +586,8 @@
 						<capacities>
 							<li>Scratch</li>
 						</capacities>
-						<power>12.5</power>
-						<cooldownTime>1.7</cooldownTime> 
+						<power>16.5</power>
+						<cooldownTime>1.5</cooldownTime> 
 					</li>
 				</tools>
 			</li>
@@ -942,7 +942,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MoveSpeed>0.1</MoveSpeed>
+					<MoveSpeed>0.05</MoveSpeed>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -958,13 +958,6 @@
 			<partEfficiency>0.85</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<statOffsets>
-					<MoveSpeed>0.1</MoveSpeed>
-				</statOffsets>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_MobileProsthesisWithInitialSensitivity</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -977,13 +970,6 @@
 			<partEfficiency>0.9</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<statOffsets>
-					<MoveSpeed>0.15</MoveSpeed>
-				</statOffsets>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_ActiveHydraulicFootProsthesis</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -996,13 +982,6 @@
 			<partEfficiency>1.0</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<statOffsets>
-					<MoveSpeed>0.15</MoveSpeed>
-				</statOffsets>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_HydraulicProsthesisWithSensitiveSensors</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1016,13 +995,6 @@
 			<partEfficiency>1.1</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<statOffsets>
-					<MoveSpeed>0.2</MoveSpeed>
-				</statOffsets>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_SportsMechanicalProsthesis</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1039,7 +1011,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MoveSpeed>0.25</MoveSpeed>
+					<MoveSpeed>0.02</MoveSpeed>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -1058,7 +1030,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MoveSpeed>0.27</MoveSpeed>
+					<MoveSpeed>0.05</MoveSpeed>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -1074,13 +1046,6 @@
 			<partEfficiency>1.25</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<statOffsets>
-					<MoveSpeed>0.3</MoveSpeed>
-				</statOffsets>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_KneeJoint</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1094,13 +1059,6 @@
 			<partEfficiency>1.3</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<statOffsets>
-					<MoveSpeed>0.35</MoveSpeed>
-				</statOffsets>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_FootMeridium</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1116,7 +1074,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MoveSpeed>0.4</MoveSpeed>
+					<MoveSpeed>0.05</MoveSpeed>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -1135,7 +1093,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MoveSpeed>0.45</MoveSpeed>
+					<MoveSpeed>0.1</MoveSpeed>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -1154,7 +1112,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<MoveSpeed>0.55</MoveSpeed>
+					<MoveSpeed>0.2</MoveSpeed>
 				</statOffsets>
 			</li>  
 		</stages>
@@ -1231,24 +1189,6 @@
 			<partEfficiency>0.9</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.05</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.05</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_AdvancedProsthesisMTwo</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1261,24 +1201,6 @@
 			<partEfficiency>1.1</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.1</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_SerialHeartProsthesisMThree</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1291,24 +1213,6 @@
 			<partEfficiency>1.2</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.15</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.15</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_SportsPacemakerSOne</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1322,24 +1226,6 @@
 			<partEfficiency>1.35</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.25</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.2</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.25</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_BiochemistryPacemakerSTwo</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1353,24 +1239,6 @@
 			<partEfficiency>1.4</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.3</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.3</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.3</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_RhythmicCardioprosthesisMKOne</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1383,24 +1251,6 @@
 			<partEfficiency>1.5</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.4</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.4</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.5</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_FinalPacemakerMKOne</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1413,24 +1263,6 @@
 			<partEfficiency>0.7</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>-0.1</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_SimpleCatheter</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1448,7 +1280,7 @@
 				<capMods>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>-0.2</offset>
+						<offset>-0.05</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
@@ -1533,24 +1365,6 @@
 			<partEfficiency>1.1</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>BloodPumping</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
-						<capacity>Metabolism</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<offset>0.1</offset>
-					</li>
-				</capMods>
-			</li>  
-		</stages>
 		<spawnThingOnRemoved>DarkNet_SyntheticBodyFiltrationSystem</spawnThingOnRemoved>
 	</HediffDef>
 
@@ -1568,15 +1382,15 @@
 				<capMods>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>0.15</offset>
+						<offset>0.05</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.15</offset>
+						<offset>0.05</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.15</offset>
+						<offset>0.05</offset>
 					</li>
 				</capMods>
 			</li>  
@@ -1598,15 +1412,15 @@
 				<capMods>
 					<li>
 						<capacity>BloodPumping</capacity>
-						<offset>0.25</offset>
+						<offset>0.1</offset>
 					</li>
 					<li>
 						<capacity>Metabolism</capacity>
-						<offset>0.25</offset>
+						<offset>0.1</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.25</offset>
+						<offset>0.1</offset>
 					</li>
 				</capMods>
 			</li>  
@@ -1784,11 +1598,11 @@
 				<capMods>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.25</offset>
+						<offset>0.1</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.15</offset>
+						<offset>0.1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
@@ -1812,11 +1626,11 @@
 				<capMods>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.30</offset>
+						<offset>0.1</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.20</offset>
+						<offset>0.1</offset>
 					</li>
 				</capMods>
 				<statOffsets>
@@ -1877,7 +1691,7 @@
 				</capMods>
 				<statOffsets>
 					<MeleeHitChance>-0.5</MeleeHitChance>
-					<MeleeDodgeChance>-0.3</MeleeDodgeChance>
+					<MeleeDodgeChance>-0.5</MeleeDodgeChance>
 					<ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
 					<WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
 				</statOffsets>
@@ -2549,10 +2363,6 @@
 						<capacity>Moving</capacity>
 						<offset>0.1</offset>
 					</li>
-					<li>
-						<capacity>Eating</capacity>
-						<offset>0.1</offset>
-					</li>
 				</capMods>
 			</li>
 		</stages>
@@ -2572,15 +2382,11 @@
 				<capMods>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.2</offset>
+						<offset>0.25</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
 						<offset>-0.1</offset>
-					</li>
-					<li>
-						<capacity>Eating</capacity>
-						<offset>0.1</offset>
 					</li>
 				</capMods>
 			</li>
@@ -2601,7 +2407,7 @@
 				<capMods>
 					<li>
 						<capacity>Breathing</capacity>
-						<offset>0.25</offset>
+						<offset>0.2</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
@@ -2651,7 +2457,7 @@
 				<capMods>
 					<li>
 						<capacity>Eating</capacity>
-						<offset>0.25</offset>
+						<offset>0.05</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -2676,11 +2482,11 @@
 				<capMods>
 					<li>
 						<capacity>Eating</capacity>
-						<offset>0.35</offset>
+						<offset>0.1</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.25</offset>
+						<offset>0.1</offset>
 					</li>
 				</capMods>
 			</li>
@@ -2700,11 +2506,11 @@
 				<capMods>
 					<li>
 						<capacity>Eating</capacity>
-						<offset>0.4</offset>
+						<offset>0.15</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.4</offset>
+						<offset>0.05</offset>
 					</li>
 				</capMods>
 			</li>
@@ -2725,12 +2531,8 @@
 			<li>
 				<capMods>
 					<li>
-						<capacity>Consciousness</capacity>
-						<offset>0.05</offset>
-					</li>
-					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.1</offset>
+						<offset>0.15</offset>
 					</li>
 				</capMods>
 			</li> 
@@ -2755,7 +2557,7 @@
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.15</offset>
+						<offset>0.05</offset>
 					</li>
 				</capMods>
 			</li> 
@@ -2776,11 +2578,11 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.15</offset>
+						<offset>0.05</offset>
 					</li>
 					<li>
 						<capacity>BloodFiltration</capacity>
-						<offset>0.25</offset>
+						<offset>0.05</offset>
 					</li>
 				</capMods>
 			</li> 
@@ -2903,7 +2705,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity> 
-						<offset>0.3</offset>
+						<offset>0.05</offset>
 					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
@@ -2932,11 +2734,11 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity> 
-						<offset>0.05</offset>
+						<offset>0.075</offset>
 					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
-						<offset>0.2</offset>
+						<offset>0.1</offset>
 					</li> 
 				</capMods>
 				<statOffsets>
@@ -2961,11 +2763,11 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity> 
-						<offset>0.25</offset>
+						<offset>0.1</offset>
 					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
-						<offset>0.25</offset>
+						<offset>0.15</offset>
 					</li> 
 				</capMods>
 				<statOffsets>
@@ -2990,7 +2792,11 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity> 
-						<offset>0.5</offset>
+						<offset>0.3</offset>
+					</li> 
+					<li>
+						<capacity>Manipulation</capacity> 
+						<offset>0.3</offset>
 					</li> 
 				</capMods>
 				<statOffsets>

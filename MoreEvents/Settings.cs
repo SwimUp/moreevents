@@ -557,7 +557,7 @@ namespace MoreEvents
                 foreach (var fSetting in fileSettings)
                 {
                     bool canHoldSetting = CanHoldSetting(fSetting);
-                    if (!EventsSettings.ContainsKey(fSetting.Key))
+                    if (!EventsSettings.TryGetValue(fSetting.Key, out EventSettings value))
                     {
                         if (!canHoldSetting)
                             continue;
@@ -574,6 +574,12 @@ namespace MoreEvents
                         {
                             EventsSettings.Remove(fSetting.Key);
                             Log.Message($"Settings {fSetting.Key} will be deleted (the required module is missing)");
+                        }
+                        else if(fSetting.Params != null && value.Parameters.Count != fSetting.Params.Length)
+                        {
+                            value.Params = fSetting.Params;
+
+                            value.FinalizeSettings();
                         }
                     }
                 }

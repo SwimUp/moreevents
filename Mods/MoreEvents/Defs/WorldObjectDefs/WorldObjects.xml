@@ -191,5 +191,18 @@
 			<li>Map_Misc</li>
 		</IncidentTargetTags>
 	</WorldObjectDef>
+	
+	<WorldObjectDef>
+		<defName>CaravanBattlePlace</defName>
+		<label>Place of battle</label>
+		<description>Place of battle with {0}</description>
+		<worldObjectClass>RimOverhaul.AI.CaravanBattlePlacePlace</worldObjectClass>
+		<expandingIcon>true</expandingIcon>
+		<texture>Map/MassBurialPlace</texture>
+		<expandingIconPriority>100</expandingIconPriority>
+		<IncidentTargetTags>
+			<li>Map_Misc</li>
+		</IncidentTargetTags>
+	</WorldObjectDef>
 
 </Defs>

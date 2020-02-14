@@ -1,4 +1,5 @@
 ﻿using DarkNET.TraderComp;
+using MoreEvents;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -88,9 +89,13 @@ namespace DarkNET.Traders
             }
         }
 
-        public override int OnlineTime => 3;
+        public override int OnlineTime => onlineTime;
+        private int onlineTime;
 
-        public override int ArriveTime => 14;
+        private EventSettings settings => Settings.EventsSettings["TraderWorker_RogerEdmonson"];
+
+        public override int ArriveTime => arrivaTime;
+        private int arrivaTime;
 
         private SimpleCurve itemsCountPerRaidCurve = new SimpleCurve
         {
@@ -101,11 +106,11 @@ namespace DarkNET.Traders
             new CurvePoint(14, 20)
         };
 
-        private float marketValueMultiplierPerMapEvent => 80;
+        private float marketValueMultiplierPerMapEvent;
 
-        private float startMarketValue => 1200;
+        private float startMarketValue;
 
-        private float specialGoodMarketValue => 6000;
+        private float specialGoodMarketValue;
 
         private int lastRaidsEnemy = 0;
 
@@ -127,6 +132,10 @@ namespace DarkNET.Traders
 
         private float raidMultiplier = 1.5f;
 
+        private int minRaidsCountToGeneralGood;
+
+        private float generalGoodsChance;
+
         public DarkNetComp_RogerEdmonson RogerComp
         {
             get
@@ -141,6 +150,17 @@ namespace DarkNET.Traders
         }
 
         private DarkNetComp_RogerEdmonson rogerComp;
+
+        public TraderWorker_RogerEdmonson() : base()
+        {
+            marketValueMultiplierPerMapEvent = float.Parse(settings.Parameters["marketValueMultiplierPerMapEvent"].Value);
+            startMarketValue = float.Parse(settings.Parameters["startMarketValue"].Value);
+            specialGoodMarketValue = float.Parse(settings.Parameters["specialGoodMarketValue"].Value);
+            onlineTime = int.Parse(settings.Parameters["onlineTime"].Value);
+            arrivaTime = int.Parse(settings.Parameters["arrivaTime"].Value);
+            minRaidsCountToGeneralGood = int.Parse(settings.Parameters["minRaidsCountToGeneralGood"].Value);
+            generalGoodsChance = float.Parse(settings.Parameters["generalGoodsChance"].Value);
+        }
 
         public override void FirstInit()
         {
@@ -426,7 +446,7 @@ namespace DarkNET.Traders
                 stock.Add(new SellableItemWithModif(item, itemValue, modificator));
             }
 
-            if (raidsCount >= 10 && Rand.Chance(0.3f))
+            if (raidsCount >= minRaidsCountToGeneralGood && Rand.Chance(generalGoodsChance))
             {
                 parms.totalMarketValueRange = new FloatRange(specialGoodMarketValue, specialGoodMarketValue);
                 parms.countRange = new IntRange(1, 1);

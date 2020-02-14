@@ -70,9 +70,12 @@ namespace RimOverhaul.AI
         public IEnumerable<CaravanAI_QueueAction> QueueActions => queueActions;
         private List<CaravanAI_QueueAction> queueActions = new List<CaravanAI_QueueAction>();
 
+        private CaravanArrivalAction_AttackCaravanAI caravanAction;
+
         public CaravanAI() : base()
         {
             aiNeeds = new CaravanAI_NeedsTracker(this);
+            caravanAction = new CaravanArrivalAction_AttackCaravanAI(this);
         }
 
         public void AddQueueAction(CaravanArrivalAction action, int destinationTile)
@@ -109,6 +112,12 @@ namespace RimOverhaul.AI
 
                 queueActions.RemoveLast();
             }
+
+            Caravan playerCaravan = Find.WorldObjects.PlayerControlledCaravanAt(Tile);
+            if (playerCaravan != null)
+            {
+                caravanAction.Arrived(playerCaravan);
+            }
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -124,6 +133,19 @@ namespace RimOverhaul.AI
             {
                 yield break;
             }
+        }
+
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
+        {
+            if(Faction.PlayerRelationKind == FactionRelationKind.Hostile)
+            {
+                foreach(var act in CaravanArrivalActionUtility.GetFloatMenuOptions(() => caravanAction.CanAttack(caravan, this), () => caravanAction, caravanAction.Label, caravan, Tile, this))
+                {
+                    yield return act;
+                }
+            }
+
+            yield break;
         }
 
         public override IEnumerable<InspectTabBase> GetInspectTabs()

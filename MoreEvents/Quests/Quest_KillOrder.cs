@@ -31,6 +31,10 @@ namespace MoreEvents.Quests
 
         private bool Won = false;
 
+        public override bool UseLeaveCommand => false;
+
+        public override bool HasExitCells => true;
+
         public Quest_KillOrder()
         {
 
@@ -65,6 +69,9 @@ namespace MoreEvents.Quests
             //pawns[0].GetLord().AddPawn(TargetPawn);
 
             UnlimitedTime = true;
+
+            Site.RemoveAfterLeave = false;
+            Site.RemoveIfAllDie = true;
         }
 
         public override void SiteTick()
@@ -98,6 +105,7 @@ namespace MoreEvents.Quests
             {
                 UnlimitedTime = true;
                 Won = true;
+                Site.RemoveAfterLeave = true;
                 Find.LetterStack.ReceiveLetter("Quest_KillOrderTitle".Translate(), "Quest_KillOrderDesc".Translate(TargetPawn.Name.ToStringFull), LetterDefOf.PositiveEvent);
             }
 

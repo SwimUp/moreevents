@@ -38,4 +38,7 @@
   <PlaceBattle.label>Место битвы</PlaceBattle.label>
   <PlaceBattle.description>Место битвы</PlaceBattle.description>
 
+  <CaravanBattlePlace.label>Место битвы</CaravanBattlePlace.label>
+  <CaravanBattlePlace.description>Место битвы с {0}</CaravanBattlePlace.description>
+
 </LanguageData>

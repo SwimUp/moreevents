@@ -36,4 +36,7 @@
   <CokeFurnace_infinity>Infinity</CokeFurnace_infinity>
   <CokeFurnace_Notinfinity>Number</CokeFurnace_Notinfinity>
   
+  <CaravanArrivalAction_AttackCaravanAI_Label>Attack</CaravanArrivalAction_AttackCaravanAI_Label>
+  <CaravanArrivalAction_AttackCaravanAI_ReportString>Attacking {0}</CaravanArrivalAction_AttackCaravanAI_ReportString>
+  
 </LanguageData>

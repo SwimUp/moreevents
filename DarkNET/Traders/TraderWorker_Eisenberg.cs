@@ -1,5 +1,6 @@
 ﻿using DarkNET.Dialogs;
 using DarkNET.TraderComp;
+using MoreEvents;
 using QuestRim;
 using RimWorld;
 using System;
@@ -15,6 +16,8 @@ namespace DarkNET.Traders
     {
         private Vector2 slider = Vector2.zero;
 
+        private EventSettings settings => Settings.EventsSettings["TraderWorker_Eisenberg"];
+
         public class CategoryDrug : IExposable
         {
             public Tab Tab;
@@ -28,13 +31,15 @@ namespace DarkNET.Traders
             }
         }
 
-        public override int ArriveTime => 5;
+        public override int ArriveTime => arrivaTime;
+        private int arrivaTime;
 
-        public override int OnlineTime => 3;
+        public override int OnlineTime => onlineTime;
+        private int onlineTime;
 
         private bool labQuestIssued = false;
 
-        private int questEarlistDay => 70;
+        private int questEarlistDay;
 
         public enum Tab
         {
@@ -54,7 +59,9 @@ namespace DarkNET.Traders
         protected Color bgCardColor = new ColorInt(25, 25, 25).ToColor;
 
         public float Reputation;
-        public float discount => 0.25f * Reputation;
+        public float discount => Mathf.Clamp(basicDiscount * Reputation, 0, maxDiscount);
+        private float basicDiscount;
+        private float maxDiscount;
 
         private bool needRecalculate = false;
 
@@ -74,6 +81,30 @@ namespace DarkNET.Traders
         }
 
         private DarkNetComp_Eisenberg сomp;
+
+        private int minReputationToDiscount;
+
+        private float forceDiscount;
+
+        private float reputationGainForBuy;
+
+        private int minReputationToQuest;
+
+        private float questChance;
+
+        public TraderWorker_Eisenberg() : base()
+        {
+            onlineTime = int.Parse(settings.Parameters["onlineTime"].Value);
+            arrivaTime = int.Parse(settings.Parameters["arrivaTime"].Value);
+            questEarlistDay = int.Parse(settings.Parameters["questEarlistDay"].Value);
+            basicDiscount = float.Parse(settings.Parameters["basicDiscount"].Value);
+            minReputationToDiscount = int.Parse(settings.Parameters["minReputationToDiscount"].Value);
+            forceDiscount = float.Parse(settings.Parameters["forceDiscount"].Value);
+            reputationGainForBuy = float.Parse(settings.Parameters["reputationGainForBuy"].Value);
+            maxDiscount = int.Parse(settings.Parameters["maxDiscount"].Value);
+            minReputationToQuest = int.Parse(settings.Parameters["minReputationToQuest"].Value);
+            questChance = float.Parse(settings.Parameters["questChance"].Value);
+        }
 
         public override void FirstInit()
         {
@@ -264,7 +295,7 @@ namespace DarkNET.Traders
                     if(item.Item == null)
                         itemsList.Remove(item);
 
-                    Reputation += (item.CountToTransfer * item.MarketValue) * 0.0015f;
+                    Reputation += (item.CountToTransfer * item.MarketValue) * reputationGainForBuy;
                     needRecalculate = true;
 
                     if (item.Item != null)
@@ -278,15 +309,15 @@ namespace DarkNET.Traders
                 }
             }
             addX += 205;
-            if (GUIUtils.DrawCustomButton(new Rect(rect.x + addX, rect.y + 165, 200, 25), "DarkNetButtons_GoPriceDown".Translate(), (Reputation > 10 || !item.PriceReduced) ? Color.white : Color.gray, "DarkNetButtons_GoPriceDownInfo".Translate()))
+            if (GUIUtils.DrawCustomButton(new Rect(rect.x + addX, rect.y + 165, 200, 25), "DarkNetButtons_GoPriceDown".Translate(), (Reputation > minReputationToDiscount || !item.PriceReduced) ? Color.white : Color.gray, "DarkNetButtons_GoPriceDownInfo".Translate()))
             {
-                if (item.PriceReduced || Reputation < 10)
+                if (item.PriceReduced || Reputation < minReputationToDiscount)
                     return;
 
-                Reputation -= 10;
+                Reputation -= minReputationToDiscount;
 
                 item.PriceReduced = true;
-                item.MarketValue = (int)(item.MarketValue * 0.7f);
+                item.MarketValue = (int)(item.MarketValue * forceDiscount);
             }
             Text.Anchor = TextAnchor.UpperLeft;
 
@@ -352,12 +383,12 @@ namespace DarkNET.Traders
         {
             base.OnDayPassed();
 
-            if(!labQuestIssued && Reputation >= 10)
+            if(!labQuestIssued && Reputation >= minReputationToQuest)
             {
                 int passedDays = Find.TickManager.TicksGame / 60000;
                 if(passedDays > questEarlistDay)
                 {
-                    if(Rand.Chance(0.1f))
+                    if(Rand.Chance(questChance))
                     {
                         GiveQuest();
                     }
