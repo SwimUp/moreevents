@@ -341,9 +341,9 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		<generateCommonality>0</generateCommonality>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		  <researchPrerequisite>MK2Aquilla</researchPrerequisite>
+		  <researchPrerequisite>MK3Esquare</researchPrerequisite>
 		  <skillRequirements>
-			<Crafting>15</Crafting>
+			<Crafting>18</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
 		<statBases>
@@ -365,13 +365,14 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<Plasteel>250</Plasteel>
-			<Hyperweave>100</Hyperweave>
-			<TungstenIngot>50</TungstenIngot>
-			<PalladiumIngot>40</PalladiumIngot>
-			<NickelIngot>80</NickelIngot>
+			<ComponentSpacer>25</ComponentSpacer>
+			<Plasteel>350</Plasteel>
+			<Hyperweave>200</Hyperweave>
+			<TungstenIngot>90</TungstenIngot>
+			<PalladiumIngot>80</PalladiumIngot>
+			<IlmeniteIngot>150</IlmeniteIngot>
 			<CobaltIngot>70</CobaltIngot>
+			<Uranium>70</Uranium>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -422,19 +423,19 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costList>
-			<ComponentSpacer>15</ComponentSpacer>
-			<Plasteel>150</Plasteel>
-			<Hyperweave>80</Hyperweave>
-			<TungstenIngot>30</TungstenIngot>
-			<PalladiumIngot>20</PalladiumIngot>
-			<NickelIngot>60</NickelIngot>
-			<CobaltIngot>30</CobaltIngot>
+			<ComponentSpacer>20</ComponentSpacer>
+			<Plasteel>1800</Plasteel>
+			<Hyperweave>120</Hyperweave>
+			<TungstenIngot>100</TungstenIngot>
+			<PalladiumIngot>30</PalladiumIngot>
+			<NickelIngot>70</NickelIngot>
+			<IlmeniteIngot>30</IlmeniteIngot>
 		</costList>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-		  <researchPrerequisite>MK2Aquilla</researchPrerequisite>
+		  <researchPrerequisite>MK3Esquare</researchPrerequisite>
 		  <skillRequirements>
-			<Crafting>15</Crafting>
+			<Crafting>16</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
 		<thingCategories>

@@ -157,5 +157,8 @@
 	<AdvancedElectricCladding.description>Использование продвинутой электрической обшивки позволит создать дополнительную защиту в ближнем бою
 Позволяет создавать обшивку высокого напряжения.</AdvancedElectricCladding.description>
 
+	<MK3Esquare.label>Мк3 'Эсквайр'</MK3Esquare.label>
+	<MK3Esquare.description>Обновленная версия брони из линии МК. Имеет большой внутренний потенциал</MK3Esquare.description>
+
 
 </LanguageData>

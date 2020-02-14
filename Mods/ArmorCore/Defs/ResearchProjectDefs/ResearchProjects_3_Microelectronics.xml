@@ -45,6 +45,21 @@
 		<researchViewY>0.73</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>MK3Esquare</defName>
+		<label>Mk3 'Esquare'</label>
+		<description>Updated version of the armor from the MK line. It has great internal potential.</description>
+		<baseCost>14000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>MK2Aquilla</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
 
 	<ResearchProjectDef>
 		<defName>BasicEnergyStorage</defName>
@@ -518,14 +533,14 @@ Allows you to create a shield modulator.</description>
 		<label>Electricity and heat</label>
 		<description>Special plates with heating elements powered by electricity for additional heating.
 Allows you to create an electrical heater.</description>
-		<baseCost>12000</baseCost>
+		<baseCost>4000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>3.69</researchViewX>
-		<researchViewY>0.66</researchViewY>
+		<researchViewY>6.87</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -534,14 +549,14 @@ Allows you to create an electrical heater.</description>
 		<label>Electric cladding</label>
 		<description>The use of electric cladding  will create additional protection in close combat
 Allows you to create an low voltage cladding.</description>
-		<baseCost>12000</baseCost>
+		<baseCost>5500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>3.69</researchViewX>
-		<researchViewY>0.66</researchViewY>
+		<researchViewY>7.61</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -550,14 +565,14 @@ Allows you to create an low voltage cladding.</description>
 		<label>Advanced electric cladding</label>
 		<description>The use of advanced electric cladding  will create additional protection in close combat
 Allows you to create an high voltage cladding.</description>
-		<baseCost>12000</baseCost>
+		<baseCost>7000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>ElectricCladding</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>3.69</researchViewX>
-		<researchViewY>0.66</researchViewY>
+		<researchViewX>4.84</researchViewX>
+		<researchViewY>7.46</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->
