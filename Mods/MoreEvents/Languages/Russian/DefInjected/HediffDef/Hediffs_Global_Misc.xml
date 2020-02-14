@@ -77,5 +77,6 @@
   <BlastingBlisters.stages.fermentation.label>ферментирование</BlastingBlisters.stages.fermentation.label>
   <BlastingBlisters.stages.destabilization.label>дестабилизация</BlastingBlisters.stages.destabilization.label>  
 
+  <ElectricShock.label>Электрический шок</ElectricShock.label>
   
 </LanguageData>

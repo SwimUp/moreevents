@@ -145,5 +145,17 @@
 	<EnergyBoots.description>Обувь со встроенными энергетическими усилителями позволит достичь максимального удобства и скорости передвижения.
 Позволяет создавать энергетические ботинки.</EnergyBoots.description>
 
+	<ElectricityHeat.label>Электричество и тепло</ElectricityHeat.label>
+	<ElectricityHeat.description>Специальные пластины с обогревательными элементами, работающими от электричества для дополнительного согревания.
+Позволяет создавать электрический утеплитель.</ElectricityHeat.description>
+
+	<ElectricCladding.label>Электрическое покрытие</ElectricCladding.label>
+	<ElectricCladding.description>Использование электрической обшивки позволит создать дополнительную защиту в ближнем бою
+Позволяет создавать обшивку низкого напряжения.</ElectricCladding.description>
+
+	<AdvancedElectricCladding.label>Продвинутое электрическое покрытие</AdvancedElectricCladding.label>
+	<AdvancedElectricCladding.description>Использование продвинутой электрической обшивки позволит создать дополнительную защиту в ближнем бою
+Позволяет создавать обшивку высокого напряжения.</AdvancedElectricCladding.description>
+
 
 </LanguageData>

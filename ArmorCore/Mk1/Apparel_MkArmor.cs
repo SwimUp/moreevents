@@ -331,13 +331,8 @@ namespace MoreEvents.Things.Mk1
             if (Core == null)
                 return;
 
-            if (FullCharge)
-                return;
+            EnergyCharge = Mathf.Clamp(EnergyCharge + num, 0, CoreComp.PowerCapacity);
 
-            EnergyCharge += num;
-
-            if (EnergyCharge > CoreComp.PowerCapacity)
-                EnergyCharge = CoreComp.PowerCapacity;
         }
 
         public override string DescriptionDetailed

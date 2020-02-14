@@ -182,6 +182,27 @@
 		<Icon>ArmorModules/AntitoxicSeals</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>ElectricHeater</defName>
+		<label>Electric heater</label>
+		<description>Generates heat through the consumption of electricity from the reactor.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_ElectricHeater</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>true</StatListener>
+		<StatAffecter>
+			<li>
+				<key>ComfyTemperatureMin</key>
+				<value>-40</value>
+			</li>
+		</StatAffecter>
+		<ExcludesModules> 
+			<li>ReinforcedArmorCloth</li>
+		</ExcludesModules>
+		<Item>ElectricHeater</Item>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Icon>ArmorModules/ElectricHeater</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
 	<!-- ======================= -->
 	
 	<!-- Tier 2: тело -->
@@ -255,7 +276,7 @@
 	<RimArmorCore.Mk1.ArmorModuleDef>
 		<defName>AdrenalineInjectors</defName>
 		<label>Adrenaline injectors</label>
-		<description>Special injectors that passively inject small doses of adrenaline into the blood. Increases movement speed, aiming and attack power.</description>
+		<description>Special injectors that passively inject small doses of adrenaline into the blood. Increases movement speed, aiming and attack power</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AdrenalineInjectors</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
 		<StatListener>true</StatListener>
@@ -278,13 +299,39 @@
 		<Icon>ArmorModules/AdrenalineInjectors</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>LowVoltageElectrifiedCladding</defName>
+		<label>Low voltage cladding</label>
+		<description>It connects a low voltage to the armor plating, which is why all attackers in melee get a shock effect. Consumes additional energy on impact</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_LowVoltageElectrifiedCladding</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>false</StatListener>
+		<DamageListener>true</DamageListener>
+		<Item>LowVoltageElectrifiedCladding</Item>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/LowVoltageElectrifiedCladding</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>HighVoltageElectrifiedCladding</defName>
+		<label>High voltage cladding</label>
+		<description>It connects high voltage to the armor plating, because of which all attackers in melee take damage from electricity. Consumes additional energy during an attack</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_HighVoltageElectrifiedCladding</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<StatListener>false</StatListener>
+		<DamageListener>true</DamageListener>
+		<Item>HighVoltageElectrifiedCladding</Item>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Icon>ArmorModules/HighVoltageElectrifiedCladding</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
 	<!-- ======================= -->
 	
 	<!-- Tier 3: тело -->
 	<RimArmorCore.Mk1.ArmorModuleDef>
 		<defName>KineticBuffer</defName>
 		<label>Kinetic buffer</label>
-		<description>Metabolism accelerator controls the state of vital systems of the body and injects genetically modified stimulants to increase combat skills and athletic abilities.</description>
+		<description>Metabolism accelerator controls the state of vital systems of the body and injects genetically modified stimulants to increase combat skills and athletic abilities</description>
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_KineticBuffer</workerClass>
 		<ModuleCategory>Body</ModuleCategory>
 		<StatListener>true</StatListener>

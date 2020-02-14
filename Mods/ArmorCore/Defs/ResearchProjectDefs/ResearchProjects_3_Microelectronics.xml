@@ -513,6 +513,55 @@ Allows you to create a shield modulator.</description>
 	</ResearchProjectDef>
 	<!-- ============ -->
 	
+	<ResearchProjectDef>
+		<defName>ElectricityHeat</defName>
+		<label>Electricity and heat</label>
+		<description>Special plates with heating elements powered by electricity for additional heating.
+Allows you to create an electrical heater.</description>
+		<baseCost>12000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>0.66</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ElectricCladding</defName>
+		<label>Electric cladding</label>
+		<description>The use of electric cladding  will create additional protection in close combat
+Allows you to create an low voltage cladding.</description>
+		<baseCost>12000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>0.66</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AdvancedElectricCladding</defName>
+		<label>Advanced electric cladding</label>
+		<description>The use of advanced electric cladding  will create additional protection in close combat
+Allows you to create an high voltage cladding.</description>
+		<baseCost>12000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ElectricCladding</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>0.66</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	<!-- ============ -->
+	
 	<!-- tier 3 -->
 	<ResearchProjectDef>
 		<defName>KineticBuffer</defName>

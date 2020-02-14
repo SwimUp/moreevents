@@ -56,6 +56,7 @@ namespace RimArmorCore.Mk1
         {
             { ThingDefOfLocal.Apparel_MK1Thunder, ThingDefOfLocal.Apparel_MK1ThunderHead },
             { ThingDefOfLocal.Apparel_MK2Aquille, ThingDefOfLocal.Apparel_MK2AquilleHead },
+            { ThingDefOfLocal.Apparel_MK3Esquare, ThingDefOfLocal.Apparel_MK3EsquareHead}
         };
 
         static MKStationWindow()

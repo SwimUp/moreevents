@@ -64,4 +64,13 @@
   <EnergyBoots.label>Энергетические ботинки</EnergyBoots.label>
   <EnergyBoots.description>Обувь, ускоряющая своего владельца за счет сильного сцепления с поверхностью и выпуска небольшого количества энергии. Увеличивает потребление энергии.</EnergyBoots.description>
   
+  <ElectricHeater.label>Электрический утеплитель</ElectricHeater.label>
+  <ElectricHeater.description>Генерирует тепло за счет потребления электричества, получаемого от реактора</ElectricHeater.description>
+  
+  <LowVoltageElectrifiedCladding.label>Обшивка низкого напряжения</LowVoltageElectrifiedCladding.label>
+  <LowVoltageElectrifiedCladding.description>Подключает к обшивке брони низкое напряжение, из-за чего все атакующие в ближнем бою получают эффект шока. Потребляет дпоолнительную энергию при ударе</LowVoltageElectrifiedCladding.description>
+  
+  <HighVoltageElectrifiedCladding.label>Обшивка высокого напряжения</HighVoltageElectrifiedCladding.label>
+  <HighVoltageElectrifiedCladding.description>Подключает к обшивке брони высокое напряжение, из-за чего все атакующие в ближнем бою получают эффект шока и при длительной атаке падают без сознания. Потребляет дпоолнительную энергию при ударе</HighVoltageElectrifiedCladding.description>
+  
 </LanguageData>

@@ -17,5 +17,7 @@ namespace RimArmorCore
         public static ThingDef ExplosionPlus;
         public static ThingDef Apparel_MK2Aquille;
         public static ThingDef Apparel_MK2AquilleHead;
+        public static ThingDef Apparel_MK3Esquare;
+        public static ThingDef Apparel_MK3EsquareHead;
     }
 }

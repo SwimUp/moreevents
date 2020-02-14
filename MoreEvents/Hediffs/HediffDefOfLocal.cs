@@ -35,5 +35,7 @@ namespace MoreEvents
         public static HediffDef ExplosiveBullets;
 
         public static HediffDef BlastingBlisters;
+
+        public static HediffDef ElectricShock;
     }
 }

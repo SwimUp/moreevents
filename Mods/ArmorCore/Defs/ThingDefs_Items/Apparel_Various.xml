@@ -271,7 +271,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		</comps>
 	</ThingDef>
 	
-<ThingDef ParentName="ArmorMKBase">
+	<ThingDef ParentName="ArmorMKBase">
 		<defName>Apparel_MK2AquilleHead</defName>
 		<label>Power Helmet Mk.2 "Aquille"</label>
 		<description>The main improvement of MK.2 compared to MK.1 was a new bib covering the chest and cables leading to the arms. “Aquille” abandoned the pins reinforced with pins and changed the structure of the helmet. Otherwise, Mk.2 remained very similar to its predecessor, Mk.1, and therefore their components are completely interchangeable.</description>
@@ -328,10 +328,10 @@ mobility. The chest cables are covered under the chest plate and as a result are
 	</ThingDef>
 
 	<ThingDef ParentName="ArmorMKBase">
-		<defName>Apparel_MK3Aquille</defName>
-		<thingClass>MoreEvents.Things.Mk1.Apparel_Mk2</thingClass>
-		<label>Power Armor Mk.3 "Aquille"</label>
-		<description>The main improvement of MK.2 compared to MK.1 was a new bib covering the chest and cables leading to the arms. “Aquille” abandoned the pins reinforced with pins and changed the structure of the helmet. Otherwise, Mk.2 remained very similar to its predecessor, Mk.1, and therefore their components are completely interchangeable.</description>
+		<defName>Apparel_MK3Esquare</defName>
+		<thingClass>MoreEvents.Things.Mk1.Apparel_Mk3</thingClass>
+		<label>Power Armor Mk.3 "Esquare"</label>
+		<description>Esquare is a multifunctional expeditionary armor designed specifically for the development of distant corners of the galaxy. New worlds were mastered faster than scientists and engineers managed to adapt protective equipment to local needs. Then it was decided to create the most universal system that allows transferring all the necessary special equipment and equipment to the armor housing. Many elements of the armor became less ductile, which limited mobility, and multiple containers, mounts and external modules increase overall security, even if they remain empty. In the thigh plates, you can install melee weapons or reserve small arms for close range. In the shoulders mounted mechanisms for the issuance of grenades and ammunition. The forearms allow you to mount small-caliber guns directly into the body of the armor. Specialized large-caliber and assault guns have unified mounts for carrying on their backs and are connected to ammunition auto-feeding mechanisms. It is possible to create medical, research and engineering modifications.</description>
 		<techLevel>Spacer</techLevel>
 		<tickerType>Normal</tickerType>
 		<graphicData>
@@ -381,7 +381,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Apparels/Mk2/Mk2</wornGraphicPath>
+			<wornGraphicPath>Things/Apparels/MK3/MK3</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Shell</li>
@@ -412,10 +412,10 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		</comps>
 	</ThingDef>
 	
-<ThingDef ParentName="ArmorMKBase">
-		<defName>Apparel_MK3AquilleHead</defName>
-		<label>Power Helmet Mk.3 "Aquille"</label>
-		<description>The main improvement of MK.2 compared to MK.1 was a new bib covering the chest and cables leading to the arms. “Aquille” abandoned the pins reinforced with pins and changed the structure of the helmet. Otherwise, Mk.2 remained very similar to its predecessor, Mk.1, and therefore their components are completely interchangeable.</description>
+	<ThingDef ParentName="ArmorMKBase">
+		<defName>Apparel_MK3EsquareHead</defName>
+		<label>Power Helmet Mk.3 "Esquare"</label>
+		<description>Esquare is a multifunctional expeditionary armor designed specifically for the development of distant corners of the galaxy. New worlds were mastered faster than scientists and engineers managed to adapt protective equipment to local needs. Then it was decided to create the most universal system that allows transferring all the necessary special equipment and equipment to the armor housing. Many elements of the armor became less ductile, which limited mobility, and multiple containers, mounts and external modules increase overall security, even if they remain empty. In the thigh plates, you can install melee weapons or reserve small arms for close range. In the shoulders mounted mechanisms for the issuance of grenades and ammunition. The forearms allow you to mount small-caliber guns directly into the body of the armor. Specialized large-caliber and assault guns have unified mounts for carrying on their backs and are connected to ammunition auto-feeding mechanisms. It is possible to create medical, research and engineering modifications.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Apparels/MK3/Helmet/helmet</texPath>
@@ -458,7 +458,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Things/Apparels/Mk2/Helmet/helmet</wornGraphicPath>
+			<wornGraphicPath>Things/Apparels/MK3/Helmet/helmet</wornGraphicPath>
 			<layers>
 				<li>Overhead</li>
 			</layers>
