@@ -11,7 +11,7 @@ using Verse;
 
 namespace MoreEvents.Quests
 {
-    public class Quest_BuildNewBase : Quest
+    public class Quest_BuildNewBase : QuestRim.Quest
     {
         public override string CardLabel => "Quest_BuildNewBase_Label".Translate();
 

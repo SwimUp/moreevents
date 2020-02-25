@@ -13,7 +13,7 @@ using Verse.AI.Group;
 
 namespace MoreEvents.Quests
 {
-    public class Quest_KillOrder : Quest
+    public class Quest_KillOrder : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_KillLeader;
 

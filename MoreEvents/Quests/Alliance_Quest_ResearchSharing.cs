@@ -11,7 +11,7 @@ using Verse;
 
 namespace RimOverhaul.Quests
 {
-    public class Alliance_Quest_ResearchSharing : Quest
+    public class Alliance_Quest_ResearchSharing : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 

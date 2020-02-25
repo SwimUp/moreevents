@@ -10,7 +10,7 @@ using Verse;
 
 namespace MoreEvents.Events.AttackFriendlySettlement
 {
-    public class Quest_AttackFriendlySettlement : Quest
+    public class Quest_AttackFriendlySettlement : QuestRim.Quest
     {
         public override string CardLabel => "Quest_AttackFriendlySettlement_CardLabel".Translate();
 

@@ -13,7 +13,7 @@ using Verse.AI.Group;
 
 namespace RimOverhaul.Quests
 {
-    public class Quest_PrisonShipAccident : Quest
+    public class Quest_PrisonShipAccident : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 

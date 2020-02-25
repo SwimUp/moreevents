@@ -9,7 +9,8 @@ using Verse;
 
 namespace MoreEvents.Patch
 {
-    public class Quest_BanditCamp : Quest
+    /*
+    public class Quest_BanditCamp : QuestRim.Quest
     {
         public override string CardLabel => "Quest_BanditCamp_CardLabel".Translate();
 
@@ -56,10 +57,10 @@ namespace MoreEvents.Patch
                 return false;
             }
 
-            Site site = SiteMaker.MakeSite(SiteCoreDefOf.Nothing, SitePartDefOf.Outpost, tile, enemyFaction);
+            Site site = SiteMaker.MakeSite(SitePartDefOf.Outpost, tile, enemyFaction);
             site.sitePartsKnown = true;
             ThingSetMakerParams parms = default(ThingSetMakerParams);
-            parms.totalMarketValueRange = SiteTuning.BanditCampQuestRewardMarketValueRange * SiteTuning.QuestRewardMarketValueThreatPointsFactor.Evaluate(site.desiredThreatPoints);
+            parms.totalMarketValueRange = Rand.Range;
             List<Thing> list = ThingSetMakerDefOf.Reward_StandardByDropPod.root.Generate(parms);
             site.GetComponent<DefeatAllEnemiesQuestComp>().StartQuest(alliedFaction, 18, list);
             int randomInRange = SiteTuning.QuestSiteTimeoutDaysRange.RandomInRange;
@@ -131,4 +132,5 @@ namespace MoreEvents.Patch
             Scribe_References.Look(ref QuestSite, "QuestSite");
         }
     }
+    */
 }

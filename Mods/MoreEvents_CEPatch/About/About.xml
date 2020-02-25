@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>RimOverhaul [CE Patch]</name>
-  <author>FunkyShit</author>
-  <description>RimOverhaul [CE Patch]</description>
-  <supportedVersions><li>1.0</li></supportedVersions>
+	<name>RimOverhaul [CE Patch]</name>
+	<author>FunkyShit</author>
+	<description>RimOverhaul [CE Patch]</description>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
 </ModMetaData>

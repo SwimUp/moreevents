@@ -13,7 +13,7 @@ using Verse;
 
 namespace MoreEvents.Quests
 {
-    public class Quest_MissingPeople : Quest
+    public class Quest_MissingPeople : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_MissingPeople;
 

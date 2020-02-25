@@ -10,7 +10,7 @@ using Verse;
 
 namespace MoreEvents.Quests
 {
-    public class Quest_ThingsHelp : Quest
+    public class Quest_ThingsHelp : QuestRim.Quest
     {
         private Vector2 slider = Vector2.zero;
 

@@ -12,7 +12,7 @@ using Verse.AI.Group;
 
 namespace MoreEvents.Quests
 {
-    public class Quest_SuppressionRebellion : Quest
+    public class Quest_SuppressionRebellion : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 
@@ -225,11 +225,6 @@ namespace MoreEvents.Quests
             faction.loadID = Find.UniqueIDsManager.GetNextFactionID();
 
             Find.FactionManager.Add(faction);
-
-            foreach(var map in Find.Maps)
-            {
-                map.pawnDestinationReservationManager.RegisterFaction(faction);
-            }
 
             return faction;
         }

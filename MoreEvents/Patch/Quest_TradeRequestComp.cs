@@ -9,7 +9,8 @@ using Verse;
 
 namespace MoreEvents.Patch
 {
-    public class Quest_TradeRequestComp : Quest
+    /*
+    public class Quest_TradeRequestComp : QuestRim.Quest
     {
         public override string CardLabel => "Quest_TradeRequestComp_CardLabel".Translate();
 
@@ -70,4 +71,5 @@ namespace MoreEvents.Patch
             Scribe_Values.Look(ref Tile, "Tile");
         }
     }
+    */
 }

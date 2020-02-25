@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
@@ -11,6 +11,7 @@ using Verse;
 
 namespace MoreEvents.Patch
 {
+    /*
     [HarmonyPatch(typeof(TradeRequestComp))]
     [HarmonyPatch("Fulfill")]
     public class TradeRequestCompPatch
@@ -270,5 +271,7 @@ namespace MoreEvents.Patch
             }
             return false;
         }
+        
     }
+    */
 }

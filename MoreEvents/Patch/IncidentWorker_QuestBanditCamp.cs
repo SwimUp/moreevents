@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using QuestRim;
 using RimWorld;
 using RimWorld.Planet;
@@ -10,6 +10,7 @@ using Verse;
 
 namespace MoreEvents.Patch
 {
+    /*
     [HarmonyPatch(typeof(DefeatAllEnemiesQuestComp))]
     [HarmonyPatch("GiveRewardsAndSendLetter")]
     public class DefeatAllEnemiesQuestCompPatch
@@ -132,5 +133,5 @@ namespace MoreEvents.Patch
             return null;
         }
     }
-
+    */
 }

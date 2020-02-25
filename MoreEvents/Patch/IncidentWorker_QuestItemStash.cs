@@ -9,7 +9,7 @@ using Verse;
 
 namespace MoreEvents.Patch
 {
-
+    /*
     public class IncidentWorker_QuestItemStash : IncidentWorker
     {
         protected override bool CanFireNowSub(IncidentParms parms)
@@ -83,5 +83,7 @@ namespace MoreEvents.Patch
             GenThing.TryAppendSingleRewardInfo(ref text, items);
             return text;
         }
+        
     }
+    */
 }
