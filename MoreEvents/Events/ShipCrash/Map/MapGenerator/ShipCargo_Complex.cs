@@ -11,11 +11,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
     public class ShipCargo_Complex : Ship_Cargo
     {
         public override CargoType PartType => CargoType.Complex;
-        public override string TexturePath => @"Map/cargo_complex";
+    //    public override string TexturePath => @"Map/cargo_complex";
 
-        public override string ExpandLabel => Translator.Translate("ShipCargo_Complex_ExpandLabel");
+   //     public override string ExpandLabel => Translator.Translate("ShipCargo_Complex_ExpandLabel");
 
-        public override string Description => Translator.Translate("ShipCargo_Complex_Description");
+    //    public override string Description => Translator.Translate("ShipCargo_Complex_Description");
 
         private int minSupply => int.Parse(settings.Parameters["ShipCargo_Complex_MinSupply"].Value);
         private int maxSupply => int.Parse(settings.Parameters["ShipCargo_Complex_MaxSupply"].Value);

@@ -45,4 +45,7 @@
   <DoMapChange_title>Change biomes to the desert gradually (1/0)</DoMapChange_title>
   <DoMapChange>If active (1), then every few days random tiles will change their biome to the desert</DoMapChange>
   
+  <Temperature_title>Temperature</Temperature_title>
+  <Temperature>Temperature</Temperature>
+  
 </LanguageData>

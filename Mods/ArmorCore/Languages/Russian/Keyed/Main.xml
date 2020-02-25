@@ -102,4 +102,6 @@
 	<ArmorModuleWorker_LowVoltageElectrifiedCladding>- противник получает урон, когда атакует вас</ArmorModuleWorker_LowVoltageElectrifiedCladding>
 	<ArmorModuleWorker_HighVoltageElectrifiedCladding>- противник получает урон и электрический шок, когда атакует вас</ArmorModuleWorker_HighVoltageElectrifiedCladding>
 	
+	<ArmorModuleWorker_SolarPanel>Пассивная зарядка батареи: {0}</ArmorModuleWorker_SolarPanel>
+	
 </LanguageData>

@@ -33,11 +33,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
             }
         }
         private Texture2D expandTexture;
-        public abstract string TexturePath { get; }
+        public virtual string TexturePath => @"Map/cargo_complex";
 
-        public abstract string ExpandLabel { get; }
+        public virtual string ExpandLabel => Translator.Translate("Ship_ExpandLabel");
 
-        public abstract string Description { get; }
+        public virtual string Description => Translator.Translate("Ship_Description");
 
         public abstract void RunGenerator(ShipCrashWorker main, Verse.Map map, Faction owner);
     }

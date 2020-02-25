@@ -1146,6 +1146,192 @@ Opens the last level of modules for armor.</description>
 	</ThingDef>
 	
 	<ThingDef>
+		<defName>SimpleSolarPanels</defName>
+		<label>Simple solar panels</label>
+		<description>Module for Armor\n\nSimple solar panels for passive battery charging</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/SimpleSolarPanels</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>1000</MarketValue>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>2</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>AutonomousCharging</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Uranium>20</Uranium>
+			<Chromium>25</Chromium>
+			<NickelIngot>80</NickelIngot>
+			<CopperIngot>140</CopperIngot>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>AdvancedSolarPanels</defName>
+		<label>Advanced solar panels</label>
+		<description>Module for Armor\n\nAdvanced solar panels with next-generation cells for faster charging</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/AdvancedSolarPanels</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<MarketValue>1300</MarketValue>
+			<MaxHitPoints>70</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>AdvancedSolarPanels</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>14</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Uranium>15</Uranium>
+			<Chromium>35</Chromium>
+			<NickelIngot>140</NickelIngot>
+			<IlmeniteIngot>40</IlmeniteIngot>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>CULLSolarPanels</defName>
+		<label>CULL solar panels</label>
+		<description>Module for Armor\n\nPanels created using a special two-layer technology for additional capture of sunlight</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/CULLSolarPanels</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>18000</WorkToMake>
+			<MarketValue>1800</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>CULLSolarPanels</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>6</ComponentSpacer>
+			<Uranium>45</Uranium>
+			<Chromium>55</Chromium>
+			<CobaltIngot>120</CobaltIngot>
+			<TungstenIngot>50</TungstenIngot>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
 		<defName>Plato</defName>
 		<label>Echo System 'Plato'</label>
 		<description>Module for Armor\n\nThe echo system “Plato” allows you to control the situation by 360 degrees due to the many helmet-mounted sensors located throughout the helmet. Therefore, there will be no unforeseen attacks from the back\n\nIncreases Dodge Chance</description>

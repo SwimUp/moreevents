@@ -160,5 +160,17 @@
 	<MK3Esquare.label>Мк3 'Эсквайр'</MK3Esquare.label>
 	<MK3Esquare.description>Обновленная версия брони из линии МК. Имеет большой внутренний потенциал</MK3Esquare.description>
 
+	<AutonomousCharging.label>Автономная зарядка</AutonomousCharging.label>
+	<AutonomousCharging.description>Использование солнечных панелей позволит автономно заряжать батареи
+Позволяет создавать простые солнечные панели.</AutonomousCharging.description>
+
+	<AdvancedSolarPanels.label>Продвинутые солнечные панели</AdvancedSolarPanels.label>
+	<AdvancedSolarPanels.description>Улучшение технологии солнечных панелей позволит создавать панели с повышенным кпд
+Позволяет создавать продвинутые солнечные панели.</AdvancedSolarPanels.description>
+
+	<CULLSolarPanels.label>CULL солнечные панели</CULLSolarPanels.label>
+	<CULLSolarPanels.description>Использование двухслойной технологии позволит вывести портативные солнечные панели на новый уровень
+Позволяет создавать CULL солнечные панели.</CULLSolarPanels.description>
+
 
 </LanguageData>

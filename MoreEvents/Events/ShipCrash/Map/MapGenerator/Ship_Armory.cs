@@ -15,11 +15,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
         public override ShipSiteType SiteType => ShipSiteType.Armory;
 
-        public override string TexturePath => @"Map/armory";
+    //    public override string TexturePath => @"Map/armory";
 
-        public override string ExpandLabel => Translator.Translate("Ship_Armory_ExpandLabel");
+    //    public override string ExpandLabel => Translator.Translate("Ship_Armory_ExpandLabel");
 
-        public override string Description => Translator.Translate("Ship_Armory_Description");
+    //    public override string Description => Translator.Translate("Ship_Armory_Description");
 
         private ShipCrashWorker main;
 

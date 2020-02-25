@@ -45,7 +45,7 @@ namespace MoreEvents.Things
                     Widgets.FillableBar(rect3, fillPercent, FullShieldBarTex, EmptyShieldBarTex, doBorder: false);
                     Text.Font = GameFont.Small;
                     Text.Anchor = TextAnchor.MiddleCenter;
-                    Widgets.Label(rect3, Apparel.EnergyCharge.ToString("f0") + " / 100");
+                    Widgets.Label(rect3,  $"{Apparel.EnergyCharge.ToString("f0")} / {Apparel.CoreComp.PowerCapacity}");
                     Text.Anchor = TextAnchor.UpperLeft;
                 }
                 else

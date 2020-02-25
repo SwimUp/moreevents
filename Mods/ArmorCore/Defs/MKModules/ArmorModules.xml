@@ -27,11 +27,24 @@
 		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_BasicFiltrationSystem</workerClass>
 		<ModuleCategory>Head</ModuleCategory>
 		<StationLevelRequired>1</StationLevelRequired>
+		
 		<ExcludesModules> 
 			<li>AdvancedFiltrationSystem</li>
 		</ExcludesModules>
 		<Item>BasicFiltrationSystem</Item>
 		<Icon>ArmorModules/BasicFiltrationSystem</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>SimpleSolarPanels</defName>
+		<label>Simple solar panels</label>
+		<description>Simple solar panels for passive battery charging</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_SimpleSolarPanels</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<WornExtraListener>true</WornExtraListener>
+		<StationLevelRequired>1</StationLevelRequired>
+		<Item>SimpleSolarPanels</Item>
+		<Icon>ArmorModules/SimpleSolarPanels</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
 	<!-- ======================= -->
@@ -69,6 +82,32 @@
 		<Item>AdvancedFiltrationSystem</Item>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>AdvancedSolarPanels</defName>
+		<label>Advanced solar panels</label>
+		<description>Advanced solar panels with next-generation cells for faster charging</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_AdvancedSolarPanels</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<WornExtraListener>true</WornExtraListener>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Item>AdvancedSolarPanels</Item>
+		<Icon>ArmorModules/AdvancedSolarPanels</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<!-- ======================= -->
+	
+	<!-- Tier 3: голова -->
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>CULLSolarPanels</defName>
+		<label>CULL solar panels</label>
+		<description>Panels created using a special two-layer technology for additional capture of sunlight</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_CULLSolarPanels</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<WornExtraListener>true</WornExtraListener>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Item>CULLSolarPanels</Item>
+		<Icon>ArmorModules/CULLSolarPanels</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
 	<!-- ======================= -->
 	
 	<!-- Tier 1: тело -->

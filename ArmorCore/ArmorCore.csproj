@@ -93,10 +93,13 @@
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ActivePlates.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AdrenalineInjectors.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AdvancedFiltrationSystem.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_CULLSolarPanels.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AntitoxicSeals.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_BasicFiltrationSystem.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_CombatExoskeleton.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ElectricHeater.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_AdvancedSolarPanels.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_SolarPanel.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_EnergyBoots.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_FirstAidInterface.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_KineticBuffer.cs" />
@@ -110,6 +113,7 @@
     <Compile Include="Mk1\Workers\ArmorModuleWorker_LowVoltageElectrifiedCladding.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ShieldModulator.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ShockAbsorbers.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_SimpleSolarPanels.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_Stimulants.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ReinforcedPlates.cs" />
     <Compile Include="Mk1\Workers\ArmorWorkerModule_MedicalExoskeleton.cs" />

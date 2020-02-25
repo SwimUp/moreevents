@@ -29,11 +29,8 @@
 
 	<EnemyOnTheMap>На карте еще остались враги. Вы не можете собрать караван сейчас.</EnemyOnTheMap>
 
-	<Ship_Living_ExpandLabel>Обломок корабля</Ship_Living_ExpandLabel>
-	<Ship_Living_Description>Обломок жилого сектора</Ship_Living_Description>
-
-	<Ship_Armory_ExpandLabel>Обломок корабля</Ship_Armory_ExpandLabel>
-	<Ship_Armory_Description>Обломок оружейного сектора</Ship_Armory_Description>
+	<Ship_ExpandLabel>Обломок корабля</Ship_ExpandLabel>
+	<Ship_Description>Обломок корабля. Сектор неизвестен.</Ship_Description>
 
 	<FireSpreadIs>Пожар усилится через (дней): </FireSpreadIs>
 	<CaravanEnteredMassiveFire>Караван прибыл к</CaravanEnteredMassiveFire>

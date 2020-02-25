@@ -45,4 +45,7 @@
   <DoMapChange_title>Изменять постепенно биомы на пустыню (1/0)</DoMapChange_title>
   <DoMapChange>Если активно (1), то каждые несколько дней случайные тайлы будут изменять свой биом на пустыню</DoMapChange>
   
+  <Temperature_title>Температура</Temperature_title>
+  <Temperature>Температура</Temperature>
+  
 </LanguageData>

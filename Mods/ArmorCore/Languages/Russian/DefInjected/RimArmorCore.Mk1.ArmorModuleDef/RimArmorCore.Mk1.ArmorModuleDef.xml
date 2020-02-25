@@ -73,4 +73,13 @@
   <HighVoltageElectrifiedCladding.label>Обшивка высокого напряжения</HighVoltageElectrifiedCladding.label>
   <HighVoltageElectrifiedCladding.description>Подключает к обшивке брони высокое напряжение, из-за чего все атакующие в ближнем бою получают эффект шока и при длительной атаке падают без сознания. Потребляет дпоолнительную энергию при ударе</HighVoltageElectrifiedCladding.description>
   
+  <SimpleSolarPanels.label>Простые солнечные панели</SimpleSolarPanels.label>
+  <SimpleSolarPanels.description>Простые солнечные панели для пассивной зарядки батарей</SimpleSolarPanels.description>
+  
+  <AdvancedSolarPanels.label>Продвинутые солнечные панели</AdvancedSolarPanels.label>
+  <AdvancedSolarPanels.description>Продвинутые солнечные панели с применением новых технологий и материалов</AdvancedSolarPanels.description>
+  
+  <CULLSolarPanels.label>CULL солнечные панели</CULLSolarPanels.label>
+  <CULLSolarPanels.description>Панели, созданные по специальный двухслойной технологии для дополнительного улавливания солнечного света</CULLSolarPanels.description>
+  
 </LanguageData>

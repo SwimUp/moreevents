@@ -58,5 +58,10 @@ namespace RimArmorCore.Mk1
         {
             yield break;
         }
+
+        public virtual void Notify_CoreChanged(Thing newCore)
+        {
+
+        }
     }
 }

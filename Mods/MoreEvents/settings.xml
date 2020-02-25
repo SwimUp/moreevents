@@ -65,6 +65,14 @@
 		<useCustomLabels>false</useCustomLabels>
 	</EventSettings>
 	<EventSettings>
+		<key>NoSun</key>
+		<useCustomLabels>false</useCustomLabels>
+		<parameters>
+			<Param>Temperature</Param>
+			<Value>-200</Value>
+		</parameters>
+	</EventSettings>
+	<EventSettings>
 		<key>SuperHeatWave</key>
 		<useCustomLabels>false</useCustomLabels>
 	</EventSettings>

@@ -14,11 +14,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
 
         public override ShipSiteType SiteType => ShipSiteType.Living;
 
-        public override string TexturePath => @"Map/living";
+    //    public override string TexturePath => @"Map/living";
 
-        public override string ExpandLabel => Translator.Translate("Ship_Living_ExpandLabel");
+    //    public override string ExpandLabel => Translator.Translate("Ship_Living_ExpandLabel");
 
-        public override string Description => Translator.Translate("Ship_Living_Description");
+    //    public override string Description => Translator.Translate("Ship_Living_Description");
 
         private ShipCrashWorker main;
 

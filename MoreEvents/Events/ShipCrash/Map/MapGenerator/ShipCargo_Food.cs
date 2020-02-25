@@ -11,11 +11,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
     public class ShipCargo_Food : Ship_Cargo
     {
         public override CargoType PartType => CargoType.Food;
-        public override string TexturePath => @"Map/cargo_food";
+    //    public override string TexturePath => @"Map/cargo_food";
 
-        public override string ExpandLabel => Translator.Translate("ShipCargo_Food_ExpandLabel");
+    //    public override string ExpandLabel => Translator.Translate("ShipCargo_Food_ExpandLabel");
 
-        public override string Description => Translator.Translate("ShipCargo_Food_Description");
+    //    public override string Description => Translator.Translate("ShipCargo_Food_Description");
 
         private int minSupply => int.Parse(settings.Parameters["ShipCargo_Food_MinSupply"].Value);
         private int maxSupply => int.Parse(settings.Parameters["ShipCargo_Food_MaxSupply"].Value);

@@ -72,7 +72,9 @@ namespace MoreEvents.Things.Mk1
 
         public abstract int[] SlotsNumber { get; }
 
-        public virtual List<ArmorSlot> Slots { get
+        public virtual List<ArmorSlot> Slots
+        {
+            get
             {
                 if (slots == null)
                 {
@@ -81,7 +83,8 @@ namespace MoreEvents.Things.Mk1
                 }
 
                 return slots;
-            } }
+            }
+        }
 
         protected List<ArmorSlot> slots;
 
@@ -324,6 +327,17 @@ namespace MoreEvents.Things.Mk1
         {
             Core = newCore;
             coreComp = null;
+
+            foreach(var slot in Slots)
+            {
+                foreach(var module in slot.Modules)
+                {
+                    if(module.Module != null)
+                    {
+                        module.Module.Notify_CoreChanged(newCore);
+                    }
+                }
+            }
         }
 
         public void AddCharge(float num)
@@ -332,7 +346,6 @@ namespace MoreEvents.Things.Mk1
                 return;
 
             EnergyCharge = Mathf.Clamp(EnergyCharge + num, 0, CoreComp.PowerCapacity);
-
         }
 
         public override string DescriptionDetailed

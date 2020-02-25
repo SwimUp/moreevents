@@ -11,11 +11,11 @@ namespace MoreEvents.Events.ShipCrash.Map.MapGenerator
     public class ShipCargo_Mining : Ship_Cargo
     {
         public override CargoType PartType => CargoType.Mining;
-        public override string TexturePath => @"Map/cargo_mining";
+    //    public override string TexturePath => @"Map/cargo_mining";
 
-        public override string ExpandLabel => Translator.Translate("ShipCargo_Mining_ExpandLabel");
+    //    public override string ExpandLabel => Translator.Translate("ShipCargo_Mining_ExpandLabel");
 
-        public override string Description => Translator.Translate("ShipCargo_Mining_Description");
+    //    public override string Description => Translator.Translate("ShipCargo_Mining_Description");
 
         private int minSupply => int.Parse(settings.Parameters["ShipCargo_Mining_MinSupply"].Value);
         private int maxSupply => int.Parse(settings.Parameters["ShipCargo_Mining_MaxSupply"].Value);

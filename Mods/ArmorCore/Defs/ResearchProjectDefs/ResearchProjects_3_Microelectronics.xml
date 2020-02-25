@@ -287,6 +287,23 @@ Allows you to create a basic filtration system.</description>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
+		<defName>AutonomousCharging</defName>
+		<label>Autonomous charging</label>
+		<description>Using solar panels will allow you to autonomously charge batteries
+Allows you to create a simple solar panels.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>AutonomousEnergySources</li>
+			<li>SolarPanels</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>5.47</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
 		<defName>ProtectiveMaterial</defName>
 		<label>Protective material</label>
 		<description>For physical protection from the effects of weather and human activities, we need material that can protect against bad weather and radiation.
@@ -480,6 +497,22 @@ Allows you to create a echo system 'Plato'</description>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
+		<defName>AdvancedSolarPanels</defName>
+		<label>Advanced solar panels</label>
+		<description>Improving the technology of solar panels will allow the creation of panels with increased efficiency
+Allows you to create a advanced solar panels</description>
+		<baseCost>5500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AutonomousCharging</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>6.05</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
 		<defName>JointImprovement</defName>
 		<label>Joint improvement</label>
 		<description>Creating motorized joints can greatly facilitate movement in a suit and increase speed.
@@ -526,7 +559,6 @@ Allows you to create a shield modulator.</description>
 		<researchViewY>0.66</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
-	<!-- ============ -->
 	
 	<ResearchProjectDef>
 		<defName>ElectricityHeat</defName>
@@ -655,6 +687,22 @@ Allows you to create energy boots.</description>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>4.84</researchViewX>
 		<researchViewY>2.74</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CULLSolarPanels</defName>
+		<label>CULL solar panels</label>
+		<description>The use of two-layer technology will bring portable solar panels to a new level
+Allows you to create a CULL solar panels.</description>
+		<baseCost>7000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AdvancedSolarPanels</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>6.79</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->
