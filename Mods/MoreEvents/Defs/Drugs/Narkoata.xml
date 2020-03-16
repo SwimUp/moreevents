@@ -70,6 +70,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>NarkoataTolerance</defName>
 		<label>Narkoata tolerance</label>
+		<description>This drug was created in the tropics from tea leaves, which cause hallucinations when set on fire. They were found by space scientists on the planet Zeme 1444-B, where tribes using this drug were discovered. Residents said that when setting fire to normcoats, the spirits of the forest endow him with speed, agility, fearlessness and the ability to see in the dark. At the beginning of the production of the drug, the manager liked the design and he decided to leave it. If the drug is taken only once, the person has good visibility in the dark, uplifting and increased vigor. The only side effect is the constant smell of fresh plants, which is pleasant and relaxing. If you abuse the substance, then a strong drug intoxication appears. There is an increase in mood, a tendency to communicate. A high chance of getting addiction, the possibility of loss of consciousness from an overdose.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -104,6 +105,7 @@
 		<defName>NarkoataHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Buzz</label>
+		<description>This drug was created in the tropics from tea leaves, which cause hallucinations when set on fire. They were found by space scientists on the planet Zeme 1444-B, where tribes using this drug were discovered. Residents said that when setting fire to normcoats, the spirits of the forest endow him with speed, agility, fearlessness and the ability to see in the dark. At the beginning of the production of the drug, the manager liked the design and he decided to leave it. If the drug is taken only once, the person has good visibility in the dark, uplifting and increased vigor. The only side effect is the constant smell of fresh plants, which is pleasant and relaxing. If you abuse the substance, then a strong drug intoxication appears. There is an increase in mood, a tendency to communicate. A high chance of getting addiction, the possibility of loss of consciousness from an overdose.</description>
 		<labelNoun>Oh I, I feel the heat and I
 I touch the flesh and bone
 And I feel the kiss of fire
@@ -154,6 +156,7 @@ Too fast to live, too fast to die.</description>
 		<defName>NarkoataAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Narkoata addiction</label>
+		<description>This drug was created in the tropics from tea leaves, which cause hallucinations when set on fire. They were found by space scientists on the planet Zeme 1444-B, where tribes using this drug were discovered. Residents said that when setting fire to normcoats, the spirits of the forest endow him with speed, agility, fearlessness and the ability to see in the dark. At the beginning of the production of the drug, the manager liked the design and he decided to leave it. If the drug is taken only once, the person has good visibility in the dark, uplifting and increased vigor. The only side effect is the constant smell of fresh plants, which is pleasant and relaxing. If you abuse the substance, then a strong drug intoxication appears. There is an increase in mood, a tendency to communicate. A high chance of getting addiction, the possibility of loss of consciousness from an overdose.</description>
 		<causesNeed>Chemical_Narkoata</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

@@ -15,8 +15,7 @@ namespace QuestRim
         private List<IncidentCategoryDef> allowedCategories = new List<IncidentCategoryDef>
         {
             IncidentCategoryDefOf.ThreatBig,
-            IncidentCategoryDefOf.ThreatSmall,
-            IncidentCategoryDefOf.RaidBeacon
+            IncidentCategoryDefOf.ThreatSmall
         };
 
         public Faction Faction;
@@ -232,7 +231,7 @@ namespace QuestRim
                         Dictionary<IIncidentTarget, int> dictionary;
                         IIncidentTarget target;
                         (dictionary = incCountsForTarget)[target = item.parms.target] = dictionary[target] + 1;
-                        if (item.def.category == IncidentCategoryDefOf.ThreatBig || item.def.category == IncidentCategoryDefOf.RaidBeacon)
+                        if (item.def.category == IncidentCategoryDefOf.ThreatBig)
                         {
                             threatBigCount++;
                         }

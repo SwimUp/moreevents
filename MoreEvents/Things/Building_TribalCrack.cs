@@ -142,7 +142,7 @@ namespace RimOverhaul.Things
 
             lord = LordMaker.MakeNewLord(TribalFaction, new LordJob_AssaultColony(TribalFaction), Map);
 
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.Tribal_Warrior, TribalFaction, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.Tribal_Warrior, TribalFaction, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, false, 0, null, 1, null, null, null, null);
             for (int i = 0; i < count; i++)
             {
                 if (spawnedMobs.Count >= 25)

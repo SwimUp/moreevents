@@ -202,7 +202,7 @@ namespace MoreEvents.Events.AttackFriendlySettlement
             ThingSetMakerParams parms = default(ThingSetMakerParams);
             parms.countRange = new IntRange(2, 10);
             parms.totalMarketValueRange = totalValue;
-            return ThingSetMakerDefOf.Reward_ItemStashQuestContents.root.Generate(parms);
+            return ThingSetMakerDefOf.Reward_ItemsStandard.root.Generate(parms);
         }
 
         public void TransferColonists(bool toPlayer)

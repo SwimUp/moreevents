@@ -45,6 +45,7 @@
 		<defName>AbsorbentCarbonHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Absorbent carbon</label>
+		<description>Helps accelerate the breakdown of toxic substances</description>
 		<labelNoun>Absorbent carbon</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

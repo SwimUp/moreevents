@@ -52,7 +52,7 @@ namespace MoreEvents.Events.SiegeCamp
                 CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "Comm_SiegeCampTitle".Translate(), "Comm_SiegeCampDesc".Translate(), incident: def);
                 site.Dialog = dialog;
 
-                SendStandardLetter(site);
+                SendStandardLetter(parms, site);
 
                 return true;
             }

@@ -39,5 +39,8 @@
 	
 	<GasHeater.label>Газовый обогреватель</GasHeater.label>
 	<GasHeater.description>Газовый обогреватель использует сжиженный газ для выделения тепла. Эффективнее электрического, но требует газ.</GasHeater.description>
+	
+	<GasSunLamp.label>Газовая солнечная лампа</GasSunLamp.label>
+	<GasSunLamp.description>Передовая промышленная лампа, используемая для постоянного освещения пространства вокруг.</GasSunLamp.description>
 
 </LanguageData>

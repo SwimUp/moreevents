@@ -127,7 +127,7 @@ namespace MoreEvents.Events
             }
 
             Caravan caravan = parms.target as Caravan;
-            string letterText = string.Format(def.letterText, (caravan == null) ? "yourCaravan".Translate() : caravan.Name, pairFactions.First.Name, pairFactions.Second.Name);
+            string letterText = string.Format(def.letterText, (caravan == null) ? "yourCaravan".Translate().ToString() : caravan.Name, pairFactions.First.Name, pairFactions.Second.Name);
             Find.LetterStack.ReceiveLetter(def.letterLabel, letterText, def.letterDef);
             if (flag)
             {

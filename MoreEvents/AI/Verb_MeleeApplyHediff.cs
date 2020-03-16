@@ -53,7 +53,7 @@ namespace RimOverhaul.AI
             yield return mainDinfo;
             if (surpriseAttack && ((verbProps.surpriseAttack != null && !verbProps.surpriseAttack.extraMeleeDamages.NullOrEmpty()) || (tool != null && tool.surpriseAttack != null && !tool.surpriseAttack.extraMeleeDamages.NullOrEmpty())))
             {
-                IEnumerable<ExtraMeleeDamage> extraDamages = Enumerable.Empty<ExtraMeleeDamage>();
+                IEnumerable<ExtraDamage> extraDamages = Enumerable.Empty<ExtraDamage>();
                 if (verbProps.surpriseAttack != null && verbProps.surpriseAttack.extraMeleeDamages != null)
                 {
                     extraDamages = extraDamages.Concat(verbProps.surpriseAttack.extraMeleeDamages);
@@ -62,7 +62,7 @@ namespace RimOverhaul.AI
                 {
                     extraDamages = extraDamages.Concat(tool.surpriseAttack.extraMeleeDamages);
                 }
-                foreach (ExtraMeleeDamage extraDamage in extraDamages)
+                foreach (ExtraDamage extraDamage in extraDamages)
                 {
                     int extraDamageAmount = GenMath.RoundRandom(extraDamage.AdjustedDamageAmount(this, base.CasterPawn));
                     float extraDamageArmorPenetration = extraDamage.AdjustedArmorPenetration(this, base.CasterPawn);

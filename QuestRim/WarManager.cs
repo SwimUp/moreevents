@@ -79,7 +79,7 @@ namespace QuestRim
 
             labelRect.y += 50;
             y += 50;
-            Widgets.Label(labelRect, "WarManager_DrawWarInfo_WarMembers".Translate(currentWar.DefendAlliance == null ? "WarManager_NoAlliance".Translate() : currentWar.DefendAlliance.Name));
+            Widgets.Label(labelRect, "WarManager_DrawWarInfo_WarMembers".Translate(currentWar.DefendAlliance == null ? "WarManager_NoAlliance".Translate().ToString() : currentWar.DefendAlliance.Name));
             y += 30;
             Rect defenderRect = new Rect(rect.x, y, rect.width, 250);
             Rect scrollVertRectFact = new Rect(0, 0, rect.x, currentWar.DefendingFactions.Count * 35);
@@ -125,8 +125,8 @@ namespace QuestRim
             Widgets.Label(titleRect, war.WarName);
             Text.Font = GameFont.Tiny;
             Rect rect2 = new Rect(15, y + 22, rect.width - 30, 50);
-            Widgets.Label(rect2, "WarManager_Factions".Translate(war.WarGoalDef.LabelCap, war.AssaultFactions.Count, war.AttackedAlliance == null ? "WarManager_NoAlliance".Translate() : war.AttackedAlliance.Name, war.DefendingFactions.Count,
-                 war.DefendAlliance == null ? "WarManager_NoAlliance".Translate() : war.DefendAlliance.Name));
+            Widgets.Label(rect2, "WarManager_Factions".Translate(war.WarGoalDef.LabelCap, war.AssaultFactions.Count, war.AttackedAlliance == null ? "WarManager_NoAlliance".Translate().ToString() : war.AttackedAlliance.Name, war.DefendingFactions.Count,
+                 war.DefendAlliance == null ? "WarManager_NoAlliance".Translate().ToString() : war.DefendAlliance.Name));
 
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;

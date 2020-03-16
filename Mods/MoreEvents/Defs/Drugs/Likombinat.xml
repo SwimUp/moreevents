@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>LikombinatTolerance</defName>
 		<label>Likombinat tolerance</label>
+		<description>An experimental drug that can cause powerful side effects and dependence. Nevertheless, presumably allows you to bring the reaction to an incredible level. However, the effect cannot last for a long time, requiring constant recharge. If you stop taking the drug, dangerous side effects are possible.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>LikombinatHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Unstoppable rage</label>
+		<description>An experimental drug that can cause powerful side effects and dependence. Nevertheless, presumably allows you to bring the reaction to an incredible level. However, the effect cannot last for a long time, requiring constant recharge. If you stop taking the drug, dangerous side effects are possible.</description>
 		<labelNoun>Unstoppable rage</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -102,6 +104,7 @@
 		<defName>LikombinatAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Likombinat addiction</label>
+		<description>An experimental drug that can cause powerful side effects and dependence. Nevertheless, presumably allows you to bring the reaction to an incredible level. However, the effect cannot last for a long time, requiring constant recharge. If you stop taking the drug, dangerous side effects are possible.</description>
 		<causesNeed>Chemical_Likombinat</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

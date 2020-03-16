@@ -8,5 +8,9 @@
 	<GetLeqGasCycl.label>Сделать баллон с сжиженным природным газом</GetLeqGasCycl.label>
 	<GetLeqGasCycl.description>Сделать баллон и наполнить его сжиженным природным газом</GetLeqGasCycl.description>
 	<GetLeqGasCycl.jobString>Делает баллон с сжиженным природным газом</GetLeqGasCycl.jobString>
+	
+	<GetFuelfromCoal.label>Синтезировать химическое топливо</GetFuelfromCoal.label>
+	<GetFuelfromCoal.description>Синтезировать химическое топливо</GetFuelfromCoal.description>
+	<GetFuelfromCoal.jobString>Синтезирует химическое топливо</GetFuelfromCoal.jobString>
 
 </LanguageData>

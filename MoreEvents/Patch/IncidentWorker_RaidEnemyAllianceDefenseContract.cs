@@ -16,7 +16,7 @@ namespace RimOverhaul.Patch
     {
         static void Postfix(ref bool __result, IncidentParms parms)
         {
-            if (__result)
+            if (__result && parms != null)
             {
                 Map map = parms.target as Map;
                 if (map != null)
@@ -27,12 +27,12 @@ namespace RimOverhaul.Patch
                         if (inter != null)
                         {
                             Alliance alliance = inter.Alliance;
-                            if (alliance != null)
+                            if (alliance != null && alliance.AllianceAgreements != null)
                             {
                                 DefenseContractComp defenseContractComp = alliance.AllianceAgreements.FirstOrDefault(x => x is DefenseContractComp) as DefenseContractComp;
                                 if (defenseContractComp != null)
                                 {
-                                    if (defenseContractComp.OwnerFaction == inter)
+                                    if (defenseContractComp.OwnerFaction != null && defenseContractComp.OwnerFaction == inter)
                                     {
                                         defenseContractComp.SendHelp(parms);
                                     }

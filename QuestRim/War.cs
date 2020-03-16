@@ -363,7 +363,7 @@ namespace QuestRim
                 attackedAlliance.AffectGoodwillWith(-15);
             }
 
-            Find.LetterStack.ReceiveLetter("War_WarIsStartedTitle".Translate(WarName), "War_WarIsStartedDesc".Translate(DeclaredWarFaction.Faction.Name, AttackedAlliance == null ? "WarManager_NoAlliance".Translate() : AttackedAlliance.Name, DefendingFaction.Faction.Name, DefendAlliance == null ? "WarManager_NoAlliance".Translate() : DefendAlliance.Name, WarName, WarGoalDef.LabelCap), LetterDefOf.ThreatBig);
+            Find.LetterStack.ReceiveLetter("War_WarIsStartedTitle".Translate(WarName), "War_WarIsStartedDesc".Translate(DeclaredWarFaction.Faction.Name, AttackedAlliance == null ? "WarManager_NoAlliance".Translate().ToString() : AttackedAlliance.Name, DefendingFaction.Faction.Name, DefendAlliance == null ? "WarManager_NoAlliance".Translate().ToString() : DefendAlliance.Name, WarName, WarGoalDef.LabelCap), LetterDefOf.ThreatBig);
 
             nextTicksSituations = Find.TickManager.TicksGame + 25000;
 

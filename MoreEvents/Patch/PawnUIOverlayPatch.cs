@@ -11,7 +11,7 @@ using Verse;
 namespace MoreEvents.Patch
 {
     [HarmonyPatch(typeof(PawnRenderer))]
-    [HarmonyPatch("RenderPawnAt", new[] { typeof(Vector3), typeof(RotDrawMode), typeof(bool) })]
+    [HarmonyPatch("RenderPawnAt", new[] { typeof(Vector3)})]
     [StaticConstructorOnStartup]
     public class PawnUIOverlayPatch
     {

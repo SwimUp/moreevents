@@ -17,7 +17,7 @@ namespace RimOverhaul.Patch
             {
                 foreach(var comp in apparel.AllComps)
                 {
-                    comp.Notify_SignalReceived(new Signal("apparel-wear", new object[] { __instance.pawn }));
+                    comp.Notify_SignalReceived(new Signal("apparel-wear", __instance.pawn));
                 }
             }
         }
@@ -33,7 +33,7 @@ namespace RimOverhaul.Patch
             {
                 foreach (var comp in apparel.AllComps)
                 {
-                    comp.Notify_SignalReceived(new Signal("apparel-unwear", new object[] { __instance.pawn }));
+                    comp.Notify_SignalReceived(new Signal("apparel-unwear", __instance.pawn));
                 }
             }
         }

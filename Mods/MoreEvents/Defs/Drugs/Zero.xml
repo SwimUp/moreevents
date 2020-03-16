@@ -54,6 +54,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>ZeroTolerance</defName>
 		<label>Zero tolerance</label>
+		<description>It is one of the most expensive drugs on the black market, due to the sharp increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits and shots. It causes severe forms of addiction. During withdrawal, a person has a strong the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who survived after that, and if they survived, then did not represent further benefit.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -68,6 +69,7 @@
 		<defName>ZeroHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Time dilation</label>
+		<description>It is one of the most expensive drugs on the black market, due to the sharp increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits and shots. It causes severe forms of addiction. During withdrawal, a person has a strong the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who survived after that, and if they survived, then did not represent further benefit.</description>
 		<labelNoun>I see their actions, they are so slow ... But I'm faster!</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -107,6 +109,7 @@
 		<defName>ZeroAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Zero addiction</label>
+		<description>It is one of the most expensive drugs on the black market, due to the sharp increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits and shots. It causes severe forms of addiction. During withdrawal, a person has a strong the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who survived after that, and if they survived, then did not represent further benefit.</description>
 		<causesNeed>Chemical_Zero</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -156,6 +159,7 @@
 		<defName>ZeroBrainDamage</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Severe damage to the brain lobes</label>
+		<description>It is one of the most expensive drugs on the black market, due to the sharp increasing the soldier’s combat effectiveness and survival. Time slows down, which allows you to predict hits and shots. It causes severe forms of addiction. During withdrawal, a person has a strong the mood will fall, and time will practically stop. If you do not take the substance on time, the drug will cause severe intoxication and damage the brain. Not many people who survived after that, and if they survived, then did not represent further benefit.</description>
 		<labelNoun>Parietal and occipital lobe severely damaged</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

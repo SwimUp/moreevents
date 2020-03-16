@@ -37,7 +37,7 @@ namespace MoreEvents.Events.ClimateBomb
             CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "ClimateBombTitle".Translate(), "ClimateBombDesc".Translate(), incident: def);
             comp.CommunicationDialog = dialog;
 
-            SendStandardLetter(site);
+            SendStandardLetter(parms, site);
 
             return true;
         }

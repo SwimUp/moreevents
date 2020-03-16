@@ -153,19 +153,20 @@
 		<rotatable>false</rotatable>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>15000</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
+			<MarketValue>1200</MarketValue>
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(4,4)</size>
 		<costList>
-			<IlmeniteIngot>10</IlmeniteIngot>
-			<Steel>50</Steel>
-			<IronIngot>250</IronIngot>
+			<CopperIngot>120</CopperIngot>
+			<IronIngot>200</IronIngot>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<Chromium>65</Chromium>
+			<NickelIngot>80</NickelIngot>
 		</costList>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasPlant">
@@ -176,7 +177,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
-				<basePowerConsumption>3000</basePowerConsumption>
+				<basePowerConsumption>1500</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		</comps>
@@ -216,20 +217,20 @@
 		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>12000</WorkToBuild>
+			<WorkToBuild>9000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
+			<MarketValue>800</MarketValue>
 		</statBases>
 		<tickerType>Rare</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(2,2)</size>
 		<costList>
-			<IlmeniteIngot>5</IlmeniteIngot>
-			<Steel>60</Steel>
-			<IronIngot>250</IronIngot>
-			<ComponentIndustrial>6</ComponentIndustrial>
-			<Chromium>25</Chromium>
-			<NickelIngot>45</NickelIngot>
+			<IlmeniteIngot>10</IlmeniteIngot>
+			<Steel>100</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Chromium>50</Chromium>
+			<CobaltIngot>65</CobaltIngot>
 		</costList>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasCooler">
@@ -241,7 +242,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
-				<basePowerConsumption>1500</basePowerConsumption>
+				<basePowerConsumption>500</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		</comps>
@@ -281,13 +282,13 @@
 			<WorkToBuild>10000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
+			<MarketValue>350</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(4,2)</size>
 		<costList>
-			<Steel>40</Steel>
-			<NickelIngot>80</NickelIngot>
+			<Steel>80</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<CopperIngot>100</CopperIngot>
 		</costList>
@@ -336,19 +337,19 @@
 		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>17000</WorkToBuild>
+			<WorkToBuild>15000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
+			<MarketValue>550</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(6,3)</size>
 		<costList>
-			<IlmeniteIngot>5</IlmeniteIngot>
-			<Steel>70</Steel>
-			<NickelIngot>150</NickelIngot>
+			<IlmeniteIngot>10</IlmeniteIngot>
+			<ComponentSpacer>1</ComponentSpacer>
 			<ComponentIndustrial>3</ComponentIndustrial>
-			<CopperIngot>250</CopperIngot>
+			<CopperIngot>150</CopperIngot>
 		</costList>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasTask">
@@ -400,24 +401,24 @@
 		</inspectorTabs>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>20000</WorkToBuild>
+			<WorkToBuild>18000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
+			<MarketValue>1000</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(2,2)</size>
 		<costList>
-			<IlmeniteIngot>15</IlmeniteIngot>
-			<Steel>90</Steel>
-			<Chromium>150</Chromium>
-			<ComponentIndustrial>12</ComponentIndustrial>
-			<CopperIngot>250</CopperIngot>
-			<NickelIngot>120</NickelIngot>
+			<PalladiumIngot>20</PalladiumIngot>
+			<Plasteel>40</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<recipes>
 			<li>GetHydrogen</li>
 			<li>GetLeqGasCycl</li>
+			<li>GetFuelfromCoal</li>
 		</recipes>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasStation">
@@ -431,12 +432,16 @@
 						<key>GetLeqGasCycl</key>
 						<value>10</value>
 					</li>
+					<li>
+						<key>GetFuelfromCoal</key>
+						<value>100</value>
+					</li>
 				</GasModifier>
 			</li>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
-				<basePowerConsumption>1200</basePowerConsumption>
+				<basePowerConsumption>800</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_HeatPusher">
 				<compClass>CompHeatPusherPowered</compClass>
@@ -470,7 +475,7 @@
 		<researchPrerequisites>
 			<li>GasIndustry</li>
 		</researchPrerequisites>
-		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -499,17 +504,17 @@
 			<WorkToBuild>25000</WorkToBuild>
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
+			<MarketValue>2500</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<canOverlapZones>false</canOverlapZones>
 		<size>(12,4)</size>
 		<costList>
-			<IlmeniteIngot>15</IlmeniteIngot>
-			<Chromium>150</Chromium>
-			<ComponentIndustrial>15</ComponentIndustrial>
-			<CopperIngot>350</CopperIngot>
-			<NickelIngot>220</NickelIngot>
-			<Steel>120</Steel>
+			<TungstenIngot>50</TungstenIngot>
+			<Chromium>110</Chromium>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Steel>200</Steel>
 		</costList>
 		<comps>
 			<li Class="RimOverhaul.Gas.CompProperties_GasPowerPlant">
@@ -518,7 +523,7 @@
 			</li>
 			<li Class="CompProperties_Power">
 				<compClass>RimOverhaul.Gas.CompGasPowerPlant</compClass>
-				<basePowerConsumption>-2500</basePowerConsumption>
+				<basePowerConsumption>-5000</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
 			<li Class="CompProperties_Flickable" />
@@ -535,7 +540,7 @@
 		<researchPrerequisites>
 			<li>ElectricityAndGas</li>
 		</researchPrerequisites>
-		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
 	</ThingDef>
 	
  <ThingDef ParentName="BuildingBase">
@@ -569,18 +574,16 @@
       <li>BuildingsTemperature</li>
     </thingCategories>
     <statBases>
-      <WorkToBuild>1000</WorkToBuild>
+      <WorkToBuild>3000</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>6</Mass>
       <Flammability>0.5</Flammability>
     </statBases>
     <tickerType>Normal</tickerType>
     <costList>
-			<Chromium>20</Chromium>
-			<ComponentIndustrial>3</ComponentIndustrial>
-			<CopperIngot>150</CopperIngot>
-			<NickelIngot>50</NickelIngot>
-			<Steel>120</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<CopperIngot>100</CopperIngot>
+			<NickelIngot>15</NickelIngot>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <placeWorkers>
@@ -614,5 +617,59 @@
     </researchPrerequisites>
     <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
   </ThingDef>
+  
+  
+   <ThingDef ParentName="LampBase">
+    <defName>GasSunLamp</defName>
+    <label>Gas sun lamp</label>
+    <description>An advanced industrial lamp used to constantly illuminate the space around.</description>
+	<thingClass>Building_SunLamp</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/LampSun</texPath>
+    </graphicData>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <WorkToBuild>500</WorkToBuild>
+      <Mass>5.5</Mass>
+    </statBases>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+	  <NickelIngot>20</NickelIngot>
+	  <IronIngot>30</IronIngot>
+    </costList>
+      <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>10</fuelConsumptionRate>
+        <fuelCapacity>10.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>LiquefiedNaturalGasCylinder</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(127,255,212,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+	<specialDisplayRadius>5.8</specialDisplayRadius>
+    <designationCategory>GasProduction</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <researchPrerequisites>
+      <li>ElectricityAndGas</li>
+	  <li>Hydroponics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+  
+  
+
+
 
 </Defs>

@@ -47,7 +47,7 @@ namespace MoreEvents
             int duration = Mathf.RoundToInt(def.durationDays.RandomInRange * 60000f);
             GameCondition cond = GameConditionMaker.MakeCondition(def.gameCondition, duration);
             gameConditionManager.RegisterCondition(cond);
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
             return true;
         }
     }

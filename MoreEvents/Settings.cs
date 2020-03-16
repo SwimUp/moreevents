@@ -56,7 +56,7 @@ namespace MoreEvents
         public string Name => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).LabelCap : $"{Key}_Title".Translate();
 
         [XmlIgnore]
-        public string Description => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).letterText : $"{Key}_Desc".Translate();
+        public string Description => UseCustomLabels == false ? DefDatabase<IncidentDef>.GetNamed(Key).letterText : $"{Key}_Desc".Translate().ToString();
 
         [XmlElement("useCustomLabels")]
         public bool UseCustomLabels = false;

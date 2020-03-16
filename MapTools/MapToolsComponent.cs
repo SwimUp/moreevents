@@ -46,6 +46,9 @@ namespace MapTools
                     Log.Message($"Gas tankers --> {net.GasTankers.Count}");
                     Log.Message($"===============");
                 }
+
+                Find.TickManager.TogglePaused();
+
             }
         }
     }

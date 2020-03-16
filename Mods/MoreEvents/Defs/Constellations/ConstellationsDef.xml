@@ -127,20 +127,6 @@
 	</MoreEvents.ConstellationsDef>
 
 	<MoreEvents.ConstellationsDef>
-		<defName>Constellation_Craft</defName>
-		<label>Созвездие Кузница Гефеста</label> 
-		<description>В небе воссияло созвездие Кузница Гефеста. Это событие зажигает азарт в глазах ваших ремесленников. Каждое существо ощущает прилив сил.</description>
-		<Conditions>
-		</Conditions>
-		<Effects>
-			<li>Craft_Effect</li>
-		</Effects>
-		<Inspirations>
-			<li>Constellations_Frenzy_Craft</li>
-		</Inspirations>
-	</MoreEvents.ConstellationsDef>
-
-	<MoreEvents.ConstellationsDef>
 		<defName>Constellation_Cooking</defName>
 		<label>Созвездие Чаша</label> 
 		<description>В небе воссияло созвездие Чаша. Это событие открывает кулинарные секреты перед вашими поворами. Каждое существо ощущает прилив сил.</description>

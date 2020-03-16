@@ -281,7 +281,7 @@ namespace MoreEvents.Quests
             int downedCount = Site.Map.mapPawns.AllPawnsSpawned.Where(p => p.Faction != null && p.Faction == Faction.OfAncientsHostile && p.Downed).Count();
 
             int additionalValue = Mathf.Clamp(downedCount * 70, 150, 1500);
-            List<Thing> additionalThings = ThingSetMakerDefOf.Reward_ItemStashQuestContents.root.Generate(new ThingSetMakerParams() { totalMarketValueRange = new FloatRange(additionalValue, additionalValue) });
+            List<Thing> additionalThings = ThingSetMakerDefOf.Reward_ItemsStandard.root.Generate(new ThingSetMakerParams() { totalMarketValueRange = new FloatRange(additionalValue, additionalValue) });
 
             StringBuilder builder = new StringBuilder();
             foreach(var thing in additionalThings)

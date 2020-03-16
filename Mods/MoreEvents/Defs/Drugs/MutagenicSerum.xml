@@ -40,6 +40,7 @@
 		<defName>MutagenicSerumHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Gene improvement</label>
+		<description>A solution of special viruses, slightly radioactive liquids, as well as complex chemicals. When injected into the blood, it begins to replace the DNA chains of the carrier with more advanced ones, often obtained artificially. The process is accompanied by very strong unpleasant sensations, and the introduction of a large dose can be fatal. Origin: The prototype of the drug is sometimes created during the transition of civilization from the industrial world to the utopian, but due to a serious violation of ethical standards, including because animal experimentation is impossible, the very existence of the drug is washed away from history, few can get a “recipe” for this preparation, and even more so to refine and sell, so you can not hope to ever make such a concentrate yourself.</description>
 		<labelNoun>Gene improvement</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -157,6 +158,7 @@
 		<defName>MutagenicSerumDebuffHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Gene restructuring</label>
+		<description>A solution of special viruses, slightly radioactive liquids, as well as complex chemicals. When injected into the blood, it begins to replace the DNA chains of the carrier with more advanced ones, often obtained artificially. The process is accompanied by very strong unpleasant sensations, and the introduction of a large dose can be fatal. Origin: The prototype of the drug is sometimes created during the transition of civilization from the industrial world to the utopian, but due to a serious violation of ethical standards, including because animal experimentation is impossible, the very existence of the drug is washed away from history, few can get a “recipe” for this preparation, and even more so to refine and sell, so you can not hope to ever make such a concentrate yourself.</description>
 		<labelNoun>Gene restructuring</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

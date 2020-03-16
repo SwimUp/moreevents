@@ -38,7 +38,7 @@ namespace RimOverhaul.Events.PlaceBattle
 
             Find.WorldObjects.Add(placeBattle);
 
-            SendStandardLetter(placeBattle);
+            SendStandardLetter(parms, placeBattle);
 
             return true;
         }

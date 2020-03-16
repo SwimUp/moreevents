@@ -9,9 +9,7 @@ namespace MoreEvents
         public static IncidentDef Flashstorm;
         public static IncidentDef HeatWave;
         public static IncidentDef ColdSnap;
-        public static IncidentDef Quest_BanditCamp;
         public static IncidentDef PsychicEmanatorShipPartCrash;
-        public static IncidentDef Quest_ItemStash;
         public static IncidentDef ResourcePodCrash;
         /*=======================*/
 

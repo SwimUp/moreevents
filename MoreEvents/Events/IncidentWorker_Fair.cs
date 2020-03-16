@@ -57,7 +57,7 @@ namespace RimOverhaul.Events
 
             Find.WorldObjects.Add(fairPlace);
 
-            SendStandardLetter(fairPlace);
+            SendStandardLetter(parms, fairPlace);
 
             return true;
         }

@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>DextromitaineTolerance</defName>
 		<label>Dextromitaine tolerance</label>
+		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug, Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>DextromitaineHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Occipital lobe stimulation</label>
+		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug, Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
 		<labelNoun>Occipital lobe stimulation</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -98,6 +100,7 @@
 		<defName>DextromitainePostfactor</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Exhausted organism</label>
+		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug, Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
 		<labelNoun>Exhausted organism</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -122,6 +125,7 @@
 		<defName>DextromitaineAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Dextromitaine addiction</label>
+		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug, Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
 		<causesNeed>Chemical_Dextromitaine</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -145,6 +149,7 @@
 	<ChemicalDef>
 		<defName>DextromitaineChemical</defName>
 		<label>Dextromitaine</label>
+		<description>Psychostimulant used to increase concentration. Due to its composition, it is able to repeatedly increase the speed of manipulation. However, it has several disadvantages. So, after the action of the drug, Subjects observed mental lethargy and increased drowsiness. Perfect for lightning attacks, but does not last long. Quickly addictive and painful breaking.</description>
 		<addictionHediff>DextromitaineAddiction</addictionHediff>
 		<toleranceHediff>DextromitaineTolerance</toleranceHediff>
 		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>

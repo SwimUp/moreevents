@@ -64,7 +64,7 @@ namespace MoreEvents.Events.ShipCrash
                 ShipCrash_Controller.MakeShipPart(generator, tileID, f);
             }
 
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
 
             CommunicationDialog dialog = QuestsManager.Communications.AddCommunication(QuestsManager.Communications.UniqueIdManager.GetNextDialogID(), "Comm_ShipCrashTitle".Translate(), "Comm_ShipCrashDesc".Translate(), incident: def);
 

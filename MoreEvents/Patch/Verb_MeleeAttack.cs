@@ -26,7 +26,7 @@ namespace RimOverhaul.Patch
                     {
                         foreach (var comp in thing.AllComps)
                         {
-                            comp.Notify_SignalReceived(new Signal(AttackSignalTag, new object[] { target.Thing, __instance.CasterPawn }));
+                            comp.Notify_SignalReceived(new Signal(AttackSignalTag, target.Thing, __instance.CasterPawn));
                         }
                     }
                 }

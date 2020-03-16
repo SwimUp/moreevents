@@ -161,7 +161,7 @@ namespace RimOverhaul.Alliances
             Widgets.Label(new Rect(inRect.x, y, inRect.width, 30), "TradeSchedulingAgreementWindow_SelectSettlementLabel".Translate());
             y += 31;
             Text.Font = GameFont.Medium;
-            string settlementInfo = settlement == null ? string.Empty : "TradeSchedulingAgreementWindow_SelectedSettlement".Translate(settlement.Name, factionSettlements[settlement].ToString("f2"));
+            string settlementInfo = settlement == null ? string.Empty : "TradeSchedulingAgreementWindow_SelectedSettlement".Translate(settlement.Name, factionSettlements[settlement].ToString("f2")).ToString();
             if (GUIUtils.DrawCustomButton(new Rect(inRect.x, y, inRect.width, 30), settlementInfo, Color.white))
             {
                 List<FloatMenuOption> settlements = new List<FloatMenuOption>();

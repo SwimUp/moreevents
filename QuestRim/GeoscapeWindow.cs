@@ -498,7 +498,7 @@ namespace QuestRim
 
                 Rect rectAdd = new Rect(660, 340, 300, 180);
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(660, 310, 300, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate() : currentQuest.AdditionalQuestContentString);
+                Widgets.Label(new Rect(660, 310, 300, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate().ToString() : currentQuest.AdditionalQuestContentString);
                 Text.Anchor = TextAnchor.UpperLeft;
                 currentQuest.DrawAdditionalOptions(rectAdd);
             }
@@ -834,7 +834,7 @@ namespace QuestRim
             Rect rect2 = new Rect(15, y + 22, rect.width - 20, 50);
             FactionRelationKind kindWithPlayer = faction.Faction.PlayerRelationKind;
             Alliance alliance = faction.Alliance;
-            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign(), faction.Trust, "AllianceInformation".Translate(alliance == null ? "NoAllianceAlias".Translate() : alliance.Name)));
+            Widgets.Label(rect2, "RelationsWithPlayer".Translate(kindWithPlayer.GetLabel(), faction.Faction.PlayerGoodwill.ToStringWithSign(), faction.Trust, "AllianceInformation".Translate(alliance == null ? "NoAllianceAlias".Translate().ToString() : alliance.Name)));
 
             Text.Font = GameFont.Small;
             Widgets.DrawHighlightIfMouseover(r);

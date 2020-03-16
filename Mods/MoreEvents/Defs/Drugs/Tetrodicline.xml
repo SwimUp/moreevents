@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>TetrodiclineTolerance</defName>
 		<label>Tetrodicline tolerance</label>
+		<description>A drug that affects the brain activity of neurons, allowing you to double the speed of learning and remembering new knowledge. It is worth remembering that the consumption of body resources is comparable to its work, which is also reflected in the action of the drug. It is highly addictive.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>TetrodiclineHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Tetrodicline</label>
+		<description>A drug that affects the brain activity of neurons, allowing you to double the speed of learning and remembering new knowledge. It is worth remembering that the consumption of body resources is comparable to its work, which is also reflected in the action of the drug. It is highly addictive.</description>
 		<labelNoun>Tetrodicline</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -127,6 +129,7 @@
 		<defName>TetrodiclineAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Tetrodicline addiction</label>
+		<description>A drug that affects the brain activity of neurons, allowing you to double the speed of learning and remembering new knowledge. It is worth remembering that the consumption of body resources is comparable to its work, which is also reflected in the action of the drug. It is highly addictive.</description>
 		<causesNeed>Chemical_Tetrodicline</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

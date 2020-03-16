@@ -126,7 +126,7 @@ namespace MoreEvents.Things
 
             lord = LordMaker.MakeNewLord(Faction.OfInsects, new LordJob_DefendBase(Faction.OfInsects, this.Position), Map);
 
-            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveSpelopede, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
+            PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveSpelopede, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, false, 0, null, 1, null, null, null, null);
             for (int i = 0; i < count; i++)
             {
                 if (totalMobs <= 0)
@@ -244,7 +244,7 @@ namespace MoreEvents.Things
 
             if(!KingIsSpawn && this.HitPoints <= 500)
             {
-                PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveBeetleKing, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
+                PawnGenerationRequest request = new PawnGenerationRequest(PawnKindDefOfLocal.CaveBeetleKing, Faction.OfInsects, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, false, 0, null, 1, null, null, null, null);
                 Pawn pawn = PawnGenerator.GeneratePawn(request);
                 spawnedMobs.Add(pawn);
                 GenSpawn.Spawn(pawn, this.Position, Map);

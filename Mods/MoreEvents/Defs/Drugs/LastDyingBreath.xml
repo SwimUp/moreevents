@@ -35,6 +35,7 @@
 		<defName>LastDyingBreathHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>"Last dying breath"</label>
+		<description>Strong mechanites placed in a compact package that block pain and prevent a person from getting injured after use, covering the entire body and forming a mobile exoskeleton. Nevertheless, as soon as the action of mehanites ceases, a person will die, failing to recover after fleeting rearrangements of the body.</description>
 		<labelNoun>"Last dying breath"</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

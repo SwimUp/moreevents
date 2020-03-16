@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>EntotizinTolerance</defName>
 		<label>Entotizin tolerance</label>
+		<description>Resin-like viscous substance used mainly by snipers. The drug significantly increases the shooter's potential, increasing visual acuity and vigor. There is a chance of addiction, which is offset by its beneficial properties.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>EntotizinHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Entotizin</label>
+		<description>Resin-like viscous substance used mainly by snipers. The drug significantly increases the shooter's potential, increasing visual acuity and vigor. There is a chance of addiction, which is offset by its beneficial properties.</description>
 		<labelNoun>Entotizin</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -91,6 +93,7 @@
 		<defName>EntotizinAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Entotizin addiction</label>
+		<description>Resin-like viscous substance used mainly by snipers. The drug significantly increases the shooter's potential, increasing visual acuity and vigor. There is a chance of addiction, which is offset by its beneficial properties.</description>
 		<causesNeed>Chemical_Entotizin</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

@@ -11,8 +11,8 @@ Allows you to create an electric arc furnace to produce cobalt, nickel, chromium
 		<prerequisites>
 			<li>BasicOreProcessing</li>
 		</prerequisites>
-		<researchViewX>1</researchViewX>
-		<researchViewY>4.41</researchViewY>
+		<researchViewX>4</researchViewX>
+		<researchViewY>3.95</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -25,8 +25,8 @@ Allows you to create plasteel and titanium.</description>
 		<prerequisites>
 			<li>AdvancedOreProcessing</li>
 		</prerequisites>
-		<researchViewX>1</researchViewX>
-		<researchViewY>5.08</researchViewY>
+		<researchViewX>5</researchViewX>
+		<researchViewY>4.05</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -101,6 +101,22 @@ Allows you to create a large tanker and gas cylinders.</description>
 			<li>GasIndustry</li>
 		</prerequisites>
 		<researchViewX>2.68</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ChemicalSynthesis</defName>
+		<label>Chemical synthesis</label>
+		<description>Improve the processing system that allows you to use chemical synthesis.</description>
+		<baseCost>1200</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>GasIndustry</tab>
+		<prerequisites>
+			<li>GasIndustry</li>
+			<li>GasToHeat</li>
+			<li>BiofuelRefining</li>
+		</prerequisites>
+		<researchViewX>1.74</researchViewX>
 		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
 

@@ -54,8 +54,8 @@ namespace MoreEvents.Events
                 string str = (item.equipment == null || item.equipment.Primary == null) ? "unarmed" : item.equipment.Primary.LabelCap;
                 stringBuilder.AppendLine(item.KindLabel + " - " + str);
             }
-            string letterLabel = GetLetterLabel(parms);
-            string letterText = GetLetterText(parms, list);
+            TaggedString letterLabel = GetLetterLabel(parms);
+            TaggedString letterText = GetLetterText(parms, list);
             PawnRelationUtility.Notify_PawnsSeenByPlayer_Letter(list, ref letterLabel, ref letterText, GetRelatedPawnsInfoLetterText(parms), informEvenIfSeenBefore: true);
             List<TargetInfo> list2 = new List<TargetInfo>();
             if (parms.pawnGroups != null)
@@ -78,8 +78,8 @@ namespace MoreEvents.Events
             {
                 list2.Add(list[0]);
             }
-            Find.LetterStack.ReceiveLetter(letterLabel, letterText, GetLetterDef(), list2, parms.faction, stringBuilder.ToString());
-            MakeLords(parms, list);
+            SendStandardLetter(letterLabel, letterText, GetLetterDef(), parms, list2);
+            parms.raidStrategy.Worker.MakeLords(parms, list);
             LessonAutoActivator.TeachOpportunity(ConceptDefOf.EquippingWeapons, OpportunityType.Critical);
             if (!PlayerKnowledgeDatabase.IsComplete(ConceptDefOf.ShieldBelts))
             {
@@ -99,7 +99,7 @@ namespace MoreEvents.Events
             return true;
         }
 
-        protected override void ResolveRaidStrategy(IncidentParms parms, PawnGroupKindDef groupKind)
+        public override void ResolveRaidStrategy(IncidentParms parms, PawnGroupKindDef groupKind)
         {
             parms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
         }

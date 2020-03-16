@@ -9,9 +9,9 @@ namespace RimOverhaul.Gas
 {
     public class PlaceWorker_GasPlant : PlaceWorker
     {
-        public override AcceptanceReport AllowsPlacing(BuildableDef checkingDef, IntVec3 loc, Rot4 rot, Map map, Thing thingToIgnore = null)
+        public override AcceptanceReport AllowsPlacing(BuildableDef checkingDef, IntVec3 loc, Rot4 rot, Map map, Thing thingToIgnore = null, Thing thing = null)
         {
-            Thing thing = map.thingGrid.ThingAt(loc, ThingDefOfLocal.GasWell);
+            thing = map.thingGrid.ThingAt(loc, ThingDefOfLocal.GasWell);
             if (thing == null || thing.Position != loc)
             {
                 return "MustPlaceOnGasWell".Translate();

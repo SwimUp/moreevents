@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>MaxBrainTolerance</defName>
 		<label>MaxBrain tolerance</label>
+		<description>A home-made drug made from extracts of psycholist and Devil's mushroom is designed for short-term improvement in brain function and consciousness. When taking the drug for two to three days, it significantly increases the speed of mental work, concentration and mental stability. If consumed more than 1 time per month, addiction to the drug can occur, which is fraught with serious consequences that are difficult to overcome.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>MaxBrainHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Expanded consciousness</label>
+		<description>A home-made drug made from extracts of psycholist and Devil's mushroom is designed for short-term improvement in brain function and consciousness. When taking the drug for two to three days, it significantly increases the speed of mental work, concentration and mental stability. If consumed more than 1 time per month, addiction to the drug can occur, which is fraught with serious consequences that are difficult to overcome.</description>
 		<labelNoun>Expanded consciousness</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -93,6 +95,7 @@
 		<defName>MaxBrainPostfactor</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>'boost your brain' post factor</label>
+		<description>A home-made drug made from extracts of psycholist and Devil's mushroom is designed for short-term improvement in brain function and consciousness. When taking the drug for two to three days, it significantly increases the speed of mental work, concentration and mental stability. If consumed more than 1 time per month, addiction to the drug can occur, which is fraught with serious consequences that are difficult to overcome.</description>
 		<labelNoun>'boost your brain' post factor</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -129,6 +132,7 @@
 		<defName>MaxBrainAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>'boost your brain' addiction</label>
+		<description>A home-made drug made from extracts of psycholist and Devil's mushroom is designed for short-term improvement in brain function and consciousness. When taking the drug for two to three days, it significantly increases the speed of mental work, concentration and mental stability. If consumed more than 1 time per month, addiction to the drug can occur, which is fraught with serious consequences that are difficult to overcome.</description>
 		<causesNeed>Chemical_MaxBrain</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

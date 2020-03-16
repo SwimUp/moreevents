@@ -54,6 +54,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>AshesWaterTolerance</defName>
 		<label>Ashes water tolerance</label>
+		<description>The special herbs and ashes from the nuclear bombardment jungle dissolved in Go-juice cause a short-term effect of superhigh regeneration with powerful side effects, but if your colonist is about to die in a couple of hours, this is the only way.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.010</severityPerDay>
@@ -78,6 +79,7 @@
 		<defName>AshesWaterHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Super regeneration</label>
+		<description>The special herbs and ashes from the nuclear bombardment jungle dissolved in Go-juice cause a short-term effect of superhigh regeneration with powerful side effects, but if your colonist is about to die in a couple of hours, this is the only way.</description>
 		<labelNoun>Super regeneration</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -104,6 +106,7 @@
 		<defName>AshesWaterAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Ashes water addiction</label>
+		<description>The special herbs and ashes from the nuclear bombardment jungle dissolved in Go-juice cause a short-term effect of superhigh regeneration with powerful side effects, but if your colonist is about to die in a couple of hours, this is the only way.</description>
 		<causesNeed>Chemical_AshesWater</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

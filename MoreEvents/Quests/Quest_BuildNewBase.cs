@@ -53,6 +53,12 @@ namespace MoreEvents.Quests
             }
         }
 
+        public void Enter()
+        {
+            Entered = true;
+            UnlimitedTime = true;
+        }
+
         public override ThingFilter GetQuestThingFilter()
         {
             ThingFilter filter = new ThingFilter();

@@ -42,6 +42,7 @@
 		<defName>AndomorphineHigh</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Andomorphine</label>
+		<description>A potent drug from the opium group, obtained synthetically, causing large-scale changes in brain functions in the consumer. When used, it blocks pain receptors and covers the body of the spruce with a noticeable layer of mechanites, which serve to protect against injuries and rapid regeneration. The drug cannot be removed from the body and it must be used throughout the rest of life to prevent irreversible changes in the body.</description>
 		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -82,6 +83,7 @@
 		<defName>AndomorphineAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>andomorphine need</label>
+		<description>A potent drug from the opium group, obtained synthetically, causing large-scale changes in brain functions in the consumer. When used, it blocks pain receptors and covers the body of the spruce with a noticeable layer of mechanites, which serve to protect against injuries and rapid regeneration. The drug cannot be removed from the body and it must be used throughout the rest of life to prevent irreversible changes in the body.</description>
 		<causesNeed>Chemical_Andomorphine</causesNeed>
 		<everCurableByItem>false</everCurableByItem>
 		<stages>

@@ -44,7 +44,7 @@ namespace RimOverhaul.Gss
             List<Pawn> outPawns = new List<Pawn>();
             foreach (PawnKindDef kind in selectedKinds)
             {
-                PawnGenerationRequest request = new PawnGenerationRequest(kind, GssFaction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, true, false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, null);
+                PawnGenerationRequest request = new PawnGenerationRequest(kind, GssFaction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, true, false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false);
                 Pawn pawn = PawnGenerator.GeneratePawn(request);
                 outPawns.Add(pawn);
 
@@ -94,7 +94,7 @@ namespace RimOverhaul.Gss
             List<Pawn> outPawns = new List<Pawn>();
             foreach (PawnKindDef kind in selectedKinds)
             {
-                PawnGenerationRequest request = new PawnGenerationRequest(kind, GssFaction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, true, false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, null);
+                PawnGenerationRequest request = new PawnGenerationRequest(kind, GssFaction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, true, false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false);
                 Pawn pawn = PawnGenerator.GeneratePawn(request);
                 outPawns.Add(pawn);
 

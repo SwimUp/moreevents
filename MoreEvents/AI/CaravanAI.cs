@@ -113,10 +113,23 @@ namespace RimOverhaul.AI
                 queueActions.RemoveLast();
             }
 
-            Caravan playerCaravan = Find.WorldObjects.PlayerControlledCaravanAt(Tile);
-            if (playerCaravan != null)
+            if (!Find.WorldObjects.AnySettlementAt(Tile))
             {
-                caravanAction.Arrived(playerCaravan);
+                Caravan playerCaravan = Find.WorldObjects.PlayerControlledCaravanAt(Tile);
+                if (playerCaravan != null)
+                {
+                    caravanAction.Arrived(playerCaravan);
+                }
+            }
+
+            if(Home != null && Home.Destroyed)
+            {
+                Find.WorldObjects.Remove(this);
+            }
+
+            if(Faction != null && Faction.defeated)
+            {
+                Find.WorldObjects.Remove(this);
             }
         }
 

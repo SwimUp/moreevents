@@ -3,7 +3,6 @@ using Verse;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Reflection;
-using Harmony;
 using RimOverhaul;
 
 namespace MoreEvents.Events

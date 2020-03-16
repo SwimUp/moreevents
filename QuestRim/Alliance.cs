@@ -232,7 +232,7 @@ namespace QuestRim
             {
                 foreach (FiringIncident fi in comp.MakeIntervalIncidents(targ))
                 {
-                    if (Find.Storyteller.difficulty.allowBigThreats || (fi.def.category != IncidentCategoryDefOf.ThreatBig && fi.def.category != IncidentCategoryDefOf.RaidBeacon))
+                    if (Find.Storyteller.difficulty.allowBigThreats || (fi.def.category != IncidentCategoryDefOf.ThreatBig))
                     {
                         yield return fi;
                     }

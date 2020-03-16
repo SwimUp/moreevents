@@ -35,6 +35,7 @@
 		<defName>MetolidocaineHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>chemical restructuring</label>
+		<description>It belongs to the group of stimulants, although it causes a calming effect. After use, it causes a slight mood lift and slight drowsiness. Slightly inhibits the reaction. It does not cause addiction, due to which it gained wide popularity in pharmacology.</description>
 		<labelNoun>chemical restructuring</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

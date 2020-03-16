@@ -57,7 +57,7 @@ namespace MoreEvents.Events
             Tile tile = Find.WorldGrid[tileID];
             tile.potentialRoads = null;
 
-            SendStandardLetter(new LookTargets(tileID));
+            SendStandardLetter(parms, new LookTargets(tileID));
 
             Find.World.renderer.SetDirty<WorldLayer_Roads>();
 

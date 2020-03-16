@@ -13,40 +13,46 @@ namespace RimOverhaul.Things.Stuff
     {
         public override void Notify_SignalReceived(Signal signal)
         {
-            if(signal.tag == "apparel-wear")
+            if (signal.tag == "apparel-wear")
             {
-                Pawn pawn = signal.args[0] as Pawn;
-                if(pawn != null)
+                if (signal.args.TryGetArg(0, out NamedArgument arg))
                 {
-                    Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOfLocal.AdamantiumToxin);
-                    if (hediff != null)
+                    Pawn pawn = arg.arg as Pawn;
+                    if (pawn != null)
                     {
-                        HediffComp_SeverityPerDayManaged comp = hediff.TryGetComp<HediffComp_SeverityPerDayManaged>();
-                        if (comp != null)
+                        Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOfLocal.AdamantiumToxin);
+                        if (hediff != null)
                         {
-                            comp.AddSeverity = true;
+                            HediffComp_SeverityPerDayManaged comp = hediff.TryGetComp<HediffComp_SeverityPerDayManaged>();
+                            if (comp != null)
+                            {
+                                comp.AddSeverity = true;
+                            }
                         }
-                    }
-                    else
-                    {
-                        hediff = HediffMaker.MakeHediff(HediffDefOfLocal.AdamantiumToxin, pawn);
-                        hediff.Severity = 0.1f;
-                        pawn.health.AddHediff(hediff);
+                        else
+                        {
+                            hediff = HediffMaker.MakeHediff(HediffDefOfLocal.AdamantiumToxin, pawn);
+                            hediff.Severity = 0.1f;
+                            pawn.health.AddHediff(hediff);
+                        }
                     }
                 }
             }
             if (signal.tag == "apparel-unwear")
             {
-                Pawn pawn = signal.args[0] as Pawn;
-                if (pawn != null)
+                if (signal.args.TryGetArg(0, out NamedArgument arg))
                 {
-                    Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOfLocal.AdamantiumToxin);
-                    if(hediff != null)
+                    Pawn pawn = arg.arg as Pawn;
+                    if (pawn != null)
                     {
-                        HediffComp_SeverityPerDayManaged comp = hediff.TryGetComp<HediffComp_SeverityPerDayManaged>();
-                        if(comp != null)
+                        Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOfLocal.AdamantiumToxin);
+                        if (hediff != null)
                         {
-                            comp.AddSeverity = false;
+                            HediffComp_SeverityPerDayManaged comp = hediff.TryGetComp<HediffComp_SeverityPerDayManaged>();
+                            if (comp != null)
+                            {
+                                comp.AddSeverity = false;
+                            }
                         }
                     }
                 }

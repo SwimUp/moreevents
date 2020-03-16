@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuestRim</RootNamespace>
     <AssemblyName>QuestRim</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,31 +32,213 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>Libs\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.2.0.0.8\lib\net472\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>Libs\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp, Version=1.0.7036.34321, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MoreEvents\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="DiaRim">
       <HintPath>..\DiaRim\bin\Release\DiaRim.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>Libs\UnityEngine.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\MoreEvents\Libs\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\UnityEngine.Networking.dll</HintPath>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MoreEvents\Libs\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.FileSystemHttpModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\MoreEvents\Libs\UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -117,233 +301,6 @@
     <Compile Include="TerminalDef.cs" />
     <Compile Include="ThingSetMaker_ResourcePod.cs" />
     <Compile Include="UniqueIdManager.cs" />
-    <Compile Include="UniRx\Scripts\Asynchronous\WebRequestExtensions.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\BooleanDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\CancellationDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\CompositeDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\DictionaryDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\Disposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\DisposableExtensions.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\ICancelable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\MultipleAssignmentDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\RefCountDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\ScheduledDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\SerialDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\SingleAssignmentDisposable.cs" />
-    <Compile Include="UniRx\Scripts\Disposables\StableCompositeDisposable.cs" />
-    <Compile Include="UniRx\Scripts\EventPattern.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\AscynLock.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\CancellableTaskCompletionSource.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\ExceptionExtensions.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\ImmutableList.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\ListObserver.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\MicroCoroutine.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\PriorityQueue.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\PromiseHelper.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\ScheduledItem.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\ThreadSafeQueueWorker.cs" />
-    <Compile Include="UniRx\Scripts\InternalUtil\UnityEqualityComparer.cs" />
-    <Compile Include="UniRx\Scripts\Notification.cs" />
-    <Compile Include="UniRx\Scripts\Notifiers\BooleanNotifier.cs" />
-    <Compile Include="UniRx\Scripts\Notifiers\CountNotifier.cs" />
-    <Compile Include="UniRx\Scripts\Notifiers\MessageBroker.cs" />
-    <Compile Include="UniRx\Scripts\Notifiers\ScheduledNotifier.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Aggregate.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Awaiter.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Binding.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Blocking.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Concatenate.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Concurrency.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Conversions.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Creation.cs" />
-    <Compile Include="UniRx\Scripts\Observable.cs" />
-    <Compile Include="UniRx\Scripts\Observable.ErrorHandling.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Events.cs" />
-    <Compile Include="UniRx\Scripts\Observable.FromAsync.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Joins.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Paging.cs" />
-    <Compile Include="UniRx\Scripts\Observable.Time.cs" />
-    <Compile Include="UniRx\Scripts\Observer.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Aggregate.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Amb.cs" />
-    <Compile Include="UniRx\Scripts\Operators\AsObservable.cs" />
-    <Compile Include="UniRx\Scripts\Operators\AsSingleUnitObservable.cs" />
-    <Compile Include="UniRx\Scripts\Operators\AsUnitObservable.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Buffer.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Cast.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Catch.cs" />
-    <Compile Include="UniRx\Scripts\Operators\CombineLatest.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Concat.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ContinueWith.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Create.cs" />
-    <Compile Include="UniRx\Scripts\Operators\DefaultIfEmpty.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Defer.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Delay.cs" />
-    <Compile Include="UniRx\Scripts\Operators\DelaySubscription.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Dematerialize.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Distinct.cs" />
-    <Compile Include="UniRx\Scripts\Operators\DistinctUntilChanged.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Do.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Empty.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Finally.cs" />
-    <Compile Include="UniRx\Scripts\Operators\First.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ForEachAsync.cs" />
-    <Compile Include="UniRx\Scripts\Operators\FromEvent.cs" />
-    <Compile Include="UniRx\Scripts\Operators\GroupBy.cs" />
-    <Compile Include="UniRx\Scripts\Operators\IgnoreElements.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Last.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Materialize.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Merge.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Never.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ObserveOn.cs" />
-    <Compile Include="UniRx\Scripts\Operators\OfType.cs" />
-    <Compile Include="UniRx\Scripts\Operators\OperatorObservableBase.cs" />
-    <Compile Include="UniRx\Scripts\Operators\OperatorObserverBase.cs" />
-    <Compile Include="UniRx\Scripts\Operators\PairWise.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Range.cs" />
-    <Compile Include="UniRx\Scripts\Operators\RefCount.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Repeat.cs" />
-    <Compile Include="UniRx\Scripts\Operators\RepeatSafe.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Return.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Sample.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Scan.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Select.cs" />
-    <Compile Include="UniRx\Scripts\Operators\SelectMany.cs" />
-    <Compile Include="UniRx\Scripts\Operators\SelectWhere.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Single.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Skip.cs" />
-    <Compile Include="UniRx\Scripts\Operators\SkipUntil.cs" />
-    <Compile Include="UniRx\Scripts\Operators\SkipWhile.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Start.cs" />
-    <Compile Include="UniRx\Scripts\Operators\StartWith.cs" />
-    <Compile Include="UniRx\Scripts\Operators\SubscribeOn.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Switch.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Synchronize.cs" />
-    <Compile Include="UniRx\Scripts\Operators\SynchronizedObserver.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Take.cs" />
-    <Compile Include="UniRx\Scripts\Operators\TakeLast.cs" />
-    <Compile Include="UniRx\Scripts\Operators\TakeUntil.cs" />
-    <Compile Include="UniRx\Scripts\Operators\TakeWhile.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Throttle.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ThrottleFirst.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Throw.cs" />
-    <Compile Include="UniRx\Scripts\Operators\TimeInterval.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Timeout.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Timer.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Timestamp.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ToArray.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ToList.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ToObservable.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Wait.cs" />
-    <Compile Include="UniRx\Scripts\Operators\WhenAll.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Where.cs" />
-    <Compile Include="UniRx\Scripts\Operators\WhereSelect.cs" />
-    <Compile Include="UniRx\Scripts\Operators\WithLatestFrom.cs" />
-    <Compile Include="UniRx\Scripts\Operators\Zip.cs" />
-    <Compile Include="UniRx\Scripts\Operators\ZipLatest.cs" />
-    <Compile Include="UniRx\Scripts\Pair.cs" />
-    <Compile Include="UniRx\Scripts\Schedulers\CurrentThreadScheduler.cs" />
-    <Compile Include="UniRx\Scripts\Schedulers\ImmediateScheduler.cs" />
-    <Compile Include="UniRx\Scripts\Schedulers\IScheduler.cs" />
-    <Compile Include="UniRx\Scripts\Schedulers\Scheduler.cs" />
-    <Compile Include="UniRx\Scripts\Schedulers\ThreadPoolScheduler.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\AsyncSubject.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\BehaviorSubject.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\ConnectableObservable.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\ISubject.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\ReplaySubject.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\Subject.cs" />
-    <Compile Include="UniRx\Scripts\Subjects\SubjectExtensions.cs" />
-    <Compile Include="UniRx\Scripts\System\IObservable.cs" />
-    <Compile Include="UniRx\Scripts\System\IObserver.cs" />
-    <Compile Include="UniRx\Scripts\System\IOptimizedObservable.cs" />
-    <Compile Include="UniRx\Scripts\System\IProgress.cs" />
-    <Compile Include="UniRx\Scripts\System\Tuple.cs" />
-    <Compile Include="UniRx\Scripts\System\Unit.cs" />
-    <Compile Include="UniRx\Scripts\Tasks\TaskObservableExtensions.cs" />
-    <Compile Include="UniRx\Scripts\TimeInterval.cs" />
-    <Compile Include="UniRx\Scripts\Timestamped.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\AsyncOperationExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\CancellationToken.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\CoroutineAsyncBridge.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\LogEntry.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\LogEntryExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\Logger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\ObservableDebugExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\ObservableLogger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\UnityDebugSink.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\FrameInterval.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\InspectableReactiveProperty.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\InspectorDisplayDrawer.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\LifetimeDisposableExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\MainThreadDispatcher.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\MainThreadScheduler.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Observable.Unity.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ObservableWWW.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ObserveExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\BatchFrame.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\DelayFrame.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\DelayFrameSubscription.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\FrameInterval.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\FrameTimeInterval.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\FromCoroutine.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\RepeatUntil.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\SampleFrame.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\SubscribeOnMainThread.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\ThrottleFirstFrame.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\ThrottleFrame.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Operators\TimeoutFrame.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ReactiveCollection.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ReactiveCommand.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ReactiveDictionary.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ReactiveProperty.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\ScenePlaybackDetector.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Toolkit\ObjectPool.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableAnimatorTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableBeginDragTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCancelTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCanvasGroupChangedTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCollision2DTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCollisionTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDeselectTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDestroyTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDragTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDropTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableEnableTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableEndDragTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableEventTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableFixedUpdateTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableInitializePotentialDragTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableJointTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableLateUpdateTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableMouseTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableMoveTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableParticleTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerClickTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerDownTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerEnterTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerExitTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerUpTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableRectTransformTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableScrollTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableSelectTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableStateMachineTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableSubmitTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTransformChangedTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTrigger2DTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerBase.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerExtensions.Component.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableUpdateSelectedTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableUpdateTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableVisibleTrigger.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\UnityEventExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\UnityGraphicExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\UnityUIComponentExtensions.cs" />
-    <Compile Include="UniRx\Scripts\UnityEngineBridge\YieldInstructionCache.cs" />
-    <Compile Include="UniRx\Scripts\UnityWinRTBridge\Thread.cs" />
-    <Compile Include="UniRx\Scripts\UnityWinRTBridge\ThreadPoolScheduler_UnityWinRT.cs" />
     <Compile Include="War.cs" />
     <Compile Include="WarGoalDef.cs" />
     <Compile Include="WarGoalStatWorker.cs" />
@@ -357,250 +314,7 @@
     <Compile Include="WorldObjectDefOfLocal.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UniRx\Scripts\Asynchronous.meta" />
-    <None Include="UniRx\Scripts\Asynchronous\WebRequestExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables.meta" />
-    <None Include="UniRx\Scripts\Disposables\BooleanDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\CancellationDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\CompositeDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\DictionaryDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\Disposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\DisposableExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\ICancelable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\MultipleAssignmentDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\RefCountDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\ScheduledDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\SerialDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\SingleAssignmentDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\Disposables\StableCompositeDisposable.cs.meta" />
-    <None Include="UniRx\Scripts\EventPattern.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\AscynLock.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\CancellableTaskCompletionSource.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\ExceptionExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\ImmutableList.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\ListObserver.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\MicroCoroutine.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\PriorityQueue.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\PromiseHelper.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\ScheduledItem.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\ThreadSafeQueueWorker.cs.meta" />
-    <None Include="UniRx\Scripts\InternalUtil\UnityEqualityComparer.cs.meta" />
-    <None Include="UniRx\Scripts\Notification.cs.meta" />
-    <None Include="UniRx\Scripts\Notifiers.meta" />
-    <None Include="UniRx\Scripts\Notifiers\BooleanNotifier.cs.meta" />
-    <None Include="UniRx\Scripts\Notifiers\CountNotifier.cs.meta" />
-    <None Include="UniRx\Scripts\Notifiers\MessageBroker.cs.meta" />
-    <None Include="UniRx\Scripts\Notifiers\ScheduledNotifier.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Aggregate.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Awaiter.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Binding.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Blocking.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Concatenate.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Concurrency.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Conversions.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Creation.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.ErrorHandling.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Events.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.FromAsync.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Joins.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Paging.cs.meta" />
-    <None Include="UniRx\Scripts\Observable.Time.cs.meta" />
-    <None Include="UniRx\Scripts\Observer.cs.meta" />
-    <None Include="UniRx\Scripts\Operators.meta" />
-    <None Include="UniRx\Scripts\Operators\Aggregate.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Amb.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\AsObservable.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\AsSingleUnitObservable.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\AsUnitObservable.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Buffer.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Cast.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Catch.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\CombineLatest.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Concat.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ContinueWith.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Create.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\DefaultIfEmpty.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Defer.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Delay.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\DelaySubscription.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Dematerialize.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Distinct.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\DistinctUntilChanged.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Do.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Empty.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Finally.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\First.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ForEachAsync.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\FromEvent.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\GroupBy.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\IgnoreElements.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Last.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Materialize.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Merge.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Never.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ObserveOn.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\OfType.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\OperatorObservableBase.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\OperatorObserverBase.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\PairWise.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Range.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\RefCount.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Repeat.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\RepeatSafe.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Return.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Sample.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Scan.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Select.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\SelectMany.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\SelectWhere.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Single.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Skip.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\SkipUntil.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\SkipWhile.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Start.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\StartWith.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\SubscribeOn.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Switch.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Synchronize.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\SynchronizedObserver.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Take.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\TakeLast.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\TakeUntil.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\TakeWhile.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Throttle.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ThrottleFirst.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Throw.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\TimeInterval.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Timeout.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Timer.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Timestamp.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ToArray.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ToList.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ToObservable.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Wait.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\WhenAll.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Where.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\WhereSelect.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\WithLatestFrom.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\Zip.cs.meta" />
-    <None Include="UniRx\Scripts\Operators\ZipLatest.cs.meta" />
-    <None Include="UniRx\Scripts\Pair.cs.meta" />
-    <None Include="UniRx\Scripts\Schedulers.meta" />
-    <None Include="UniRx\Scripts\Schedulers\CurrentThreadScheduler.cs.meta" />
-    <None Include="UniRx\Scripts\Schedulers\ImmediateScheduler.cs.meta" />
-    <None Include="UniRx\Scripts\Schedulers\IScheduler.cs.meta" />
-    <None Include="UniRx\Scripts\Schedulers\Scheduler.cs.meta" />
-    <None Include="UniRx\Scripts\Schedulers\ThreadPoolScheduler.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects.meta" />
-    <None Include="UniRx\Scripts\Subjects\AsyncSubject.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects\BehaviorSubject.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects\ConnectableObservable.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects\ISubject.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects\ReplaySubject.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects\Subject.cs.meta" />
-    <None Include="UniRx\Scripts\Subjects\SubjectExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\System.meta" />
-    <None Include="UniRx\Scripts\System\IObservable.cs.meta" />
-    <None Include="UniRx\Scripts\System\IObserver.cs.meta" />
-    <None Include="UniRx\Scripts\System\IOptimizedObservable.cs.meta" />
-    <None Include="UniRx\Scripts\System\IProgress.cs.meta" />
-    <None Include="UniRx\Scripts\System\Tuple.cs.meta" />
-    <None Include="UniRx\Scripts\System\Unit.cs.meta" />
-    <None Include="UniRx\Scripts\Tasks.meta" />
-    <None Include="UniRx\Scripts\Tasks\TaskObservableExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\TimeInterval.cs.meta" />
-    <None Include="UniRx\Scripts\Timestamped.cs.meta" />
-    <None Include="UniRx\Scripts\UniRx.asmdef" />
-    <None Include="UniRx\Scripts\UniRx.asmdef.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\AsyncOperationExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\CancellationToken.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\CoroutineAsyncBridge.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\LogEntry.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\LogEntryExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\Logger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\ObservableDebugExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\ObservableLogger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Diagnostics\UnityDebugSink.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\FrameInterval.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\InspectableReactiveProperty.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\InspectorDisplayDrawer.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\LifetimeDisposableExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\MainThreadDispatcher.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\MainThreadScheduler.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Observable.Unity.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ObservableWWW.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ObserveExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\BatchFrame.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\DelayFrame.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\DelayFrameSubscription.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\FrameInterval.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\FrameTimeInterval.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\FromCoroutine.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\RepeatUntil.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\SampleFrame.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\SubscribeOnMainThread.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\ThrottleFirstFrame.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\ThrottleFrame.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Operators\TimeoutFrame.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ReactiveCollection.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ReactiveCommand.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ReactiveDictionary.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ReactiveProperty.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\ScenePlaybackDetector.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Toolkit.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Toolkit\ObjectPool.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableAnimatorTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableBeginDragTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCancelTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCanvasGroupChangedTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCollision2DTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableCollisionTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDeselectTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDestroyTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDragTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableDropTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableEnableTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableEndDragTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableEventTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableFixedUpdateTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableInitializePotentialDragTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableJointTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableLateUpdateTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableMouseTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableMoveTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableParticleTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerClickTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerDownTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerEnterTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerExitTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservablePointerUpTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableRectTransformTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableScrollTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableSelectTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableStateMachineTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableSubmitTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTransformChangedTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTrigger2DTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerBase.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerExtensions.Component.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableTriggerTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableUpdateSelectedTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableUpdateTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\Triggers\ObservableVisibleTrigger.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\UnityEventExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\UnityGraphicExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\UnityUIComponentExtensions.cs.meta" />
-    <None Include="UniRx\Scripts\UnityEngineBridge\YieldInstructionCache.cs.meta" />
-    <None Include="UniRx\Scripts\UnityWinRTBridge.meta" />
-    <None Include="UniRx\Scripts\UnityWinRTBridge\Thread.cs.meta" />
-    <None Include="UniRx\Scripts\UnityWinRTBridge\ThreadPoolScheduler_UnityWinRT.cs.meta" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

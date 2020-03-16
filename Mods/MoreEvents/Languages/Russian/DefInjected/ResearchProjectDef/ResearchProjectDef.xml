@@ -29,5 +29,8 @@
 
 	<GasToHeat.label>Газ в тепло</GasToHeat.label>
 	<GasToHeat.description>Создайте обогреватель на основе газа, который будет эффективнее электрического обогревателя.</GasToHeat.description>
+	
+	<ChemicalSynthesis.label>Химический синтез</ChemicalSynthesis.label>
+	<ChemicalSynthesis.description>Усовершенствуйте систему обработки, которая позволит использовать химический синтез.</ChemicalSynthesis.description>
 
 </LanguageData>

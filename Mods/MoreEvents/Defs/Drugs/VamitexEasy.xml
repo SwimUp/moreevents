@@ -40,6 +40,7 @@
 		<defName>VamitexEasyHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Vamitex (easy)</label>
+		<description>Pills were created to accelerate the cure of diseases.</description>
 		<labelNoun>Vamitex (easy)</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

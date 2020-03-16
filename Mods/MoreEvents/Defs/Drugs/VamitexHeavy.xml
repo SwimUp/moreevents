@@ -40,6 +40,7 @@
 		<defName>VamitexHeavyHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Vamitex (hard)</label>
+		<description>Pills were created to accelerate the cure of diseases (hard version).</description>
 		<labelNoun>Vamitex (hard)</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

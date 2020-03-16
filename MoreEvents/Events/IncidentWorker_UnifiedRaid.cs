@@ -51,7 +51,7 @@ namespace MoreEvents.Events
             GenerateAndSpawnPawns(faction1, parms, existingMapEdgeCell1);
             GenerateAndSpawnPawns(faction2, parms, existingMapEdgeCell2);
 
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
 
             return true;
         }

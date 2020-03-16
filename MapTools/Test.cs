@@ -34,7 +34,7 @@ namespace DiaRim
         {
             public override string Label => "TEST" + Rand.Range(3, 225);
 
-            public override void DoAction(Quest quest, Pawn speaker, Pawn defendant)
+            public override void DoAction(QuestRim.Quest quest, Pawn speaker, Pawn defendant)
             {
                 Log.Message($"TRIGGER --> {quest.CardLabel}: {speaker.Name} : {defendant?.Name}");
             }
@@ -461,7 +461,7 @@ namespace DiaRim
                         IIncidentTarget target;
                         (dictionary = incCountsForTarget)[target = item.parms.target] = dictionary[target] + 1;
                         string text = "  ";
-                        if (item.def.category == IncidentCategoryDefOf.ThreatBig || item.def.category == IncidentCategoryDefOf.RaidBeacon)
+                        if (item.def.category == IncidentCategoryDefOf.ThreatBig)
                         {
                             threatBigCount++;
                             text = "T";

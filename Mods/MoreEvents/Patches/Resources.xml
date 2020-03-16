@@ -34,7 +34,6 @@
 					<Beauty>1</Beauty>
 					<Flammability>0.25</Flammability>
 				</statFactors>
-				<smeltable>true</smeltable>
 			</stuffProps>
 		</value>
 	</Operation>
@@ -47,7 +46,7 @@
 				<label>make component</label>
 				<description>Make a component.</description>
 				<jobString>Making component.</jobString>
-				<workSpeedStat>SmithingSpeed</workSpeedStat>
+				<workSpeedStat>SmeltingSpeed</workSpeedStat>
 				<effectWorking>Cook</effectWorking>
 				<soundWorking>Recipe_Machining</soundWorking>
 				<workAmount>5000</workAmount>
@@ -90,7 +89,7 @@
 				<label>make advanced component</label>
 				<description>Make an advanced component.</description>
 				<jobString>Making advanced component.</jobString>
-				<workSpeedStat>SmithingSpeed</workSpeedStat>
+				<workSpeedStat>SmeltingSpeed</workSpeedStat>
 				<effectWorking>Cook</effectWorking>
 				<soundWorking>Recipe_Machining</soundWorking>
 				<workAmount>10000</workAmount>

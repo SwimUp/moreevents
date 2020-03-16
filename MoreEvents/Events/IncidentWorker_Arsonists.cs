@@ -48,7 +48,7 @@ namespace MoreEvents.Events
                 lord.AddPawn(p);
             }
 
-            SendStandardLetter(new LookTargets(new TargetInfo(spawnSpot, map)));
+            SendStandardLetter(parms, new LookTargets(new TargetInfo(spawnSpot, map)));
 
             return true;
         }

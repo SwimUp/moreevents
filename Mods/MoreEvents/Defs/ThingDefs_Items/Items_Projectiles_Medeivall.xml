@@ -57,7 +57,7 @@
 		</specialProducts>
 		<jobString>makes projectile for catapult</jobString>
 		<workAmount>900</workAmount>
-		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>CutStone</effectWorking>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
 		<products>
@@ -151,7 +151,7 @@
 		</specialProducts>
 		<jobString>makes projectile for ballista</jobString>
 		<workAmount>800</workAmount>
-		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>CutStone</effectWorking>
 		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
 		<products>

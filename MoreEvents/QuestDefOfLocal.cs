@@ -16,8 +16,6 @@ namespace MoreEvents
 
         public static QuestDef Quest_KillLeader;
 
-        public static QuestDef Quest_BanditCamp;
-
         public static QuestDef Quest_KillOrder;
     }
 }

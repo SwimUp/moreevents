@@ -162,10 +162,6 @@
 		<researchPrerequisites>
 			<li>BasicOreProcessing</li>
 		</researchPrerequisites>
-		<building>
-			<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
-			<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
-		</building>
 		<placeWorkers inherit="false" />
 	</ThingDef>
 

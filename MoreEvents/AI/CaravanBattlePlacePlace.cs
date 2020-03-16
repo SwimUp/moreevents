@@ -122,8 +122,8 @@ namespace RimOverhaul.AI
             if (winner == CaravanBattleWinner.None)
             {
                 int playerPawnsCount = Map.mapPawns.ColonistCount;
-                List<Pawn> enemyPawns = Map.mapPawns.AllPawns.Where(x => x.Faction == aiFaction).ToList();
-                int enemyPawnsCount = enemyPawns.Count;
+                List<Pawn> enemyPawns = Map.mapPawns.AllPawns.Where(x => x.Faction != null && x.Faction == aiFaction).ToList();
+                int enemyPawnsCount = enemyPawns == null ? 0 : enemyPawns.Count;
 
                 if (playerPawnsCount == 0 && enemyPawnsCount > 0)
                 {

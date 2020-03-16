@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>JoycstasyTolerance</defName>
 		<label>Joycstasy tolerance</label>
+		<description>Homemade merchant drug made from ambrosia and Devil's mushroom extracts. It improves mood and mental stability, but is addictive and negative effects when breaking.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>JoycstasyHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Mental blockade</label>
+		<description>Homemade merchant drug made from ambrosia and Devil's mushroom extracts. It improves mood and mental stability, but is addictive and negative effects when breaking.</description>
 		<labelNoun>Mental blockade</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -85,6 +87,7 @@
 		<defName>JoycstasyAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Joycstasy addiction</label>
+		<description>Homemade merchant drug made from ambrosia and Devil's mushroom extracts. It improves mood and mental stability, but is addictive and negative effects when breaking.</description>
 		<causesNeed>Chemical_Joycstasy</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

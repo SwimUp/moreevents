@@ -21,7 +21,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<IronIngot>10</IronIngot>
+			<IronIngot>15</IronIngot>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -50,7 +50,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<CopperIngot>10</CopperIngot>
+			<CopperIngot>15</CopperIngot>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -79,8 +79,8 @@
 			</li>
 		</ingredients>
 		<products>
-			<NickelIngot>15</NickelIngot>
-			<CobaltIngot>15</CobaltIngot>
+			<NickelIngot>20</NickelIngot>
+			<CobaltIngot>20</CobaltIngot>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -125,7 +125,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<PalladiumIngot>15</PalladiumIngot>
+			<PalladiumIngot>20</PalladiumIngot>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -172,7 +172,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Tillium>50</Tillium>
+			<Tillium>40</Tillium>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -219,7 +219,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<IlmeniteIngot>30</IlmeniteIngot>
+			<IlmeniteIngot>20</IlmeniteIngot>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -259,7 +259,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Chromium>25</Chromium>
+			<Chromium>15</Chromium>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -342,7 +342,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Plasteel>30</Plasteel>
+			<Plasteel>20</Plasteel>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -371,7 +371,7 @@
 						<li>IronIngot</li>
 					</thingDefs>
 				</filter>
-				<count>35</count>
+				<count>30</count>
 			</li>
 			<li>
 				<filter>
@@ -383,7 +383,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Steel>30</Steel>
+			<Steel>40</Steel>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -409,7 +409,7 @@
 						<li>IronIngot</li>
 					</thingDefs>
 				</filter>
-				<count>350</count>
+				<count>300</count>
 			</li>
 			<li>
 				<filter>
@@ -421,7 +421,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Steel>300</Steel>
+			<Steel>400</Steel>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -488,7 +488,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<TungstenIngot>20</TungstenIngot>
+			<TungstenIngot>25</TungstenIngot>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -497,4 +497,6 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>
+	
+	
 </Defs>

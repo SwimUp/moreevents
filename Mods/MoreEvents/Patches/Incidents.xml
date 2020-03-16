@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/IncidentDef[defName="Quest_TradeRequest"]/workerClass</xpath>
-		<value>
-			<workerClass>MoreEvents.Patch.IncidentWorker_QuestTradeRequest</workerClass>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/IncidentDef[defName="Quest_BanditCamp"]/workerClass</xpath>
-		<value>
-			<workerClass>MoreEvents.Patch.IncidentWorker_QuestBanditCamp</workerClass>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/IncidentDef[defName="Quest_ItemStash"]/workerClass</xpath>
-		<value>
-			<workerClass>MoreEvents.Patch.IncidentWorker_QuestItemStash</workerClass>
-		</value>
-	</Operation>
 
 </Patch>

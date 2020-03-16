@@ -718,12 +718,6 @@ namespace MapGenerator
                 if (newItem.TryGetComp<CompForbiddable>() != null)
                     newItem.SetForbidden(true, false);
 
-                // If it is a hive, it needs to be deactivated
-                Hive newHive = newItem as Hive;
-                if (newHive != null)
-                {
-                    newHive.active = false;
-                }
             }
 
         }

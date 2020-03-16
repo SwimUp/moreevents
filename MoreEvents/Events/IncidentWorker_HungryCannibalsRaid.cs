@@ -64,7 +64,7 @@ namespace MoreEvents.Events
                 }
             }
 
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
 
             Find.TickManager.slower.SignalForceNormalSpeedShort();
             Find.StoryWatcher.statsRecord.numRaidsEnemy++;

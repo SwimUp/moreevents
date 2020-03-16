@@ -45,15 +45,14 @@ namespace MoreEvents.Events
                 int num = Mathf.CeilToInt(Mathf.Sqrt((float)maxMineables)) + 2;
                 CellRect cellRect = CellRect.CenteredOn(x, num, num);
                 int num2 = 0;
-                CellRect.CellRectIterator iterator = cellRect.GetIterator();
-                while (!iterator.Done())
+                foreach(var iterator in cellRect)
                 {
-                    if (iterator.Current.InBounds(map) && iterator.Current.Standable(map))
+                    if (iterator.InBounds(map) && iterator.Standable(map))
                     {
                         num2++;
                     }
-                    iterator.MoveNext();
                 }
+
                 return num2 >= maxMineables;
             });
         }

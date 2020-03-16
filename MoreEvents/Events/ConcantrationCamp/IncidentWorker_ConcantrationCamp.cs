@@ -38,7 +38,7 @@ namespace RimOverhaul.Events.ConcantrationCamp
 
             Find.WorldObjects.Add(concantrationCamp);
 
-            SendStandardLetter(concantrationCamp);
+            SendStandardLetter(parms, concantrationCamp);
 
             return true;
         }

@@ -150,7 +150,7 @@ namespace QuestRim
 
                 Rect rectAdd = new Rect(460, 355, 410, 125);
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(460, 330, 410, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate() : currentQuest.AdditionalQuestContentString);
+                Widgets.Label(new Rect(460, 330, 410, 20), string.IsNullOrEmpty(currentQuest.AdditionalQuestContentString) ? "AdditionalQuestContent".Translate().ToString() : currentQuest.AdditionalQuestContentString);
                 Text.Anchor = TextAnchor.UpperLeft;
                 currentQuest.DrawAdditionalOptions(rectAdd);
             }

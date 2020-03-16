@@ -35,6 +35,7 @@
 		<defName>IbuprofienHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Ibuprofien</label>
+		<description>This drug belongs to the antipsychotic group of drugs. Its effectiveness is determined by the effect on various receptors, lowering psychosensitivity and matoric. The drug helps to maintain a satisfactory mental state, without causing much addiction, but over time causing degradation of muscle tissue. With prolonged consumption, Ibuprofien is able to cause various forms of diseases of the brain and eyes.</description>
 		<labelNoun>Ibuprofien</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

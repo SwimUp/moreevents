@@ -50,7 +50,7 @@ namespace RimOverhaul.Events
 
             QuestsManager.Communications.AddQuest(quest, null);
 
-            SendStandardLetter(questSite, null, factionInteraction.Faction.Name, pointsReward.ToString());
+            SendStandardLetter(parms, questSite, factionInteraction.Faction.Name, pointsReward.ToString());
 
             return true;
         }

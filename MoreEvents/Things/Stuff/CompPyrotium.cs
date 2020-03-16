@@ -46,9 +46,12 @@ namespace RimOverhaul.Things.Stuff
             {
                 try
                 {
-                    if (signal.args[0] is Pawn target && signal.args[1] is Pawn caster)
+                    if (signal.args.TryGetArg(0, out NamedArgument arg1) && signal.args.TryGetArg(1, out NamedArgument arg2))
                     {
-                        target.TakeDamage(new DamageInfo(DamageDefOf.Flame, Rand.Range(1, 5)));
+                        if (arg1.arg is Pawn target && arg2.arg is Pawn caster)
+                        {
+                            target.TakeDamage(new DamageInfo(DamageDefOf.Flame, Rand.Range(1, 5)));
+                        }
                     }
                 }
                 catch (Exception ex)

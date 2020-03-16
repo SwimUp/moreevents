@@ -52,7 +52,7 @@ namespace MoreEvents.Events.DoomsdayUltimatum
 
             Find.WorldObjects.Add(site);
 
-            SendStandardLetter(site);
+            SendStandardLetter(parms, site);
 
             DoomsdaySite.ActiveSite = site;
 

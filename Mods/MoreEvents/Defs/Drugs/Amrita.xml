@@ -66,6 +66,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>AmitaTolerance</defName>
 		<label>Amita tolerance</label>
+		<description>A vigorous mixture of berries boosting vitality.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -80,6 +81,7 @@
 		<defName>AmitaHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Unusual vigor</label>
+		<description>A vigorous mixture of berries boosting vitality.</description>
 		<labelNoun>A vigorous mixture of berries boosting vitality does its job!</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -131,6 +133,7 @@
 		<defName>AmitaAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>amita addiction</label>
+		<description>A vigorous mixture of berries boosting vitality.</description>
 		<causesNeed>Chemical_Amita</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

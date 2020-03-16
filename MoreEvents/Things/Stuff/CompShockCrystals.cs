@@ -30,12 +30,15 @@ namespace RimOverhaul.Things.Stuff
             {
                 try
                 {
-                    Pawn target = signal.args[0] as Pawn;
-                    Pawn caster = signal.args[1] as Pawn;
-
-                    if (target != null && caster != null)
+                    if (signal.args.TryGetArg(0, out NamedArgument arg1) && signal.args.TryGetArg(1, out NamedArgument arg2))
                     {
-                        GenExplosion.DoExplosion(target.Position, target.Map, 1.5f, DamageDefOf.EMP, caster);
+                        Pawn target = arg1.arg as Pawn;
+                        Pawn caster = arg2.arg as Pawn;
+
+                        if (target != null && caster != null)
+                        {
+                            GenExplosion.DoExplosion(target.Position, target.Map, 1.5f, DamageDefOf.EMP, caster);
+                        }
                     }
                 }
                 catch (Exception ex)

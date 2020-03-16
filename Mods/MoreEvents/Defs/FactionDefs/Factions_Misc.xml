@@ -16,7 +16,8 @@
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Police chief</leaderTitle>
-		<expandingIconTexture>World/WorldObjects/Expanding/PirateOutpost</expandingIconTexture>
+		<factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<colorSpectrum>
 			<li>(0.45, 0.05, 0.05)</li>
 			<li>(0.80, 0.25, 0.05)</li>
@@ -45,7 +46,6 @@
 				<li>(100000, 10000)</li>
 			</points>
 		</maxPawnCostPerTotalPointsCurve>
-		<homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
 	</FactionDef>
 
 </Defs>

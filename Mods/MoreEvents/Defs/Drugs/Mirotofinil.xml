@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>MirotofinilTolerance</defName>
 		<label>Mirotofinil tolerance</label>
+		<description>Analeptic, used to treat drowsiness associated with narcolepsy. Used for a long time in medicine. Significantly reduces sleep time, which, however, is not without consequences. It is highly addictive.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>MirotofinilHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>psychosuppression</label>
+		<description>Analeptic, used to treat drowsiness associated with narcolepsy. Used for a long time in medicine. Significantly reduces sleep time, which, however, is not without consequences. It is highly addictive.</description>
 		<labelNoun>psychosuppression</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -85,6 +87,7 @@
 		<defName>MirotofinilAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Mirotofinil addiction</label>
+		<description>Analeptic, used to treat drowsiness associated with narcolepsy. Used for a long time in medicine. Significantly reduces sleep time, which, however, is not without consequences. It is highly addictive.</description>
 		<causesNeed>Chemical_Mirotofinil</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

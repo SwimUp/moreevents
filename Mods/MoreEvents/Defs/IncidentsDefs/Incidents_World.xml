@@ -519,7 +519,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_HungryCannibalsRaid</workerClass>
-		<category>RaidBeacon</category>
+		<category>ThreatBig</category>
 		<minRefireDays>55</minRefireDays>
 		<baseChance>4</baseChance>
 		<earliestDay>55</earliestDay>
@@ -580,7 +580,7 @@ You can start collecting silver together with other factions or organize an assa
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MoreEvents.Events.IncidentWorker_UnifiedRaid</workerClass>
-		<category>RaidBeacon</category>
+		<category>ThreatBig</category>
 		<minRefireDays>35</minRefireDays>
 		<baseChance>1.7</baseChance>
 		<earliestDay>80</earliestDay>

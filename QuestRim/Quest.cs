@@ -166,7 +166,7 @@ namespace QuestRim
 
         public virtual void GenerateRewards()
         {
-            Rewards = ThingSetMakerDefOf.Reward_ItemStashQuestContents.root.Generate();
+            Rewards = ThingSetMakerDefOf.Reward_ItemsStandard.root.Generate();
         }
 
         public void GenerateRewards(ThingSetMakerDef maker, FloatRange totalValue, IntRange? countRange)

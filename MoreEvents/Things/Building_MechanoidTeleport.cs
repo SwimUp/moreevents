@@ -126,7 +126,7 @@ namespace MoreEvents.Things
             int count = Rand.Range(1, 4);
             for (int i = 0; i < count; i++)
             {
-                PawnGenerationRequest request = new PawnGenerationRequest(kind, Faction.OfMechanoids, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
+                PawnGenerationRequest request = new PawnGenerationRequest(kind, Faction.OfMechanoids, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, false, 0, null, 1, null, null, null, null);
                 Pawn pawn = PawnGenerator.GeneratePawn(request);
                 GenSpawn.Spawn(pawn, center, Map);
                 lord.AddPawn(pawn);

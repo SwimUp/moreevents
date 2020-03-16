@@ -39,6 +39,7 @@
 		<defName>PirotenHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Piroten</label>
+		<description>A multi-purpose drug used to maintain blood filtration. When taking the course of administration, it is able to restore a lost kidney. The drug is not addictive and is actively used in advanced operations on the filtering organs.</description>
 		<labelNoun>Piroten</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

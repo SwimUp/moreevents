@@ -57,7 +57,7 @@ namespace MoreEvents.Quests
             if (caravan.pawns.Count == 0)
                 Find.WorldObjects.Remove(caravan);
 
-            quest.Entered = true;
+            quest.Enter();
 
             Find.LetterStack.ReceiveLetter("HelpStartedTitle".Translate(), "HelpStarted".Translate(quest.TicksToEnd.TicksToDays().ToString("f2")), LetterDefOf.PositiveEvent);
         }

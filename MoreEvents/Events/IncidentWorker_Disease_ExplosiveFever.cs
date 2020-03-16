@@ -38,7 +38,7 @@ namespace MoreEvents.Events
             List<Pawn> pawns = map.mapPawns.FreeColonists.ToList();
             int num = Utility.GiveHediffToRandomColinists(map, pawns, HediffDefOfLocal.BlastingBlisters, 1, 1);
 
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
 
             return true;
         }

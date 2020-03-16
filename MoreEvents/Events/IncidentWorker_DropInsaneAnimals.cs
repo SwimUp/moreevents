@@ -34,7 +34,7 @@ namespace MoreEvents.Events
 
             animals = GetAnimals(animalKind, map, parms.points);
             DropPodUtilityPlus.DropThingsNear(result, map, animals, callback: DriveInsane);
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
 
             return true;
         }

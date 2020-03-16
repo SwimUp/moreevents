@@ -17,6 +17,7 @@
 						<!-- ключ -->
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>1</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>8</SkillLevel>
 								<DisableReason>Требуется общение 8</DisableReason>
@@ -46,11 +47,13 @@
 						<Label>MilitaryExercises</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>2</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>8</SkillLevel>
 								<DisableReason>Требуется общение 8</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ConditionId>1</ConditionId>
 								<ReqTrait>Bloodlust</ReqTrait>
 								<DisableReason>Требуется черта кровожадность</DisableReason>
 							</li>
@@ -66,11 +69,13 @@
 						<Label>GivePresent</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>3</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>10</SkillLevel>
 								<DisableReason>Требуется общение 10</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Item">
+								<ConditionId>1</ConditionId>
 								<ThingDef>Silver</ThingDef>
 								<Count>1000</Count>
 								<DisableReason>Требуется 1000 серебра</DisableReason>
@@ -87,11 +92,13 @@
 						<Label>OfferHelp</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>4</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>12</SkillLevel>
 								<DisableReason>Требуется общение 12</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ConditionId>2</ConditionId>
 								<ReqTrait>Kind</ReqTrait>
 								<DisableReason>Требуется черта доброта</DisableReason>
 							</li>
@@ -107,6 +114,7 @@
 						<Label>CallForUnity</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>5</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>15</SkillLevel>
 								<DisableReason>Требуется общение 15</DisableReason>
@@ -136,6 +144,7 @@
 						<Label>DiscussHostileGroups</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>6</ConditionId>
 								<Skill>Melee</Skill>
 								<SkillLevel>8</SkillLevel>
 								<DisableReason>Требуется ближний бой 8</DisableReason>
@@ -156,11 +165,13 @@
 						<Label>MilitaryAssistance</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>7</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>10</SkillLevel>
 								<DisableReason>Требуется общение 10</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Item">
+								<ConditionId>3</ConditionId>
 								<ThingDef>Silver</ThingDef>
 								<Count>300</Count>
 								<DisableReason>Требуется 300 серебра</DisableReason>
@@ -195,11 +206,13 @@
 						<Label>SeekLoyalty</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>8</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>13</SkillLevel>
 								<DisableReason>Требуется общение 13</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ConditionId>3</ConditionId>
 								<ReqTrait>Nerves</ReqTrait>
 								<Degree>2</Degree>
 								<DisableReason>Требуется черта железные нервы</DisableReason>
@@ -220,11 +233,13 @@
 						<Label>DiscussTrade</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>9</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>12</SkillLevel>
 								<DisableReason>Требуется общение 10</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Item">
+								<ConditionId>4</ConditionId>
 								<ThingDef>Silver</ThingDef>
 								<Count>1000</Count>
 								<DisableReason>Требуется 1000 серебра</DisableReason>
@@ -258,16 +273,19 @@
 						<Label>Aid</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>10</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>12</SkillLevel>
 								<DisableReason>Требуется общение 12</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Item">
+								<ConditionId>5</ConditionId>
 								<ThingDef>MealSurvivalPack</ThingDef>
 								<Count>10</Count>
 								<DisableReason>Требуется 10 сухпайков</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Item">
+								<ConditionId>6</ConditionId>
 								<ThingDef>MedicineIndustrial</ThingDef>
 								<Count>5</Count>
 								<DisableReason>Требуется 5 медикаментов</DisableReason>
@@ -288,11 +306,13 @@
 						<Label>ConfidentialConversation</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>11</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>14</SkillLevel>
 								<DisableReason>Требуется общение 14</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ConditionId>4</ConditionId>
 								<ReqTrait>Beauty</ReqTrait>
 								<Degree>1</Degree>
 								<DisableReason>Требуется черта красота</DisableReason>
@@ -326,6 +346,7 @@
 						<Label>FierySpeech</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>12</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>17</SkillLevel>
 								<DisableReason>Требуется общение 17</DisableReason>
@@ -346,11 +367,13 @@
 						<Label>MenacingWhispers</Label>
 						<Conditions>
 							<li Class="DiaRim.Conditions.Condition_SkillReq">
+								<ConditionId>13</ConditionId>
 								<Skill>Social</Skill>
 								<SkillLevel>15</SkillLevel>
 								<DisableReason>Требуется общение 15</DisableReason>
 							</li>
 							<li Class="DiaRim.Conditions.Condition_Trait">
+								<ConditionId>5</ConditionId>
 								<ReqTrait>Neurotic</ReqTrait>
 								<Degree>1</Degree>
 								<DisableReason>Требуется черта неврастения</DisableReason>
@@ -364,10 +387,10 @@
 						</Transitions>
 					</li>
 					<li>
-					<Label>EndCooms</Label>
-					<!-- ключ -->
-					<ResolveTree>True</ResolveTree>
-					<ResolveSignal>конец</ResolveSignal>
+						<Label>EndCooms</Label>
+						<!-- ключ -->
+						<ResolveTree>True</ResolveTree>
+						<ResolveSignal>конец</ResolveSignal>
 					</li>
 				</Options>
 			</li>

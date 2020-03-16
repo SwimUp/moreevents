@@ -26,12 +26,15 @@ namespace RimOverhaul.Things.Stuff
             {
                 try
                 {
-                    Pawn target = signal.args[0] as Pawn;
-                    Pawn caster = signal.args[1] as Pawn;
-
-                    if (target != null && caster != null)
+                    if (signal.args.TryGetArg(0, out NamedArgument arg1) && signal.args.TryGetArg(1, out NamedArgument arg2))
                     {
-                        HealthUtility.AdjustSeverity(target, HediffDefOfLocal.PoisonHit, 0.07f);
+                        Pawn target = arg1.arg as Pawn;
+                        Pawn caster = arg2.arg as Pawn;
+
+                        if (target != null && caster != null)
+                        {
+                            HealthUtility.AdjustSeverity(target, HediffDefOfLocal.PoisonHit, 0.07f);
+                        }
                     }
                 }
                 catch(Exception ex)

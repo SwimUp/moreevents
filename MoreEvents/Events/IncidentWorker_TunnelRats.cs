@@ -35,7 +35,7 @@ namespace RimOverhaul.Events
             if (TryFindCell(out IntVec3 result, map))
             {
                 Thing t = GenSpawn.Spawn(ThingDefOfLocal.TribalCrack, result, map);
-                SendStandardLetter(t);
+                SendStandardLetter(parms, t);
                 return true;
             }
 

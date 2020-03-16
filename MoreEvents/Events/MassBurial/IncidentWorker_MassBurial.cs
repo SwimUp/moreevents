@@ -40,7 +40,7 @@ namespace RimOverhaul.Events.MassBurial
 
                         Find.WorldObjects.Add(massBurialPlace);
 
-                        SendStandardLetter(massBurialPlace, null, faction.Name);
+                        SendStandardLetter(parms, massBurialPlace, faction.Name);
                     }
                 }
             }

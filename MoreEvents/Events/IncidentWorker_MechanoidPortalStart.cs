@@ -29,7 +29,7 @@ namespace MoreEvents.Events
             if(TryFindCell(out IntVec3 result, map))
             {
                 var faller = SkyfallerMaker.SpawnSkyfaller(ThingDefOf.ShipChunkIncoming, ThingDefOfLocal.MechanoidTeleport_Generator, result, map);
-                SendStandardLetter(new LookTargets(new TargetInfo(result, map)));
+                SendStandardLetter(parms, new LookTargets(new TargetInfo(result, map)));
                 return true;
             }
 

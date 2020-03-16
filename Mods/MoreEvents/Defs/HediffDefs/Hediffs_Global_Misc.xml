@@ -3,6 +3,7 @@
 
 	<HediffDef ParentName="InfectionBase">
 		<defName>ZeroMechanites</defName>
+		<description>Many nanorobots that change behavior.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<makesSickThought>true</makesSickThought>
 		<makesAlert>false</makesAlert>
@@ -64,6 +65,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
 		<label>Irradiation</label>
+		<description>The flow of radiation negatively affects your condition.</description>
 		<lethalSeverity>1</lethalSeverity>
 		<makesSickThought>true</makesSickThought>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -181,6 +183,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
 		<label>Oxygen starvation</label>
+		<description>Lack of oxygen, threatening to develop into a lethal stage.</description>
 		<lethalSeverity>1</lethalSeverity>
 		<makesSickThought>true</makesSickThought>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -274,6 +277,7 @@
 	<HediffDef ParentName="InfectionBase">
 		<defName>Fibrodysplasia</defName>
 		<label>Fibrodysplasia</label>
+		<description>A rare and serious disease that gradually destroys body tissue.</description>
 		<makesSickThought>true</makesSickThought>
 		<lethalSeverity>1</lethalSeverity>
 		<tendable>true</tendable>
@@ -332,6 +336,7 @@
 	<HediffDef ParentName="InfectionBase">
 		<defName>NeurofibromatousWorms</defName>
 		<label>Neurofibromatous worms</label>
+		<description>A disease that develops under the influence of intractable parasites in the brain. Characterized by gradual loss of vision and hearing.</description>
 		<makesSickThought>true</makesSickThought>
 		<lethalSeverity>1</lethalSeverity>
 		<tendable>true</tendable>
@@ -370,6 +375,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>NeurofibromatousWormsFinal</defName>
 		<label>Neurofibromatous worms (dead brain parts)</label>
+		<description>The final stage of the disease, leading to complete loss of hearing and vision.</description>
 		<cureAllAtOnceIfCuredByItem>false</cureAllAtOnceIfCuredByItem>
 		<stages>
 			<li>
@@ -391,6 +397,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>CaveBettleBuff</defName>
 		<label>Night hunting</label>
+		<description>The evolutionary mechanism of metabolic acceleration at a natural level of illumination for the body.</description>
 		<cureAllAtOnceIfCuredByItem>false</cureAllAtOnceIfCuredByItem>
 		<stages>
 			<li>
@@ -418,6 +425,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
 		<label>Thirst for human meat</label>
+		<description>Feeling of euphoria caused by eating human remains.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.2</severityPerDay>
@@ -446,6 +454,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>PoisonBite</defName>
 		<label>Poison bite</label>
+		<description>Acid and enzymes that enter the affected area interfere with healing and cause loss of coordination.</description>
 		<lethalSeverity>1.00</lethalSeverity>
 		<initialSeverity>0.05</initialSeverity>
 		<comps>
@@ -499,6 +508,7 @@
 		<defName>BioChemicRegeneration</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Biochemical regeneration</label>
+		<description>The natural process of accelerating metabolism and healing of wounds, by increasing energy consumption.</description>
 		<labelNoun>Biochemical regeneration</labelNoun>
 		<defaultLabelColor>(1,1,1)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -536,6 +546,7 @@
 		<defName>AdamantiumToxin</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Adamantium Poisoning</label>
+		<description>Radiation from the material causes rejection in the nervous system, resulting in partial loss of coordination.</description>
 		<labelNoun>Adamantium Poisoning</labelNoun>
 		<defaultLabelColor>(0.5, 1, 0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -643,6 +654,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>PoisonHit</defName>
 		<label>Poisoning</label>
+		<description>Chemicals in the wound cause fatigue and fatigue.</description>
 		<lethalSeverity>1.00</lethalSeverity>
 		<initialSeverity>0.05</initialSeverity>
 		<comps>
@@ -695,6 +707,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ElectromagneticShock</defName>
 		<label>Electromagnetic shock</label>
+		<description>Concentrated electromagnetic radiation negatively affects the basic life systems of the body.</description>
 		<lethalSeverity>1.00</lethalSeverity>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>
@@ -725,6 +738,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ExposureChargedPlasma</defName>
 		<label>Exposure to charged plasma</label>
+		<description>Hot plasma suppresses natural processes in the brain and leads to a partial loss of intersystem interaction.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -755,6 +769,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>EnergyOverload</defName>
 		<label>Energy overload</label>
+		<description>Strong magnetic effects overload the nervous system.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -784,6 +799,7 @@
 	<HediffDef ParentName="InjuryBase">
 		<defName>InternalBleeding</defName>
 		<label>Internal bleeding</label>
+		<description>Deep tissue damage causes numerous ruptures of blood vessels inside the body.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<lethalSeverity>1.00</lethalSeverity>
 		<comps>
@@ -815,6 +831,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ShortStun</defName>
 		<label>Short stun</label>
+		<description>Stun caused by physical effects on the senses.</description>
 		<lethalSeverity>1.00</lethalSeverity>
 		<initialSeverity>0.05</initialSeverity>
 		<comps>
@@ -845,6 +862,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>SphereOfResurrection</defName>
 		<label>Temporarily alive</label>
+		<description>Many mechanites can, for a short time, partially restore the metabolism of dead creatures, simulating consciousness.</description>
 		<lethalSeverity>1</lethalSeverity>
 		<initialSeverity>0</initialSeverity>
 		<comps>
@@ -867,6 +885,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ExposurePoison</defName>
 		<label>Exposure to poison</label>
+		<description>Poisonous chemicals penetrate the victim’s tissue, slightly slowing down nerve impulses.</description>
 		<initialSeverity>0.1</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -893,6 +912,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ExposurePoison_Axe</defName>
 		<label>Exposure to poison</label>
+		<description>Poisonous chemicals penetrate the victim’s tissue, slightly slowing down nerve impulses.</description>
 		<initialSeverity>0.1</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -919,6 +939,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>DevastatingInjuries</defName>
 		<label>Devastating injuries</label>
+		<description>Severe breaks in body tissues.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -952,6 +973,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>CryotiumShards</defName>
 		<label>Cryotium Shards</label>
+		<description>Small particles of cryotium cause a decrease in body temperature during evaporation inside the wound.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -985,6 +1007,7 @@
 	<HediffDef ParentName="InjuryBase">
 		<defName>ExplosiveBullets</defName>
 		<label>Explosive bullets</label>
+		<description>Explosive injuries cause significant damage to the condition.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -1011,6 +1034,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>BlastingBlisters</defName>
 		<label>Blasting blisters</label>
+		<description>Large spherical neoplasms filled with organic flammable liquid.</description>
 		<tendable>true</tendable>
 		<initialSeverity>0.07</initialSeverity>
 		<comps>
@@ -1048,6 +1072,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ElectricShock</defName>
 		<label>Electric shock</label>
+		<description>Overload of the nervous system caused by exposure to electric current</description>
 		<lethalSeverity>1.00</lethalSeverity>
 		<initialSeverity>0.01</initialSeverity>
 		<comps>

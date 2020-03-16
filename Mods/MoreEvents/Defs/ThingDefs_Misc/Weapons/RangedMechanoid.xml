@@ -70,7 +70,7 @@
 		<defName>Bullet_TrashBomb</defName>
 		<label>trash bomb</label>
 		<graphicData>
-			<texPath>Things/Projectile/InfernoCannonShot</texPath>
+			<texPath>Things/Projectile/LauncherShot</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 			<color>(179,179,179)</color>

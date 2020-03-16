@@ -8,15 +8,12 @@
 Allows smelting of iron and copper ingots in a simple furnace.</description>
 		<baseCost>500</baseCost>
 		<techLevel>Neolithic</techLevel>
-		<prerequisites>
-			<li>Stonecutting</li>
-		</prerequisites>
 		<tags>
 			<li>TribalStart</li>
 			<li>ClassicStart</li>
 		</tags>
-		<researchViewX>1</researchViewX>
-		<researchViewY>3.75</researchViewY>
+		<researchViewX>3.0</researchViewX>
+		<researchViewY>3.95</researchViewY>
 	</ResearchProjectDef>
 
 

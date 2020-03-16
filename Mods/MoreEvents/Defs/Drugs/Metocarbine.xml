@@ -50,6 +50,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>MetocarbineTolerance</defName>
 		<label>Metocarbine tolerance</label>
+		<description>Easy combat stimulator, almost non-addictive. Slightly increases combat performance, but does not have serious side effects. Within a few hours, subjects experienced an increased reaction and speed of decision-making.</description>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.025</severityPerDay>
@@ -64,6 +65,7 @@
 		<defName>MetocarbineHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Concentration</label>
+		<description>Easy combat stimulator, almost non-addictive. Slightly increases combat performance, but does not have serious side effects. Within a few hours, subjects experienced an increased reaction and speed of decision-making.</description>
 		<labelNoun>Concentration</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -101,6 +103,7 @@
 		<defName>MetocarbineAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Metocarbine addiction</label>
+		<description>Easy combat stimulator, almost non-addictive. Slightly increases combat performance, but does not have serious side effects. Within a few hours, subjects experienced an increased reaction and speed of decision-making.</description>
 		<causesNeed>Chemical_Metocarbine</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

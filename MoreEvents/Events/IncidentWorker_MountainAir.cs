@@ -43,7 +43,7 @@ namespace MoreEvents.Events
                 }
             }
 
-            SendStandardLetter();
+            SendStandardLetter(parms, null);
 
             return true;
         }

@@ -30,7 +30,7 @@ namespace MoreEvents.Communications
             NewCountRange = newCountRange;
         }
 
-        public override void DoAction(Quest quest, Pawn speaker, Pawn defendant)
+        public override void DoAction(QuestRim.Quest quest, Pawn speaker, Pawn defendant)
         {
             SkillRecord skill = speaker.skills.GetSkill(SkillDef);
             if (skill.Level < SkillLevel)

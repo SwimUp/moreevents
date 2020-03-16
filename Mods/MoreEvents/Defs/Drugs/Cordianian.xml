@@ -39,6 +39,7 @@
 		<defName>CordianianHediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Cordianian</label>
+		<description>A multi-purpose drug used to maintain breathing in case of lung loss. When using multiple doses, the drug is able to start the regeneration process and restore the lost lung. The drug is not addictive and is actively used in specialized operations.</description>
 		<labelNoun>Cordianian</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

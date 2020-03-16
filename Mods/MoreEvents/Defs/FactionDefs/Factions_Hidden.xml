@@ -14,7 +14,7 @@
 		<canUseAvoidGrid>false</canUseAvoidGrid>
 		<techLevel>Ultra</techLevel>
 		<permanentEnemy>true</permanentEnemy>
-		<homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 	</FactionDef>
 
 </Defs>

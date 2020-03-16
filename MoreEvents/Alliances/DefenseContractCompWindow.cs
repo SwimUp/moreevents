@@ -97,7 +97,7 @@ namespace RimOverhaul.Alliances
                 List<FloatMenuOption> opt = new List<FloatMenuOption>();
                 foreach (var f in alliance.Factions)
                 {
-                    opt.Add(new FloatMenuOption($"{f.Faction.Name} {((int)f.Faction.def.techLevel < (int)defenseContractCompProperties.MinFactionTechLevel ? "DefenseContractCompWindow_LowTechLevel".Translate() : "")}", () => { if ((int)f.Faction.def.techLevel > (int)defenseContractCompProperties.MinFactionTechLevel) faction = f; }));
+                    opt.Add(new FloatMenuOption($"{f.Faction.Name} {((int)f.Faction.def.techLevel < (int)defenseContractCompProperties.MinFactionTechLevel ? "DefenseContractCompWindow_LowTechLevel".Translate().ToString() : "")}", () => { if ((int)f.Faction.def.techLevel > (int)defenseContractCompProperties.MinFactionTechLevel) faction = f; }));
                 }
                 Find.WindowStack.Add(new FloatMenu(opt));
             }
