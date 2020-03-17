@@ -13,7 +13,7 @@ using Verse;
 
 namespace DarkNET.Quests
 {
-    public class Quest_Archotech_567H : Quest
+    public class Quest_Archotech_567H : QuestRim.Quest
     {
         private EventSettings settings => Settings.EventsSettings["TraderWorker_Archotech_567H"];
 

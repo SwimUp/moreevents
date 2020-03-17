@@ -79,6 +79,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		  </skillRequirements>
 		</recipeMaker>
 		<statBases>
+			<MarketValue>7000</MarketValue>
 			<WorkToMake>80000</WorkToMake>
 			<MaxHitPoints>800</MaxHitPoints>
 			<Mass>18</Mass>
@@ -97,11 +98,11 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<costList>
-			<ComponentSpacer>15</ComponentSpacer>
+			<ComponentSpacer>12</ComponentSpacer>
 			<Plasteel>200</Plasteel>
 			<Chromium>100</Chromium>
 			<IronIngot>90</IronIngot>
-			<NickelIngot>100</NickelIngot>
+			<NickelIngot>120</NickelIngot>
 			<IlmeniteIngot>50</IlmeniteIngot>
 		</costList>
 		<apparel>
@@ -140,10 +141,9 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costList>
-			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentSpacer>5</ComponentSpacer>
 			<Plasteel>100</Plasteel>
-			<Synthread>60</Synthread>
-			<IronIngot>30</IronIngot>
+			<Synthread>50</Synthread>
 			<Chromium>50</Chromium>
 			<IlmeniteIngot>30</IlmeniteIngot>
 		</costList>
@@ -158,6 +158,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
+			<MarketValue>2800</MarketValue>
 			<WorkToMake>45000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>
@@ -206,6 +207,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		  </skillRequirements>
 		</recipeMaker>
 		<statBases>
+			<MarketValue>9000</MarketValue>
 			<WorkToMake>100000</WorkToMake>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Mass>18</Mass>
@@ -224,13 +226,11 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentSpacer>15</ComponentSpacer>
 			<Plasteel>250</Plasteel>
 			<Hyperweave>100</Hyperweave>
-			<TungstenIngot>50</TungstenIngot>
-			<PalladiumIngot>40</PalladiumIngot>
-			<NickelIngot>80</NickelIngot>
-			<CobaltIngot>70</CobaltIngot>
+			<TungstenIngot>150</TungstenIngot>
+			<PalladiumIngot>150</PalladiumIngot>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -281,13 +281,10 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costList>
-			<ComponentSpacer>15</ComponentSpacer>
-			<Plasteel>150</Plasteel>
-			<Hyperweave>80</Hyperweave>
-			<TungstenIngot>30</TungstenIngot>
-			<PalladiumIngot>20</PalladiumIngot>
-			<NickelIngot>60</NickelIngot>
-			<CobaltIngot>30</CobaltIngot>
+			<ComponentSpacer>8</ComponentSpacer>
+			<Plasteel>90</Plasteel>
+			<NickelIngot>150</NickelIngot>
+			<CobaltIngot>150</CobaltIngot>
 		</costList>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -300,6 +297,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
+			<MarketValue>3600</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>
@@ -347,6 +345,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 		  </skillRequirements>
 		</recipeMaker>
 		<statBases>
+			<MarketValue>11000</MarketValue>
 			<WorkToMake>100000</WorkToMake>
 			<MaxHitPoints>400</MaxHitPoints>
 			<Mass>18</Mass>
@@ -365,14 +364,13 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<costList>
-			<ComponentSpacer>25</ComponentSpacer>
-			<Plasteel>350</Plasteel>
-			<Hyperweave>200</Hyperweave>
-			<TungstenIngot>90</TungstenIngot>
-			<PalladiumIngot>80</PalladiumIngot>
-			<IlmeniteIngot>150</IlmeniteIngot>
-			<CobaltIngot>70</CobaltIngot>
-			<Uranium>70</Uranium>
+			<ComponentSpacer>15</ComponentSpacer>
+			<Plasteel>200</Plasteel>
+			<Hyperweave>100</Hyperweave>
+			<TungstenIngot>200</TungstenIngot>
+			<PalladiumIngot>200</PalladiumIngot>
+			<IlmeniteIngot>80</IlmeniteIngot>
+			<Uranium>80</Uranium>
 		</costList>
 		<apparel>
 			<bodyPartGroups>
@@ -423,13 +421,11 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<Plasteel>1800</Plasteel>
-			<Hyperweave>120</Hyperweave>
-			<TungstenIngot>100</TungstenIngot>
-			<PalladiumIngot>30</PalladiumIngot>
-			<NickelIngot>70</NickelIngot>
-			<IlmeniteIngot>30</IlmeniteIngot>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Plasteel>100</Plasteel>
+			<Hyperweave>100</Hyperweave>
+			<TungstenIngot>50</TungstenIngot>
+			<IlmeniteIngot>75</IlmeniteIngot>
 		</costList>
 		<recipeMaker>
 		  <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -442,6 +438,7 @@ mobility. The chest cables are covered under the chest plate and as a result are
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
+			<MarketValue>5000</MarketValue>
 			<WorkToMake>50000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>5</Mass>

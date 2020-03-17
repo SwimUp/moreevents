@@ -32,5 +32,8 @@
 	
 	<ChemicalSynthesis.label>Химический синтез</ChemicalSynthesis.label>
 	<ChemicalSynthesis.description>Усовершенствуйте систему обработки, которая позволит использовать химический синтез.</ChemicalSynthesis.description>
+	
+	<GasWeapon.label>Газовое оружие</GasWeapon.label>
+	<GasWeapon.description>Разрушительная сила сгорания газообразных веществ позволяет использовать их для создания взрывоопасных средств.</GasWeapon.description>
 
 </LanguageData>

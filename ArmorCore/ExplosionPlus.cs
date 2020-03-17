@@ -19,6 +19,8 @@ namespace RimArmorCore
 
         private HashSet<IntVec3> addedCellsAffectedOnlyByDamage;
 
+        private List<Thing> ignoredThings;
+
         private const float DamageFactorAtEdge = 0.2f;
 
         private static HashSet<IntVec3> tmpCells = new HashSet<IntVec3>();
@@ -39,7 +41,7 @@ namespace RimArmorCore
             }
         }
 
-        public override void StartExplosion(SoundDef explosionSound)
+        public override void StartExplosion(SoundDef explosionSound, List<Thing> ignoredThings)
         {
             if (!base.Spawned)
             {
@@ -47,6 +49,7 @@ namespace RimArmorCore
                 return;
             }
             startTick = Find.TickManager.TicksGame;
+            this.ignoredThings = ignoredThings;
             cellsToAffect.Clear();
             damagedThings.Clear();
             addedCellsAffectedOnlyByDamage.Clear();
@@ -56,9 +59,9 @@ namespace RimArmorCore
                 AddCellsNeighbors(cellsToAffect);
             }
 
-            if(validator != null)
+            if (validator != null)
             {
-                for(int i = 0; i < cellsToAffect.Count; i++)
+                for (int i = 0; i < cellsToAffect.Count; i++)
                 {
                     IntVec3 cell = cellsToAffect[i];
 
@@ -75,10 +78,13 @@ namespace RimArmorCore
             cellsToAffect.Sort((IntVec3 a, IntVec3 b) => GetCellAffectTick(b).CompareTo(GetCellAffectTick(a)));
             RegionTraverser.BreadthFirstTraverse(base.Position, base.Map, (Region from, Region to) => true, delegate (Region x)
             {
-                List<Thing> list = x.ListerThings.ThingsInGroup(ThingRequestGroup.Pawn);
-                for (int num = list.Count - 1; num >= 0; num--)
+                List<Thing> allThings = x.ListerThings.AllThings;
+                for (int num = allThings.Count - 1; num >= 0; num--)
                 {
-                    ((Pawn)list[num]).mindState.Notify_Explosion(this);
+                    if (allThings[num].Spawned)
+                    {
+                        allThings[num].Notify_Explosion(this);
+                    }
                 }
                 return false;
             }, 25);
@@ -124,7 +130,7 @@ namespace RimArmorCore
                 {
                     TrySpawnExplosionThing(preExplosionSpawnThingDef, c, preExplosionSpawnThingCount);
                 }
-                damType.Worker.ExplosionAffectCell(this, c, damagedThings, !flag);
+                damType.Worker.ExplosionAffectCell(this, c, damagedThings, ignoredThings, !flag);
                 if (!flag && Rand.Chance(postExplosionSpawnChance) && c.Walkable(base.Map))
                 {
                     TrySpawnExplosionThing(postExplosionSpawnThingDef, c, postExplosionSpawnThingCount);
@@ -153,7 +159,7 @@ namespace RimArmorCore
             {
                 if (thingDef.IsFilth)
                 {
-                    FilthMaker.MakeFilth(c, base.Map, thingDef, count);
+                    FilthMaker.TryMakeFilth(c, base.Map, thingDef, count);
                     return;
                 }
                 Thing thing = ThingMaker.MakeThing(thingDef);

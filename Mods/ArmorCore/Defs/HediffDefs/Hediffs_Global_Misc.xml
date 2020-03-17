@@ -3,6 +3,7 @@
 	<HediffDef>
 		<defName>AdrenalinePush</defName>
 		<hediffClass>HediffWithComps</hediffClass>
+		<description>Blood adrenaline level reached a critical point!</description>
 		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
 		<initialSeverity>0.5</initialSeverity>
 		<label>Adrenaline overdose</label>
@@ -35,6 +36,7 @@
 	<HediffDef>
 		<defName>CombatExoskeletonOverDrive</defName>
 		<hediffClass>HediffWithComps</hediffClass>
+		<description>Receptors located on the structure recognize the most vulnerable parts of the body, artificially strengthening, at the cost of high energy costs. The possibilities are running out!</description>
 		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
 		<initialSeverity>0.5</initialSeverity>
 		<label>Combat exoskeleton - overdrive</label>
@@ -62,6 +64,7 @@
 	<HediffDef>
 		<defName>MedicalExoskeletonOverdose</defName>
 		<hediffClass>HediffWithComps</hediffClass>
+		<description>The adrenaline receptors located on the structure recognize injuries and activate mechanites in the most important parts of the body. The possibilities are running out!</description>
 		<defaultLabelColor>(0.2, 0.9, 0.0)</defaultLabelColor>
 		<initialSeverity>0.5</initialSeverity>
 		<label>Medical exoskeleton - overdose</label>

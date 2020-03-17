@@ -5,7 +5,7 @@
 		<defName>EnergyArmorResearch</defName>
 		<label>Energy armor research</label>
 		<description>Research in the field of energy armor will allow you to create a new type of protection, if, of course, you have an energy source capable of supplying it.</description>
-		<baseCost>10000</baseCost>
+		<baseCost>5000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>MicroelectronicsBasics</li>
@@ -20,7 +20,7 @@
 		<defName>MK1Thunder</defName>
 		<label>Mk1 'Thunder'</label>
 		<description>Mk1 'Thunder' - the first development of an energy suit.</description>
-		<baseCost>4500</baseCost>
+		<baseCost>3000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
@@ -35,7 +35,7 @@
 		<defName>MK2Aquilla</defName>
 		<label>Mk2 'Aquille'</label>
 		<description>Updated armor MK1. Increased protection in conjunction with the optimization of the internal space made it possible to create a new effective power armor.</description>
-		<baseCost>10000</baseCost>
+		<baseCost>5000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>MK1Thunder</li>
@@ -50,7 +50,7 @@
 		<defName>MK3Esquare</defName>
 		<label>Mk3 'Esquare'</label>
 		<description>Updated version of the armor from the MK line. It has great internal potential.</description>
-		<baseCost>14000</baseCost>
+		<baseCost>7000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>MK2Aquilla</li>
@@ -66,7 +66,7 @@
 		<label>Basic energy storage</label>
 		<description>Energy armor is demanding on energy sources. We cannot carry a large power station with us, so we need a compact source of energy.
 It opens up the possibility of building the simplest source of energy - the battery pack.</description>
-		<baseCost>3000</baseCost>
+		<baseCost>1500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
@@ -82,7 +82,7 @@ It opens up the possibility of building the simplest source of energy - the batt
 		<label>Advanced energy sources</label>
 		<description>With the help of unique finds, we can make energy sources several times superior to ours.
 It opens up the possibility of create improved battery pack.</description>
-		<baseCost>3000</baseCost>
+		<baseCost>1500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicEnergyStorage</li>
@@ -98,7 +98,7 @@ It opens up the possibility of create improved battery pack.</description>
 		<label>Energy grid batteries</label>
 		<description>The use of energy gratings increased capacity even further.
 It opens up the possibility of create energy grid batteries.</description>
-		<baseCost>3800</baseCost>
+		<baseCost>1750</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>AdvancedEnergySources</li>
@@ -114,7 +114,7 @@ It opens up the possibility of create energy grid batteries.</description>
 		<label>Nanotechnology batteries</label>
 		<description>The use of nanotechnology in the creation of batteries allows you to create an energy source that surpasses any previous one.
 It opens up the possibility of create Silicon nanowire batteries.</description>
-		<baseCost>7000</baseCost>
+		<baseCost>3500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyGridBatteries</li>
@@ -130,7 +130,7 @@ It opens up the possibility of create Silicon nanowire batteries.</description>
 		<label>Autonomous energy sources</label>
 		<description>The creation of such an energy source that can itself restore the charge of energy using fuel without connecting to energy sources.
 Allows the creation of a minified nuclear reactor.</description>
-		<baseCost>8000</baseCost>
+		<baseCost>4000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>AdvancedEnergySources</li>
@@ -146,7 +146,7 @@ Allows the creation of a minified nuclear reactor.</description>
 		<label>Next generation reactor</label>
 		<description>Сreating a reactor based on cold fusion. It does not overheat, has great power.
 Allows you to create a minified cold fusion reactor.</description>
-		<baseCost>13000</baseCost>
+		<baseCost>6500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>AutonomousEnergySources</li>
@@ -162,7 +162,7 @@ Allows you to create a minified cold fusion reactor.</description>
 		<label>Overclocked cold fusion reactor</label>
 		<description>The use of new tillium fuel instead of palladium allowed the acceleration of the cold fusion reactor to obtain even more power output.
 Allows you to create an arc reactor.</description>
-		<baseCost>25000</baseCost>
+		<baseCost>12000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>NextGenerationReactor</li>
@@ -178,7 +178,7 @@ Allows you to create an arc reactor.</description>
 		<label>Basic Armor Improvement</label>
 		<description>We can improve the armor by adding its modules, which can improve its parameters.
 Allows you to create tools to improve armor.</description>
-		<baseCost>4000</baseCost>
+		<baseCost>2000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
@@ -194,7 +194,7 @@ Allows you to create tools to improve armor.</description>
 		<label>Robotic station</label>
 		<description>Assistant robots will provide additional accuracy with armor, which will allow you to install better modules.
 Allows you to create robotic manipulators for installing level 2 modules.</description>
-		<baseCost>10000</baseCost>
+		<baseCost>5000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -210,7 +210,7 @@ Allows you to create robotic manipulators for installing level 2 modules.</descr
 		<label>Nanorobots</label>
 		<description>Now we can use nanorobots to improve armor. This will allow you to change previously inaccessible places of reservation.
 Allows you to create nanorobots to install level 3 improvements.</description>
-		<baseCost>20000</baseCost>
+		<baseCost>8000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -226,7 +226,7 @@ Allows you to create nanorobots to install level 3 improvements.</description>
 		<label>Advanced Energy Management Techniques</label>
 		<description>We can optimize energy consumption by redirecting stored energy to another location.
 Allows you to create capacitor banks and transformers.</description>
-		<baseCost>2500</baseCost>
+		<baseCost>1000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
@@ -242,7 +242,7 @@ Allows you to create capacitor banks and transformers.</description>
 		<label>Energy optimization</label>
 		<description>Using advanced materials, we can create optimal batteries to store more energy and optimize energy consumption for faster charging of armor.
 Allows you to create a nano-yolk and an energy cell.</description>
-		<baseCost>3200</baseCost>
+		<baseCost>1600</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
@@ -258,7 +258,7 @@ Allows you to create a nano-yolk and an energy cell.</description>
 		<label>Energy accelerator</label>
 		<description>Having assembled a special energy accelerator, we can use the entire energy potential of the station.
 Opens the opportunity to create an energy amplifier.</description>
-		<baseCost>5000</baseCost>
+		<baseCost>2500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>EnergyArmorResearch</li>
@@ -275,7 +275,7 @@ Opens the opportunity to create an energy amplifier.</description>
 		<label>Basic respiratory protection</label>
 		<description>The installation of special filters allows you to protect yourself from simple toxic gases and effects.
 Allows you to create a basic filtration system.</description>
-		<baseCost>1500</baseCost>
+		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -291,7 +291,7 @@ Allows you to create a basic filtration system.</description>
 		<label>Autonomous charging</label>
 		<description>Using solar panels will allow you to autonomously charge batteries
 Allows you to create a simple solar panels.</description>
-		<baseCost>1500</baseCost>
+		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>AutonomousEnergySources</li>
@@ -308,7 +308,7 @@ Allows you to create a simple solar panels.</description>
 		<label>Protective material</label>
 		<description>For physical protection from the effects of weather and human activities, we need material that can protect against bad weather and radiation.
 Allows you to create antitoxic seals.</description>
-		<baseCost>2500</baseCost>
+		<baseCost>1300</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -324,7 +324,7 @@ Allows you to create antitoxic seals.</description>
 		<label>Simple guidance system</label>
 		<description>Creating a simple guidance system will increase accuracy.
 Allows you to create a guidance system.</description>
-		<baseCost>3000</baseCost>
+		<baseCost>1500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -340,7 +340,7 @@ Allows you to create a guidance system.</description>
 		<label>Stimulants</label>
 		<description>Stimulants will allow the carrier to inject adrenaline, so that his combat skills will be better.
 Allows you to create stimulants.</description>
-		<baseCost>2700</baseCost>
+		<baseCost>1350</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -356,7 +356,7 @@ Allows you to create stimulants.</description>
 		<label>Light protection</label>
 		<description>Creating material that can be placed under the armor to improve protection.
 Allows the creation of reinforced armor cloth.</description>
-		<baseCost>4000</baseCost>
+		<baseCost>2000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -372,7 +372,7 @@ Allows the creation of reinforced armor cloth.</description>
 		<label>Heavy protection</label>
 		<description>Creating plates that can be installed in the upper layers of the armor to further increase protection.
 Allows you to create reinforced plates.</description>
-		<baseCost>6000</baseCost>
+		<baseCost>3000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -388,7 +388,7 @@ Allows you to create reinforced plates.</description>
 		<label>Improved mobility</label>
 		<description>Creating and installing shock absorbers in the lower part of the armor will allow the wearer to move more conveniently.
 Allows you to create shock absorbers.</description>
-		<baseCost>3200</baseCost>
+		<baseCost>1600</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>BasicArmorImprovement</li>
@@ -406,7 +406,7 @@ Allows you to create shock absorbers.</description>
 		<label>Simple medical systems</label>
 		<description>The creation of a basic medical system will allow monitoring the health indicators of a carrier and taking actions to provide medical care.
 Allows you to create a first aid interface.</description>
-		<baseCost>5000</baseCost>
+		<baseCost>2500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -422,7 +422,7 @@ Allows you to create a first aid interface.</description>
 		<label>Protein therapy of antigenesis</label>
 		<description>Thanks to the automatic protein therapy system, we can increase the survivability of the carrier and its combat parameters.
 Allows you to create protein therapy of antigenesis.</description>
-		<baseCost>4500</baseCost>
+		<baseCost>2000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -438,7 +438,7 @@ Allows you to create protein therapy of antigenesis.</description>
 		<label>Adrenaline injectors</label>
 		<description>Creating adrenaline injectors will significantly strengthen the carrier, and thanks to a special injection system, you can arrange an overdose to get a super fighter.
 Allows you to create adrenaline injectors.</description>
-		<baseCost>2300</baseCost>
+		<baseCost>1200</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -454,7 +454,7 @@ Allows you to create adrenaline injectors.</description>
 		<label>Active armor</label>
 		<description>Creating armor that adapts to each shot will significantly enhance the armor.
 Allows you to create active plates.</description>
-		<baseCost>8000</baseCost>
+		<baseCost>4000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -470,7 +470,7 @@ Allows you to create active plates.</description>
 		<label>Circular echolocation</label>
 		<description>A special eco-locator will allow you to control the space around the carrier, which will increase the maneuverability of the fighter.
 Allows you to create a echo system 'Plato'</description>
-		<baseCost>7600</baseCost>
+		<baseCost>3600</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -485,7 +485,7 @@ Allows you to create a echo system 'Plato'</description>
 		<defName>AdvancedFiltrationSystems</defName>
 		<label>Advanced Filtration Systems</label>
 		<description>Creating a new generation of filters will protect the wearer of the armor from all possible problems associated with air.</description>
-		<baseCost>5500</baseCost>
+		<baseCost>2700</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -501,7 +501,7 @@ Allows you to create a echo system 'Plato'</description>
 		<label>Advanced solar panels</label>
 		<description>Improving the technology of solar panels will allow the creation of panels with increased efficiency
 Allows you to create a advanced solar panels</description>
-		<baseCost>5500</baseCost>
+		<baseCost>2700</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>AutonomousCharging</li>
@@ -517,7 +517,7 @@ Allows you to create a advanced solar panels</description>
 		<label>Joint improvement</label>
 		<description>Creating motorized joints can greatly facilitate movement in a suit and increase speed.
 Allows you to create motorized joints.</description>
-		<baseCost>6500</baseCost>
+		<baseCost>3250</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -533,7 +533,7 @@ Allows you to create motorized joints.</description>
 		<label>Upper layer armor</label>
 		<description>Creating detachable upon impact of armor will protect the wearer of armor for a limited number of hits.
 Allows you to create ablation coating.</description>
-		<baseCost>7000</baseCost>
+		<baseCost>3500</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -549,7 +549,7 @@ Allows you to create ablation coating.</description>
 		<label>Energy shield system</label>
 		<description>The shield system will create a powerful energy field around the carrier to protect against damage.
 Allows you to create a shield modulator.</description>
-		<baseCost>12000</baseCost>
+		<baseCost>6000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -565,7 +565,7 @@ Allows you to create a shield modulator.</description>
 		<label>Electricity and heat</label>
 		<description>Special plates with heating elements powered by electricity for additional heating.
 Allows you to create an electrical heater.</description>
-		<baseCost>4000</baseCost>
+		<baseCost>2000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -581,7 +581,7 @@ Allows you to create an electrical heater.</description>
 		<label>Electric cladding</label>
 		<description>The use of electric cladding  will create additional protection in close combat
 Allows you to create an low voltage cladding.</description>
-		<baseCost>5500</baseCost>
+		<baseCost>2250</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>RoboticStation</li>
@@ -597,7 +597,7 @@ Allows you to create an low voltage cladding.</description>
 		<label>Advanced electric cladding</label>
 		<description>The use of advanced electric cladding  will create additional protection in close combat
 Allows you to create an high voltage cladding.</description>
-		<baseCost>7000</baseCost>
+		<baseCost>3500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>ElectricCladding</li>
@@ -615,7 +615,7 @@ Allows you to create an high voltage cladding.</description>
 		<label>Kinetic buffer</label>
 		<description>The buffer will allow you to accumulate kinetic energy from physical impacts and hits and release it back in large quantities by a signal from the armor carrier.
 Allows you to create a kinetic buffer.</description>
-		<baseCost>7000</baseCost>
+		<baseCost>3500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
@@ -631,7 +631,7 @@ Allows you to create a kinetic buffer.</description>
 		<label>Advanced security systems</label>
 		<description>An advanced protection system will allow you to redistribute energy in the armor and transfer it to the place of impact.
 Allows you to create a protective interface.</description>
-		<baseCost>6500</baseCost>
+		<baseCost>3500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
@@ -647,7 +647,7 @@ Allows you to create a protective interface.</description>
 		<label>Combat exoskeleton</label>
 		<description>Combat exoskeleton includes a large system to enhance the physical abilities of an armor carrier.
 Allows you to create a combat exoskeleton.</description>
-		<baseCost>10000</baseCost>
+		<baseCost>5000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
@@ -663,7 +663,7 @@ Allows you to create a combat exoskeleton.</description>
 		<label>Medical exoskeleton</label>
 		<description>A medical exoskeleton will allow you to monitor vital signs at the internal level and instantly respond to any threats to life.
 Allows you to create a medical exoskeleton.</description>
-		<baseCost>10000</baseCost>
+		<baseCost>5000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
@@ -679,7 +679,7 @@ Allows you to create a medical exoskeleton.</description>
 		<label>Energy boots</label>
 		<description>Shoes with built-in energy amplifiers will achieve maximum comfort and speed.
 Allows you to create energy boots.</description>
-		<baseCost>10000</baseCost>
+		<baseCost>3600</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
@@ -695,7 +695,7 @@ Allows you to create energy boots.</description>
 		<label>CULL solar panels</label>
 		<description>The use of two-layer technology will bring portable solar panels to a new level
 Allows you to create a CULL solar panels.</description>
-		<baseCost>7000</baseCost>
+		<baseCost>3500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>AdvancedSolarPanels</li>

@@ -13,7 +13,7 @@ using Verse.AI.Group;
 
 namespace DarkNET.Events.DarkNetTraderSupply
 {
-    public class Quest_DarkNetTraderSupply : Quest
+    public class Quest_DarkNetTraderSupply : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 

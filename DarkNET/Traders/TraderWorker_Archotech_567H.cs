@@ -56,7 +56,7 @@ namespace DarkNET.Traders
 
         private DarkNetComp_Archotech_567H сomp;
 
-        public List<Quest> Quests = new List<Quest>();
+        public List<QuestRim.Quest> Quests = new List<QuestRim.Quest>();
 
         private Type[] QuestsList = new Type[]
         {
@@ -129,7 +129,7 @@ namespace DarkNET.Traders
             for (int i = 0; i < questCount; i++)
             {
                 int questId = Rand.Range(0, QuestsList.Length);
-                Quest quest = (Quest)Activator.CreateInstance(QuestsList[questId]);
+                QuestRim.Quest quest = (QuestRim.Quest)Activator.CreateInstance(QuestsList[questId]);
                 if (quest.TryGiveQuestTo(null, null))
                 {
                     Quests.Add(quest);
@@ -144,7 +144,7 @@ namespace DarkNET.Traders
             {
                 for (int i = 0; i < Quests.Count; i++)
                 {
-                    Quest quest = Quests[i];
+                    QuestRim.Quest quest = Quests[i];
                     if (quest != null)
                     {
                         if (quest.Site != null)

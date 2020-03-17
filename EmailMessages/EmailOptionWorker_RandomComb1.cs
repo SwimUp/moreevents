@@ -55,8 +55,7 @@ namespace EmailMessages
                     }
                 case 2:
                     {
-                        def = IncidentDefOfLocal.Quest_ItemStash;
-                        def.Worker.TryExecute(StorytellerUtility.DefaultParmsNow(def.category, Find.World));
+                        Utils.SendRaid(Find.FactionManager.OfMechanoids, 1.2f, Rand.Range(2, 7) * 60000);
                         break;
                     }
                 case 3:

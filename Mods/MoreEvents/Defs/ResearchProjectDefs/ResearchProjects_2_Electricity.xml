@@ -119,5 +119,21 @@ Allows you to create a large tanker and gas cylinders.</description>
 		<researchViewX>1.74</researchViewX>
 		<researchViewY>4</researchViewY>
 	</ResearchProjectDef>
+	
+	
+	<ResearchProjectDef>
+		<defName>GasWeapon</defName>
+		<label>Gas weapon</label>
+		<description>The destructive force of combustion of gaseous substances allows them to be used to create protective equipment.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>GasIndustry</tab>
+		<prerequisites>
+			<li>GasToHeat</li>
+			<li>HydrogenProduction</li>
+		</prerequisites>
+		<researchViewX>3.61</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
 
 </Defs>

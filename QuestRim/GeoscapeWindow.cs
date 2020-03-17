@@ -83,7 +83,7 @@ namespace QuestRim
 
             communicationsDialogs = communications.CommunicationDialogs;
             quests = communications.Quests;
-            factions = communications.FactionManager.Factions.Where(x => !x.Faction.def.isPlayer && !x.Faction.def.hidden).ToList();
+            factions = communications.FactionManager.Factions.Where(x => x != null && x.Faction != null && !x.Faction.def.isPlayer && !x.Faction.def.hidden).ToList();
             emailMessages = communications.PlayerBox.Messages;
             alliances = globalFactionManager.Alliances;
             globalFactionManager.Alliances.SortByDescending(x => x.PlayerOwner);

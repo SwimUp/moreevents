@@ -13,7 +13,7 @@ using Verse;
 
 namespace DarkNET.Events.DarkNetKillInformator
 {
-    public class Quest_DarkNetKillInformator : Quest
+    public class Quest_DarkNetKillInformator : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
         public override string CardLabel => string.Format(IncidentDefOfLocal.DarkNetKillInformator.letterLabel, TraderDef.LabelCap, Faction.Name);

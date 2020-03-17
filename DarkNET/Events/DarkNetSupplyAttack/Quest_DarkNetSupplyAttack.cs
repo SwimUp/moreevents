@@ -12,7 +12,7 @@ using Verse.AI.Group;
 
 namespace DarkNET.Events.DarkNetSupplyAttack
 {
-    public class Quest_DarkNetSupplyAttack : Quest
+    public class Quest_DarkNetSupplyAttack : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 

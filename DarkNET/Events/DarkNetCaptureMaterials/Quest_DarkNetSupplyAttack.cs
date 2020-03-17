@@ -13,7 +13,7 @@ using Verse.AI.Group;
 
 namespace DarkNET.Events.DarkNetCaptureMaterials
 {
-    public class Quest_DarkNetCaptureMaterials : Quest
+    public class Quest_DarkNetCaptureMaterials : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 

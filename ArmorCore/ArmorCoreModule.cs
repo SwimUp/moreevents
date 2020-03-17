@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimOverhaul;
 using System.Reflection;
 
@@ -10,7 +10,7 @@ namespace ArmorCore
 
         public override void Loaded()
         {
-            HarmonyInstance harmonyInstance = HarmonyInstance.Create("net.funkyshit.armorcore");
+            Harmony harmonyInstance = new Harmony("net.funkyshit.armorcore");
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
         }
     }

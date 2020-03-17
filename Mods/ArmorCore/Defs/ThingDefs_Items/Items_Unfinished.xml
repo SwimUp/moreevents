@@ -102,9 +102,9 @@
 			<Steel>220</Steel>
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<IlmeniteIngot>70</IlmeniteIngot>
-			<Chromium>75</Chromium>
-			<NickelIngot>120</NickelIngot>
-			<CopperIngot>200</CopperIngot>
+			<Chromium>50</Chromium>
+			<NickelIngot>60</NickelIngot>
+			<CopperIngot>100</CopperIngot>
 		</costList>
 		<category>Item</category>
 		<thingCategories>
@@ -172,7 +172,7 @@
 			<ComponentIndustrial>8</ComponentIndustrial>
 			<IlmeniteIngot>70</IlmeniteIngot>
 			<Chromium>95</Chromium>
-			<CopperIngot>200</CopperIngot>
+			<CopperIngot>150</CopperIngot>
 			<NickelIngot>110</NickelIngot>
 		</costList>
 		<category>Item</category>
@@ -239,11 +239,10 @@
 		<costList>
 			<Steel>50</Steel>
 			<ComponentIndustrial>12</ComponentIndustrial>
-			<IlmeniteIngot>110</IlmeniteIngot>
+			<IlmeniteIngot>80</IlmeniteIngot>
 			<Chromium>100</Chromium>
-			<ComponentSpacer>3</ComponentSpacer>
 			<CopperIngot>100</CopperIngot>
-			<NickelIngot>120</NickelIngot>
+			<NickelIngot>80</NickelIngot>
 			<TungstenIngot>50</TungstenIngot>
 		</costList>
 		<category>Item</category>
@@ -457,7 +456,7 @@
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>55000</WorkToMake>
-			<MarketValue>3000</MarketValue>
+			<MarketValue>4000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -481,15 +480,15 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>220</Plasteel>
+			<Plasteel>110</Plasteel>
 			<Steel>100</Steel>
-			<ComponentIndustrial>12</ComponentIndustrial>
-			<ComponentSpacer>12</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>8</ComponentSpacer>
 			<CopperIngot>80</CopperIngot>
-			<CobaltIngot>120</CobaltIngot>
-			<NickelIngot>200</NickelIngot>
-			<Hyperweave>50</Hyperweave>
-			<PalladiumIngot>100</PalladiumIngot>
+			<CobaltIngot>50</CobaltIngot>
+			<NickelIngot>50</NickelIngot>
+			<Hyperweave>20</Hyperweave>
+			<PalladiumIngot>20</PalladiumIngot>
 			<PalladiumCore>1</PalladiumCore>
 			<Enricher>1</Enricher>
 		</costList>
@@ -536,7 +535,7 @@
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
-			<MarketValue>1200</MarketValue>
+			<MarketValue>1500</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>10</Mass>
@@ -564,7 +563,7 @@
 			<Steel>100</Steel>
 			<Chromium>90</Chromium>
 			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentSpacer>1</ComponentSpacer>
 			<Uranium>100</Uranium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -600,7 +599,7 @@ Allow you to install a second level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>45000</WorkToMake>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>2200</MarketValue>
 			<MaxHitPoints>250</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>14</Mass>
@@ -627,10 +626,10 @@ Allow you to install a second level of modules for armor.</description>
 			<Plasteel>80</Plasteel>
 			<Steel>100</Steel>
 			<Gold>40</Gold>
-			<ComponentIndustrial>7</ComponentIndustrial>
-			<ComponentSpacer>4</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
 			<IronIngot>100</IronIngot>
-			<Chromium>140</Chromium>
+			<Chromium>120</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -690,13 +689,13 @@ Opens the last level of modules for armor.</description>
 		</recipeMaker>
 		<costList>
 			<Plasteel>30</Plasteel>
-			<Steel>70</Steel>
-			<Gold>50</Gold>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>10</ComponentSpacer>
-			<Uranium>60</Uranium>
-			<IlmeniteIngot>90</IlmeniteIngot>
-			<PalladiumIngot>90</PalladiumIngot>
+			<Steel>50</Steel>
+			<Gold>30</Gold>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Uranium>50</Uranium>
+			<IlmeniteIngot>70</IlmeniteIngot>
+			<PalladiumIngot>70</PalladiumIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -753,11 +752,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>120</Plasteel>
-			<Steel>200</Steel>
+			<Plasteel>60</Plasteel>
+			<Steel>100</Steel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
-			<Chromium>150</Chromium>
+			<Chromium>75</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -814,13 +813,13 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>120</Plasteel>
+			<Plasteel>75</Plasteel>
 			<CopperIngot>130</CopperIngot>
-			<Silver>400</Silver>
-			<Gold>50</Gold>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<NickelIngot>70</NickelIngot>
+			<Silver>200</Silver>
+			<Gold>25</Gold>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<NickelIngot>35</NickelIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -878,12 +877,12 @@ Opens the last level of modules for armor.</description>
 		</recipeMaker>
 		<costList>
 			<Plasteel>70</Plasteel>
-			<CopperIngot>160</CopperIngot>
+			<CopperIngot>140</CopperIngot>
 			<Gold>20</Gold>
 			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>4</ComponentSpacer>
-			<Hyperweave>50</Hyperweave>
-			<TungstenIngot>50</TungstenIngot>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Hyperweave>45</Hyperweave>
+			<TungstenIngot>45</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -943,10 +942,10 @@ Opens the last level of modules for armor.</description>
 			<Plasteel>50</Plasteel>
 			<Steel>50</Steel>
 			<Gold>10</Gold>
-			<ComponentIndustrial>7</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 			<Uranium>50</Uranium>
-			<CopperIngot>180</CopperIngot>
+			<CopperIngot>120</CopperIngot>
 			<TungstenIngot>40</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -1004,11 +1003,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>120</Plasteel>
-			<Steel>100</Steel>
-			<IronIngot>150</IronIngot>
+			<Plasteel>40</Plasteel>
+			<Steel>80</Steel>
+			<IronIngot>80</IronIngot>
 			<ComponentIndustrial>3</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1065,13 +1064,13 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>150</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-			<ComponentSpacer>7</ComponentSpacer>
-			<CopperIngot>150</CopperIngot>
-			<Synthread>100</Synthread>
-			<Chromium>80</Chromium>
+			<Plasteel>45</Plasteel>
+			<Steel>60</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<CopperIngot>75</CopperIngot>
+			<Synthread>60</Synthread>
+			<Chromium>50</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1128,13 +1127,13 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>120</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
+			<Plasteel>20</Plasteel>
+			<Steel>50</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 			<Uranium>20</Uranium>
 			<Synthread>50</Synthread>
-			<Chromium>80</Chromium>
+			<Chromium>50</Chromium>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1192,9 +1191,8 @@ Opens the last level of modules for armor.</description>
 		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
 			<Uranium>20</Uranium>
-			<Chromium>25</Chromium>
+			<Chromium>45</Chromium>
 			<NickelIngot>80</NickelIngot>
 			<CopperIngot>140</CopperIngot>
 		</costList>
@@ -1254,11 +1252,10 @@ Opens the last level of modules for armor.</description>
 		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Uranium>15</Uranium>
-			<Chromium>35</Chromium>
-			<NickelIngot>140</NickelIngot>
-			<IlmeniteIngot>40</IlmeniteIngot>
+			<Uranium>60</Uranium>
+			<Chromium>85</Chromium>
+			<NickelIngot>90</NickelIngot>
+			<CopperIngot>110</CopperIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1315,12 +1312,13 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>6</ComponentSpacer>
-			<Uranium>45</Uranium>
-			<Chromium>55</Chromium>
-			<CobaltIngot>120</CobaltIngot>
-			<TungstenIngot>50</TungstenIngot>
+			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Uranium>70</Uranium>
+			<Chromium>50</Chromium>
+			<NickelIngot>50</NickelIngot>
+			<CopperIngot>80</CopperIngot>
+			<TungstenIngot>60</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1377,11 +1375,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>80</Plasteel>
-			<Steel>120</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
-			<CobaltIngot>120</CobaltIngot>
+			<Plasteel>40</Plasteel>
+			<Steel>80</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<CobaltIngot>60</CobaltIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1438,10 +1436,10 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>90</Plasteel>
-			<Steel>150</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>7</ComponentSpacer>
+			<Plasteel>50</Plasteel>
+			<Steel>70</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
 			<PalladiumIngot>40</PalladiumIngot>
 			<NickelIngot>60</NickelIngot>
 			<Hyperweave>50</Hyperweave>
@@ -1477,7 +1475,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>1900</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>2</Mass>
@@ -1504,8 +1502,8 @@ Opens the last level of modules for armor.</description>
 			<Plasteel>80</Plasteel>
 			<Steel>90</Steel>
 			<IronIngot>40</IronIngot>
-			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 			<Synthread>60</Synthread>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -1539,7 +1537,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>5</Mass>
@@ -1563,12 +1561,9 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>30</Plasteel>
-			<Steel>30</Steel>
 			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
+			<ComponentSpacer>3</ComponentSpacer>
 			<Hyperweave>80</Hyperweave>
-			<Synthread>80</Synthread>
 			<IlmeniteIngot>30</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -1626,12 +1621,12 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>120</Plasteel>
-			<Steel>120</Steel>
+			<Plasteel>60</Plasteel>
+			<Steel>60</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
-			<IronIngot>50</IronIngot>
-			<IlmeniteIngot>50</IlmeniteIngot>
+			<IronIngot>20</IronIngot>
+			<IlmeniteIngot>20</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1664,7 +1659,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>1900</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1693,7 +1688,6 @@ Opens the last level of modules for armor.</description>
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 			<Uranium>40</Uranium>
-			<Hyperweave>100</Hyperweave>
 			<Synthread>100</Synthread>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -1727,7 +1721,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1752,11 +1746,8 @@ Opens the last level of modules for armor.</description>
 		</recipeMaker>
 		<costList>
 			<Plasteel>50</Plasteel>
-			<Steel>50</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
-			<Uranium>40</Uranium>
-			<Hyperweave>100</Hyperweave>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
 			<Synthread>100</Synthread>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -1790,7 +1781,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>1700</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1815,12 +1806,9 @@ Opens the last level of modules for armor.</description>
 		</recipeMaker>
 		<costList>
 			<Plasteel>50</Plasteel>
-			<Steel>50</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
-			<Uranium>40</Uranium>
-			<Hyperweave>100</Hyperweave>
-			<Synthread>100</Synthread>
+			<Chromium>80</Chromium>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<NickelIngot>80</NickelIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1853,7 +1841,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>2200</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1877,13 +1865,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>50</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
-			<Uranium>40</Uranium>
-			<Hyperweave>100</Hyperweave>
-			<Synthread>100</Synthread>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Plasteel>60</Plasteel>
+			<Chromium>90</Chromium>
+			<NickelIngot>45</NickelIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1916,7 +1902,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>28000</WorkToMake>
-			<MarketValue>2400</MarketValue>
+			<MarketValue>1900</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>2</Mass>
@@ -1940,12 +1926,10 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>30</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentIndustrial>5</ComponentIndustrial>
 			<ComponentSpacer>5</ComponentSpacer>
-			<CopperIngot>150</CopperIngot>
-			<Neutroamine>12</Neutroamine>
+			<CopperIngot>100</CopperIngot>
+			<Neutroamine>20</Neutroamine>
 			<MedicineUltratech>3</MedicineUltratech>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -1979,7 +1963,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2400</MarketValue>
+			<MarketValue>2100</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>10</Mass>
@@ -2003,10 +1987,9 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>150</Plasteel>
-			<Steel>150</Steel>
+			<Plasteel>100</Plasteel>
 			<ComponentIndustrial>2</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<Chromium>70</Chromium>
 			<IlmeniteIngot>50</IlmeniteIngot>
 		</costList>
@@ -2041,7 +2024,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>29000</WorkToMake>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>2150</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>5</Mass>
@@ -2069,7 +2052,7 @@ Opens the last level of modules for armor.</description>
 			<Steel>100</Steel>
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<ComponentSpacer>5</ComponentSpacer>
-			<CopperIngot>130</CopperIngot>
+			<CopperIngot>100</CopperIngot>
 			<Neutroamine>20</Neutroamine>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -2103,7 +2086,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>35000</WorkToMake>
-			<MarketValue>2800</MarketValue>
+			<MarketValue>2700</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>2</Mass>
@@ -2127,11 +2110,10 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>50</Plasteel>
-			<Steel>50</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>6</ComponentSpacer>
-			<MedicineUltratech>5</MedicineUltratech>
+			<Steel>100</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<MedicineUltratech>3</MedicineUltratech>
 			<Neutroamine>35</Neutroamine>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -2165,7 +2147,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>1900</MarketValue>
+			<MarketValue>1800</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>6</Mass>
@@ -2191,9 +2173,9 @@ Opens the last level of modules for armor.</description>
 		<costList>
 			<Plasteel>20</Plasteel>
 			<Steel>20</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
+			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>4</ComponentSpacer>
-			<Chromium>140</Chromium>
+			<Chromium>100</Chromium>
 			<TungstenIngot>60</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -2253,10 +2235,9 @@ Opens the last level of modules for armor.</description>
 		<costList>
 			<Plasteel>50</Plasteel>
 			<Steel>50</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>5</ComponentSpacer>
-			<NickelIngot>60</NickelIngot>
-			<Chemfuel>60</Chemfuel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+			<NickelIngot>50</NickelIngot>
 			<PalladiumIngot>50</PalladiumIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -2314,10 +2295,9 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>150</Plasteel>
-			<Steel>150</Steel>
+			<Chromium>60</Chromium>
 			<ComponentIndustrial>10</ComponentIndustrial>
-			<ComponentSpacer>12</ComponentSpacer>
+			<ComponentSpacer>6</ComponentSpacer>
 			<CopperIngot>100</CopperIngot>
 			<Hyperweave>100</Hyperweave>
 			<PalladiumIngot>120</PalladiumIngot>
@@ -2377,16 +2357,14 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>20</Plasteel>
-			<Steel>100</Steel>
-			<ComponentIndustrial>12</ComponentIndustrial>
-			<ComponentSpacer>12</ComponentSpacer>
-			<CopperIngot>100</CopperIngot>
-			<Hyperweave>30</Hyperweave>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<CopperIngot>60</CopperIngot>
 			<PalladiumIngot>100</PalladiumIngot>
 			<TungstenIngot>50</TungstenIngot>
-			<MedicineUltratech>8</MedicineUltratech>
-			<Neutroamine>35</Neutroamine>
+			<MedicineUltratech>10</MedicineUltratech>
+			<Neutroamine>30</Neutroamine>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2419,7 +2397,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>25000</WorkToMake>
-			<MarketValue>2300</MarketValue>
+			<MarketValue>1500</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -2445,8 +2423,8 @@ Opens the last level of modules for armor.</description>
 		<costList>
 			<Plasteel>50</Plasteel>
 			<Steel>50</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>3</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 			<IlmeniteIngot>60</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
@@ -2480,7 +2458,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
-			<MarketValue>2600</MarketValue>
+			<MarketValue>1800</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>4</Mass>
@@ -2504,11 +2482,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>100</Steel>
-			<ComponentIndustrial>8</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
-			<IlmeniteIngot>90</IlmeniteIngot>
+			<Plasteel>50</Plasteel>
+			<Steel>50</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<IlmeniteIngot>70</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2541,7 +2519,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
-			<MarketValue>2600</MarketValue>
+			<MarketValue>1300</MarketValue>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>7</Mass>
@@ -2565,8 +2543,7 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>100</Plasteel>
-			<Steel>70</Steel>
+			<Steel>100</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 			<Uranium>70</Uranium>
@@ -2602,7 +2579,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>40000</WorkToMake>
-			<MarketValue>3400</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>6</Mass>
@@ -2626,12 +2603,11 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>150</Plasteel>
-			<Steel>40</Steel>
 			<ComponentIndustrial>8</ComponentIndustrial>
 			<ComponentSpacer>8</ComponentSpacer>
-			<CopperIngot>150</CopperIngot>
-			<TungstenIngot>50</TungstenIngot>
+			<CopperIngot>200</CopperIngot>
+			<TungstenIngot>90</TungstenIngot>
+			<IlmeniteIngot>90</IlmeniteIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2664,7 +2640,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>30000</WorkToMake>
-			<MarketValue>2800</MarketValue>
+			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>5</Mass>
@@ -2688,12 +2664,12 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Plasteel>70</Plasteel>
-			<Steel>150</Steel>
+			<Plasteel>20</Plasteel>
+			<Steel>100</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 			<Uranium>80</Uranium>
-			<Hyperweave>100</Hyperweave>
+			<Hyperweave>35</Hyperweave>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>

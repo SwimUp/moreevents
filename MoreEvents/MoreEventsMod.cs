@@ -13,7 +13,8 @@ namespace MoreEvents
     [StaticConstructorOnStartup]
     public class MoreEventsMod : Mod
     {
-        internal static Harmony harmonyInstance;
+        //internal static HarmonyInstance harmonyInstance --> OLD
+        internal static Harmony harmonyInstance; //--NEW
 
         public static Settings Settings;
 
@@ -26,8 +27,8 @@ namespace MoreEvents
 
             Settings = GetSettings<Settings>();
 
-            //harmonyInstance = HarmonyInstance.Create("net.funkyshit.moreeventsmod");
-            harmonyInstance = new Harmony("net.funkyshit.moreeventsmod");
+            //harmonyInstance = HarmonyInstance.Create("net.funkyshit.moreeventsmod"); --> OLD
+            harmonyInstance = new Harmony("net.funkyshit.moreeventsmod"); //--> NEW
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
             if(!Settings.EventsSettings.ContainsKey("General"))

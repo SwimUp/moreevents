@@ -669,6 +669,72 @@
   </ThingDef>
   
   
+<ThingDef ParentName="TrapIEDBase">
+    <defName>GasMine</defName>
+    <label>Gas mine</label>
+    <description>Mine of destructive power achieved through gas expansion.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDEMP</texPath>
+    </graphicData>
+    <costList>
+      <Pyrotium>10</Pyrotium>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+	  <LiquefiedNaturalGasCylinder>8</LiquefiedNaturalGasCylinder>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+	<designationCategory>GasProduction</designationCategory>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>5.0</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+	<researchPrerequisites>
+      <li>GasWeapon</li>
+    </researchPrerequisites>
+    <specialDisplayRadius>5.0</specialDisplayRadius>
+  </ThingDef>
+
+
+<ThingDef ParentName="TrapIEDBase">
+    <defName>HydrogenGasMine</defName>
+    <label>Hydrogen gas mine</label>
+    <description>Mine of destructive power achieved through gas expansion.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDIncendiary</texPath>
+    </graphicData>
+    <costList>
+      <Steel>20</Steel>
+	  <ComponentIndustrial>3</ComponentIndustrial>
+	  <HydrogenCylinder>8</HydrogenCylinder>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+	<designationCategory>GasProduction</designationCategory>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>9.0</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+	<researchPrerequisites>
+      <li>GasWeapon</li>
+    </researchPrerequisites>
+    <specialDisplayRadius>9.0</specialDisplayRadius>
+  </ThingDef>
 
 
 

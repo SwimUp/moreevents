@@ -80,7 +80,7 @@ namespace RimArmorCore
             explosion.chanceToStartFire = chanceToStartFire;
             explosion.damageFalloff = damageFalloff;
             explosion.validator = validator;
-            explosion.StartExplosion(explosionSound);
+            explosion.StartExplosion(explosionSound, new List<Thing>());
         }
 
     }

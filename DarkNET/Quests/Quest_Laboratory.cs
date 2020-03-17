@@ -17,7 +17,7 @@ using Verse.AI.Group;
 
 namespace DarkNET.Quests
 {
-    public class Quest_Laboratory : Quest
+    public class Quest_Laboratory : QuestRim.Quest
     {
         public override QuestDef RelatedQuestDef => QuestDefOfLocal.Quest_None;
 
