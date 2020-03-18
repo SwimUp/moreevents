@@ -52,7 +52,8 @@ namespace MoreEvents.Events.DoomsdayUltimatum
                             Lord lastLord = p.GetLord();
                             if (lastLord != null)
                             {
-                                Map.lordManager.RemoveLord(lastLord);
+                                if(Map.lordManager.lords.Contains(lord))
+                                    Map.lordManager.RemoveLord(lastLord);
                             }
 
                             p.ClearMind();
