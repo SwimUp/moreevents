@@ -2374,16 +2374,6 @@
 			</li>
 			<li>
 				<key>
-					<Thing>Apparel_Duster</Thing>
-					<Stuff>WoolCamel</Stuff>
-					<Count>1</Count>
-				</key>
-				<value>
-					<li>(61, 0, 67)</li>
-				</value>
-			</li>
-			<li>
-				<key>
 					<Thing>Apparel_Jacket</Thing>
 					<Stuff>Leather_Human</Stuff>
 					<Quality>Legendary</Quality>

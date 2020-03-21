@@ -5484,17 +5484,6 @@
 			</li>
 			<li>
 				<key>
-					<Thing>Apparel_Pants</Thing>
-					<Stuff>WoolCamel</Stuff>
-					<Quality>Poor</Quality>
-					<Count>1</Count>
-				</key>
-				<value>
-					<li>(133, 0, 94)</li>
-				</value>
-			</li>
-			<li>
-				<key>
 					<Thing>ElectricCrematorium</Thing>
 					<Stuff>BlocksGranite</Stuff>
 					<Rotate>1</Rotate>
@@ -5658,16 +5647,6 @@
 					<li>(83, 0, 105)</li>
 					<li>(83, 0, 105)</li>
 					<li>(83, 0, 105)</li>
-				</value>
-			</li>
-			<li>
-				<key>
-					<Thing>Apparel_Duster</Thing>
-					<Stuff>WoolCamel</Stuff>
-					<Count>1</Count>
-				</key>
-				<value>
-					<li>(129, 0, 100)</li>
 				</value>
 			</li>
 			<li>

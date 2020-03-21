@@ -13,7 +13,7 @@
 		<autoFlee>false</autoFlee>
 		<canUseAvoidGrid>false</canUseAvoidGrid>
 		<techLevel>Ultra</techLevel>
-		<homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 	</FactionDef>
 
 </Defs>

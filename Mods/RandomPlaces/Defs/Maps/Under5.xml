@@ -5143,17 +5143,6 @@
 			</li>
 			<li>
 				<key>
-					<Thing>Apparel_BasicShirt</Thing>
-					<Stuff>WoolCamel</Stuff>
-					<Quality>Good</Quality>
-					<Count>1</Count>
-				</key>
-				<value>
-					<li>(85, 0, 101)</li>
-				</value>
-			</li>
-			<li>
-				<key>
 					<Thing>Cloth</Thing>
 					<Count>11</Count>
 				</key>
