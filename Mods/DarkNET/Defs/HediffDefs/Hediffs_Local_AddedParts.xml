@@ -130,6 +130,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Active_Mechanical_Forearms</defName>
 		<label>Active mechanical forearms</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>It is a mechanical prosthesis, the main advantage of which is control over the compression force and the absence of a pain threshold.</description>
 		<labelNoun>Active mechanical forearms</labelNoun>
 		<comps>
@@ -156,6 +157,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Light_Traction_Forearms</defName>
 		<label>Light traction forearms</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>Despite the new technologies, they still have disadvantages.</description>
 		<labelNoun>Light traction forearms</labelNoun>
 		<comps>
@@ -182,6 +184,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Magnetic_Brushes_And_Forearms</defName>
 		<label>magnetic hand</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>Magnetic joints and forearms give combat effectiveness and speed.</description>
 		<labelNoun>magnetic hand</labelNoun>
 		<comps>
@@ -208,6 +211,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_All_Metal_Pirate_Battle_Claw</defName>
 		<label>all-metal pirate battle claw</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>The lack of any tools for work is compensated by lethal force.</description>
 		<labelNoun>all-metal pirate battle claw</labelNoun>
 		<comps>
@@ -234,6 +238,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Electromagnetic_Prosthesis</defName>
 		<label>electromagnetic prosthesis</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>Electromagnetic force allows the prosthesis to maintain itself in a necessary condition.</description>
 		<labelNoun>electromagnetic prosthesis</labelNoun>
 		<comps>
@@ -260,6 +265,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Bloodied_Pirate_Blade</defName>
 		<label>bloodied pirate blade</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>Lack of difficulty in manufacturing makes it cheap, good in melee.</description>
 		<labelNoun>bloodied pirate blade</labelNoun>
 		<comps>
@@ -286,6 +292,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Forearms_With_Sensors</defName>
 		<label>forearm with sensors</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>Low sensitivity brings both efficiency and combat unsuitability.</description>
 		<labelNoun>forearm with sensors</labelNoun>
 		<comps>
@@ -312,6 +319,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Active_Hands_With_Electric_Shock</defName>
 		<label>active hand with electric shocker</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>The ability to accumulate a small charge gives the prosthesis an advantage.</description>
 		<labelNoun>active hand with electric shocker</labelNoun>
 		<comps>
@@ -338,6 +346,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Advanced_Mechanical_Hand_Prosthesis</defName>
 		<label>advanced mechanical arm</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Received additional functions while improving its predecessor in exchange for excess weight.</description>
 		<labelNoun>advanced mechanical arm</labelNoun>
 		<comps>
@@ -364,6 +373,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Advanced_Electromagnetic_Joints</defName>
 		<label>advanced electromagnetic joints for the hand</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>This version of the prosthesis benefits from its design.</description>
 		<labelNoun>advanced electromagnetic joints for the hand</labelNoun>
 		<comps>
@@ -390,6 +400,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Prosthesis_With_Power_Weights</defName>
 		<label>prosthesis with power weight</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>This device combines lethal force due to its severity with advanced small mathorics.</description>
 		<labelNoun>prosthesis with power weight</labelNoun>
 		<comps>
@@ -417,6 +428,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Scientifically_Hypersensitive_Prosthesis</defName>
 		<label>scientific hypersensitive prosthesis</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Electron binding means allowed the creator to realize this device.</description>
 		<labelNoun>scientific hypersensitive prosthesis</labelNoun>
 		<comps>
@@ -443,6 +455,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Hands_On_Energy_Connections</defName>
 		<label>energy-mounted hand</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>The use of constant voltage allows you to lighten the weight of the structure and increase combat power.</description>
 		<labelNoun>energy-mounted hand</labelNoun>
 		<comps>
@@ -469,6 +482,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Fiber_Optic_Prostheses</defName>
 		<label>fiber optic forearm</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>The use of fiber as a main component significantly reduces strength, giving priority to efficiency.</description>
 		<labelNoun>fiber optic forearm</labelNoun>
 		<comps>
@@ -495,6 +509,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Biomechanical_Joints</defName>
 		<label>biomechanical joints</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>With the advent of this technology, host movements become faster.</description>
 		<labelNoun>biomechanical joints</labelNoun>
 		<comps>
@@ -521,6 +536,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Vanometric_Hand_Accelerators</defName>
 		<label>vanometer accelerator forearm</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Despite some weighting, these prostheses are able to support themselves by independently generating a charge.</description>
 		<labelNoun>vanometer accelerator forearm</labelNoun>
 		<comps>
@@ -547,6 +563,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Active_Sensory_Arm_Prostheses</defName>
 		<label>active sensor hand</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Increasing sensitivity, researchers were able to obtain technologies close to archotech.</description>
 		<labelNoun>active sensor hand</labelNoun>
 		<comps>
@@ -573,6 +590,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Bionic_Blades</defName>
 		<label>bionic blades</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Lightweight blades fit in place of the fingers, complicating work, but increasing damage.</description>
 		<labelNoun>bionic blades</labelNoun>
 		<comps>
@@ -600,6 +618,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Retractable_Titanium_Blades</defName>
 		<label>titanium blades</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Damage technology does not stand still, presenting you a compromise option of efficiency and power.</description>
 		<labelNoun>titanium blades</labelNoun>
 		<comps>
@@ -626,6 +645,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Cyber_Hand_MK</defName>
 		<label>cyber hand mk1</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Сyber prosthesis for mk1 suit, giving additional benefits.</description>
 		<labelNoun>cyber hand mk1</labelNoun>
 		<comps>
@@ -652,6 +672,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Cyber_Hand_MK1_Light</defName>
 		<label>lightweight cybernetic forearm MK1</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Сyber prosthesis for mk1 suit, giving additional benefits. Now even more perfect</description>
 		<labelNoun>lightweight cybernetic forearm MK1</labelNoun>
 		<comps>
@@ -679,6 +700,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_CyberVisionVI</defName>
 		<label>CyberVision VI</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Cybernetic eye implant from the Galactic corporation "LifeTech". A good and cheap replacement for eyes with impaired vision. Provides the ability to see up 8192 colors. Released 25 years ago, out of production.</description>
 		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech". A good and cheap replacement for eyes with impaired vision. Provides the ability to see up to 8192 colors. Released 25 years ago, out of production.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberVisionVI</spawnThingOnRemoved>
@@ -704,6 +726,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_CyberVisionVII</defName>
 		<label>CyberVision VII</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Cybernetic eye implant from the Galactic corporation "LifeTech". Better efficiency, perceives more colors up to 12288. Released 10 years ago.</description>
 		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech". Better efficiency, perceives more colors up to 12288. Released 10 years ago.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberVisionVII</spawnThingOnRemoved>
@@ -729,6 +752,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_CyberVisionVIICombat</defName>
 		<label>CyberVision VII: Combat Edition</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Cybernetic eye implant from the Galactic corporation "LifeTech", designed specifically for the military. Better efficiency, improves shooting accuracy, perceives more colors up to 12288. Released 10 years ago.</description>
 		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech", designed specifically for the military. Better efficiency, improves shooting accuracy, perceives more colors up to 12288. Released 10 years ago.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberVisionVIICombat</spawnThingOnRemoved>
@@ -756,6 +780,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_CyberVisionVIIMedical</defName>
 		<label>CyberVision VII: Medical Edition</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Cybernetic eye implant from the Galactic corporation "LifeTech", designed specifically for the healthcare companies. Better efficiency, improves the quality of medical operations, perceives more colors up to 12288. Released 10 years ago.</description>
 		<labelNoun>Cybernetic eye implant from the Galactic corporation "LifeTech", designed specifically for the healthcare companies. Better efficiency, improves the quality of medical operations, perceives more colors up to 12288. Released 10 years ago.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberVisionVIIMedical</spawnThingOnRemoved>
@@ -784,6 +809,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_SimpleSpeechImplant</defName>
 		<label>Simple Speech Implant</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Cybernetic simple speech implant from the corporation "Amazystems", designed to improve social qualities and increase the quality of social life.</description>
 		<labelNoun>Cybernetic simple speech implant from the corporation "Amazystems", designed to improve social qualities and increase the quality of social life.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SimpleSpeechImplant</spawnThingOnRemoved>
@@ -811,6 +837,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_AdvSpeechImplant</defName>
 		<label>Advanced Speech Implant</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Cybernetic speech implant from the corporation "Amazystems", designed to improve social qualities and increase the quality of social life.</description>
 		<labelNoun>Cybernetic advanced speech implant from the corporation "Amazystems", designed to improve social qualities and increase the quality of social life.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_AdvSpeechImplant</spawnThingOnRemoved>
@@ -838,6 +865,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_SmallResearchAssistant</defName>
 		<label>Small Research AI Assistant</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Small brain implant from "Blossom Co.", designed to boost research speed.</description>
 		<labelNoun>Small brain implant from "Blossom Co.", designed to boost research speed.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SmallResearchAssistant</spawnThingOnRemoved>
@@ -858,6 +886,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_MediumResearchAssistant</defName>
 		<label>Medium Research AI Assistant</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Medium brain implant from "Blossom Co.", designed to boost research speed.</description>
 		<labelNoun>Medium brain implant from "Blossom Co.", designed to to boost research speed.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_MediumResearchAssistant</spawnThingOnRemoved>
@@ -879,6 +908,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_BigResearchAssistant</defName>
 		<label>Big Research AI Assistant</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Big brain implant from "Blossom Co.", designed to boost research speed.</description>
 		<labelNoun>Big brain implant from "Blossom Co.", to boost research speed.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_BigResearchAssistant</spawnThingOnRemoved>
@@ -926,6 +956,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Prosthetic_Leg_With_Metal_Plates</defName>
 		<label>prosthesis leg with metal plates</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>Plates add extra weight to the structure while increasing strength.</description>
 		<labelNoun>plates on the surface of the prosthesis provide shape retention.</labelNoun>
 		<addedPartProps>
@@ -940,6 +971,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_Prosthetic_Leg_With_Simple_Mechanical_Sensors</defName>
 		<label>prosthesis leg with simple mechanical sensors</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>Sensors allow the wearer to adapt to the surface.</description>
 		<labelNoun>Sensors on the surface of the prosthesis increase adaptation.</labelNoun>
 		<addedPartProps>
@@ -953,6 +985,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_FootProsthesisWithElectronicMotionSensors</defName>
 		<label>prosthesis leg with sensors</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>Advanced sensors accelerate owner adaptation.</description>
 		<labelNoun>advanced sensors accelerate owner adaptation.</labelNoun>
 		<addedPartProps>
@@ -973,6 +1006,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_ShockAbsorbingJoints</defName>
 		<label>shock absorbing joints</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>Allow you to increase the overall speed of the owner but still can not compete with natural legs.</description>
 		<labelNoun>allow you to increase the overall speed of the owner but still can not compete with natural legs.</labelNoun>
 		<addedPartProps>
@@ -993,6 +1027,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_MobileProsthesisWithInitialSensitivity</defName>
 		<label>mobile prosthesis with initial sensitivity</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>The combination of technology has brought prosthetics closer to a new level.</description>
 		<labelNoun>the combination of technology has brought prosthetics closer to a new level.</labelNoun>
 		<addedPartProps>
@@ -1006,6 +1041,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_ActiveHydraulicFootProsthesis</defName>
 		<label>Active hydraulic foot prosthesis</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>Sufficiently strong prosthesis provides high mobility.</description>
 		<labelNoun>sufficiently strong prosthesis provides high mobility.</labelNoun>
 		<addedPartProps>
@@ -1019,6 +1055,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_HydraulicProsthesisWithSensitiveSensors</defName>
 		<label>Hydraulic foot prosthesis with sensors</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Additional weight gain due to various sensors gave the prosthesis an average sensitivity.</description>
 		<labelNoun>additional weight gain due to various sensors gave the prosthesis an average sensitivity.</labelNoun>
 		<addedPartProps>
@@ -1033,6 +1070,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SportsMechanicalProsthesis</defName>
 		<label>Sports mechanical prosthesis</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Professional athletes turn to this prosthesis after limb loss.</description>
 		<labelNoun>professional athletes turn to this prosthesis after limb loss.</labelNoun>
 		<addedPartProps>
@@ -1047,6 +1085,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SportsProsthesisSOne</defName>
 		<label>Sports prosthesis S1</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Updated hip prosthesis system for greater comfort and maximum safety while walking.</description>
 		<labelNoun>updated hip prosthesis system for greater comfort and maximum safety while walking.</labelNoun>
 		<addedPartProps>
@@ -1067,6 +1106,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SportsProsthesisSTwo</defName>
 		<label>Sports prosthesis S2</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Advanced prosthesis S1 increased its mobility.</description>
 		<labelNoun>advanced prosthesis S1 increased its mobility.</labelNoun>
 		<addedPartProps>
@@ -1087,6 +1127,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_KneeJoint</defName>
 		<label>Knee joint</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Knee joint with manual locking and hydraulic squat support for balanced and stable movements.</description>
 		<labelNoun>Knee joint with manual locking and hydraulic squat support for balanced and stable movements.</labelNoun>
 		<addedPartProps>
@@ -1101,6 +1142,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_FootMeridium</defName>
 		<label>Foot Meridium</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Foot Meridium an electronically controlled artificial foot, almost completely simulating the anatomical shape of the human foot.</description>
 		<labelNoun>Foot Meridium an electronically controlled artificial foot, almost completely simulating the anatomical shape of the human foot.</labelNoun>
 		<addedPartProps>
@@ -1114,6 +1156,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_MK1CyberneticLegProsthesis</defName>
 		<label>MK1 cybernetic leg prosthesis</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>First version of cybernetic prostheses for the MK1 suit.</description>
 		<labelNoun>First version of cybernetic prostheses for the MK1 suit.</labelNoun>
 		<addedPartProps>
@@ -1134,6 +1177,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_MK1CyberneticLegProsthesisTwo</defName>
 		<label>MK1 cybernetic advanced leg prosthesis</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>The second version of the cyber prosthesis from MK1.</description>
 		<labelNoun>The second version of the cyber prosthesis from MK1.</labelNoun>
 		<addedPartProps>
@@ -1154,6 +1198,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_MK1CyberneticLegProsthesisThree</defName>
 		<label>MK1 final cybernetic leg prosthesis</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Latest version of the prosthetic leg from MK1.</description>
 		<labelNoun>Latest version of the prosthetic leg from MK1.</labelNoun>
 		<addedPartProps>
@@ -1206,6 +1251,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CardioprosthesisMOne</defName>
 		<label>Prosthesis for the heart</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>The first prosthesis for the heart, created on a large scale.</description>
 		<labelNoun>The first prosthesis for the heart, created on a large scale.</labelNoun>
 		<addedPartProps>
@@ -1238,6 +1284,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_AdvancedProsthesisMTwo</defName>
 		<label>Advanced prosthesis M2</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>The second prosthesis M2 combines technology from different eras, while at the same time cheap to manufacture.</description>
 		<labelNoun>The second prosthesis M2 combines technology from different eras, while at the same time cheap to manufacture.</labelNoun>
 		<addedPartProps>
@@ -1251,6 +1298,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SerialHeartProsthesisMThree</defName>
 		<label>Serial heart prosthesis M3</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>The latest version of the prosthesis increases human capabilities by several percent.</description>
 		<labelNoun>The latest version of the prosthesis increases human capabilities by several percent.</labelNoun>
 		<addedPartProps>
@@ -1264,6 +1312,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SportsPacemakerSOne</defName>
 		<label>Sports pacemaker S1</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>It has simple metabolic acceleration systems.</description>
 		<labelNoun>It has simple metabolic acceleration systems.</labelNoun>
 		<addedPartProps>
@@ -1278,6 +1327,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_BiochemistryPacemakerSTwo</defName>
 		<label>Biochemistry pacemaker S2</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>It significantly surpasses its counterpart by accelerating life systems.</description>
 		<labelNoun>It significantly surpasses its counterpart by accelerating life systems.</labelNoun>
 		<addedPartProps>
@@ -1292,6 +1342,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_RhythmicCardioprosthesisMKOne</defName>
 		<label>Rhythmic Cardioprosthesis MK1</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>The first MK1 line prosthesis designed to enhance combat quality owners.</description>
 		<labelNoun>The first MK1 line prosthesis designed to enhance combat quality owners.</labelNoun>
 		<addedPartProps>
@@ -1305,6 +1356,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_FinalPacemakerMKOne</defName>
 		<label>Final pacemaker MK1</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>The perfect denture in the MK1 range.</description>
 		<labelNoun>The perfect denture in the MK1 range.</labelNoun>
 		<addedPartProps>
@@ -1362,6 +1414,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_ArtificialKidney</defName>
 		<label>Artificial kidney</label>
+		<defaultLabelColor>(0.9, 0.2, 0.3)</defaultLabelColor>
 		<description>First artificial kidney.</description>
 		<labelNoun>First artificial kidney.</labelNoun>
 		<addedPartProps>
@@ -1393,6 +1446,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticKidney</defName>
 		<label>Synthetic kidney</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>First artificial kidney.</description>
 		<labelNoun>First artificial kidney.</labelNoun>
 		<addedPartProps>
@@ -1424,6 +1478,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticBodyFiltrationSystem</defName>
 		<label>Synthetic body filtration system</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Biochemical filtration system.</description>
 		<labelNoun>Biochemical filtration system.</labelNoun>
 		<addedPartProps>
@@ -1437,6 +1492,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticFiltrationSystemMKOne</defName>
 		<label>Synthetic filtration system MK1</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 				<description>The first MK1 body filtration system.</description>
 		<labelNoun>The first MK1 body filtration system.</labelNoun>
 		<addedPartProps>
@@ -1468,6 +1524,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_AdvancedMK1FiltrationSystem</defName>
 		<label>Advanced MK1 Filtration System</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Better biofilter system MK1.</description>
 		<labelNoun>Better biofilter system MK1.</labelNoun>
 		<addedPartProps>
@@ -1499,6 +1556,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_NanoBotsBasic</defName>
 		<label>NanoBots: Basic Version</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. This version has basic functionality, but has less characteristics than advanced versions and gives immunity to only a small set of diseases.</description>
 		<labelNoun>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. This version has basic functionality, but has less characteristics than advanced versions and gives immunity to only a small set of diseases.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_NanoBotsBasic</spawnThingOnRemoved>
@@ -1540,6 +1598,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_NanoBotsStandard</defName>
 		<label>Nanobots: Standard Version</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The standard version provides reliable protection of health and gives immunity to a larger set of dangerous diseases.</description>
 		<labelNoun>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The standard version provides reliable protection of health and gives immunity to a larger set of dangerous diseases.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_NanoBotsStandard</spawnThingOnRemoved>
@@ -1584,6 +1643,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_NanoBotsAdv</defName>
 		<label>NanoBots: Advanced Version</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The advanced version provides reliable protection of health and gives immunity to the entire set of dangerous diseases.</description>
 		<labelNoun>Nanobots are very small robots that ply inside the body, hunting down and killing viruses and infections, filtering external toxins and processing food to keep the host healthy. The advanced version provides reliable protection of health and gives immunity to the entire set of dangerous diseases.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_NanoBotsAdv</spawnThingOnRemoved>
@@ -1630,6 +1690,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticLung</defName>
 		<label>Synthetic lung</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Synthetic lung is a artifical organ that performs the function of a real lung, but with improved parameters.</description>
 		<labelNoun>Synthetic lung is a artifical organ that performs the function of a real lung, but with improved parameters.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SyntheticLung</spawnThingOnRemoved>
@@ -1659,6 +1720,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CyberneticLung</defName>
 		<label>Cybernetic lung</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Cybernetic lung is a artifical organ that performs the function of a real lung, but with better parameters than a synthetic lung and has a long lifespan.</description>
 		<labelNoun>Cybernetic lung is a artifical organ that performs the function of a real lung, but with better parameters than a synthetic lung and has a long lifespan.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberneticLung</spawnThingOnRemoved>
@@ -1688,6 +1750,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_BionicLung</defName>
 		<label>Bionic lung</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Bionic lung is a artifical organ that performs the function of a real lung and is the most advanced option among similar prosthetics, as it easily adapts to the body, does not cause sepsis and has a number of improved parameters.</description>
 		<labelNoun>Bionic lung is a artifical organ that performs the function of a real lung and is the most advanced option among similar prosthetics, as it easily adapts to the body, does not cause sepsis and has a number of improved parameters.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_BionicLung</spawnThingOnRemoved>
@@ -1718,6 +1781,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Bushido</defName>
 		<label>Fragment of the neural network "Bushido"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Bushido</spawnThingOnRemoved>
@@ -1746,6 +1810,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Sniper</defName>
 		<label>Fragment of the neural network "Sniper"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, accuracy in ranged combat is essential rises, however, the level of melee falls markedly.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Sniper</spawnThingOnRemoved>
@@ -1778,6 +1843,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Psychology</defName>
 		<label>Fragment of the neural network "Psychology"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to conduct dialogue significantly increases, which negatively affects the speed of work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to conduct dialogue significantly increases, which negatively affects the speed of work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Psychology</spawnThingOnRemoved>
@@ -1810,6 +1876,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Wild</defName>
 		<label>Fragment of the neural network "Wild"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to pacify animals increases significantly, which negatively affects field work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to pacify animals increases significantly, which negatively affects field work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Wild</spawnThingOnRemoved>
@@ -1843,6 +1910,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_GreenFields</defName>
 		<label>Fragment of the neural network "Green Fields"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you remember faster life cycle of plants, merging with the nature of the planet, ceasing to reverse attention to the people around you.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you remember faster life cycle of plants, merging with the nature of the planet, ceasing to reverse attention to the people around you.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_GreenFields</spawnThingOnRemoved>
@@ -1866,6 +1934,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Paladin</defName>
 		<label>Fragment of the neural network "Paladin"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your abilities in medicine grow at an unprecedented speed, but you understand that you do not want to harm people.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your abilities in medicine grow at an unprecedented speed, but you understand that you do not want to harm people.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Paladin</spawnThingOnRemoved>
@@ -1899,6 +1968,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_MiningWays</defName>
 		<label>Fragment of the neural network "Mining ways"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, your brain is filled with knowledge about the properties of rocks, and the ability to exploration is essentially are rising.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, your brain is filled with knowledge about the properties of rocks, and the ability to exploration is essentially are rising.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_MiningWays</spawnThingOnRemoved>
@@ -1938,6 +2008,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_ConnoisseurOfBeauty</defName>
 		<label>Fragment of the neural network "Connoisseur of beauty"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your worldview changes. It seems that you are beginning to see the beautiful in what you considered insignificant.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your worldview changes. It seems that you are beginning to see the beautiful in what you considered insignificant.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_ConnoisseurOfBeauty</spawnThingOnRemoved>
@@ -1959,6 +2030,7 @@
 					</li> 
 				</capMods>
 				<statOffsets>
+					<SculptingSpeed>0.6</SculptingSpeed>
 					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
 					<MeleeHitChance>-0.3</MeleeHitChance>
 					<SocialImpact>-0.3</SocialImpact>
@@ -1971,6 +2043,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Hephaestus</defName>
 		<label>Fragment of the neural network "Hephaestus"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Hephaestus</spawnThingOnRemoved>
@@ -1987,6 +2060,9 @@
 					</li> 
 				</capMods>
 				<statOffsets>
+					<SculptingSpeed>-0.8</SculptingSpeed>
+					<TailoringSpeed>0.3</TailoringSpeed>
+					<SmithingSpeed>0.3</SmithingSpeed>
 					<DrugSynthesisSpeed>0.3</DrugSynthesisSpeed>
 					<SmeltingSpeed>0.3</SmeltingSpeed>
 				</statOffsets>
@@ -1997,6 +2073,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Science</defName>
 		<label>Fragment of the neural network "Science"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Science</spawnThingOnRemoved>
@@ -2031,6 +2108,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Construction</defName>
 		<label>Fragment of the neural network "Construction"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you can easily recognize errors in the drawings and create new, magnificent structures.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Construction</spawnThingOnRemoved>
@@ -2064,6 +2142,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Gourmet</defName>
 		<label>Fragment of the neural network "Gourmet"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your taste buds aggravated by commensurate newfound culinary abilities.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Gourmet</spawnThingOnRemoved>
@@ -2097,6 +2176,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Singular</defName>
 		<label>Singular network "Sacred and wild"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>SA large foreign structure created from twelve fragments. Significantly changes the consciousness of people falling within the radius of impact. It has partial functionality of all parts involved in the creation mechanism.</description>
 		<labelNoun>A large foreign structure created from twelve fragments. Significantly changes the consciousness of people falling within the radius of impact. It has partial functionality of all parts involved in the creation mechanism.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Singular</spawnThingOnRemoved>
@@ -2155,6 +2235,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Berserker</defName>
 		<label>Fragment of the neural network "Berserker"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Berserker</spawnThingOnRemoved>
@@ -2200,6 +2281,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Meditation</defName>
 		<label>Fragment of the neural network "Meditation"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism you better understand animals and people, spending free time on meditation and ordering of one’s own thoughts, which affects health.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism you better understand animals and people, spending free time on meditation and ordering of one’s own thoughts, which affects health.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Meditation</spawnThingOnRemoved>
@@ -2239,6 +2321,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_LifeForce</defName>
 		<label>Fragment of the neural network "Life force"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_LifeForce</spawnThingOnRemoved>
@@ -2280,6 +2363,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Consummation</defName>
 		<label>Fragment of the neural network "Consummation"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Consummation</spawnThingOnRemoved>
@@ -2296,8 +2380,11 @@
 					</li> 
 				</capMods>
 				<statOffsets>
+					<TailoringSpeed>0.4</TailoringSpeed>
+					<SmithingSpeed>0.4</SmithingSpeed>
 					<DrugSynthesisSpeed>0.4</DrugSynthesisSpeed>
 					<SmeltingSpeed>0.4</SmeltingSpeed>
+					<SculptingSpeed>0.6</SculptingSpeed>
 					<MeleeHitChance>-0.7</MeleeHitChance>
 					<SocialImpact>-0.5</SocialImpact>
 					<NegotiationAbility>-0.7</NegotiationAbility>
@@ -2309,6 +2396,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_YinYang</defName>
 		<label>Fragment of the neural network "Yin and Yang"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_YinYang</spawnThingOnRemoved>
@@ -2340,6 +2428,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_MentalFocus</defName>
 		<label>Fragment of the neural network "Mental focus"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Lets focus all the efforts of the body to acquire new knowledge and improving intelligence that spends the last body energy reserves.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Lets focus all the efforts of the body to acquire new knowledge and improving intelligence that spends the last body energy reserves.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_MentalFocus</spawnThingOnRemoved>
@@ -2373,6 +2462,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Emitter_Light</defName>
 		<label>Light psychoactive emitter</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
 		<labelNoun>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Emitter_Light</spawnThingOnRemoved>
@@ -2393,6 +2483,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Emitter_Medium</defName>
 		<label>Medium psychoactive emitter</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
 		<labelNoun>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Emitter_Light</spawnThingOnRemoved>
@@ -2413,6 +2504,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Emitter_Heavy</defName>
 		<label>Heavy psychoactive emitter</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</description>
 		<labelNoun>A mechanism that affects emotional consciousness, inhibiting feelings for the sake of productivity.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Emitter_Light</spawnThingOnRemoved>
@@ -2434,7 +2526,8 @@
 
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_AdrenalineRibs</defName>
-		<label>Cybernetic lung</label>
+		<label>Adrenaline ribs</label>
+		<defaultLabelColor>(0.8, 0.5, 0.1)</defaultLabelColor>
 		<description>Many injectors located on artificial ribs produce adrenaline, accelerating the reaction.</description>
 		<labelNoun>Many injectors located on artificial ribs produce adrenaline, accelerating the reaction.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_AdrenalineRibs</spawnThingOnRemoved>
@@ -2461,6 +2554,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_TitaniumRibs</defName>
 		<label>Titanium ribs</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Strong chest formed from titanium coated ribs.</description>
 		<labelNoun>Strong chest formed from titanium coated ribs.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_TitaniumRibs</spawnThingOnRemoved>
@@ -2487,6 +2581,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticRibs</defName>
 		<label>Synthetic ribs</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Chest consists of complex artificial ribs.</description>
 		<labelNoun>Chest consists of complex artificial ribs.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SyntheticRibs</spawnThingOnRemoved>
@@ -2513,6 +2608,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CyberneticBreastFrame</defName>
 		<label>Cybernetic breast frame</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Cybernetic pairs of ribs composed in the form of a strong frame.</description>
 		<labelNoun>Cybernetic pairs of ribs composed in the form of a strong frame.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberneticBreastFrame</spawnThingOnRemoved>
@@ -2539,6 +2635,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticStomach</defName>
 		<label>Synthetic stomach</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Advanced artificial organ composed of inorganic materials.</description>
 		<labelNoun>Advanced artificial organ composed of inorganic materials.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SyntheticStomach</spawnThingOnRemoved>
@@ -2565,6 +2662,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CyberneticStomachMK</defName>
 		<label>Cybernetic stomach MK1</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>MK1 advanced cybernetic prosthesis accelerating carrier metabolism.</description>
 		<labelNoun>MK1 advanced cybernetic prosthesis accelerating carrier metabolism.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberneticStomachMK</spawnThingOnRemoved>
@@ -2590,6 +2688,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CyberneticStomachMKLight</defName>
 		<label>Cybernetic stomach MK1 Light</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Lightweight cybernetic prosthesis that speeds up metabolism.</description>
 		<labelNoun>Lightweight cybernetic prosthesis that speeds up metabolism.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberneticStomachMKLight</spawnThingOnRemoved>
@@ -2617,6 +2716,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_ModularArrayOfLiver</defName>
 		<label>Modular array of liver</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Microscopic copies of robotic organisms form an organic liver.</description>
 		<labelNoun>Microscopic copies of robotic organisms form an organic liver.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_ModularArrayOfLiver</spawnThingOnRemoved>
@@ -2639,6 +2739,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SyntheticLiverMK</defName>
 		<label>Synthetic liver MK1</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>An array of artificial mechanisms that mimic the liver.</description>
 		<labelNoun>An array of artificial mechanisms that mimic the liver.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SyntheticLiverMK</spawnThingOnRemoved>
@@ -2665,6 +2766,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CyberneticLiver</defName>
 		<label>Cybernetic liver MK1</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Large robotic structure imitating the functioning of the natural liver.</description>
 		<labelNoun>Large robotic structure imitating the functioning of the natural liver.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberneticLiver</spawnThingOnRemoved>
@@ -2691,6 +2793,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CochlearReceiver</defName>
 		<label>Cochlear receiver</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Small radio transmits sound vibrations to the brain.</description>
 		<labelNoun>Small radio transmits sound vibrations to the brain.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CochlearReceiver</spawnThingOnRemoved>
@@ -2703,6 +2806,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_SoundWaveGenerator</defName>
 		<label>Sound wave generator</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Advanced electromagnetic generator of sound waves transmitted to the brain.</description>
 		<labelNoun>Advanced electromagnetic generator of sound waves transmitted to the brain.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_SoundWaveGenerator</spawnThingOnRemoved>
@@ -2725,6 +2829,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>DarkNet_CyberneticEarMK</defName>
 		<label>Cybernetic ear MK1</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Advanced cybernetic sound wave transducer.</description>
 		<labelNoun>Advanced cybernetic sound wave transducer.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_CyberneticEarMK</spawnThingOnRemoved>
@@ -2748,6 +2853,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Sin</defName>
 		<label>Destabilized Neural Network "Unlimited Sin"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>Charged and unstable alien structure, repeatedly increasing human potential. It consists of many fragments, creating an intricate pattern that shimmers in the dark.</description>
 		<labelNoun>Charged and unstable alien structure, repeatedly increasing human potential. It consists of many fragments, creating an intricate pattern that shimmers in the dark.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Singular</spawnThingOnRemoved>
@@ -2797,6 +2903,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Cybernetic_Exoskeleton</defName>
 		<label>Cybernetic exoskeleton "Adrenaline shock"</label>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>A mobile and strong spine redistributes the load and helps the wearer move.</description>
 		<labelNoun>A mobile and strong spine redistributes the load and helps the wearer move.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton</spawnThingOnRemoved>
@@ -2827,6 +2934,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Cybernetic_Exoskeleton_Colossus</defName>
 		<label>Cybernetic exoskeleton "Colossus"</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Reinforced cybernetic spine made of titanium alloy and manganese.</description>
 		<labelNoun>Reinforced cybernetic spine made of titanium alloy and manganese.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton_Colossus</spawnThingOnRemoved>
@@ -2857,6 +2965,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Cybernetic_Exoskeleton_Eagles</defName>
 		<label>Cybernetic exoskeleton "Screaming Eagles"</label>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Durable and lightweight polymetallic exoskeleton.</description>
 		<labelNoun>Durable and lightweight polymetallic exoskeleton.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton_Eagles</spawnThingOnRemoved>
@@ -2887,6 +2996,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Cybernetic_Exoskeleton_Determitanion</defName>
 		<label>Cybernetic exoskeleton "Determitanion"</label>
+		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
 		<description>A cybernetic exoskeleton filled with many supporting systems. The Computerium programmed for self-healing also instills a sense of security.</description>
 		<labelNoun>A cybernetic exoskeleton filled with many supporting systems. The Computerium programmed for self-healing also instills a sense of security.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Cybernetic_Exoskeleton_Determitanion</spawnThingOnRemoved>
