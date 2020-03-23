@@ -19,7 +19,7 @@
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.60</AccuracyMedium>
 			<AccuracyLong>0.35</AccuracyLong>
-			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -30,7 +30,7 @@
 				<range>20.0</range>
 				<soundCast>Sounds_FEL_Light</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<muzzleFlashScale>5</muzzleFlashScale>
 			</li>
 		</verbs>
 		<tools>
@@ -55,7 +55,7 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>12</damageAmountBase>
+			<damageAmountBase>4</damageAmountBase>
 			<speed>75</speed>
 		</projectile>
 	</ThingDef>
@@ -79,7 +79,7 @@
 			<AccuracyShort>0.35</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
 			<AccuracyLong>0.75</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -117,7 +117,7 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>18</damageAmountBase>
+			<damageAmountBase>8</damageAmountBase>
 			<speed>85</speed>
 		</projectile>
 	</ThingDef>
@@ -141,7 +141,7 @@
 			<AccuracyShort>0.8</AccuracyShort>
 			<AccuracyMedium>0.5</AccuracyMedium>
 			<AccuracyLong>0.3</AccuracyLong>
-			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -202,7 +202,7 @@
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.8</AccuracyMedium>
 			<AccuracyLong>0.6</AccuracyLong>
-			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -262,7 +262,7 @@
 			<AccuracyShort>0.55</AccuracyShort>
 			<AccuracyMedium>0.85</AccuracyMedium>
 			<AccuracyLong>0.9</AccuracyLong>
-			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -285,7 +285,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>4</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>2.0</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -325,7 +325,7 @@
 			<AccuracyShort>0.5</AccuracyShort>
 			<AccuracyMedium>0.7</AccuracyMedium>
 			<AccuracyLong>0.6</AccuracyLong>
-			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -364,7 +364,7 @@
 			<damageDef>Cut</damageDef>
 			<damageAmountBase>18</damageAmountBase>
 			<speed>80</speed>
-			<explosionRadius>2.0</explosionRadius>
+			<explosionRadius>3.0</explosionRadius>
 			<ai_IsIncendiary>true</ai_IsIncendiary>
 		</projectile>
 	</ThingDef>
@@ -389,7 +389,7 @@
 			<AccuracyShort>0.85</AccuracyShort>
 			<AccuracyMedium>0.6</AccuracyMedium>
 			<AccuracyLong>0.2</AccuracyLong>
-			<RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -452,7 +452,7 @@
 			<AccuracyShort>0.7</AccuracyShort>
 			<AccuracyMedium>0.9</AccuracyMedium>
 			<AccuracyLong>0.95</AccuracyLong>
-			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -515,7 +515,7 @@
 			<AccuracyShort>0.6</AccuracyShort>
 			<AccuracyMedium>0.9</AccuracyMedium>
 			<AccuracyLong>0.2</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -578,7 +578,7 @@
 			<AccuracyShort>0.9</AccuracyShort>
 			<AccuracyMedium>0.4</AccuracyMedium>
 			<AccuracyLong>0.05</AccuracyLong>
-			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -637,8 +637,8 @@
 			<Mass>3.5</Mass>
 			<AccuracyTouch>0.8</AccuracyTouch>
 			<AccuracyShort>0.85</AccuracyShort>
-			<AccuracyMedium>0.4</AccuracyMedium>
-			<AccuracyLong>0.2</AccuracyLong>
+			<AccuracyMedium>0.6</AccuracyMedium>
+			<AccuracyLong>0.3</AccuracyLong>
 			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
@@ -659,7 +659,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>5</power>
+				<power>8</power>
 				<cooldownTime>3.5</cooldownTime>
 			</li>
 		</tools>
@@ -694,13 +694,13 @@
 			<li>GSS_Shooter_Heavy</li>
 		</weaponTags>
 		<statBases> 
-			<MarketValue>3450</MarketValue>
+			<MarketValue>3100</MarketValue>
 			<Mass>5.5</Mass>
 			<AccuracyTouch>0.5</AccuracyTouch>
 			<AccuracyShort>0.65</AccuracyShort>
 			<AccuracyMedium>0.8</AccuracyMedium>
 			<AccuracyLong>0.3</AccuracyLong>
-			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -753,13 +753,13 @@
 		</graphicData>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases> 
-			<MarketValue>9500</MarketValue>
-			<Mass>10.5</Mass>
+			<MarketValue>8000</MarketValue>
+			<Mass>14.5</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.3</AccuracyShort>
 			<AccuracyMedium>0.4</AccuracyMedium>
 			<AccuracyLong>0.2</AccuracyLong>
-			<RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -786,7 +786,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -823,7 +823,7 @@
 			<AccuracyShort>0.3</AccuracyShort>
 			<AccuracyMedium>0.4</AccuracyMedium>
 			<AccuracyLong>0.2</AccuracyLong>
-			<RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -850,7 +850,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -887,7 +887,7 @@
 			<AccuracyShort>0.4</AccuracyShort>
 			<AccuracyMedium>0.5</AccuracyMedium>
 			<AccuracyLong>0.7</AccuracyLong>
-			<RangedWeapon_Cooldown>3.4</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.4</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -910,7 +910,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>1.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -946,7 +946,7 @@
 		<statBases>
 			<MarketValue>6300</MarketValue>
 			<Mass>8</Mass>
-			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -1037,7 +1037,7 @@
 			<AccuracyShort>0.8</AccuracyShort>
 			<AccuracyMedium>0.6</AccuracyMedium>
 			<AccuracyLong>0.1</AccuracyLong>
-			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -1060,7 +1060,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>4.5</cooldownTime>
+				<cooldownTime>1.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -1095,11 +1095,11 @@
 		<statBases> 
 			<MarketValue>1850</MarketValue>
 			<Mass>2.5</Mass>
-			<AccuracyTouch>0.3</AccuracyTouch>
-			<AccuracyShort>0.7</AccuracyShort>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
 			<AccuracyMedium>0.9</AccuracyMedium>
-			<AccuracyLong>0.8</AccuracyLong>
-			<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+			<AccuracyLong>0.95</AccuracyLong>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<verbs>
@@ -1128,7 +1128,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>3</power>
-				<cooldownTime>4.5</cooldownTime>
+				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -1143,8 +1143,8 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>15</damageAmountBase>
-			<speed>65</speed>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>100</speed>
 		</projectile>
 	</ThingDef>
 
@@ -1167,7 +1167,7 @@
 			<AccuracyShort>0.8</AccuracyShort>
 			<AccuracyMedium>0.7</AccuracyMedium>
 			<AccuracyLong>0.3</AccuracyLong>
-			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -1190,7 +1190,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>4.5</cooldownTime>
+				<cooldownTime>1.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -1205,7 +1205,7 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>15</damageAmountBase>
 			<speed>95</speed>
 		</projectile>
 	</ThingDef>
@@ -1226,7 +1226,7 @@
 			<AccuracyShort>0.4</AccuracyShort>
 			<AccuracyMedium>0.7</AccuracyMedium>
 			<AccuracyLong>0.5</AccuracyLong>
-			<RangedWeapon_Cooldown>9.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -1253,7 +1253,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -1290,7 +1290,7 @@
 			<AccuracyShort>0.4</AccuracyShort>
 			<AccuracyMedium>0.5</AccuracyMedium>
 			<AccuracyLong>0.4</AccuracyLong>
-			<RangedWeapon_Cooldown>9.0</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -1317,7 +1317,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>5</power>
-				<cooldownTime>3.5</cooldownTime>
+				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
 	</ThingDef>
@@ -1349,12 +1349,12 @@
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases> 
 			<MarketValue>12000</MarketValue>
-			<Mass>10.5</Mass>
+			<Mass>14.5</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.4</AccuracyShort>
 			<AccuracyMedium>0.3</AccuracyMedium>
 			<AccuracyLong>0.1</AccuracyLong>
-			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li>
@@ -1362,7 +1362,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_RL_SteelRain</defaultProjectile>
 				<warmupTime>6.0</warmupTime>
-				<range>45.0</range>
+				<range>20.0</range>
 				<soundCast>InfernoCannon_Fire</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<burstShotCount>5</burstShotCount>
@@ -1396,8 +1396,8 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<explosionRadius>8</explosionRadius>
-			<speed>40</speed>
+			<explosionRadius>4</explosionRadius>
+			<speed>20</speed>
 		</projectile>
 	</ThingDef>
 
