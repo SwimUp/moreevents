@@ -12,8 +12,8 @@ The strength of support is based on the technological level of the faction and u
 		<TargetGoals>
 			<li>CommonGoal</li>
 		</TargetGoals>
-		<agreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_active</agreementMenuTexture>
-		<offlineAgreementMenuTexture>Alliance/Agreements/TradeSchedulingAgreement_inactive</offlineAgreementMenuTexture>
+		<agreementMenuTexture>Alliance/Agreements/DefenseContractAgreement_active</agreementMenuTexture>
+		<offlineAgreementMenuTexture>Alliance/Agreements/DefenseContractAgreement_inactive</offlineAgreementMenuTexture>
 		<Comp Class="RimOverhaul.Alliances.DefenseContractCompProperties">
 			<MinFactionTechLevel>Industrial</MinFactionTechLevel>
 			<TrustCostPerDay>2</TrustCostPerDay>
