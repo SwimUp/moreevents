@@ -98,10 +98,22 @@
 	<Station_AddFuel>Заправить</Station_AddFuel>
 	<NoAvaliableFuel>Нет доступного топлива - {0}</NoAvaliableFuel>
 	
-	<ArmorModuleWorker_ElectricHeater>- увеличение потребление энергии: +0.07</ArmorModuleWorker_ElectricHeater>
+	<ArmorModuleWorker_ElectricHeater>- увеличение потребление энергии: +0.07\n- мин.комф. температура: +40</ArmorModuleWorker_ElectricHeater>
 	<ArmorModuleWorker_LowVoltageElectrifiedCladding>- противник получает урон, когда атакует вас</ArmorModuleWorker_LowVoltageElectrifiedCladding>
 	<ArmorModuleWorker_HighVoltageElectrifiedCladding>- противник получает урон и электрический шок, когда атакует вас</ArmorModuleWorker_HighVoltageElectrifiedCladding>
 	
 	<ArmorModuleWorker_SolarPanel>Пассивная зарядка батареи: {0}</ArmorModuleWorker_SolarPanel>
+	
+	<ArmorModuleWorker_BrainEnergyProtection>- уменьшение психочувств.: {0}</ArmorModuleWorker_BrainEnergyProtection>
+	
+	<ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix>Создает вокруг носителя непробиваемый защитный слой</ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix>
+	<ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_Action>Активация ({0})</ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_Action>
+	<T_ACTIVE>ВКЛ</T_ACTIVE>
+	<T_INACTIVE>ВЫКЛ</T_INACTIVE>
+	<ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_NotEnoughPower>Требуется энергии для активации {0}</ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_NotEnoughPower>
+	
+	<ArmorModuleWorker_Scrim>- шанс уворота в дальнем бою: 30%</ArmorModuleWorker_Scrim>
+	
+	<ArmorModuleWorker_EnergyAccelerator>- увеличение скорости передвижения: {0}</ArmorModuleWorker_EnergyAccelerator>
 	
 </LanguageData>

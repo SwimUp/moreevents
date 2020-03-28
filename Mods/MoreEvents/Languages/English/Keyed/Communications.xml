@@ -155,7 +155,7 @@ Fractions: {2}</DrawAllianceCard_OwnerInfo>
 	<AllianceManager_Goal>{0} - {1}</AllianceManager_Goal>
 	<CommOption_InviteToAlliance_Wait>The faction is not ready for negotiations. Wait more {0} days.</CommOption_InviteToAlliance_Wait>
 	<CommOption_InviteToAlliance_NeedAAlly>Friendship or Neutrality Required to Invite a Faction to the Alliance</CommOption_InviteToAlliance_NeedAAlly>
-	<CommOption_InviteToAlliance_NeedTrust>The faction’s trust level is too low for them to join your alliance. (minimum required {0})</CommOption_InviteToAlliance_NeedTrust>
+	<CommOption_InviteToAlliance_NeedTrust>The faction’s confidence level is too low for them to join your alliance. (minimum required {0})</CommOption_InviteToAlliance_NeedTrust>
 	<TrustFactionInformation>The level of trust shows how much the faction trusts you. Confidence can be enhanced by successfully completing fractions.</TrustFactionInformation>
 	<CommOption_InviteToAlliance_AnyHostileInAlliance>Your alliance has a faction (s) that are at odds with this.</CommOption_InviteToAlliance_AnyHostileInAlliance>
 	<Alliance_AddFactionTitle>{0} joins the alliance</Alliance_AddFactionTitle>

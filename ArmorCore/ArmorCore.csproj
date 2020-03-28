@@ -279,6 +279,9 @@
     <Compile Include="Mk1\ModuleMenuWindow.cs" />
     <Compile Include="Mk1\ModuleSlot.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AblationCoating.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_EnergyAccelerator.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_Scrim.cs" />
+    <Compile Include="Mk1\Workers\ArmorModuleWorker_BrainEnergyProtection.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ActivePlates.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AdrenalineInjectors.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_AdvancedFiltrationSystem.cs" />
@@ -305,6 +308,7 @@
     <Compile Include="Mk1\Workers\ArmorModuleWorker_SimpleSolarPanels.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_Stimulants.cs" />
     <Compile Include="Mk1\Workers\ArmorModuleWorker_ReinforcedPlates.cs" />
+    <Compile Include="Mk1\Workers\ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix.cs" />
     <Compile Include="Mk1\Workers\ArmorWorkerModule_MedicalExoskeleton.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_Transformers.cs" />
     <Compile Include="Mk1\Workers\ModuleWorker_CondenserBatteries.cs" />

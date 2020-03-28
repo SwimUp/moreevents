@@ -94,6 +94,24 @@
 		<Icon>ArmorModules/AdvancedSolarPanels</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>BrainEnergyProtection</defName>
+		<label>Brain energy protection</label>
+		<description>Special development that generates a volumetric energy circuit around the brain to protect it</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_BrainEnergyProtection</workerClass>
+		<ModuleCategory>Head</ModuleCategory>
+		<StatListener>true</StatListener>
+		<StatAffecter>
+			<li>
+				<key>PsychicSensitivity</key>
+				<value>-25</value>
+			</li>
+		</StatAffecter>
+		<StationLevelRequired>2</StationLevelRequired>
+		<Item>BrainEnergyProtection</Item>
+		<Icon>ArmorModules/BrainEnergyProtection</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
 	<!-- ======================= -->
 	
 	<!-- Tier 3: голова -->
@@ -488,6 +506,40 @@
 			<li>CombatExoskeleton</li>
 		</ExcludesModules>
 	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>TitaniumNeodymiumSubcutaneousMatrix</defName>
+		<label>Titanium neodymium subcutaneous matrix</label>
+		<description>Built on rare earth magnets and reinforced by power connections to the battery cell system. A neodymium substrate begins with several thousand ampoules with a dimorphic magnetorheological fluid (a mixture of carbonyl iron with a prismatic nanostructure). When activated, fluid is shot from tiny nozzles mounted under the skin. At the same time, the neodymium substrate is electrified, due to which the liquid hardens and shelters the user in an iron shell that protects him from any physical damage. "TITAN" is characterized by high energy consumption.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<DamageListener>true</DamageListener>
+		<WornExtraListener>true</WornExtraListener>
+		<Item>TitaniumNeodymiumSubcutaneousMatrix</Item>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/TitaniumNeodymiumSubcutaneousMatrix</Icon>
+		<ExcludesModules> 
+			<li>CombatExoskeleton</li>
+		</ExcludesModules>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>Scrim</defName>
+		<label>Scrim</label>
+		<description>The invisibility effect is achieved by creating a carefully tuned spherical electromagnetic field that controls the refraction of light in the vicinity of the user. The field circles the rays of light around the user and returns them to the previous path behind him with a distortion index of less than 3%. When entering into close combat, the system turns off and the effect of invisibility disappears.</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_Scrim</workerClass>
+		<ModuleCategory>Body</ModuleCategory>
+		<DamageListener>true</DamageListener>
+		<Item>Scrim</Item>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/Scrim</Icon>
+		<ExcludesModules> 
+			<li>MedicalExoskeleton</li>
+			<li>TitaniumNeodymiumSubcutaneousMatrix</li>
+			<li>CombatExoskeleton</li>
+		</ExcludesModules>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
 	<!-- ======================= -->
 		
 	<!-- Tier 1: ноги -->
@@ -553,6 +605,27 @@
 		</StatAffecter>
 		<StationLevelRequired>3</StationLevelRequired>
 		<Icon>ArmorModules/EnergyBoots</Icon>
+	</RimArmorCore.Mk1.ArmorModuleDef>
+	
+	<RimArmorCore.Mk1.ArmorModuleDef>
+		<defName>EnergyAccelerator</defName>
+		<label>Energy accelerator</label>
+		<description>Fills the sole with charged particles that push the wearer</description>
+		<workerClass>RimArmorCore.Mk1.Workers.ArmorModuleWorker_EnergyAccelerator</workerClass>
+		<ModuleCategory>Legs</ModuleCategory>
+		<StatListener>true</StatListener>
+		<Item>EnergyAccelerator</Item>
+		<StatAffecter>
+			<li>
+				<key>MoveSpeed</key>
+				<value>0.45</value>
+			</li>
+		</StatAffecter>
+		<ExcludesModules> 
+			<li>EnergyBoots</li>
+		</ExcludesModules>
+		<StationLevelRequired>3</StationLevelRequired>
+		<Icon>ArmorModules/EnergyAccelerator</Icon>
 	</RimArmorCore.Mk1.ArmorModuleDef>
 	<!-- ======================= -->
 	 

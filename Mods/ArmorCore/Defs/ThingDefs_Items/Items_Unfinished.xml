@@ -12,7 +12,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -81,7 +81,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -150,7 +150,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -219,7 +219,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -289,7 +289,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -367,7 +367,7 @@
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -462,7 +462,7 @@
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -541,7 +541,7 @@
 			<Mass>10</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -605,7 +605,7 @@ Allow you to install a second level of modules for armor.</description>
 			<Mass>14</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -670,7 +670,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -734,7 +734,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>20</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -795,7 +795,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>10</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -858,7 +858,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>8</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -921,7 +921,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -985,7 +985,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>10</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1046,7 +1046,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1109,7 +1109,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1172,7 +1172,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1233,7 +1233,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1294,7 +1294,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1319,6 +1319,67 @@ Opens the last level of modules for armor.</description>
 			<NickelIngot>50</NickelIngot>
 			<CopperIngot>80</CopperIngot>
 			<TungstenIngot>60</TungstenIngot>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>BrainEnergyProtection</defName>
+		<label>Brain energy protection</label>
+		<description>Module for Armor\n\nSpecial development that generates a volumetric energy circuit around the brain to protect it</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/BrainEnergyProtection</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>18000</WorkToMake>
+			<MarketValue>1800</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>3</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>BrainEnergyProtection</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Uranium>30</Uranium>
+			<Chromium>75</Chromium>
+			<TungstenIngot>75</TungstenIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -1357,7 +1418,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>4</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1418,7 +1479,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>6</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1481,7 +1542,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1543,7 +1604,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1603,7 +1664,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>6</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1665,7 +1726,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1727,7 +1788,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1765,7 +1826,7 @@ Opens the last level of modules for armor.</description>
 		<description>Module for Armor\n\nIt connects a low voltage to the armor plating, which is why all attackers in melee get a shock effect. Consumes additional energy on impact.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>ArmorModules/ElectricHeater</texPath>
+			<texPath>ArmorModules/LowVoltageElectrifiedCladding</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
@@ -1787,7 +1848,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1825,7 +1886,7 @@ Opens the last level of modules for armor.</description>
 		<description>Module for Armor\n\nIt connects a high voltage to the armor plating, which is why all attackers in melee get a shock effect and fall unconscious during a long attack. Consumes additional energy on impact.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>ArmorModules/ElectricHeater</texPath>
+			<texPath>ArmorModules/HighVoltageElectrifiedCladding</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1, 1)</drawSize>
 		</graphicData>
@@ -1847,7 +1908,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1908,7 +1969,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -1969,7 +2030,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>10</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2030,7 +2091,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2092,7 +2153,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2153,7 +2214,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>6</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2215,7 +2276,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>2</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2277,7 +2338,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>10</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2301,6 +2362,128 @@ Opens the last level of modules for armor.</description>
 			<CopperIngot>100</CopperIngot>
 			<Hyperweave>100</Hyperweave>
 			<PalladiumIngot>120</PalladiumIngot>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>TitaniumNeodymiumSubcutaneousMatrix</defName>
+		<label>Titanium neodymium subcutaneous matrix</label>
+		<description>Module for Armor\n\nBuilt on rare earth magnets and reinforced by power connections to the battery cell system. A neodymium substrate begins with several thousand ampoules with a dimorphic magnetorheological fluid. When activated, fluid is shot from tiny nozzles mounted under the skin. At the same time, the neodymium substrate is electrified, due to which the liquid hardens and shelters the user in an iron shell that protects him from any physical damage. TITAN is characterized by high energy consumption.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/TitaniumNeodymiumSubcutaneousMatrix</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>67000</WorkToMake>
+			<MarketValue>3000</MarketValue>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>TitaniumNeodymiumSubcutaneousMatrix</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>18</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Chromium>80</Chromium>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Hyperweave>90</Hyperweave>
+			<PalladiumIngot>90</PalladiumIngot>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef>
+		<defName>Scrim</defName>
+		<label>Scrim</label>
+		<description>Module for Armor\n\nThe invisibility effect is achieved by creating a carefully tuned spherical electromagnetic field that controls the refraction of light in the vicinity of the user. The field circles the rays of light around the user and returns them to the previous path behind him with a distortion index of less than 3%. When entering into close combat, the system turns off and the effect of invisibility disappears.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/Scrim</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>67000</WorkToMake>
+			<MarketValue>3000</MarketValue>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>Scrim</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>18</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Chromium>80</Chromium>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Hyperweave>90</Hyperweave>
+			<PalladiumIngot>90</PalladiumIngot>
 		</costList>
 		<drawerType>RealtimeOnly</drawerType>
 		<comps>
@@ -2339,7 +2522,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>12</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2403,7 +2586,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>3</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2464,7 +2647,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>4</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2525,7 +2708,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>7</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2585,7 +2768,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>6</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2646,7 +2829,7 @@ Opens the last level of modules for armor.</description>
 			<Mass>5</Mass>
 		</statBases>
 		<recipeMaker>
-			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
 			<effectWorking>Smith</effectWorking>
 			<soundWorking>Recipe_Machining</soundWorking>
@@ -2659,6 +2842,68 @@ Opens the last level of modules for armor.</description>
 				</categories>
 			</defaultIngredientFilter>
 			<researchPrerequisite>EnergyBoots</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<Steel>100</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Uranium>80</Uranium>
+			<Hyperweave>35</Hyperweave>
+		</costList>
+		<drawerType>RealtimeOnly</drawerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>EnergyAccelerator</defName>
+		<label>Energy accelerator</label>
+		<description>Module for Armor\n\nFills the sole with charged particles that push the wearer</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>ArmorModules/EnergyAccelerator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<category>Item</category>
+		<thingCategories>
+		  <li>ArmorModules</li>
+		</thingCategories>
+		<size>(1, 1)</size>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Mass>5</Mass>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+			<researchPrerequisite>EnergyAccelerator</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>16</Crafting>
 			</skillRequirements>

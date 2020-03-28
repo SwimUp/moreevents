@@ -513,6 +513,22 @@ Allows you to create a advanced solar panels</description>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
+		<defName>BrainEnergyProtection</defName>
+		<label>Brain energy protection</label>
+		<description>The development of special energy protection will create a barrier to protect the brain of the wearer.
+Allows you to create a brain energy protection</description>
+		<baseCost>2700</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>RoboticStation</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>2.41</researchViewX>
+		<researchViewY>6.05</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
 		<defName>JointImprovement</defName>
 		<label>Joint improvement</label>
 		<description>Creating motorized joints can greatly facilitate movement in a suit and increase speed.
@@ -703,6 +719,42 @@ Allows you to create a CULL solar panels.</description>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>2.41</researchViewX>
 		<researchViewY>6.79</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>TitaniumNeodymiumSubcutaneousMatrix</defName>
+		<label>Titanium neodymium subcutaneous matrix</label>
+		<description>Built on rare earth magnets and reinforced by power connections to the battery cell system. 
+A neodymium substrate begins with several thousand ampoules with a dimorphic magnetorheological fluid (a mixture of carbonyl iron with a prismatic nanostructure). 
+When activated, fluid is shot from tiny nozzles mounted under the skin. 
+At the same time, the neodymium substrate is electrified, due to which the liquid hardens and shelters the user in an iron shell that protects him from any physical damage. 
+"TITAN" is characterized by high energy consumption.
+Allows you to create a Titanium neodymium subcutaneous matrix.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4.84</researchViewX>
+		<researchViewY>2.21</researchViewY>
+		<tab>EnergyArmor</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Scrim</defName>
+		<label>Scrim</label>
+		<description>The invisibility effect is achieved by creating a carefully tuned spherical electromagnetic field that controls the refraction of light in the vicinity of the user. The field circles the rays of light around the user and returns them to the previous path behind him with a distortion index of less than 3%. When entering into close combat, the system turns off and the effect of invisibility disappears.
+Allows you to create a Scrim</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Nanorobots</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>4.84</researchViewX>
+		<researchViewY>2.21</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->

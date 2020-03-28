@@ -97,9 +97,22 @@
 	<Station_AddFuel>Refuel</Station_AddFuel>
 	<NoAvaliableFuel>No fuel available - {0}</NoAvaliableFuel>
 	
-	<ArmorModuleWorker_ElectricHeater>- increased energy consumption: +0.07</ArmorModuleWorker_ElectricHeater>
+	<ArmorModuleWorker_ElectricHeater>- increased energy consumption: +0.07\n- min.comf. temperature: +40</ArmorModuleWorker_ElectricHeater>
 	<ArmorModuleWorker_LowVoltageElectrifiedCladding>- the enemy takes damage when attacking you</ArmorModuleWorker_LowVoltageElectrifiedCladding>
 	<ArmorModuleWorker_HighVoltageElectrifiedCladding>- the enemy takes damage and electric shock when it attacks you</ArmorModuleWorker_HighVoltageElectrifiedCladding>
 	
+	<ArmorModuleWorker_SolarPanel>Passive battery charging: {0}</ArmorModuleWorker_SolarPanel>
+	
+	<ArmorModuleWorker_BrainEnergyProtection>- decrease in psychosensitivity: {0}</ArmorModuleWorker_BrainEnergyProtection>
+	
+	<ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix>Creates an impenetrable protective layer around the wearer</ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix>
+	<ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_Action>Activation ({0})</ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_Action>
+	<T_ACTIVE>ON</T_ACTIVE>
+	<T_INACTIVE>OFF</T_INACTIVE>
+	<ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_NotEnoughPower>Energy required to activate {0}</ArmorWorkerModule_TitaniumNeodymiumSubcutaneousMatrix_NotEnoughPower>
+	
+	<ArmorModuleWorker_Scrim>- ranged dodge chance: 30%</ArmorModuleWorker_Scrim>
+	
+	<ArmorModuleWorker_EnergyAccelerator>- increase movement speed: {0}</ArmorModuleWorker_EnergyAccelerator>
 	
 </LanguageData>

@@ -125,4 +125,16 @@
   <CULLSolarPanels.label>CULL солнечные панели</CULLSolarPanels.label>
   <CULLSolarPanels.description>Модуль для брони\n\n\nПанели, созданные по специальный двухслойной технологии для дополнительного улавливания солнечного света</CULLSolarPanels.description>
   
+  <BrainEnergyProtection.label>Мозговая энергозащита</BrainEnergyProtection.label>
+  <BrainEnergyProtection.description>Модуль для брони\n\n\nСпециальная разработка, которая генерирует объемный энергетический контур вокруг мозга для его защиты</BrainEnergyProtection.description>
+  
+  <TitaniumNeodymiumSubcutaneousMatrix.label>Титан-неодимовая подкожная матрица</TitaniumNeodymiumSubcutaneousMatrix.label>
+  <TitaniumNeodymiumSubcutaneousMatrix.description>Модуль для брони\n\n\nПостроенная на редкоземельных магнитах и усиленная подключениями к электросистеме на клеточных батареях. При активации жидкость выстреливается из крохотных сопел, установленных под кожей. Одновременно с этим неодимовая подложка электрифицируется, из-за чего жидкость затвердевает и укрывает пользователя в железной оболочке, защищающей его от любого физического урона. "ТИТАН" отличается высокими энергопотреблением.</TitaniumNeodymiumSubcutaneousMatrix.description>
+  
+  <Scrim.label>Маскировочная сетка</Scrim.label>
+  <Scrim.description>Модуль для брони\n\n\nЭффект невидимости достигается созданием тщательно настроенного сферического электромагнитного поля, управляющего преломлением света поблизости от пользователя. Поле обводит лучи света вокруг пользователя и возвращает их на прежнюю траекторию за ним с показателем искажения менее 3%. При вступлении в ближний бой система отключается и эффект невидимости пропадает</Scrim.description>
+  
+  <EnergyAccelerator.label>Энергетический ускоритель</EnergyAccelerator.label>
+  <EnergyAccelerator.description>Модуль для брони\n\n\nНаполняет подошву заряженными частицами, которые подталкивают носителя</EnergyAccelerator.description>
+  
 </LanguageData>

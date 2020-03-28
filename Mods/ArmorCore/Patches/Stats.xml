@@ -176,4 +176,22 @@
 		</match>
 	</Operation>
 
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="PsychicSensitivity"]</xpath>
+			<value>
+				<parts>
+					<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+				</parts>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+			<value>
+				<li Class="RimArmorCore.Mk1.ArmorStats.ArmorStat" />
+			</value>
+		</match>
+	</Operation>
+
 </Patch>
