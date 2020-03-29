@@ -523,8 +523,8 @@ Allows you to create a brain energy protection</description>
 			<li>RoboticStation</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>2.41</researchViewX>
-		<researchViewY>6.05</researchViewY>
+		<researchViewX>3.69</researchViewX>
+		<researchViewY>8.15</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -637,7 +637,7 @@ Allows you to create a kinetic buffer.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4.85</researchViewX>
+		<researchViewX>4.84</researchViewX>
 		<researchViewY>3.43</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
@@ -653,7 +653,7 @@ Allows you to create a protective interface.</description>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-		<researchViewX>4.85</researchViewX>
+		<researchViewX>4.84</researchViewX>
 		<researchViewY>3.98</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
@@ -731,14 +731,14 @@ When activated, fluid is shot from tiny nozzles mounted under the skin.
 At the same time, the neodymium substrate is electrified, due to which the liquid hardens and shelters the user in an iron shell that protects him from any physical damage. 
 "TITAN" is characterized by high energy consumption.
 Allows you to create a Titanium neodymium subcutaneous matrix.</description>
-		<baseCost>5000</baseCost>
+		<baseCost>4200</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>4.84</researchViewX>
-		<researchViewY>2.21</researchViewY>
+		<researchViewY>5.06</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	
@@ -747,14 +747,14 @@ Allows you to create a Titanium neodymium subcutaneous matrix.</description>
 		<label>Scrim</label>
 		<description>The invisibility effect is achieved by creating a carefully tuned spherical electromagnetic field that controls the refraction of light in the vicinity of the user. The field circles the rays of light around the user and returns them to the previous path behind him with a distortion index of less than 3%. When entering into close combat, the system turns off and the effect of invisibility disappears.
 Allows you to create a Scrim</description>
-		<baseCost>5000</baseCost>
+		<baseCost>2300</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>Nanorobots</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>4.84</researchViewX>
-		<researchViewY>2.21</researchViewY>
+		<researchViewY>4.53</researchViewY>
 		<tab>EnergyArmor</tab>
 	</ResearchProjectDef>
 	<!-- ============ -->

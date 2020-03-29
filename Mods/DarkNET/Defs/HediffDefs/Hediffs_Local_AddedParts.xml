@@ -1781,7 +1781,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Bushido</defName>
 		<label>Fragment of the neural network "Bushido"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Bushido</spawnThingOnRemoved>
@@ -1810,7 +1810,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Sniper</defName>
 		<label>Fragment of the neural network "Sniper"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, accuracy in ranged combat is essential rises, however, the level of melee falls markedly.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, melee abilities significantly increase however the level of ownership of small arms noticeably falls.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Sniper</spawnThingOnRemoved>
@@ -1843,7 +1843,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Psychology</defName>
 		<label>Fragment of the neural network "Psychology"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to conduct dialogue significantly increases, which negatively affects the speed of work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to conduct dialogue significantly increases, which negatively affects the speed of work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Psychology</spawnThingOnRemoved>
@@ -1876,7 +1876,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Wild</defName>
 		<label>Fragment of the neural network "Wild"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to pacify animals increases significantly, which negatively affects field work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, the ability to pacify animals increases significantly, which negatively affects field work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Wild</spawnThingOnRemoved>
@@ -1910,7 +1910,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_GreenFields</defName>
 		<label>Fragment of the neural network "Green Fields"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you remember faster life cycle of plants, merging with the nature of the planet, ceasing to reverse attention to the people around you.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you remember faster life cycle of plants, merging with the nature of the planet, ceasing to reverse attention to the people around you.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_GreenFields</spawnThingOnRemoved>
@@ -1934,7 +1934,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Paladin</defName>
 		<label>Fragment of the neural network "Paladin"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your abilities in medicine grow at an unprecedented speed, but you understand that you do not want to harm people.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your abilities in medicine grow at an unprecedented speed, but you understand that you do not want to harm people.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Paladin</spawnThingOnRemoved>
@@ -1968,7 +1968,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_MiningWays</defName>
 		<label>Fragment of the neural network "Mining ways"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, your brain is filled with knowledge about the properties of rocks, and the ability to exploration is essentially are rising.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of a mechanism, your brain is filled with knowledge about the properties of rocks, and the ability to exploration is essentially are rising.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_MiningWays</spawnThingOnRemoved>
@@ -2008,7 +2008,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_ConnoisseurOfBeauty</defName>
 		<label>Fragment of the neural network "Connoisseur of beauty"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your worldview changes. It seems that you are beginning to see the beautiful in what you considered insignificant.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your worldview changes. It seems that you are beginning to see the beautiful in what you considered insignificant.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_ConnoisseurOfBeauty</spawnThingOnRemoved>
@@ -2026,13 +2026,13 @@
 					</li> 
 					<li>
 						<capacity>Talking</capacity> 
-						<offset>-0.5</offset>
+						<offset>-0.7</offset>
 					</li> 
 				</capMods>
 				<statOffsets>
-					<SculptingSpeed>0.6</SculptingSpeed>
-					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
-					<MeleeHitChance>-0.3</MeleeHitChance>
+					<SmeltingSpeed>0.3</SmeltingSpeed>
+					<WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+					<MeleeHitChance>-0.5</MeleeHitChance>
 					<SocialImpact>-0.3</SocialImpact>
 					<NegotiationAbility>-0.3</NegotiationAbility>
 				</statOffsets>
@@ -2043,7 +2043,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Hephaestus</defName>
 		<label>Fragment of the neural network "Hephaestus"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Hephaestus</spawnThingOnRemoved>
@@ -2056,15 +2056,14 @@
 				<capMods>
 					<li>
 						<capacity>Talking</capacity> 
-						<offset>-0.5</offset>
+						<offset>-1.0</offset>
 					</li> 
 				</capMods>
 				<statOffsets>
-					<SculptingSpeed>-0.8</SculptingSpeed>
-					<TailoringSpeed>0.3</TailoringSpeed>
-					<SmithingSpeed>0.3</SmithingSpeed>
-					<DrugSynthesisSpeed>0.3</DrugSynthesisSpeed>
-					<SmeltingSpeed>0.3</SmeltingSpeed>
+					<DrugSynthesisSpeed>0.5</DrugSynthesisSpeed>
+					<SmeltingSpeed>0.5</SmeltingSpeed>
+					<HungerRateMultiplier>1.5</HungerRateMultiplier>
+					<ResearchSpeed>-0.3</ResearchSpeed>
 				</statOffsets>
 			</li>
 		</stages>
@@ -2073,7 +2072,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Science</defName>
 		<label>Fragment of the neural network "Science"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Science</spawnThingOnRemoved>
@@ -2108,7 +2107,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Construction</defName>
 		<label>Fragment of the neural network "Construction"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, fine motor skills increase, and knowledge of working with materials fills your mind.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the action of the mechanism, you can easily recognize errors in the drawings and create new, magnificent structures.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Construction</spawnThingOnRemoved>
@@ -2142,7 +2141,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Gourmet</defName>
 		<label>Fragment of the neural network "Gourmet"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.6, 1.0, 0.1)</defaultLabelColor>
 		<description>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your critical knowledge the world crowds out other thoughts, surrendering to work.</description>
 		<labelNoun>Sophisticated foreign design, once part of an advanced neural networks. Apparently, it has some functionality that affects brain functions. Under the influence of the mechanism, your taste buds aggravated by commensurate newfound culinary abilities.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Gourmet</spawnThingOnRemoved>
@@ -2217,15 +2216,15 @@
 					</li> 
 				</capMods>
 				<statOffsets>
-					<ImmunityGainSpeed>0.2</ImmunityGainSpeed>
-					<MeleeHitChance>0.2</MeleeHitChance>
+					<ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+					<MeleeHitChance>0.5</MeleeHitChance>
 					<MeleeDodgeChance>0.5</MeleeDodgeChance>
-					<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
 					<SocialImpact>0.5</SocialImpact>
 					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
 					<ResearchSpeed>0.3</ResearchSpeed>
 					<GlobalLearningFactor>0.5</GlobalLearningFactor>
-					<HungerRateMultiplier>2.0</HungerRateMultiplier>
+					<HungerRateMultiplier>2.5</HungerRateMultiplier>
 				</statOffsets>
 			</li>
 		</stages>
@@ -2235,7 +2234,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Berserker</defName>
 		<label>Fragment of the neural network "Berserker"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism your athletic and fighting qualities increase significantly, which negatively affects the speed of everyday work.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Berserker</spawnThingOnRemoved>
@@ -2248,7 +2247,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity> 
-						<offset>0.3</offset>
+						<offset>0.5</offset>
 					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
@@ -2268,10 +2267,10 @@
 					</li> 
 				</capMods>
 				<statOffsets>
-					<MeleeHitChance>0.5</MeleeHitChance>
-					<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<MeleeHitChance>0.7</MeleeHitChance>
+					<MeleeDodgeChance>0.7</MeleeDodgeChance>
 					<WorkSpeedGlobal>-0.8</WorkSpeedGlobal>
-					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+					<ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
 					<GlobalLearningFactor>-0.5</GlobalLearningFactor>
 				</statOffsets>
 			</li>
@@ -2281,7 +2280,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Meditation</defName>
 		<label>Fragment of the neural network "Meditation"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism you better understand animals and people, spending free time on meditation and ordering of one’s own thoughts, which affects health.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of a mechanism you better understand animals and people, spending free time on meditation and ordering of one’s own thoughts, which affects health.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Meditation</spawnThingOnRemoved>
@@ -2321,7 +2320,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_LifeForce</defName>
 		<label>Fragment of the neural network "Life force"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you Feel how peaceful and philanthropic fills you, and knowledge of plants becomes part of consciousness.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_LifeForce</spawnThingOnRemoved>
@@ -2363,7 +2362,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_Consummation</defName>
 		<label>Fragment of the neural network "Consummation"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Under the influence of the mechanism, you feel how the world view is changing. The desire to make peace around you ideal and comfortable for life overshadows the mind.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_Consummation</spawnThingOnRemoved>
@@ -2380,11 +2379,8 @@
 					</li> 
 				</capMods>
 				<statOffsets>
-					<TailoringSpeed>0.4</TailoringSpeed>
-					<SmithingSpeed>0.4</SmithingSpeed>
-					<DrugSynthesisSpeed>0.4</DrugSynthesisSpeed>
-					<SmeltingSpeed>0.4</SmeltingSpeed>
-					<SculptingSpeed>0.6</SculptingSpeed>
+					<DrugSynthesisSpeed>0.5</DrugSynthesisSpeed>
+					<SmeltingSpeed>0.5</SmeltingSpeed>
 					<MeleeHitChance>-0.7</MeleeHitChance>
 					<SocialImpact>-0.5</SocialImpact>
 					<NegotiationAbility>-0.7</NegotiationAbility>
@@ -2396,7 +2392,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_YinYang</defName>
 		<label>Fragment of the neural network "Yin and Yang"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Entropy and Creation harmoniously combined in the design, giving consciousness new properties.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_YinYang</spawnThingOnRemoved>
@@ -2413,11 +2409,11 @@
 					</li> 
 				</capMods>
 				<statOffsets>
-					<GlobalLearningFactor>0.05</GlobalLearningFactor>
+					<GlobalLearningFactor>0.1</GlobalLearningFactor>
 					<ConstructionSpeedFactor>0.6</ConstructionSpeedFactor>
 					<MeleeHitChance>-0.8</MeleeHitChance>
-					<MiningYield>0.2</MiningYield>
-					<MiningSpeed>0.6</MiningSpeed>
+					<MiningYield>0.5</MiningYield>
+					<MiningSpeed>0.5</MiningSpeed>
 					<SocialImpact>-1.0</SocialImpact>
 					<NegotiationAbility>-1.0</NegotiationAbility>
 				</statOffsets>
@@ -2428,7 +2424,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>DarkNet_Network_MentalFocus</defName>
 		<label>Fragment of the neural network "Mental focus"</label>
-		<defaultLabelColor>(0.4, 0.7, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.8, 0.4)</defaultLabelColor>
 		<description>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Lets focus all the efforts of the body to acquire new knowledge and improving intelligence that spends the last body energy reserves.</description>
 		<labelNoun>Combined foreign design, which, Apparently, she was able to combine the advantages two fragments of a neural network at once. Lets focus all the efforts of the body to acquire new knowledge and improving intelligence that spends the last body energy reserves.</labelNoun>
 		<spawnThingOnRemoved>DarkNet_Network_MentalFocus</spawnThingOnRemoved>
@@ -2445,10 +2441,10 @@
 					</li> 
 				</capMods>
 				<statOffsets>
-					<ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
-					<SocialImpact>-0.9</SocialImpact>
-					<ResearchSpeed>1.0</ResearchSpeed>
-					<GlobalLearningFactor>1.0</GlobalLearningFactor>
+					<ImmunityGainSpeed>-0.2</ImmunityGainSpeed>
+					<SocialImpact>-1.0</SocialImpact>
+					<ResearchSpeed>1.3</ResearchSpeed>
+					<GlobalLearningFactor>1.3</GlobalLearningFactor>
 					<HungerRateMultiplier>2.0</HungerRateMultiplier>
 					<MeleeHitChance>-1.0</MeleeHitChance>
 					<MeleeDodgeChance>-1.0</MeleeDodgeChance>
@@ -2866,7 +2862,7 @@
 				<capMods>
 					<li>
 						<capacity>BloodFiltration</capacity> 
-						<offset>-0.3</offset>
+						<offset>0.3</offset>
 					</li> 
 					<li>
 						<capacity>Moving</capacity> 
@@ -2874,27 +2870,27 @@
 					</li> 
 					<li>
 						<capacity>Manipulation</capacity> 
-						<offset>0.2</offset>
+						<offset>0.3</offset>
 					</li> 
 					<li>
 						<capacity>Consciousness</capacity> 
-						<offset>0.1</offset>
+						<offset>0.3</offset>
 					</li> 
 					<li>
 						<capacity>Hearing</capacity> 
-						<offset>-0.3</offset>
+						<offset>0.3</offset>
 					</li> 
 				</capMods>
 				<statOffsets>
-					<ImmunityGainSpeed>0.3</ImmunityGainSpeed>
-					<MeleeHitChance>0.5</MeleeHitChance>
+					<ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+					<MeleeHitChance>0.7</MeleeHitChance>
 					<MeleeDodgeChance>0.7</MeleeDodgeChance>
-					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
-					<SocialImpact>0.7</SocialImpact>
+					<ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
+					<SocialImpact>0.8</SocialImpact>
 					<WorkSpeedGlobal>0.8</WorkSpeedGlobal>
-					<ResearchSpeed>0.4</ResearchSpeed>
-					<GlobalLearningFactor>0.7</GlobalLearningFactor>
-					<HungerRateMultiplier>4.0</HungerRateMultiplier>
+					<ResearchSpeed>0.5</ResearchSpeed>
+					<GlobalLearningFactor>1.2</GlobalLearningFactor>
+					<HungerRateMultiplier>3.0</HungerRateMultiplier>
 				</statOffsets>
 			</li>
 		</stages>

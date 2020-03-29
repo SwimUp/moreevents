@@ -194,7 +194,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses1</defName>
-		<label>Experimental prosthetic</label>
+		<label>Experimental</label>
 		<description>These prostheses were created using new production methods, which will reduce their price.</description>
 		<PriceModficator>1.1</PriceModficator>
 		<HealthRange>
@@ -205,7 +205,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses2</defName>
-		<label>Homemade prosthetic</label>
+		<label>Homemade</label>
 		<description>Created outside the necessary conditions, they significantly reduce their cost.</description>
 		<PriceModficator>0.95</PriceModficator>
 		<HealthRange>
@@ -216,7 +216,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses3</defName>
-		<label>Damaged prosthetic</label>
+		<label>Damaged</label>
 		<description>Created in inappropriate conditions, it was damaged, which affected its performance.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -227,7 +227,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses4</defName>
-		<label>Broken prosthetic</label>
+		<label>Broken</label>
 		<description>Was seriously damaged during transportation.</description>
 		<PriceModficator>0.7</PriceModficator>
 		<HealthRange>
@@ -238,7 +238,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses5</defName>
-		<label>Defective prosthetic</label>
+		<label>Defective</label>
 		<description>This prosthesis was defective in production.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -249,7 +249,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses6</defName>
-		<label>Рigh-quality prosthetic</label>
+		<label>Рigh-quality</label>
 		<description>This instance was created in special conditions.</description>
 		<PriceModficator>1.1</PriceModficator>
 		<HealthRange>
@@ -260,7 +260,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses7</defName>
-		<label>Improved prosthetic</label>
+		<label>Improved</label>
 		<description>The improvement of production technologies has increased the strength of prostheses.</description>
 		<PriceModficator>1.2</PriceModficator>
 		<HealthRange>
@@ -271,7 +271,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses8</defName>
-		<label>Supporting prosthetic</label>
+		<label>Supporting</label>
 		<description>Allow you to increase your own strength, which affects the characteristics.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -293,7 +293,7 @@
 	
 			<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses10</defName>
-		<label>Reinforced prosthesis</label>
+		<label>Reinforced</label>
 		<description>The creator well strengthened the structure with anti-corrosion alloys.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -304,7 +304,7 @@
 	
 				<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses11</defName>
-		<label>Bloody prosthesis</label>
+		<label>Bloody</label>
 		<description>Apparently, he was forcibly taken from the former owner.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -315,7 +315,7 @@
 	
 					<DarkNET.PriceModificatorDef ParentName="BaseBodyParts">
 		<defName>PrimitiveProstheses12</defName>
-		<label>High strength prosthesis</label>
+		<label>High strength</label>
 		<description>The use of expensive materials has increased the initial margin of safety.</description>
 		<PriceModficator>1.3</PriceModficator>
 		<HealthRange>
@@ -326,7 +326,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses1</defName>
-		<label>Experimental prosthetic</label>
+		<label>Experimental</label>
 		<description>These prostheses were created using new production methods, which will reduce their price.</description>
 		<PriceModficator>1.05</PriceModficator>
 		<HealthRange>
@@ -337,7 +337,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses2</defName>
-		<label>Homemade prosthetic</label>
+		<label>Homemade</label>
 		<description>Created outside the necessary conditions, they significantly reduce their cost.</description>
 		<PriceModficator>0.9</PriceModficator>
 		<HealthRange>
@@ -348,7 +348,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses3</defName>
-		<label>Damaged prosthetic</label>
+		<label>Damaged</label>
 		<description>Created in inappropriate conditions, it was damaged, which affected its performance.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -359,7 +359,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses4</defName>
-		<label>Broken prosthetic</label>
+		<label>Broken</label>
 		<description>Was seriously damaged during transportation.</description>
 		<PriceModficator>0.85</PriceModficator>
 		<HealthRange>
@@ -370,7 +370,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses5</defName>
-		<label>Defective prosthetic</label>
+		<label>Defective</label>
 		<description>This prosthesis was defective in production.</description>
 		<PriceModficator>0.75</PriceModficator>
 		<HealthRange>
@@ -381,7 +381,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses6</defName>
-		<label>Рigh-quality prosthetic</label>
+		<label>Рigh-quality</label>
 		<description>This instance was created in special conditions.</description>
 		<PriceModficator>1.1</PriceModficator>
 		<HealthRange>
@@ -392,7 +392,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses7</defName>
-		<label>Improved prosthetic</label>
+		<label>Improved</label>
 		<description>The improvement of production technologies has increased the strength of prostheses.</description>
 		<PriceModficator>1.15</PriceModficator>
 		<HealthRange>
@@ -403,7 +403,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses8</defName>
-		<label>Supporting prosthetic</label>
+		<label>Supporting</label>
 		<description>Allow you to increase your own strength, which affects the characteristics.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -425,7 +425,7 @@
 	
 			<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses10</defName>
-		<label>Reinforced prosthesis</label>
+		<label>Reinforced</label>
 		<description>The creator well strengthened the structure with anti-corrosion alloys.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -436,7 +436,7 @@
 	
 				<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses11</defName>
-		<label>Bloody prosthesis</label>
+		<label>Bloody</label>
 		<description>Apparently, he was forcibly taken from the former owner.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -447,7 +447,7 @@
 	
 					<DarkNET.PriceModificatorDef ParentName="BionicBodyParts">
 		<defName>BionicProstheses12</defName>
-		<label>High strength prosthesis</label>
+		<label>High strength</label>
 		<description>The use of expensive materials has increased the initial margin of safety.</description>
 		<PriceModficator>1.3</PriceModficator>
 		<HealthRange>
@@ -459,7 +459,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses1</defName>
-		<label>Experimental prosthetic</label>
+		<label>Experimental</label>
 		<description>These prostheses were created using new production methods, which will reduce their price.</description>
 		<PriceModficator>1.1</PriceModficator>
 		<HealthRange>
@@ -470,7 +470,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses2</defName>
-		<label>Homemade prosthetic</label>
+		<label>Homemade</label>
 		<description>Created outside the necessary conditions, they significantly reduce their cost.</description>
 		<PriceModficator>0.9</PriceModficator>
 		<HealthRange>
@@ -481,7 +481,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses3</defName>
-		<label>Damaged prosthetic</label>
+		<label>Damaged</label>
 		<description>Created in inappropriate conditions, it was damaged, which affected its performance.</description>
 		<PriceModficator>0.85</PriceModficator>
 		<HealthRange>
@@ -492,7 +492,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses4</defName>
-		<label>Broken prosthetic</label>
+		<label>Broken</label>
 		<description>Was seriously damaged during transportation.</description>
 		<PriceModficator>0.75</PriceModficator>
 		<HealthRange>
@@ -503,7 +503,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses5</defName>
-		<label>Defective prosthetic</label>
+		<label>Defective</label>
 		<description>This prosthesis was defective in production.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -514,7 +514,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses6</defName>
-		<label>Рigh-quality prosthetic</label>
+		<label>Рigh-quality</label>
 		<description>This instance was created in special conditions.</description>
 		<PriceModficator>1.15</PriceModficator>
 		<HealthRange>
@@ -525,7 +525,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses7</defName>
-		<label>Improved prosthetic</label>
+		<label>Improved</label>
 		<description>The improvement of production technologies has increased the strength of prostheses.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -536,7 +536,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses8</defName>
-		<label>Supporting prosthetic</label>
+		<label>Supporting</label>
 		<description>Allow you to increase your own strength, which affects the characteristics.</description>
 		<PriceModficator>1.2</PriceModficator>
 		<HealthRange>
@@ -558,7 +558,7 @@
 	
 			<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses10</defName>
-		<label>Reinforced prosthesis</label>
+		<label>Reinforced</label>
 		<description>The creator well strengthened the structure with anti-corrosion alloys.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -569,7 +569,7 @@
 	
 				<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses11</defName>
-		<label>Bloody prosthesis</label>
+		<label>Bloody</label>
 		<description>Apparently, he was forcibly taken from the former owner.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -580,7 +580,7 @@
 	
 					<DarkNET.PriceModificatorDef ParentName="ArchotechBodyPart">
 		<defName>ArchotechProstheses12</defName>
-		<label>High strength prosthesis</label>
+		<label>High strength</label>
 		<description>The use of expensive materials has increased the initial margin of safety.</description>
 		<PriceModficator>1.3</PriceModficator>
 		<HealthRange>
@@ -602,7 +602,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BodyPart">
 		<defName>OrdinaryOrgan2</defName>
-		<label>Affected organ</label>
+		<label>Affected</label>
 		<description>Judging by external signs, this organ can be seriously damaged.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -624,7 +624,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BodyPart">
 		<defName>OrdinaryOrgan4</defName>
-		<label>Freshest organ</label>
+		<label>Freshest</label>
 		<description>As you can see, it was mined recently.</description>
 		<PriceModficator>1.2</PriceModficator>
 		<HealthRange>
@@ -635,7 +635,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="BodyPart">
 		<defName>OrdinaryOrgan5</defName>
-		<label>Perfect healthy organ</label>
+		<label>Perfect healthy</label>
 		<description>Part of the body retained perfect proportions and overall performance.</description>
 		<PriceModficator>1.35</PriceModficator>
 		<HealthRange>
@@ -646,7 +646,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue1</defName>
-		<label>Broken statue</label>
+		<label>Broken</label>
 		<description>The fragments from this building were scattered around, giving it a depressing look.</description>
 		<PriceModficator>0.8</PriceModficator>
 		<HealthRange>
@@ -657,7 +657,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue2</defName>
-		<label>Ancient statue</label>
+		<label>Ancient</label>
 		<description>Lost long ago, she preserved the extraordinary beauty of antiquity.</description>
 		<PriceModficator>1.2</PriceModficator>
 		<HealthRange>
@@ -668,7 +668,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue3</defName>
-		<label>Old fashioned statue</label>
+		<label>Old fashioned</label>
 		<description>Despite the old style, she did not lose her splendor.</description>
 		<PriceModficator>1.1</PriceModficator>
 		<HealthRange>
@@ -679,7 +679,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue4</defName>
-		<label>Ruined statue</label>
+		<label>Ruined</label>
 		<description>She cannot boast of being well preserved.</description>
 		<PriceModficator>0.9</PriceModficator>
 		<HealthRange>
@@ -690,7 +690,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue5</defName>
-		<label>Lost treasure</label>
+		<label>Lost</label>
 		<description>The long-lost miracle of creative thought continues to shine and delight others.</description>
 		<PriceModficator>1.25</PriceModficator>
 		<HealthRange>
@@ -701,7 +701,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue6</defName>
-		<label>Ordinary statue</label>
+		<label>Ordinary</label>
 		<description>Unremarkable construction created on the conveyor.</description>
 		<PriceModficator>1.05</PriceModficator>
 		<HealthRange>
@@ -712,7 +712,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue7</defName>
-		<label>Perfect statue</label>
+		<label>Perfect</label>
 		<description>Created by amazing master.</description>
 		<PriceModficator>1.35</PriceModficator>
 		<HealthRange>
@@ -723,7 +723,7 @@
 
 	<DarkNET.PriceModificatorDef ParentName="Statue">
 		<defName>Statue8</defName>
-		<label>Mysterious statue</label>
+		<label>Mysterious</label>
 		<description>Embodied by an unknown master, which gives mystery.</description>
 		<PriceModficator>1.3</PriceModficator>
 		<HealthRange>

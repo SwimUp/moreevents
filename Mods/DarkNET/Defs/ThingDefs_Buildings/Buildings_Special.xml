@@ -36,21 +36,17 @@
 		<tickerType>Normal</tickerType>
 		<size>(1, 2)</size>
 		<costList>
-			<Steel>200</Steel>
-			<IlmeniteIngot>80</IlmeniteIngot>
-			<CobaltIngot>80</CobaltIngot>
+			<Steel>150</Steel>
 			<CopperIngot>150</CopperIngot>
-			<Chromium>100</Chromium>
-			<IronIngot>120</IronIngot>
 			<Gold>50</Gold>
-			<ComponentIndustrial>20</ComponentIndustrial>
-			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
-				<basePowerConsumption>1000</basePowerConsumption>
+				<basePowerConsumption>700</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Glower">
 				<glowRadius>3</glowRadius>

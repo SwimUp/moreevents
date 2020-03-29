@@ -581,8 +581,8 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <costList>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<CopperIngot>100</CopperIngot>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<CopperIngot>30</CopperIngot>
 			<NickelIngot>15</NickelIngot>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -669,7 +669,8 @@
   </ThingDef>
   
   
-<ThingDef ParentName="TrapIEDBase">
+  
+  <ThingDef ParentName="TrapIEDBase">
     <defName>GasMine</defName>
     <label>Gas mine</label>
     <description>Mine of destructive power achieved through gas expansion.</description>
@@ -735,6 +736,7 @@
     </researchPrerequisites>
     <specialDisplayRadius>9.0</specialDisplayRadius>
   </ThingDef>
+  
 
 
 

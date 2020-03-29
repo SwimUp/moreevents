@@ -28,13 +28,12 @@
 		<tickerType>Normal</tickerType>
 		<size>(6, 6)</size>
 		<costList>
-			<Steel>300</Steel>
 			<Chromium>100</Chromium>
-			<CopperIngot>150</CopperIngot>
 			<TungstenIngot>50</TungstenIngot>
-			<IronIngot>150</IronIngot>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<ComponentSpacer>10</ComponentSpacer>
+			<CopperIngot>100</CopperIngot>
+			<IronIngot>100</IronIngot>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentSpacer>8</ComponentSpacer>
 			<ColdFusionReactorHeath>1</ColdFusionReactorHeath>
 		</costList>
 		<comps>
@@ -87,14 +86,13 @@
 		<tickerType>Normal</tickerType>
 		<size>(6, 6)</size>
 		<costList>
-			<Steel>350</Steel>
 			<Chromium>150</Chromium>
-			<CopperIngot>200</CopperIngot>
+			<CopperIngot>150</CopperIngot>
 			<TungstenIngot>100</TungstenIngot>
-			<IronIngot>100</IronIngot>
-			<ComponentIndustrial>20</ComponentIndustrial>
+			<IronIngot>150</IronIngot>
+			<ComponentIndustrial>15</ComponentIndustrial>
 			<PalladiumIngot>50</PalladiumIngot>
-			<ComponentSpacer>15</ComponentSpacer>
+			<ComponentSpacer>12</ComponentSpacer>
 			<PalladiumCore>1</PalladiumCore>
 			<Enricher>1</Enricher>
 		</costList>
@@ -149,17 +147,14 @@
 		<tickerType>Normal</tickerType>
 		<size>(4, 10)</size>
 		<costList>
-			<Steel>150</Steel>
-			<Chromium>250</Chromium>
-			<CopperIngot>250</CopperIngot>
-			<TungstenIngot>100</TungstenIngot>
-			<CobaltIngot>80</CobaltIngot>
-			<IlmeniteIngot>80</IlmeniteIngot>
-			<NickelIngot>100</NickelIngot>
-			<ComponentIndustrial>30</ComponentIndustrial>
+			<Chromium>200</Chromium>
+			<CopperIngot>200</CopperIngot>
+			<TungstenIngot>120</TungstenIngot>
+			<IlmeniteIngot>120</IlmeniteIngot>
+			<ComponentIndustrial>20</ComponentIndustrial>
 			<PalladiumIngot>100</PalladiumIngot>
-			<ComponentSpacer>25</ComponentSpacer>
-			<VacuumTube>4</VacuumTube>
+			<ComponentSpacer>18</ComponentSpacer>
+			<VacuumTube>3</VacuumTube>
 			<VacuumStabilizer>1</VacuumStabilizer>
 		</costList>
 		<comps>
@@ -213,11 +208,9 @@
 		<size>(2, 2)</size>
 		<costList>
 			<Steel>50</Steel>
-			<ComponentIndustrial>5</ComponentIndustrial>
-			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
 			<IlmeniteIngot>30</IlmeniteIngot>
-			<CopperIngot>80</CopperIngot>
-			<Synthread>25</Synthread>
 		</costList>
 		<tradeability>None</tradeability>
 	</ThingDef>
@@ -256,14 +249,13 @@
 		<tickerType>Normal</tickerType>
 		<size>(10, 10)</size>
 		<costList>
-			<Steel>500</Steel>
 			<Plasteel>200</Plasteel>
-			<Gold>150</Gold>
-			<IlmeniteIngot>150</IlmeniteIngot>
-			<Chromium>250</Chromium>
-			<Hyperweave>50</Hyperweave>
-			<ComponentIndustrial>40</ComponentIndustrial>
-			<ComponentSpacer>35</ComponentSpacer>
+			<Gold>50</Gold>
+			<IlmeniteIngot>100</IlmeniteIngot>
+			<Chromium>150</Chromium>
+			<Hyperweave>100</Hyperweave>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<ComponentSpacer>20</ComponentSpacer>
 			<QuantumConverter>1</QuantumConverter>
 			<SuperMagnetNewGeneration>1</SuperMagnetNewGeneration>
 		</costList>
@@ -314,13 +306,11 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 		<tradeability>None</tradeability>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<killedLeavings>
-			<Steel>300</Steel>
-			<CobaltIngot>100</CobaltIngot>
+			<CobaltIngot>80</CobaltIngot>
 			<Chromium>80</Chromium>
-			<IlmeniteIngot>50</IlmeniteIngot>
-			<Plasteel>200</Plasteel>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<ComponentSpacer>20</ComponentSpacer>
+			<IlmeniteIngot>80</IlmeniteIngot>
+			<ComponentIndustrial>15</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
 			<VacuumStabilizer>1</VacuumStabilizer>
 		</killedLeavings>
 	</ThingDef>
@@ -358,15 +348,12 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 		<tickerType>Normal</tickerType>
 		<size>(3, 3)</size>
 		<costList>
-			<Steel>200</Steel>
-			<IlmeniteIngot>80</IlmeniteIngot>
-			<CobaltIngot>80</CobaltIngot>
-			<CopperIngot>150</CopperIngot>
+			<IlmeniteIngot>50</IlmeniteIngot>
+			<CobaltIngot>50</CobaltIngot>
+			<CopperIngot>100</CopperIngot>
 			<Chromium>100</Chromium>
-			<IronIngot>120</IronIngot>
-			<Gold>50</Gold>
-			<ComponentIndustrial>20</ComponentIndustrial>
-			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -401,7 +388,7 @@ Having got into the wrong hands, the Doomsday weapon will bring many troubles re
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<rotatable>false</rotatable>
 		<statBases>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>2500</MarketValue>
 			<Mass>50</Mass>
 		</statBases>
 		<tickerType>Normal</tickerType>

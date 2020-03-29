@@ -1209,7 +1209,7 @@
 		<statBases>
 			<MaxHitPoints>75</MaxHitPoints>
 			<Mass>2.5</Mass>
-			<MarketValue>3000</MarketValue>
+			<MarketValue>2800</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1387,7 +1387,7 @@
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1800</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1409,7 +1409,7 @@
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.7</Mass>
-			<MarketValue>2200</MarketValue>
+			<MarketValue>2000</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1522,7 +1522,7 @@
 		<statBases>
 			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1100</MarketValue>
+			<MarketValue>1000</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Simple</li>
@@ -1544,7 +1544,7 @@
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1300</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1566,7 +1566,7 @@
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>0.5</Mass>
-			<MarketValue>1300</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1589,7 +1589,7 @@
 		<statBases>
 			<MaxHitPoints>20</MaxHitPoints>
 			<Mass>0.1</Mass>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1400</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1611,7 +1611,7 @@
 		<statBases>
 			<MaxHitPoints>25</MaxHitPoints>
 			<Mass>0.1</Mass>
-			<MarketValue>1900</MarketValue>
+			<MarketValue>1800</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1633,7 +1633,7 @@
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>2200</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1699,7 +1699,7 @@
 		<statBases>
 			<MaxHitPoints>65</MaxHitPoints>
 			<Mass>1</Mass>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1300</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1720,7 +1720,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1741,7 +1741,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1762,7 +1762,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1783,7 +1783,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1804,7 +1804,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1825,7 +1825,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1846,7 +1846,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1867,7 +1867,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1888,7 +1888,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1909,7 +1909,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1930,7 +1930,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1951,7 +1951,7 @@
 		<techLevel>Spacer</techLevel>
 		<statBases>
 			<Mass>1</Mass>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -1971,7 +1971,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
-			<MarketValue>18000</MarketValue>
+			<MarketValue>6000</MarketValue>
 			<Mass>4</Mass>
 			<WorkToMake>14000</WorkToMake>
 		</statBases>
@@ -1986,19 +1986,12 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<ComponentSpacer>5</ComponentSpacer>
-			<DarkNet_Network_Bushido>1</DarkNet_Network_Bushido>
-			<DarkNet_Network_Sniper>1</DarkNet_Network_Sniper>
-			<DarkNet_Network_Psychology>1</DarkNet_Network_Psychology>
-			<DarkNet_Network_Wild>1</DarkNet_Network_Wild>
-			<DarkNet_Network_GreenFields>1</DarkNet_Network_GreenFields>
-			<DarkNet_Network_Paladin>1</DarkNet_Network_Paladin>
-			<DarkNet_Network_MiningWays>1</DarkNet_Network_MiningWays>
-			<DarkNet_Network_ConnoisseurOfBeauty>1</DarkNet_Network_ConnoisseurOfBeauty>
-			<DarkNet_Network_Hephaestus>1</DarkNet_Network_Hephaestus>
-			<DarkNet_Network_Science>1</DarkNet_Network_Science>
-			<DarkNet_Network_Construction>1</DarkNet_Network_Construction>
-			<DarkNet_Network_Gourmet>1</DarkNet_Network_Gourmet>
+			<DarkNet_Network_Berserker>1</DarkNet_Network_Berserker>
+			<DarkNet_Network_Meditation>1</DarkNet_Network_Meditation>
+			<DarkNet_Network_LifeForce>1</DarkNet_Network_LifeForce>
+			<DarkNet_Network_Consummation>1</DarkNet_Network_Consummation>
+			<DarkNet_Network_YinYang>1</DarkNet_Network_YinYang>
+			<DarkNet_Network_MentalFocus>1</DarkNet_Network_MentalFocus>
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<techHediffsTags>
@@ -2020,7 +2013,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
 		</statBases>
@@ -2058,7 +2051,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
 		</statBases>
@@ -2096,7 +2089,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
 		</statBases>
@@ -2134,7 +2127,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
 		</statBases>
@@ -2172,7 +2165,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
 		</statBases>
@@ -2210,7 +2203,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>7000</WorkToMake>
 		</statBases>
@@ -2249,7 +2242,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
-			<MarketValue>700</MarketValue>
+			<MarketValue>800</MarketValue>
 			<Mass>0.1</Mass>
 			<WorkToMake>1000</WorkToMake>
 		</statBases>
@@ -2265,7 +2258,7 @@
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>1</ComponentSpacer>
-			<CopperIngot>80</CopperIngot>
+			<CopperIngot>50</CopperIngot>
 			<NickelIngot>50</NickelIngot>
 			<IlmeniteIngot>15</IlmeniteIngot>
 		</costList>
@@ -2288,7 +2281,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>40</MaxHitPoints>
-			<MarketValue>1200</MarketValue>
+			<MarketValue>1000</MarketValue>
 			<Mass>0.15</Mass>
 			<WorkToMake>2000</WorkToMake>
 		</statBases>
@@ -2304,10 +2297,9 @@
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>2</ComponentSpacer>
-			<CopperIngot>120</CopperIngot>
+			<CopperIngot>80</CopperIngot>
 			<NickelIngot>80</NickelIngot>
-			<IlmeniteIngot>35</IlmeniteIngot>
-			<Chromium>15</Chromium>
+			<IlmeniteIngot>20</IlmeniteIngot>
 		</costList>
 		<techHediffsTags>
 			<li>Spacer</li>
@@ -2328,7 +2320,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1200</MarketValue>
 			<Mass>0.2</Mass>
 			<WorkToMake>3000</WorkToMake>
 		</statBases>
@@ -2344,9 +2336,7 @@
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>3</ComponentSpacer>
-			<CopperIngot>100</CopperIngot>
-			<NickelIngot>100</NickelIngot>
-			<IlmeniteIngot>45</IlmeniteIngot>
+			<IlmeniteIngot>40</IlmeniteIngot>
 			<PalladiumIngot>25</PalladiumIngot>
 		</costList>
 		<techHediffsTags>
@@ -2369,7 +2359,7 @@
 		<statBases>
 			<MaxHitPoints>45</MaxHitPoints>
 			<Mass>0.7</Mass>
-			<MarketValue>500</MarketValue>
+			<MarketValue>400</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2391,7 +2381,7 @@
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Mass>0.9</Mass>
-			<MarketValue>800</MarketValue>
+			<MarketValue>700</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2413,7 +2403,7 @@
 		<statBases>
 			<MaxHitPoints>55</MaxHitPoints>
 			<Mass>0.8</Mass>
-			<MarketValue>1100</MarketValue>
+			<MarketValue>1000</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2435,7 +2425,7 @@
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Mass>1.5</Mass>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>1300</MarketValue>
 		</statBases>
 		<techHediffsTags>
 			<li>Advanced</li>
@@ -2655,9 +2645,9 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<MarketValue>20000</MarketValue>
+			<MarketValue>10000</MarketValue>
 			<Mass>5</Mass>
-			<WorkToMake>23000</WorkToMake>
+			<WorkToMake>45000</WorkToMake>
 		</statBases>
 		<useHitPoints>true</useHitPoints>
 		<recipeMaker>
@@ -2672,9 +2662,9 @@
 		<costList>
 			<DarkNet_Network_Singular>1</DarkNet_Network_Singular>
 			<ComponentSpacer>5</ComponentSpacer>
-			<Computerium>20</Computerium>
-			<Neutronium>15</Neutronium>
 			<Cryotium>25</Cryotium>
+			<Computerium>15</Computerium>
+			<Neutronium>5</Neutronium>
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<techHediffsTags>
@@ -2695,7 +2685,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>1700</MarketValue>
+			<MarketValue>1500</MarketValue>
 			<Mass>5</Mass>
 			<WorkToMake>15000</WorkToMake>
 		</statBases>
@@ -2712,8 +2702,7 @@
 		<costList>
 			<BionicSpine>1</BionicSpine>
 			<DarkNet_AdrenalineRibs>1</DarkNet_AdrenalineRibs>
-			<NickelIngot>20</NickelIngot>
-			<ComponentSpacer>2</ComponentSpacer>
+			<NickelIngot>35</NickelIngot>
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<techHediffsTags>
@@ -2734,7 +2723,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>130</MaxHitPoints>
-			<MarketValue>2000</MarketValue>
+			<MarketValue>1700</MarketValue>
 			<Mass>8</Mass>
 			<WorkToMake>18000</WorkToMake>
 		</statBases>
@@ -2751,8 +2740,7 @@
 		<costList>
 			<BionicSpine>1</BionicSpine>
 			<DarkNet_TitaniumRibs>1</DarkNet_TitaniumRibs>
-			<IlmeniteIngot>30</IlmeniteIngot>
-			<ComponentSpacer>3</ComponentSpacer>
+			<IlmeniteIngot>35</IlmeniteIngot>
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<techHediffsTags>
@@ -2774,7 +2762,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
-			<MarketValue>2600</MarketValue>
+			<MarketValue>2000</MarketValue>
 			<Mass>3</Mass>
 			<WorkToMake>22000</WorkToMake>
 		</statBases>
@@ -2792,7 +2780,6 @@
 			<BionicSpine>1</BionicSpine>
 			<DarkNet_SyntheticRibs>1</DarkNet_SyntheticRibs>
 			<TungstenIngot>35</TungstenIngot>
-			<ComponentSpacer>5</ComponentSpacer>
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<techHediffsTags>
@@ -2813,7 +2800,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
-			<MarketValue>3000</MarketValue>
+			<MarketValue>2300</MarketValue>
 			<Mass>5</Mass>
 			<WorkToMake>25000</WorkToMake>
 		</statBases>
@@ -2831,7 +2818,6 @@
 			<BionicSpine>1</BionicSpine>
 			<DarkNet_CyberneticBreastFrame>1</DarkNet_CyberneticBreastFrame>
 			<Computerium_SupereMolStruct>5</Computerium_SupereMolStruct>
-			<ComponentSpacer>5</ComponentSpacer>
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<techHediffsTags>

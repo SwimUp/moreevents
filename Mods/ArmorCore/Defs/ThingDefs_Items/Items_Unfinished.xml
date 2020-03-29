@@ -1351,7 +1351,7 @@ Opens the last level of modules for armor.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<WorkToMake>18000</WorkToMake>
-			<MarketValue>1800</MarketValue>
+			<MarketValue>2200</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0</Flammability>
 			<Mass>3</Mass>
@@ -1375,8 +1375,8 @@ Opens the last level of modules for armor.</description>
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<ComponentSpacer>2</ComponentSpacer>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+			<ComponentIndustrial>4</ComponentIndustrial>
 			<Uranium>30</Uranium>
 			<Chromium>75</Chromium>
 			<TungstenIngot>75</TungstenIngot>
