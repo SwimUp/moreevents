@@ -22,11 +22,11 @@ namespace MoreEvents.Patch
             {
                 if (!pawn.CanReach(localTargetInfo, PathEndMode.Touch, Danger.Deadly))
                 {
-                    opts.Add(new FloatMenuOption("CannotGoNoPath".Translate(), null));
+                    opts.Add(new FloatMenuOption("CannotGoNoPath".Translate().ToString(), null));
                 }
                 else if (pawn.skills.GetSkill(SkillDefOf.Social).TotallyDisabled)
                 {
-                    opts.Add(new FloatMenuOption("CannotPrioritizeWorkTypeDisabled".Translate(SkillDefOf.Social.LabelCap), null));
+                    opts.Add(new FloatMenuOption("CannotPrioritizeWorkTypeDisabled".Translate(SkillDefOf.Social.LabelCap).ToString(), null));
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace MoreEvents.Patch
                         {
                             if (questPawn.Quests.Count > 0)
                             {
-                                opts.Add(new FloatMenuOption("TryStartQuestDialog".Translate(), delegate
+                                opts.Add(new FloatMenuOption("TryStartQuestDialog".Translate().ToString(), delegate
                                 {
                                     Job job = new Job(JobDefOfLocal.SpeakWithQuester, localTargetInfo.Thing);
                                     pawn.jobs.TryTakeOrderedJob(job);

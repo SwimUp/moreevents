@@ -37,7 +37,7 @@ namespace QuestRim
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
         {
-            yield return new FloatMenuOption(HasPower ? "OpenCommsGeo".Translate() : "OpenCommsGeoNoPower".Translate(), delegate
+            yield return new FloatMenuOption(HasPower ? "OpenCommsGeo".Translate().ToString() : "OpenCommsGeoNoPower".Translate().ToString(), delegate
             {
                 if (HasPower)
                 {

@@ -1770,7 +1770,7 @@ Screen reader support included.</description>
 								<Commonality>0.1</Commonality>
 								<ThingFilter>
 									<thingDefs>
-										<li>PsychicInsanityLance</li>
+										<li>Apparel_PsychicInsanityLance</li>
 									</thingDefs>
 								</ThingFilter>
 							</li>
@@ -1778,7 +1778,7 @@ Screen reader support included.</description>
 								<Commonality>0.05</Commonality>
 								<ThingFilter>
 									<thingDefs>
-										<li>PsychicShockLance</li>
+										<li>Apparel_PsychicShockLance</li>
 									</thingDefs>
 								</ThingFilter>
 							</li>

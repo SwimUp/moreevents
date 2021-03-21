@@ -275,6 +275,7 @@ namespace QuestRim
                     if (item == null)
                     {
                         Log.Error("Null incident generated.");
+                        continue;
                     }
                     if (item.parms.target == forMap)
                     {
