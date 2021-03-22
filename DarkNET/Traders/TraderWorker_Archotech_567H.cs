@@ -58,7 +58,7 @@ namespace DarkNET.Traders
 
         public List<QuestRim.Quest> Quests = new List<QuestRim.Quest>();
 
-        private Type[] QuestsList = new Type[]
+        private Type[] questsList = new Type[]
         {
             typeof(Quest_Archotech_567H_KillAll),
             typeof(Quest_Archotech_567H_KillOponents),
@@ -128,8 +128,8 @@ namespace DarkNET.Traders
             int questCount = Rand.RangeInclusive(1, 2);
             for (int i = 0; i < questCount; i++)
             {
-                int questId = Rand.Range(0, QuestsList.Length);
-                QuestRim.Quest quest = (QuestRim.Quest)Activator.CreateInstance(QuestsList[questId]);
+                int questId = Rand.Range(0, questsList.Length);
+                QuestRim.Quest quest = (QuestRim.Quest)Activator.CreateInstance(questsList[questId]);
                 if (quest.TryGiveQuestTo(null, null))
                 {
                     Quests.Add(quest);

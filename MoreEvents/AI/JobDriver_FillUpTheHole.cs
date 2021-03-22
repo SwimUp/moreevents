@@ -12,7 +12,7 @@ namespace RimOverhaul.AI
 {
     public class JobDriver_FillUpTheHole : JobDriver
     {
-        public Building_TribalCrack Crack => (Building_TribalCrack)TargetA.Thing;
+        public Building_TribalCrack Crack => (Building_TribalCrack)TargetThingA;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -34,9 +34,10 @@ namespace RimOverhaul.AI
 
                 if (Crack.Filled >= 100)
                 {
-                    actor.jobs.EndCurrentJob(JobCondition.Succeeded);
                     Crack.Destroy();
                     Find.LetterStack.ReceiveLetter("Building_TribalCrack_Title".Translate(), "Building_TribalCrack_Desc".Translate(actor.Name.ToStringFull), LetterDefOf.PositiveEvent);
+
+                    EndJobWith(JobCondition.Succeeded);
                     return;
                 }
 

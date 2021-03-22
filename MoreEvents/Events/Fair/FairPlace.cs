@@ -33,7 +33,7 @@ namespace RimOverhaul.Events.Fair
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Caravan caravan)
         {
             CaravanArrivalAction_EnterToMapWithGenerator caravanAction = new CaravanArrivalAction_EnterToMapWithGenerator(this, MapGenerator);
-            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => true, () => caravanAction, "EnterToMap_Option".Translate(), caravan, this.Tile, this);
+            return CaravanArrivalActionUtility.GetFloatMenuOptions(() => true, () => caravanAction, "EnterToMap_Option".Translate(Label), caravan, this.Tile, this);
         }
 
         public override void PostMapGenerate()
@@ -71,10 +71,25 @@ namespace RimOverhaul.Events.Fair
 
         public void SendNewCaravan()
         {
-            IncidentDefOf.TraderCaravanArrival.Worker.TryExecute(new IncidentParms
+            if (Find.FactionManager.AllFactionsVisible.Where(fac => fac != Faction.OfPlayer && !fac.HostileTo(Faction.OfPlayer)).TryRandomElement(out Faction friendlyFaction))
             {
-                target = Map
-            });
+                if (friendlyFaction.def.caravanTraderKinds.TryRandomElement(out TraderKindDef traderKindDef))
+                {
+                    IncidentParms parms = new IncidentParms
+                    {
+                        target = Map,
+                        faction = friendlyFaction,
+                        traderKind = traderKindDef,
+                        forced = true
+                    };
+
+                    Find.Storyteller.incidentQueue.Add(IncidentDefOf.TraderCaravanArrival, Find.TickManager.TicksGame + 1000, parms, 0);
+                }
+            }
+            else
+            {
+                EndFair();
+            }
         }
 
         public override string GetInspectString()
