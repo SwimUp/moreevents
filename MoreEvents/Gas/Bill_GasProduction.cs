@@ -32,9 +32,16 @@ namespace RimOverhaul.Gas
             {
                 float cost = Station.GasModifiers[recipe];
                 Station.Storage -= cost;
-            }
 
-            base.Notify_IterationCompleted(billDoer, ingredients);
+                base.Notify_IterationCompleted(billDoer, ingredients);
+            }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_References.Look(ref Station, "Station");
         }
     }
 }
