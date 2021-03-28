@@ -154,6 +154,7 @@ namespace RimOverhaul.Things.CokeFurnace
             Scribe_Values.Look(ref started, "started");
             Scribe_Deep.Look(ref result, "result");
             Scribe_Values.Look(ref Multiplier, "Multiplier");
+            Scribe_Values.Look(ref Infinity, "Infinity");
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)

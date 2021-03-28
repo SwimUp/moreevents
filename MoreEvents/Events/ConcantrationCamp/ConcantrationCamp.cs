@@ -169,13 +169,10 @@ namespace RimOverhaul.Events.ConcantrationCamp
 
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            if (Pawns != null)
+            if (!Map.mapPawns.AllPawns.Any(p => p.IsColonist && !p.Downed))
             {
-                if (!Map.mapPawns.FreeColonists.Where(x => !Pawns.Contains(x) && !x.Dead && !x.Downed).Any())
-                {
-                    alsoRemoveWorldObject = false;
-                    return true;
-                }
+                alsoRemoveWorldObject = true;
+                return true;
             }
 
             alsoRemoveWorldObject = false;
