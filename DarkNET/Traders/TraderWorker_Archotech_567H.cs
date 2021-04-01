@@ -120,7 +120,8 @@ namespace DarkNET.Traders
 
             RegenerateStock();
 
-            TryGenerateQuests();
+            if(Comp.Props.enableQuests)
+                TryGenerateQuests();
         }
 
         public void TryGenerateQuests()

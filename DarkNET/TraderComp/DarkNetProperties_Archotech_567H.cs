@@ -11,6 +11,8 @@ namespace DarkNET.TraderComp
     {
         public List<CategoryItemSetting<TraderWorker_Archotech_567H.Tab>> CategoryItemSettings;
 
+        public bool enableQuests = true;
+
         public DarkNetProperties_Archotech_567H()
         {
             compClass = typeof(DarkNetComp_Archotech_567H);

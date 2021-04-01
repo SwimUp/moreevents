@@ -1832,6 +1832,7 @@ It is also known that simple things, so familiar to us, are too simple for him, 
 		</Character>
 		<comps>
 			<li Class="DarkNET.TraderComp.DarkNetProperties_Archotech_567H"> 
+				<enableQuests>true</enableQuests>
 				<CategoryItemSettings>
 					<li>
 						<Tab>Items</Tab>
