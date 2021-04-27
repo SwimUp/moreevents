@@ -60,7 +60,7 @@ namespace DarkNET
         {
             base.StartedNewGame();
 
-            if (Traders == null)
+            if (Traders == null || Traders.Any(t => t == null))
             {
                 InitDarkNet();
             }
@@ -116,7 +116,7 @@ namespace DarkNET
         {
             base.LoadedGame();
 
-            if (Traders == null)
+            if (Traders == null || Traders.Any(t => t == null))
             {
                 InitDarkNet();
             }

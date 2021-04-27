@@ -101,7 +101,7 @@ namespace MoreEvents
         public static string SettingsFileName => "settings.xml";
 
         #region 1
-        /*public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
+        public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>()
         {
           {
                 "General", new EventSettings("General")
@@ -470,9 +470,9 @@ namespace MoreEvents
             }
             }
         };
-        */
+        
         #endregion
-        public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>();
+        //public static Dictionary<string, EventSettings> EventsSettings = new Dictionary<string, EventSettings>();
 
         private static int length = 0;
 
@@ -484,6 +484,7 @@ namespace MoreEvents
 
         public static void DoSettingsWindowContents(Rect inRect)
         {
+            /*
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
             listing_Standard.GapLine();
@@ -518,6 +519,7 @@ namespace MoreEvents
             listing_Standard.EndScrollView(ref mainScrollVertRect);
 
             listing_Standard.End();
+            */
         }
 
         public override void ExposeData()

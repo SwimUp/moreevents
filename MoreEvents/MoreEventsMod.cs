@@ -31,8 +31,8 @@ namespace MoreEvents
             harmonyInstance = new Harmony("net.funkyshit.moreeventsmod"); //--> NEW
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
 
-            if(!Settings.EventsSettings.ContainsKey("General"))
-                Settings.CheckSettings();
+            //if(!Settings.EventsSettings.ContainsKey("General"))
+            //    Settings.CheckSettings();
 
             int useNewMapSizes = int.Parse(GeneralSettings.Parameters["UseNewMapSizes"].Value);
             if (useNewMapSizes == 1)
